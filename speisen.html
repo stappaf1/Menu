@@ -33,7 +33,7 @@
         }
         .container {
             display: grid; /* Verwenden von Grid für das Layout */
-            grid-template-columns: 200px repeat(auto-fit, minmax(250px, 1fr)); /* Erste Spalte für Kategorien */
+            grid-template-columns: 200px repeat(auto-fill, minmax(250px, 1fr)); /* Erste Spalte für Kategorien */
             gap: 20px;
             padding: 20px;
             max-width: 1200px;
@@ -46,7 +46,6 @@
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             margin-bottom: 20px; /* Abstand zwischen den Kategorien */
-            height: auto; /* Höhe automatisch anpassen */
         }
         .card {
             background-color: white;
@@ -85,7 +84,6 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Spalten für Gerichte */
             gap: 20px;
-            margin-bottom: 20px; /* Abstand zwischen den Kategorien */
         }
     </style>
 </head>
