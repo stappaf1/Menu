@@ -1,19 +1,32 @@
 {
   "speisen": [
     {
+      "kategorie": "Hauptgerichte",
       "name": "Spaghetti Carbonara",
       "beschreibung": "Traditionelle italienische Pasta mit Speck und Ei.",
       "preis": 12.50
     },
     {
+      "kategorie": "Hauptgerichte",
       "name": "Margherita Pizza",
       "beschreibung": "Pizza mit frischen Tomaten, Mozzarella und Basilikum.",
       "preis": 10.00
+    }
+  ],
+  "getraenke": [
+    {
+      "kategorie": "Biere",
+      "name": "Süffiges Weißbier",
+      "beschreibung": "Erfrischendes Weißbier aus dem Hause Müllerbräu.",
+      "größe": "0,5L",
+      "preis": 4.50
     },
     {
-      "name": "Caesar Salad",
-      "beschreibung": "Frischer Salat mit Romanasalat, Croutons und Caesar-Dressing.",
-      "preis": 8.50
+      "kategorie": "Biere",
+      "name": "Helles Bier",
+      "beschreibung": "Ein klassisches Helles aus Bayern.",
+      "größe": "0,5L",
+      "preis": 4.00
     }
   ]
 }
