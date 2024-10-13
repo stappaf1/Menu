@@ -12,22 +12,22 @@
         h1, h2 {
             color: #333;
         }
-        table {
-            width: 100%;
-            border-collapse: collapse;
+        .getraenk {
             margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ccc;
         }
-        th, td {
-            border: 1px solid #ccc;
-            padding: 10px;
-            text-align: left;
+        .getraenk h3 {
+            margin: 0;
+            font-size: 1.2em;
+            color: #444;
         }
-        th {
-            background-color: #f2f2f2;
+        .getraenk p {
+            margin: 5px 0;
+        }
+        .preis {
             font-weight: bold;
-        }
-        tr td:first-child {
-            font-weight: bold;
+            color: #555;
         }
         nav {
             margin-bottom: 20px;
@@ -54,6 +54,7 @@
                 const getraenkeContainer = document.getElementById('getraenke-container');
                 const kategorien = {};
 
+                // Kategorisieren der Getränke
                 data.getraenke.forEach(getraenk => {
                     if (!kategorien[getraenk.kategorie]) {
                         kategorien[getraenk.kategorie] = [];
@@ -61,38 +62,25 @@
                     kategorien[getraenk.kategorie].push(getraenk);
                 });
 
+                // Getränke anzeigen
                 for (const [kategorie, getraenke] of Object.entries(kategorien)) {
-                    const section = document.createElement('section');
-                    section.innerHTML = `<h2>${kategorie}</h2>`;
-                    const table = document.createElement('table');
-                    const tbody = document.createElement('tbody');
+                    const kategorieTitel = document.createElement('h2');
+                    kategorieTitel.textContent = kategorie;
+                    getraenkeContainer.appendChild(kategorieTitel);
 
                     getraenke.forEach(getraenk => {
-                        const row = document.createElement('tr');
-                        row.innerHTML = `
-                            <td>${getraenk.name}</td>
-                        `;
-                        const descRow = document.createElement('tr');
-                        descRow.innerHTML = `
-                            <td>${getraenk.beschreibung}</td>
-                        `;
-                        const sizeRow = document.createElement('tr');
-                        sizeRow.innerHTML = `
-                            <td>${getraenk.größe}</td>
-                        `;
-                        const priceRow = document.createElement('tr');
-                        priceRow.innerHTML = `
-                            <td>${getraenk.preis.toFixed(2)} €</td>
-                        `;
-                        tbody.appendChild(row);
-                        tbody.appendChild(descRow);
-                        tbody.appendChild(sizeRow);
-                        tbody.appendChild(priceRow);
-                    });
+                        const getraenkDiv = document.createElement('div');
+                        getraenkDiv.classList.add('getraenk');
 
-                    table.appendChild(tbody);
-                    section.appendChild(table);
-                    getraenkeContainer.appendChild(section);
+                        getraenkDiv.innerHTML = `
+                            <h3>${getraenk.name}</h3>
+                            <p>${getraenk.beschreibung}</p>
+                            <p>Größe: ${getraenk.größe}</p>
+                            <p class="preis">${getraenk.preis.toFixed(2)} €</p>
+                        `;
+
+                        getraenkeContainer.appendChild(getraenkDiv);
+                    });
                 }
             })
             .catch(error => console.error('Fehler beim Laden der Speisekarte:', error));
