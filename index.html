@@ -3,106 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Speisekarte</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        h1, h2 {
-            color: #333;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 20px;
-        }
-        th, td {
-            border: 1px solid #ccc;
-            padding: 10px;
-            text-align: left;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-        nav {
-            margin-bottom: 20px;
-        }
-    </style>
+    <title>Unsere Speisekarte</title>
 </head>
 <body>
     <h1>Unsere Speisekarte</h1>
     <nav>
-        <a href="#speisen">Speisen</a> | 
-        <a href="#getraenke">Getränke</a>
+        <a href="speisen.html">Speisen</a>
+        <a href="getraenke.html">Getränke</a>
     </nav>
-
-    <div id="speisen">
-        <h2>Speisen</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Kategorie</th>
-                    <th>Name</th>
-                    <th>Beschreibung</th>
-                    <th>Preis</th>
-                </tr>
-            </thead>
-            <tbody id="speisen-tbody"></tbody>
-        </table>
-    </div>
-
-    <div id="getraenke">
-        <h2>Getränke</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Kategorie</th>
-                    <th>Name</th>
-                    <th>Beschreibung</th>
-                    <th>Größe</th>
-                    <th>Preis</th>
-                </tr>
-            </thead>
-            <tbody id="getraenke-tbody"></tbody>
-        </table>
-    </div>
-
-    <script>
-        fetch('speisekarte.json')
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Netzwerkantwort war nicht ok');
-                }
-                return response.json();
-            })
-            .then(data => {
-                const speisenTbody = document.getElementById('speisen-tbody');
-                data.speisen.forEach(gericht => {
-                    const row = document.createElement('tr');
-                    row.innerHTML = `
-                        <td>${gericht.kategorie}</td>
-                        <td>${gericht.name}</td>
-                        <td>${gericht.beschreibung}</td>
-                        <td>${gericht.preis.toFixed(2)} €</td>
-                    `;
-                    speisenTbody.appendChild(row);
-                });
-
-                const getraenkeTbody = document.getElementById('getraenke-tbody');
-                data.getraenke.forEach(getraenk => {
-                    const row = document.createElement('tr');
-                    row.innerHTML = `
-                        <td>${getraenk.kategorie}</td>
-                        <td>${getraenk.name}</td>
-                        <td>${getraenk.beschreibung}</td>
-                        <td>${getraenk.größe}</td>
-                        <td>${getraenk.preis.toFixed(2)} €</td>
-                    `;
-                    getraenkeTbody.appendChild(row);
-                });
-            })
-            .catch(error => console.error('Fehler beim Laden der Speisekarte:', error));
-    </script>
+    <p>Wählen Sie eine der oben genannten Optionen, um die jeweiligen Speisen oder Getränke anzuzeigen.</p>
 </body>
 </html>
