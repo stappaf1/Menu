@@ -12,19 +12,22 @@
         h1, h2 {
             color: #333;
         }
-        table {
-            width: 100%;
-            border-collapse: collapse;
+        .gericht {
             margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ccc;
         }
-        th, td {
-            border: 1px solid #ccc;
-            padding: 10px;
-            text-align: left;
+        .gericht h3 {
+            margin: 0;
+            font-size: 1.2em;
+            color: #444;
         }
-        th {
-            background-color: #f2f2f2;
+        .gericht p {
+            margin: 5px 0;
+        }
+        .preis {
             font-weight: bold;
+            color: #555;
         }
         nav {
             margin-bottom: 20px;
@@ -51,6 +54,7 @@
                 const speisenContainer = document.getElementById('speisen-container');
                 const kategorien = {};
 
+                // Kategorisieren der Gerichte
                 data.speisen.forEach(gericht => {
                     if (!kategorien[gericht.kategorie]) {
                         kategorien[gericht.kategorie] = [];
@@ -58,25 +62,24 @@
                     kategorien[gericht.kategorie].push(gericht);
                 });
 
+                // Speisen anzeigen
                 for (const [kategorie, gerichte] of Object.entries(kategorien)) {
-                    const section = document.createElement('section');
-                    section.innerHTML = `<h2>${kategorie}</h2>`;
-                    const table = document.createElement('table');
-                    const tbody = document.createElement('tbody');
+                    const kategorieTitel = document.createElement('h2');
+                    kategorieTitel.textContent = kategorie;
+                    speisenContainer.appendChild(kategorieTitel);
 
                     gerichte.forEach(gericht => {
-                        const row = document.createElement('tr');
-                        row.innerHTML = `
-                            <td>${gericht.name}</td>
-                            <td>${gericht.beschreibung}</td>
-                            <td>${gericht.preis.toFixed(2)} €</td>
-                        `;
-                        tbody.appendChild(row);
-                    });
+                        const gerichtDiv = document.createElement('div');
+                        gerichtDiv.classList.add('gericht');
 
-                    table.appendChild(tbody);
-                    section.appendChild(table);
-                    speisenContainer.appendChild(section);
+                        gerichtDiv.innerHTML = `
+                            <h3>${gericht.name}</h3>
+                            <p>${gericht.beschreibung}</p>
+                            <p class="preis">${gericht.preis.toFixed(2)} €</p>
+                        `;
+
+                        speisenContainer.appendChild(gerichtDiv);
+                    });
                 }
             })
             .catch(error => console.error('Fehler beim Laden der Speisekarte:', error));
