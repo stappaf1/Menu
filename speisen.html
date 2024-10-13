@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speisen</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        nav {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Zurück zur Hauptseite</a>
+    </nav>
+    <h1>Speisen</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Kategorie</th>
+                <th>Name</th>
+                <th>Beschreibung</th>
+                <th>Preis</th>
+            </tr>
+        </thead>
+        <tbody id="speisen-tbody"></tbody>
+    </table>
+
+    <script>
+        fetch('speisekarte.json')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Netzwerkantwort war nicht ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                const speisenTbody = document.getElementById('speisen-tbody');
+                data.speisen.forEach(gericht => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${gericht.kategorie}</td>
+                        <td>${gericht.name}</td>
+                        <td>${gericht.beschreibung}</td>
+                        <td>${gericht.preis.toFixed(2)} €</td>
+                    `;
+                    speisenTbody.appendChild(row);
+                });
+            })
+            .catch(error => console.error('Fehler beim Laden der Speisekarte:', error));
+    </script>
+</body>
+</html>
