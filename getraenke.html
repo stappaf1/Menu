@@ -32,12 +32,16 @@
             font-size: 1.2em;
         }
         .container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+            display: flex; /* Verwendung von Flexbox für die Ausrichtung */
+            flex-direction: column; /* Anordnung der Kategorien vertikal */
+            align-items: center; /* Zentrierung der Kategorien */
             padding: 20px;
             max-width: 1200px;
             margin: 0 auto;
+        }
+        .category {
+            margin-bottom: 40px; /* Abstand zwischen den Kategorien */
+            width: 100%; /* Die Kategorie nimmt die gesamte Breite ein */
         }
         .card {
             background-color: white;
@@ -45,6 +49,7 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             padding: 20px;
             transition: transform 0.2s;
+            margin: 10px 0; /* Abstand zwischen den Karten */
         }
         .card:hover {
             transform: translateY(-5px);
@@ -109,11 +114,13 @@
 
                 // Getränke anzeigen
                 for (const [kategorie, getraenke] of Object.entries(kategorien)) {
+                    const categoryContainer = document.createElement('div');
+                    categoryContainer.classList.add('category');
+
                     const kategorieTitel = document.createElement('h2');
                     kategorieTitel.textContent = kategorie;
-                    getraenkeContainer.appendChild(kategorieTitel);
+                    categoryContainer.appendChild(kategorieTitel);
 
-                    const categoryContainer = document.createElement('div'); // Neuer Container für die Karten
                     getraenke.forEach(getraenk => {
                         const card = document.createElement('div');
                         card.classList.add('card');
@@ -127,7 +134,7 @@
 
                         categoryContainer.appendChild(card);
                     });
-                    
+
                     getraenkeContainer.appendChild(categoryContainer); // Füge den Kategorie-Container hinzu
                 }
             })
