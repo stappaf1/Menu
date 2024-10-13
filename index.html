@@ -9,28 +9,64 @@
             font-family: Arial, sans-serif;
             margin: 20px;
         }
-        .gericht {
+        h1, h2 {
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
             margin-bottom: 20px;
+        }
+        th, td {
             border: 1px solid #ccc;
             padding: 10px;
-            border-radius: 5px;
+            text-align: left;
         }
-        .name {
-            font-weight: bold;
-            font-size: 1.2em;
+        th {
+            background-color: #f2f2f2;
         }
-        .beschreibung {
-            margin: 5px 0;
-        }
-        .preis {
-            color: green;
-            font-size: 1.1em;
+        nav {
+            margin-bottom: 20px;
         }
     </style>
 </head>
 <body>
     <h1>Unsere Speisekarte</h1>
-    <div id="speisekarte"></div>
+    <nav>
+        <a href="#speisen">Speisen</a> | 
+        <a href="#getraenke">Getränke</a>
+    </nav>
+
+    <div id="speisen">
+        <h2>Speisen</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Kategorie</th>
+                    <th>Name</th>
+                    <th>Beschreibung</th>
+                    <th>Preis</th>
+                </tr>
+            </thead>
+            <tbody id="speisen-tbody"></tbody>
+        </table>
+    </div>
+
+    <div id="getraenke">
+        <h2>Getränke</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Kategorie</th>
+                    <th>Name</th>
+                    <th>Beschreibung</th>
+                    <th>Größe</th>
+                    <th>Preis</th>
+                </tr>
+            </thead>
+            <tbody id="getraenke-tbody"></tbody>
+        </table>
+    </div>
 
     <script>
         fetch('speisekarte.json')
@@ -41,16 +77,29 @@
                 return response.json();
             })
             .then(data => {
-                const speisekarteDiv = document.getElementById('speisekarte');
+                const speisenTbody = document.getElementById('speisen-tbody');
                 data.speisen.forEach(gericht => {
-                    const gerichtDiv = document.createElement('div');
-                    gerichtDiv.classList.add('gericht');
-                    gerichtDiv.innerHTML = `
-                        <div class="name">${gericht.name}</div>
-                        <div class="beschreibung">${gericht.beschreibung}</div>
-                        <div class="preis">${gericht.preis.toFixed(2)} €</div>
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${gericht.kategorie}</td>
+                        <td>${gericht.name}</td>
+                        <td>${gericht.beschreibung}</td>
+                        <td>${gericht.preis.toFixed(2)} €</td>
                     `;
-                    speisekarteDiv.appendChild(gerichtDiv);
+                    speisenTbody.appendChild(row);
+                });
+
+                const getraenkeTbody = document.getElementById('getraenke-tbody');
+                data.getraenke.forEach(getraenk => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${getraenk.kategorie}</td>
+                        <td>${getraenk.name}</td>
+                        <td>${getraenk.beschreibung}</td>
+                        <td>${getraenk.größe}</td>
+                        <td>${getraenk.preis.toFixed(2)} €</td>
+                    `;
+                    getraenkeTbody.appendChild(row);
                 });
             })
             .catch(error => console.error('Fehler beim Laden der Speisekarte:', error));
