@@ -26,6 +26,9 @@
             background-color: #f2f2f2;
             font-weight: bold;
         }
+        tr td:first-child {
+            font-weight: bold;
+        }
         nav {
             margin-bottom: 20px;
         }
@@ -68,11 +71,23 @@
                         const row = document.createElement('tr');
                         row.innerHTML = `
                             <td>${getraenk.name}</td>
+                        `;
+                        const descRow = document.createElement('tr');
+                        descRow.innerHTML = `
                             <td>${getraenk.beschreibung}</td>
+                        `;
+                        const sizeRow = document.createElement('tr');
+                        sizeRow.innerHTML = `
                             <td>${getraenk.größe}</td>
+                        `;
+                        const priceRow = document.createElement('tr');
+                        priceRow.innerHTML = `
                             <td>${getraenk.preis.toFixed(2)} €</td>
                         `;
                         tbody.appendChild(row);
+                        tbody.appendChild(descRow);
+                        tbody.appendChild(sizeRow);
+                        tbody.appendChild(priceRow);
                     });
 
                     table.appendChild(tbody);
