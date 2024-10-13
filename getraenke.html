@@ -36,18 +36,8 @@
         <a href="index.html">Zurück zur Hauptseite</a>
     </nav>
     <h1>Getränke</h1>
-    <table>
-        <thead>
-            <tr>
-                <th>Kategorie</th>
-                <th>Name</th>
-                <th>Beschreibung</th>
-                <th>Größe</th>
-                <th>Preis</th>
-            </tr>
-        </thead>
-        <tbody id="getraenke-tbody"></tbody>
-    </table>
+
+    <div id="getraenke-container"></div>
 
     <script>
         fetch('speisekarte.json')
@@ -58,17 +48,24 @@
                 return response.json();
             })
             .then(data => {
-                const getraenkeTbody = document.getElementById('getraenke-tbody');
+                const getraenkeContainer = document.getElementById('getraenke-container');
+
                 data.getraenke.forEach(getraenk => {
-                    const row = document.createElement('tr');
-                    row.innerHTML = `
-                        <td>${getraenk.kategorie}</td>
-                        <td>${getraenk.name}</td>
-                        <td>${getraenk.beschreibung}</td>
-                        <td>${getraenk.größe}</td>
-                        <td>${getraenk.preis.toFixed(2)} €</td>
+                    const section = document.createElement('section');
+                    section.innerHTML = `
+                        <h2>${getraenk.kategorie}</h2>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>${getraenk.name}</td>
+                                    <td>${getraenk.beschreibung}</td>
+                                    <td>${getraenk.größe}</td>
+                                    <td>${getraenk.preis.toFixed(2)} €</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     `;
-                    getraenkeTbody.appendChild(row);
+                    getraenkeContainer.appendChild(section);
                 });
             })
             .catch(error => console.error('Fehler beim Laden der Speisekarte:', error));
