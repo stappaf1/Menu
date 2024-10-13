@@ -36,17 +36,8 @@
         <a href="index.html">Zurück zur Hauptseite</a>
     </nav>
     <h1>Speisen</h1>
-    <table>
-        <thead>
-            <tr>
-                <th>Kategorie</th>
-                <th>Name</th>
-                <th>Beschreibung</th>
-                <th>Preis</th>
-            </tr>
-        </thead>
-        <tbody id="speisen-tbody"></tbody>
-    </table>
+
+    <div id="speisen-container"></div>
 
     <script>
         fetch('speisekarte.json')
@@ -57,16 +48,23 @@
                 return response.json();
             })
             .then(data => {
-                const speisenTbody = document.getElementById('speisen-tbody');
+                const speisenContainer = document.getElementById('speisen-container');
+
                 data.speisen.forEach(gericht => {
-                    const row = document.createElement('tr');
-                    row.innerHTML = `
-                        <td>${gericht.kategorie}</td>
-                        <td>${gericht.name}</td>
-                        <td>${gericht.beschreibung}</td>
-                        <td>${gericht.preis.toFixed(2)} €</td>
+                    const section = document.createElement('section');
+                    section.innerHTML = `
+                        <h2>${gericht.kategorie}</h2>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>${gericht.name}</td>
+                                    <td>${gericht.beschreibung}</td>
+                                    <td>${gericht.preis.toFixed(2)} €</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     `;
-                    speisenTbody.appendChild(row);
+                    speisenContainer.appendChild(section);
                 });
             })
             .catch(error => console.error('Fehler beim Laden der Speisekarte:', error));
