@@ -11,9 +11,14 @@
             padding: 0;
             background-color: #f8f9fa;
         }
-        h1, h2 {
+        h1 {
             color: #333;
             text-align: center;
+        }
+        h2 {
+            color: #007bff; /* Farbänderung für die Kategorien */
+            margin-top: 20px;
+            text-align: left; /* Ausrichtung auf links */
         }
         nav {
             background-color: #343a40;
@@ -27,12 +32,20 @@
             font-size: 1.2em;
         }
         .container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            display: grid; /* Verwenden von Grid für das Layout */
+            grid-template-columns: 200px repeat(auto-fit, minmax(250px, 1fr)); /* Erste Spalte für Kategorien */
             gap: 20px;
             padding: 20px;
             max-width: 1200px;
             margin: 0 auto;
+        }
+        .category {
+            grid-column: 1; /* Kategorie in der ersten Spalte */
+            background-color: #e9ecef;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px; /* Abstand zwischen den Kategorien */
         }
         .card {
             background-color: white;
@@ -104,9 +117,12 @@
 
                 // Speisen anzeigen
                 for (const [kategorie, gerichte] of Object.entries(kategorien)) {
+                    const categoryContainer = document.createElement('div');
+                    categoryContainer.classList.add('category');
+
                     const kategorieTitel = document.createElement('h2');
                     kategorieTitel.textContent = kategorie;
-                    speisenContainer.appendChild(kategorieTitel);
+                    categoryContainer.appendChild(kategorieTitel);
 
                     gerichte.forEach(gericht => {
                         const card = document.createElement('div');
@@ -118,8 +134,10 @@
                             <p class="preis">${gericht.preis.toFixed(2)} €</p>
                         `;
 
-                        speisenContainer.appendChild(card);
+                        categoryContainer.appendChild(card);
                     });
+
+                    speisenContainer.appendChild(categoryContainer); // Füge den Kategorie-Container hinzu
                 }
             })
             .catch(error => console.error('Fehler beim Laden der Speisekarte:', error));
