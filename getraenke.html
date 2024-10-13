@@ -11,9 +11,14 @@
             padding: 0;
             background-color: #f8f9fa;
         }
-        h1, h2 {
+        h1 {
             color: #333;
             text-align: center;
+        }
+        h2 {
+            color: #007bff; /* Farbänderung für die Kategorien */
+            text-align: center;
+            margin: 40px 0 20px; /* Abstand nach oben und unten */
         }
         nav {
             background-color: #343a40;
@@ -108,6 +113,7 @@
                     kategorieTitel.textContent = kategorie;
                     getraenkeContainer.appendChild(kategorieTitel);
 
+                    const categoryContainer = document.createElement('div'); // Neuer Container für die Karten
                     getraenke.forEach(getraenk => {
                         const card = document.createElement('div');
                         card.classList.add('card');
@@ -119,8 +125,10 @@
                             <p class="preis">${getraenk.preis.toFixed(2)} €</p>
                         `;
 
-                        getraenkeContainer.appendChild(card);
+                        categoryContainer.appendChild(card);
                     });
+                    
+                    getraenkeContainer.appendChild(categoryContainer); // Füge den Kategorie-Container hinzu
                 }
             })
             .catch(error => console.error('Fehler beim Laden der Getränkekarte:', error));
