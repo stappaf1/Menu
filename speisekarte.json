@@ -1,6 +1,18 @@
 {
   "speisen": [
     {
+      "kategorie": "Vorspeisen",
+      "name": "Bruschetta",
+      "beschreibung": "Geröstetes Brot mit Tomaten, Basilikum und Knoblauch.",
+      "preis": 5.50
+    },
+    {
+      "kategorie": "Vorspeisen",
+      "name": "Caprese Salat",
+      "beschreibung": "Tomaten, frischer Mozzarella und Basilikum, beträufelt mit Olivenöl.",
+      "preis": 6.50
+    },
+    {
       "kategorie": "Hauptgerichte",
       "name": "Spaghetti Carbonara",
       "beschreibung": "Traditionelle italienische Pasta mit Speck und Ei.",
@@ -11,6 +23,42 @@
       "name": "Margherita Pizza",
       "beschreibung": "Pizza mit frischen Tomaten, Mozzarella und Basilikum.",
       "preis": 10.00
+    },
+    {
+      "kategorie": "Hauptgerichte",
+      "name": "Wiener Schnitzel",
+      "beschreibung": "Knusprig paniertes Kalbsschnitzel, serviert mit Kartoffelsalat.",
+      "preis": 15.00
+    },
+    {
+      "kategorie": "Hauptgerichte",
+      "name": "Zwiebelrostbraten",
+      "beschreibung": "Saftiges Rindersteak mit Röstzwiebeln und Bratkartoffeln.",
+      "preis": 18.50
+    },
+    {
+      "kategorie": "Hauptgerichte",
+      "name": "Veganes Curry",
+      "beschreibung": "Cremiges Kokos-Curry mit Gemüse und Basmatireis.",
+      "preis": 11.00
+    },
+    {
+      "kategorie": "Desserts",
+      "name": "Tiramisu",
+      "beschreibung": "Klassisches italienisches Dessert mit Mascarpone und Espresso.",
+      "preis": 5.00
+    },
+    {
+      "kategorie": "Desserts",
+      "name": "Apfelstrudel",
+      "beschreibung": "Warmer Apfelstrudel mit Vanillesoße.",
+      "preis": 4.50
+    },
+    {
+      "kategorie": "Desserts",
+      "name": "Schokoladenmousse",
+      "beschreibung": "Luftige Schokoladencreme mit frischen Beeren.",
+      "preis": 5.50
     }
   ],
   "getraenke": [
@@ -27,6 +75,48 @@
       "beschreibung": "Ein klassisches Helles aus Bayern.",
       "größe": "0,5L",
       "preis": 4.00
+    },
+    {
+      "kategorie": "Weine",
+      "name": "Chardonnay",
+      "beschreibung": "Fruchtiger Weißwein aus der Region.",
+      "größe": "0,2L",
+      "preis": 5.00
+    },
+    {
+      "kategorie": "Weine",
+      "name": "Merlot",
+      "beschreibung": "Trockener Rotwein mit einem Hauch von Waldbeeren.",
+      "größe": "0,2L",
+      "preis": 5.50
+    },
+    {
+      "kategorie": "Nicht alkoholische Getränke",
+      "name": "Mineralwasser",
+      "beschreibung": "Spritziges oder stilles Wasser, je nach Wahl.",
+      "größe": "0,5L",
+      "preis": 2.50
+    },
+    {
+      "kategorie": "Nicht alkoholische Getränke",
+      "name": "Hausgemachte Limonade",
+      "beschreibung": "Frische Zitruslimonade mit Minze.",
+      "größe": "0,4L",
+      "preis": 3.50
+    },
+    {
+      "kategorie": "Heißgetränke",
+      "name": "Cappuccino",
+      "beschreibung": "Kaffee mit aufgeschäumter Milch und Kakaopulver.",
+      "größe": "Tasse",
+      "preis": 3.00
+    },
+    {
+      "kategorie": "Heißgetränke",
+      "name": "Grüner Tee",
+      "beschreibung": "Frischer grüner Tee aus biologischem Anbau.",
+      "größe": "Tasse",
+      "preis": 2.50
     }
   ]
 }
