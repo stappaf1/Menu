@@ -1,0 +1,19 @@
+{
+  "speisen": [
+    {
+      "name": "Spaghetti Carbonara",
+      "beschreibung": "Traditionelle italienische Pasta mit Speck und Ei.",
+      "preis": 12.50
+    },
+    {
+      "name": "Margherita Pizza",
+      "beschreibung": "Pizza mit frischen Tomaten, Mozzarella und Basilikum.",
+      "preis": 10.00
+    },
+    {
+      "name": "Caesar Salad",
+      "beschreibung": "Frischer Salat mit Romanasalat, Croutons und Caesar-Dressing.",
+      "preis": 8.50
+    }
+  ]
+}
