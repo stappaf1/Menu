@@ -3,38 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unsere Speisekarte</title>
+    <title>Speisekarte</title>
     <style>
-        body { font-family: Arial, sans-serif; }
-        h1 { color: #333; }
-        ul { list-style-type: none; padding: 0; }
-        li { margin: 10px 0; }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .gericht {
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .name {
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        .beschreibung {
+            margin: 5px 0;
+        }
+        .preis {
+            color: green;
+            font-size: 1.1em;
+        }
     </style>
 </head>
 <body>
+    <h1>Unsere Speisekarte</h1>
+    <div id="speisekarte"></div>
+
     <script>
-    fetch('speisekarte.json')
-        .then(response => response.json())
-        .then(data => {
-            const speisekarteDiv = document.getElementById('speisekarte');
-            data.speisen.forEach(gericht => {
-                const gerichtDiv = document.createElement('div');
-                gerichtDiv.classList.add('gericht');
-                gerichtDiv.innerHTML = `
-                    <div class="name">${gericht.name}</div>
-                    <div>${gericht.beschreibung}</div>
-                    <div class="preis">${gericht.preis.toFixed(2)} €</div>
-                `;
-                speisekarteDiv.appendChild(gerichtDiv);
-            });
-        })
-        .catch(error => console.error('Fehler beim Laden der Speisekarte:', error));
-<h1>Unsere Speisekarte</h1>
-<div id="speisekarte"></div>
-
-
-        
-</script>
-
+        fetch('speisekarte.json')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Netzwerkantwort war nicht ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                const speisekarteDiv = document.getElementById('speisekarte');
+                data.speisen.forEach(gericht => {
+                    const gerichtDiv = document.createElement('div');
+                    gerichtDiv.classList.add('gericht');
+                    gerichtDiv.innerHTML = `
+                        <div class="name">${gericht.name}</div>
+                        <div class="beschreibung">${gericht.beschreibung}</div>
+                        <div class="preis">${gericht.preis.toFixed(2)} €</div>
+                    `;
+                    speisekarteDiv.appendChild(gerichtDiv);
+                });
+            })
+            .catch(error => console.error('Fehler beim Laden der Speisekarte:', error));
+    </script>
 </body>
 </html>
