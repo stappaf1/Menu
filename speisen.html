@@ -127,8 +127,9 @@
 
                     // Gerichte in nachfolgenden Spalten anzeigen
                     const itemsRow = document.createElement('div');
+                    itemsRow.style.gridColumn = '2 / -1'; // Beginne ab der zweiten Spalte
                     itemsRow.style.display = 'grid';
-                    itemsRow.style.gridTemplateColumns = 'repeat(auto-fit, minmax(250px, 1fr))';
+                    itemsRow.style.gridTemplateColumns = 'repeat(auto-fill, minmax(250px, 1fr))'; // Spalten für Gerichte
                     itemsRow.style.gap = '20px';
 
                     gerichte.forEach(gericht => {
