@@ -84,7 +84,12 @@
 
     <script>
         fetch('speisekarte.json')
-            .then(response => response.json())
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Netzwerkantwort war nicht ok');
+                }
+                return response.json();
+            })
             .then(data => {
                 const speisenContainer = document.getElementById('speisen-container');
                 const kategorien = {};
