@@ -12,11 +12,24 @@
     </style>
 </head>
 <body>
-    <h1>Unsere Speisekarte</h1>
-    <ul>
-        <li>Pasta Carbonara - 12,00 €</li>
-        <li>Pizza Margherita - 10,00 €</li>
-        <li>Salat Caprese - 8,00 €</li>
-    </ul>
+    <script>
+    fetch('speisekarte.json')
+        .then(response => response.json())
+        .then(data => {
+            const speisekarteDiv = document.getElementById('speisekarte');
+            data.speisen.forEach(gericht => {
+                const gerichtDiv = document.createElement('div');
+                gerichtDiv.classList.add('gericht');
+                gerichtDiv.innerHTML = `
+                    <div class="name">${gericht.name}</div>
+                    <div>${gericht.beschreibung}</div>
+                    <div class="preis">${gericht.preis.toFixed(2)} €</div>
+                `;
+                speisekarteDiv.appendChild(gerichtDiv);
+            });
+        })
+        .catch(error => console.error('Fehler beim Laden der Speisekarte:', error));
+</script>
+
 </body>
 </html>
