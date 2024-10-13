@@ -49,23 +49,35 @@
             })
             .then(data => {
                 const speisenContainer = document.getElementById('speisen-container');
+                const kategorien = {};
 
                 data.speisen.forEach(gericht => {
-                    const section = document.createElement('section');
-                    section.innerHTML = `
-                        <h2>${gericht.kategorie}</h2>
-                        <table>
-                            <tbody>
-                                <tr>
-                                    <td>${gericht.name}</td>
-                                    <td>${gericht.beschreibung}</td>
-                                    <td>${gericht.preis.toFixed(2)} €</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    `;
-                    speisenContainer.appendChild(section);
+                    if (!kategorien[gericht.kategorie]) {
+                        kategorien[gericht.kategorie] = [];
+                    }
+                    kategorien[gericht.kategorie].push(gericht);
                 });
+
+                for (const [kategorie, gerichte] of Object.entries(kategorien)) {
+                    const section = document.createElement('section');
+                    section.innerHTML = `<h2>${kategorie}</h2>`;
+                    const table = document.createElement('table');
+                    const tbody = document.createElement('tbody');
+
+                    gerichte.forEach(gericht => {
+                        const row = document.createElement('tr');
+                        row.innerHTML = `
+                            <td>${gericht.name}</td>
+                            <td>${gericht.beschreibung}</td>
+                            <td>${gericht.preis.toFixed(2)} €</td>
+                        `;
+                        tbody.appendChild(row);
+                    });
+
+                    table.appendChild(tbody);
+                    section.appendChild(table);
+                    speisenContainer.appendChild(section);
+                }
             })
             .catch(error => console.error('Fehler beim Laden der Speisekarte:', error));
     </script>
