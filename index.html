@@ -29,10 +29,16 @@
             background: url('restaurant-banner.jpg') no-repeat center center/cover;
             height: 400px;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             color: white;
             text-align: center;
+        }
+
+        header img {
+            max-width: 150px; /* Setze die Breite des Logos */
+            margin-bottom: 20px; /* Abstand zwischen Logo und Titel */
         }
 
         header h1 {
@@ -106,7 +112,6 @@
         footer p {
             margin: 0;
         }
-
     </style>
 </head>
 <body>
@@ -116,6 +121,7 @@
     </nav>
 
     <header>
+        <img src="logo.png" alt="Hotel Alea Logo"> <!-- Logo hier einfügen -->
         <h1>Willkommen bei Hotel Alea</h1>
     </header>
 
