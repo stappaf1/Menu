@@ -11,63 +11,77 @@
             padding: 0;
             background-color: #f8f9fa;
         }
-        h1 {
+
+        h1, h2 {
             color: #333;
-            text-align: center;
+            text-align: left;
+            grid-column: 1 / -1; /* Überschrift über die ganze Breite */
+            margin-top: 40px;
+            margin-bottom: 10px;
         }
-        h2 {
-            color: #007bff; /* Farbänderung für die Kategorien */
-            text-align: center;
-            margin: 40px 0 20px; /* Abstand nach oben und unten */
-        }
+
         nav {
             background-color: #343a40;
             padding: 10px;
             text-align: center;
         }
+
         nav a {
             color: white;
             margin: 0 15px;
             text-decoration: none;
             font-size: 1.2em;
         }
+
         .container {
-            display: flex; /* Verwendung von Flexbox für die Ausrichtung */
-            flex-direction: column; /* Anordnung der Kategorien vertikal */
-            align-items: center; /* Zentrierung der Kategorien */
+            display: grid;
+            grid-template-columns: 1fr repeat(auto-fill, minmax(250px, 1fr)); /* Dynamisches Layout */
+            gap: 20px;
             padding: 20px;
-            max-width: 1200px;
+            max-width: 1400px; /* Maximale Breite für größere Bildschirme */
             margin: 0 auto;
         }
+
         .category {
-            margin-bottom: 40px; /* Abstand zwischen den Kategorien */
-            width: 100%; /* Die Kategorie nimmt die gesamte Breite ein */
+            grid-column: 1 / 2; /* Kategorie in der ersten Spalte */
+            text-align: left;
+            font-size: 1.5em;
+            color: #007bff;
+            font-weight: bold;
+            margin-bottom: 0;
         }
+
         .card {
             background-color: white;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             padding: 20px;
             transition: transform 0.2s;
-            margin: 10px 0; /* Abstand zwischen den Karten */
+            margin-top: 0;
+            grid-column: span 1; /* Kacheln verteilen sich gleichmäßig */
         }
+
         .card:hover {
             transform: translateY(-5px);
         }
+
         .card h3 {
             margin-top: 0;
-            font-size: 1.5em;
-            color: #007bff;
+            font-size: 1.2em;
+            color: #333;
         }
+
         .card p {
             margin: 5px 0;
             color: #666;
         }
+
         .preis {
             font-weight: bold;
             font-size: 1.2em;
             color: #28a745;
         }
+
         footer {
             background-color: #343a40;
             color: white;
@@ -75,6 +89,14 @@
             padding: 10px;
             margin-top: 20px;
         }
+
+        /* Media Queries für größere Bildschirme */
+        @media (min-width: 1024px) {
+            .container {
+                grid-template-columns: 1fr repeat(3, 1fr); /* Feste Anzahl von Spalten auf größeren Bildschirmen */
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -94,12 +116,7 @@
 
     <script>
         fetch('speisekarte.json')
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Netzwerkantwort war nicht ok');
-                }
-                return response.json();
-            })
+            .then(response => response.json())
             .then(data => {
                 const getraenkeContainer = document.getElementById('getraenke-container');
                 const kategorien = {};
@@ -112,14 +129,12 @@
                     kategorien[getraenk.kategorie].push(getraenk);
                 });
 
-                // Getränke anzeigen
+                // Getränke nach Kategorien anzeigen
                 for (const [kategorie, getraenke] of Object.entries(kategorien)) {
-                    const categoryContainer = document.createElement('div');
-                    categoryContainer.classList.add('category');
-
                     const kategorieTitel = document.createElement('h2');
+                    kategorieTitel.classList.add('category');
                     kategorieTitel.textContent = kategorie;
-                    categoryContainer.appendChild(kategorieTitel);
+                    getraenkeContainer.appendChild(kategorieTitel);
 
                     getraenke.forEach(getraenk => {
                         const card = document.createElement('div');
@@ -128,14 +143,12 @@
                         card.innerHTML = `
                             <h3>${getraenk.name}</h3>
                             <p>${getraenk.beschreibung}</p>
-                            <p>${getraenk.größe}</p>
+                            <p>Größe: ${getraenk.größe}</p>
                             <p class="preis">${getraenk.preis.toFixed(2)} €</p>
                         `;
 
-                        categoryContainer.appendChild(card);
+                        getraenkeContainer.appendChild(card);
                     });
-
-                    getraenkeContainer.appendChild(categoryContainer); // Füge den Kategorie-Container hinzu
                 }
             })
             .catch(error => console.error('Fehler beim Laden der Getränkekarte:', error));
