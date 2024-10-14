@@ -29,16 +29,10 @@
             background: url('restaurant-banner.jpg') no-repeat center center/cover;
             height: 400px;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
             color: white;
             text-align: center;
-        }
-
-        header img {
-            max-width: 150px; /* Setze die Breite des Logos */
-            margin-bottom: 10px; /* Reduziere den Abstand zwischen Logo und Titel */
         }
 
         header h1 {
@@ -46,27 +40,13 @@
             background-color: rgba(0, 0, 0, 0.5);
             padding: 20px;
             border-radius: 10px;
+            margin-bottom: 20px; /* Reduzierter Abstand */
         }
 
         .content {
             padding: 40px;
             max-width: 1200px;
             margin: 0 auto;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2em;
-            color: #333;
-            margin-top: 20px; /* Reduziere den Abstand nach dem Intro */
-            margin-bottom: 30px;
-        }
-
-        .intro {
-            text-align: center;
-            font-size: 1.2em;
-            margin-bottom: 20px; /* Reduziere den Abstand nach dem Intro */
-            color: #666;
         }
 
         .grid {
@@ -113,6 +93,7 @@
         footer p {
             margin: 0;
         }
+
     </style>
 </head>
 <body>
@@ -122,15 +103,11 @@
     </nav>
 
     <header>
-        <img src="https://cdn.prod.website-files.com/60d2e4a3b351ee2c91f53a1e/60f9ca16c53dae6854816379_Logo%20Alea.svg" alt="Hotel Alea Logo">
+        <img src="https://cdn.prod.website-files.com/60d2e4a3b351ee2c91f53a1e/60f9ca16c53dae6854816379_Logo%20Alea.svg" alt="Hotel Alea Logo" style="max-width: 200px; margin-bottom: 20px;">
         <h1>Willkommen bei Hotel Alea</h1>
     </header>
 
     <div class="content">
-        <p class="intro">Wählen Sie aus unserer umfangreichen Auswahl an Speisen und Getränken. Egal ob Sie Lust auf etwas Herzhaftes oder ein erfrischendes Getränk haben, bei uns werden Sie fündig!</p>
-        
-        <h2 class="section-title">Entdecken Sie unsere Speisekarte</h2>
-        
         <div class="grid">
             <a href="speisen.html" class="card">
                 <h2>Speisen</h2>
