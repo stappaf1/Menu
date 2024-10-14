@@ -16,9 +16,8 @@
             text-align: center;
         }
         h2 {
-            color: #007bff; /* Farbänderung für die Kategorien */
+            color: #007bff;
             margin-top: 20px;
-            text-align: left; /* Ausrichtung auf links */
         }
         nav {
             background-color: #343a40;
@@ -32,20 +31,27 @@
             font-size: 1.2em;
         }
         .container {
-            display: grid; /* Verwenden von Grid für das Layout */
-            grid-template-columns: 200px repeat(auto-fill, minmax(250px, 1fr)); /* Erste Spalte für Kategorien */
+            display: grid;
+            grid-template-columns: 200px 1fr 1fr 1fr; /* Kategorie in der ersten Spalte, dann 3 Spalten für die Gerichte */
             gap: 20px;
             padding: 20px;
             max-width: 1200px;
             margin: 0 auto;
         }
         .category {
-            grid-column: 1; /* Kategorie in der ersten Spalte */
+            grid-column: 1; /* Kategorie bleibt in der ersten Spalte */
             background-color: #e9ecef;
             padding: 10px;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px; /* Abstand zwischen den Kategorien */
+            margin-bottom: 20px;
+        }
+        .items-row {
+            grid-column: 2 / span 3; /* Die Gerichte erstrecken sich über die restlichen 3 Spalten */
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
         }
         .card {
             background-color: white;
@@ -77,13 +83,6 @@
             text-align: center;
             padding: 10px;
             margin-top: 20px;
-        }
-        /* Neue Styles für die Kartencontainer */
-        .items-row {
-            grid-column: 2 / -1; /* Beginne ab der zweiten Spalte */
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Spalten für Gerichte */
-            gap: 20px;
         }
     </style>
 </head>
@@ -134,7 +133,7 @@
 
                     // Gerichte in nachfolgenden Spalten anzeigen
                     const itemsRow = document.createElement('div');
-                    itemsRow.classList.add('items-row'); // Füge die Klasse für das Grid hinzu
+                    itemsRow.classList.add('items-row'); // Die Gerichte gehen in die Items-Row
 
                     gerichte.forEach(gericht => {
                         const card = document.createElement('div');
@@ -149,8 +148,8 @@
                         itemsRow.appendChild(card);
                     });
 
-                    categoryContainer.appendChild(itemsRow); // Füge die Gerichte als Reihe hinzu
-                    speisenContainer.appendChild(categoryContainer); // Füge den Kategorie-Container hinzu
+                    speisenContainer.appendChild(categoryContainer); // Füge die Kategorie hinzu
+                    speisenContainer.appendChild(itemsRow); // Füge die Reihe der Gerichte hinzu
                 }
             })
             .catch(error => console.error('Fehler beim Laden der Speisekarte:', error));
