@@ -3,14 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unsere Speisekarte</title>
+    <title>Willkommen - Restaurantname</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+
+        nav {
+            background-color: #343a40;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 20px;
+            text-decoration: none;
+            font-size: 1.5em;
+        }
+
+        header {
+            background: url('restaurant-banner.jpg') no-repeat center center/cover;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3em;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .content {
+            padding: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2em;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .intro {
+            text-align: center;
+            font-size: 1.2em;
+            margin-bottom: 50px;
+            color: #666;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h2 {
+            font-size: 1.8em;
+            margin: 20px 0;
+            color: #007bff;
+        }
+
+        .card p {
+            font-size: 1.2em;
+            color: #555;
+        }
+
+        footer {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+    </style>
 </head>
 <body>
-    <h1>Unsere Speisekarte</h1>
     <nav>
         <a href="speisen.html">Speisen</a>
         <a href="getraenke.html">Getränke</a>
     </nav>
-    <p>Wählen Sie eine der oben genannten Optionen, um die jeweiligen Speisen oder Getränke anzuzeigen.</p>
+
+    <header>
+        <h1>Willkommen bei Restaurantname</h1>
+    </header>
+
+    <div class="content">
+        <h2 class="section-title">Entdecken Sie unsere Speisekarte</h2>
+        <p class="intro">Wählen Sie aus unserer umfangreichen Auswahl an Speisen und Getränken. Egal ob Sie Lust auf etwas Herzhaftes oder ein erfrischendes Getränk haben, bei uns werden Sie fündig!</p>
+        
+        <div class="grid">
+            <div class="card">
+                <h2>Speisen</h2>
+                <p>Entdecken Sie unsere Auswahl an köstlichen Vorspeisen, Hauptgerichten und Desserts.</p>
+                <a href="speisen.html">Zur Speisekarte</a>
+            </div>
+            
+            <div class="card">
+                <h2>Getränke</h2>
+                <p>Von erfrischenden Getränken bis hin zu edlen Weinen – hier finden Sie unser Angebot.</p>
+                <a href="getraenke.html">Zur Getränkekarte</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 Restaurantname - Alle Rechte vorbehalten</p>
+    </footer>
 </body>
 </html>
