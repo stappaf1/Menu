@@ -1,0 +1,40 @@
+{
+    "getraenke": [
+        {
+            "name": "Coca-Cola",
+            "beschreibung": "Erfrischendes Cola-Getränk.",
+            "preis": 2.50,
+            "kategorie": "Softdrinks"
+        },
+        {
+            "name": "Bier",
+            "beschreibung": "Frisches Lagerbier.",
+            "preis": 3.00,
+            "kategorie": "Alkoholische Getränke"
+        },
+        {
+            "name": "Weißwein",
+            "beschreibung": "Harmonischer Weißwein.",
+            "preis": 4.00,
+            "kategorie": "Weine"
+        },
+        {
+            "name": "Mineralwasser",
+            "beschreibung": "Sprudelndes Mineralwasser.",
+            "preis": 1.50,
+            "kategorie": "Wasser"
+        },
+        {
+            "name": "Orangensaft",
+            "beschreibung": "Frisch gepresster Orangensaft.",
+            "preis": 2.50,
+            "kategorie": "Säfte"
+        },
+        {
+            "name": "Espresso",
+            "beschreibung": "Starker Kaffee.",
+            "preis": 2.00,
+            "kategorie": "Kaffee"
+        }
+    ]
+}
