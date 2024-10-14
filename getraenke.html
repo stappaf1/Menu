@@ -112,4 +112,56 @@
         <a href="getraenke.html">Getränke</a>
     </nav>
 
-    <h1>Getränke</
+    <h1>Getränke</h1> <!-- Titel zentriert -->
+
+    <div class="container" id="getraenke-container"></div>
+
+    <footer>
+        <p>© 2024 Restaurantname - Alle Rechte vorbehalten</p>
+    </footer>
+
+    <script>
+        fetch('getraenke.json')
+            .then(response => response.json())
+            .then(data => {
+                const getraenkeContainer = document.getElementById('getraenke-container');
+                const kategorien = {};
+
+                // Kategorisieren der Getränke
+                data.getraenke.forEach(getraenk => {
+                    if (!kategorien[getraenk.kategorie]) {
+                        kategorien[getraenk.kategorie] = [];
+                    }
+                    kategorien[getraenk.kategorie].push(getraenk);
+                });
+
+                // Getränke nach Kategorien anzeigen
+                for (const [kategorie, getraenke] of Object.entries(kategorien)) {
+                    const kategorieTitel = document.createElement('h2');
+                    kategorieTitel.classList.add('category');
+                    kategorieTitel.textContent = kategorie;
+                    getraenkeContainer.appendChild(kategorieTitel);
+
+                    const cardContainer = document.createElement('div');
+                    cardContainer.classList.add('card-container');
+
+                    getraenke.forEach(getraenk => {
+                        const card = document.createElement('div');
+                        card.classList.add('card');
+
+                        card.innerHTML = `
+                            <h3>${getraenk.name}</h3>
+                            <p>${getraenk.beschreibung}</p>
+                            <p class="preis">${getraenk.preis.toFixed(2)} €</p>
+                        `;
+
+                        cardContainer.appendChild(card);
+                    });
+
+                    getraenkeContainer.appendChild(cardContainer);
+                }
+            })
+            .catch(error => console.error('Fehler beim Laden der Getränkekarte:', error));
+    </script>
+</body>
+</html>
