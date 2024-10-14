@@ -35,15 +35,15 @@
 
         .container {
             display: grid;
-            grid-template-columns: 1fr repeat(auto-fill, minmax(250px, 1fr));
+            grid-template-columns: 1fr repeat(auto-fill, minmax(250px, 1fr)); /* Dynamisches Layout */
             gap: 20px;
             padding: 20px;
-            max-width: 1200px;
+            max-width: 1400px; /* Maximale Breite für größere Bildschirme */
             margin: 0 auto;
         }
 
         .category {
-            grid-column: 1 / 2;
+            grid-column: 1 / 2; /* Kategorie in der ersten Spalte */
             text-align: left;
             font-size: 1.5em;
             color: #007bff;
@@ -58,7 +58,7 @@
             padding: 20px;
             transition: transform 0.2s;
             margin-top: 0;
-            grid-column: 2 / span 1;
+            grid-column: span 1; /* Kacheln verteilen sich gleichmäßig */
         }
 
         .card:hover {
@@ -88,6 +88,13 @@
             text-align: center;
             padding: 10px;
             margin-top: 20px;
+        }
+
+        /* Media Queries für größere Bildschirme */
+        @media (min-width: 1024px) {
+            .container {
+                grid-template-columns: 1fr repeat(3, 1fr); /* Feste Anzahl von Spalten auf größeren Bildschirmen */
+            }
         }
 
     </style>
