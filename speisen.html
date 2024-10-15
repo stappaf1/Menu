@@ -147,10 +147,13 @@
                         const card = document.createElement('div');
                         card.classList.add('card');
 
+                        // Überprüfe, ob 'menge' existiert und setze den Text entsprechend
+                        const mengeText = gericht.menge ? `${gericht.menge} - ` : '';
+
                         card.innerHTML = `
                             <h3>${gericht.name}</h3>
                             <p>${gericht.beschreibung}</p>
-                            <p class="preis">${gericht.menge} - ${gericht.preis.toFixed(2)} €</p>
+                            <p class="preis">${mengeText}${gericht.preis.toFixed(2)} €</p>
                         `;
 
                         cardContainer.appendChild(card);
