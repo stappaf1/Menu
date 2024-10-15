@@ -1,60 +1,60 @@
 {
   "getraenke": [
     {
-      "kategorie": "Biere",
-      "name": "Süffiges Weißbier",
-      "beschreibung": "Erfrischendes Weißbier aus dem Hause Müllerbräu.",
-      "größe": "0,5L",
-      "preis": 4.50
+      "Kategorie": "Biere",
+      "Name": "S?ffiges Wei?bier",
+      "Beschreibung": "Erfrischendes Wei?bier aus dem Hause M?llerbr?u.",
+      "Gr??e": "0,5L",
+      "Preis": "4.50"
     },
     {
-      "kategorie": "Biere",
-      "name": "Helles Bier",
-      "beschreibung": "Ein klassisches Helles aus Bayern.",
-      "größe": "0,5L",
-      "preis": 4.00
+      "Kategorie": "Biere",
+      "Name": "Helles Bier",
+      "Beschreibung": "Ein klassisches Helles aus Bayern.",
+      "Gr??e": "0,5L",
+      "Preis": "4.00"
     },
     {
-      "kategorie": "Weine",
-      "name": "Chardonnay",
-      "beschreibung": "Fruchtiger Weißwein aus der Region.",
-      "größe": "0,2L",
-      "preis": 5.00
+      "Kategorie": "Weine",
+      "Name": "Chardonnay",
+      "Beschreibung": "Fruchtiger Wei?wein aus der Region.",
+      "Gr??e": "0,2L",
+      "Preis": "5.00"
     },
     {
-      "kategorie": "Weine",
-      "name": "Merlot",
-      "beschreibung": "Trockener Rotwein mit einem Hauch von Waldbeeren.",
-      "größe": "0,2L",
-      "preis": 5.50
+      "Kategorie": "Weine",
+      "Name": "Merlot",
+      "Beschreibung": "Trockener Rotwein mit Waldbeer-Note.",
+      "Gr??e": "0,2L",
+      "Preis": "5.50"
     },
     {
-      "kategorie": "Nicht alkoholische Getränke",
-      "name": "Mineralwasser",
-      "beschreibung": "Spritziges oder stilles Wasser, je nach Wahl.",
-      "größe": "0,5L",
-      "preis": 2.50
+      "Kategorie": "Nicht alkoholische Getr?nke",
+      "Name": "Mineralwasser",
+      "Beschreibung": "Spritziges oder stilles Wasser, je nach Wahl.",
+      "Gr??e": "0,5L",
+      "Preis": "2.50"
     },
     {
-      "kategorie": "Nicht alkoholische Getränke",
-      "name": "Hausgemachte Limonade",
-      "beschreibung": "Frische Zitruslimonade mit Minze.",
-      "größe": "0,4L",
-      "preis": 3.50
+      "Kategorie": "Nicht alkoholische Getr?nke",
+      "Name": "Hausgemachte Limonade",
+      "Beschreibung": "Frische Zitruslimonade mit Minze.",
+      "Gr??e": "0,4L",
+      "Preis": "3.50"
     },
     {
-      "kategorie": "Heißgetränke",
-      "name": "Cappuccino",
-      "beschreibung": "Kaffee mit aufgeschäumter Milch und Kakaopulver.",
-      "größe": "Tasse",
-      "preis": 3.00
+      "Kategorie": "Hei?getr?nke",
+      "Name": "Cappuccino",
+      "Beschreibung": "Kaffee mit aufgesch?umter Milch und Kakaopulver.",
+      "Gr??e": "Tasse",
+      "Preis": "3.00"
     },
     {
-      "kategorie": "Heißgetränke",
-      "name": "Grüner Tee",
-      "beschreibung": "Frischer grüner Tee aus biologischem Anbau.",
-      "größe": "Tasse",
-      "preis": 2.50
+      "Kategorie": "Hei?getr?nke",
+      "Name": "Gr?ner Tee",
+      "Beschreibung": "Frischer gr?ner Tee aus biologischem Anbau.",
+      "Gr??e": "Tasse",
+      "Preis": "2.50"
     }
   ]
 }
