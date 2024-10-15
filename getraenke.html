@@ -156,7 +156,7 @@
                         card.classList.add('card');
 
                         // Preis und Menge direkt als String verwenden
-                        const preis = getraenk.Preis; // Preis als String
+                        const preis = parseFloat(getraenk.Preis); // Preis als Zahl umwandeln
                         const menge = getraenk.Menge; // Menge als String
 
                         card.innerHTML = `
@@ -174,4 +174,3 @@
             .catch(error => console.error('Fehler beim Laden der Getränkekarte:', error));
     </script>
 </body>
-</html>
