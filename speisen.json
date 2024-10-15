@@ -1,74 +1,74 @@
 {
   "speisen": [
     {
-      "kategorie": "Vorspeisen",
-      "name": "Bruschetta",
-      "beschreibung": "Geröstetes Brot mit Tomaten, Basilikum und Knoblauch.",
-      "menge": "2 Stück",
-      "preis": 0.50
+      "Kategorie": "Vorspeisen",
+      "Name": "Bruschetta",
+      "Beschreibung": "Ger?stetes Brot mit Tomaten, Basilikum und Knoblauch.",
+      "Menge": "2 St?ck",
+      "Preis": "5.00"
     },
     {
-      "kategorie": "Vorspeisen",
-      "name": "Caprese Salat",
-      "beschreibung": "Tomaten, frischer Mozzarella und Basilikum, beträufelt mit Olivenöl.",
-      "menge": "150g",
-      "preis": 6.50
+      "Kategorie": "Vorspeisen",
+      "Name": "Caprese Salat",
+      "Beschreibung": "Tomaten, frischer Mozzarella und Basilikum, Oliven?l.",
+      "Menge": "150g",
+      "Preis": "6.50"
     },
     {
-      "kategorie": "Hauptgerichte",
-      "name": "Spaghetti Carbonara",
-      "beschreibung": "Traditionelle italienische Pasta mit Speck und Ei.",
-      "menge": "400g",
-      "preis": 12.50
+      "Kategorie": "Hauptgerichte",
+      "Name": "Spaghetti Carbonara",
+      "Beschreibung": "Traditionelle italienische Pasta mit Speck und Ei.",
+      "Menge": "400g",
+      "Preis": "12.50"
     },
     {
-      "kategorie": "Hauptgerichte",
-      "name": "Margherita Pizza",
-      "beschreibung": "Pizza mit frischen Tomaten, Mozzarella und Basilikum.",
-      "menge": "30cm",
-      "preis": 10.00
+      "Kategorie": "Hauptgerichte",
+      "Name": "Margherita Pizza",
+      "Beschreibung": "Pizza mit frischen Tomaten, Mozzarella und Basilikum.",
+      "Menge": "30cm",
+      "Preis": "10.00"
     },
     {
-      "kategorie": "Hauptgerichte",
-      "name": "Wiener Schnitzel",
-      "beschreibung": "Knusprig paniertes Kalbsschnitzel, serviert mit Kartoffelsalat.",
-      "menge": "200g",
-      "preis": 15.00
+      "Kategorie": "Hauptgerichte",
+      "Name": "Wiener Schnitzel",
+      "Beschreibung": "Knusprig paniertes Kalbsschnitzel mit Kartoffelsalat.",
+      "Menge": "200g",
+      "Preis": "15.00"
     },
     {
-      "kategorie": "Hauptgerichte",
-      "name": "Zwiebelrostbraten",
-      "beschreibung": "Saftiges Rindersteak mit Röstzwiebeln und Bratkartoffeln.",
-      "menge": "250g",
-      "preis": 18.50
+      "Kategorie": "Hauptgerichte",
+      "Name": "Zwiebelrostbraten",
+      "Beschreibung": "Rindersteak mit R?stzwiebeln und Bratkartoffeln.",
+      "Menge": "250g",
+      "Preis": "18.50"
     },
     {
-      "kategorie": "Hauptgerichte",
-      "name": "Veganes Curry",
-      "beschreibung": "Cremiges Kokos-Curry mit Gemüse und Basmatireis.",
-      "menge": "350g",
-      "preis": 11.00
+      "Kategorie": "Hauptgerichte",
+      "Name": "Veganes Curry",
+      "Beschreibung": "Kokos-Curry mit Gem?se und Basmatireis.",
+      "Menge": "350g",
+      "Preis": "11.00"
     },
     {
-      "kategorie": "Desserts",
-      "name": "Tiramisu",
-      "beschreibung": "Klassisches italienisches Dessert mit Mascarpone und Espresso.",
-      "menge": "120g",
-      "preis": 5.00
+      "Kategorie": "Desserts",
+      "Name": "Tiramisu",
+      "Beschreibung": "Klassisches italienisches Dessert mit Mascarpone, Espresso",
+      "Menge": "120g",
+      "Preis": "5.00"
     },
     {
-      "kategorie": "Desserts",
-      "name": "Apfelstrudel",
-      "beschreibung": "Warmer Apfelstrudel mit Vanillesoße.",
-      "menge": "150g",
-      "preis": 4.50
+      "Kategorie": "Desserts",
+      "Name": "Apfelstrudel",
+      "Beschreibung": "Warmer Apfelstrudel mit Vanilleso?e.",
+      "Menge": "150g",
+      "Preis": "4.50"
     },
     {
-      "kategorie": "Desserts",
-      "name": "Schokoladenmousse",
-      "beschreibung": "Luftige Schokoladencreme mit frischen Beeren.",
-      "menge": "100g",
-      "preis": 5.50
+      "Kategorie": "Desserts",
+      "Name": "Schokoladenmousse",
+      "Beschreibung": "Luftige Schokoladencreme mit frischen Beeren.",
+      "Menge": "100g",
+      "Preis": "5.50"
     }
   ]
 }
