@@ -10,14 +10,14 @@
        {
             "Name": "Coca-Cola1",
             "Beschreibung": "Erfrischendes Cola-Getränk, kohlensäurehaltig.",
-            "Preis": 2.50,
+            "Preis": "2.50",
             "Menge": "0.5",
             "Kategorie": "Softdrinks"
         },
     {
             "Name": "Coca-Cola2",
             "Beschreibung": "Erfrischendes Cola-Getränk, kohlensäurehaltig.",
-            "Preis": 2.50,
+            "Preis": "2.50",
             "Menge": "0.5",
             "Kategorie": "Softdrinks"
         }
