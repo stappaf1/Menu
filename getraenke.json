@@ -2,58 +2,58 @@
   "getraenke": [
     {
       "Kategorie": "Biere",
-      "Name": "S?ffiges Wei?bier",
-      "Beschreibung": "Erfrischendes Wei?bier aus dem Hause M?llerbr?u.",
-      "Gr??e": "0,5L",
+      "Name": "Süffiges Weißbier",
+      "Beschreibung": "Erfrischendes Weißbier aus dem Hause Müllerbräu.",
+      "Größe": "0,5L",
       "Preis": "4.50"
     },
     {
       "Kategorie": "Biere",
       "Name": "Helles Bier",
       "Beschreibung": "Ein klassisches Helles aus Bayern.",
-      "Gr??e": "0,5L",
+      "Größe": "0,5L",
       "Preis": "4.00"
     },
     {
       "Kategorie": "Weine",
       "Name": "Chardonnay",
-      "Beschreibung": "Fruchtiger Wei?wein aus der Region.",
-      "Gr??e": "0,2L",
+      "Beschreibung": "Fruchtiger Weißwein aus der Region.",
+      "Größe": "0,2L",
       "Preis": "5.00"
     },
     {
       "Kategorie": "Weine",
       "Name": "Merlot",
       "Beschreibung": "Trockener Rotwein mit Waldbeer-Note.",
-      "Gr??e": "0,2L",
+      "Größe": "0,2L",
       "Preis": "5.50"
     },
     {
-      "Kategorie": "Nicht alkoholische Getr?nke",
+      "Kategorie": "Nicht alkoholische Getränke",
       "Name": "Mineralwasser",
       "Beschreibung": "Spritziges oder stilles Wasser, je nach Wahl.",
-      "Gr??e": "0,5L",
+      "Größe": "0,5L",
       "Preis": "2.50"
     },
     {
-      "Kategorie": "Nicht alkoholische Getr?nke",
+      "Kategorie": "Nicht alkoholische Getränke",
       "Name": "Hausgemachte Limonade",
       "Beschreibung": "Frische Zitruslimonade mit Minze.",
-      "Gr??e": "0,4L",
+      "Größe": "0,4L",
       "Preis": "3.50"
     },
     {
-      "Kategorie": "Hei?getr?nke",
+      "Kategorie": "Heißgetränke",
       "Name": "Cappuccino",
-      "Beschreibung": "Kaffee mit aufgesch?umter Milch und Kakaopulver.",
-      "Gr??e": "Tasse",
+      "Beschreibung": "Kaffee mit aufgeschäumter Milch und Kakaopulver.",
+      "Größe": "Tasse",
       "Preis": "3.00"
     },
     {
-      "Kategorie": "Hei?getr?nke",
-      "Name": "Gr?ner Tee",
-      "Beschreibung": "Frischer gr?ner Tee aus biologischem Anbau.",
-      "Gr??e": "Tasse",
+      "Kategorie": "Heißgetränke",
+      "Name": "Grüner Tee",
+      "Beschreibung": "Frischer grüner Tee aus biologischem Anbau.",
+      "Größe": "Tasse",
       "Preis": "2.50"
     }
   ]
