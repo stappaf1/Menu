@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moderne Speisekarte</title>
+    <title>Speisen</title>
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -86,6 +86,11 @@
             color: #28a745;
         }
 
+        .menge {
+            font-size: 1em; /* Größe der Menge anpassen */
+            color: #666; /* Farbe für die Menge */
+        }
+
         footer {
             background-color: #343a40;
             color: white;
@@ -112,7 +117,7 @@
         <a href="getraenke.html">Getränke</a>
     </nav>
 
-    <h1>Speisekarte</h1> <!-- Titel zentriert -->
+    <h1>Speisen</h1> <!-- Titel zentriert -->
 
     <div class="container" id="speisen-container"></div>
 
@@ -129,10 +134,11 @@
 
                 // Kategorisieren der Speisen
                 data.speisen.forEach(gericht => {
-                    if (!kategorien[gericht.Kategorie]) {
-                        kategorien[gericht.Kategorie] = [];
+                    const kategorie = gericht.Kategorie.toLowerCase(); // Schlüssel in Kleinbuchstaben
+                    if (!kategorien[kategorie]) {
+                        kategorien[kategorie] = [];
                     }
-                    kategorien[gericht.Kategorie].push(gericht);
+                    kategorien[kategorie].push(gericht);
                 });
 
                 // Speisen nach Kategorien anzeigen
@@ -150,13 +156,13 @@
                         card.classList.add('card');
 
                         // Preis und Menge direkt als String verwenden
-                        const preis = gericht.Preis.toFixed(2); // Preis als String formatieren
+                        const preis = gericht.Preis; // Preis als String
                         const menge = gericht.Menge; // Menge als String
 
                         card.innerHTML = `
                             <h3>${gericht.Name}</h3>
                             <p>${gericht.Beschreibung}</p>
-                            <p class="preis">Preis: ${preis} € <span class="menge">(Menge: ${menge})</span></p>
+                            <p class="preis">Preis: ${preis.toFixed(2)} € <span class="menge">(Menge: ${menge})</span></p>
                         `;
 
                         cardContainer.appendChild(card);
