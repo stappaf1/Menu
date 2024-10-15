@@ -121,12 +121,14 @@
     </footer>
 
     <script>
+        // Lade die Getränkedaten aus der JSON-Datei
         fetch('getraenke.json')
             .then(response => response.json())
             .then(data => {
                 const getraenkeContainer = document.getElementById('getraenke-container');
                 const kategorien = {};
 
+                // Kategorisieren der Getränke
                 data.getraenke.forEach(getraenk => {
                     if (!kategorien[getraenk.kategorie]) {
                         kategorien[getraenk.kategorie] = [];
@@ -134,6 +136,7 @@
                     kategorien[getraenk.kategorie].push(getraenk);
                 });
 
+                // Getränke nach Kategorien anzeigen
                 for (const [kategorie, getraenke] of Object.entries(kategorien)) {
                     const kategorieTitel = document.createElement('h2');
                     kategorieTitel.classList.add('category');
@@ -147,13 +150,14 @@
                         const card = document.createElement('div');
                         card.classList.add('card');
 
-                        // Zeige Menge nur, wenn sie vorhanden ist
-                        const mengeText = getraenk.größe ? `${getraenk.größe} - ` : '';
+                        // Menge wird angezeigt, wenn sie vorhanden ist
+                        const menge = getraenk.größe ? `<p>Menge: ${getraenk.größe}</p>` : '';
 
                         card.innerHTML = `
                             <h3>${getraenk.name}</h3>
                             <p>${getraenk.beschreibung}</p>
-                            <p class="preis">${mengeText}${getraenk.preis.toFixed(2)} €</p>
+                            ${menge}
+                            <p class="preis">${getraenk.preis.toFixed(2)} €</p>
                         `;
 
                         cardContainer.appendChild(card);
