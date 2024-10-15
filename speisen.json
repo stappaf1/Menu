@@ -5,70 +5,70 @@
       "Name": "Bruschetta",
       "Beschreibung": "Geröstetes Brot mit Tomaten, Basilikum und Knoblauch.",
       "Menge": " ",
-      "Preis": "5.00 €"
+      "Preis": "5.00"
     },
     {
       "Kategorie": "Vorspeisen",
       "Name": "Caprese Salat",
       "Beschreibung": "Tomaten, frischer Mozzarella und Basilikum, Olivenöl.",
       "Menge": "150g",
-      "Preis": "5.00 €"
+      "Preis": "5.00"
     },
     {
       "Kategorie": "Hauptgerichte",
       "Name": "Spaghetti Carbonara",
       "Beschreibung": "Traditionelle italienische Pasta mit Speck und Ei.",
       "Menge": "400g",
-      "Preis": "5.00 €"
+      "Preis": "5.00"
     },
     {
       "Kategorie": "Hauptgerichte",
       "Name": "Margherita Pizza",
       "Beschreibung": "Pizza mit frischen Tomaten, Mozzarella und Basilikum.",
       "Menge": "30cm",
-      "Preis": "5.00 €"
+      "Preis": "5.00"
     },
     {
       "Kategorie": "Hauptgerichte",
       "Name": "Wiener Schnitzel",
       "Beschreibung": "Knusprig paniertes Kalbsschnitzel mit Kartoffelsalat.",
       "Menge": "200g",
-      "Preis": "5.00 €"
+      "Preis": "5.00"
     },
     {
       "Kategorie": "Hauptgerichte",
       "Name": "Zwiebelrostbraten",
       "Beschreibung": "Rindersteak mit Röstzwiebeln und Bratkartoffeln.",
       "Menge": "250g",
-      "Preis": "5.00 €"
+      "Preis": "5.00"
     },
     {
       "Kategorie": "Hauptgerichte",
       "Name": "Veganes Curry",
       "Beschreibung": "Kokos-Curry mit Gemüse und Basmatireis.",
       "Menge": "350g",
-      "Preis": "5.00 €"
+      "Preis": "5.00"
     },
     {
       "Kategorie": "Desserts",
       "Name": "Tiramisu",
       "Beschreibung": "Klassisches italienisches Dessert mit Mascarpone, Espresso",
       "Menge": "120g",
-      "Preis": "5.00 €"
+      "Preis": "5.00"
     },
     {
       "Kategorie": "Desserts",
       "Name": "Apfelstrudel",
       "Beschreibung": "Warmer Apfelstrudel mit Vanillesoße.",
       "Menge": "150g",
-      "Preis": "5.00 €"
+      "Preis": "5.00"
     },
     {
       "Kategorie": "Desserts",
       "Name": "Schokoladenmousse",
       "Beschreibung": "Luftige Schokoladencreme mit frischen Beeren.",
       "Menge": "100g",
-      "Preis": "5.00 €"
+      "Preis": "5.00"
     }
   ]
 }
