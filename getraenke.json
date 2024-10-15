@@ -1,60 +1,32 @@
 {
   "getraenke": [
     {
-      "Kategorie": "Biere",
-      "Name": "Süffiges Weißbier",
-      "Beschreibung": "Erfrischendes Weißbier aus dem Hause Müllerbräu.",
-      "Größe": "0,5L",
-      "Preis": "4.50 €"
-    },
-    {
-      "Kategorie": "Biere",
-      "Name": "Helles Bier",
-      "Beschreibung": "Ein klassisches Helles aus Bayern.",
-      "Größe": "0,5L",
-      "Preis": "4.50 €"
-    },
-    {
-      "Kategorie": "Weine",
-      "Name": "Chardonnay",
-      "Beschreibung": "Fruchtiger Weißwein aus der Region.",
-      "Größe": "0,2L",
-      "Preis": "4.50 €"
-    },
-    {
-      "Kategorie": "Weine",
-      "Name": "Merlot",
-      "Beschreibung": "Trockener Rotwein mit Waldbeer-Note.",
-      "Größe": "0,2L",
-      "Preis": "4.50 €"
-    },
-    {
-      "Kategorie": "Nicht alkoholische Getränke",
+      "Kategorie": "Alkoholfreie Getränke",
       "Name": "Mineralwasser",
-      "Beschreibung": "Spritziges oder stilles Wasser, je nach Wahl.",
-      "Größe": "0,5L",
-      "Preis": "4.50 €"
+      "Beschreibung": "Sprudelndes oder stilles Wasser.",
+      "Größe": "0.5L",
+      "Preis": "2.00"
     },
     {
-      "Kategorie": "Nicht alkoholische Getränke",
-      "Name": "Hausgemachte Limonade",
-      "Beschreibung": "Frische Zitruslimonade mit Minze.",
-      "Größe": "0,4L",
-      "Preis": "4.50 €"
+      "Kategorie": "Alkoholfreie Getränke",
+      "Name": "Cola",
+      "Beschreibung": "Klassische Cola mit Koffein.",
+      "Größe": "0.33L",
+      "Preis": "2.50"
     },
     {
-      "Kategorie": "Heißgetränke",
-      "Name": "Cappuccino",
-      "Beschreibung": "Kaffee mit aufgeschäumter Milch und Kakaopulver.",
-      "Größe": "Tasse",
-      "Preis": "4.50 €"
+      "Kategorie": "Alkoholische Getränke",
+      "Name": "Weißwein",
+      "Beschreibung": "Trocken und frisch, ideal zu Fisch.",
+      "Größe": "0.75L",
+      "Preis": "15.00"
     },
     {
-      "Kategorie": "Heißgetränke",
-      "Name": "Grüner Tee",
-      "Beschreibung": "Frischer grüner Tee aus biologischem Anbau.",
-      "Größe": "Tasse",
-      "Preis": "4.50 €"
+      "Kategorie": "Alkoholische Getränke",
+      "Name": "Bier",
+      "Beschreibung": "Frisches Pilsner Bier.",
+      "Größe": "0.5L",
+      "Preis": "4.00"
     }
   ]
 }
