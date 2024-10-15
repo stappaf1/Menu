@@ -129,17 +129,17 @@
 
                 // Kategorisieren der Speisen
                 data.speisen.forEach(gericht => {
-                    if (!kategorien[gericht.kategorie]) {
-                        kategorien[gericht.kategorie] = [];
+                    if (!kategorien[gericht.Kategorie]) {
+                        kategorien[gericht.Kategorie] = [];
                     }
-                    kategorien[gericht.kategorie].push(gericht);
+                    kategorien[gericht.Kategorie].push(gericht);
                 });
 
                 // Speisen nach Kategorien anzeigen
                 for (const [kategorie, gerichte] of Object.entries(kategorien)) {
                     const kategorieTitel = document.createElement('h2');
                     kategorieTitel.classList.add('category');
-                    kategorieTitel.textContent = kategorie;
+                    kategorieTitel.textContent = kategorie.charAt(0).toUpperCase() + kategorie.slice(1); // Großbuchstaben für Titel
                     speisenContainer.appendChild(kategorieTitel);
 
                     const cardContainer = document.createElement('div');
@@ -149,10 +149,14 @@
                         const card = document.createElement('div');
                         card.classList.add('card');
 
+                        // Preis und Menge direkt als String verwenden
+                        const preis = gericht.Preis.toFixed(2); // Preis als String formatieren
+                        const menge = gericht.Menge; // Menge als String
+
                         card.innerHTML = `
-                            <h3>${gericht.name}</h3>
-                            <p>${gericht.beschreibung}</p>
-                            <p class="preis">${gericht.preis.toFixed(2)} €</p>
+                            <h3>${gericht.Name}</h3>
+                            <p>${gericht.Beschreibung}</p>
+                            <p class="preis">Preis: ${preis} € <span class="menge">(Menge: ${menge})</span></p>
                         `;
 
                         cardContainer.appendChild(card);
