@@ -5,14 +5,14 @@
       "Name": "Bruschetta",
       "Beschreibung": "Geröstetes Brot mit Tomaten, Basilikum und Knoblauch.",
       "Menge": "Portion",
-      "Preis": 5.00
+      "Preis": "5.00"
     },
     {
       "Kategorie": "Vorspeisen",
       "Name": "Caprese Salat",
       "Beschreibung": "Tomaten, frischer Mozzarella und Basilikum, Olivenöl.",
       "Menge": "150g",
-      "Preis": 5.00
+      "Preis": "5.00"
     }
   ]
 }
