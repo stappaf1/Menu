@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hotel Alea Speisekarte</title>
+    <title>Moderne Speisekarte</title>
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -80,6 +80,19 @@
             color: #666;
         }
 
+        /* Flexbox für Menge und Preis */
+        .preis-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .menge {
+            font-weight: bold;
+            color: #666;
+        }
+
         .preis {
             font-weight: bold;
             font-size: 1.2em;
@@ -127,6 +140,7 @@
                 const speisenContainer = document.getElementById('speisen-container');
                 const kategorien = {};
 
+                // Kategorisieren der Speisen
                 data.speisen.forEach(gericht => {
                     if (!kategorien[gericht.kategorie]) {
                         kategorien[gericht.kategorie] = [];
@@ -134,6 +148,7 @@
                     kategorien[gericht.kategorie].push(gericht);
                 });
 
+                // Speisen nach Kategorien anzeigen
                 for (const [kategorie, gerichte] of Object.entries(kategorien)) {
                     const kategorieTitel = document.createElement('h2');
                     kategorieTitel.classList.add('category');
@@ -147,13 +162,14 @@
                         const card = document.createElement('div');
                         card.classList.add('card');
 
-                        // Überprüfe, ob 'menge' existiert und setze den Text entsprechend
-                        const mengeText = gericht.menge ? `${gericht.menge} - ` : '';
-
+                        // Flexbox für Preis und Menge
                         card.innerHTML = `
                             <h3>${gericht.name}</h3>
                             <p>${gericht.beschreibung}</p>
-                            <p class="preis">${mengeText}${gericht.preis.toFixed(2)} €</p>
+                            <div class="preis-container">
+                                <span class="menge"></span>
+                                <span class="preis">${gericht.preis.toFixed(2)} €</span>
+                            </div>
                         `;
 
                         cardContainer.appendChild(card);
