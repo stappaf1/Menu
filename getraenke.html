@@ -1,188 +1,58 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hotel Alea Getränkekarte</title>
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f8f9fa;
-        }
-
-        h1, h2 {
-            color: #333;
-            text-align: center;
-            margin-top: 20px;
-            margin-bottom: 10px;
-        }
-
-        nav {
-            background-color: #343a40;
-            padding: 10px;
-            text-align: center;
-        }
-
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-            font-size: 1.2em;
-        }
-
-        .container {
-            display: grid;
-            grid-template-columns: 1fr 3fr;
-            gap: 20px;
-            padding: 20px;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .category {
-            grid-column: 1 / 2;
-            text-align: left;
-            font-size: 1.5em;
-            color: #007bff;
-            font-weight: bold;
-            margin-bottom: 0;
-        }
-
-        .card-container {
-            display: grid;
-            grid-column: 2 / -1;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 20px;
-        }
-
-        .card {
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            transition: transform 0.2s;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-        }
-
-        .card h3 {
-            margin-top: 0;
-            font-size: 1.2em;
-            color: #333;
-        }
-
-        .card p {
-            margin: 5px 0;
-            color: #666;
-        }
-
-        /* Flexbox für Menge und Preis */
-        .preis-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 10px;
-        }
-
-        .menge {
-            font-weight: bold;
-            color: #666;
-        }
-
-        .preis {
-            font-weight: bold;
-            font-size: 1.2em;
-            color: #28a745;
-        }
-
-        footer {
-            background-color: #343a40;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            margin-top: 20px;
-        }
-
-        @media (max-width: 1024px) {
-            .container {
-                grid-template-columns: 1fr;
+<script>
+    // Lade die Getränkedaten aus der JSON-Datei
+    fetch('getraenke.json')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP-Fehler! Status: ${response.status}`);
             }
+            return response.json();
+        })
+        .then(data => {
+            console.log("Daten erfolgreich geladen:", data); // Debug-Ausgabe
+            const getraenkeContainer = document.getElementById('getraenke-container');
+            const kategorien = {};
 
-            .card-container {
-                grid-column: 1 / -1;
-            }
-        }
-    </style>
-</head>
-<body>
-    <nav>
-        <a href="index.html">Startseite</a>
-        <a href="speisen.html">Speisen</a>
-        <a href="getraenke.html">Getränke</a>
-    </nav>
+            // Kategorisieren der Getränke
+            data.getraenke.forEach(getraenk => {
+                const kategorie = getraenk.Kategorie; // Verwende `Kategorie`
+                console.log("Kategorie:", kategorie); // Debug-Ausgabe
+                if (!kategorien[kategorie]) {
+                    kategorien[kategorie] = [];
+                }
+                kategorien[kategorie].push(getraenk);
+            });
 
-    <h1>Getränkekarte</h1>
+            // Getränke nach Kategorien anzeigen
+            for (const [kategorie, getraenke] of Object.entries(kategorien)) {
+                const kategorieTitel = document.createElement('h2');
+                kategorieTitel.classList.add('category');
+                kategorieTitel.textContent = kategorie;
+                getraenkeContainer.appendChild(kategorieTitel);
 
-    <div class="container" id="getraenke-container"></div>
+                const cardContainer = document.createElement('div');
+                cardContainer.classList.add('card-container');
 
-    <footer>
-        <p>© 2024 Hotel Alea GmbH - Alle Rechte vorbehalten</p>
-    </footer>
+                getraenke.forEach(getraenk => {
+                    const card = document.createElement('div');
+                    card.classList.add('card');
 
-    <script>
-        // Lade die Getränkedaten aus der JSON-Datei
-        fetch('getraenke.json')
-            .then(response => response.json())
-            .then(data => {
-                const getraenkeContainer = document.getElementById('getraenke-container');
-                const kategorien = {};
+                    // Menge wird angezeigt, wenn sie vorhanden ist
+                    const menge = getraenk.Größe ? `<span class="menge">${getraenk.Größe}</span>` : ''; // Verwende `Größe`
 
-                // Kategorisieren der Getränke
-                data.getraenke.forEach(getraenk => {
-                    const kategorie = getraenk.Kategorie; // Verwende `Kategorie`
-                    if (!kategorien[kategorie]) {
-                        kategorien[kategorie] = [];
-                    }
-                    kategorien[kategorie].push(getraenk);
+                    card.innerHTML = `
+                        <h3>${getraenk.Name}</h3> <!-- Verwende `Name` -->
+                        <p>${getraenk.Beschreibung}</p> <!-- Verwende `Beschreibung` -->
+                        <div class="preis-container">
+                            ${menge}
+                            <span class="preis">${parseFloat(getraenk.Preis).toFixed(2)} €</span> <!-- Verwende `Preis` -->
+                        </div>
+                    `;
+
+                    cardContainer.appendChild(card);
                 });
 
-                // Getränke nach Kategorien anzeigen
-                for (const [kategorie, getraenke] of Object.entries(kategorien)) {
-                    const kategorieTitel = document.createElement('h2');
-                    kategorieTitel.classList.add('category');
-                    kategorieTitel.textContent = kategorie;
-                    getraenkeContainer.appendChild(kategorieTitel);
-
-                    const cardContainer = document.createElement('div');
-                    cardContainer.classList.add('card-container');
-
-                    getraenke.forEach(getraenk => {
-                        const card = document.createElement('div');
-                        card.classList.add('card');
-
-                        // Menge wird angezeigt, wenn sie vorhanden ist
-                        const menge = getraenk.Größe ? `<span class="menge">${getraenk.Größe}</span>` : ''; // Verwende `Größe`
-
-                        card.innerHTML = `
-                            <h3>${getraenk.Name}</h3> <!-- Verwende `Name` -->
-                            <p>${getraenk.Beschreibung}</p> <!-- Verwende `Beschreibung` -->
-                            <div class="preis-container">
-                                ${menge}
-                                <span class="preis">${parseFloat(getraenk.Preis).toFixed(2)} €</span> <!-- Verwende `Preis` -->
-                            </div>
-                        `;
-
-                        cardContainer.appendChild(card);
-                    });
-
-                    getraenkeContainer.appendChild(cardContainer);
-                }
-            })
-            .catch(error => console.error('Fehler beim Laden der Getränkekarte:', error));
-    </script>
-</body>
-</html>
+                getraenkeContainer.appendChild(cardContainer);
+            }
+        })
+        .catch(error => console.error('Fehler beim Laden der Getränkekarte:', error));
+</script>
