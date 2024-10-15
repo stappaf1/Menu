@@ -14,7 +14,7 @@
 
             // Kategorisieren der Getränke
             data.getraenke.forEach(getraenk => {
-                const kategorie = getraenk.Kategorie; // Verwende `Kategorie`
+                const kategorie = getraenk.Kategorie; // Achte auf Groß-/Kleinschreibung
                 console.log("Kategorie:", kategorie); // Debug-Ausgabe
                 if (!kategorien[kategorie]) {
                     kategorien[kategorie] = [];
@@ -37,14 +37,14 @@
                     card.classList.add('card');
 
                     // Menge wird angezeigt, wenn sie vorhanden ist
-                    const menge = getraenk.Größe ? `<span class="menge">${getraenk.Größe}</span>` : ''; // Verwende `Größe`
+                    const menge = getraenk.Größe ? `<span class="menge">${getraenk.Größe}</span>` : ''; // Achte auf Groß-/Kleinschreibung
 
                     card.innerHTML = `
-                        <h3>${getraenk.Name}</h3> <!-- Verwende `Name` -->
-                        <p>${getraenk.Beschreibung}</p> <!-- Verwende `Beschreibung` -->
+                        <h3>${getraenk.Name}</h3> <!-- Achte auf Groß-/Kleinschreibung -->
+                        <p>${getraenk.Beschreibung}</p> <!-- Achte auf Groß-/Kleinschreibung -->
                         <div class="preis-container">
                             ${menge}
-                            <span class="preis">${parseFloat(getraenk.Preis).toFixed(2)} €</span> <!-- Verwende `Preis` -->
+                            <span class="preis">${parseFloat(getraenk.Preis).toFixed(2)} €</span> <!-- Achte auf Groß-/Kleinschreibung -->
                         </div>
                     `;
 
