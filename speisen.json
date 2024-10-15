@@ -1,18 +1,18 @@
 {
-  "speisen": [
-    {
-      "Kategorie": "Vorspeisen",
-      "Name": "Bruschetta",
-      "Beschreibung": "Geröstetes Brot mit Tomaten, Basilikum und Knoblauch.",
-      "Menge": "Portion",
-      "Preis": "5.00"
-    },
-    {
-      "Kategorie": "Vorspeisen",
-      "Name": "Caprese Salat",
-      "Beschreibung": "Tomaten, frischer Mozzarella und Basilikum, Olivenöl.",
-      "Menge": "150g",
-      "Preis": "5.00"
-    }
-  ]
+    "speisen": [
+        {
+            "Name": "Pizza Margherita",
+            "Beschreibung": "Eine klassische Pizza mit Tomatensauce und Mozzarella.",
+            "Preis": 8.50,
+            "Menge": "1 Stück",
+            "Kategorie": "Pizza"
+        },
+        {
+            "Name": "Pasta Carbonara",
+            "Beschreibung": "Pasta mit Sahnesauce, Speck und Parmesan.",
+            "Preis": 10.00,
+            "Menge": "1 Portion",
+            "Kategorie": "Pasta"
+        }
+    ]
 }
