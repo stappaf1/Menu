@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Speisen</title>
+    <title>Moderne Speisekarte</title>
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -117,7 +117,7 @@
         <a href="getraenke.html">Getränke</a>
     </nav>
 
-    <h1>Speisen</h1> <!-- Titel zentriert -->
+    <h1>Speisekarte</h1> <!-- Titel zentriert -->
 
     <div class="container" id="speisen-container"></div>
 
@@ -134,18 +134,17 @@
 
                 // Kategorisieren der Speisen
                 data.speisen.forEach(gericht => {
-                    const kategorie = gericht.Kategorie.toLowerCase(); // Schlüssel in Kleinbuchstaben
-                    if (!kategorien[kategorie]) {
-                        kategorien[kategorie] = [];
+                    if (!kategorien[gericht.Kategorie]) {
+                        kategorien[gericht.Kategorie] = [];
                     }
-                    kategorien[kategorie].push(gericht);
+                    kategorien[gericht.Kategorie].push(gericht);
                 });
 
                 // Speisen nach Kategorien anzeigen
                 for (const [kategorie, gerichte] of Object.entries(kategorien)) {
                     const kategorieTitel = document.createElement('h2');
                     kategorieTitel.classList.add('category');
-                    kategorieTitel.textContent = kategorie.charAt(0).toUpperCase() + kategorie.slice(1); // Großbuchstaben für Titel
+                    kategorieTitel.textContent = kategorie;
                     speisenContainer.appendChild(kategorieTitel);
 
                     const cardContainer = document.createElement('div');
@@ -155,14 +154,10 @@
                         const card = document.createElement('div');
                         card.classList.add('card');
 
-                        // Preis und Menge direkt als String verwenden
-                        const preis = gericht.Preis; // Preis als String
-                        const menge = gericht.Menge; // Menge als String
-
                         card.innerHTML = `
                             <h3>${gericht.Name}</h3>
                             <p>${gericht.Beschreibung}</p>
-                            <p class="preis">Preis: ${preis.toFixed(2)} € <span class="menge">(Menge: ${menge})</span></p>
+                            <p class="preis">${gericht.Preis.toFixed(2)} € <span class="menge">(Menge: ${gericht.Menge})</span></p>
                         `;
 
                         cardContainer.appendChild(card);
