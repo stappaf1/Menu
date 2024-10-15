@@ -126,18 +126,26 @@
     </footer>
 
     <script>
-        fetch('speisen.json')
-            .then(response => response.json())
+        fetch('speisen.json') // Achte darauf, dass der Dateiname korrekt ist
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Netzwerkantwort war nicht ok');
+                }
+                return response.json();
+            })
             .then(data => {
                 const speisenContainer = document.getElementById('speisen-container');
                 const kategorien = {};
 
                 // Kategorisieren der Speisen
                 data.speisen.forEach(gericht => {
-                    if (!kategorien[gericht.Kategorie]) {
-                        kategorien[gericht.Kategorie] = [];
+                    // Stelle sicher, dass das Gericht die erwarteten Felder hat
+                    if (gericht.Kategorie) {
+                        if (!kategorien[gericht.Kategorie]) {
+                            kategorien[gericht.Kategorie] = [];
+                        }
+                        kategorien[gericht.Kategorie].push(gericht);
                     }
-                    kategorien[gericht.Kategorie].push(gericht);
                 });
 
                 // Speisen nach Kategorien anzeigen
@@ -154,10 +162,14 @@
                         const card = document.createElement('div');
                         card.classList.add('card');
 
+                        // Überprüfen, ob Preis und Menge existieren
+                        const preis = gericht.Preis !== undefined ? gericht.Preis.toFixed(2) : "Preis nicht verfügbar";
+                        const menge = gericht.Menge !== undefined ? gericht.Menge : "Menge nicht verfügbar";
+
                         card.innerHTML = `
                             <h3>${gericht.Name}</h3>
                             <p>${gericht.Beschreibung}</p>
-                            <p class="preis">${gericht.Preis.toFixed(2)} € <span class="menge">(Menge: ${gericht.Menge})</span></p>
+                            <p class="preis">${preis} € <span class="menge">(Menge: ${menge})</span></p>
                         `;
 
                         cardContainer.appendChild(card);
