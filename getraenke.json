@@ -1,106 +1,60 @@
 {
-    "getraenke": [
-        {
-            "name": "Coca-Cola",
-            "beschreibung": "Erfrischendes Cola-Getränk, kohlensäurehaltig.",
-            "preis": 2.50,
-            "kategorie": "Softdrinks"
-        },
-        {
-            "name": "Fanta",
-            "beschreibung": "Fruchtige Orangenlimonade, kohlensäurehaltig.",
-            "preis": 2.50,
-            "kategorie": "Softdrinks"
-        },
-        {
-            "name": "Sprite",
-            "beschreibung": "Erfrischendes Zitrusgetränk, kohlensäurehaltig.",
-            "preis": 2.50,
-            "kategorie": "Softdrinks"
-        },
-        {
-            "name": "Bier",
-            "beschreibung": "Frisches Lagerbier, goldgelb und spritzig.",
-            "preis": 3.00,
-            "kategorie": "Alkoholische Getränke"
-        },
-        {
-            "name": "Weißbier",
-            "beschreibung": "Hefeweizenbier mit fruchtigen Noten.",
-            "preis": 3.50,
-            "kategorie": "Alkoholische Getränke"
-        },
-        {
-            "name": "Rotwein",
-            "beschreibung": "Vollmundiger Rotwein, ideal zu Fleischgerichten.",
-            "preis": 4.50,
-            "kategorie": "Weine"
-        },
-        {
-            "name": "Weißwein",
-            "beschreibung": "Harmonischer Weißwein, frisch und fruchtig.",
-            "preis": 4.00,
-            "kategorie": "Weine"
-        },
-        {
-            "name": "Roséwein",
-            "beschreibung": "Fruchtiger Roséwein, perfekt für den Sommer.",
-            "preis": 4.20,
-            "kategorie": "Weine"
-        },
-        {
-            "name": "Mineralwasser",
-            "beschreibung": "Sprudelndes Mineralwasser, erfrischend und klar.",
-            "preis": 1.50,
-            "kategorie": "Wasser"
-        },
-        {
-            "name": "Stilles Wasser",
-            "beschreibung": "Klares, stilles Mineralwasser.",
-            "preis": 1.50,
-            "kategorie": "Wasser"
-        },
-        {
-            "name": "Orangensaft",
-            "beschreibung": "Frisch gepresster Orangensaft, vitaminreich.",
-            "preis": 2.50,
-            "kategorie": "Säfte"
-        },
-        {
-            "name": "Apfelsaft",
-            "beschreibung": "Klassischer Apfelsaft, süß und erfrischend.",
-            "preis": 2.50,
-            "kategorie": "Säfte"
-        },
-        {
-            "name": "Kaffee",
-            "beschreibung": "Frisch gebrühter Kaffee, kräftig und aromatisch.",
-            "preis": 2.00,
-            "kategorie": "Kaffee"
-        },
-        {
-            "name": "Espresso",
-            "beschreibung": "Starker, italienischer Espresso.",
-            "preis": 2.00,
-            "kategorie": "Kaffee"
-        },
-        {
-            "name": "Latte Macchiato",
-            "beschreibung": "Süßer Latte Macchiato mit Milchschaum.",
-            "preis": 3.00,
-            "kategorie": "Kaffee"
-        },
-        {
-            "name": "Tee",
-            "beschreibung": "Kräuter- oder Früchtetee, warm serviert.",
-            "preis": 2.00,
-            "kategorie": "Tee"
-        },
-        {
-            "name": "Eistee",
-            "beschreibung": "Erfrischender Eistee, leicht gesüßt.",
-            "preis": 2.50,
-            "kategorie": "Tee"
-        }
-    ]
+  "getraenke": [
+    {
+      "kategorie": "Biere",
+      "name": "Süffiges Weißbier",
+      "beschreibung": "Erfrischendes Weißbier aus dem Hause Müllerbräu.",
+      "größe": "0,5L",
+      "preis": 4.50
+    },
+    {
+      "kategorie": "Biere",
+      "name": "Helles Bier",
+      "beschreibung": "Ein klassisches Helles aus Bayern.",
+      "größe": "0,5L",
+      "preis": 4.00
+    },
+    {
+      "kategorie": "Weine",
+      "name": "Chardonnay",
+      "beschreibung": "Fruchtiger Weißwein aus der Region.",
+      "größe": "0,2L",
+      "preis": 5.00
+    },
+    {
+      "kategorie": "Weine",
+      "name": "Merlot",
+      "beschreibung": "Trockener Rotwein mit einem Hauch von Waldbeeren.",
+      "größe": "0,2L",
+      "preis": 5.50
+    },
+    {
+      "kategorie": "Nicht alkoholische Getränke",
+      "name": "Mineralwasser",
+      "beschreibung": "Spritziges oder stilles Wasser, je nach Wahl.",
+      "größe": "0,5L",
+      "preis": 2.50
+    },
+    {
+      "kategorie": "Nicht alkoholische Getränke",
+      "name": "Hausgemachte Limonade",
+      "beschreibung": "Frische Zitruslimonade mit Minze.",
+      "größe": "0,4L",
+      "preis": 3.50
+    },
+    {
+      "kategorie": "Heißgetränke",
+      "name": "Cappuccino",
+      "beschreibung": "Kaffee mit aufgeschäumter Milch und Kakaopulver.",
+      "größe": "Tasse",
+      "preis": 3.00
+    },
+    {
+      "kategorie": "Heißgetränke",
+      "name": "Grüner Tee",
+      "beschreibung": "Frischer grüner Tee aus biologischem Anbau.",
+      "größe": "Tasse",
+      "preis": 2.50
+    }
+  ]
 }
