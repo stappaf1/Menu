@@ -4,21 +4,21 @@
             "Name": "Coca-Cola",
             "Beschreibung": "Erfrischendes Cola-Getränk, kohlensäurehaltig.",
             "Preis": 2.50,
-            "Menge": 0,5L,
+            "Menge": 0.5L,
             "Kategorie": "Softdrinks"
         },
        {
-            "Name": "Coca-Cola",
+            "Name": "Coca-Cola1",
             "Beschreibung": "Erfrischendes Cola-Getränk, kohlensäurehaltig.",
             "Preis": 2.50,
-            "Menge": 0,5L,
+            "Menge": 0.5L,
             "Kategorie": "Softdrinks"
         },
     {
-            "Name": "Coca-Cola",
+            "Name": "Coca-Cola2",
             "Beschreibung": "Erfrischendes Cola-Getränk, kohlensäurehaltig.",
             "Preis": 2.50,
-            "Menge": 0,5L,
+            "Menge": 0.5L,
             "Kategorie": "Softdrinks"
         }
     ]
