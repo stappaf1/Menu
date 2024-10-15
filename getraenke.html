@@ -80,6 +80,19 @@
             color: #666;
         }
 
+        /* Flexbox für Menge und Preis */
+        .preis-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .menge {
+            font-weight: bold;
+            color: #666;
+        }
+
         .preis {
             font-weight: bold;
             font-size: 1.2em;
@@ -151,13 +164,15 @@
                         card.classList.add('card');
 
                         // Menge wird angezeigt, wenn sie vorhanden ist
-                        const menge = getraenk.größe ? `<p>${getraenk.größe}</p>` : '';
+                        const menge = getraenk.größe ? `<span class="menge">${getraenk.größe}</span>` : '';
 
                         card.innerHTML = `
                             <h3>${getraenk.name}</h3>
                             <p>${getraenk.beschreibung}</p>
-                            ${menge}
-                            <p class="preis">${getraenk.preis.toFixed(2)} €</p>
+                            <div class="preis-container">
+                                ${menge}
+                                <span class="preis">${getraenk.preis.toFixed(2)} €</span>
+                            </div>
                         `;
 
                         cardContainer.appendChild(card);
