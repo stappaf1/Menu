@@ -5,56 +5,56 @@
       "Name": "Süffiges Weißbier",
       "Beschreibung": "Erfrischendes Weißbier aus dem Hause Müllerbräu.",
       "Größe": "0,5L",
-      "Preis": "4.50"
+      "Preis": 4.5
     },
     {
       "Kategorie": "Biere",
       "Name": "Helles Bier",
       "Beschreibung": "Ein klassisches Helles aus Bayern.",
       "Größe": "0,5L",
-      "Preis": "4.00"
+      "Preis": 4
     },
     {
       "Kategorie": "Weine",
       "Name": "Chardonnay",
       "Beschreibung": "Fruchtiger Weißwein aus der Region.",
       "Größe": "0,2L",
-      "Preis": "5.00"
+      "Preis": 5
     },
     {
       "Kategorie": "Weine",
       "Name": "Merlot",
       "Beschreibung": "Trockener Rotwein mit Waldbeer-Note.",
       "Größe": "0,2L",
-      "Preis": "5.50"
+      "Preis": 2.5
     },
     {
       "Kategorie": "Nicht alkoholische Getränke",
       "Name": "Mineralwasser",
       "Beschreibung": "Spritziges oder stilles Wasser, je nach Wahl.",
       "Größe": "0,5L",
-      "Preis": "2.50"
+      "Preis": 2.5
     },
     {
       "Kategorie": "Nicht alkoholische Getränke",
       "Name": "Hausgemachte Limonade",
       "Beschreibung": "Frische Zitruslimonade mit Minze.",
       "Größe": "0,4L",
-      "Preis": "3.50"
+      "Preis": 3.5
     },
     {
       "Kategorie": "Heißgetränke",
       "Name": "Cappuccino",
       "Beschreibung": "Kaffee mit aufgeschäumter Milch und Kakaopulver.",
       "Größe": "Tasse",
-      "Preis": "3.00"
+      "Preis": 3
     },
     {
       "Kategorie": "Heißgetränke",
       "Name": "Grüner Tee",
       "Beschreibung": "Frischer grüner Tee aus biologischem Anbau.",
       "Größe": "Tasse",
-      "Preis": "2.50"
+      "Preis": 2.5
     }
   ]
 }
