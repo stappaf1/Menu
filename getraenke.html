@@ -155,15 +155,14 @@
                         const card = document.createElement('div');
                         card.classList.add('card');
 
-                        // Preis direkt als String verwenden
+                        // Preis und Menge direkt als String verwenden
                         const preis = getraenk.Preis; // Preis als String
                         const menge = getraenk.Menge; // Menge als String
 
                         card.innerHTML = `
                             <h3>${getraenk.Name}</h3>
                             <p>${getraenk.Beschreibung}</p>
-                            <p class="menge">Menge: ${menge}</p> <!-- Menge hinzugefügt -->
-                            <p class="preis">${preis}</p> <!-- Preis direkt angezeigt -->
+                            <p class="preis">Preis: ${preis} € <span class="menge">(Menge: ${menge})</span></p>
                         `;
 
                         cardContainer.appendChild(card);
