@@ -3,7 +3,7 @@
         {
             "Name": "Coca-Cola",
             "Beschreibung": "Erfrischendes, kohlensäurehaltiges Getränk.",
-            "Preis": 2.50,  // Preis als Zahl
+            "Preis": 2.50,  
             "Menge": "330ml",
             "Kategorie": "Erfrischungsgetränke"
         },
