@@ -1,53 +1,60 @@
 {
-    "getraenke": [
-        {
-            "Name": "Coca-Cola",
-            "Beschreibung": "Erfrischendes, kohlensäurehaltiges Getränk.",
-            "Preis": 2.50,  
-            "Menge": "330ml",
-            "Kategorie": "Erfrischungsgetränke"
-        },
-        {
-            "Name": "Mineralwasser",
-            "Beschreibung": "Sprudelndes Mineralwasser, ideal zum Durstlöschen.",
-            "Preis": 1.50,
-            "Menge": "500ml",
-            "Kategorie": "Wasser"
-        },
-        {
-            "Name": "Rotwein",
-            "Beschreibung": "Ein fruchtiger Rotwein aus dem Bordeaux.",
-            "Preis": 4.50,
-            "Menge": "0.15l",
-            "Kategorie": "Weine"
-        },
-        {
-            "Name": "Weißwein",
-            "Beschreibung": "Ein trockener Weißwein mit frischem Aroma.",
-            "Preis": 4.00,
-            "Menge": "0.15l",
-            "Kategorie": "Weine"
-        },
-        {
-            "Name": "Bier",
-            "Beschreibung": "Frisch gezapftes Bier, perfekt für jeden Anlass.",
-            "Preis": 3.00,
-            "Menge": "0.5l",
-            "Kategorie": "Biere"
-        },
-        {
-            "Name": "Tee",
-            "Beschreibung": "Heißer Tee mit verschiedenen Geschmacksrichtungen.",
-            "Preis": 2.00,
-            "Menge": "250ml",
-            "Kategorie": "Heiße Getränke"
-        },
-        {
-            "Name": "Kaffee",
-            "Beschreibung": "Frisch gebrühter Kaffee, stark und aromatisch.",
-            "Preis": 2.50,
-            "Menge": "200ml",
-            "Kategorie": "Heiße Getränke"
-        }
-    ]
+  "getraenke": [
+    {
+      "Kategorie": "Biere",
+      "Name": "Süffiges Weißbier",
+      "Beschreibung": "Erfrischendes Weißbier aus dem Hause Müllerbräu.",
+      "Menge": "0,5L",
+      "Preis": "4.50"
+    },
+    {
+      "Kategorie": "Biere",
+      "Name": "Helles Bier",
+      "Beschreibung": "Ein klassisches Helles aus Bayern.",
+      "Menge": "0,5L",
+      "Preis": "4.50"
+    },
+    {
+      "Kategorie": "Weine",
+      "Name": "Chardonnay",
+      "Beschreibung": "Fruchtiger Weißwein aus der Region.",
+      "Menge": "0,2L",
+      "Preis": "4.50"
+    },
+    {
+      "Kategorie": "Weine",
+      "Name": "Merlot",
+      "Beschreibung": "Trockener Rotwein mit Waldbeer-Note.",
+      "Menge": "0,2L",
+      "Preis": "4.50"
+    },
+    {
+      "Kategorie": "Nicht alkoholische Getränke",
+      "Name": "Mineralwasser",
+      "Beschreibung": "Spritziges oder stilles Wasser, je nach Wahl.",
+      "Menge": "0,5L",
+      "Preis": "4.50"
+    },
+    {
+      "Kategorie": "Nicht alkoholische Getränke",
+      "Name": "Hausgemachte Limonade",
+      "Beschreibung": "Frische Zitruslimonade mit Minze.",
+      "Menge": "0,4L",
+      "Preis": "4.50"
+    },
+    {
+      "Kategorie": "Heißgetränke",
+      "Name": "Cappuccino",
+      "Beschreibung": "Kaffee mit aufgeschäumter Milch und Kakaopulver.",
+      "Menge": "Tasse",
+      "Preis": "4.50"
+    },
+    {
+      "Kategorie": "Heißgetränke",
+      "Name": "Grüner Tee",
+      "Beschreibung": "Frischer grüner Tee aus biologischem Anbau.",
+      "Menge": "Tasse",
+      "Preis": "4.50"
+    }
+  ]
 }
