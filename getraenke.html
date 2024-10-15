@@ -162,7 +162,7 @@
                         card.innerHTML = `
                             <h3>${getraenk.Name}</h3>
                             <p>${getraenk.Beschreibung}</p>
-                            <p class="preis">Preis: ${preis} € <span class="menge">(Menge: ${menge})</span></p>
+                            <p class="preis">Preis: ${preis.toFixed(2)} € <span class="menge">(Menge: ${menge})</span></p>
                         `;
 
                         cardContainer.appendChild(card);
