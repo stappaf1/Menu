@@ -129,17 +129,18 @@
 
                 // Kategorisieren der Getränke
                 data.getraenke.forEach(getraenk => {
-                    if (!kategorien[getraenk.kategorie]) {
-                        kategorien[getraenk.kategorie] = [];
+                    const kategorie = getraenk.Kategorie.toLowerCase(); // Schlüssel in Kleinbuchstaben
+                    if (!kategorien[kategorie]) {
+                        kategorien[kategorie] = [];
                     }
-                    kategorien[getraenk.kategorie].push(getraenk);
+                    kategorien[kategorie].push(getraenk);
                 });
 
                 // Getränke nach Kategorien anzeigen
                 for (const [kategorie, getraenke] of Object.entries(kategorien)) {
                     const kategorieTitel = document.createElement('h2');
                     kategorieTitel.classList.add('category');
-                    kategorieTitel.textContent = kategorie;
+                    kategorieTitel.textContent = kategorie.charAt(0).toUpperCase() + kategorie.slice(1); // Großbuchstaben für Titel
                     getraenkeContainer.appendChild(kategorieTitel);
 
                     const cardContainer = document.createElement('div');
@@ -149,10 +150,13 @@
                         const card = document.createElement('div');
                         card.classList.add('card');
 
+                        // Preis direkt als String verwenden
+                        const preis = getraenk.Preis; // Preis als String
+
                         card.innerHTML = `
-                            <h3>${getraenk.name}</h3>
-                            <p>${getraenk.beschreibung}</p>
-                            <p class="preis">${getraenk.preis.toFixed(2)} €</p>
+                            <h3>${getraenk.Name}</h3>
+                            <p>${getraenk.Beschreibung}</p>
+                            <p class="preis">${preis}</p> <!-- Preis direkt angezeigt -->
                         `;
 
                         cardContainer.appendChild(card);
