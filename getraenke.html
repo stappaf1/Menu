@@ -143,7 +143,7 @@
 
                 // Kategorisieren der Getränke
                 data.getraenke.forEach(getraenk => {
-                    const kategorie = getraenk.Kategorie; // Korrigiert zu `Kategorie`
+                    const kategorie = getraenk.Kategorie; // Verwende `Kategorie`
                     if (!kategorien[kategorie]) {
                         kategorien[kategorie] = [];
                     }
@@ -165,14 +165,14 @@
                         card.classList.add('card');
 
                         // Menge wird angezeigt, wenn sie vorhanden ist
-                        const menge = getraenk.Größe ? `<span class="menge">${getraenk.Größe}</span>` : ''; // Korrigiert zu `Größe`
+                        const menge = getraenk.Größe ? `<span class="menge">${getraenk.Größe}</span>` : ''; // Verwende `Größe`
 
                         card.innerHTML = `
-                            <h3>${getraenk.Name}</h3> <!-- Korrigiert zu `Name` -->
-                            <p>${getraenk.Beschreibung}</p> <!-- Korrigiert zu `Beschreibung` -->
+                            <h3>${getraenk.Name}</h3> <!-- Verwende `Name` -->
+                            <p>${getraenk.Beschreibung}</p> <!-- Verwende `Beschreibung` -->
                             <div class="preis-container">
                                 ${menge}
-                                <span class="preis">${parseFloat(getraenk.Preis).toFixed(2)} €</span> <!-- Korrigiert zu `Preis` -->
+                                <span class="preis">${parseFloat(getraenk.Preis).toFixed(2)} €</span> <!-- Verwende `Preis` -->
                             </div>
                         `;
 
