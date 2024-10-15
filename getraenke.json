@@ -2,24 +2,52 @@
     "getraenke": [
         {
             "Name": "Coca-Cola",
-            "Beschreibung": "Erfrischendes Cola-Getränk, kohlensäurehaltig.",
-            "Preis": "222.50",
-            "Menge": "0.5",
-            "Kategorie": "Softdrinks"
+            "Beschreibung": "Erfrischendes, kohlensäurehaltiges Getränk.",
+            "Preis": 2.50,
+            "Menge": "330ml",
+            "Kategorie": "Erfrischungsgetränke"
         },
-       {
-            "Name": "Coca-Cola1",
-            "Beschreibung": "Erfrischendes Cola-Getränk, kohlensäurehaltig.",
-            "Preis": "2.50",
-            "Menge": "0.5",
-            "Kategorie": "Softdrinks"
+        {
+            "Name": "Mineralwasser",
+            "Beschreibung": "Sprudelndes Mineralwasser, ideal zum Durstlöschen.",
+            "Preis": 1.50,
+            "Menge": "500ml",
+            "Kategorie": "Wasser"
         },
-    {
-            "Name": "Coca-Cola2",
-            "Beschreibung": "Erfrischendes Cola-Getränk, kohlensäurehaltig.",
-            "Preis": "2.50",
-            "Menge": "0.5",
-            "Kategorie": "Softdrinks"
+        {
+            "Name": "Rotwein",
+            "Beschreibung": "Ein fruchtiger Rotwein aus dem Bordeaux.",
+            "Preis": 4.50,
+            "Menge": "0.15l",
+            "Kategorie": "Weine"
+        },
+        {
+            "Name": "Weißwein",
+            "Beschreibung": "Ein trockener Weißwein mit frischem Aroma.",
+            "Preis": 4.00,
+            "Menge": "0.15l",
+            "Kategorie": "Weine"
+        },
+        {
+            "Name": "Bier",
+            "Beschreibung": "Frisch gezapftes Bier, perfekt für jeden Anlass.",
+            "Preis": 3.00,
+            "Menge": "0.5l",
+            "Kategorie": "Biere"
+        },
+        {
+            "Name": "Tee",
+            "Beschreibung": "Heißer Tee mit verschiedenen Geschmacksrichtungen.",
+            "Preis": 2.00,
+            "Menge": "250ml",
+            "Kategorie": "Heiße Getränke"
+        },
+        {
+            "Name": "Kaffee",
+            "Beschreibung": "Frisch gebrühter Kaffee, stark und aromatisch.",
+            "Preis": 2.50,
+            "Menge": "200ml",
+            "Kategorie": "Heiße Getränke"
         }
     ]
 }
