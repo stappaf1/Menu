@@ -153,7 +153,12 @@
         // Function to load the HTML file and insert it into a new window
         function loadHtmlAndGeneratePdf(url, filename) {
             fetch(url)
-                .then(response => response.text())
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Netzwerkantwort war nicht ok.');
+                    }
+                    return response.text();
+                })
                 .then(html => {
                     const newWindow = window.open('', '_blank');  // Open a new tab
                     newWindow.document.write('<html><head><title>' + filename + '</title></head><body>');
@@ -173,11 +178,13 @@
 
         // Speisekarte PDF download
         document.getElementById('downloadSpeisekarte').addEventListener('click', () => {
+            console.log('Speisekarte PDF wird generiert...'); // Debugging-Log
             loadHtmlAndGeneratePdf('speisen.html', 'speisekarte.pdf');
         });
 
         // Getränkeliste PDF download
         document.getElementById('downloadGetraenke').addEventListener('click', () => {
+            console.log('Getränkeliste PDF wird generiert...'); // Debugging-Log
             loadHtmlAndGeneratePdf('getraenke.html', 'getraenkeliste.pdf');
         });
     </script>
