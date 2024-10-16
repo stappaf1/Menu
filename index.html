@@ -29,7 +29,7 @@
             background: url('restaurant-banner.jpg') no-repeat center center/cover;
             height: 400px;
             display: flex;
-            flex-direction: column; /* Ändert die Ausrichtung in eine Spalte */
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             color: white;
@@ -41,7 +41,7 @@
             background-color: rgba(0, 0, 0, 0.5);
             padding: 20px;
             border-radius: 10px;
-            margin-top: 20px; /* Abstand nach oben verringert */
+            margin-top: 20px;
         }
 
         .content {
@@ -83,6 +83,20 @@
             color: #555;
         }
 
+        .pdf-button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .pdf-button:hover {
+            background-color: #0056b3;
+        }
+
         footer {
             background-color: #343a40;
             color: white;
@@ -120,11 +134,33 @@
                 <p>Von erfrischenden Getränken bis hin zu edlen Weinen – hier finden Sie unser Angebot.</p>
             </a>
         </div>
+
+        <!-- Buttons to download PDFs -->
+        <div class="grid">
+            <button class="pdf-button" id="downloadSpeisekarte">Speisekarte als PDF herunterladen</button>
+            <button class="pdf-button" id="downloadGetraenke">Getränkeliste als PDF herunterladen</button>
+        </div>
     </div>
 
     <footer>
         <p>© 2024 Hotel Alea GmbH - Alle Rechte vorbehalten.</p>
         <p>Impressum: <a href="impressum.html" style="color: white;">Impressum</a></p>
     </footer>
+
+    <!-- Include html2pdf.js for generating PDF -->
+    <script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+    <script>
+        // Function to download Speisekarte as PDF
+        document.getElementById('downloadSpeisekarte').addEventListener('click', () => {
+            const element = document.querySelector('.content'); // Choose the content section
+            html2pdf().from(element).save('speisekarte.pdf');
+        });
+
+        // Function to download Getränkeliste as PDF
+        document.getElementById('downloadGetraenke').addEventListener('click', () => {
+            const element = document.querySelector('.content'); // Choose the content section
+            html2pdf().from(element).save('getraenkeliste.pdf');
+        });
+    </script>
 </body>
 </html>
