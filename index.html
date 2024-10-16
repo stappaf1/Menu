@@ -150,15 +150,28 @@
     <!-- Include html2pdf.js for generating PDF -->
     <script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
     <script>
-        // Function to download the current content as PDF
+        // Function to load the HTML file and insert it into the current page
+        function loadHtmlAndGeneratePdf(url, filename) {
+            fetch(url)
+                .then(response => response.text())
+                .then(html => {
+                    const contentDiv = document.getElementById('content');
+                    contentDiv.innerHTML = html;  // Replace the content with loaded HTML
+                    html2pdf().from(contentDiv).save(filename);
+                })
+                .catch(error => {
+                    console.error('Error loading HTML:', error);
+                });
+        }
+
+        // Speisekarte PDF download
         document.getElementById('downloadSpeisekarte').addEventListener('click', () => {
-            const content = document.querySelector('.content');
-            html2pdf().from(content).save('speisekarte.pdf');
+            loadHtmlAndGeneratePdf('speisen.html', 'speisekarte.pdf');
         });
 
+        // Getränkeliste PDF download
         document.getElementById('downloadGetraenke').addEventListener('click', () => {
-            const content = document.querySelector('.content');
-            html2pdf().from(content).save('getraenkeliste.pdf');
+            loadHtmlAndGeneratePdf('getraenke.html', 'getraenkeliste.pdf');
         });
     </script>
 </body>
