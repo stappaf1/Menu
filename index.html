@@ -150,14 +150,21 @@
     <!-- Include html2pdf.js for generating PDF -->
     <script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
     <script>
-        // Function to load the HTML file and insert it into the current page
+        // Function to load the HTML file and insert it into a new window
         function loadHtmlAndGeneratePdf(url, filename) {
             fetch(url)
                 .then(response => response.text())
                 .then(html => {
-                    const contentDiv = document.getElementById('content');
-                    contentDiv.innerHTML = html;  // Replace the content with loaded HTML
-                    html2pdf().from(contentDiv).save(filename);
+                    const newWindow = window.open('', '_blank');  // Open a new tab
+                    newWindow.document.write('<html><head><title>' + filename + '</title></head><body>');
+                    newWindow.document.write(html);  // Write the loaded HTML to the new window
+                    newWindow.document.write('</body></html>');
+                    newWindow.document.close();  // Close the document for the new window
+
+                    // Generate PDF after the new window has loaded
+                    newWindow.onload = function() {
+                        html2pdf().from(newWindow.document.body).save(filename);
+                    };
                 })
                 .catch(error => {
                     console.error('Error loading HTML:', error);
