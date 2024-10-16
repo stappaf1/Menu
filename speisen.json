@@ -2,24 +2,171 @@
   "speisen": [
     {
       "Kategorie": "Vorspeisen",
-      "Name": "Bruschetta",
-      "Beschreibung": "Geröstetes Brot mit Tomaten, Basilikum und Knoblauch.",
+      "Name": "Obazda mit Brezn",
+      "Beschreibung": "Traditioneller bayerischer Käseaufstrich aus Camembert, Butter und Gewürzen, serviert mit einer frischen Brezn.",
       "Menge": "Portion",
-      "Preis": 11.00
+      "Preis": "7.90"
     },
     {
       "Kategorie": "Vorspeisen",
-      "Name": "Bruschetta",
-      "Beschreibung": "Geröstetes Brot mit Tomaten, Basilikum und Knoblauch.",
-      "Menge": "Portion",
-      "Preis": 111.00
+      "Name": "Leberknödelsuppe",
+      "Beschreibung": "Herzhafte Rinderbrühe mit hausgemachtem Leberknödel.",
+      "Menge": "Teller",
+      "Preis": "6.50"
     },
     {
-      "Kategorie": "Hauptspeise",
-      "Name": "Bruschetta",
-      "Beschreibung": "Geröstetes Brot mit Tomaten, Basilikum und Knoblauch.",
+      "Kategorie": "Vorspeisen",
+      "Name": "Kartoffelsalat",
+      "Beschreibung": "Hausgemachter bayerischer Kartoffelsalat mit Zwiebeln und Essig-Öl-Dressing.",
+      "Menge": "Schüssel",
+      "Preis": "4.50"
+    },
+    {
+      "Kategorie": "Vorspeisen",
+      "Name": "Radi mit Butter",
+      "Beschreibung": "Frisch geschnittener Rettich, leicht gesalzen und mit Butter serviert.",
       "Menge": "Portion",
-      "Preis": 11.00
+      "Preis": "3.50"
+    },
+    {
+      "Kategorie": "Vorspeisen",
+      "Name": "Presssack mit Zwiebeln",
+      "Beschreibung": "Hausgemachter roter Presssack, serviert mit frischen Zwiebelringen und Bauernbrot.",
+      "Menge": "Portion",
+      "Preis": "8.00"
+    },
+    {
+      "Kategorie": "Hauptspeisen",
+      "Name": "Schweinsbraten mit Knödel",
+      "Beschreibung": "Zart geschmorter Schweinsbraten in Dunkelbiersoße, serviert mit einem Kartoffelknödel und Blaukraut.",
+      "Menge": "Portion",
+      "Preis": "14.90"
+    },
+    {
+      "Kategorie": "Hauptspeisen",
+      "Name": "Wiener Schnitzel",
+      "Beschreibung": "Knusprig gebratenes Kalbsschnitzel nach Wiener Art, serviert mit Kartoffelsalat und Preiselbeeren.",
+      "Menge": "Portion",
+      "Preis": "18.50"
+    },
+    {
+      "Kategorie": "Hauptspeisen",
+      "Name": "Haxe mit Sauerkraut",
+      "Beschreibung": "Knusprige Schweinshaxe, serviert mit Sauerkraut und Kartoffelknödel.",
+      "Menge": "Portion",
+      "Preis": "16.90"
+    },
+    {
+      "Kategorie": "Hauptspeisen",
+      "Name": "Käsespätzle",
+      "Beschreibung": "Hausgemachte Spätzle mit herzhaftem Allgäuer Käse, garniert mit Röstzwiebeln.",
+      "Menge": "Portion",
+      "Preis": "12.50"
+    },
+    {
+      "Kategorie": "Hauptspeisen",
+      "Name": "Zwiebelrostbraten",
+      "Beschreibung": "Zartes Rindersteak mit Röstzwiebeln, Bratkartoffeln und Salat.",
+      "Menge": "Portion",
+      "Preis": "22.00"
+    },
+    {
+      "Kategorie": "Hauptspeisen",
+      "Name": "Schweinswürstl mit Sauerkraut",
+      "Beschreibung": "Gegrillte Schweinswürstl, serviert mit Sauerkraut und Senf.",
+      "Menge": "Portion",
+      "Preis": "10.90"
+    },
+    {
+      "Kategorie": "Hauptspeisen",
+      "Name": "Kalbsbratwurst mit Kartoffelpüree",
+      "Beschreibung": "Zwei gebratene Kalbsbratwürste, serviert mit cremigem Kartoffelpüree und Bratensoße.",
+      "Menge": "Portion",
+      "Preis": "12.90"
+    },
+    {
+      "Kategorie": "Hauptspeisen",
+      "Name": "Schweinefilet in Pilzrahmsoße",
+      "Beschreibung": "Zartes Schweinefilet in einer cremigen Pilzrahmsoße, serviert mit Semmelknödeln.",
+      "Menge": "Portion",
+      "Preis": "19.90"
+    },
+    {
+      "Kategorie": "Hauptspeisen",
+      "Name": "Forelle Müllerin Art",
+      "Beschreibung": "Frisch gebratene Forelle in Butter, serviert mit Petersilienkartoffeln und Salat.",
+      "Menge": "Portion",
+      "Preis": "17.50"
+    },
+    {
+      "Kategorie": "Beilagen",
+      "Name": "Kartoffelknödel",
+      "Beschreibung": "Zwei hausgemachte Kartoffelknödel, serviert mit Bratensoße.",
+      "Menge": "Portion",
+      "Preis": "4.00"
+    },
+    {
+      "Kategorie": "Beilagen",
+      "Name": "Sauerkraut",
+      "Beschreibung": "Traditionell zubereitetes Sauerkraut mit Speck.",
+      "Menge": "Schüssel",
+      "Preis": "3.50"
+    },
+    {
+      "Kategorie": "Beilagen",
+      "Name": "Brezn",
+      "Beschreibung": "Frisch gebackene Brezn mit Salz.",
+      "Menge": "Stück",
+      "Preis": "2.50"
+    },
+    {
+      "Kategorie": "Beilagen",
+      "Name": "Pommes frites",
+      "Beschreibung": "Knusprig frittierte Pommes frites, serviert mit Ketchup oder Mayonnaise.",
+      "Menge": "Portion",
+      "Preis": "3.00"
+    },
+    {
+      "Kategorie": "Beilagen",
+      "Name": "Gurkensalat",
+      "Beschreibung": "Frischer Gurkensalat in Essig-Öl-Dressing.",
+      "Menge": "Schüssel",
+      "Preis": "3.00"
+    },
+    {
+      "Kategorie": "Desserts",
+      "Name": "Apfelstrudel mit Vanillesoße",
+      "Beschreibung": "Hausgemachter Apfelstrudel, serviert mit warmer Vanillesoße.",
+      "Menge": "Portion",
+      "Preis": "5.90"
+    },
+    {
+      "Kategorie": "Desserts",
+      "Name": "Kaiserschmarrn",
+      "Beschreibung": "Fluffige, in der Pfanne gebackene Pfannkuchenstücke, mit Rosinen und Puderzucker bestreut, serviert mit Apfelmus.",
+      "Menge": "Portion",
+      "Preis": "8.50"
+    },
+    {
+      "Kategorie": "Desserts",
+      "Name": "Schwarzwälder Kirschtorte",
+      "Beschreibung": "Ein Stück der berühmten Torte mit Schokolade, Kirschen und Sahne.",
+      "Menge": "Stück",
+      "Preis": "4.80"
+    },
+    {
+      "Kategorie": "Desserts",
+      "Name": "Bayerische Creme",
+      "Beschreibung": "Leichte Vanillecreme mit einem Hauch von Rum und frischen Beeren.",
+      "Menge": "Portion",
+      "Preis": "6.50"
+    },
+    {
+      "Kategorie": "Desserts",
+      "Name": "Germknödel mit Vanillesoße",
+      "Beschreibung": "Gedämpfter Hefeknödel, gefüllt mit Powidl und bestreut mit Mohn, serviert mit Vanillesoße.",
+      "Menge": "Portion",
+      "Preis": "7.90"
     }
   ]
 }
