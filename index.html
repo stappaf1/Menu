@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hotel Alea - Menü-1</title>
+    <title>Hotel Alea - Menü</title>
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -119,7 +119,7 @@
 
     <header>
         <img src="https://cdn.prod.website-files.com/60d2e4a3b351ee2c91f53a1e/60f9ca16c53dae6854816379_Logo%20Alea.svg" alt="Hotel Alea Logo" style="max-width: 200px; margin-bottom: 20px;">
-        <h1>Hotel Alea - Menü-2</h1>
+        <h1>Willkommen bei Hotel Alea</h1>
     </header>
 
     <div class="content" id="content">
@@ -150,7 +150,7 @@
     <!-- Include html2pdf.js for generating PDF -->
     <script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
     <script>
-        // Funktion zum Abrufen und Erzeugen des PDF ohne Fenster zu öffnen
+        // Function to load the HTML file and generate PDF directly
         function loadHtmlAndGeneratePdf(url, filename) {
             fetch(url)
                 .then(response => {
@@ -160,41 +160,31 @@
                     return response.text();
                 })
                 .then(html => {
-                    // Füge den gesamten HTML-Inhalt in das PDF ein
-                    const hiddenDiv = document.createElement('div');
-                    hiddenDiv.style.display = 'none';
-                    hiddenDiv.innerHTML = html;
-                    document.body.appendChild(hiddenDiv);
-                    
-                    // PDF generieren
-                    html2pdf()
-                        .from(hiddenDiv)
-                        .set({
-                            margin: 1,
-                            filename: filename,
-                            html2canvas: { scale: 2 },
-                            jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
-                        })
-                        .save()
-                        .then(() => {
-                            document.body.removeChild(hiddenDiv); // Entferne das temporäre DIV
-                        })
-                        .catch(error => {
-                            console.error('Fehler beim Generieren der PDF:', error);
-                        });
+                    // Create a new div element for PDF generation
+                    const pdfContent = document.createElement('div');
+                    pdfContent.innerHTML = html;
+                    document.body.appendChild(pdfContent);
+
+                    // Generate PDF
+                    html2pdf().from(pdfContent).save(filename).then(() => {
+                        // Remove the element after saving the PDF
+                        document.body.removeChild(pdfContent);
+                    });
                 })
                 .catch(error => {
-                    console.error('Fehler beim Laden des HTML-Inhalts:', error);
+                    console.error('Error loading HTML:', error);
                 });
         }
 
         // Speisekarte PDF download
         document.getElementById('downloadSpeisekarte').addEventListener('click', () => {
+            console.log('Speisekarte PDF wird generiert...'); // Debugging-Log
             loadHtmlAndGeneratePdf('speisen.html', 'speisekarte.pdf');
         });
 
         // Getränkeliste PDF download
         document.getElementById('downloadGetraenke').addEventListener('click', () => {
+            console.log('Getränkeliste PDF wird generiert...'); // Debugging-Log
             loadHtmlAndGeneratePdf('getraenke.html', 'getraenkeliste.pdf');
         });
     </script>
