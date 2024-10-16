@@ -150,29 +150,41 @@
     <!-- Include html2pdf.js for generating PDF -->
     <script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
     <script>
-        // Funktion zum Abrufen und Erzeugen des PDF ohne Tabs zu öffnen
+        // Funktion zum Abrufen und Erzeugen des PDF ohne Fenster zu öffnen
         function loadHtmlAndGeneratePdf(url, filename) {
             fetch(url)
-                .then(response => response.text())
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Netzwerkantwort war nicht ok.');
+                    }
+                    return response.text();
+                })
                 .then(html => {
-                    // Erstelle ein temporäres unsichtbares DIV und setze den HTML-Inhalt ein
+                    // Füge den gesamten HTML-Inhalt in das PDF ein
                     const hiddenDiv = document.createElement('div');
                     hiddenDiv.style.display = 'none';
                     hiddenDiv.innerHTML = html;
                     document.body.appendChild(hiddenDiv);
                     
-                    // Füge den gesamten HTML-Inhalt in das PDF ein
-                    html2pdf().from(hiddenDiv).set({
-                        margin: 1,
-                        filename: filename,
-                        html2canvas: { scale: 2 },
-                        jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
-                    }).save().then(() => {
-                        // Entferne das temporäre DIV nach der PDF-Erstellung
-                        document.body.removeChild(hiddenDiv);
-                    });
+                    html2pdf()
+                        .from(hiddenDiv)
+                        .set({
+                            margin: 1,
+                            filename: filename,
+                            html2canvas: { scale: 2 },
+                            jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+                        })
+                        .save()
+                        .then(() => {
+                            document.body.removeChild(hiddenDiv); // Entferne das temporäre DIV
+                        })
+                        .catch(error => {
+                            console.error('Fehler beim Generieren der PDF:', error);
+                        });
                 })
-                .catch(error => console.error('Fehler beim Laden des HTML-Inhalts:', error));
+                .catch(error => {
+                    console.error('Fehler beim Laden des HTML-Inhalts:', error);
+                });
         }
 
         // Speisekarte PDF download
