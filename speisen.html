@@ -80,15 +80,24 @@
             color: #666;
         }
 
+        /* Neue CSS-Regel für Preis und Menge */
+        .preis-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
         .preis {
             font-weight: bold;
             font-size: 1.2em;
             color: #28a745;
+            text-align: right;
         }
 
         .menge {
             font-size: 1em;
             color: #666;
+            text-align: left;
         }
 
         footer {
@@ -176,7 +185,10 @@
                         card.innerHTML = `
                             <h3>${gericht.Name}</h3>
                             <p>${gericht.Beschreibung}</p>
-                            <p class="preis">${preis} € <span class="menge">(Menge: ${menge})</span></p>
+                            <div class="preis-container">
+                                <span class="menge">${menge}</span>
+                                <span class="preis">${preis} €</span>
+                            </div>
                         `;
 
                         cardContainer.appendChild(card);
