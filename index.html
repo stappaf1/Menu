@@ -150,41 +150,35 @@
     <!-- Include html2pdf.js for generating PDF -->
     <script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
     <script>
-        // Function to load the HTML file and insert it into a new window
+        // PDF generieren von geladenem HTML-Inhalt ohne ein neues Tab zu öffnen
         function loadHtmlAndGeneratePdf(url, filename) {
             fetch(url)
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Netzwerkantwort war nicht ok.');
-                    }
-                    return response.text();
-                })
+                .then(response => response.text())
                 .then(html => {
-                    const newWindow = window.open('', '_blank');  // Open a new tab
-                    newWindow.document.write('<html><head><title>' + filename + '</title></head><body>');
-                    newWindow.document.write(html);  // Write the loaded HTML to the new window
-                    newWindow.document.write('</body></html>');
-                    newWindow.document.close();  // Close the document for the new window
-
-                    // Generate PDF after the new window has loaded
-                    newWindow.onload = function() {
-                        html2pdf().from(newWindow.document.body).save(filename);
-                    };
+                    // Erstelle ein verstecktes DIV, um den HTML-Inhalt zwischenzuspeichern
+                    const hiddenDiv = document.createElement('div');
+                    hiddenDiv.style.display = 'none';
+                    hiddenDiv.innerHTML = html;
+                    document.body.appendChild(hiddenDiv);
+                    
+                    // PDF aus dem geladenen HTML-Inhalt generieren
+                    html2pdf().from(hiddenDiv).save(filename).then(() => {
+                        // Entferne das versteckte DIV nach der PDF-Erstellung
+                        document.body.removeChild(hiddenDiv);
+                    });
                 })
-                .catch(error => {
-                    console.error('Error loading HTML:', error);
-                });
+                .catch(error => console.error('Error loading HTML:', error));
         }
 
         // Speisekarte PDF download
         document.getElementById('downloadSpeisekarte').addEventListener('click', () => {
-            console.log('Speisekarte PDF wird generiert...'); // Debugging-Log
+            console.log('Speisekarte PDF wird generiert...');
             loadHtmlAndGeneratePdf('speisen.html', 'speisekarte.pdf');
         });
 
         // Getränkeliste PDF download
         document.getElementById('downloadGetraenke').addEventListener('click', () => {
-            console.log('Getränkeliste PDF wird generiert...'); // Debugging-Log
+            console.log('Getränkeliste PDF wird generiert...');
             loadHtmlAndGeneratePdf('getraenke.html', 'getraenkeliste.pdf');
         });
     </script>
