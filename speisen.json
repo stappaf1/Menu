@@ -6,6 +6,13 @@
       "Beschreibung": "Geröstetes Brot mit Tomaten, Basilikum und Knoblauch.",
       "Menge": "Portion",
       "Preis": 11.00
+    },
+    {
+      "Kategorie": "Vorspeisen",
+      "Name": "Bruschetta",
+      "Beschreibung": "Geröstetes Brot mit Tomaten, Basilikum und Knoblauch.",
+      "Menge": "Portion",
+      "Preis": 11.00
     }
   ]
 }
