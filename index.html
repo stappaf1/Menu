@@ -122,7 +122,7 @@
         <h1>Willkommen bei Hotel Alea</h1>
     </header>
 
-    <div class="content">
+    <div class="content" id="content">
         <div class="grid">
             <a href="speisen.html" class="card">
                 <h2>Speisen</h2>
@@ -152,14 +152,28 @@
     <script>
         // Function to download Speisekarte as PDF
         document.getElementById('downloadSpeisekarte').addEventListener('click', () => {
-            const element = document.querySelector('.content'); // Choose the content section
-            html2pdf().from(element).save('speisekarte.pdf');
+            fetch('speisen.html')
+                .then(response => response.text())
+                .then(html => {
+                    let tempDiv = document.createElement('div');
+                    tempDiv.innerHTML = html;
+                    let speisenContent = tempDiv.querySelector('.content');
+                    html2pdf().from(speisenContent).save('speisekarte.pdf');
+                })
+                .catch(err => console.error(err));
         });
 
         // Function to download Getränkeliste as PDF
         document.getElementById('downloadGetraenke').addEventListener('click', () => {
-            const element = document.querySelector('.content'); // Choose the content section
-            html2pdf().from(element).save('getraenkeliste.pdf');
+            fetch('getraenke.html')
+                .then(response => response.text())
+                .then(html => {
+                    let tempDiv = document.createElement('div');
+                    tempDiv.innerHTML = html;
+                    let getraenkeContent = tempDiv.querySelector('.content');
+                    html2pdf().from(getraenkeContent).save('getraenkeliste.pdf');
+                })
+                .catch(err => console.error(err));
         });
     </script>
 </body>
