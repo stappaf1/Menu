@@ -150,35 +150,38 @@
     <!-- Include html2pdf.js for generating PDF -->
     <script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
     <script>
-        // PDF generieren von geladenem HTML-Inhalt ohne ein neues Tab zu öffnen
+        // Funktion zum Abrufen und Erzeugen des PDF ohne Tabs zu öffnen
         function loadHtmlAndGeneratePdf(url, filename) {
             fetch(url)
                 .then(response => response.text())
                 .then(html => {
-                    // Erstelle ein verstecktes DIV, um den HTML-Inhalt zwischenzuspeichern
+                    // Erstelle ein temporäres unsichtbares DIV und setze den HTML-Inhalt ein
                     const hiddenDiv = document.createElement('div');
                     hiddenDiv.style.display = 'none';
                     hiddenDiv.innerHTML = html;
                     document.body.appendChild(hiddenDiv);
                     
-                    // PDF aus dem geladenen HTML-Inhalt generieren
-                    html2pdf().from(hiddenDiv).save(filename).then(() => {
-                        // Entferne das versteckte DIV nach der PDF-Erstellung
+                    // Füge den gesamten HTML-Inhalt in das PDF ein
+                    html2pdf().from(hiddenDiv).set({
+                        margin: 1,
+                        filename: filename,
+                        html2canvas: { scale: 2 },
+                        jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+                    }).save().then(() => {
+                        // Entferne das temporäre DIV nach der PDF-Erstellung
                         document.body.removeChild(hiddenDiv);
                     });
                 })
-                .catch(error => console.error('Error loading HTML:', error));
+                .catch(error => console.error('Fehler beim Laden des HTML-Inhalts:', error));
         }
 
         // Speisekarte PDF download
         document.getElementById('downloadSpeisekarte').addEventListener('click', () => {
-            console.log('Speisekarte PDF wird generiert...');
             loadHtmlAndGeneratePdf('speisen.html', 'speisekarte.pdf');
         });
 
         // Getränkeliste PDF download
         document.getElementById('downloadGetraenke').addEventListener('click', () => {
-            console.log('Getränkeliste PDF wird generiert...');
             loadHtmlAndGeneratePdf('getraenke.html', 'getraenkeliste.pdf');
         });
     </script>
