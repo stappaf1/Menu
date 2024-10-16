@@ -150,35 +150,34 @@
     <!-- Include html2pdf.js for generating PDF -->
     <script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
     <script>
-        // Function to load the HTML file and generate PDF directly
-        function loadHtmlAndGeneratePdf(url, filename) {
-            fetch(url)
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Netzwerkantwort war nicht ok.');
-                    }
-                    return response.text();
-                })
-                .then(html => {
-                    // Create a new div element for PDF generation
-                    const pdfContent = document.createElement('div');
-                    pdfContent.innerHTML = html;
-                    document.body.appendChild(pdfContent);
+        // Function to load the HTML file and generate PDF after all dynamic content is loaded
+        async function loadHtmlAndGeneratePdf(url, filename) {
+            try {
+                const response = await fetch(url);
+                if (!response.ok) {
+                    throw new Error('Netzwerkantwort war nicht ok.');
+                }
+                const html = await response.text();
 
-                    // Remove styles that may interfere with PDF generation
-                    const styleSheets = document.styleSheets;
-                    const inlineStyles = Array.from(styleSheets).map(sheet => sheet.ownerNode.outerHTML).join('');
-                    pdfContent.insertAdjacentHTML('afterbegin', inlineStyles);
+                const pdfContent = document.createElement('div');
+                pdfContent.innerHTML = html;
+                document.body.appendChild(pdfContent);
 
-                    // Generate PDF
-                    html2pdf().from(pdfContent).save(filename).then(() => {
-                        // Remove the element after saving the PDF
-                        document.body.removeChild(pdfContent);
+                // Wenn es eine Funktion gibt, die dynamische Inhalte initialisiert
+                if (typeof initialize === 'function') {
+                    await new Promise((resolve) => {
+                        initialize(() => {
+                            resolve();
+                        });
                     });
-                })
-                .catch(error => {
-                    console.error('Error loading HTML:', error);
-                });
+                }
+
+                // PDF generieren
+                await html2pdf().from(pdfContent).save(filename);
+                document.body.removeChild(pdfContent);
+            } catch (error) {
+                console.error('Error loading HTML:', error);
+            }
         }
 
         // Speisekarte PDF download
