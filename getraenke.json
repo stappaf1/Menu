@@ -1,60 +1,186 @@
 {
   "getraenke": [
     {
-      "Kategorie": "Biere",
-      "Name": "Süffiges Weißbier",
-      "Beschreibung": "Erfrischendes Weißbier aus dem Hause Müllerbräu.",
+      "Kategorie": "Biere vom Fass",
+      "Name": "Helles Lager",
+      "Beschreibung": "Ein mildes, erfrischendes Helles, perfekt gezapft.",
+      "Menge": "0,5L",
+      "Preis": "4.90"
+    },
+    {
+      "Kategorie": "Biere vom Fass",
+      "Name": "Dunkles Bier",
+      "Beschreibung": "Malziges, leicht süßliches Dunkelbier aus bayerischer Brauerei.",
+      "Menge": "0,5L",
+      "Preis": "5.00"
+    },
+    {
+      "Kategorie": "Biere vom Fass",
+      "Name": "Weißbier",
+      "Beschreibung": "Traditionelles Weißbier mit fruchtigen Noten und spritziger Kohlensäure.",
+      "Menge": "0,5L",
+      "Preis": "5.20"
+    },
+    {
+      "Kategorie": "Flaschenbiere",
+      "Name": "Radler",
+      "Beschreibung": "Erfrischendes Mischgetränk aus Bier und Zitronenlimonade.",
       "Menge": "0,5L",
       "Preis": "4.50"
     },
     {
-      "Kategorie": "Biere",
-      "Name": "Helles Bier",
-      "Beschreibung": "Ein klassisches Helles aus Bayern.",
-      "Menge": "0,5L",
-      "Preis": "4.50"
+      "Kategorie": "Flaschenbiere",
+      "Name": "Pilsner",
+      "Beschreibung": "Herbes Pils mit einer leichten Hopfenbittere.",
+      "Menge": "0,33L",
+      "Preis": "4.00"
     },
     {
       "Kategorie": "Weine",
-      "Name": "Chardonnay",
-      "Beschreibung": "Fruchtiger Weißwein aus der Region.",
+      "Name": "Riesling",
+      "Beschreibung": "Fruchtiger, leicht spritziger Weißwein mit Noten von grünem Apfel und Pfirsich.",
       "Menge": "0,2L",
-      "Preis": "4.50"
+      "Preis": "5.50"
     },
     {
       "Kategorie": "Weine",
-      "Name": "Merlot",
-      "Beschreibung": "Trockener Rotwein mit Waldbeer-Note.",
+      "Name": "Grauburgunder",
+      "Beschreibung": "Trocken und elegant mit feiner Fruchtnote.",
       "Menge": "0,2L",
-      "Preis": "4.50"
+      "Preis": "5.80"
     },
     {
-      "Kategorie": "Nicht alkoholische Getränke",
+      "Kategorie": "Weine",
+      "Name": "Spätburgunder",
+      "Beschreibung": "Kräftiger Rotwein mit Aromen von Kirsche und dunklen Beeren.",
+      "Menge": "0,2L",
+      "Preis": "6.00"
+    },
+    {
+      "Kategorie": "Weine",
+      "Name": "Roséwein",
+      "Beschreibung": "Fruchtig-frischer Rosé mit Aromen von Erdbeeren und Himbeeren.",
+      "Menge": "0,2L",
+      "Preis": "5.50"
+    },
+    {
+      "Kategorie": "Cocktails",
+      "Name": "Mojito",
+      "Beschreibung": "Frischer Cocktail aus Rum, Limette, Minze, Zucker und Soda.",
+      "Menge": "Glas",
+      "Preis": "8.50"
+    },
+    {
+      "Kategorie": "Cocktails",
+      "Name": "Caipirinha",
+      "Beschreibung": "Brasilianischer Klassiker mit Cachaça, Limetten, Rohrzucker und Crushed Ice.",
+      "Menge": "Glas",
+      "Preis": "8.50"
+    },
+    {
+      "Kategorie": "Cocktails",
+      "Name": "Pina Colada",
+      "Beschreibung": "Tropischer Mix aus Rum, Kokosnusscreme und Ananassaft.",
+      "Menge": "Glas",
+      "Preis": "9.00"
+    },
+    {
+      "Kategorie": "Cocktails",
+      "Name": "Mai Tai",
+      "Beschreibung": "Exotischer Cocktail mit Rum, Orangenlikör, Limettensaft und Mandelsirup.",
+      "Menge": "Glas",
+      "Preis": "9.50"
+    },
+    {
+      "Kategorie": "Cocktails",
+      "Name": "Aperol Spritz",
+      "Beschreibung": "Erfrischender Mix aus Aperol, Prosecco und Soda.",
+      "Menge": "Glas",
+      "Preis": "7.90"
+    },
+    {
+      "Kategorie": "Alkoholfreie Getränke",
       "Name": "Mineralwasser",
-      "Beschreibung": "Spritziges oder stilles Wasser, je nach Wahl.",
+      "Beschreibung": "Spritziges oder stilles Mineralwasser nach Wahl.",
       "Menge": "0,5L",
-      "Preis": "4.50"
+      "Preis": "3.90"
     },
     {
-      "Kategorie": "Nicht alkoholische Getränke",
+      "Kategorie": "Alkoholfreie Getränke",
+      "Name": "Cola",
+      "Beschreibung": "Erfrischendes Cola-Getränk, serviert mit Eiswürfeln und Zitrone.",
+      "Menge": "0,4L",
+      "Preis": "3.50"
+    },
+    {
+      "Kategorie": "Alkoholfreie Getränke",
+      "Name": "Orangensaft",
+      "Beschreibung": "Frisch gepresster Orangensaft.",
+      "Menge": "0,3L",
+      "Preis": "4.20"
+    },
+    {
+      "Kategorie": "Alkoholfreie Getränke",
       "Name": "Hausgemachte Limonade",
-      "Beschreibung": "Frische Zitruslimonade mit Minze.",
+      "Beschreibung": "Frische Zitronenlimonade mit Minze und einem Hauch Ingwer.",
       "Menge": "0,4L",
       "Preis": "4.50"
     },
     {
+      "Kategorie": "Alkoholfreie Getränke",
+      "Name": "Eistee Pfirsich",
+      "Beschreibung": "Hausgemachter Pfirsich-Eistee mit frischen Pfirsichstücken und Minze.",
+      "Menge": "0,4L",
+      "Preis": "4.00"
+    },
+    {
       "Kategorie": "Heißgetränke",
       "Name": "Cappuccino",
-      "Beschreibung": "Kaffee mit aufgeschäumter Milch und Kakaopulver.",
+      "Beschreibung": "Cremiger Espresso mit aufgeschäumter Milch und einer Prise Kakaopulver.",
       "Menge": "Tasse",
+      "Preis": "3.50"
+    },
+    {
+      "Kategorie": "Heißgetränke",
+      "Name": "Latte Macchiato",
+      "Beschreibung": "Heiße Milch, aufgeschäumt und mit einem kräftigen Schuss Espresso verfeinert.",
+      "Menge": "Glas",
+      "Preis": "4.00"
+    },
+    {
+      "Kategorie": "Heißgetränke",
+      "Name": "Espresso",
+      "Beschreibung": "Ein starker, aromatischer Espresso, perfekt für den kleinen Koffein-Kick.",
+      "Menge": "Tasse",
+      "Preis": "2.50"
+    },
+    {
+      "Kategorie": "Heißgetränke",
+      "Name": "Heiße Schokolade",
+      "Beschreibung": "Samtige heiße Schokolade mit Sahnehaube.",
+      "Menge": "Tasse",
+      "Preis": "3.80"
+    },
+    {
+      "Kategorie": "Heißgetränke",
+      "Name": "Kräutertee",
+      "Beschreibung": "Frisch aufgebrühter Kräutertee aus regionalem Anbau.",
+      "Menge": "Kanne",
       "Preis": "4.50"
     },
     {
       "Kategorie": "Heißgetränke",
       "Name": "Grüner Tee",
-      "Beschreibung": "Frischer grüner Tee aus biologischem Anbau.",
+      "Beschreibung": "Gesunder, belebender grüner Tee aus biologischem Anbau.",
       "Menge": "Tasse",
-      "Preis": "4.50"
+      "Preis": "3.20"
+    },
+    {
+      "Kategorie": "Heißgetränke",
+      "Name": "Glühwein (saisonal)",
+      "Beschreibung": "Würziger, heißer Glühwein mit Zimt und Nelken, ideal für kalte Tage.",
+      "Menge": "Tasse",
+      "Preis": "4.00"
     }
   ]
 }
