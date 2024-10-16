@@ -108,12 +108,13 @@
         footer p {
             margin: 0;
         }
+
     </style>
 </head>
 <body>
     <nav>
-        <a href="#speisen-content">Speisen</a>
-        <a href="#getraenke-content">Getränke</a>
+        <a href="speisen.html">Speisen</a>
+        <a href="getraenke.html">Getränke</a>
     </nav>
 
     <header>
@@ -122,34 +123,16 @@
     </header>
 
     <div class="content" id="content">
-        <!-- Speisenbereich -->
-        <div id="speisen-content">
-            <h2>Speisen</h2>
-            <p>Entdecken Sie unsere Auswahl an köstlichen Vorspeisen, Hauptgerichten und Desserts.</p>
-            <!-- Beispieldaten für Speisen -->
-            <ul>
-                <li>Schnitzel Wiener Art mit Kartoffelsalat und Pommes – 17,00 €</li>
-                <li>Spinatknödel – 14,50 €</li>
-                <li>Fleischpflanzerl mit Kartoffelsalat – 14,50 €</li>
-                <li>Brotzeitplatte – 18,00 €</li>
-                <li>Kaiserschmarrn mit Apfelkompott – 14,00 €</li>
-                <li>Obstsalat – 8,00 €</li>
-            </ul>
-        </div>
-
-        <!-- Getränkebereich -->
-        <div id="getraenke-content">
-            <h2>Getränke</h2>
-            <p>Von erfrischenden Getränken bis hin zu edlen Weinen – hier finden Sie unser Angebot.</p>
-            <!-- Beispieldaten für Getränke -->
-            <ul>
-                <li>Helles Bier – 3,80 €</li>
-                <li>Weißbier – 3,80 €</li>
-                <li>Lugana Weißwein 0,2l – 5,50 €</li>
-                <li>Riesling Weißwein 0,2l – 5,50 €</li>
-                <li>Afri Cola – 3,50 €</li>
-                <li>Espresso – 2,50 €</li>
-            </ul>
+        <div class="grid">
+            <a href="speisen.html" class="card">
+                <h2>Speisen</h2>
+                <p>Entdecken Sie unsere Auswahl an köstlichen Vorspeisen, Hauptgerichten und Desserts.</p>
+            </a>
+            
+            <a href="getraenke.html" class="card">
+                <h2>Getränke</h2>
+                <p>Von erfrischenden Getränken bis hin zu edlen Weinen – hier finden Sie unser Angebot.</p>
+            </a>
         </div>
 
         <!-- Buttons to download PDFs -->
@@ -167,28 +150,42 @@
     <!-- Include html2pdf.js for generating PDF -->
     <script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
     <script>
-        // Funktion um PDF von einem bestimmten Bereich der aktuellen Seite zu erstellen
-        function generatePdfFromElement(elementId, filename) {
-            const element = document.getElementById(elementId);
-            if (!element) {
-                console.error('Element mit der ID ' + elementId + ' wurde nicht gefunden.');
-                return;
-            }
-            
-            // PDF generieren aus dem HTML-Inhalt des angegebenen Elements
-            html2pdf().from(element).save(filename);
+        // Function to load the HTML file and insert it into a new window
+        function loadHtmlAndGeneratePdf(url, filename) {
+            fetch(url)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Netzwerkantwort war nicht ok.');
+                    }
+                    return response.text();
+                })
+                .then(html => {
+                    const newWindow = window.open('', '_blank');  // Open a new tab
+                    newWindow.document.write('<html><head><title>' + filename + '</title></head><body>');
+                    newWindow.document.write(html);  // Write the loaded HTML to the new window
+                    newWindow.document.write('</body></html>');
+                    newWindow.document.close();  // Close the document for the new window
+
+                    // Generate PDF after the new window has loaded
+                    newWindow.onload = function() {
+                        html2pdf().from(newWindow.document.body).save(filename);
+                    };
+                })
+                .catch(error => {
+                    console.error('Error loading HTML:', error);
+                });
         }
 
         // Speisekarte PDF download
         document.getElementById('downloadSpeisekarte').addEventListener('click', () => {
             console.log('Speisekarte PDF wird generiert...'); // Debugging-Log
-            generatePdfFromElement('speisen-content', 'speisekarte.pdf');  // Generiere PDF von der Speisekarte
+            loadHtmlAndGeneratePdf('speisen.html', 'speisekarte.pdf');
         });
 
         // Getränkeliste PDF download
         document.getElementById('downloadGetraenke').addEventListener('click', () => {
             console.log('Getränkeliste PDF wird generiert...'); // Debugging-Log
-            generatePdfFromElement('getraenke-content', 'getraenkeliste.pdf');  // Generiere PDF von der Getränkeliste
+            loadHtmlAndGeneratePdf('getraenke.html', 'getraenkeliste.pdf');
         });
     </script>
 </body>
