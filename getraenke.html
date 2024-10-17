@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Getränkekarte</title>
+    <title>Getränke</title>
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -31,7 +31,6 @@
             font-size: 1.2em;
         }
 
-        /* H1 und H2 in Hellgrün */
         h1, h2 {
             color: rgb(137, 160, 44); /* Hellgrün */
             text-align: center;
@@ -142,7 +141,7 @@
 
             footer {
                 background-color: transparent; /* Keine Hintergrundfarbe */
-                color: black; /* Schwarzer Text */
+                color: black !important; /* Schwarzer Text */
             }
         }
 
@@ -163,7 +162,7 @@
         <a href="getraenke.html">Getränke</a>
     </nav>
 
-    <h1>Getränkekarte</h1>
+    <h1>Getränke</h1>
 
     <div class="container" id="getraenke-container"></div>
 
@@ -233,7 +232,7 @@
                     getraenkeContainer.appendChild(cardContainer);
                 }
             })
-            .catch(error => console.error('Fehler beim Laden der Getränkekarte:', error.message));
+            .catch(error => console.error('Fehler beim Laden der Getränke:', error.message));
     </script>
 </body>
 </html>
