@@ -15,8 +15,8 @@
         h1, h2 {
             color: #333;
             text-align: center;
-            margin-top: 10px; /* Weniger Abstand */
-            margin-bottom: 10px; /* Weniger Abstand */
+            margin-top: 20px;
+            margin-bottom: 10px;
         }
 
         nav {
@@ -35,8 +35,8 @@
         .container {
             display: grid;
             grid-template-columns: 1fr 3fr;
-            gap: 10px; /* Weniger Abstand */
-            padding: 10px; /* Weniger Abstand */
+            gap: 20px;
+            padding: 20px;
             max-width: 1400px;
             margin: 0 auto;
         }
@@ -54,14 +54,14 @@
             display: grid;
             grid-column: 2 / -1;
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 10px; /* Weniger Abstand */
+            gap: 20px;
         }
 
         .card {
             background-color: white;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 15px; /* Weniger Padding */
+            padding: 20px;
             transition: transform 0.2s;
         }
 
@@ -80,37 +80,24 @@
             color: #666;
         }
 
+        /* Neue CSS-Regel für Preis und Menge */
         .preis-container {
             display: flex;
             justify-content: space-between;
-            margin-top: 5px; /* Weniger Abstand */
+            margin-top: 10px;
         }
 
         .preis {
             font-weight: bold;
-            font-size: 1.1em; /* Kleinere Schriftgröße */
+            font-size: 1.2em;
             color: #28a745;
             text-align: right;
         }
 
         .menge {
-            font-size: 0.9em; /* Kleinere Schriftgröße */
+            font-size: 1em;
             color: #666;
             text-align: left;
-        }
-
-        .pdf-button {
-            background-color: #007bff;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            font-size: 1.2em;
-            cursor: pointer;
-            margin-top: 20px;
-        }
-
-        .pdf-button:hover {
-            background-color: #0056b3;
         }
 
         footer {
@@ -130,31 +117,6 @@
                 grid-column: 1 / -1;
             }
         }
-
-        /* Spezielle Regeln für das Drucken/Erstellen von PDFs */
-        @media print {
-            body {
-                padding: 0;
-                margin: 0;
-            }
-
-            .container {
-                padding: 5px;
-            }
-
-            .card {
-                padding: 5px;
-                margin-bottom: 10px;
-            }
-
-            .pdf-button {
-                display: none;
-            }
-
-            footer {
-                page-break-after: always; /* Bricht die Seite nach dem Footer */
-            }
-        }
     </style>
 </head>
 <body>
@@ -167,11 +129,6 @@
     <h1>Getränke</h1>
 
     <div class="container" id="getraenke-container"></div>
-
-    <!-- Button zum PDF-Download -->
-    <div class="container">
-        <button class="pdf-button" id="downloadGetraenkeliste">Getränkeliste als PDF herunterladen</button>
-    </div>
 
     <footer>
         <p>© 2024 Hotel Alea GmbH - Alle Rechte vorbehalten</p>
@@ -239,22 +196,6 @@
                 }
             })
             .catch(error => console.error('Fehler beim Laden der Getränkekarte:', error.message));
-
-        // PDF-Generierung und Download
-        document.getElementById('downloadGetraenkeliste').addEventListener('click', () => {
-            const element = document.getElementById('getraenke-container');
-            const options = {
-                margin:       [0.5, 0.5], // Ränder anpassen
-                filename:     'getraenkeliste.pdf',
-                image:        { type: 'jpeg', quality: 0.98 },
-                html2canvas:  { scale: 2 }, // Höhere Auflösung
-                jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
-            };
-            html2pdf().from(element).set(options).save();
-        });
     </script>
-
-    <!-- Include html2pdf.js for generating PDF -->
-    <script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
 </body>
 </html>
