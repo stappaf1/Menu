@@ -27,11 +27,23 @@
             align-items: center;
         }
 
+        .nav-links {
+            display: flex;
+            gap: 10px; /* Geringerer Abstand zwischen den Links */
+        }
+
         nav a {
-            color: #204e1a; /* Dunkelgrün für die Links in der Kopfzeile */
-            margin: 0 15px;
+            color: #88a02c; /* Hellgrün für Links */
             text-decoration: none;
             font-size: 1.2em;
+        }
+
+        nav a.active {
+            color: #204e1a; /* Dunkelgrün für das aktuelle Wort */
+        }
+
+        nav a:hover {
+            text-decoration: underline;
         }
 
         .container {
@@ -137,9 +149,11 @@
 </head>
 <body>
     <nav>
-        <a href="index.html">Startseite</a>
-        <a href="speisen.html">Speisen</a>
-        <a href="getraenke.html">Getränke</a>
+        <div class="nav-links">
+            <a href="index.html">Startseite</a>
+            <a href="speisen.html">Speisen</a>
+            <a href="getraenke.html" class="active">Getränke</a>
+        </div>
         <img src="https://cdn.prod.website-files.com/60d2e4a3b351ee2c91f53a1e/60f9ca16c53dae6854816379_Logo%20Alea.svg" alt="Hotel Alea Logo" style="max-width: 150px; height: auto;">
     </nav>
 
