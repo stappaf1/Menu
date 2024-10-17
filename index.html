@@ -12,39 +12,41 @@
             background-color: #f8f9fa;
         }
 
+        /* H1 in Hellgrün */
+        h1 {
+            color: rgb(137, 160, 44); /* Hellgrün */
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        /* Navbar in Dunkelgrün */
         nav {
-            background-color: #000000; /* Schwarze Banderole */
-            padding: 20px;
+            background-color: rgb(16, 43, 0); /* Dunkelgrün */
+            padding: 10px;
             text-align: center;
         }
 
         nav a {
-            color: white; /* Weißer Text */
-            margin: 0 20px;
-            text-decoration: none;
-            font-size: 1.5em;
-        }
-
-        header {
-            background: url('restaurant-banner.jpg') no-repeat center center/cover;
-            height: 400px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
             color: white;
-            text-align: center;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 1.2em;
         }
 
-        header h1 {
-            font-size: 3em;
-            background-color: #88a02c; /* Hellgrüner Hintergrund */
-            color: #204e1a; /* Dunkelgrüne Schrift */
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 20px;
+        /* Logo in Hellgrauer Banderole */
+        .logo-container {
+            background-color: #d3d3d3; /* Hellgrau */
+            text-align: right;
+            padding: 5px 10px;
         }
 
+        .logo-container img {
+            max-width: 150px;
+            height: auto;
+        }
+
+        /* Hauptinhalt */
         .content {
             padding: 40px;
             max-width: 1200px;
@@ -76,17 +78,18 @@
         .card h2 {
             font-size: 1.8em;
             margin: 20px 0;
-            color: #88a02c; /* Hellgrüne Schrift */
+            color: rgb(137, 160, 44); /* Hellgrün */
         }
 
         .card p {
             font-size: 1.2em;
-            color: #204e1a; /* Dunkelgrün für Texte */
+            color: #204e1a; /* Dunkelgrün */
         }
 
+        /* Footer in Dunkelgrün */
         footer {
-            background-color: #000000; /* Schwarze Banderole */
-            color: white; /* Weißer Text */
+            background-color: rgb(16, 43, 0); /* Dunkelgrün */
+            color: white;
             text-align: center;
             padding: 20px;
             margin-top: 40px;
@@ -100,14 +103,16 @@
 </head>
 <body>
     <nav>
+        <a href="index.html">Startseite</a>
         <a href="speisen.html">Speisen</a>
         <a href="getraenke.html">Getränke</a>
     </nav>
 
-    <header>
-        <img src="https://cdn.prod.website-files.com/60d2e4a3b351ee2c91f53a1e/60f9ca16c53dae6854816379_Logo%20Alea.svg" alt="Hotel Alea Logo" style="max-width: 200px; margin-bottom: 20px;">
-        <h1>Hotel Alea - Menü</h1>
-    </header>
+    <div class="logo-container">
+        <img src="https://cdn.prod.website-files.com/60d2e4a3b351ee2c91f53a1e/60f9ca16c53dae6854816379_Logo%20Alea.svg" alt="Hotel Alea Logo">
+    </div>
+
+    <h1>Hotel Alea - Menü</h1>
 
     <div class="content" id="content">
         <div class="grid">
