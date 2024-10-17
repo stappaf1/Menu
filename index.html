@@ -10,6 +10,25 @@
             margin: 0;
             padding: 0;
             background-color: #f8f9fa;
+            padding-top: 60px; /* Platz für fixierte Navbar */
+        }
+
+        /* Fixierte Navbar in Dunkelgrün */
+        nav {
+            background-color: rgb(16, 43, 0); /* Dunkelgrün */
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000; /* Über anderen Elementen */
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 1.2em;
         }
 
         /* H1 in Hellgrün */
@@ -18,20 +37,6 @@
             text-align: center;
             margin-top: 20px;
             margin-bottom: 10px;
-        }
-
-        /* Navbar in Dunkelgrün */
-        nav {
-            background-color: rgb(16, 43, 0); /* Dunkelgrün */
-            padding: 10px;
-            text-align: center;
-        }
-
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-            font-size: 1.2em;
         }
 
         /* Logo in Hellgrauer Banderole */
