@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moderne Speisekarte</title>
+    <title>Moderne Getränkekarte</title>
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -158,9 +158,9 @@
         <a href="getraenke.html">Getränke</a>
     </nav>
 
-    <h1>Speisekarte</h1>
+    <h1>Getränkekarte</h1>
 
-    <div class="container" id="speisen-container"></div>
+    <div class="container" id="getraenke-container"></div>
 
     <button class="print-btn" onclick="window.print()">Drucken</button>
 
@@ -169,7 +169,7 @@
     </footer>
 
     <script>
-        fetch('speisen.json')
+        fetch('getraenke.json')
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Netzwerkantwort war nicht ok');
@@ -177,45 +177,45 @@
                 return response.json();
             })
             .then(data => {
-                const speisenContainer = document.getElementById('speisen-container');
+                const getraenkeContainer = document.getElementById('getraenke-container');
                 const kategorien = {};
 
-                data.speisen.forEach(gericht => {
-                    if (gericht.Kategorie) {
-                        if (!kategorien[gericht.Kategorie]) {
-                            kategorien[gericht.Kategorie] = [];
+                data.getraenke.forEach(getraenk => {
+                    if (getraenk.Kategorie) {
+                        if (!kategorien[getraenk.Kategorie]) {
+                            kategorien[getraenk.Kategorie] = [];
                         }
-                        kategorien[gericht.Kategorie].push(gericht);
+                        kategorien[getraenk.Kategorie].push(getraenk);
                     }
                 });
 
-                for (const [kategorie, gerichte] of Object.entries(kategorien)) {
+                for (const [kategorie, getraenke] of Object.entries(kategorien)) {
                     const kategorieTitel = document.createElement('h2');
                     kategorieTitel.classList.add('category');
                     kategorieTitel.textContent = kategorie;
-                    speisenContainer.appendChild(kategorieTitel);
+                    getraenkeContainer.appendChild(kategorieTitel);
 
                     const cardContainer = document.createElement('div');
                     cardContainer.classList.add('card-container');
 
-                    gerichte.forEach(gericht => {
+                    getraenke.forEach(getraenk => {
                         const card = document.createElement('div');
                         card.classList.add('card');
 
                         let preis;
-                        if (typeof gericht.Preis === 'number') {
-                            preis = gericht.Preis.toFixed(2);  
-                        } else if (typeof gericht.Preis === 'string') {
-                            preis = gericht.Preis;  
+                        if (typeof getraenk.Preis === 'number') {
+                            preis = getraenk.Preis.toFixed(2);  
+                        } else if (typeof getraenk.Preis === 'string') {
+                            preis = getraenk.Preis;  
                         } else {
                             preis = "Preis nicht verfügbar";
                         }
 
-                        const menge = gericht.Menge !== undefined ? gericht.Menge : "Menge nicht verfügbar";
+                        const menge = getraenk.Menge !== undefined ? getraenk.Menge : "Menge nicht verfügbar";
 
                         card.innerHTML = `
-                            <h3>${gericht.Name}</h3>
-                            <p>${gericht.Beschreibung}</p>
+                            <h3>${getraenk.Name}</h3>
+                            <p>${getraenk.Beschreibung}</p>
                             <div class="preis-container">
                                 <span class="menge">${menge}</span>
                                 <span class="preis">${preis} €</span>
@@ -225,10 +225,10 @@
                         cardContainer.appendChild(card);
                     });
 
-                    speisenContainer.appendChild(cardContainer);
+                    getraenkeContainer.appendChild(cardContainer);
                 }
             })
-            .catch(error => console.error('Fehler beim Laden der Speisekarte:', error.message));
+            .catch(error => console.error('Fehler beim Laden der Getränkekarte:', error.message));
     </script>
 </body>
 </html>
