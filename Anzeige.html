@@ -7,85 +7,77 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #e0f7e0; /* Sanftes Grün für eine naturverbundene Atmosphäre */
+            background-color: #e0f7e0;
             margin: 0;
             padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
+            height: 100vh;
         }
 
         .container {
             background-color: white;
-            max-width: 1200px;
-            padding: 30px;
+            width: 95vw;
+            padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            border: 2px solid #82c91e; /* Grüner Rand für ökologische Note */
+            border: 2px solid #82c91e;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
         }
 
         h1 {
+            grid-column: 1 / -1;
             color: #2c5f2d;
             text-align: center;
-            font-size: 2.5em;
-            margin-bottom: 30px;
+            font-size: 2em;
+            margin-bottom: 10px;
         }
 
         .raum {
-            margin-bottom: 30px;
-            padding: 20px;
+            padding: 10px;
             border-radius: 8px;
             border: 1px solid #a4d17a;
-            background: linear-gradient(145deg, #f0fff0, #d9f7d9); /* Sanfter, umweltfreundlicher Hintergrund */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background: linear-gradient(145deg, #f0fff0, #d9f7d9);
         }
 
         .raum h2 {
-            font-size: 1.8em;
+            font-size: 1.4em;
             color: #236b27;
-            margin-bottom: 10px;
-        }
-
-        .raum p {
-            font-size: 1.1em;
-            color: #333;
+            margin-bottom: 5px;
+            text-align: center;
         }
 
         .firmen-info {
+            background-color: #e6f7e6;
+            padding: 5px;
+            border-radius: 5px;
             display: flex;
             justify-content: space-between;
-            background-color: #e6f7e6; /* Heller Grünton */
-            padding: 10px;
-            border-radius: 5px;
-            margin-bottom: 10px;
         }
 
         .firma {
             font-weight: bold;
             color: #204e1a;
+            font-size: 0.9em;
         }
 
         .zeit {
             color: #555;
+            font-size: 0.9em;
         }
 
-        /* Footer */
         footer {
+            grid-column: 1 / -1;
             text-align: center;
-            padding: 15px;
+            padding: 5px;
             background-color: #82c91e;
             color: white;
-            margin-top: 40px;
+            margin-top: 10px;
         }
 
-        /* Responsive */
-        @media (max-width: 768px) {
-            .firmen-info {
-                flex-direction: column;
-                text-align: center;
-            }
-        }
     </style>
 </head>
 <body>
@@ -98,11 +90,11 @@
             <h2>EcoPlenum</h2>
             <div class="firmen-info">
                 <div class="firma">Firma GrünTech GmbH</div>
-                <div class="zeit">09:00 - 12:00 Uhr</div>
+                <div class="zeit">09:00 - 12:00</div>
             </div>
             <div class="firmen-info">
                 <div class="firma">EcoWorld AG</div>
-                <div class="zeit">13:00 - 17:00 Uhr</div>
+                <div class="zeit">13:00 - 17:00</div>
             </div>
         </div>
 
@@ -111,11 +103,11 @@
             <h2>EcoForum</h2>
             <div class="firmen-info">
                 <div class="firma">SolarTech AG</div>
-                <div class="zeit">08:30 - 11:30 Uhr</div>
+                <div class="zeit">08:30 - 11:30</div>
             </div>
             <div class="firmen-info">
                 <div class="firma">GreenEnergy Solutions</div>
-                <div class="zeit">12:00 - 16:00 Uhr</div>
+                <div class="zeit">12:00 - 16:00</div>
             </div>
         </div>
 
@@ -124,11 +116,11 @@
             <h2>EcoCentrum 1-3</h2>
             <div class="firmen-info">
                 <div class="firma">NaturPur GmbH</div>
-                <div class="zeit">08:00 - 12:00 Uhr</div>
+                <div class="zeit">08:00 - 12:00</div>
             </div>
             <div class="firmen-info">
                 <div class="firma">BioConcept AG</div>
-                <div class="zeit">14:00 - 18:00 Uhr</div>
+                <div class="zeit">14:00 - 18:00</div>
             </div>
         </div>
 
@@ -137,18 +129,18 @@
             <h2>EcoRefugium</h2>
             <div class="firmen-info">
                 <div class="firma">GreenLiving GmbH</div>
-                <div class="zeit">09:30 - 11:30 Uhr</div>
+                <div class="zeit">09:30 - 11:30</div>
             </div>
             <div class="firmen-info">
                 <div class="firma">EcoFuture Inc.</div>
-                <div class="zeit">13:00 - 16:00 Uhr</div>
+                <div class="zeit">13:00 - 16:00</div>
             </div>
         </div>
-    </div>
 
-    <footer>
-        <p>© 2024 Hotel Alea - Alle Rechte vorbehalten</p>
-    </footer>
+        <footer>
+            <p>© 2024 Hotel Alea - Alle Rechte vorbehalten</p>
+        </footer>
+    </div>
 
 </body>
 </html>
