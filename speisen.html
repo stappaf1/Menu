@@ -32,26 +32,6 @@
             font-size: 1.2em;
         }
 
-        .language-switch {
-            text-align: center;
-            margin-top: 10px;
-        }
-
-        .language-switch button {
-            padding: 10px 20px;
-            margin: 5px;
-            border: none;
-            border-radius: 5px;
-            background-color: #007bff;
-            color: white;
-            font-size: 1em;
-            cursor: pointer;
-        }
-
-        .language-switch button:hover {
-            background-color: #0056b3;
-        }
-
         .container {
             display: grid;
             grid-template-columns: 1fr 3fr;
@@ -155,7 +135,7 @@
         }
 
         @media print {
-            nav, .print-btn, .language-switch {
+            nav, .print-btn {
                 display: none;
             }
         }
@@ -170,12 +150,6 @@
 
     <h1>Speisekarte</h1>
 
-    <!-- Sprachwahl-Buttons -->
-    <div class="language-switch">
-        <button onclick="translatePage('de')">Deutsch</button>
-        <button onclick="translatePage('en')">English</button>
-    </div>
-
     <div class="container" id="speisen-container"></div>
 
     <button class="print-btn" onclick="window.print()">Drucken</button>
@@ -184,88 +158,67 @@
         <p>© 2024 Hotel Alea GmbH - Alle Rechte vorbehalten</p>
     </footer>
 
-    <!-- Script to load content and enable language switch -->
     <script>
-        function loadSpeisenData() {
-            fetch('speisen.json')
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Netzwerkantwort war nicht ok');
-                    }
-                    return response.json();
-                })
-                .then(data => {
-                    const speisenContainer = document.getElementById('speisen-container');
-                    speisenContainer.innerHTML = ''; // Clear previous content
-                    const kategorien = {};
+        fetch('speisen.json')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Netzwerkantwort war nicht ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                const speisenContainer = document.getElementById('speisen-container');
+                const kategorien = {};
 
-                    data.speisen.forEach(gericht => {
-                        if (gericht.Kategorie) {
-                            if (!kategorien[gericht.Kategorie]) {
-                                kategorien[gericht.Kategorie] = [];
-                            }
-                            kategorien[gericht.Kategorie].push(gericht);
+                data.speisen.forEach(gericht => {
+                    if (gericht.Kategorie) {
+                        if (!kategorien[gericht.Kategorie]) {
+                            kategorien[gericht.Kategorie] = [];
                         }
+                        kategorien[gericht.Kategorie].push(gericht);
+                    }
+                });
+
+                for (const [kategorie, gerichte] of Object.entries(kategorien)) {
+                    const kategorieTitel = document.createElement('h2');
+                    kategorieTitel.classList.add('category');
+                    kategorieTitel.textContent = kategorie;
+                    speisenContainer.appendChild(kategorieTitel);
+
+                    const cardContainer = document.createElement('div');
+                    cardContainer.classList.add('card-container');
+
+                    gerichte.forEach(gericht => {
+                        const card = document.createElement('div');
+                        card.classList.add('card');
+
+                        let preis;
+                        if (typeof gericht.Preis === 'number') {
+                            preis = gericht.Preis.toFixed(2);  
+                        } else if (typeof gericht.Preis === 'string') {
+                            preis = gericht.Preis;  
+                        } else {
+                            preis = "Preis nicht verfügbar";
+                        }
+
+                        const menge = gericht.Menge !== undefined ? gericht.Menge : "Menge nicht verfügbar";
+
+                        card.innerHTML = `
+                            <h3>${gericht.Name}</h3>
+                            <p>${gericht.Beschreibung}</p>
+                            <div class="preis-container">
+                                <span class="menge">${menge}</span>
+                                <span class="preis">${preis} €</span>
+                            </div>
+                        `;
+
+                        cardContainer.appendChild(card);
                     });
 
-                    for (const [kategorie, gerichte] of Object.entries(kategorien)) {
-                        const kategorieTitel = document.createElement('h2');
-                        kategorieTitel.classList.add('category');
-                        kategorieTitel.textContent = kategorie;
-                        speisenContainer.appendChild(kategorieTitel);
-
-                        const cardContainer = document.createElement('div');
-                        cardContainer.classList.add('card-container');
-
-                        gerichte.forEach(gericht => {
-                            const card = document.createElement('div');
-                            card.classList.add('card');
-
-                            let preis;
-                            if (typeof gericht.Preis === 'number') {
-                                preis = gericht.Preis.toFixed(2);  
-                            } else if (typeof gericht.Preis === 'string') {
-                                preis = gericht.Preis;  
-                            } else {
-                                preis = "Preis nicht verfügbar";
-                            }
-
-                            const menge = gericht.Menge !== undefined ? gericht.Menge : "Menge nicht verfügbar";
-
-                            card.innerHTML = `
-                                <h3>${gericht.Name}</h3>
-                                <p>${gericht.Beschreibung}</p>
-                                <div class="preis-container">
-                                    <span class="menge">${menge}</span>
-                                    <span class="preis">${preis} €</span>
-                                </div>
-                            `;
-
-                            cardContainer.appendChild(card);
-                        });
-
-                        speisenContainer.appendChild(cardContainer);
-                    }
-                })
-                .catch(error => console.error('Fehler beim Laden der Speisekarte:', error.message));
-        }
-
-        // Function to translate the page
-        function translatePage(lang) {
-            if (lang === 'de') {
-                document.documentElement.lang = 'de';
-                loadSpeisenData(); // Load original German data
-            } else if (lang === 'en') {
-                // Google Translate for English
-                new google.translate.TranslateElement({pageLanguage: 'de', includedLanguages: 'de,en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'speisen-container');
-            }
-        }
-
-        // Load the initial speisen data (German)
-        loadSpeisenData();
+                    speisenContainer.appendChild(cardContainer);
+                }
+            })
+            .catch(error => console.error('Fehler beim Laden der Speisekarte:', error.message));
     </script>
-
-    <!-- Google Translate Script -->
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
