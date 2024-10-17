@@ -10,6 +10,7 @@
             margin: 0;
             padding: 0;
             background-color: #f8f9fa;
+            padding-top: 60px; /* Platz für die fixierte Navbar */
         }
 
         /* H1 und H2 in Hellgrün */
@@ -20,11 +21,15 @@
             margin-bottom: 10px;
         }
 
-        /* Navbar in Dunkelgrün */
+        /* Fixierte Navbar in Dunkelgrün */
         nav {
             background-color: rgb(16, 43, 0); /* Dunkelgrün */
             padding: 10px;
             text-align: center;
+            position: fixed; /* Fixierte Position */
+            top: 0;
+            width: 100%;
+            z-index: 1000; /* Damit die Navbar über allen Elementen liegt */
         }
 
         nav a {
