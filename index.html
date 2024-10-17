@@ -83,20 +83,6 @@
             color: #555;
         }
 
-        .pdf-button {
-            background-color: #007bff;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            font-size: 1.2em;
-            cursor: pointer;
-            margin-top: 20px;
-        }
-
-        .pdf-button:hover {
-            background-color: #0056b3;
-        }
-
         footer {
             background-color: #343a40;
             color: white;
@@ -134,12 +120,6 @@
                 <p>Von erfrischenden Getränken bis hin zu edlen Weinen – hier finden Sie unser Angebot.</p>
             </a>
         </div>
-
-        <!-- Buttons to download PDFs -->
-        <div class="grid">
-            <button class="pdf-button" id="downloadSpeisekarte">Speisekarte als PDF herunterladen</button>
-            <button class="pdf-button" id="downloadGetraenke">Getränkeliste als PDF herunterladen</button>
-        </div>
     </div>
 
     <footer>
@@ -147,50 +127,5 @@
         <p>Impressum: <a href="impressum.html" style="color: white;">Impressum</a></p>
     </footer>
 
-    <!-- Include html2pdf.js for generating PDF -->
-    <script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
-    <script>
-        // Function to load the HTML file and generate PDF after all dynamic content is loaded
-        async function loadHtmlAndGeneratePdf(url, filename) {
-            try {
-                const response = await fetch(url);
-                if (!response.ok) {
-                    throw new Error('Netzwerkantwort war nicht ok.');
-                }
-                const html = await response.text();
-
-                const pdfContent = document.createElement('div');
-                pdfContent.innerHTML = html;
-                document.body.appendChild(pdfContent);
-
-                // Wenn es eine Funktion gibt, die dynamische Inhalte initialisiert
-                if (typeof initialize === 'function') {
-                    await new Promise((resolve) => {
-                        initialize(() => {
-                            resolve();
-                        });
-                    });
-                }
-
-                // PDF generieren
-                await html2pdf().from(pdfContent).save(filename);
-                document.body.removeChild(pdfContent);
-            } catch (error) {
-                console.error('Error loading HTML:', error);
-            }
-        }
-
-        // Speisekarte PDF download
-        document.getElementById('downloadSpeisekarte').addEventListener('click', () => {
-            console.log('Speisekarte PDF wird generiert...'); // Debugging-Log
-            loadHtmlAndGeneratePdf('speisen.html', 'speisekarte.pdf');
-        });
-
-        // Getränkeliste PDF download
-        document.getElementById('downloadGetraenke').addEventListener('click', () => {
-            console.log('Getränkeliste PDF wird generiert...'); // Debugging-Log
-            loadHtmlAndGeneratePdf('getraenke.html', 'getraenkeliste.pdf');
-        });
-    </script>
 </body>
 </html>
