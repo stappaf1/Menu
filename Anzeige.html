@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wegweiser zu den Tagungsräumen</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #204e1a;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .raum-info {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .raum-info h2 {
+            color: #204e1a;
+            margin-bottom: 5px;
+        }
+
+        .raum-info p {
+            color: #333;
+            margin: 5px 0;
+        }
+
+        .map {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .map img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .raum {
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Wegweiser zu den Tagungsräumen</h1>
+
+    <div class="container">
+        <!-- Raum A -->
+        <div class="raum raum-info">
+            <h2>Raum A</h2>
+            <p>Standort: 1. Etage</p>
+            <p>Kapazität: 50 Personen</p>
+            <p>Wegbeschreibung: Vom Foyer die Treppe hinauf, dann rechts.</p>
+        </div>
+
+        <!-- Raum B -->
+        <div class="raum raum-info">
+            <h2>Raum B</h2>
+            <p>Standort: Erdgeschoss</p>
+            <p>Kapazität: 30 Personen</p>
+            <p>Wegbeschreibung: Rechts neben dem Empfang.</p>
+        </div>
+
+        <!-- Raum C -->
+        <div class="raum raum-info">
+            <h2>Raum C</h2>
+            <p>Standort: 2. Etage</p>
+            <p>Kapazität: 100 Personen</p>
+            <p>Wegbeschreibung: Die Treppe hinauf, dann geradeaus bis zum Ende des Flurs.</p>
+        </div>
+
+        <!-- Raum D (teilbar) -->
+        <div class="raum raum-info">
+            <h2>Raum D (teilbar in 3 Abschnitte)</h2>
+            <p>Standort: 1. Etage</p>
+            <p>Kapazität: 150 Personen (50 pro Teil)</p>
+            <p>Wegbeschreibung: Treppe hinauf, dann links.</p>
+        </div>
+
+        <!-- Etagenplan -->
+        <div class="map">
+            <h3>Etagenplan</h3>
+            <img src="etaggenplan.png" alt="Etagenplan des Hotels" />
+        </div>
+    </div>
+
+</body>
+</html>
