@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moderne Speisekarte</title>
+    <title>Gerichte</title>
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -31,7 +31,6 @@
             font-size: 1.2em;
         }
 
-        /* H1 und H2 in Hellgrün */
         h1, h2 {
             color: rgb(137, 160, 44); /* Hellgrün */
             text-align: center;
@@ -139,6 +138,11 @@
             nav, .print-btn {
                 display: none;
             }
+
+            footer {
+                background-color: transparent; /* Keine Hintergrundfarbe */
+                color: black !important; /* Schwarzer Text */
+            }
         }
 
         /* Footer in Dunkelgrün */
@@ -158,9 +162,9 @@
         <a href="getraenke.html">Getränke</a>
     </nav>
 
-    <h1>Speisekarte</h1>
+    <h1>Gerichte</h1>
 
-    <div class="container" id="speisen-container"></div>
+    <div class="container" id="gerichte-container"></div>
 
     <button class="print-btn" onclick="window.print()">Drucken</button>
 
@@ -169,7 +173,7 @@
     </footer>
 
     <script>
-        fetch('speisen.json')
+        fetch('gerichte.json')
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Netzwerkantwort war nicht ok');
@@ -177,10 +181,10 @@
                 return response.json();
             })
             .then(data => {
-                const speisenContainer = document.getElementById('speisen-container');
+                const gerichteContainer = document.getElementById('gerichte-container');
                 const kategorien = {};
 
-                data.speisen.forEach(gericht => {
+                data.gerichte.forEach(gericht => {
                     if (gericht.Kategorie) {
                         if (!kategorien[gericht.Kategorie]) {
                             kategorien[gericht.Kategorie] = [];
@@ -193,7 +197,7 @@
                     const kategorieTitel = document.createElement('h2');
                     kategorieTitel.classList.add('category');
                     kategorieTitel.textContent = kategorie;
-                    speisenContainer.appendChild(kategorieTitel);
+                    gerichteContainer.appendChild(kategorieTitel);
 
                     const cardContainer = document.createElement('div');
                     cardContainer.classList.add('card-container');
@@ -225,10 +229,10 @@
                         cardContainer.appendChild(card);
                     });
 
-                    speisenContainer.appendChild(cardContainer);
+                    gerichteContainer.appendChild(cardContainer);
                 }
             })
-            .catch(error => console.error('Fehler beim Laden der Speisekarte:', error.message));
+            .catch(error => console.error('Fehler beim Laden der Gerichte:', error.message));
     </script>
 </body>
 </html>
