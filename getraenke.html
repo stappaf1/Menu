@@ -15,8 +15,8 @@
         h1, h2 {
             color: #333;
             text-align: center;
-            margin-top: 20px;
-            margin-bottom: 10px;
+            margin-top: 10px; /* Weniger Abstand */
+            margin-bottom: 10px; /* Weniger Abstand */
         }
 
         nav {
@@ -35,8 +35,8 @@
         .container {
             display: grid;
             grid-template-columns: 1fr 3fr;
-            gap: 20px;
-            padding: 20px;
+            gap: 10px; /* Weniger Abstand */
+            padding: 10px; /* Weniger Abstand */
             max-width: 1400px;
             margin: 0 auto;
         }
@@ -54,14 +54,14 @@
             display: grid;
             grid-column: 2 / -1;
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 20px;
+            gap: 10px; /* Weniger Abstand */
         }
 
         .card {
             background-color: white;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 20px;
+            padding: 15px; /* Weniger Padding */
             transition: transform 0.2s;
         }
 
@@ -83,18 +83,18 @@
         .preis-container {
             display: flex;
             justify-content: space-between;
-            margin-top: 10px;
+            margin-top: 5px; /* Weniger Abstand */
         }
 
         .preis {
             font-weight: bold;
-            font-size: 1.2em;
+            font-size: 1.1em; /* Kleinere Schriftgröße */
             color: #28a745;
             text-align: right;
         }
 
         .menge {
-            font-size: 1em;
+            font-size: 0.9em; /* Kleinere Schriftgröße */
             color: #666;
             text-align: left;
         }
@@ -128,6 +128,31 @@
 
             .card-container {
                 grid-column: 1 / -1;
+            }
+        }
+
+        /* Spezielle Regeln für das Drucken/Erstellen von PDFs */
+        @media print {
+            body {
+                padding: 0;
+                margin: 0;
+            }
+
+            .container {
+                padding: 5px;
+            }
+
+            .card {
+                padding: 5px;
+                margin-bottom: 10px;
+            }
+
+            .pdf-button {
+                display: none;
+            }
+
+            footer {
+                page-break-after: always; /* Bricht die Seite nach dem Footer */
             }
         }
     </style>
@@ -218,7 +243,14 @@
         // PDF-Generierung und Download
         document.getElementById('downloadGetraenkeliste').addEventListener('click', () => {
             const element = document.getElementById('getraenke-container');
-            html2pdf().from(element).save('getraenkeliste.pdf');
+            const options = {
+                margin:       [0.5, 0.5], // Ränder anpassen
+                filename:     'getraenkeliste.pdf',
+                image:        { type: 'jpeg', quality: 0.98 },
+                html2canvas:  { scale: 2 }, // Höhere Auflösung
+                jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+            };
+            html2pdf().from(element).set(options).save();
         });
     </script>
 
