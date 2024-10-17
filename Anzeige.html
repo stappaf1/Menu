@@ -3,101 +3,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wegweiser zu den Tagungsräumen</title>
+    <title>Tagungsräume - Tagesbelegung</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            font-family: 'Arial', sans-serif;
+            background-color: #e0f7e0; /* Sanftes Grün für eine naturverbundene Atmosphäre */
             margin: 0;
-            padding: 20px;
-        }
-
-        h1 {
-            text-align: center;
-            color: #204e1a;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
         }
 
         .container {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .raum-info {
             background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            margin-bottom: 20px;
+            max-width: 1200px;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border: 2px solid #82c91e; /* Grüner Rand für ökologische Note */
         }
 
-        .raum-info h2 {
-            color: #204e1a;
-            margin-bottom: 5px;
-        }
-
-        .raum-info p {
-            color: #333;
-            margin: 5px 0;
-        }
-
-        .map {
-            width: 100%;
-            margin-top: 20px;
-        }
-
-        .map img {
-            width: 100%;
-            border-radius: 8px;
+        h1 {
+            color: #2c5f2d;
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 30px;
         }
 
         .raum {
             margin-bottom: 30px;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #a4d17a;
+            background: linear-gradient(145deg, #f0fff0, #d9f7d9); /* Sanfter, umweltfreundlicher Hintergrund */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .raum h2 {
+            font-size: 1.8em;
+            color: #236b27;
+            margin-bottom: 10px;
+        }
+
+        .raum p {
+            font-size: 1.1em;
+            color: #333;
+        }
+
+        .firmen-info {
+            display: flex;
+            justify-content: space-between;
+            background-color: #e6f7e6; /* Heller Grünton */
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .firma {
+            font-weight: bold;
+            color: #204e1a;
+        }
+
+        .zeit {
+            color: #555;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #82c91e;
+            color: white;
+            margin-top: 40px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .firmen-info {
+                flex-direction: column;
+                text-align: center;
+            }
         }
     </style>
 </head>
 <body>
 
-    <h1>Wegweiser zu den Tagungsräumen</h1>
-
     <div class="container">
-        <!-- Raum A -->
-        <div class="raum raum-info">
-            <h2>Raum A</h2>
-            <p>Standort: 1. Etage</p>
-            <p>Kapazität: 50 Personen</p>
-            <p>Wegbeschreibung: Vom Foyer die Treppe hinauf, dann rechts.</p>
+        <h1>Tagesbelegung der Tagungsräume</h1>
+
+        <!-- EcoPlenum -->
+        <div class="raum">
+            <h2>EcoPlenum</h2>
+            <div class="firmen-info">
+                <div class="firma">Firma GrünTech GmbH</div>
+                <div class="zeit">09:00 - 12:00 Uhr</div>
+            </div>
+            <div class="firmen-info">
+                <div class="firma">EcoWorld AG</div>
+                <div class="zeit">13:00 - 17:00 Uhr</div>
+            </div>
         </div>
 
-        <!-- Raum B -->
-        <div class="raum raum-info">
-            <h2>Raum B</h2>
-            <p>Standort: Erdgeschoss</p>
-            <p>Kapazität: 30 Personen</p>
-            <p>Wegbeschreibung: Rechts neben dem Empfang.</p>
+        <!-- EcoForum -->
+        <div class="raum">
+            <h2>EcoForum</h2>
+            <div class="firmen-info">
+                <div class="firma">SolarTech AG</div>
+                <div class="zeit">08:30 - 11:30 Uhr</div>
+            </div>
+            <div class="firmen-info">
+                <div class="firma">GreenEnergy Solutions</div>
+                <div class="zeit">12:00 - 16:00 Uhr</div>
+            </div>
         </div>
 
-        <!-- Raum C -->
-        <div class="raum raum-info">
-            <h2>Raum C</h2>
-            <p>Standort: 2. Etage</p>
-            <p>Kapazität: 100 Personen</p>
-            <p>Wegbeschreibung: Die Treppe hinauf, dann geradeaus bis zum Ende des Flurs.</p>
+        <!-- EcoCentrum (1-3) -->
+        <div class="raum">
+            <h2>EcoCentrum 1-3</h2>
+            <div class="firmen-info">
+                <div class="firma">NaturPur GmbH</div>
+                <div class="zeit">08:00 - 12:00 Uhr</div>
+            </div>
+            <div class="firmen-info">
+                <div class="firma">BioConcept AG</div>
+                <div class="zeit">14:00 - 18:00 Uhr</div>
+            </div>
         </div>
 
-        <!-- Raum D (teilbar) -->
-        <div class="raum raum-info">
-            <h2>Raum D (teilbar in 3 Abschnitte)</h2>
-            <p>Standort: 1. Etage</p>
-            <p>Kapazität: 150 Personen (50 pro Teil)</p>
-            <p>Wegbeschreibung: Treppe hinauf, dann links.</p>
-        </div>
-
-        <!-- Etagenplan -->
-        <div class="map">
-            <h3>Etagenplan</h3>
-            <img src="etaggenplan.png" alt="Etagenplan des Hotels" />
+        <!-- EcoRefugium -->
+        <div class="raum">
+            <h2>EcoRefugium</h2>
+            <div class="firmen-info">
+                <div class="firma">GreenLiving GmbH</div>
+                <div class="zeit">09:30 - 11:30 Uhr</div>
+            </div>
+            <div class="firmen-info">
+                <div class="firma">EcoFuture Inc.</div>
+                <div class="zeit">13:00 - 16:00 Uhr</div>
+            </div>
         </div>
     </div>
+
+    <footer>
+        <p>© 2024 Hotel Alea - Alle Rechte vorbehalten</p>
+    </footer>
 
 </body>
 </html>
