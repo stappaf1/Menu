@@ -80,7 +80,6 @@
             color: #666;
         }
 
-        /* Neue CSS-Regel für Preis und Menge */
         .preis-container {
             display: flex;
             justify-content: space-between;
@@ -117,6 +116,26 @@
                 grid-column: 1 / -1;
             }
         }
+
+        /* Hinzufügen von Stil für den Druck-Button */
+        .print-button {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            font-size: 1.2em;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .print-button:hover {
+            background-color: #0056b3;
+        }
+
     </style>
 </head>
 <body>
@@ -129,6 +148,9 @@
     <h1>Getränke</h1>
 
     <div class="container" id="getraenke-container"></div>
+
+    <!-- Druck-Button hinzufügen -->
+    <button class="print-button" onclick="window.print()">Seite drucken</button>
 
     <footer>
         <p>© 2024 Hotel Alea GmbH - Alle Rechte vorbehalten</p>
