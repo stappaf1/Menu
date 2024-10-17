@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Getränkekarte</title>
+    <title>Moderne Getränkekarte</title>
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -11,14 +11,6 @@
             padding: 0;
             background-color: #f8f9fa;
             padding-top: 60px; /* Platz für die fixierte Navbar */
-        }
-
-        /* H1 und H2 in Hellgrün */
-        h1, h2 {
-            color: rgb(137, 160, 44); /* Hellgrün */
-            text-align: center;
-            margin-top: 20px;
-            margin-bottom: 10px;
         }
 
         /* Fixierte Navbar in Dunkelgrün */
@@ -29,7 +21,7 @@
             position: fixed; /* Fixierte Position */
             top: 0;
             width: 100%;
-            z-index: 1000; /* Damit die Navbar über allen Elementen liegt */
+            z-index: 1000; /* Über allen Elementen */
         }
 
         nav a {
@@ -37,6 +29,14 @@
             margin: 0 15px;
             text-decoration: none;
             font-size: 1.2em;
+        }
+
+        /* H1 und H2 in Hellgrün */
+        h1, h2 {
+            color: rgb(137, 160, 44); /* Hellgrün */
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 10px;
         }
 
         .container {
@@ -48,7 +48,6 @@
             margin: 0 auto;
         }
 
-        /* Rubriktexte in Hellgrün */
         .category {
             grid-column: 1 / 2;
             text-align: left;
@@ -94,7 +93,6 @@
             margin-top: 10px;
         }
 
-        /* Preisangaben in Hellgrün */
         .preis {
             font-weight: bold;
             font-size: 1.2em;
@@ -108,6 +106,41 @@
             text-align: left;
         }
 
+        /* Responsive Anpassungen */
+        @media (max-width: 1024px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            .card-container {
+                grid-column: 1 / -1;
+            }
+        }
+
+        /* Druckbutton in Hellgrün */
+        .print-btn {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: rgb(137, 160, 44); /* Hellgrün */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+        }
+
+        .print-btn:hover {
+            background-color: #9ba831; /* Etwas dunkleres Hellgrün */
+        }
+
+        /* Druckansicht anpassen */
+        @media print {
+            nav, .print-btn {
+                display: none;
+            }
+        }
+
         /* Footer in Dunkelgrün */
         footer {
             background-color: rgb(16, 43, 0); /* Dunkelgrün */
@@ -115,31 +148,6 @@
             text-align: center;
             padding: 10px;
             margin-top: 20px;
-        }
-
-        /* Druck-Button in Hellgrün */
-        .print-button {
-            display: block;
-            width: 200px;
-            margin: 20px auto;
-            padding: 10px 20px;
-            background-color: rgb(137, 160, 44); /* Hellgrün */
-            color: white;
-            text-align: center;
-            font-size: 1.2em;
-            cursor: pointer;
-            border: none;
-            border-radius: 5px;
-        }
-
-        .print-button:hover {
-            background-color: #9ba831; /* Etwas dunkleres Hellgrün */
-        }
-
-        @media print {
-            .print-button, nav {
-                display: none;
-            }
         }
     </style>
 </head>
@@ -150,11 +158,11 @@
         <a href="getraenke.html">Getränke</a>
     </nav>
 
-    <h1>Getränke</h1>
+    <h1>Getränkekarte</h1>
 
     <div class="container" id="getraenke-container"></div>
 
-    <button class="print-button" onclick="window.print()">Seite drucken</button>
+    <button class="print-btn" onclick="window.print()">Drucken</button>
 
     <footer>
         <p>© 2024 Hotel Alea GmbH - Alle Rechte vorbehalten</p>
@@ -173,17 +181,18 @@
                 const kategorien = {};
 
                 data.getraenke.forEach(getraenk => {
-                    const kategorie = getraenk.Kategorie.toLowerCase();
-                    if (!kategorien[kategorie]) {
-                        kategorien[kategorie] = [];
+                    if (getraenk.Kategorie) {
+                        if (!kategorien[getraenk.Kategorie]) {
+                            kategorien[getraenk.Kategorie] = [];
+                        }
+                        kategorien[getraenk.Kategorie].push(getraenk);
                     }
-                    kategorien[kategorie].push(getraenk);
                 });
 
                 for (const [kategorie, getraenke] of Object.entries(kategorien)) {
                     const kategorieTitel = document.createElement('h2');
                     kategorieTitel.classList.add('category');
-                    kategorieTitel.textContent = kategorie.charAt(0).toUpperCase() + kategorie.slice(1);
+                    kategorieTitel.textContent = kategorie;
                     getraenkeContainer.appendChild(kategorieTitel);
 
                     const cardContainer = document.createElement('div');
@@ -195,9 +204,9 @@
 
                         let preis;
                         if (typeof getraenk.Preis === 'number') {
-                            preis = getraenk.Preis.toFixed(2);
+                            preis = getraenk.Preis.toFixed(2);  
                         } else if (typeof getraenk.Preis === 'string') {
-                            preis = getraenk.Preis;
+                            preis = getraenk.Preis;  
                         } else {
                             preis = "Preis nicht verfügbar";
                         }
