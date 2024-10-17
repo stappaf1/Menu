@@ -10,30 +10,18 @@
             margin: 0;
             padding: 0;
             background-color: #f8f9fa;
+            padding-top: 60px; /* Platz für die fixierte Navbar */
         }
 
-        /* Dunkelgrüner Hintergrund für den Footer */
-        footer {
-            background-color: rgb(16, 43, 0); /* Dunkelgrün */
-            color: white;
-            text-align: center;
-            padding: 10px;
-            margin-top: 20px;
-        }
-
-        /* Dunkelgrüner Hintergrund für das Navbar */
+        /* Fixierte Navbar in Dunkelgrün */
         nav {
             background-color: rgb(16, 43, 0); /* Dunkelgrün */
             padding: 10px;
             text-align: center;
-        }
-
-        /* H1 und H2 mit Hellgrün */
-        h1, h2 {
-            color: rgb(137, 160, 44); /* Hellgrün */
-            text-align: center;
-            margin-top: 20px;
-            margin-bottom: 10px;
+            position: fixed; /* Fixierte Position */
+            top: 0;
+            width: 100%;
+            z-index: 1000; /* Über allen Elementen */
         }
 
         nav a {
@@ -41,6 +29,14 @@
             margin: 0 15px;
             text-decoration: none;
             font-size: 1.2em;
+        }
+
+        /* H1 und H2 in Hellgrün */
+        h1, h2 {
+            color: rgb(137, 160, 44); /* Hellgrün */
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 10px;
         }
 
         .container {
@@ -110,6 +106,7 @@
             text-align: left;
         }
 
+        /* Responsive Anpassungen */
         @media (max-width: 1024px) {
             .container {
                 grid-template-columns: 1fr;
@@ -120,7 +117,7 @@
             }
         }
 
-        /* Druckbutton-Stil in Hellgrün */
+        /* Druckbutton in Hellgrün */
         .print-btn {
             display: block;
             margin: 20px auto;
@@ -134,13 +131,23 @@
         }
 
         .print-btn:hover {
-            background-color: #9ba831; /* Etwas dunkleres Hellgrün beim Hover */
+            background-color: #9ba831; /* Etwas dunkleres Hellgrün */
         }
 
+        /* Druckansicht anpassen */
         @media print {
             nav, .print-btn {
                 display: none;
             }
+        }
+
+        /* Footer in Dunkelgrün */
+        footer {
+            background-color: rgb(16, 43, 0); /* Dunkelgrün */
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
         }
     </style>
 </head>
