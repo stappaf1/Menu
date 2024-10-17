@@ -12,15 +12,17 @@
             background-color: #f8f9fa;
         }
 
+        /* H1 und H2 in Hellgrün */
         h1, h2 {
-            color: #333;
+            color: rgb(137, 160, 44); /* Hellgrün */
             text-align: center;
             margin-top: 20px;
             margin-bottom: 10px;
         }
 
+        /* Navbar in Dunkelgrün */
         nav {
-            background-color: #343a40;
+            background-color: rgb(16, 43, 0); /* Dunkelgrün */
             padding: 10px;
             text-align: center;
         }
@@ -41,11 +43,12 @@
             margin: 0 auto;
         }
 
+        /* Rubriktexte in Hellgrün */
         .category {
             grid-column: 1 / 2;
             text-align: left;
             font-size: 1.5em;
-            color: #007bff;
+            color: rgb(137, 160, 44); /* Hellgrün */
             font-weight: bold;
             margin-bottom: 0;
         }
@@ -86,10 +89,11 @@
             margin-top: 10px;
         }
 
+        /* Preisangaben in Hellgrün */
         .preis {
             font-weight: bold;
             font-size: 1.2em;
-            color: #28a745;
+            color: rgb(137, 160, 44); /* Hellgrün */
             text-align: right;
         }
 
@@ -99,21 +103,22 @@
             text-align: left;
         }
 
+        /* Footer in Dunkelgrün */
         footer {
-            background-color: #343a40;
+            background-color: rgb(16, 43, 0); /* Dunkelgrün */
             color: white;
             text-align: center;
             padding: 10px;
             margin-top: 20px;
         }
 
-        /* Hinzufügen von Stil für den Druck-Button */
+        /* Druck-Button in Hellgrün */
         .print-button {
             display: block;
             width: 200px;
             margin: 20px auto;
             padding: 10px 20px;
-            background-color: #007bff;
+            background-color: rgb(137, 160, 44); /* Hellgrün */
             color: white;
             text-align: center;
             font-size: 1.2em;
@@ -123,13 +128,11 @@
         }
 
         .print-button:hover {
-            background-color: #0056b3;
+            background-color: #9ba831; /* Etwas dunkleres Hellgrün */
         }
 
-        /* Sicherstellen, dass der Button und die Navigation nicht mitgedruckt werden */
         @media print {
-            .print-button,
-            nav {
+            .print-button, nav {
                 display: none;
             }
         }
@@ -146,7 +149,6 @@
 
     <div class="container" id="getraenke-container"></div>
 
-    <!-- Druck-Button hinzufügen -->
     <button class="print-button" onclick="window.print()">Seite drucken</button>
 
     <footer>
@@ -165,7 +167,6 @@
                 const getraenkeContainer = document.getElementById('getraenke-container');
                 const kategorien = {};
 
-                // Kategorisieren der Getränke
                 data.getraenke.forEach(getraenk => {
                     const kategorie = getraenk.Kategorie.toLowerCase();
                     if (!kategorien[kategorie]) {
@@ -174,7 +175,6 @@
                     kategorien[kategorie].push(getraenk);
                 });
 
-                // Getränke nach Kategorien anzeigen
                 for (const [kategorie, getraenke] of Object.entries(kategorien)) {
                     const kategorieTitel = document.createElement('h2');
                     kategorieTitel.classList.add('category');
