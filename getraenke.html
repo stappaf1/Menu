@@ -12,46 +12,26 @@
             background-color: #f8f9fa;
         }
 
+        /* H1 und H2 in Hellgrün */
         h1, h2 {
-            color: #204e1a; /* Dunkelgrün für die Überschriften */
+            color: rgb(137, 160, 44); /* Hellgrün */
             text-align: center;
             margin-top: 20px;
             margin-bottom: 10px;
         }
 
+        /* Navbar in Dunkelgrün */
         nav {
-            background-color: #204e1a; /* Dunkelgrün für die Banderole */
+            background-color: rgb(16, 43, 0); /* Dunkelgrün */
             padding: 10px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 10px; /* Geringerer Abstand zwischen den Links */
+            text-align: center;
         }
 
         nav a {
-            color: #ffffff; /* Weiß für alle Links */
+            color: white;
+            margin: 0 15px;
             text-decoration: none;
             font-size: 1.2em;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        .logo-container {
-            background-color: #c0c0c0; /* Hellgrau nur hinter dem Logo */
-            padding: 5px 10px;
-            display: flex;
-            justify-content: flex-end;
-        }
-
-        .logo-container img {
-            max-width: 150px; /* Größe des Logos */
-            height: auto;
         }
 
         .container {
@@ -63,11 +43,12 @@
             margin: 0 auto;
         }
 
+        /* Rubriktexte in Hellgrün */
         .category {
             grid-column: 1 / 2;
             text-align: left;
             font-size: 1.5em;
-            color: #88a02c; /* Hellgrün für die Kategorie-Titel */
+            color: rgb(137, 160, 44); /* Hellgrün */
             font-weight: bold;
             margin-bottom: 0;
         }
@@ -108,10 +89,11 @@
             margin-top: 10px;
         }
 
+        /* Preisangaben in Hellgrün */
         .preis {
             font-weight: bold;
             font-size: 1.2em;
-            color: #88a02c; /* Hellgrün für die Preisangaben */
+            color: rgb(137, 160, 44); /* Hellgrün */
             text-align: right;
         }
 
@@ -121,20 +103,22 @@
             text-align: left;
         }
 
+        /* Footer in Dunkelgrün */
         footer {
-            background-color: #204e1a; /* Dunkelgrün für den Footer */
-            color: #ffffff; /* Weißer Text im Footer */
+            background-color: rgb(16, 43, 0); /* Dunkelgrün */
+            color: white;
             text-align: center;
             padding: 10px;
             margin-top: 20px;
         }
 
+        /* Druck-Button in Hellgrün */
         .print-button {
             display: block;
             width: 200px;
             margin: 20px auto;
             padding: 10px 20px;
-            background-color: #88a02c; /* Hellgrün für den Druck-Button */
+            background-color: rgb(137, 160, 44); /* Hellgrün */
             color: white;
             text-align: center;
             font-size: 1.2em;
@@ -144,12 +128,11 @@
         }
 
         .print-button:hover {
-            background-color: #6d8025;
+            background-color: #9ba831; /* Etwas dunkleres Hellgrün */
         }
 
         @media print {
-            .print-button,
-            nav {
+            .print-button, nav {
                 display: none;
             }
         }
@@ -157,14 +140,9 @@
 </head>
 <body>
     <nav>
-        <div class="nav-links">
-            <a href="index.html">Startseite</a>
-            <a href="speisen.html">Speisen</a>
-            <a href="getraenke.html" class="active">Getränke</a>
-        </div>
-        <div class="logo-container">
-            <img src="https://cdn.prod.website-files.com/60d2e4a3b351ee2c91f53a1e/60f9ca16c53dae6854816379_Logo%20Alea.svg" alt="Hotel Alea Logo">
-        </div>
+        <a href="index.html">Startseite</a>
+        <a href="speisen.html">Speisen</a>
+        <a href="getraenke.html">Getränke</a>
     </nav>
 
     <h1>Getränke</h1>
