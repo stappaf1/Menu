@@ -1,0 +1,37 @@
+{
+    "veranstaltungen": [
+        {
+            "datum": "15.10.24",
+            "von": "08:00",
+            "bis": "17:00",
+            "event": "Vertriebstagung 2024",
+            "kunde": "HIPP",
+            "tagungsraum": "ecoCentrum",
+            "bild": "ecoCentrum.png"
+        },
+        {
+            "datum": "15.10.24",
+            "von": "09:00",
+            "bis": "18:00",
+            "event": "Innovationsworkshop",
+            "kunde": "Bosch",
+            "tagungsraum": "ecoForum",
+            "bild": "ecoForum.png"
+        },
+        {
+            "datum": "16.10.24",
+            "von": "10:00",
+            "bis": "15:00",
+            "event": "Jahresabschlusskonferenz",
+            "kunde": "Siemens",
+            "tagungsraum": "ecoPlenum",
+            "bild": "ecoPlenum.png"
+        },
+        {
+            "datum": "16.10.24",
+            "von": "08:30",
+            "bis": "13:00",
+            "event": "Teammeeting",
+            "kunde": "Allianz",
+            "tagungsraum": "ecoRefugium",
+            "bild": "ecoRef
