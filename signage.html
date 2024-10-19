@@ -11,7 +11,6 @@
             background-color: #f8f9fa;
         }
 
-        /* Obere graue Leiste */
         .header {
             background-color: #d3d3d3; /* Grau */
             display: flex;
@@ -20,23 +19,17 @@
             padding: 10px;
         }
 
-        .header img {
-            height: 50px;
-        }
-
-        .header h1 {
+        h1 {
             text-align: center;
             flex-grow: 1;
             margin: 0;
         }
 
-        /* Inhalt */
         .content {
             padding: 20px;
             text-align: center;
         }
 
-        /* Untere graue Leiste */
         .footer {
             background-color: #d3d3d3; /* Grau */
             text-align: center;
@@ -46,9 +39,8 @@
 </head>
 <body>
     <div class="header">
-        <img src="https://cdn.prod.website-files.com/60d2e4a3b351ee2c91f53a1e/60f9ca16c53dae6854816379_Logo%20Alea.svg" alt="Logo">
         <h1>Willkommen bei Alea</h1>
-        <img src="Uhrensymbol.png" alt="Uhr" style="height: 50px;">
+        <div id="uhrzeit" style="font-size: 20px;"></div>
     </div>
 
     <div class="content" id="event-container"></div>
@@ -58,6 +50,14 @@
     </div>
 
     <script>
+        // Uhrzeit aktualisieren
+        function updateTime() {
+            const now = new Date();
+            const options = { hour: '2-digit', minute: '2-digit', hour12: false };
+            document.getElementById('uhrzeit').innerText = now.toLocaleTimeString('de-DE', options);
+        }
+        setInterval(updateTime, 1000); // jede Sekunde aktualisieren
+
         // JSON-Datei laden
         fetch('KALENDER-ECO.json')
             .then(response => {
@@ -79,8 +79,9 @@
                     const eventDiv = document.createElement('div');
                     eventDiv.innerHTML = `
                         <h3>${event.EVENT} (${event.KUNDE})</h3>
-                        <p>${event.DATUM} von ${event.VON} bis ${event.BIS || 'unbekannt'}</p>
+                        <p>${event.DATUM} von ${event.VON} bis ${event.BIS ? event.BIS : 'unbekannt'}</p>
                         <p>Raum: ${event.TAGUNGSRAUM}</p>
+                        <hr>
                     `;
                     container.appendChild(eventDiv);
                 });
