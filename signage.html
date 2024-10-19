@@ -32,9 +32,9 @@
             flex-grow: 1;
         }
 
-        .header .time {
-            font-size: 1.5em;
-            padding-right: 10px;
+        .header .clock-icon {
+            width: 50px;
+            height: 50px;
         }
 
         /* Fußzeile */
@@ -74,6 +74,12 @@
             color: #666;
         }
 
+        /* Fehleranzeige */
+        .error-message {
+            color: red;
+            text-align: center;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
@@ -81,7 +87,7 @@
     <div class="header">
         <img src="https://cdn.prod.website-files.com/60d2e4a3b351ee2c91f53a1e/60f9ca16c53dae6854816379_Logo%20Alea.svg" alt="Alea Logo">
         <h1>Willkommen bei Alea</h1>
-        <div class="time" id="time"></div>
+        <img src="Uhrensymbol.png" alt="Uhrensymbol" class="clock-icon">
     </div>
 
     <div class="event-container" id="event-container">
@@ -92,15 +98,9 @@
         © 2024 Hotel Alea GmbH - Alle Rechte vorbehalten.
     </footer>
 
-    <script>
-        function updateTime() {
-            const timeElement = document.getElementById('time');
-            const now = new Date();
-            timeElement.textContent = now.toLocaleTimeString();
-        }
-        setInterval(updateTime, 1000);
-        updateTime();
+    <div class="error-message" id="error-message"></div>
 
+    <script>
         fetch('https://stappaf1.github.io/Menu/KALENDER-ECO.json')
             .then(response => {
                 if (!response.ok) {
@@ -127,7 +127,9 @@
                     eventContainer.appendChild(card);
                 });
             })
-            .catch(error => console.error('Fehler beim Laden der JSON-Daten:', error.message));
+            .catch(error => {
+                document.getElementById('error-message').textContent = `Fehler beim Laden der JSON-Daten: ${error.message}`;
+            });
     </script>
 
 </body>
