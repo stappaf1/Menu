@@ -7,7 +7,7 @@
             "event": "Vertriebstagung 2024",
             "kunde": "HIPP",
             "tagungsraum": "ecoCentrum",
-            "bild": "ecoCentrum.png"
+            "bild": "ecoCentrum.jpg"
         },
         {
             "datum": "15.10.24",
@@ -16,7 +16,7 @@
             "event": "Innovationsworkshop",
             "kunde": "Bosch",
             "tagungsraum": "ecoForum",
-            "bild": "ecoForum.png"
+            "bild": "ecoForum.jpg"
         },
         {
             "datum": "16.10.24",
@@ -25,7 +25,7 @@
             "event": "Jahresabschlusskonferenz",
             "kunde": "Siemens",
             "tagungsraum": "ecoPlenum",
-            "bild": "ecoPlenum.png"
+            "bild": "ecoPlenum.jpg"
         },
         {
             "datum": "16.10.24",
@@ -34,4 +34,7 @@
             "event": "Teammeeting",
             "kunde": "Allianz",
             "tagungsraum": "ecoRefugium",
-            "bild": "ecoRef
+            "bild": "ecoRefugium.jpg"
+        }
+    ]
+}
