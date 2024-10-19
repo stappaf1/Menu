@@ -3,114 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signage - Alea Event</title>
+    <title>Signage</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
+            background-color: #f8f9fa;
         }
 
+        /* Obere graue Leiste */
         .header {
-            background-color: #d3d3d3;
-            padding: 10px;
+            background-color: #d3d3d3; /* Grau */
             display: flex;
-            justify-content: space-between;
             align-items: center;
+            justify-content: space-between;
+            padding: 10px;
         }
 
         .header img {
-            max-height: 50px;
+            height: 50px;
         }
 
         .header h1 {
-            font-size: 2em;
-            color: #333;
+            text-align: center;
+            flex-grow: 1;
             margin: 0;
         }
 
-        .header .time {
-            font-size: 1.5em;
-        }
-
+        /* Inhalt */
         .content {
             padding: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .event {
-            border-bottom: 2px solid #ddd;
-            padding: 15px 0;
-        }
-
-        .event h2 {
-            margin: 0;
-            color: #204e1a;
-        }
-
-        .event p {
-            margin: 5px 0;
-            color: #555;
-        }
-
-        .footer {
-            background-color: #d3d3d3;
-            padding: 10px;
             text-align: center;
+        }
+
+        /* Untere graue Leiste */
+        .footer {
+            background-color: #d3d3d3; /* Grau */
+            text-align: center;
+            padding: 10px;
         }
     </style>
 </head>
 <body>
-
     <div class="header">
-        <img src="https://cdn.prod.website-files.com/60d2e4a3b351ee2c91f53a1e/60f9ca16c53dae6854816379_Logo%20Alea.svg" alt="Alea Logo">
+        <img src="https://cdn.prod.website-files.com/60d2e4a3b351ee2c91f53a1e/60f9ca16c53dae6854816379_Logo%20Alea.svg" alt="Logo">
         <h1>Willkommen bei Alea</h1>
-        <div class="time" id="time"></div>
+        <img src="Uhrensymbol.png" alt="Uhr" style="height: 50px;">
     </div>
 
-    <div class="content" id="event-container">
-        <!-- Die Events aus der JSON-Datei werden hier geladen -->
-    </div>
+    <div class="content" id="event-container"></div>
 
     <div class="footer">
-        © 2024 Hotel Alea GmbH - Alle Rechte vorbehalten
+        <p>© 2024 Hotel Alea GmbH - Alle Rechte vorbehalten</p>
     </div>
 
     <script>
-        // Uhrzeit anzeigen
-        function updateTime() {
-            const now = new Date();
-            const timeString = now.toLocaleTimeString('de-DE', { hour: '2-digit', minute: '2-digit' });
-            document.getElementById('time').textContent = timeString;
-        }
-        setInterval(updateTime, 1000);
-        updateTime();
-
-        // JSON-Daten laden
+        // JSON-Datei laden
         fetch('KALENDER-ECO.json')
-            .then(response => response.json())
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Netzwerkantwort war nicht ok');
+                }
+                return response.json();
+            })
             .then(data => {
                 const container = document.getElementById('event-container');
+                const events = data.events;
 
-                data.events.forEach(event => {
-                    const eventElement = document.createElement('div');
-                    eventElement.classList.add('event');
+                if (events.length === 0) {
+                    container.innerHTML = '<p>Keine Veranstaltungen für heute.</p>';
+                    return;
+                }
 
-                    // Bis-Feld nur anzeigen, wenn vorhanden
-                    let bisText = event.BIS ? `Bis: ${event.BIS}` : ''; 
-
-                    eventElement.innerHTML = `
-                        <h2>${event.TAGUNGSRAUM} - ${event.KUNDE || 'Kunde nicht angegeben'}</h2>
-                        <p>${event.DATUM}, Von: ${event.VON} ${bisText}</p>
-                        <p>${event.EVENT || 'Kein Event-Titel verfügbar'}</p>
+                events.forEach(event => {
+                    const eventDiv = document.createElement('div');
+                    eventDiv.innerHTML = `
+                        <h3>${event.EVENT} (${event.KUNDE})</h3>
+                        <p>${event.DATUM} von ${event.VON} bis ${event.BIS || 'unbekannt'}</p>
+                        <p>Raum: ${event.TAGUNGSRAUM}</p>
                     `;
-
-                    container.appendChild(eventElement);
+                    container.appendChild(eventDiv);
                 });
             })
-            .catch(error => console.error('Fehler beim Laden der JSON-Daten:', error));
+            .catch(error => {
+                console.error('Fehler beim Laden der JSON-Daten:', error);
+                document.getElementById('event-container').innerHTML = '<p>Fehler beim Laden der Daten.</p>';
+            });
     </script>
 </body>
 </html>
