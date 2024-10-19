@@ -3,62 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signage</title>
+    <title>Signage - Hotel Alea</title>
     <style>
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
+            padding: 0;
             background-color: #f8f9fa;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            overflow: hidden;
         }
-
-        .header {
+        header, footer {
             background-color: #d3d3d3; /* Grau */
+            padding: 10px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 10px;
         }
-
+        #logo {
+            height: 50px; /* Logo-Größe */
+        }
         h1 {
             text-align: center;
-            flex-grow: 1;
-            margin: 0;
+            color: #333;
         }
-
-        .content {
+        #event-container {
+            flex: 1; /* Nimmt den verbleibenden Platz ein */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             padding: 20px;
-            text-align: center;
+            overflow-y: auto; /* Scrollbar bei Überlauf */
         }
-
-        .footer {
-            background-color: #d3d3d3; /* Grau */
+        .event {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 10px 0;
+            width: 100%;
+            max-width: 600px;
+        }
+        footer {
             text-align: center;
-            padding: 10px;
         }
     </style>
 </head>
 <body>
-    <div class="header">
+    <header>
+        <img id="logo" src="https://cdn.prod.website-files.com/60d2e4a3b351ee2c91f53a1e/60f9ca16c53dae6854816379_Logo%20Alea.svg" alt="Hotel Alea Logo">
         <h1>Willkommen bei Alea</h1>
-        <div id="uhrzeit" style="font-size: 20px;"></div>
-    </div>
+        <img id="clock" src="Uhrensymbol.png" alt="Uhr">
+    </header>
 
-    <div class="content" id="event-container"></div>
+    <div id="event-container"></div>
 
-    <div class="footer">
+    <footer>
         <p>© 2024 Hotel Alea GmbH - Alle Rechte vorbehalten</p>
-    </div>
+    </footer>
 
     <script>
-        // Uhrzeit aktualisieren
-        function updateTime() {
-            const now = new Date();
-            const options = { hour: '2-digit', minute: '2-digit', hour12: false };
-            document.getElementById('uhrzeit').innerText = now.toLocaleTimeString('de-DE', options);
-        }
-        setInterval(updateTime, 1000); // jede Sekunde aktualisieren
-
-        // JSON-Datei laden
         fetch('KALENDER-ECO.json')
             .then(response => {
                 if (!response.ok) {
@@ -67,29 +74,22 @@
                 return response.json();
             })
             .then(data => {
-                const container = document.getElementById('event-container');
                 const events = data.events;
-
-                if (events.length === 0) {
-                    container.innerHTML = '<p>Keine Veranstaltungen für heute.</p>';
-                    return;
-                }
+                const eventContainer = document.getElementById('event-container');
 
                 events.forEach(event => {
-                    const eventDiv = document.createElement('div');
-                    eventDiv.innerHTML = `
-                        <h3>${event.EVENT} (${event.KUNDE})</h3>
-                        <p>${event.DATUM} von ${event.VON} bis ${event.BIS ? event.BIS : 'unbekannt'}</p>
-                        <p>Raum: ${event.TAGUNGSRAUM}</p>
-                        <hr>
+                    const eventElement = document.createElement('div');
+                    eventElement.classList.add('event');
+                    eventElement.innerHTML = `
+                        <h2>${event.EVENT || 'Nicht angegeben'} (${event.KUNDE || 'Nicht angegeben'})</h2>
+                        <p>Tagungsraum: ${event.TAGUNGSRAUM || 'Nicht angegeben'}</p>
+                        <p>Von: ${event.VON || 'Nicht angegeben'} bis: ${event.BIS || 'Nicht angegeben'}</p>
+                        <p>Datum: ${event.DATUM || 'Nicht angegeben'}</p>
                     `;
-                    container.appendChild(eventDiv);
+                    eventContainer.appendChild(eventElement);
                 });
             })
-            .catch(error => {
-                console.error('Fehler beim Laden der JSON-Daten:', error);
-                document.getElementById('event-container').innerHTML = '<p>Fehler beim Laden der Daten.</p>';
-            });
+            .catch(error => console.error('Fehler beim Laden der JSON-Daten:', error));
     </script>
 </body>
 </html>
