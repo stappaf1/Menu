@@ -3,71 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eventkalender</title>
+    <title>Signage - Alea Event</title>
     <style>
         body {
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
+            background-color: #f4f4f9;
         }
 
         .header {
             background-color: #d3d3d3;
+            padding: 10px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px;
         }
 
         .header img {
-            height: 50px;
+            max-height: 50px;
         }
 
         .header h1 {
-            font-size: 24px;
+            font-size: 2em;
             color: #333;
             margin: 0;
-            text-align: center;
-            flex-grow: 1;
         }
 
-        .header .time-icon {
-            height: 50px;
+        .header .time {
+            font-size: 1.5em;
         }
 
-        .event-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
+        .content {
             padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .event {
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            text-align: center;
-        }
-
-        .event img {
-            max-width: 100%;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 8px;
-            margin-bottom: 10px;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
         }
 
         .event h2 {
-            font-size: 18px;
-            color: #137428;
-            margin: 10px 0;
+            margin: 0;
+            color: #204e1a;
         }
 
         .event p {
-            font-size: 14px;
-            color: #333;
+            margin: 5px 0;
+            color: #555;
         }
 
         .footer {
@@ -80,54 +65,51 @@
 <body>
 
     <div class="header">
-        <img src="https://cdn.prod.website-files.com/60d2e4a3b351ee2c91f53a1e/60f9ca16c53dae6854816379_Logo%20Alea.svg" alt="Hotel Alea Logo">
+        <img src="https://cdn.prod.website-files.com/60d2e4a3b351ee2c91f53a1e/60f9ca16c53dae6854816379_Logo%20Alea.svg" alt="Alea Logo">
         <h1>Willkommen bei Alea</h1>
-        <img class="time-icon" src="Uhrensymbol.png" alt="Uhrensymbol">
+        <div class="time" id="time"></div>
     </div>
 
-    <div class="event-container" id="event-container"></div>
+    <div class="content" id="event-container">
+        <!-- Die Events aus der JSON-Datei werden hier geladen -->
+    </div>
 
     <div class="footer">
-        <p>© 2024 Hotel Alea GmbH - Alle Rechte vorbehalten</p>
+        © 2024 Hotel Alea GmbH - Alle Rechte vorbehalten
     </div>
 
     <script>
+        // Uhrzeit anzeigen
+        function updateTime() {
+            const now = new Date();
+            const timeString = now.toLocaleTimeString('de-DE', { hour: '2-digit', minute: '2-digit' });
+            document.getElementById('time').textContent = timeString;
+        }
+        setInterval(updateTime, 1000);
+        updateTime();
+
+        // JSON-Daten laden
         fetch('KALENDER-ECO.json')
             .then(response => response.json())
             .then(data => {
                 const container = document.getElementById('event-container');
 
-                data.forEach(event => {
-                    const eventDiv = document.createElement('div');
-                    eventDiv.classList.add('event');
+                data.events.forEach(event => {
+                    const eventElement = document.createElement('div');
+                    eventElement.classList.add('event');
 
-                    // Füge das Bild hinzu, wenn vorhanden
-                    if (event.BILD) {
-                        const img = document.createElement('img');
-                        img.src = event.BILD;
-                        img.alt = event.TAGUNGSRAUM;
-                        eventDiv.appendChild(img);
-                    }
+                    let bisText = event.BIS ? `Bis: ${event.BIS}` : ''; // Optional "BIS" Feld
 
-                    // Event Titel und Informationen
-                    const title = document.createElement('h2');
-                    title.textContent = event.TAGUNGSRAUM;
-                    eventDiv.appendChild(title);
-
-                    const eventDetails = `
-                        <p><strong>Kunde:</strong> ${event.KUNDE || 'N/A'}</p>
-                        <p><strong>Event:</strong> ${event.EVENT || 'N/A'}</p>
-                        <p><strong>Datum:</strong> ${event.DATUM}</p>
-                        <p><strong>Von:</strong> ${event.VON}</p>
-                        <p><strong>Bis:</strong> ${event.BIS || 'N/A'}</p>
+                    eventElement.innerHTML = `
+                        <h2>${event.TAGUNGSRAUM} - ${event.KUNDE || 'Kunde nicht angegeben'}</h2>
+                        <p>${event.DATUM}, Von: ${event.VON} ${bisText}</p>
+                        <p>${event.EVENT || 'Kein Event-Titel verfügbar'}</p>
                     `;
-                    eventDiv.innerHTML += eventDetails;
 
-                    container.appendChild(eventDiv);
+                    container.appendChild(eventElement);
                 });
             })
             .catch(error => console.error('Fehler beim Laden der JSON-Daten:', error));
     </script>
-
 </body>
 </html>
