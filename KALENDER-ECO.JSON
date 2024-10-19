@@ -1,29 +1,19 @@
-[
-    {
-        "DATUM": "15.10.24",
-        "VON": "08:00",
-        "BIS": "17:00",
-        "EVENT": "Vertriebstagung 2024",
-        "KUNDE": "HIPP",
-        "TAGUNGSRAUM": "ecoCentrum",
-        "BILD": "ecoCentrum.jpg"
-    },
-    {
-        "DATUM": "15.10.24",
-        "VON": "09:00",
-        "BIS": "12:00",
-        "EVENT": "Marketing Workshop",
-        "KUNDE": "BioCompany",
-        "TAGUNGSRAUM": "ecoForum",
-        "BILD": "ecoForum.jpg"
-    },
-    {
-        "DATUM": "15.10.24",
-        "VON": "10:00",
-        "BIS": "14:00",
-        "EVENT": "",
-        "KUNDE": "Green Tech",
-        "TAGUNGSRAUM": "ecoPlenum",
-        "BILD": ""
-    }
-]
+{
+    "events": [
+        {
+            "DATUM": "15.10.24",
+            "VON": "08:00",
+            "BIS": "17:00",
+            "EVENT": "Vertriebstagung 2024",
+            "KUNDE": "HIPP",
+            "TAGUNGSRAUM": "ecoCentrum"
+        },
+        {
+            "DATUM": "16.10.24",
+            "VON": "09:00",
+            "EVENT": "Mitarbeiter Meeting",
+            "KUNDE": "BMW",
+            "TAGUNGSRAUM": "ecoForum"
+        }
+    ]
+}
