@@ -3,105 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Willkommen bei Alea</title>
+    <title>Event-Anzeige</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
             margin: 0;
-            padding: 0;
-            background-color: #f3f7f0; /* Sanftes, ökologisches Grün */
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            height: 100vh;
-            color: #333;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
         }
 
-        /* Header */
+        /* Oberer Banner */
         .header {
-            background-color: #e0ebd3; /* Hellgrau-Grün */
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 40px;
-            height: 12vh;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #a9a9a9;
+            padding: 20px;
         }
 
         .header img {
-            height: 80px;
+            height: 60px;
         }
 
-        .header-title {
-            font-size: 3.5em;
-            font-weight: bold;
-            color: #204e1a; /* Dunkles Grün */
-        }
-
-        .clock-icon {
-            height: 80px;
-        }
-
-        .clock-icon img {
-            height: 100%;
-        }
-
-        /* Hauptinhalt */
-        .content {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        .header h1 {
+            margin: 0;
+            font-size: 2em;
+            color: white;
             text-align: center;
-            font-size: 2.5em;
             flex-grow: 1;
-            padding: 0 100px;
-            color: #204e1a; /* Dunkles Grün */
         }
 
-        /* Moderner Footer */
+        .header .clock {
+            height: 60px;
+        }
+
+        /* Unterer Banner */
         .footer {
-            background-color: #e0ebd3; /* Hellgrau-Grün */
-            height: 5vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #333;
-            font-size: 1.5em;
-            letter-spacing: 1px;
+            background-color: #a9a9a9;
+            padding: 10px;
+            text-align: center;
+            color: white;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
         }
 
-        /* Responsiveness */
-        @media (max-width: 768px) {
-            .header-title {
-                font-size: 2.5em;
-            }
-            .content {
-                font-size: 2em;
-                padding: 0 50px;
-            }
+        /* Event Container */
+        .event-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
         }
+
+        .event {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            padding: 20px;
+        }
+
+        .event img {
+            max-width: 100%;
+            border-bottom: 2px solid #ddd;
+        }
+
+        .event h2 {
+            color: #333;
+            margin: 10px 0;
+            font-size: 1.5em;
+        }
+
+        .event p {
+            margin: 5px 0;
+            color: #666;
+        }
+        
+        /* Datum-Container */
+        .date-time {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        .time {
+            text-align: right;
+        }
+
     </style>
 </head>
 <body>
 
-    <!-- Header -->
     <div class="header">
-        <img src="https://cdn.prod.website-files.com/60d2e4a3b351ee2c91f53a1e/60f9ca16c53dae6854816379_Logo%20Alea.svg" alt="Alea Logo">
-        <div class="header-title">Willkommen bei Alea</div>
-        <div class="clock-icon">
-            <img src="Uhrensymbol.png" alt="Uhrensymbol">
-        </div>
+        <img src="https://cdn.prod.website-files.com/60d2e4a3b351ee2c91f53a1e/60f9ca16c53dae6854816379_Logo%20Alea.svg" alt="Logo">
+        <h1>Willkommen bei Alea</h1>
+        <img class="clock" src="Uhrensymbol.png" alt="Uhr">
     </div>
 
-    <!-- Hauptinhalt -->
-    <div class="content">
-        <p>Hier könnte Ihr Text stehen</p>
+    <div class="event-container" id="event-container">
+        <!-- Events werden hier geladen -->
     </div>
 
-    <!-- Footer -->
     <div class="footer">
-        <p>© 2024 Alea GmbH - Alle Rechte vorbehalten</p>
+        © 2024 Hotel Alea GmbH - Alle Rechte vorbehalten
     </div>
 
+    <script>
+        fetch('KALENDER-ECO.json')
+            .then(response => response.json())
+            .then(data => {
+                const container = document.getElementById('event-container');
+                data.veranstaltungen.forEach(event => {
+                    const eventElement = document.createElement('div');
+                    eventElement.classList.add('event');
+
+                    let eventImage = event.bild ? `<img src="${event.bild}" alt="${event.tagungsraum}">` : '';
+
+                    eventElement.innerHTML = `
+                        ${eventImage}
+                        <h2>${event.event ? event.event : 'Event nicht verfügbar'}</h2>
+                        <p><strong>Kunde:</strong> ${event.kunde ? event.kunde : 'Unbekannt'}</p>
+                        <p><strong>Tagungsraum:</strong> ${event.tagungsraum}</p>
+                        <div class="date-time">
+                            <p><strong>Datum:</strong> ${event.datum}</p>
+                            <div class="time">
+                                <p><strong>Von:</strong> ${event.von ? event.von : 'N/A'}</p>
+                                <p><strong>Bis:</strong> ${event.bis ? event.bis : 'N/A'}</p>
+                            </div>
+                        </div>
+                    `;
+                    container.appendChild(eventElement);
+                });
+            })
+            .catch(error => {
+                console.error('Fehler beim Laden der Daten:', error);
+            });
+    </script>
 </body>
 </html>
