@@ -1,40 +1,29 @@
-{
-    "veranstaltungen": [
-        {
-            "datum": "15.10.24",
-            "von": "08:00",
-            "bis": "17:00",
-            "event": "Vertriebstagung 2024",
-            "kunde": "HIPP",
-            "tagungsraum": "ecoCentrum",
-            "bild": "ecoCentrum.jpg"
-        },
-        {
-            "datum": "15.10.24",
-            "von": "09:00",
-            "bis": "18:00",
-            "event": "Innovationsworkshop",
-            "kunde": "Bosch",
-            "tagungsraum": "ecoForum",
-            "bild": "ecoForum.jpg"
-        },
-        {
-            "datum": "16.10.24",
-            "von": "10:00",
-            "bis": "15:00",
-            "event": "Jahresabschlusskonferenz",
-            "kunde": "Siemens",
-            "tagungsraum": "ecoPlenum",
-            "bild": "ecoPlenum.jpg"
-        },
-        {
-            "datum": "16.10.24",
-            "von": "08:30",
-            "bis": "13:00",
-            "event": "Teammeeting",
-            "kunde": "Allianz",
-            "tagungsraum": "ecoRefugium",
-            "bild": "ecoRefugium.jpg"
-        }
-    ]
-}
+[
+    {
+        "DATUM": "15.10.24",
+        "VON": "08:00",
+        "BIS": "17:00",
+        "EVENT": "Vertriebstagung 2024",
+        "KUNDE": "HIPP",
+        "TAGUNGSRAUM": "ecoCentrum",
+        "BILD": "ecoCentrum.jpg"
+    },
+    {
+        "DATUM": "15.10.24",
+        "VON": "09:00",
+        "BIS": "12:00",
+        "EVENT": "Marketing Workshop",
+        "KUNDE": "BioCompany",
+        "TAGUNGSRAUM": "ecoForum",
+        "BILD": "ecoForum.jpg"
+    },
+    {
+        "DATUM": "15.10.24",
+        "VON": "10:00",
+        "BIS": "14:00",
+        "EVENT": "",
+        "KUNDE": "Green Tech",
+        "TAGUNGSRAUM": "ecoPlenum",
+        "BILD": ""
+    }
+]
