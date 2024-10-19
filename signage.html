@@ -48,6 +48,14 @@
             width: 100%;
             max-width: 600px;
         }
+        #error-message {
+            color: red;
+            text-align: center;
+            padding: 10px;
+            background-color: #fff1f1;
+            border: 1px solid red;
+            display: none;
+        }
         footer {
             text-align: center;
         }
@@ -60,6 +68,7 @@
         <img id="clock" src="Uhrensymbol.png" alt="Uhr">
     </header>
 
+    <div id="error-message"></div>
     <div id="event-container"></div>
 
     <footer>
@@ -95,7 +104,12 @@
                     eventContainer.appendChild(eventElement);
                 });
             })
-            .catch(error => console.error('Fehler beim Laden der JSON-Daten:', error));
+            .catch(error => {
+                const errorMessage = document.getElementById('error-message');
+                errorMessage.textContent = 'Fehler beim Laden der JSON-Daten: ' + error.message;
+                errorMessage.style.display = 'block'; // Zeige die Fehlermeldung an
+                console.error('Fehler beim Laden der JSON-Daten:', error);
+            });
     </script>
 </body>
 </html>
