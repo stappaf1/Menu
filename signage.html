@@ -28,6 +28,7 @@
         h1 {
             text-align: center;
             color: #333;
+            flex: 1; /* Flex-Wachstum für zentrierten Titel */
         }
         #event-container {
             flex: 1; /* Nimmt den verbleibenden Platz ein */
@@ -76,6 +77,11 @@
             .then(data => {
                 const events = data.events;
                 const eventContainer = document.getElementById('event-container');
+
+                if (events.length === 0) {
+                    eventContainer.innerHTML = "<p>Keine Veranstaltungen für heute.</p>";
+                    return;
+                }
 
                 events.forEach(event => {
                     const eventElement = document.createElement('div');
