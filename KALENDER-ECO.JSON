@@ -9,11 +9,27 @@
             "TAGUNGSRAUM": "ecoCentrum"
         },
         {
-            "DATUM": "16.10.24",
+            "DATUM": "15.10.24",
             "VON": "09:00",
-            "EVENT": "Mitarbeiter Meeting",
+            "BIS": "12:00",
+            "EVENT": "Marketing Workshop",
             "KUNDE": "BMW",
             "TAGUNGSRAUM": "ecoForum"
+        },
+        {
+            "DATUM": "15.10.24",
+            "VON": "13:00",
+            "BIS": "15:00",
+            "EVENT": "Projektbesprechung",
+            "KUNDE": "Siemens",
+            "TAGUNGSRAUM": "ecoPlenum"
+        },
+        {
+            "DATUM": "15.10.24",
+            "VON": "10:00",
+            "EVENT": "Team-Meeting",
+            "KUNDE": "Bosch",
+            "TAGUNGSRAUM": "ecoRefugium"
         }
     ]
 }
