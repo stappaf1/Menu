@@ -67,10 +67,13 @@
             margin-right: 20px; /* Abstand zwischen Bild und Text */
         }
 
-        .event-row div {
+        .event-details {
             flex: 1; /* Platz für die Textinhalte */
-            display: flex;
-            justify-content: space-between; /* Abstand zwischen den Spalten */
+        }
+
+        .event-remark {
+            flex: 0 0 30%; /* Feste Breite für die Bemerkung */
+            padding-left: 20px; /* Abstand zur anderen Spalte */
         }
 
         /* Fehleranzeige */
@@ -79,11 +82,6 @@
             text-align: center;
             margin-top: 20px;
         }
-
-        .remark-column {
-            flex: 0 0 30%; /* Feste Breite für die Bemerkung */
-            padding-left: 20px; /* Abstand zur anderen Spalte */
-        }
     </style>
 </head>
 <body>
@@ -91,7 +89,7 @@
     <div class="header">
         <img src="https://cdn.prod.website-files.com/60d2e4a3b351ee2c91f53a1e/60f9ca16c53dae6854816379_Logo%20Alea.svg" alt="Alea Logo">
         <div class="title">
-            <h1 id="date-title">Willkommen bei Alea Eco  </h1>
+            <h1 id="date-title">Willkommen bei Alea Eco</h1>
         </div>
         <img src="Uhrensymbol.png" alt="Uhrensymbol" class="clock-icon">
     </div>
@@ -123,13 +121,10 @@
                 const formattedDate = today.toLocaleDateString('de-DE', options);
                 
                 // Setzen des Datums in der Kopfzeile
-                document.getElementById('date-title').innerText += formattedDate;
-
-                console.log('Heute:', formattedDate);  // Debugging
+                document.getElementById('date-title').innerText += ` ${formattedDate}`;
 
                 // Filtere die Veranstaltungen nach dem heutigen Datum
                 const todayEvents = data.events.filter(event => event.DATUM === formattedDate);
-                console.log('Veranstaltungen:', todayEvents);  // Debugging
 
                 // Prüfen, ob es Veranstaltungen gibt
                 if (todayEvents.length === 0) {
@@ -144,16 +139,14 @@
                     const timeText = event.BIS ? `${event.VON} bis ${event.BIS}` : `ab ${event.VON}`;
                     const eventHTML = `
                         <img src="${event.BILD}" alt="${event.TAGUNGSRAUM}" class="event-image"/>
-                        <div>
-                            <div>
-                                <strong>${event.KUNDE}</strong><br>
-                                <p>${event.EVENT || 'Kein Event'}</p>
-                                <p>${timeText}</p>
-                                <p>Raum: ${event.TAGUNGSRAUM} ${event.RAUMHINWEIS ? `(${event.RAUMHINWEIS})` : ''}</p>
-                            </div>
-                            <div class="remark-column">
-                                <p>${event.BEMERKUNG || 'Keine Bemerkungen vorhanden.'}</p>
-                            </div>
+                        <div class="event-details">
+                            <strong>${event.KUNDE}</strong><br>
+                            <p>${event.EVENT || 'Kein Event'}</p>
+                            <p>${timeText}</p>
+                            <p>Raum: ${event.TAGUNGSRAUM} ${event.RAUMHINWEIS ? `(${event.RAUMHINWEIS})` : ''}</p>
+                        </div>
+                        <div class="event-remark">
+                            <p>${event.BEMERKUNG || 'Keine Bemerkungen vorhanden.'}</p>
                         </div>
                     `;
                     row.innerHTML = eventHTML;
