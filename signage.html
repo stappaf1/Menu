@@ -57,6 +57,8 @@
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             margin-bottom: 20px;
+            display: flex; /* Flexbox für die Anordnung */
+            align-items: center; /* Vertikale Zentrierung */
         }
 
         .event-row h2 {
@@ -67,6 +69,12 @@
         .event-row p {
             margin: 5px 0;
             color: #666;
+        }
+
+        .event-image {
+            height: 20%; /* Höhe des Bildes */
+            max-height: 100px; /* Maximale Höhe des Bildes */
+            margin-right: 20px; /* Abstand zwischen Bild und Text */
         }
 
         /* Fehleranzeige */
@@ -113,11 +121,13 @@
 
                     const timeText = event.BIS ? `${event.VON} bis ${event.BIS}` : `ab ${event.VON}`;
                     const eventHTML = `
-                        <strong>${event.KUNDE}</strong><br>
-                        <p>${event.EVENT || 'Kein Event'}</p>
-                        <p>${timeText}</p>
-                        <p>Tagungsraum: ${event.TAGUNGSRAUM}</p>
-                        <img src="${event.TAGUNGSRAUM}.jpeg" alt="${event.TAGUNGSRAUM}" style="height: 20%; max-height: 100px;"/>
+                        <img src="${event.TAGUNGSRAUM}.jpeg" alt="${event.TAGUNGSRAUM}" class="event-image"/>
+                        <div>
+                            <strong>${event.KUNDE}</strong><br>
+                            <p>${event.EVENT || 'Kein Event'}</p>
+                            <p>${timeText}</p>
+                            <p>Tagungsraum: ${event.TAGUNGSRAUM}</p>
+                        </div>
                     `;
                     row.innerHTML = eventHTML;
                     eventContainer.appendChild(row);
