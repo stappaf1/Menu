@@ -7,7 +7,7 @@
             "EVENT": "Vertriebstagung 2024",
             "KUNDE": "HIPP",
             "TAGUNGSRAUM": "ecoCentrum",
-            "Raumteil": "1-3", 
+            "Raumteil": "1-2", 
             "BILD": "ecoCentrum.jpeg"
         },
         {
@@ -16,9 +16,9 @@
             "BIS": "12:00",
             "EVENT": "Marketing Workshop",
             "KUNDE": "BMW",
-            "TAGUNGSRAUM": "ecoForum",
-            "Raumteil": "2", 
-            "BILD": "ecoForum.jpeg"
+            "TAGUNGSRAUM": "ecoCentrum",
+            "Raumteil": "3", 
+            "BILD": "ecoCentrum.jpeg"
         },
         {
             "DATUM": "15.10.24",
