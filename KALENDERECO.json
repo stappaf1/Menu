@@ -7,7 +7,7 @@
             "EVENT": "Vertriebstagung 2024",
             "KUNDE": "HIPP",
             "TAGUNGSRAUM": "ecoCentrum",
-            "Raumteil": "1-2", 
+            "Raumteil": "1-3", 
             "BILD": "ecoCentrum.jpeg"
         },
         {
@@ -17,7 +17,7 @@
             "EVENT": "Marketing Workshop",
             "KUNDE": "BMW",
             "TAGUNGSRAUM": "ecoForum",
-            "Raumteil": "1", 
+            "Raumteil": "2", 
             "BILD": "ecoForum.jpeg"
         },
         {
@@ -27,7 +27,7 @@
             "EVENT": "Projektbesprechung",
             "KUNDE": "Siemens",
             "TAGUNGSRAUM": "ecoPlenum",
-            "Raumteil": "2", 
+            "Raumteil": "1-2", 
             "BILD": "ecoPlenum.jpeg"
         },
         {
