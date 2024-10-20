@@ -10,6 +10,7 @@
             margin: 0;
             padding: 0;
             background-color: #f8f9fa;
+            height: 100vh; /* Vollbildhöhe */
         }
 
         /* Kopfzeile */
@@ -51,6 +52,9 @@
             display: flex;
             flex-direction: column;
             padding: 20px;
+            box-sizing: border-box;
+            height: calc(100vh - 150px); /* Höhe zwischen Kopf- und Fußzeile */
+            justify-content: space-around; /* Gleichmäßiger Abstand zwischen den Zeilen */
         }
 
         /* Bereichsaufteilung */
@@ -100,6 +104,7 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             display: flex;
             align-items: center;
+            min-height: 20%; /* Mindestens 20% der Höhe für jeden Eintrag */
         }
 
         .event-row img {
@@ -179,13 +184,14 @@
                     b13: document.getElementById('b13')
                 };
 
+                // Füge jeden Event in den entsprechenden Bereich ein
                 data.events.forEach(event => {
                     const row = document.createElement('div');
                     row.classList.add('event-row');
 
                     const timeText = event.BIS ? `${event.VON} bis ${event.BIS}` : `ab ${event.VON}`;
                     const eventHTML = `
-                        <img src="${event.TAGUNGSRAUM}.jpeg" alt="${event.TAGUNGSRAUM}" class="event-image"/>
+                        <img src="${event.BILD}" alt="${event.TAGUNGSRAUM}" class="event-image"/>
                         <div>
                             <strong>${event.KUNDE}</strong><br>
                             <p>${event.EVENT || 'Kein Event'}</p>
