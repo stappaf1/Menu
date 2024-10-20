@@ -10,6 +10,9 @@
             margin: 0;
             padding: 0;
             background-color: #f8f9fa;
+            display: flex;
+            flex-direction: column;
+            height: 100vh; /* Vollständige Höhe */
         }
 
         /* Kopfzeile */
@@ -40,8 +43,7 @@
             background-color: #d3d3d3;
             padding: 10px;
             text-align: center;
-            position: absolute;
-            bottom: 0;
+            position: relative; /* relative position */
             width: 100%;
             font-size: 1em;
         }
@@ -49,34 +51,37 @@
         /* Event Anzeige */
         .event-container {
             padding: 20px;
+            flex-grow: 1; /* Füllt den verbleibenden Platz */
+            display: flex;
+            flex-direction: column; /* Anordnung der Veranstaltungen */
+            justify-content: space-between; /* Gleiche Verteilung der Veranstaltungen */
         }
 
         .event-row {
             background-color: white;
-            padding: 20px; /* Mehr Padding für eine bessere Darstellung */
+            padding: 10px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             margin-bottom: 20px;
             display: flex; /* Flexbox für die Anordnung */
-            align-items: flex-start; /* Oben bündig */
-            justify-content: space-between; /* Abstand zwischen Bild und Text */
+            align-items: center; /* Vertikale Zentrierung */
+            justify-content: space-between; /* Gleichmäßige Verteilung */
+            height: calc(100% / 4); /* Höhe jeder Zeile gleichmäßig */
+            font-size: 1.2em; /* Anpassung der Schriftgröße */
         }
 
         .event-row h2 {
             margin: 0;
             color: #204e1a;
-            font-size: 2em; /* Erhöhte Schriftgröße für den Kundennamen */
         }
 
         .event-row p {
             margin: 5px 0;
             color: #666;
-            font-size: 1.5em; /* Erhöhte Schriftgröße für die Eventdetails */
-            line-height: 1.5; /* Erhöhte Zeilenhöhe */
         }
 
         .event-image {
-            height: auto; /* Automatische Höhe */
+            height: 20%; /* Höhe des Bildes */
             max-height: 100px; /* Maximale Höhe des Bildes */
             margin-right: 20px; /* Abstand zwischen Bild und Text */
         }
@@ -119,34 +124,32 @@
             })
             .then(data => {
                 const eventContainer = document.getElementById('event-container');
-                const today = new Date().toLocaleDateString('de-DE', { year: '2-digit', month: '2-digit', day: '2-digit' });
-                const todayEvents = data.events.filter(event => event.DATUM === today);
-
+                const today = new Date();
+                const options = { day: '2-digit', month: '2-digit', year: '2-digit' };
+                const formattedDate = today.toLocaleDateString('de-DE', options);
+                
+                const todayEvents = data.events.filter(event => event.DATUM === formattedDate);
+                
                 if (todayEvents.length === 0) {
                     document.getElementById('error-message').textContent = 'Heute sind keine Veranstaltungen geplant.';
                     return;
                 }
 
-                // Höhe der Container berechnen
-                const containerHeight = window.innerHeight - document.querySelector('.header').offsetHeight - document.querySelector('footer').offsetHeight;
-                const rowHeight = containerHeight / todayEvents.length;
+                const totalHeight = window.innerHeight - (document.querySelector('.header').offsetHeight + document.querySelector('footer').offsetHeight);
+                const rowHeight = totalHeight / todayEvents.length;
 
                 todayEvents.forEach(event => {
                     const row = document.createElement('div');
                     row.classList.add('event-row');
-                    row.style.height = `${rowHeight}px`; // Höhe der Zeile anpassen
+                    row.style.height = `${rowHeight}px`;
 
                     const timeText = event.BIS ? `${event.VON} bis ${event.BIS}` : `ab ${event.VON}`;
                     const eventHTML = `
-                        <img src="${event.BILD}" alt="${event.TAGUNGSRAUM}" class="event-image"/>
-                        <div>
-                            <strong>${event.KUNDE}</strong><br>
-                            <p>${event.EVENT || 'Kein Event'}</p>
-                            <p>Raum: ${event.TAGUNGSRAUM} ${event.RAUMHINWEIS ? `(${event.RAUMHINWEIS})` : ''}</p>
-                        </div>
-                        <div>
-                            <p>${event.BEMERKUNG}</p>
-                        </div>
+                        <strong>${event.KUNDE}</strong><br>
+                        ${event.EVENT || 'Kein Event'}<br>
+                        ${timeText}<br>
+                        Raum: ${event.TAGUNGSRAUM} ${event.RAUMHINWEIS ? `(${event.RAUMHINWEIS})` : ''} ${event.TEILNEHMER > 0 ? `(${event.TEILNEHMER})` : ''}
+                        <p>${event.BEMERKUNG}</p>
                     `;
                     row.innerHTML = eventHTML;
                     eventContainer.appendChild(row);
