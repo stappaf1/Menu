@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signage - Alea</title>
+    <title>Signage - Alea Eco</title>
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -12,11 +12,11 @@
             background-color: #f8f9fa;
         }
 
+        /* Kopfzeile */
         .header {
             background-color: #d3d3d3;
             padding: 10px;
             display: flex;
-            justify-content: space-between;
             align-items: center;
         }
 
@@ -26,14 +26,17 @@
 
         .header .title {
             flex-grow: 1;
-            display: flex;
-            justify-content: center; /* Horizontale Zentrierung */
-            align-items: center; /* Vertikale Zentrierung */
-            font-size: 1.5em; /* Größere Schriftart */
+            text-align: center;
         }
 
-        .header .title h1, .header .title h2 {
-            margin: 0 5px; /* Abstände zwischen den Texten */
+        .header .title h1 {
+            font-size: 2em; /* Schriftgröße für die Begrüßung */
+            margin: 0;
+        }
+
+        .header .title p {
+            font-size: 1.5em; /* Schriftgröße für das Datum */
+            margin: 0;
         }
 
         .header .clock-icon {
@@ -41,6 +44,7 @@
             height: 50px;
         }
 
+        /* Fußzeile */
         footer {
             background-color: #d3d3d3;
             padding: 10px;
@@ -51,29 +55,17 @@
             font-size: 1em;
         }
 
+        /* Event Anzeige */
         .event-container {
             padding: 20px;
         }
 
         .event-row {
-            display: flex;
-            align-items: center;
             background-color: white;
             padding: 10px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin-bottom: 10px;
-        }
-
-        .event-row img {
-            height: 20%;
-            max-height: 80px;
-            margin-right: 15px;
-            border-radius: 4px;
-        }
-
-        .event-row div {
-            flex-grow: 1;
+            margin-bottom: 20px;
         }
 
         .event-row h2 {
@@ -86,14 +78,11 @@
             color: #666;
         }
 
+        /* Fehleranzeige */
         .error-message {
             color: red;
             text-align: center;
             margin-top: 20px;
-        }
-
-        .bold {
-            font-weight: bold;
         }
     </style>
 </head>
@@ -102,8 +91,8 @@
     <div class="header">
         <img src="https://cdn.prod.website-files.com/60d2e4a3b351ee2c91f53a1e/60f9ca16c53dae6854816379_Logo%20Alea.svg" alt="Alea Logo">
         <div class="title">
-            <h1>Willkommen bei Alea</h1>
-            <h2>am Dienstag, den 15.10.2024</h2> <!-- Datum hier -->
+            <h1>Willkommen bei Alea Eco</h1>
+            <p>Dienstag, den 15.10.2024</p>
         </div>
         <img src="Uhrensymbol.png" alt="Uhrensymbol" class="clock-icon">
     </div>
@@ -132,17 +121,15 @@
                     const row = document.createElement('div');
                     row.classList.add('event-row');
 
-                    const timeDisplay = event.BIS ? `${event.VON} bis ${event.BIS}` : `ab ${event.VON}`;
-                    const eventImage = `<img src="https://stappaf1.github.io/Menu/${event.BILD}" alt="${event.TAGUNGSRAUM} Bild">`;
+                    const timeText = event.BIS ? `${event.VON} bis ${event.BIS}` : `ab ${event.VON}`;
                     const eventHTML = `
-                        <div>
-                            <p class="bold">${event.KUNDE}</p>
-                            <p>${event.EVENT || 'Kein Event'}</p>
-                            <p>${timeDisplay}</p>
-                            <p>Tagungsraum: ${event.TAGUNGSRAUM}</p>
-                        </div>
+                        <strong>${event.KUNDE}</strong><br>
+                        <p>${event.EVENT || 'Kein Event'}</p>
+                        <p>${timeText}</p>
+                        <p>Tagungsraum: ${event.TAGUNGSRAUM}</p>
+                        <img src="${event.TAGUNGSRAUM}.jpeg" alt="${event.TAGUNGSRAUM}" style="height: 20%; max-height: 100px;"/>
                     `;
-                    row.innerHTML = eventImage + eventHTML;
+                    row.innerHTML = eventHTML;
                     eventContainer.appendChild(row);
                 });
             })
