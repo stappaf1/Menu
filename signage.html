@@ -95,7 +95,7 @@
     <div class="header">
         <img src="https://cdn.prod.website-files.com/60d2e4a3b351ee2c91f53a1e/60f9ca16c53dae6854816379_Logo%20Alea.svg" alt="Alea Logo">
         <div class="title">
-            <h1>Willkommen bei Alea Eco - Dienstag, den 15.10.2024</h1>
+            <h1>Willkommen bei Alea Eco - <span id="current-date"></span></h1>
         </div>
         <img src="Uhrensymbol.png" alt="Uhrensymbol" class="clock-icon">
     </div>
@@ -111,6 +111,11 @@
     <div class="error-message" id="error-message"></div>
 
     <script>
+        const today = new Date();
+        const options = { day: '2-digit', month: '2-digit', year: '2-digit' };
+        const formattedDate = today.toLocaleDateString('de-DE', options);
+        document.getElementById('current-date').textContent = formattedDate;
+
         fetch('https://stappaf1.github.io/Menu/KALENDERECO.json')
             .then(response => {
                 if (!response.ok) {
@@ -119,11 +124,10 @@
                 return response.json();
             })
             .then(data => {
-                const today = new Date().toLocaleDateString('de-DE'); // Heutiges Datum im deutschen Format
                 const eventContainer = document.getElementById('event-container');
 
                 // Filtert die Events nach dem heutigen Datum
-                const filteredEvents = data.events.filter(event => event.DATUM === today);
+                const filteredEvents = data.events.filter(event => event.DATUM === formattedDate);
 
                 // Zählt die Anzahl der darzustellenden Events
                 const eventCount = filteredEvents.length;
@@ -154,6 +158,13 @@
                     row.innerHTML = eventHTML;
                     eventContainer.appendChild(row);
                 });
+
+                // Falls keine Events gefunden werden, kann eine Meldung ausgegeben werden
+                if (eventCount === 0) {
+                    const noEventsMessage = document.createElement('div');
+                    noEventsMessage.textContent = 'Heute sind keine Veranstaltungen geplant.';
+                    eventContainer.appendChild(noEventsMessage);
+                }
             })
             .catch(error => {
                 document.getElementById('error-message').textContent = `Fehler beim Laden der JSON-Daten: ${error.message}`;
