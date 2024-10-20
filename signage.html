@@ -121,11 +121,13 @@
 
                     events.forEach(event => {
                         const roomPart = event.Raumteil || "1-3"; // Leere Teile als 1-3 interpretieren
+
+                        // Breite und Platzierung bestimmen
                         let width = 100; // Standardbreite für leere Räume
 
-                        // Breite basierend auf Raumteil festlegen
                         if (roomPart === "1-3") {
                             width = 100; // Vollständige Breite
+                            occupied[0] = occupied[1] = occupied[2] = 1; // Alle Bereiche belegen
                         } else {
                             const parts = roomPart.split('-').map(Number);
                             if (parts.length === 1) {
@@ -134,11 +136,10 @@
                             } else {
                                 const start = parts[0] - 1;
                                 const end = parts[1] - 1;
-
                                 for (let i = start; i <= end; i++) {
                                     occupied[i] = 1; // Belegung setzen
                                 }
-                                width = 66.66; // Zwei Drittel
+                                width = (end - start + 1) * 33.33; // Breite anpassen
                             }
                         }
 
