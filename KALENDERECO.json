@@ -6,7 +6,7 @@
             "BIS": "17:00",
             "EVENT": "Vertriebstagung 2024",
             "KUNDE": "HIPP",
-            "TEILNEHMER": "35",
+            "TEILNEHMER": 35,
             "TAGUNGSRAUM": "ecoCentrum (T90)",
             "RAUMHINWEIS": "1-2", 
             "BEMERKUNG" : "Pausenzeiten: Vormittag 10:00, Moittag 13:30, Nachmittag: 15:30"
