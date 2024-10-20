@@ -1,7 +1,7 @@
 {
     "events": [
         {
-            "DATUM": "19.10.24",
+            "DATUM": "15.10.24",
             "VON": "08:00",
             "BIS": "17:00",
             "EVENT": "Vertriebstagung 2024",
@@ -10,10 +10,10 @@
             "TAGUNGSRAUM": "ecoCentrum (T90)",
             "RAUMHINWEIS": "1-2", 
             "BEMERKUNG": "Pausenzeiten: Vormittag 10:00, Moittag 13:30, Nachmittag: 15:30",  
-            "BILD": "ecoForum.jpeg"
+            "BILD": "ecoCentrum.jpeg"
         },
         {
-            "DATUM": "20.10.24",
+            "DATUM": "15.10.24",
             "VON": "09:00",
             "BIS": "12:00",
             "EVENT": "Marketing Workshop",
@@ -25,7 +25,7 @@
             "BILD": "ecoForum.jpeg"
         },
         {
-            "DATUM": "20.10.24",
+            "DATUM": "15.10.24",
             "VON": "13:00",
             "BIS": "15:00",
             "EVENT": "Projektbesprechung",
@@ -37,7 +37,7 @@
             "BILD": "ecoPlenum.jpeg"
         },
         {
-            "DATUM": "20.10.24",
+            "DATUM": "15.10.24",
             "VON": "10:00",
             "BIS": "15:00",
             "EVENT": "Team-Meeting",
