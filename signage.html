@@ -84,7 +84,7 @@
     <div class="header">
         <img src="https://cdn.prod.website-files.com/60d2e4a3b351ee2c91f53a1e/60f9ca16c53dae6854816379_Logo%20Alea.svg" alt="Alea Logo">
         <div class="title">
-            <h1>Willkommen bei Alea Eco - Dienstag, den 15.10.2024</h1>
+            <h1 id="header-date">Willkommen bei Alea Eco - </h1>
         </div>
         <img src="Uhrensymbol.png" alt="Uhrensymbol" class="clock-icon">
     </div>
@@ -100,6 +100,12 @@
     <div class="error-message" id="error-message"></div>
 
     <script>
+        // Heutiges Datum für die Kopfzeile formatieren
+        const today = new Date();
+        const options = { day: '2-digit', month: '2-digit', year: 'numeric' };
+        const formattedDate = today.toLocaleDateString('de-DE', options);
+        document.getElementById('header-date').textContent += formattedDate;
+
         fetch('https://stappaf1.github.io/Menu/KALENDERECO.json')
             .then(response => {
                 if (!response.ok) {
@@ -109,11 +115,6 @@
             })
             .then(data => {
                 const eventContainer = document.getElementById('event-container');
-
-                // Holen Sie sich das heutige Datum im Format DD.MM.YY
-                const today = new Date();
-                const options = { day: '2-digit', month: '2-digit', year: '2-digit' };
-                const formattedDate = today.toLocaleDateString('de-DE', options);
 
                 // Filtere die Veranstaltungen nach dem heutigen Datum
                 const todayEvents = data.events.filter(event => event.DATUM === formattedDate);
