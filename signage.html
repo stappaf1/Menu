@@ -54,7 +54,7 @@
             flex-grow: 1; /* Füllt den verbleibenden Platz */
             display: flex;
             flex-direction: column; /* Anordnung der Veranstaltungen */
-            justify-content: flex-start; /* Anordnung von oben nach unten */
+            justify-content: space-between; /* Gleiche Verteilung der Veranstaltungen */
         }
 
         .event-row {
@@ -64,34 +64,26 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             margin-bottom: 20px;
             display: flex; /* Flexbox für die Anordnung */
-            align-items: flex-start; /* Vertikale Zentrierung */
+            align-items: center; /* Vertikale Zentrierung */
+            justify-content: space-between; /* Gleichmäßige Verteilung */
             height: calc(100% / 4); /* Höhe jeder Zeile gleichmäßig */
-            font-size: 1.2em; /* Schriftgröße für Event-Inhalt */
-        }
-
-        .event-row img {
-            height: 80px; /* Größe des Bildes */
-            margin-right: 10px; /* Abstand zwischen Bild und Text */
-        }
-
-        .event-details {
-            flex-grow: 1; /* Nimmt den verbleibenden Platz ein */
-            display: flex;
-            flex-direction: column; /* Text untereinander anordnen */
-            justify-content: flex-start; /* Anordnung von oben nach unten */
-            line-height: 1.2; /* Zeilenhöhe für besseren Abstand */
+            font-size: 1.2em; /* Anpassung der Schriftgröße */
         }
 
         .event-row h2 {
-            margin: 5px 0; /* Abstand für Titel */
+            margin: 0;
             color: #204e1a;
-            font-size: 1.2em; /* Schriftgröße für den Titel */
         }
 
         .event-row p {
-            margin: 0; /* Abstand entfernen */
+            margin: 5px 0;
             color: #666;
-            font-size: 1em; /* Schriftgröße für die Bemerkung */
+        }
+
+        .event-image {
+            height: 20%; /* Höhe des Bildes */
+            max-height: 100px; /* Maximale Höhe des Bildes */
+            margin-right: 20px; /* Abstand zwischen Bild und Text */
         }
 
         /* Fehleranzeige */
@@ -153,14 +145,11 @@
 
                     const timeText = event.BIS ? `${event.VON} bis ${event.BIS}` : `ab ${event.VON}`;
                     const eventHTML = `
-                        <img src="${event.BILD}" alt="${event.EVENT}" />
-                        <div class="event-details">
-                            <strong>${event.KUNDE}</strong>
-                            <h2>${event.EVENT || 'Kein Event'}</h2>
-                            <p>${timeText}</p>
-                            <p>Raum: ${event.TAGUNGSRAUM} ${event.RAUMHINWEIS ? `(${event.RAUMHINWEIS})` : ''} ${event.TEILNEHMER > 0 ? `(${event.TEILNEHMER})` : ''}</p>
-                            <p>${event.BEMERKUNG}</p>
-                        </div>
+                        <strong>${event.KUNDE}</strong><br>
+                        ${event.EVENT || 'Kein Event'}<br>
+                        ${timeText}<br>
+                        Raum: ${event.TAGUNGSRAUM} ${event.RAUMHINWEIS ? `(${event.RAUMHINWEIS})` : ''} ${event.TEILNEHMER > 0 ? `(${event.TEILNEHMER})` : ''}
+                        <p>${event.BEMERKUNG}</p>
                     `;
                     row.innerHTML = eventHTML;
                     eventContainer.appendChild(row);
