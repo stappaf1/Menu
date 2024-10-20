@@ -88,6 +88,11 @@
             margin: 2px 0; /* Minimierung der Abstände zwischen den Absätzen */
         }
 
+        .room-info {
+            color: darkgreen; /* Dunkelgrün für Raumangaben */
+            font-size: 2em; /* Gleiche Schriftgröße wie die Firma */
+        }
+
         /* Fehleranzeige */
         .error-message {
             color: red;
@@ -155,7 +160,7 @@
                             <strong>${event.KUNDE}</strong><br>
                             <p>${event.EVENT || ' '}</p> <!-- Leerzeichen, wenn kein Tagungsname -->
                             <p>${timeText}</p>
-                            <p>Raum: ${event.TAGUNGSRAUM} ${event.RAUMHINWEIS ? `(${event.RAUMHINWEIS})` : ''}</p>
+                            <p class="room-info">Raum: ${event.TAGUNGSRAUM} ${event.RAUMHINWEIS ? `(${event.RAUMHINWEIS})` : ''}</p>
                         </div>
                         <div class="event-remark">
                             <p>${event.BEMERKUNG ? event.BEMERKUNG : ''}</p> <!-- Nur anzeigen, wenn Bemerkung vorhanden -->
