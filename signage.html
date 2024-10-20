@@ -50,26 +50,36 @@
 
         /* Event Anzeige */
         .event-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
             padding: 20px;
         }
 
-        .event-card {
+        .event-row {
+            display: flex;
+            align-items: center;
             background-color: white;
-            padding: 20px;
+            padding: 10px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: center;
+            margin-bottom: 10px;
         }
 
-        .event-card h2 {
-            margin: 0 0 10px;
+        .event-row img {
+            width: 50px;
+            height: 50px;
+            margin-right: 15px;
+            border-radius: 4px;
+        }
+
+        .event-row div {
+            flex-grow: 1;
+        }
+
+        .event-row h2 {
+            margin: 0;
             color: #204e1a;
         }
 
-        .event-card p {
+        .event-row p {
             margin: 5px 0;
             color: #666;
         }
@@ -111,20 +121,22 @@
             .then(data => {
                 const eventContainer = document.getElementById('event-container');
                 data.events.forEach(event => {
-                    const card = document.createElement('div');
-                    card.classList.add('event-card');
+                    const row = document.createElement('div');
+                    row.classList.add('event-row');
 
-                    const endTime = event.BIS ? `<p>Bis: ${event.BIS}</p>` : '';
+                    const eventImage = `<img src="${event.BILD}" alt="${event.TAGUNGSRAUM} Bild">`;
                     const eventHTML = `
-                        <h2>${event.EVENT || 'Kein Event'}</h2>
-                        <p>Datum: ${event.DATUM}</p>
-                        <p>Von: ${event.VON}</p>
-                        ${endTime}
-                        <p>Kunde: ${event.KUNDE}</p>
-                        <p>Tagungsraum: ${event.TAGUNGSRAUM}</p>
+                        <div>
+                            <h2>${event.EVENT || 'Kein Event'}</h2>
+                            <p>Datum: ${event.DATUM}</p>
+                            <p>Von: ${event.VON}</p>
+                            ${event.BIS ? `<p>Bis: ${event.BIS}</p>` : ''}
+                            <p>Kunde: ${event.KUNDE}</p>
+                            <p>Tagungsraum: ${event.TAGUNGSRAUM}</p>
+                        </div>
                     `;
-                    card.innerHTML = eventHTML;
-                    eventContainer.appendChild(card);
+                    row.innerHTML = eventImage + eventHTML;
+                    eventContainer.appendChild(row);
                 });
             })
             .catch(error => {
