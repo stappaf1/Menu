@@ -58,26 +58,34 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             margin-bottom: 20px;
             display: flex; /* Flexbox für die Anordnung */
-            align-items: center; /* Vertikale Zentrierung */
+            align-items: flex-start; /* Oben bündig ausrichten */
         }
 
         .event-image {
             width: 100px; /* Feste Breite des Bildes */
             height: auto; /* Höhe des Bildes automatisch anpassen */
-            margin-right: 20px; /* Abstand zwischen Bild und Text */
+            margin-right: 10px; /* Abstand zwischen Bild und Text */
         }
 
         .event-details {
             flex: 1; /* Platz für die Textinhalte */
+            margin: 0; /* Minimierung der Abstände */
         }
 
         .event-remark {
             flex: 0 0 30%; /* Feste Breite für die Bemerkung */
-            padding-left: 20px; /* Abstand zur anderen Spalte */
+            padding-left: 10px; /* Abstand zur anderen Spalte */
+            margin-top: 0; /* Kein zusätzlicher Abstand */
+            display: flex;
+            align-items: flex-start; /* Oben bündig ausrichten */
         }
 
         .event-details strong {
             font-size: 2em; /* Verdoppelte Schriftgröße für die Firma */
+        }
+
+        .event-details p {
+            margin: 2px 0; /* Minimierung der Abstände zwischen den Absätzen */
         }
 
         /* Fehleranzeige */
