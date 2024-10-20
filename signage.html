@@ -117,11 +117,11 @@
                     row.classList.add('room-row');
 
                     const events = roomData[room];
-                    let occupiedWidth = 0;
+                    const occupied = [0, 0, 0]; // Speichert die Belegung der Bereiche
 
                     events.forEach(event => {
-                        let width = 100; // Standardbreite für leere Räume
                         const roomPart = event.Raumteil || "1-3"; // Leere Teile als 1-3 interpretieren
+                        let width = 100; // Standardbreite für leere Räume
 
                         // Breite basierend auf Raumteil festlegen
                         if (roomPart === "1-3") {
@@ -129,10 +129,16 @@
                         } else {
                             const parts = roomPart.split('-').map(Number);
                             if (parts.length === 1) {
-                                width = 100 / 3; // Ein Drittel
+                                occupied[parts[0] - 1] = 1; // Belegung setzen
+                                width = 33.33; // Ein Drittel
                             } else {
-                                const minPart = Math.min(parts[0], parts[1]);
-                                width = (minPart === 1) ? 33.33 : 66.66; // Je nach Teil
+                                const start = parts[0] - 1;
+                                const end = parts[1] - 1;
+
+                                for (let i = start; i <= end; i++) {
+                                    occupied[i] = 1; // Belegung setzen
+                                }
+                                width = 66.66; // Zwei Drittel
                             }
                         }
 
@@ -149,16 +155,17 @@
                             <p>Tagungsraum: ${event.TAGUNGSRAUM}</p>
                         `;
                         row.appendChild(card);
-                        occupiedWidth += width;
                     });
 
                     // Falls der gesamte Raum noch nicht 100% breit ist, leere Bereiche hinzufügen
-                    for (let i = occupiedWidth; i < 100; i += 33.33) {
-                        const emptyCard = document.createElement('div');
-                        emptyCard.classList.add('event-card');
-                        emptyCard.style.flex = '0 0 33.33%'; // Jede leere Karte ist ein Drittel
-                        emptyCard.style.width = '33.33%'; // Jede leere Karte ist ein Drittel
-                        row.appendChild(emptyCard);
+                    for (let i = 0; i < 3; i++) {
+                        if (occupied[i] === 0) {
+                            const emptyCard = document.createElement('div');
+                            emptyCard.classList.add('event-card');
+                            emptyCard.style.flex = '0 0 33.33%'; // Jede leere Karte ist ein Drittel
+                            emptyCard.style.width = '33.33%'; // Jede leere Karte ist ein Drittel
+                            row.appendChild(emptyCard);
+                        }
                     }
 
                     eventContainer.appendChild(row);
