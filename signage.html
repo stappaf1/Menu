@@ -16,7 +16,7 @@
             background-color: #d3d3d3;
             padding: 10px;
             display: flex;
-            flex-direction: column;
+            justify-content: space-between;
             align-items: center;
         }
 
@@ -24,10 +24,9 @@
             max-height: 50px;
         }
 
-        .header h1 {
-            margin: 0;
-            font-size: 2em;
+        .header .title {
             text-align: center;
+            flex-grow: 1;
         }
 
         .header .date {
@@ -99,8 +98,10 @@
 
     <div class="header">
         <img src="https://cdn.prod.website-files.com/60d2e4a3b351ee2c91f53a1e/60f9ca16c53dae6854816379_Logo%20Alea.svg" alt="Alea Logo">
-        <h1>Willkommen bei Alea</h1>
-        <p class="date">am Dienstag, den 15.10.2024</p>
+        <div class="title">
+            <h1>Willkommen bei Alea</h1>
+            <p class="date">am Dienstag, den 15.10.2024</p>
+        </div>
         <img src="Uhrensymbol.png" alt="Uhrensymbol" class="clock-icon">
     </div>
 
@@ -128,10 +129,7 @@
                     const row = document.createElement('div');
                     row.classList.add('event-row');
 
-                    // Formatierung für Zeiten
                     const timeDisplay = event.BIS ? `${event.VON} bis ${event.BIS}` : `ab ${event.VON}`;
-                    
-                    // Bildpfad aktualisieren
                     const eventImage = `<img src="https://stappaf1.github.io/Menu/${event.BILD}" alt="${event.TAGUNGSRAUM} Bild">`;
                     const eventHTML = `
                         <div>
