@@ -6,7 +6,8 @@
             "BIS": "17:00",
             "EVENT": "Vertriebstagung 2024",
             "KUNDE": "HIPP",
-            "TAGUNGSRAUM": "ecoCentrum"
+            "TAGUNGSRAUM": "ecoCentrum",
+            "BILD": "ecoCentrum.jpg"
         },
         {
             "DATUM": "15.10.24",
@@ -14,7 +15,8 @@
             "BIS": "12:00",
             "EVENT": "Marketing Workshop",
             "KUNDE": "BMW",
-            "TAGUNGSRAUM": "ecoForum"
+            "TAGUNGSRAUM": "ecoForum",
+            "BILD": "ecoForum.jpg"
         },
         {
             "DATUM": "15.10.24",
@@ -22,14 +24,16 @@
             "BIS": "15:00",
             "EVENT": "Projektbesprechung",
             "KUNDE": "Siemens",
-            "TAGUNGSRAUM": "ecoPlenum"
+            "TAGUNGSRAUM": "ecoPlenum",
+            "BILD": "ecoPlenum.jpg"
         },
         {
             "DATUM": "15.10.24",
             "VON": "10:00",
             "EVENT": "Team-Meeting",
             "KUNDE": "Bosch",
-            "TAGUNGSRAUM": "ecoRefugium"
+            "TAGUNGSRAUM": "ecoRefugium",
+            "BILD": "ecoRefugium.jpg"
         }
     ]
 }
