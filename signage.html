@@ -61,20 +61,14 @@
             align-items: center; /* Vertikale Zentrierung */
         }
 
-        .event-row h2 {
-            margin: 0;
-            color: #204e1a;
-        }
-
-        .event-row p {
-            margin: 5px 0;
-            color: #666;
-        }
-
         .event-image {
-            height: 20%; /* Höhe des Bildes */
-            max-height: 100px; /* Maximale Höhe des Bildes */
+            width: 100px; /* Feste Breite des Bildes */
+            height: auto; /* Höhe des Bildes automatisch anpassen */
             margin-right: 20px; /* Abstand zwischen Bild und Text */
+        }
+
+        .event-row div {
+            flex: 1; /* Platz für die Textinhalte */
         }
 
         /* Fehleranzeige */
@@ -115,18 +109,34 @@
             })
             .then(data => {
                 const eventContainer = document.getElementById('event-container');
-                data.events.forEach(event => {
+
+                // Holen Sie sich das heutige Datum im Format DD.MM.YY
+                const today = new Date();
+                const options = { day: '2-digit', month: '2-digit', year: '2-digit' };
+                const formattedDate = today.toLocaleDateString('de-DE', options);
+
+                // Filtere die Veranstaltungen nach dem heutigen Datum
+                const todayEvents = data.events.filter(event => event.DATUM === formattedDate);
+
+                // Prüfen, ob es Veranstaltungen gibt
+                if (todayEvents.length === 0) {
+                    document.getElementById('error-message').textContent = 'Heute sind keine Veranstaltungen geplant.';
+                    return;
+                }
+
+                todayEvents.forEach(event => {
                     const row = document.createElement('div');
                     row.classList.add('event-row');
 
                     const timeText = event.BIS ? `${event.VON} bis ${event.BIS}` : `ab ${event.VON}`;
                     const eventHTML = `
-                        <img src="${event.TAGUNGSRAUM}.jpeg" alt="${event.TAGUNGSRAUM}" class="event-image"/>
+                        <img src="${event.BILD}" alt="${event.TAGUNGSRAUM}" class="event-image"/>
                         <div>
                             <strong>${event.KUNDE}</strong><br>
                             <p>${event.EVENT || 'Kein Event'}</p>
                             <p>${timeText}</p>
-                            <p>Tagungsraum: ${event.TAGUNGSRAUM}</p>
+                            <p>Tagungsraum: ${event.TAGUNGSRAUM} ${event.RAUMHINWEIS ? `(${event.RAUMHINWEIS})` : ''}</p>
+                            <p>${event.BEMERKUNG || 'Keine Bemerkungen vorhanden.'}</p>
                         </div>
                     `;
                     row.innerHTML = eventHTML;
