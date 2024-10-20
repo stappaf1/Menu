@@ -52,33 +52,26 @@
         }
 
         .event-row {
-            background-color: white;
-            padding: 10px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
             display: flex; /* Flexbox für die Anordnung */
             align-items: center; /* Vertikale Zentrierung */
-        }
-
-        .event-image {
-            height: 20%; /* Höhe des Bildes */
-            max-height: 100px; /* Maximale Höhe des Bildes */
-            margin-right: 20px; /* Abstand zwischen Bild und Text */
+            margin-bottom: 20px;
         }
 
         .event-part {
-            flex: 1; /* Standardflex für alle drei Teile */
             padding: 5px;
             box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
-            margin-right: 10px; /* Abstand zwischen den Teilen */
             display: flex;
             justify-content: center;
             align-items: center;
             background-color: #f8f9fa; /* Hintergrundfarbe für leere Teile */
         }
 
-        /* Fehleranzeige */
+        .event-image {
+            height: 20%; /* Höhe des Bildes */
+            max-height: 100px; /* Maximale Höhe des Bildes */
+            margin-right: 10px; /* Abstand zwischen Bild und Text */
+        }
+
         .error-message {
             color: red;
             text-align: center;
@@ -120,29 +113,29 @@
                     const row = document.createElement('div');
                     row.classList.add('event-row');
 
-                    const timeText = event.BIS ? `${event.VON} bis ${event.BIS}` : `ab ${event.VON}`;
-                    const eventHTML = `
-                        <div class="event-part">
-                            <img src="${event.TAGUNGSRAUM}.jpeg" alt="${event.TAGUNGSRAUM}" class="event-image"/>
-                            <div>
-                                <strong>${event.KUNDE}</strong><br>
-                                <p>${event.EVENT || 'Kein Event'}</p>
-                                <p>${timeText}</p>
-                                <p>Tagungsraum: ${event.TAGUNGSRAUM}</p>
-                            </div>
-                        </div>
-                    `;
-                    row.innerHTML = eventHTML;
-
-                    // Den Raumteil abfragen und anpassen
+                    // Bestimmen der Flex-Werte basierend auf "Raumteil"
                     const parts = event.Raumteil ? event.Raumteil.split('-') : [];
-                    const flexValues = parts.map(part => getFlexValue(part));
+                    const flexValues = parts.length > 0 ? parts.map(part => getFlexValue(part)) : ['1']; // Standard: 1
 
-                    // Setze Flex-Werte auf die Teile
-                    for (let i = 0; i < flexValues.length; i++) {
-                        if (row.children[i]) {
-                            row.children[i].style.flex = flexValues[i]; // Setze den Flex-Wert
+                    // Fügen Sie die event-parts hinzu, basierend auf den Flex-Werten
+                    for (let i = 0; i < 3; i++) {
+                        const part = document.createElement('div');
+                        part.classList.add('event-part');
+                        part.style.flex = flexValues[i] || '0'; // Setze den Flex-Wert auf 0 für nicht verwendete Teile
+
+                        if (flexValues[i] !== '0') {
+                            const timeText = event.BIS ? `${event.VON} bis ${event.BIS}` : `ab ${event.VON}`;
+                            part.innerHTML = `
+                                <img src="${event.TAGUNGSRAUM}.jpeg" alt="${event.TAGUNGSRAUM}" class="event-image"/>
+                                <div>
+                                    <strong>${event.KUNDE}</strong><br>
+                                    <p>${event.EVENT || 'Kein Event'}</p>
+                                    <p>${timeText}</p>
+                                    <p>Tagungsraum: ${event.TAGUNGSRAUM}</p>
+                                </div>
+                            `;
                         }
+                        row.appendChild(part);
                     }
 
                     eventContainer.appendChild(row);
