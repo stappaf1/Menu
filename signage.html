@@ -27,7 +27,7 @@
         .header .title {
             flex-grow: 1;
             text-align: center;
-            font-size: 1.5em; /* Schriftgröße für die Begrüßung und das Datum */
+            font-size: 1.5em;
         }
 
         .header .clock-icon {
@@ -57,8 +57,7 @@
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             margin-bottom: 20px;
-            display: flex; /* Flexbox für die Anordnung */
-            align-items: center; /* Vertikale Zentrierung */
+            display: flex;
         }
 
         .event-row h2 {
@@ -72,9 +71,9 @@
         }
 
         .event-image {
-            height: 20%; /* Höhe des Bildes */
-            max-height: 100px; /* Maximale Höhe des Bildes */
-            margin-right: 20px; /* Abstand zwischen Bild und Text */
+            height: 20%;
+            max-height: 100px;
+            margin-right: 20px;
         }
 
         /* Fehleranzeige */
@@ -82,6 +81,15 @@
             color: red;
             text-align: center;
             margin-top: 20px;
+        }
+
+        .full {
+            flex: 1 1 100%; /* Vollständig breite */
+        }
+
+        .third {
+            flex: 1 1 33%; /* Drittel */
+            min-width: 0; /* Verhindert Überlauf */
         }
     </style>
 </head>
@@ -115,23 +123,307 @@
             })
             .then(data => {
                 const eventContainer = document.getElementById('event-container');
-                data.events.forEach(event => {
-                    const row = document.createElement('div');
-                    row.classList.add('event-row');
+                const roomData = {}; // Raum- und Ereignisdaten speichern
 
-                    const timeText = event.BIS ? `${event.VON} bis ${event.BIS}` : `ab ${event.VON}`;
-                    const eventHTML = `
-                        <img src="${event.TAGUNGSRAUM}.jpeg" alt="${event.TAGUNGSRAUM}" class="event-image"/>
-                        <div>
-                            <strong>${event.KUNDE}</strong><br>
-                            <p>${event.EVENT || 'Kein Event'}</p>
-                            <p>${timeText}</p>
-                            <p>Tagungsraum: ${event.TAGUNGSRAUM}</p>
-                        </div>
-                    `;
-                    row.innerHTML = eventHTML;
-                    eventContainer.appendChild(row);
+                data.events.forEach(event => {
+                    const { TAGUNGSRAUM, Raumteil } = event;
+
+                    // Initialisiere das Raum-Array, falls es nicht existiert
+                    if (!roomData[TAGUNGSRAUM]) {
+                        roomData[TAGUNGSRAUM] = {
+                            "1-2": null,
+                            "2-3": null,
+                            "full": null,
+                            "1": null,
+                            "2": null,
+                            "3": null,
+                        };
+                    }
+
+                    // Logik für die Raumteile
+                    if (Raumteil === "1-3") {
+                        roomData[TAGUNGSRAUM].full = event; // Full width event
+                    } else if (Raumteil === "1-2" && !roomData[TAGUNGSRAUM]["1-2"]) {
+                        roomData[TAGUNGSRAUM]["1-2"] = event; // Store as 1-2 event
+                    } else if (Raumteil === "2-3" && !roomData[TAGUNGSRAUM]["2-3"]) {
+                        roomData[TAGUNGSRAUM]["2-3"] = event; // Store as 2-3 event
+                    } else if (Raumteil === "1" && !roomData[TAGUNGSRAUM]["1"]) {
+                        roomData[TAGUNGSRAUM]["1"] = event; // Store as 1 event
+                    } else if (Raumteil === "2" && !roomData[TAGUNGSRAUM]["2"]) {
+                        roomData[TAGUNGSRAUM]["2"] = event; // Store as 2 event
+                    } else if (Raumteil === "3" && !roomData[TAGUNGSRAUM]["3"]) {
+                        roomData[TAGUNGSRAUM]["3"] = event; // Store as 3 event
+                    }
                 });
+
+                // Jetzt die Daten in den Raum-Container einfügen
+                for (const [room, events] of Object.entries(roomData)) {
+                    const roomRow = document.createElement('div');
+                    roomRow.classList.add('event-row');
+
+                    // Full width event
+                    if (events.full) {
+                        const fullEvent = document.createElement('div');
+                        fullEvent.classList.add('full');
+                        fullEvent.innerHTML = `
+                            <img src="${events.full.TAGUNGSRAUM}.jpeg" alt="${events.full.TAGUNGSRAUM}" class="event-image"/>
+                            <div>
+                                <strong>${events.full.KUNDE}</strong><br>
+                                <p>${events.full.EVENT || 'Kein Event'}</p>
+                                <p>${events.full.VON} bis ${events.full.BIS || ''}</p>
+                                <p>Tagungsraum: ${events.full.TAGUNGSRAUM}</p>
+                            </div>
+                        `;
+                        roomRow.appendChild(fullEvent);
+                    } else {
+                        // Handle 1-2 events
+                        if (events["1-2"]) {
+                            const combinedEvent = document.createElement('div');
+                            combinedEvent.classList.add('full');
+                            combinedEvent.innerHTML = `
+                                <img src="${events["1-2"].TAGUNGSRAUM}.jpeg" alt="${events["1-2"].TAGUNGSRAUM}" class="event-image"/>
+                                <div>
+                                    <strong>${events["1-2"].KUNDE}</strong><br>
+                                    <p>${events["1-2"].EVENT || 'Kein Event'}</p>
+                                    <p>${events["1-2"].VON} bis ${events["1-2"].BIS || ''}</p>
+                                    <p>Tagungsraum: ${events["1-2"].TAGUNGSRAUM}</p>
+                                </div>
+                            `;
+                            roomRow.appendChild(combinedEvent);
+                        }
+
+                        // Handle 2-3 events
+                        if (events["2-3"]) {
+                            const combinedEvent = document.createElement('div');
+                            combinedEvent.classList.add('full');
+                            combinedEvent.innerHTML = `
+                                <img src="${events["2-3"].TAGUNGSRAUM}.jpeg" alt="${events["2-3"].TAGUNGSRAUM}" class="event-image"/>
+                                <div>
+                                    <strong>${events["2-3"].KUNDE}</strong><br>
+                                    <p>${events["2-3"].EVENT || 'Kein Event'}</p>
+                                    <p>${events["2-3"].VON} bis ${events["2-3"].BIS || ''}</p>
+                                    <p>Tagungsraum: ${events["2-3"].TAGUNGSRAUM}</p>
+                                </div>
+                            `;
+                            roomRow.appendChild(combinedEvent);
+                        }
+
+                        // Handle single events
+                        for (let i = 1; i <= 3; i++) {
+                            if (events[i]) {
+                                const singleEvent = document.createHier ist die überarbeitete HTML-Version mit den angepassten Regeln, die die Darstellung der JSON-Daten korrekt umsetzen sollte. 
+
+### Überarbeitete HTML und JavaScript
+
+```html
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signage - Alea Eco</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+
+        /* Kopfzeile */
+        .header {
+            background-color: #d3d3d3;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .header img {
+            max-height: 50px;
+        }
+
+        .header .title {
+            flex-grow: 1;
+            text-align: center;
+            font-size: 1.5em;
+        }
+
+        .header .clock-icon {
+            width: 50px;
+            height: 50px;
+        }
+
+        /* Fußzeile */
+        footer {
+            background-color: #d3d3d3;
+            padding: 10px;
+            text-align: center;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            font-size: 1em;
+        }
+
+        /* Event Anzeige */
+        .event-container {
+            padding: 20px;
+        }
+
+        .event-row {
+            background-color: white;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            display: flex;
+        }
+
+        .event-row h2 {
+            margin: 0;
+            color: #204e1a;
+        }
+
+        .event-row p {
+            margin: 5px 0;
+            color: #666;
+        }
+
+        .event-image {
+            height: 20%;
+            max-height: 100px;
+            margin-right: 20px;
+        }
+
+        /* Fehleranzeige */
+        .error-message {
+            color: red;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .full {
+            flex: 1 1 100%; /* Vollständig breite */
+        }
+
+        .half {
+            flex: 1 1 50%; /* Hälfte */
+        }
+
+        .third {
+            flex: 1 1 33%; /* Drittel */
+            min-width: 0; /* Verhindert Überlauf */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <img src="https://cdn.prod.website-files.com/60d2e4a3b351ee2c91f53a1e/60f9ca16c53dae6854816379_Logo%20Alea.svg" alt="Alea Logo">
+        <div class="title">
+            <h1>Willkommen bei Alea Eco - Dienstag, den 15.10.2024</h1>
+        </div>
+        <img src="Uhrensymbol.png" alt="Uhrensymbol" class="clock-icon">
+    </div>
+
+    <div class="event-container" id="event-container">
+        <!-- Event-Daten werden hier dynamisch hinzugefügt -->
+    </div>
+
+    <footer>
+        © 2024 Hotel Alea GmbH - Alle Rechte vorbehalten.
+    </footer>
+
+    <div class="error-message" id="error-message"></div>
+
+    <script>
+        fetch('https://stappaf1.github.io/Menu/KALENDERECO.json')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Netzwerkantwort war nicht ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                const eventContainer = document.getElementById('event-container');
+                const roomData = {}; // Raum- und Ereignisdaten speichern
+
+                data.events.forEach(event => {
+                    const { TAGUNGSRAUM, Raumteil } = event;
+
+                    // Initialisiere das Raum-Array, falls es nicht existiert
+                    if (!roomData[TAGUNGSRAUM]) {
+                        roomData[TAGUNGSRAUM] = {
+                            "1-2": null,
+                            "2-3": null,
+                            "full": null,
+                        };
+                    }
+
+                    // Logik für die Raumteile
+                    if (Raumteil === "1-3") {
+                        roomData[TAGUNGSRAUM].full = event; // Full width event
+                    } else if (Raumteil === "1-2" && !roomData[TAGUNGSRAUM]["1-2"]) {
+                        roomData[TAGUNGSRAUM]["1-2"] = event; // Store as 1-2 event
+                    } else if (Raumteil === "2-3" && !roomData[TAGUNGSRAUM]["2-3"]) {
+                        roomData[TAGUNGSRAUM]["2-3"] = event; // Store as 2-3 event
+                    }
+                });
+
+                // Jetzt die Daten in den Raum-Container einfügen
+                for (const [room, events] of Object.entries(roomData)) {
+                    const roomRow = document.createElement('div');
+                    roomRow.classList.add('event-row');
+
+                    // Full width event
+                    if (events.full) {
+                        const fullEvent = document.createElement('div');
+                        fullEvent.classList.add('full');
+                        fullEvent.innerHTML = `
+                            <img src="${events.full.TAGUNGSRAUM}.jpeg" alt="${events.full.TAGUNGSRAUM}" class="event-image"/>
+                            <div>
+                                <strong>${events.full.KUNDE}</strong><br>
+                                <p>${events.full.EVENT || 'Kein Event'}</p>
+                                <p>${events.full.VON} bis ${events.full.BIS || ''}</p>
+                                <p>Tagungsraum: ${events.full.TAGUNGSRAUM}</p>
+                            </div>
+                        `;
+                        roomRow.appendChild(fullEvent);
+                    }
+
+                    // Handle 1-2 events
+                    if (events["1-2"]) {
+                        const combinedEvent = document.createElement('div');
+                        combinedEvent.classList.add('full');
+                        combinedEvent.innerHTML = `
+                            <img src="${events["1-2"].TAGUNGSRAUM}.jpeg" alt="${events["1-2"].TAGUNGSRAUM}" class="event-image"/>
+                            <div>
+                                <strong>${events["1-2"].KUNDE}</strong><br>
+                                <p>${events["1-2"].EVENT || 'Kein Event'}</p>
+                                <p>${events["1-2"].VON} bis ${events["1-2"].BIS || ''}</p>
+                                <p>Tagungsraum: ${events["1-2"].TAGUNGSRAUM}</p>
+                            </div>
+                        `;
+                        roomRow.appendChild(combinedEvent);
+                    }
+
+                    // Handle 2-3 events
+                    if (events["2-3"]) {
+                        const combinedEvent = document.createElement('div');
+                        combinedEvent.classList.add('full');
+                        combinedEvent.innerHTML = `
+                            <img src="${events["2-3"].TAGUNGSRAUM}.jpeg" alt="${events["2-3"].TAGUNGSRAUM}" class="event-image"/>
+                            <div>
+                                <strong>${events["2-3"].KUNDE}</strong><br>
+                                <p>${events["2-3"].EVENT || 'Kein Event'}</p>
+                                <p>${events["2-3"].VON} bis ${events["2-3"].BIS || ''}</p>
+                                <p>Tagungsraum: ${events["2-3"].TAGUNGSRAUM}</p>
+                            </div>
+                        `;
+                        roomRow.appendChild(combinedEvent);
+                    }
+
+                    eventContainer.appendChild(roomRow);
+                }
             })
             .catch(error => {
                 document.getElementById('error-message').textContent = `Fehler beim Laden der JSON-Daten: ${error.message}`;
