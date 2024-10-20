@@ -10,6 +10,9 @@
             margin: 0;
             padding: 0;
             background-color: #f8f9fa;
+            display: flex;
+            flex-direction: column;
+            height: 100vh; /* Vollständige Höhe des Viewports */
         }
 
         /* Kopfzeile */
@@ -27,7 +30,7 @@
         .header .title {
             flex-grow: 1;
             text-align: center;
-            font-size: 1.5em;
+            font-size: 1.5em; /* Schriftgröße für die Begrüßung und das Datum */
         }
 
         .header .clock-icon {
@@ -40,15 +43,16 @@
             background-color: #d3d3d3;
             padding: 10px;
             text-align: center;
-            position: absolute;
-            bottom: 0;
-            width: 100%;
             font-size: 1em;
         }
 
         /* Event Anzeige */
         .event-container {
             padding: 20px;
+            flex-grow: 1; /* Container füllt den verbleibenden Platz */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Platz zwischen den Blöcken */
         }
 
         .event-row {
@@ -58,7 +62,8 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             margin-bottom: 20px;
             display: flex; /* Flexbox für die Anordnung */
-            align-items: flex-start; /* Vertikale Ausrichtung nach oben */
+            align-items: flex-start; /* Oben bündig */
+            height: calc((100% - 80px) / 4); /* Platz für 4 Zeilen */
         }
 
         .event-row h2 {
@@ -72,15 +77,9 @@
         }
 
         .event-image {
-            height: 100px; /* Maximale Höhe des Bildes */
+            height: 20%; /* Höhe des Bildes */
+            max-height: 100px; /* Maximale Höhe des Bildes */
             margin-right: 20px; /* Abstand zwischen Bild und Text */
-        }
-
-        /* Bemerkung */
-        .remark {
-            margin-left: auto; /* Schiebt die Bemerkung nach rechts */
-            margin-top: 10px; /* Abstand nach oben */
-            max-width: 300px; /* Maximale Breite für den Bemerkungsblock */
         }
 
         /* Fehleranzeige */
@@ -120,26 +119,37 @@
                 return response.json();
             })
             .then(data => {
+                const today = new Date().toLocaleDateString('de-DE'); // Heutiges Datum im deutschen Format
                 const eventContainer = document.getElementById('event-container');
-                
-                // Sortiere nach TEILNEHMER in absteigender Reihenfolge
-                const sortedEvents = data.events.sort((a, b) => b.TEILNEHMER - a.TEILNEHMER);
 
-                sortedEvents.forEach(event => {
+                // Filtert die Events nach dem heutigen Datum
+                const filteredEvents = data.events.filter(event => event.DATUM === today);
+
+                // Zählt die Anzahl der darzustellenden Events
+                const eventCount = filteredEvents.length;
+
+                // Dynamische Höhe für die Zeilen
+                const rowHeight = eventCount > 0 ? (100 / eventCount) : 0;
+
+                filteredEvents.forEach(event => {
                     const row = document.createElement('div');
                     row.classList.add('event-row');
+                    row.style.height = `calc(${rowHeight}vh - 20px)`; // Höhe der Zeile basierend auf der Anzahl
 
                     const timeText = event.BIS ? `${event.VON} bis ${event.BIS}` : `ab ${event.VON}`;
-                    const participantText = event.TEILNEHMER > 0 ? ` (${event.TEILNEHMER})` : '';
+                    const participantsText = event.TEILNEHMER > 0 ? ` (${event.TEILNEHMER})` : ''; // Teilnehmeranzeige
+
                     const eventHTML = `
                         <img src="${event.BILD}" alt="${event.TAGUNGSRAUM}" class="event-image"/>
                         <div>
                             <strong>${event.KUNDE}</strong><br>
                             <p>${event.EVENT || 'Kein Event'}</p>
                             <p>${timeText}</p>
-                            <p>Raum: ${event.TAGUNGSRAUM} ${event.RAUMHINWEIS}${participantText}</p>
+                            <p>Raum: ${event.TAGUNGSRAUM} ${event.RAUMHINWEIS}${participantsText}</p>
                         </div>
-                        <div class="remark">${event.BEMERKUNG || ''}</div>
+                        <div style="flex-grow: 1; display: flex; align-items: flex-start; padding-left: 20px;">
+                            <p>${event.BEMERKUNG}</p>
+                        </div>
                     `;
                     row.innerHTML = eventHTML;
                     eventContainer.appendChild(row);
