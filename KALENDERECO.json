@@ -6,6 +6,7 @@
             "BIS": "17:00",
             "EVENT": "Vertriebstagung 2024",
             "KUNDE": "HIPP",
+            "Teilnehmer", 35
             "TAGUNGSRAUM": "ecoCentrum (T90)",
             "Raumteil": "1-2", 
             "Bemerkung" : "Pausenzeiten: Vormittag 10:00, Moittag 13:30, Nachmittag: 15:30"
@@ -17,6 +18,7 @@
             "BIS": "12:00",
             "EVENT": "Marketing Workshop",
             "KUNDE": "BMW",
+            "Teilnehmer", 45
             "TAGUNGSRAUM": "ecoForum",
             "Raumteil": "", 
             "Bemerkung" : ""
@@ -28,6 +30,7 @@
             "BIS": "15:00",
             "EVENT": "Projektbesprechung",
             "KUNDE": "Siemens",
+            "Teilnehmer", 110
             "TAGUNGSRAUM": "ecoPlenum",
             "Raumteil": "", 
             "Bemerkung" : ""
@@ -39,6 +42,7 @@
             "BIS": "15:00",
             "EVENT": "Team-Meeting",
             "KUNDE": "Bosch",
+            "Teilnehmer", 6
             "TAGUNGSRAUM": "ecoRefugium",
             "Raumteil": "", 
             "Bemerkung" : ""
