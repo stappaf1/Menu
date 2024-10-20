@@ -53,7 +53,7 @@
 
         .event-row {
             background-color: white;
-            padding: 10px;
+            padding: 5px; /* Verringern des Abstands */
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             margin-bottom: 20px;
@@ -74,6 +74,10 @@
         .event-remark {
             flex: 0 0 30%; /* Feste Breite für die Bemerkung */
             padding-left: 20px; /* Abstand zur anderen Spalte */
+        }
+
+        .event-details strong {
+            font-size: 2em; /* Verdoppelte Schriftgröße für die Firma */
         }
 
         /* Fehleranzeige */
@@ -141,12 +145,12 @@
                         <img src="${event.BILD}" alt="${event.TAGUNGSRAUM}" class="event-image"/>
                         <div class="event-details">
                             <strong>${event.KUNDE}</strong><br>
-                            <p>${event.EVENT || 'Kein Event'}</p>
+                            <p>${event.EVENT || ' '}</p> <!-- Leerzeichen, wenn kein Tagungsname -->
                             <p>${timeText}</p>
                             <p>Raum: ${event.TAGUNGSRAUM} ${event.RAUMHINWEIS ? `(${event.RAUMHINWEIS})` : ''}</p>
                         </div>
                         <div class="event-remark">
-                            <p>${event.BEMERKUNG || 'Keine Bemerkungen vorhanden.'}</p>
+                            <p>${event.BEMERKUNG ? event.BEMERKUNG : ''}</p> <!-- Nur anzeigen, wenn Bemerkung vorhanden -->
                         </div>
                     `;
                     row.innerHTML = eventHTML;
