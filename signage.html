@@ -109,34 +109,63 @@
             })
             .then(data => {
                 const eventContainer = document.getElementById('event-container');
+                const groupedEvents = {};
+
+                // Gruppiere die Events nach TAGUNGSRAUM
                 data.events.forEach(event => {
+                    const room = event.TAGUNGSRAUM;
+
+                    if (!groupedEvents[room]) {
+                        groupedEvents[room] = [];
+                    }
+
+                    groupedEvents[room].push(event);
+                });
+
+                // Erstelle die Event-Reihen
+                Object.keys(groupedEvents).forEach(room => {
+                    const roomEvents = groupedEvents[room];
                     const row = document.createElement('div');
                     row.classList.add('event-row');
 
-                    // Bestimmen der Flex-Werte basierend auf "Raumteil"
-                    const parts = event.Raumteil ? event.Raumteil.split('-') : [];
-                    const flexValues = parts.length > 0 ? parts.map(part => getFlexValue(part)) : ['1']; // Standard: 1
+                    // Array für die Flex-Werte für die Drittel
+                    const flexValues = [0, 0, 0];
 
-                    // Fügen Sie die event-parts hinzu, basierend auf den Flex-Werten
-                    for (let i = 0; i < 3; i++) {
-                        const part = document.createElement('div');
-                        part.classList.add('event-part');
-                        part.style.flex = flexValues[i] || '0'; // Setze den Flex-Wert auf 0 für nicht verwendete Teile
-
-                        if (flexValues[i] !== '0') {
-                            const timeText = event.BIS ? `${event.VON} bis ${event.BIS}` : `ab ${event.VON}`;
-                            part.innerHTML = `
-                                <img src="${event.TAGUNGSRAUM}.jpeg" alt="${event.TAGUNGSRAUM}" class="event-image"/>
-                                <div>
-                                    <strong>${event.KUNDE}</strong><br>
-                                    <p>${event.EVENT || 'Kein Event'}</p>
-                                    <p>${timeText}</p>
-                                    <p>Tagungsraum: ${event.TAGUNGSRAUM}</p>
-                                </div>
-                            `;
+                    roomEvents.forEach(event => {
+                        let index = 0; // Standardindex
+                        if (event.Raumteil) {
+                            const parts = event.Raumteil.split('-');
+                            parts.forEach(part => {
+                                if (part >= 1 && part <= 3) {
+                                    flexValues[part - 1] = 1; // Setze den Flex-Wert für das jeweilige Drittel
+                                }
+                            });
+                        } else {
+                            // Vollständige Breite für Raumteile, die nicht angegeben sind
+                            flexValues.fill(1);
                         }
-                        row.appendChild(part);
-                    }
+
+                        // Füge die event-parts hinzu
+                        for (let i = 0; i < 3; i++) {
+                            const part = document.createElement('div');
+                            part.classList.add('event-part');
+                            part.style.flex = flexValues[i] > 0 ? 1 : 0; // Setze den Flex-Wert auf 0 für nicht verwendete Teile
+
+                            if (flexValues[i] > 0) {
+                                const timeText = event.BIS ? `${event.VON} bis ${event.BIS}` : `ab ${event.VON}`;
+                                part.innerHTML = `
+                                    <img src="${event.TAGUNGSRAUM}.jpeg" alt="${event.TAGUNGSRAUM}" class="event-image"/>
+                                    <div>
+                                        <strong>${event.KUNDE}</strong><br>
+                                        <p>${event.EVENT || 'Kein Event'}</p>
+                                        <p>${timeText}</p>
+                                        <p>Tagungsraum: ${event.TAGUNGSRAUM}</p>
+                                    </div>
+                                `;
+                            }
+                            row.appendChild(part);
+                        }
+                    });
 
                     eventContainer.appendChild(row);
                 });
@@ -144,24 +173,6 @@
             .catch(error => {
                 document.getElementById('error-message').textContent = `Fehler beim Laden der JSON-Daten: ${error.message}`;
             });
-
-        function getFlexValue(raumteil) {
-            switch (raumteil) {
-                case '1':
-                    return '1'; // Erstes Drittel
-                case '2':
-                    return '2'; // Zweites Drittel
-                case '3':
-                    return '3'; // Drittes Drittel
-                case '1-2':
-                    return '1 1'; // Erstes und zweites Drittel
-                case '2-3':
-                    return '1 1'; // Zweites und drittes Drittel
-                case '1-3':
-                default:
-                    return '1'; // Gesamter Raum oder keine Angabe
-            }
-        }
     </script>
 
 </body>
