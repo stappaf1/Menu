@@ -1,9 +1,9 @@
 {
     "events": [
         {
-            "DATUM": "19.10.24",
+            "DATUM": "20.10.24",
             "VON": "08:00",
-            "BIS": "17:00",
+            "BIS": "",
             "EVENT": "Vertriebstagung 2024",
             "KUNDE": "HIPP",
             "TEILNEHMER": 35,
