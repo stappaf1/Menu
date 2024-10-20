@@ -25,12 +25,15 @@
         }
 
         .header .title {
-            text-align: center;
             flex-grow: 1;
+            display: flex;
+            justify-content: center; /* Horizontale Zentrierung */
+            align-items: center; /* Vertikale Zentrierung */
+            font-size: 1.5em; /* Größere Schriftart */
         }
 
-        .header .date {
-            font-size: 1.2em;
+        .header .title h1, .header .title h2 {
+            margin: 0 5px; /* Abstände zwischen den Texten */
         }
 
         .header .clock-icon {
@@ -100,7 +103,7 @@
         <img src="https://cdn.prod.website-files.com/60d2e4a3b351ee2c91f53a1e/60f9ca16c53dae6854816379_Logo%20Alea.svg" alt="Alea Logo">
         <div class="title">
             <h1>Willkommen bei Alea</h1>
-            <p class="date">am Dienstag, den 15.10.2024</p>
+            <h2>am Dienstag, den 15.10.2024</h2> <!-- Datum hier -->
         </div>
         <img src="Uhrensymbol.png" alt="Uhrensymbol" class="clock-icon">
     </div>
