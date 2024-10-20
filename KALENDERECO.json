@@ -28,6 +28,9 @@
             text-align: center;
             flex-grow: 1;
             font-size: 1.5em; /* Größere Schriftart für Titel und Datum */
+            display: flex;
+            flex-direction: column; /* Zwei Textzeilen übereinander */
+            align-items: center; /* Text mittig */
         }
 
         .header .clock-icon {
@@ -96,7 +99,8 @@
     <div class="header">
         <img src="https://cdn.prod.website-files.com/60d2e4a3b351ee2c91f53a1e/60f9ca16c53dae6854816379_Logo%20Alea.svg" alt="Alea Logo">
         <div class="title">
-            <h1>Willkommen bei Alea am Dienstag, den 15.10.2024</h1>
+            <h1>Willkommen bei Alea</h1>
+            <h2>am Dienstag, den 15.10.2024</h2> <!-- Datum hier -->
         </div>
         <img src="Uhrensymbol.png" alt="Uhrensymbol" class="clock-icon">
     </div>
