@@ -51,15 +51,11 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        .full-width {
-            flex: 1;
-        }
-
         .event-card {
             margin: 0;
             color: #204e1a;
         }
-        
+
         .error-message {
             color: red;
             text-align: center;
@@ -113,11 +109,8 @@
                     if (roomPart === "1-3") {
                         rooms[room].sections[0] = event; // Voller Bereich
                     } else if (roomPart === "1-2") {
-                        if (!rooms[room].sections[0] && !rooms[room].sections[1]) {
-                            rooms[room].sections[0] = event; // Erster Bereich
-                        } else {
-                            rooms[room].sections[1] = event; // Zweiter Bereich
-                        }
+                        rooms[room].sections[0] = event; // Erster Bereich
+                        rooms[room].sections[1] = event; // Zweiter Bereich
                     } else if (roomPart === "2-3") {
                         rooms[room].sections[1] = event; // Zweiter Bereich
                         rooms[room].sections[2] = event; // Dritter Bereich
