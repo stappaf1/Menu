@@ -54,47 +54,44 @@
             padding: 20px;
             box-sizing: border-box;
             height: calc(100vh - 150px); /* Höhe zwischen Kopf- und Fußzeile */
-            justify-content: space-around; /* Gleichmäßiger Abstand zwischen den Zeilen */
         }
 
         /* Bereichsaufteilung */
         .area {
+            display: flex;
+            flex-wrap: wrap;
             margin-bottom: 20px;
+            justify-content: flex-start; /* Ausrichtung auf der linken Seite */
+        }
+
+        .b1, .b2, .b3, .b12, .b23, .b13 {
+            padding: 10px;
+            box-sizing: border-box;
         }
 
         .b1, .b2, .b3 {
             width: 33.33%;
-            float: left;
-            padding: 10px;
-            box-sizing: border-box;
         }
 
         .b2 {
-            margin-left: 33.33%;
+            margin-left: 33.33%; /* B2 eingerückt */
         }
 
         .b3 {
-            margin-left: 66.66%;
+            margin-left: 66.66%; /* B3 eingerückt */
         }
 
         .b12 {
             width: 66.66%;
-            float: left;
-            padding: 10px;
-            box-sizing: border-box;
         }
 
         .b23 {
             width: 66.66%;
-            margin-left: 33.33%;
-            padding: 10px;
-            box-sizing: border-box;
+            margin-left: 33.33%; /* B23 eingerückt */
         }
 
         .b13 {
             width: 100%;
-            padding: 10px;
-            box-sizing: border-box;
         }
 
         .event-row {
@@ -104,7 +101,8 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             display: flex;
             align-items: center;
-            min-height: 20%; /* Mindestens 20% der Höhe für jeden Eintrag */
+            width: 100%; /* Vollständig ausfüllen */
+            margin-bottom: 10px; /* Abstand zwischen den Einträgen */
         }
 
         .event-row img {
@@ -133,17 +131,11 @@
             text-align: center;
             margin-top: 20px;
         }
-
-        .clearfix::after {
-            content: "";
-            clear: both;
-            display: table;
-        }
     </style>
 </head>
 <body>
 
-    <div class="header clearfix">
+    <div class="header">
         <img src="https://cdn.prod.website-files.com/60d2e4a3b351ee2c91f53a1e/60f9ca16c53dae6854816379_Logo%20Alea.svg" alt="Alea Logo">
         <div class="title">
             <h1>Willkommen bei Alea Eco - Dienstag, den 15.10.2024</h1>
@@ -224,10 +216,6 @@
                             break;
                     }
                 });
-
-                // Clearfix to ensure layout doesn't break due to floats
-                const container = document.querySelector('.event-container');
-                container.classList.add('clearfix');
             })
             .catch(error => {
                 document.getElementById('error-message').textContent = `Fehler beim Laden der JSON-Daten: ${error.message}`;
