@@ -17,7 +17,7 @@
             "EVENT": "Marketing Workshop",
             "KUNDE": "BMW",
             "TAGUNGSRAUM": "ecoForum",
-            "Raumteil": "", 
+            "Raumteil": "1", 
             "BILD": "ecoForum.jpeg"
         },
         {
@@ -27,7 +27,7 @@
             "EVENT": "Projektbesprechung",
             "KUNDE": "Siemens",
             "TAGUNGSRAUM": "ecoPlenum",
-            "Raumteil": "", 
+            "Raumteil": "2", 
             "BILD": "ecoPlenum.jpeg"
         },
         {
@@ -36,7 +36,7 @@
             "EVENT": "Team-Meeting",
             "KUNDE": "Bosch",
             "TAGUNGSRAUM": "ecoRefugium",
-            "Raumteil": "", 
+            "Raumteil": "2-3", 
             "BILD": "ecoRefugium.jpeg"
         }
     ]
