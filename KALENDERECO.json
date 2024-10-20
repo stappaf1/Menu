@@ -9,7 +9,7 @@
             "TEILNEHMER": 35,
             "TAGUNGSRAUM": "ecoCentrum (T90)",
             "RAUMHINWEIS": "1-2", 
-            "BEMERKUNG" : "Pausenzeiten: Vormittag 10:00, Moittag 13:30, Nachmittag: 15:30"
+            "BEMERKUNG": "Pausenzeiten: Vormittag 10:00, Moittag 13:30, Nachmittag: 15:30",  // Komma hinzugefügt
             "BILD": "ecoCentrum.jpeg"
         },
         {
@@ -21,7 +21,7 @@
             "TEILNEHMER": 45,
             "TAGUNGSRAUM": "ecoForum",
             "RAUMHINWEIS": "", 
-            "BEMERKUNG" : "",
+            "BEMERKUNG": "",
             "BILD": "ecoForum.jpeg"
         },
         {
@@ -33,7 +33,7 @@
             "TEILNEHMER": 110,
             "TAGUNGSRAUM": "ecoPlenum",
             "RAUMHINWEIS": "", 
-            "BEMERKUNG" : "",
+            "BEMERKUNG": "",
             "BILD": "ecoPlenum.jpeg"
         },
         {
@@ -45,7 +45,7 @@
             "TEILNEHMER": 6,
             "TAGUNGSRAUM": "ecoRefugium",
             "RAUMHINWEIS": "", 
-            "BEMERKUNG" : "",
+            "BEMERKUNG": "",
             "BILD": "ecoRefugium.jpeg"
         }
     ]
