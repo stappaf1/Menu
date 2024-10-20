@@ -65,25 +65,32 @@
             margin-bottom: 20px;
             display: flex; /* Flexbox für die Anordnung */
             align-items: center; /* Vertikale Zentrierung */
-            justify-content: space-between; /* Gleichmäßige Verteilung */
             height: calc(100% / 4); /* Höhe jeder Zeile gleichmäßig */
-            font-size: 1.2em; /* Anpassung der Schriftgröße */
+            font-size: 1.2em; /* Schriftgröße für Event-Inhalt */
+        }
+
+        .event-row img {
+            height: 80px; /* Größe des Bildes */
+            margin-right: 10px; /* Abstand zwischen Bild und Text */
+        }
+
+        .event-details {
+            flex-grow: 1; /* Nimmt den verbleibenden Platz ein */
+            display: flex;
+            flex-direction: column; /* Text untereinander anordnen */
+            justify-content: flex-start; /* Anordnung von oben nach unten */
         }
 
         .event-row h2 {
             margin: 0;
             color: #204e1a;
+            font-size: 1.2em; /* Schriftgröße für den Titel */
         }
 
         .event-row p {
-            margin: 5px 0;
+            margin: 0; /* Abstand entfernen */
             color: #666;
-        }
-
-        .event-image {
-            height: 20%; /* Höhe des Bildes */
-            max-height: 100px; /* Maximale Höhe des Bildes */
-            margin-right: 20px; /* Abstand zwischen Bild und Text */
+            font-size: 1em; /* Schriftgröße für die Bemerkung */
         }
 
         /* Fehleranzeige */
@@ -145,11 +152,14 @@
 
                     const timeText = event.BIS ? `${event.VON} bis ${event.BIS}` : `ab ${event.VON}`;
                     const eventHTML = `
-                        <strong>${event.KUNDE}</strong><br>
-                        ${event.EVENT || 'Kein Event'}<br>
-                        ${timeText}<br>
-                        Raum: ${event.TAGUNGSRAUM} ${event.RAUMHINWEIS ? `(${event.RAUMHINWEIS})` : ''} ${event.TEILNEHMER > 0 ? `(${event.TEILNEHMER})` : ''}
-                        <p>${event.BEMERKUNG}</p>
+                        <img src="${event.BILD}" alt="${event.EVENT}" />
+                        <div class="event-details">
+                            <strong>${event.KUNDE}</strong>
+                            <h2>${event.EVENT || 'Kein Event'}</h2>
+                            <p>${timeText}</p>
+                            <p>Raum: ${event.TAGUNGSRAUM} ${event.RAUMHINWEIS ? `(${event.RAUMHINWEIS})` : ''} ${event.TEILNEHMER > 0 ? `(${event.TEILNEHMER})` : ''}</p>
+                            <p>${event.BEMERKUNG}</p>
+                        </div>
                     `;
                     row.innerHTML = eventHTML;
                     eventContainer.appendChild(row);
