@@ -61,20 +61,21 @@
             align-items: center; /* Vertikale Zentrierung */
         }
 
-        .event-row h2 {
-            margin: 0;
-            color: #204e1a;
-        }
-
-        .event-row p {
-            margin: 5px 0;
-            color: #666;
-        }
-
         .event-image {
             height: 20%; /* Höhe des Bildes */
             max-height: 100px; /* Maximale Höhe des Bildes */
             margin-right: 20px; /* Abstand zwischen Bild und Text */
+        }
+
+        .event-part {
+            flex: 1; /* Standardflex für alle drei Teile */
+            padding: 5px;
+            box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+            margin-right: 10px; /* Abstand zwischen den Teilen */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f8f9fa; /* Hintergrundfarbe für leere Teile */
         }
 
         /* Fehleranzeige */
@@ -121,21 +122,44 @@
 
                     const timeText = event.BIS ? `${event.VON} bis ${event.BIS}` : `ab ${event.VON}`;
                     const eventHTML = `
-                        <img src="${event.TAGUNGSRAUM}.jpeg" alt="${event.TAGUNGSRAUM}" class="event-image"/>
-                        <div>
-                            <strong>${event.KUNDE}</strong><br>
-                            <p>${event.EVENT || 'Kein Event'}</p>
-                            <p>${timeText}</p>
-                            <p>Tagungsraum: ${event.TAGUNGSRAUM}</p>
+                        <div class="event-part" style="flex: ${getFlexValue(event.Raumteil, 1)};">
+                            <img src="${event.TAGUNGSRAUM}.jpeg" alt="${event.TAGUNGSRAUM}" class="event-image"/>
+                            <div>
+                                <strong>${event.KUNDE}</strong><br>
+                                <p>${event.EVENT || 'Kein Event'}</p>
+                                <p>${timeText}</p>
+                                <p>Tagungsraum: ${event.TAGUNGSRAUM}</p>
+                            </div>
                         </div>
                     `;
                     row.innerHTML = eventHTML;
+
+                    // Den Raumteil abfragen und anpassen
+                    const parts = event.Raumteil ? event.Raumteil.split('-') : [];
+                    let flexValues = parts.map(part => getFlexValue(part)).join(' ');
+
+                    // Setze Flex-Werte auf die Teile
+                    row.style.display = 'flex';
+                    row.children.forEach((child, index) => {
+                        child.style.flex = flexValues[index] || '0'; // Nur den verwendeten Raumteil anzeigen
+                    });
+
                     eventContainer.appendChild(row);
                 });
             })
             .catch(error => {
                 document.getElementById('error-message').textContent = `Fehler beim Laden der JSON-Daten: ${error.message}`;
             });
+
+        function getFlexValue(raumteil, defaultValue = 0) {
+            if (!raumteil || raumteil === "1-3") return '1'; // Gesamter Raum
+            if (raumteil === "1") return '1'; // Erstes Drittel
+            if (raumteil === "2") return '2'; // Zweites Drittel
+            if (raumteil === "3") return '3'; // Drittes Drittel
+            if (raumteil === "1-2") return '1 1'; // Erstes und zweites Drittel
+            if (raumteil === "2-3") return '1 1'; // Zweites und drittes Drittel
+            return defaultValue; // Standardwert
+        }
     </script>
 
 </body>
