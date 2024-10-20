@@ -1,0 +1,35 @@
+{
+    "events": [
+        {
+            "DATUM": "15.10.24",
+            "VON": "08:00",
+            "BIS": "17:00",
+            "EVENT": "Vertriebstagung 2024",
+            "KUNDE": "HIPP",
+            "TAGUNGSRAUM": "ecoCentrum"
+        },
+        {
+            "DATUM": "15.10.24",
+            "VON": "09:00",
+            "BIS": "12:00",
+            "EVENT": "Marketing Workshop",
+            "KUNDE": "BMW",
+            "TAGUNGSRAUM": "ecoForum"
+        },
+        {
+            "DATUM": "15.10.24",
+            "VON": "13:00",
+            "BIS": "15:00",
+            "EVENT": "Projektbesprechung",
+            "KUNDE": "Siemens",
+            "TAGUNGSRAUM": "ecoPlenum"
+        },
+        {
+            "DATUM": "15.10.24",
+            "VON": "10:00",
+            "EVENT": "Team-Meeting",
+            "KUNDE": "Bosch",
+            "TAGUNGSRAUM": "ecoRefugium"
+        }
+    ]
+}
