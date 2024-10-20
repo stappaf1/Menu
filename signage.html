@@ -10,9 +10,6 @@
             margin: 0;
             padding: 0;
             background-color: #f8f9fa;
-            display: flex;
-            flex-direction: column;
-            height: 100vh; /* Vollständige Höhe */
         }
 
         /* Kopfzeile */
@@ -43,7 +40,8 @@
             background-color: #d3d3d3;
             padding: 10px;
             text-align: center;
-            position: relative; /* relative position */
+            position: absolute;
+            bottom: 0;
             width: 100%;
             font-size: 1em;
         }
@@ -51,10 +49,6 @@
         /* Event Anzeige */
         .event-container {
             padding: 20px;
-            flex-grow: 1; /* Füllt den verbleibenden Platz */
-            display: flex;
-            flex-direction: column; /* Anordnung der Veranstaltungen */
-            justify-content: space-between; /* Gleiche Verteilung der Veranstaltungen */
         }
 
         .event-row {
@@ -65,9 +59,6 @@
             margin-bottom: 20px;
             display: flex; /* Flexbox für die Anordnung */
             align-items: center; /* Vertikale Zentrierung */
-            justify-content: space-between; /* Gleichmäßige Verteilung */
-            height: calc(100% / 4); /* Höhe jeder Zeile gleichmäßig */
-            font-size: 1.2em; /* Anpassung der Schriftgröße */
         }
 
         .event-row h2 {
@@ -99,7 +90,7 @@
     <div class="header">
         <img src="https://cdn.prod.website-files.com/60d2e4a3b351ee2c91f53a1e/60f9ca16c53dae6854816379_Logo%20Alea.svg" alt="Alea Logo">
         <div class="title">
-            <h1>Willkommen bei Alea Eco - Dienstag, den 20.10.2024</h1>
+            <h1>Willkommen bei Alea Eco - Dienstag, den 15.10.2024</h1>
         </div>
         <img src="Uhrensymbol.png" alt="Uhrensymbol" class="clock-icon">
     </div>
@@ -124,32 +115,19 @@
             })
             .then(data => {
                 const eventContainer = document.getElementById('event-container');
-                const today = new Date();
-                const options = { day: '2-digit', month: '2-digit', year: '2-digit' };
-                const formattedDate = today.toLocaleDateString('de-DE', options);
-                
-                const todayEvents = data.events.filter(event => event.DATUM === formattedDate);
-                
-                if (todayEvents.length === 0) {
-                    document.getElementById('error-message').textContent = 'Heute sind keine Veranstaltungen geplant.';
-                    return;
-                }
-
-                const totalHeight = window.innerHeight - (document.querySelector('.header').offsetHeight + document.querySelector('footer').offsetHeight);
-                const rowHeight = totalHeight / todayEvents.length;
-
-                todayEvents.forEach(event => {
+                data.events.forEach(event => {
                     const row = document.createElement('div');
                     row.classList.add('event-row');
-                    row.style.height = `${rowHeight}px`;
 
                     const timeText = event.BIS ? `${event.VON} bis ${event.BIS}` : `ab ${event.VON}`;
                     const eventHTML = `
-                        <strong>${event.KUNDE}</strong><br>
-                        ${event.EVENT || 'Kein Event'}<br>
-                        ${timeText}<br>
-                        Raum: ${event.TAGUNGSRAUM} ${event.RAUMHINWEIS ? `(${event.RAUMHINWEIS})` : ''} ${event.TEILNEHMER > 0 ? `(${event.TEILNEHMER})` : ''}
-                        <p>${event.BEMERKUNG}</p>
+                        <img src="${event.TAGUNGSRAUM}.jpeg" alt="${event.TAGUNGSRAUM}" class="event-image"/>
+                        <div>
+                            <strong>${event.KUNDE}</strong><br>
+                            <p>${event.EVENT || 'Kein Event'}</p>
+                            <p>${timeText}</p>
+                            <p>Tagungsraum: ${event.TAGUNGSRAUM}</p>
+                        </div>
                     `;
                     row.innerHTML = eventHTML;
                     eventContainer.appendChild(row);
