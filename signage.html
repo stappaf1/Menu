@@ -54,7 +54,7 @@
             flex-grow: 1; /* Füllt den verbleibenden Platz */
             display: flex;
             flex-direction: column; /* Anordnung der Veranstaltungen */
-            justify-content: space-between; /* Gleiche Verteilung der Veranstaltungen */
+            justify-content: flex-start; /* Anordnung von oben nach unten */
         }
 
         .event-row {
@@ -64,7 +64,7 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             margin-bottom: 20px;
             display: flex; /* Flexbox für die Anordnung */
-            align-items: center; /* Vertikale Zentrierung */
+            align-items: flex-start; /* Vertikale Zentrierung */
             height: calc(100% / 4); /* Höhe jeder Zeile gleichmäßig */
             font-size: 1.2em; /* Schriftgröße für Event-Inhalt */
         }
@@ -79,10 +79,11 @@
             display: flex;
             flex-direction: column; /* Text untereinander anordnen */
             justify-content: flex-start; /* Anordnung von oben nach unten */
+            line-height: 1.2; /* Zeilenhöhe für besseren Abstand */
         }
 
         .event-row h2 {
-            margin: 0;
+            margin: 5px 0; /* Abstand für Titel */
             color: #204e1a;
             font-size: 1.2em; /* Schriftgröße für den Titel */
         }
