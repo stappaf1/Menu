@@ -35,17 +35,6 @@
             height: 50px;
         }
 
-        /* Fußzeile */
-        footer {
-            background-color: #d3d3d3;
-            padding: 10px;
-            text-align: center;
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            font-size: 1em;
-        }
-
         /* Event Anzeige */
         .event-container {
             padding: 20px;
@@ -64,6 +53,11 @@
             align-items: center;
             background-color: #f8f9fa; /* Hintergrundfarbe für leere Teile */
             height: 80px; /* Höhe der Event-Bereiche */
+            flex: 1; /* Flexibilität für die Breite */
+        }
+
+        .event-part.full {
+            flex: 3; /* Vollständige Breite für Events ohne Raumteil */
         }
 
         .event-image {
@@ -142,14 +136,14 @@
 
                     // Logik zur Platzierung der Events in den Bereichen
                     roomEvents.forEach(event => {
-                        let index = 0; // Standardindex
-
-                        // Bestimme den Index basierend auf Raumteil
-                        if (event.Raumteil === "" || event.Raumteil === "1-3") {
-                            // Vollständige Breite
+                        let parts = event.Raumteil === "" ? ["1", "2", "3"] : event.Raumteil.split('-');
+                        let indices = parts.map(p => parseInt(p, 10) - 1); // Umwandlung auf Index (0-basiert)
+                        
+                        if (indices.length === 3) { // 1-3, Vollbreite
                             eventParts.forEach(part => {
+                                part.part.classList.add('full'); // Vollbreite für alle
                                 part.part.innerHTML = `
-                                    <img src="${event.TAGUNGSRAUM}.jpeg" alt="${event.TAGUNGSRAUM}" class="event-image"/>
+                                    <img src="${event.BILD}" alt="${event.TAGUNGSRAUM}" class="event-image"/>
                                     <div>
                                         <strong>${event.KUNDE}</strong><br>
                                         <p>${event.EVENT || 'Kein Event'}</p>
@@ -159,13 +153,11 @@
                                 `;
                             });
                         } else {
-                            const parts = event.Raumteil.split('-');
-                            parts.forEach(part => {
-                                const partIndex = parseInt(part, 10) - 1; // Umwandlung auf Index (0-basiert)
-                                if (eventParts[partIndex]) {
-                                    eventParts[partIndex].event = event;
-                                    eventParts[partIndex].part.innerHTML = `
-                                        <img src="${event.TAGUNGSRAUM}.jpeg" alt="${event.TAGUNGSRAUM}" class="event-image"/>
+                            indices.forEach(index => {
+                                if (eventParts[index]) {
+                                    // Füge Inhalt in den jeweiligen Bereich ein
+                                    eventParts[index].part.innerHTML = `
+                                        <img src="${event.BILD}" alt="${event.TAGUNGSRAUM}" class="event-image"/>
                                         <div>
                                             <strong>${event.KUNDE}</strong><br>
                                             <p>${event.EVENT || 'Kein Event'}</p>
