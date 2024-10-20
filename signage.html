@@ -69,6 +69,8 @@
 
         .event-row div {
             flex: 1; /* Platz für die Textinhalte */
+            display: flex;
+            justify-content: space-between; /* Abstand zwischen den Spalten */
         }
 
         /* Fehleranzeige */
@@ -77,6 +79,11 @@
             text-align: center;
             margin-top: 20px;
         }
+
+        .remark-column {
+            flex: 0 0 30%; /* Feste Breite für die Bemerkung */
+            padding-left: 20px; /* Abstand zur anderen Spalte */
+        }
     </style>
 </head>
 <body>
@@ -84,7 +91,7 @@
     <div class="header">
         <img src="https://cdn.prod.website-files.com/60d2e4a3b351ee2c91f53a1e/60f9ca16c53dae6854816379_Logo%20Alea.svg" alt="Alea Logo">
         <div class="title">
-            <h1 id="date-title">Willkommen bei Alea Eco - </h1>
+            <h1 id="date-title">Willkommen bei Alea Eco  </h1>
         </div>
         <img src="Uhrensymbol.png" alt="Uhrensymbol" class="clock-icon">
     </div>
@@ -138,11 +145,15 @@
                     const eventHTML = `
                         <img src="${event.BILD}" alt="${event.TAGUNGSRAUM}" class="event-image"/>
                         <div>
-                            <strong>${event.KUNDE}</strong><br>
-                            <p>${event.EVENT || 'Kein Event'}</p>
-                            <p>${timeText}</p>
-                            <p>Tagungsraum: ${event.TAGUNGSRAUM} ${event.RAUMHINWEIS ? `(${event.RAUMHINWEIS})` : ''}</p>
-                            <p>${event.BEMERKUNG || 'Keine Bemerkungen vorhanden.'}</p>
+                            <div>
+                                <strong>${event.KUNDE}</strong><br>
+                                <p>${event.EVENT || 'Kein Event'}</p>
+                                <p>${timeText}</p>
+                                <p>Raum: ${event.TAGUNGSRAUM} ${event.RAUMHINWEIS ? `(${event.RAUMHINWEIS})` : ''}</p>
+                            </div>
+                            <div class="remark-column">
+                                <p>${event.BEMERKUNG || 'Keine Bemerkungen vorhanden.'}</p>
+                            </div>
                         </div>
                     `;
                     row.innerHTML = eventHTML;
