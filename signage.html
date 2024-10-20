@@ -1,175 +1,54 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signage - Alea Eco</title>
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f8f9fa;
-            display: flex;
-            flex-direction: column;
-            height: 100vh; /* Vollständige Höhe des Viewports */
+fetch('https://stappaf1.github.io/Menu/KALENDERECO.json')
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Netzwerkantwort war nicht ok');
         }
-
-        /* Kopfzeile */
-        .header {
-            background-color: #d3d3d3;
-            padding: 10px;
-            display: flex;
-            align-items: center;
-        }
-
-        .header img {
-            max-height: 50px;
-        }
-
-        .header .title {
-            flex-grow: 1;
-            text-align: center;
-            font-size: 1.5em; /* Schriftgröße für die Begrüßung und das Datum */
-        }
-
-        .header .clock-icon {
-            width: 50px;
-            height: 50px;
-        }
-
-        /* Fußzeile */
-        footer {
-            background-color: #d3d3d3;
-            padding: 10px;
-            text-align: center;
-            font-size: 1em;
-        }
-
-        /* Event Anzeige */
-        .event-container {
-            padding: 20px;
-            flex-grow: 1; /* Container füllt den verbleibenden Platz */
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between; /* Platz zwischen den Blöcken */
-        }
-
-        .event-row {
-            background-color: white;
-            padding: 10px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-            display: flex; /* Flexbox für die Anordnung */
-            align-items: flex-start; /* Oben bündig */
-            height: calc((100% - 80px) / 4); /* Platz für 4 Zeilen */
-        }
-
-        .event-row h2 {
-            margin: 0;
-            color: #204e1a;
-        }
-
-        .event-row p {
-            margin: 5px 0;
-            color: #666;
-        }
-
-        .event-image {
-            height: 20%; /* Höhe des Bildes */
-            max-height: 100px; /* Maximale Höhe des Bildes */
-            margin-right: 20px; /* Abstand zwischen Bild und Text */
-        }
-
-        /* Fehleranzeige */
-        .error-message {
-            color: red;
-            text-align: center;
-            margin-top: 20px;
-        }
-    </style>
-</head>
-<body>
-
-    <div class="header">
-        <img src="https://cdn.prod.website-files.com/60d2e4a3b351ee2c91f53a1e/60f9ca16c53dae6854816379_Logo%20Alea.svg" alt="Alea Logo">
-        <div class="title">
-            <h1>Willkommen bei Alea Eco - <span id="current-date"></span></h1>
-        </div>
-        <img src="Uhrensymbol.png" alt="Uhrensymbol" class="clock-icon">
-    </div>
-
-    <div class="event-container" id="event-container">
-        <!-- Event-Daten werden hier dynamisch hinzugefügt -->
-    </div>
-
-    <footer>
-        © 2024 Hotel Alea GmbH - Alle Rechte vorbehalten.
-    </footer>
-
-    <div class="error-message" id="error-message"></div>
-
-    <script>
+        return response.json();
+    })
+    .then(data => {
+        const eventContainer = document.getElementById('event-container');
+        
+        // Holen Sie sich das heutige Datum im Format DD.MM.YY
         const today = new Date();
         const options = { day: '2-digit', month: '2-digit', year: '2-digit' };
         const formattedDate = today.toLocaleDateString('de-DE', options);
-        document.getElementById('current-date').textContent = formattedDate;
+        
+        // Filtere die Veranstaltungen nach dem heutigen Datum
+        const todayEvents = data.events.filter(event => event.DATUM === formattedDate);
+        
+        // Prüfen, ob es Veranstaltungen gibt
+        if (todayEvents.length === 0) {
+            document.getElementById('error-message').textContent = 'Heute sind keine Veranstaltungen geplant.';
+            return;
+        }
 
-        fetch('https://stappaf1.github.io/Menu/KALENDERECO.json')
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Netzwerkantwort war nicht ok');
-                }
-                return response.json();
-            })
-            .then(data => {
-                const eventContainer = document.getElementById('event-container');
+        // Berechnen Sie die Höhe der Zeilen
+        const totalHeight = window.innerHeight - (document.querySelector('.header').offsetHeight + document.querySelector('footer').offsetHeight);
+        const rowHeight = totalHeight / todayEvents.length; // Höhe jeder Zeile
 
-                // Filtert die Events nach dem heutigen Datum
-                const filteredEvents = data.events.filter(event => event.DATUM === formattedDate);
+        todayEvents.forEach(event => {
+            const row = document.createElement('div');
+            row.classList.add('event-row');
+            row.style.height = `${rowHeight}px`; // Setze die Höhe
 
-                // Zählt die Anzahl der darzustellenden Events
-                const eventCount = filteredEvents.length;
-
-                // Dynamische Höhe für die Zeilen
-                const rowHeight = eventCount > 0 ? (100 / eventCount) : 0;
-
-                filteredEvents.forEach(event => {
-                    const row = document.createElement('div');
-                    row.classList.add('event-row');
-                    row.style.height = `calc(${rowHeight}vh - 20px)`; // Höhe der Zeile basierend auf der Anzahl
-
-                    const timeText = event.BIS ? `${event.VON} bis ${event.BIS}` : `ab ${event.VON}`;
-                    const participantsText = event.TEILNEHMER > 0 ? ` (${event.TEILNEHMER})` : ''; // Teilnehmeranzeige
-
-                    const eventHTML = `
-                        <img src="${event.BILD}" alt="${event.TAGUNGSRAUM}" class="event-image"/>
-                        <div>
-                            <strong>${event.KUNDE}</strong><br>
-                            <p>${event.EVENT || 'Kein Event'}</p>
-                            <p>${timeText}</p>
-                            <p>Raum: ${event.TAGUNGSRAUM} ${event.RAUMHINWEIS}${participantsText}</p>
-                        </div>
-                        <div style="flex-grow: 1; display: flex; align-items: flex-start; padding-left: 20px;">
-                            <p>${event.BEMERKUNG}</p>
-                        </div>
-                    `;
-                    row.innerHTML = eventHTML;
-                    eventContainer.appendChild(row);
-                });
-
-                // Falls keine Events gefunden werden, kann eine Meldung ausgegeben werden
-                if (eventCount === 0) {
-                    const noEventsMessage = document.createElement('div');
-                    noEventsMessage.textContent = 'Heute sind keine Veranstaltungen geplant.';
-                    eventContainer.appendChild(noEventsMessage);
-                }
-            })
-            .catch(error => {
-                document.getElementById('error-message').textContent = `Fehler beim Laden der JSON-Daten: ${error.message}`;
-            });
-    </script>
-
-</body>
-</html>
+            // Erstellen Sie die HTML-Struktur für das Event
+            const timeText = event.BIS ? `${event.VON} bis ${event.BIS}` : `ab ${event.VON}`;
+            const eventHTML = `
+                <img src="${event.BILD}" alt="${event.TAGUNGSRAUM}" class="event-image"/>
+                <div>
+                    <strong>${event.KUNDE}</strong><br>
+                    <p>${event.EVENT || 'Kein Event'}</p>
+                    <p>${timeText}</p>
+                    <p>Raum: ${event.TAGUNGSRAUM} ${event.RAUMHINWEIS ? `(${event.RAUMHINWEIS})` : ''} ${event.TEILNEHMER > 0 ? `(${event.TEILNEHMER})` : ''}</p>
+                </div>
+                <div>
+                    <p>${event.BEMERKUNG}</p>
+                </div>
+            `;
+            row.innerHTML = eventHTML;
+            eventContainer.appendChild(row);
+        });
+    })
+    .catch(error => {
+        document.getElementById('error-message').textContent = `Fehler beim Laden der JSON-Daten: ${error.message}`;
+    });
