@@ -16,7 +16,7 @@
             background-color: #d3d3d3;
             padding: 10px;
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
             align-items: center;
         }
 
@@ -28,7 +28,10 @@
             margin: 0;
             font-size: 2em;
             text-align: center;
-            flex-grow: 1;
+        }
+
+        .header .date {
+            font-size: 1.2em;
         }
 
         .header .clock-icon {
@@ -86,6 +89,10 @@
             text-align: center;
             margin-top: 20px;
         }
+
+        .bold {
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
@@ -93,6 +100,7 @@
     <div class="header">
         <img src="https://cdn.prod.website-files.com/60d2e4a3b351ee2c91f53a1e/60f9ca16c53dae6854816379_Logo%20Alea.svg" alt="Alea Logo">
         <h1>Willkommen bei Alea</h1>
+        <p class="date">am Dienstag, den 15.10.2024</p>
         <img src="Uhrensymbol.png" alt="Uhrensymbol" class="clock-icon">
     </div>
 
@@ -120,15 +128,16 @@
                     const row = document.createElement('div');
                     row.classList.add('event-row');
 
-                    // Update den Bildpfad
+                    // Formatierung für Zeiten
+                    const timeDisplay = event.BIS ? `${event.VON} bis ${event.BIS}` : `ab ${event.VON}`;
+                    
+                    // Bildpfad aktualisieren
                     const eventImage = `<img src="https://stappaf1.github.io/Menu/${event.BILD}" alt="${event.TAGUNGSRAUM} Bild">`;
                     const eventHTML = `
                         <div>
-                            <h2>${event.EVENT || 'Kein Event'}</h2>
-                            <p>Datum: ${event.DATUM}</p>
-                            <p>Von: ${event.VON}</p>
-                            ${event.BIS ? `<p>Bis: ${event.BIS}</p>` : ''}
-                            <p>Kunde: ${event.KUNDE}</p>
+                            <p class="bold">${event.KUNDE}</p>
+                            <p>${event.EVENT || 'Kein Event'}</p>
+                            <p>${timeDisplay}</p>
                             <p>Tagungsraum: ${event.TAGUNGSRAUM}</p>
                         </div>
                     `;
