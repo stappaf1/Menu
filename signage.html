@@ -27,7 +27,7 @@
         .header .title {
             flex-grow: 1;
             text-align: center;
-            font-size: 1.5em; /* Schriftgröße für die Begrüßung und das Datum */
+            font-size: 1.5em;
         }
 
         .header .clock-icon {
@@ -58,7 +58,7 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             margin-bottom: 20px;
             display: flex; /* Flexbox für die Anordnung */
-            align-items: center; /* Vertikale Zentrierung */
+            align-items: flex-start; /* Vertikale Ausrichtung nach oben */
         }
 
         .event-row h2 {
@@ -72,9 +72,15 @@
         }
 
         .event-image {
-            height: 20%; /* Höhe des Bildes */
-            max-height: 100px; /* Maximale Höhe des Bildes */
+            height: 100px; /* Maximale Höhe des Bildes */
             margin-right: 20px; /* Abstand zwischen Bild und Text */
+        }
+
+        /* Bemerkung */
+        .remark {
+            margin-left: auto; /* Schiebt die Bemerkung nach rechts */
+            margin-top: 10px; /* Abstand nach oben */
+            max-width: 300px; /* Maximale Breite für den Bemerkungsblock */
         }
 
         /* Fehleranzeige */
@@ -115,19 +121,25 @@
             })
             .then(data => {
                 const eventContainer = document.getElementById('event-container');
-                data.events.forEach(event => {
+                
+                // Sortiere nach TEILNEHMER in absteigender Reihenfolge
+                const sortedEvents = data.events.sort((a, b) => b.TEILNEHMER - a.TEILNEHMER);
+
+                sortedEvents.forEach(event => {
                     const row = document.createElement('div');
                     row.classList.add('event-row');
 
                     const timeText = event.BIS ? `${event.VON} bis ${event.BIS}` : `ab ${event.VON}`;
+                    const participantText = event.TEILNEHMER > 0 ? ` (${event.TEILNEHMER})` : '';
                     const eventHTML = `
-                        <img src="${event.TAGUNGSRAUM}.jpeg" alt="${event.TAGUNGSRAUM}" class="event-image"/>
+                        <img src="${event.BILD}" alt="${event.TAGUNGSRAUM}" class="event-image"/>
                         <div>
                             <strong>${event.KUNDE}</strong><br>
                             <p>${event.EVENT || 'Kein Event'}</p>
                             <p>${timeText}</p>
-                            <p>Tagungsraum: ${event.TAGUNGSRAUM}</p>
+                            <p>Raum: ${event.TAGUNGSRAUM} ${event.RAUMHINWEIS}${participantText}</p>
                         </div>
+                        <div class="remark">${event.BEMERKUNG || ''}</div>
                     `;
                     row.innerHTML = eventHTML;
                     eventContainer.appendChild(row);
