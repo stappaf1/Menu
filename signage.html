@@ -136,12 +136,13 @@
 
                     // Den Raumteil abfragen und anpassen
                     const parts = event.Raumteil ? event.Raumteil.split('-') : [];
-                    let flexValues = parts.map(part => getFlexValue(part));
+                    const flexValues = parts.map(part => getFlexValue(part));
 
                     // Setze Flex-Werte auf die Teile
-                    row.style.display = 'flex';
-                    for (let i = 0; i < row.children.length; i++) {
-                        row.children[i].style.flex = flexValues[i] || '0'; // Nur den verwendeten Raumteil anzeigen
+                    for (let i = 0; i < flexValues.length; i++) {
+                        if (row.children[i]) {
+                            row.children[i].style.flex = flexValues[i]; // Setze den Flex-Wert
+                        }
                     }
 
                     eventContainer.appendChild(row);
