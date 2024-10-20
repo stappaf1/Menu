@@ -6,8 +6,9 @@
             "BIS": "17:00",
             "EVENT": "Vertriebstagung 2024",
             "KUNDE": "HIPP",
-            "TAGUNGSRAUM": "ecoCentrum",
+            "TAGUNGSRAUM": "ecoCentrum (T90)",
             "Raumteil": "1-2", 
+            "Bemerkung" : "Pausenzeiten: Vormittag 10:00, Moittag 13:30, Nachmittag: 15:30"
             "BILD": "ecoCentrum.jpeg"
         },
         {
@@ -16,9 +17,10 @@
             "BIS": "12:00",
             "EVENT": "Marketing Workshop",
             "KUNDE": "BMW",
-            "TAGUNGSRAUM": "ecoCentrum",
-            "Raumteil": "3", 
-            "BILD": "ecoCentrum.jpeg"
+            "TAGUNGSRAUM": "ecoForum",
+            "Raumteil": "", 
+            "Bemerkung" : ""
+            "BILD": "ecoForum.jpeg"
         },
         {
             "DATUM": "15.10.24",
@@ -27,7 +29,8 @@
             "EVENT": "Projektbesprechung",
             "KUNDE": "Siemens",
             "TAGUNGSRAUM": "ecoPlenum",
-            "Raumteil": "1-2", 
+            "Raumteil": "", 
+            "Bemerkung" : ""
             "BILD": "ecoPlenum.jpeg"
         },
         {
@@ -37,7 +40,8 @@
             "EVENT": "Team-Meeting",
             "KUNDE": "Bosch",
             "TAGUNGSRAUM": "ecoRefugium",
-            "Raumteil": "2-3", 
+            "Raumteil": "", 
+            "Bemerkung" : ""
             "BILD": "ecoRefugium.jpeg"
         }
     ]
