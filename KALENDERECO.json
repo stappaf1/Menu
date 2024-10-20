@@ -33,6 +33,7 @@
         {
             "DATUM": "15.10.24",
             "VON": "10:00",
+            "BIS": "15:00",
             "EVENT": "Team-Meeting",
             "KUNDE": "Bosch",
             "TAGUNGSRAUM": "ecoRefugium",
