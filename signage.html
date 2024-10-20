@@ -3,152 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signage - Alea</title>
+    <title>Event Anzeige</title>
     <style>
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f8f9fa;
+            background-color: #f4f4f4;
         }
-
-        .header {
-            background-color: #d3d3d3;
-            padding: 10px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .header img {
-            max-height: 50px;
-        }
-
-        .title {
-            margin: 0;
-            font-size: 1.5em;
-            text-align: center;
-            flex-grow: 1;
-        }
-
         .event-container {
-            padding: 20px;
+            display: flex;
+            flex-direction: column;
         }
-
         .room-row {
             display: flex;
             width: 100%;
-            margin-bottom: 10px;
         }
-
-        .room-section {
-            flex: 0 0 33.33%;
-            padding: 10px;
-            box-sizing: border-box;
-            text-align: center;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
         .event-card {
-            margin: 0;
-            color: #204e1a;
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            margin: 5px;
+            padding: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
-
-        .error-message {
-            color: red;
-            text-align: center;
-            margin-top: 20px;
+        .third {
+            flex: 1;
+        }
+        .full {
+            flex: 3;
         }
     </style>
 </head>
 <body>
 
-    <div class="header">
-        <img src="https://cdn.prod.website-files.com/60d2e4a3b351ee2c91f53a1e/60f9ca16c53dae6854816379_Logo%20Alea.svg" alt="Alea Logo">
-        <h1 class="title">Willkommen bei Alea Eco</h1>
-        <img src="Uhrensymbol.png" alt="Uhrensymbol" class="clock-icon">
-    </div>
-
-    <div class="event-container" id="event-container">
-        <!-- Event-Daten werden hier dynamisch hinzugefügt -->
-    </div>
-
-    <footer>
-        © 2024 Hotel Alea GmbH - Alle Rechte vorbehalten.
-    </footer>
-
-    <div class="error-message" id="error-message"></div>
+    <h1>Willkommen bei Alea Eco</h1>
+    <div id="event-container" class="event-container"></div>
 
     <script>
-        fetch('https://stappaf1.github.io/Menu/KALENDERECO.json')
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Netzwerkantwort war nicht ok');
+        const events = [
+            {
+                "DATUM": "15.10.24",
+                "VON": "08:00",
+                "BIS": "17:00",
+                "EVENT": "Vertriebstagung 2024",
+                "KUNDE": "HIPP",
+                "TAGUNGSRAUM": "ecoCentrum",
+                "Raumteil": "1-3", 
+                "BILD": "ecoCentrum.jpeg"
+            },
+            {
+                "DATUM": "15.10.24",
+                "VON": "09:00",
+                "BIS": "12:00",
+                "EVENT": "Marketing Workshop",
+                "KUNDE": "BMW",
+                "TAGUNGSRAUM": "ecoForum",
+                "Raumteil": "1", 
+                "BILD": "ecoForum.jpeg"
+            },
+            {
+                "DATUM": "15.10.24",
+                "VON": "13:00",
+                "BIS": "15:00",
+                "EVENT": "Projektbesprechung",
+                "KUNDE": "Siemens",
+                "TAGUNGSRAUM": "ecoPlenum",
+                "Raumteil": "2", 
+                "BILD": "ecoPlenum.jpeg"
+            },
+            {
+                "DATUM": "15.10.24",
+                "VON": "10:00",
+                "EVENT": "Team-Meeting",
+                "KUNDE": "Bosch",
+                "TAGUNGSRAUM": "ecoRefugium",
+                "Raumteil": "2-3", 
+                "BILD": "ecoRefugium.jpeg"
+            }
+        ];
+
+        const roomRows = {};
+
+        // Organize events by room
+        events.forEach(event => {
+            const { TAGUNGSRAUM, Raumteil } = event;
+            if (!roomRows[TAGUNGSRAUM]) {
+                roomRows[TAGUNGSRAUM] = [];
+            }
+            roomRows[TAGUNGSRAUM].push(event);
+        });
+
+        // Create the display for each room
+        Object.entries(roomRows).forEach(([room, events]) => {
+            const roomRow = document.createElement('div');
+            roomRow.classList.add('room-row');
+            let sections = [null, null, null];
+
+            events.forEach(event => {
+                const { Raumteil } = event;
+                const index = Raumteil === "1-3" ? 0 :
+                              Raumteil === "1-2" ? 0 :
+                              Raumteil === "2-3" ? 1 :
+                              Raumteil === "1" ? 0 :
+                              Raumteil === "2" ? 1 :
+                              Raumteil === "3" ? 2 : -1;
+
+                if (index !== -1) {
+                    sections[index] = sections[index] ? sections[index] + 1 : 1; 
                 }
-                return response.json();
-            })
-            .then(data => {
-                const eventContainer = document.getElementById('event-container');
-                
-                // Räume definieren
-                const rooms = {};
-                data.events.forEach(event => {
-                    const room = event.TAGUNGSRAUM;
-                    const roomPart = event.Raumteil || "1-3"; // Standardwert "1-3"
 
-                    // Räume initialisieren, falls noch nicht vorhanden
-                    if (!rooms[room]) {
-                        rooms[room] = {
-                            sections: ['', '', ''], // drei Abschnitte für jeden Raum
-                        };
-                    }
-
-                    // Logik zur Platzierung des Events
-                    if (roomPart === "1-3") {
-                        rooms[room].sections[0] = event; // Voller Bereich
-                    } else if (roomPart === "1-2") {
-                        rooms[room].sections[0] = event; // Erster Bereich
-                        rooms[room].sections[1] = event; // Zweiter Bereich
-                    } else if (roomPart === "2-3") {
-                        rooms[room].sections[1] = event; // Zweiter Bereich
-                        rooms[room].sections[2] = event; // Dritter Bereich
-                    } else {
-                        const index = parseInt(roomPart) - 1; // 1 -> 0, 2 -> 1, 3 -> 2
-                        rooms[room].sections[index] = event; // Einzelner Bereich
-                    }
-                });
-
-                // Räume und deren Veranstaltungen dynamisch hinzufügen
-                for (const room in rooms) {
-                    const roomRow = document.createElement('div');
-                    roomRow.className = 'room-row';
-
-                    rooms[room].sections.forEach((event, index) => {
-                        const section = document.createElement('div');
-                        section.className = 'room-section';
-
-                        if (event) {
-                            section.innerHTML = `
-                                <h2 class="event-card">${event.EVENT || 'Kein Event'}</h2>
-                                <p>Kunde: <strong>${event.KUNDE}</strong></p>
-                                <p>${event.VON}${event.BIS ? ' bis ' + event.BIS : ' ab ' + event.VON}</p>
-                                <p>Tagungsraum: ${event.TAGUNGSRAUM}</p>
-                            `;
-                        } else {
-                            section.style.visibility = 'hidden'; // unsichtbar, wenn kein Event vorhanden
-                        }
-
-                        roomRow.appendChild(section);
-                    });
-
-                    eventContainer.appendChild(roomRow);
+                // Merge sections logic
+                if (Raumteil === "1-2" && sections[0] && sections[1]) {
+                    sections[0] = sections[1] = null; // Clear them for single display
+                    const card = document.createElement('div');
+                    card.classList.add('event-card', 'full');
+                    card.innerHTML = `<strong>${event.KUNDE}</strong>: ${event.EVENT} (${event.VON} bis ${event.BIS})`;
+                    roomRow.appendChild(card);
+                } else if (Raumteil === "2-3" && sections[1] && sections[2]) {
+                    sections[1] = sections[2] = null; // Clear them for single display
+                    const card = document.createElement('div');
+                    card.classList.add('event-card', 'full');
+                    card.innerHTML = `<strong>${event.KUNDE}</strong>: ${event.EVENT} (${event.VON} bis ${event.BIS})`;
+                    roomRow.appendChild(card);
+                } else {
+                    const card = document.createElement('div');
+                    card.classList.add('event-card', 'third');
+                    card.innerHTML = `<strong>${event.KUNDE}</strong>: ${event.EVENT} (${event.VON} bis ${event.BIS})`;
+                    roomRow.appendChild(card);
                 }
-            })
-            .catch(error => {
-                document.getElementById('error-message').textContent = `Fehler beim Laden der JSON-Daten: ${error.message}`;
             });
+
+            document.getElementById('event-container').appendChild(roomRow);
+        });
     </script>
 
 </body>
