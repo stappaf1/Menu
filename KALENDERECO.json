@@ -1,7 +1,7 @@
 {
   "events": [
     {
-      "DATUM": "21.10.2024",
+      "DATUM": "21.10.24",
       "VON": "08:50",
       "BIS": "17:50",
       "KUNDE": "Hipp",
@@ -13,7 +13,7 @@
       "BEMERKUNG": "Bemerkung1"
     },
     {
-      "DATUM": "21.10.2024",
+      "DATUM": "21.10.24",
       "VON": "08:50",
       "BIS": "17:50",
       "KUNDE": "Hipp",
@@ -25,7 +25,7 @@
       "BEMERKUNG": "Bemerkung2"
     },
     {
-      "DATUM": "21.10.2024",
+      "DATUM": "21.10.24",
       "VON": "08:50",
       "BIS": "17:50",
       "KUNDE": "Hipp",
@@ -37,7 +37,7 @@
       "BEMERKUNG": "Bemerkung3"
     },
     {
-      "DATUM": "21.10.2024",
+      "DATUM": "21.10.24",
       "VON": "08:50",
       "BIS": "17:50",
       "KUNDE": "Hipp",
