@@ -137,19 +137,12 @@
                 const today = new Date();
                 const options = { day: '2-digit', month: '2-digit', year: '2-digit' };
                 const formattedDate = today.toLocaleDateString('de-DE', options);
-
+                
                 // Setzen des Datums in der Kopfzeile
                 document.getElementById('date-title').innerText += ` ${formattedDate}`;
 
-                // Logging für Debugging
-                console.log("Heutiges Datum:", formattedDate);
-                console.log("Veranstaltungen in JSON:", data.events);
-
                 // Filtere die Veranstaltungen nach dem heutigen Datum
                 const todayEvents = data.events.filter(event => event.DATUM === formattedDate);
-
-                // Logging um zu sehen, welche Veranstaltungen gefunden wurden
-                console.log("Gefundene Veranstaltungen für heute:", todayEvents);
 
                 // Prüfen, ob es Veranstaltungen gibt
                 if (todayEvents.length === 0) {
@@ -161,4 +154,27 @@
                     const row = document.createElement('div');
                     row.classList.add('event-row');
 
-                    const timeText = event.BIS ? `${event.VON} bis ${event.BIS}` : `ab
+                    const timeText = event.BIS ? `${event.VON} bis ${event.BIS}` : `ab ${event.VON}`;
+                    const eventHTML = `
+                        <img src="${event.BILD}" alt="${event.TAGUNGSRAUM}" class="event-image"/>
+                        <div class="event-details">
+                            <strong>${event.KUNDE}</strong><br>
+                            <p>${event.EVENT || ' '}</p> <!-- Leerzeichen, wenn kein Tagungsname -->
+                            <p>${timeText}</p>
+                            <p class="room-info">Raum: ${event.TAGUNGSRAUM} ${event.RAUMHINWEIS ? `(${event.RAUMHINWEIS})` : ''}</p>
+                        </div>
+                        <div class="event-remark">
+                            <p>${event.BEMERKUNG ? event.BEMERKUNG : ''}</p> <!-- Nur anzeigen, wenn Bemerkung vorhanden -->
+                        </div>
+                    `;
+                    row.innerHTML = eventHTML;
+                    eventContainer.appendChild(row);
+                });
+            })
+            .catch(error => {
+                document.getElementById('error-message').textContent = `Fehler beim Laden der JSON-Daten: ${error.message}`;
+            });
+    </script>
+
+</body>
+</html>
