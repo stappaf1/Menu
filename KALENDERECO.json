@@ -1,52 +1,52 @@
 {
-    "events": [
-        {
-            "DATUM": "20.10.24",
-            "VON": "08:00",
-            "BIS": "",
-            "EVENT": "Vertriebstagung 2024",
-            "KUNDE": "HIPP",
-            "TEILNEHMER": 35,
-            "TAGUNGSRAUM": "ecoCentrum T90",
-            "RAUMHINWEIS": "", 
-            "BEMERKUNG": "Kaffeepause 10:00, Mittagspause 13:30, Kaffeepause 15:30",  
-            "BILD": "ecoCentrum.jpeg"
-        },
-        {
-            "DATUM": "20.10.24",
-            "VON": "09:00",
-            "BIS": "12:00",
-            "EVENT": "Marketing Workshop",
-            "KUNDE": "BMW",
-            "TEILNEHMER": 45,
-            "TAGUNGSRAUM": "ecoForum T120",
-            "RAUMHINWEIS": "", 
-            "BEMERKUNG": "",
-            "BILD": "ecoForum.jpeg"
-        },
-        {
-            "DATUM": "20.10.24",
-            "VON": "13:00",
-            "BIS": "15:00",
-            "EVENT": "Projektbesprechung",
-            "KUNDE": "Siemens",
-            "TEILNEHMER": 110,
-            "TAGUNGSRAUM": "ecoPlenum T200",
-            "RAUMHINWEIS": "", 
-            "BEMERKUNG": "",
-            "BILD": "ecoPlenum.jpeg"
-        },
-        {
-            "DATUM": "20.10.24",
-            "VON": "10:00",
-            "BIS": "15:00",
-            "EVENT": "Team-Meeting",
-            "KUNDE": "Bosch",
-            "TEILNEHMER": 6,
-            "TAGUNGSRAUM": "ecoRefugium T30",
-            "RAUMHINWEIS": "", 
-            "BEMERKUNG": "",
-            "BILD": "ecoRefugium.jpeg"
-        }
-    ]
+  "events": [
+    {
+      "DATUM": "2024-10-20T22:00:00.000Z",
+      "VON": "1899-12-30T07:50:39.000Z",
+      "BIS": "1899-12-30T16:50:39.000Z",
+      "KUNDE": "Hipp",
+      "EVENT": "Vertriebstagung 2024",
+      "TEILNEHMER": 25,
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "2024-01-31T23:00:00.000Z",
+      "BILD": "ecoCentrum.jpeg",
+      "BEMERKUNG": "Bemerkung1"
+    },
+    {
+      "DATUM": "2024-10-20T22:00:00.000Z",
+      "VON": "1899-12-30T07:50:39.000Z",
+      "BIS": "1899-12-30T16:50:39.000Z",
+      "KUNDE": "Hipp",
+      "EVENT": "Vertriebstagung 2024",
+      "TEILNEHMER": 35,
+      "TAGUNGSRAUM": "ecoForum T120",
+      "RAUMHINWEIS": "",
+      "BILD": "ecoForum.jpeg",
+      "BEMERKUNG": "Bemerkung2"
+    },
+    {
+      "DATUM": "2024-10-20T22:00:00.000Z",
+      "VON": "1899-12-30T07:50:39.000Z",
+      "BIS": "1899-12-30T16:50:39.000Z",
+      "KUNDE": "Hipp",
+      "EVENT": "Vertriebstagung 2024",
+      "TEILNEHMER": 120,
+      "TAGUNGSRAUM": "ecoPlenum T200",
+      "RAUMHINWEIS": "",
+      "BILD": "ecoPlenum.jpeg",
+      "BEMERKUNG": "Bemerkung3"
+    },
+    {
+      "DATUM": "2024-10-20T22:00:00.000Z",
+      "VON": "1899-12-30T07:50:39.000Z",
+      "BIS": "1899-12-30T16:50:39.000Z",
+      "KUNDE": "Hipp",
+      "EVENT": "Vertriebstagung 2024",
+      "TEILNEHMER": 8,
+      "TAGUNGSRAUM": "ecoRefugium T30",
+      "RAUMHINWEIS": "",
+      "BILD": "ecoRefugium.jpeg",
+      "BEMERKUNG": "Bemerkung4"
+    }
+  ]
 }
