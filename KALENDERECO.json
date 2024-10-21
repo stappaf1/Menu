@@ -1,9 +1,9 @@
 {
   "events": [
     {
-      "DATUM": "2024-10-20T22:00:00.000Z",
-      "VON": "1899-12-30T07:50:39.000Z",
-      "BIS": "1899-12-30T16:50:39.000Z",
+      "DATUM": "21.10.2024",
+      "VON": "08:50",
+      "BIS": "17:50",
       "KUNDE": "Hipp",
       "EVENT": "Vertriebstagung 2024",
       "TEILNEHMER": 25,
@@ -13,9 +13,9 @@
       "BEMERKUNG": "Bemerkung1"
     },
     {
-      "DATUM": "2024-10-20T22:00:00.000Z",
-      "VON": "1899-12-30T07:50:39.000Z",
-      "BIS": "1899-12-30T16:50:39.000Z",
+      "DATUM": "21.10.2024",
+      "VON": "08:50",
+      "BIS": "17:50",
       "KUNDE": "Hipp",
       "EVENT": "Vertriebstagung 2024",
       "TEILNEHMER": 35,
@@ -25,9 +25,9 @@
       "BEMERKUNG": "Bemerkung2"
     },
     {
-      "DATUM": "2024-10-20T22:00:00.000Z",
-      "VON": "1899-12-30T07:50:39.000Z",
-      "BIS": "1899-12-30T16:50:39.000Z",
+      "DATUM": "21.10.2024",
+      "VON": "08:50",
+      "BIS": "17:50",
       "KUNDE": "Hipp",
       "EVENT": "Vertriebstagung 2024",
       "TEILNEHMER": 120,
@@ -37,9 +37,9 @@
       "BEMERKUNG": "Bemerkung3"
     },
     {
-      "DATUM": "2024-10-20T22:00:00.000Z",
-      "VON": "1899-12-30T07:50:39.000Z",
-      "BIS": "1899-12-30T16:50:39.000Z",
+      "DATUM": "21.10.2024",
+      "VON": "08:50",
+      "BIS": "17:50",
       "KUNDE": "Hipp",
       "EVENT": "Vertriebstagung 2024",
       "TEILNEHMER": 8,
