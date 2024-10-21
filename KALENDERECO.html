@@ -136,13 +136,13 @@
                     row.classList.add('event-row');
 
                     const timeText = event.BIS ? `${event.VON} bis ${event.BIS}` : `ab ${event.VON}`;
+                    const roomInfo = event.RAUMHINWEIS ? `(${event.RAUMHINWEIS})` : '';  // Prüfen ob RAUMHINWEIS leer ist
                     const eventHTML = `
                         <img src="${event.BILD}" alt="${event.TAGUNGSRAUM}" class="event-image"/>
                         <div class="event-details">
-                            <strong>${event.KUNDE}</strong><br>
+                            <strong>${event.KUNDE}</strong><span class="room-info"> - ${event.TAGUNGSRAUM} ${roomInfo}</span><br>
                             <p>${event.EVENT || ' '}</p> <!-- Leerzeichen, wenn kein Tagungsname -->
                             <p>${timeText}</p>
-                            <p class="room-info">Raum: ${event.TAGUNGSRAUM} ${event.RAUMHINWEIS ? `(${event.RAUMHINWEIS})` : ''}</p>
                         </div>
                         <div class="event-remark">
                             <p>${event.BEMERKUNG ? event.BEMERKUNG : ''}</p> <!-- Nur anzeigen, wenn Bemerkung vorhanden -->
