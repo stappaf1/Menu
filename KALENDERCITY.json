@@ -1,0 +1,64 @@
+{
+  "events": [
+    {
+      "DATUM": "21.10.24",
+      "VON": "08:50",
+      "BIS": "",
+      "KUNDE": "Hipp GmbH",
+      "EVENT": "Vertriebstagung 2024",
+      "TEILNEHMER": 35,
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "Teil 1-2",
+      "BILD": "ecoCentrum.jpeg",
+      "BEMERKUNG": "Kaffeepause 10:00, Mittagspause 13:30, Kaffeepause 15:30 langer Text langer Text langer Text langer Text langer Text langer Text langer Text langer Text langer Text langer Text langer Text langer Text langer Text langer Text langer Text langer Text langer Text langer Text langer Text langer Text langer Text langer Text langer Text langer Text langer Text langer Text langer Text langer Text langer Text langer Text langer Text langer Text "
+    },
+    {
+      "DATUM": "21.10.24",
+      "VON": "09:50",
+      "BIS": "17:50",
+      "KUNDE": "Meier Maschinenbau GmbH",
+      "EVENT": "",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoForum T120",
+      "RAUMHINWEIS": "",
+      "BILD": "ecoForum.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "21.10.24",
+      "VON": "10:50",
+      "BIS": "18:50",
+      "KUNDE": "Versicherungsbüro Müller ",
+      "EVENT": "Schulung",
+      "TEILNEHMER": 120,
+      "TAGUNGSRAUM": "ecoPlenum T200",
+      "RAUMHINWEIS": "",
+      "BILD": "ecoPlenum.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "21.10.24",
+      "VON": "08:50",
+      "BIS": "19:50",
+      "KUNDE": "H+DG",
+      "EVENT": "Herbsttagung",
+      "TEILNEHMER": 8,
+      "TAGUNGSRAUM": "ecoRefugium T30",
+      "RAUMHINWEIS": "",
+      "BILD": "ecoRefugium.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "21.10.24",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Schmidt",
+      "EVENT": "Schulung",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoKräutergarten",
+      "RAUMHINWEIS": "",
+      "BILD": "ecoForum.jpeg",
+      "BEMERKUNG": "Außentagung im Stuhlkreis"
+    }
+  ]
+}
