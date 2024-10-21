@@ -4,7 +4,7 @@
       "DATUM": "21.10.24",
       "VON": "08:50",
       "BIS": "",
-      "KUNDE": "Hipp",
+      "KUNDE": "Hipp GmbH",
       "EVENT": "Vertriebstagung 2024",
       "TEILNEHMER": 35,
       "TAGUNGSRAUM": "ecoCentrum T90",
@@ -14,39 +14,39 @@
     },
     {
       "DATUM": "21.10.24",
-      "VON": "08:50",
+      "VON": "09:50",
       "BIS": "17:50",
-      "KUNDE": "Hipp",
-      "EVENT": "Vertriebstagung 2024",
-      "TEILNEHMER": 35,
+      "KUNDE": "Meier Maschinenbau GmbH",
+      "EVENT": "",
+      "TEILNEHMER": "",
       "TAGUNGSRAUM": "ecoForum T120",
       "RAUMHINWEIS": "",
       "BILD": "ecoForum.jpeg",
-      "BEMERKUNG": "Bemerkung2"
+      "BEMERKUNG": ""
     },
     {
       "DATUM": "21.10.24",
-      "VON": "08:50",
-      "BIS": "17:50",
-      "KUNDE": "Hipp",
-      "EVENT": "Vertriebstagung 2024",
+      "VON": "10:50",
+      "BIS": "18:50",
+      "KUNDE": "Versicherungsbüro Müller ",
+      "EVENT": "Schulung",
       "TEILNEHMER": 120,
       "TAGUNGSRAUM": "ecoPlenum T200",
       "RAUMHINWEIS": "",
       "BILD": "ecoPlenum.jpeg",
-      "BEMERKUNG": "Bemerkung3"
+      "BEMERKUNG": ""
     },
     {
       "DATUM": "21.10.24",
       "VON": "08:50",
-      "BIS": "17:50",
-      "KUNDE": "Hipp",
-      "EVENT": "Vertriebstagung 2024",
+      "BIS": "19:50",
+      "KUNDE": "H+DG",
+      "EVENT": "Herbsttagung",
       "TEILNEHMER": 8,
       "TAGUNGSRAUM": "ecoRefugium T30",
       "RAUMHINWEIS": "",
       "BILD": "ecoRefugium.jpeg",
-      "BEMERKUNG": "Bemerkung44"
+      "BEMERKUNG": ""
     }
   ]
 }
