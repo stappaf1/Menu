@@ -32,7 +32,7 @@
       "EVENT": "Schulung",
       "TEILNEHMER": 120,
       "TAGUNGSRAUM": "ecoPlenum T200",
-      "RAUMHINWEIS": "Teil 2-3",
+      "RAUMHINWEIS": "",
       "BILD": "ecoPlenum.jpeg",
       "BEMERKUNG": ""
     },
@@ -44,7 +44,7 @@
       "EVENT": "Herbsttagung",
       "TEILNEHMER": 8,
       "TAGUNGSRAUM": "ecoRefugium T30",
-      "RAUMHINWEIS": "Teil 1",
+      "RAUMHINWEIS": "",
       "BILD": "ecoRefugium.jpeg",
       "BEMERKUNG": ""
     },
