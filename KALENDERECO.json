@@ -59,6 +59,18 @@
       "RAUMHINWEIS": "Teil 2",
       "BILD": "ecoForum.jpeg",
       "BEMERKUNG": "Außentagung im Stuhlkreis"
+    },
+    {
+      "DATUM": "22.10.24",
+      "VON": "09:50",
+      "BIS": "17:50",
+      "KUNDE": "Hipp",
+      "EVENT": "",
+      "TEILNEHMER": 35,
+      "TAGUNGSRAUM": "ecoForum T120",
+      "RAUMHINWEIS": "",
+      "BILD": "ecoForum.jpeg",
+      "BEMERKUNG": "Gruppenraum"
     }
   ]
 }
