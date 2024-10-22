@@ -1,7 +1,7 @@
 {
   "events": [
     {
-      "DATUM": "21.10.24",
+      "DATUM": "22.10.24",
       "VON": "00:50",
       "BIS": "",
       "KUNDE": "Lidl",
@@ -13,7 +13,7 @@
       "BEMERKUNG": "Kaffeepause 10:00, Mittagspause 13:30, Kaffeepause 15:30 langer Text langer Text langer Text langer Text langer Text langer Text langer Text langer Text langer Text langer Text langer Text langer Text langer Text langer Text langer Text langer Text langer Text langer Text langer Text langer Text langer Text langer Text langer Text langer Text langer Text langer Text langer Text langer Text langer Text langer Text langer Text langer Text "
     },
     {
-      "DATUM": "21.10.24",
+      "DATUM": "22.10.24",
       "VON": "09:50",
       "BIS": "17:50",
       "KUNDE": "H+DG",
@@ -25,7 +25,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "21.10.24",
+      "DATUM": "22.10.24",
       "VON": "10:50",
       "BIS": "18:50",
       "KUNDE": "Krauss Maffei",
