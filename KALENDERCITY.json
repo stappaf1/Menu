@@ -4,12 +4,12 @@
       "DATUM": "23.10.24",
       "VON": "",
       "BIS": "",
-      "KUNDE": "Test",
-      "EVENT": "Testevent",
+      "KUNDE": "Meier Anlagenbau GmbH",
+      "EVENT": "Jahrestagung",
       "TEILNEHMER": "",
-      "TAGUNGSRAUM": "ecoCentrum T90",
-      "RAUMHINWEIS": "Teil 1",
-      "BILD": "ecoCentrum.jpeg",
+      "TAGUNGSRAUM": "kleinerFreiraum T10",
+      "RAUMHINWEIS": "",
+      "BILD": "T10.jpeg",
       "BEMERKUNG": ""
     }
   ]
