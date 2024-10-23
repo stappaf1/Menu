@@ -4,12 +4,24 @@
       "DATUM": "23.10.24",
       "VON": "",
       "BIS": "",
-      "KUNDE": "Test",
-      "EVENT": "Testevent",
+      "KUNDE": "Hecht",
+      "EVENT": "",
       "TEILNEHMER": "",
       "TAGUNGSRAUM": "ecoCentrum T90",
-      "RAUMHINWEIS": "Teil 1",
-      "BILD": "ecoCentrum.jpeg",
+      "RAUMHINWEIS": "Teil 1-3",
+      "BILD": "T90.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "23.10.24",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Bayerisches Staatsministerium",
+      "EVENT": "",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoPlenum T200",
+      "RAUMHINWEIS": "",
+      "BILD": "T200-Business.jpeg",
       "BEMERKUNG": ""
     }
   ]
