@@ -1,39 +1,15 @@
 {
   "events": [
     {
-      "DATUM": "22.10.24",
-      "VON": "00:50",
+      "DATUM": "23.10.24",
+      "VON": "",
       "BIS": "",
-      "KUNDE": "Lidl",
-      "EVENT": "Vertriebstagung 2024",
-      "TEILNEHMER": 10,
-      "TAGUNGSRAUM": "kleinerFreiraum T10",
-      "RAUMHINWEIS": "",
-      "BILD": "cityT10.jpeg",
-      "BEMERKUNG": "Kaffeepause 10:00, Mittagspause 13:30, Kaffeepause 15:30 langer Text langer Text langer Text langer Text langer Text langer Text langer Text langer Text langer Text langer Text langer Text langer Text langer Text langer Text langer Text langer Text langer Text langer Text langer Text langer Text langer Text langer Text langer Text langer Text langer Text langer Text langer Text langer Text langer Text langer Text langer Text langer Text "
-    },
-    {
-      "DATUM": "22.10.24",
-      "VON": "09:50",
-      "BIS": "17:50",
-      "KUNDE": "H+DG",
-      "EVENT": "",
-      "TEILNEHMER": 30,
-      "TAGUNGSRAUM": "großerFreiraum T60",
-      "RAUMHINWEIS": "",
-      "BILD": "cityT60.jpeg",
-      "BEMERKUNG": ""
-    },
-    {
-      "DATUM": "22.10.24",
-      "VON": "10:50",
-      "BIS": "18:50",
-      "KUNDE": "Krauss Maffei",
-      "EVENT": "Schulung",
-      "TEILNEHMER": 55,
-      "TAGUNGSRAUM": "Weitblick T100",
-      "RAUMHINWEIS": "",
-      "BILD": "cityT100.jpeg",
+      "KUNDE": "Test",
+      "EVENT": "Testevent",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "Teil 1",
+      "BILD": "ecoCentrum.jpeg",
       "BEMERKUNG": ""
     }
   ]
