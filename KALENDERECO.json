@@ -2,7 +2,7 @@
   "events": [
     {
       "DATUM": "23.10.24",
-      "VON": "",
+      "VON": "08:50",
       "BIS": "",
       "KUNDE": "Hecht",
       "EVENT": "",
@@ -14,7 +14,7 @@
     },
     {
       "DATUM": "23.10.24",
-      "VON": "",
+      "VON": "08:50",
       "BIS": "",
       "KUNDE": "Bayerisches Staatsministerium",
       "EVENT": "",
@@ -298,6 +298,30 @@
       "TAGUNGSRAUM": "ecoForum T120",
       "RAUMHINWEIS": "",
       "BILD": "T120.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "16.11.24",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "BGN Berufsgenossenschaft     ",
+      "EVENT": "",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "Teil 1-3",
+      "BILD": "T90.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "17.11.24",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "BGN Berufsgenossenschaft     ",
+      "EVENT": "",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "Teil 1-3",
+      "BILD": "T90.jpeg",
       "BEMERKUNG": ""
     }
   ]
