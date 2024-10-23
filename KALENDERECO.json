@@ -1,76 +1,16 @@
 {
   "events": [
     {
-      "DATUM": "22.10.24",
-      "VON": "09:50",
+      "DATUM": "23.10.24",
+      "VON": "",
       "BIS": "",
-      "KUNDE": "Test 1",
-      "EVENT": "Vertriebstagung 2024",
-      "TEILNEHMER": 35,
+      "KUNDE": "Test",
+      "EVENT": "Testevent",
+      "TEILNEHMER": "",
       "TAGUNGSRAUM": "ecoCentrum T90",
-      "RAUMHINWEIS": "Teil 1-2",
+      "RAUMHINWEIS": "Teil 1",
       "BILD": "ecoCentrum.jpeg",
       "BEMERKUNG": ""
-    },
-    {
-      "DATUM": "22.10.24",
-      "VON": "09:50",
-      "BIS": "17:50",
-      "KUNDE": "Test 2",
-      "EVENT": "Schulung",
-      "TEILNEHMER": "",
-      "TAGUNGSRAUM": "ecoForum T120",
-      "RAUMHINWEIS": "Teil 1-3",
-      "BILD": "ecoForum.jpeg",
-      "BEMERKUNG": ""
-    },
-    {
-      "DATUM": "22.10.24",
-      "VON": "10:50",
-      "BIS": "18:50",
-      "KUNDE": "Test 3",
-      "EVENT": "Schulung",
-      "TEILNEHMER": 120,
-      "TAGUNGSRAUM": "ecoPlenum T200",
-      "RAUMHINWEIS": "",
-      "BILD": "ecoPlenum.jpeg",
-      "BEMERKUNG": ""
-    },
-    {
-      "DATUM": "22.10.24",
-      "VON": "08:50",
-      "BIS": "19:50",
-      "KUNDE": "Test 4",
-      "EVENT": "Herbsttagung",
-      "TEILNEHMER": 8,
-      "TAGUNGSRAUM": "ecoRefugium T30",
-      "RAUMHINWEIS": "",
-      "BILD": "ecoRefugium.jpeg",
-      "BEMERKUNG": ""
-    },
-    {
-      "DATUM": "21.10.24",
-      "VON": "13:50",
-      "BIS": "",
-      "KUNDE": "Test 5",
-      "EVENT": "Schulung",
-      "TEILNEHMER": "",
-      "TAGUNGSRAUM": "ecoKräutergarten",
-      "RAUMHINWEIS": "Teil 2",
-      "BILD": "ecoForum.jpeg",
-      "BEMERKUNG": "Außentagung im Stuhlkreis"
-    },
-    {
-      "DATUM": "22.10.24",
-      "VON": "09:50",
-      "BIS": "17:50",
-      "KUNDE": "Test 6",
-      "EVENT": "",
-      "TEILNEHMER": 35,
-      "TAGUNGSRAUM": "ecoForum T120",
-      "RAUMHINWEIS": "",
-      "BILD": "ecoForum.jpeg",
-      "BEMERKUNG": "Gruppenraum"
     }
   ]
 }
