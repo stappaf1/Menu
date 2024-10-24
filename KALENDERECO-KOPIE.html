@@ -43,42 +43,44 @@
         /* Event Anzeige */
         .event-container {
             padding: 20px;
+            height: calc(100vh - 100px); /* Höhe des sichtbaren Bereichs abzüglich Header/Footer */
+            box-sizing: border-box;
         }
         .event-row {
             background-color: white;
-            padding: 5px; /* Verringern des Abstands */
+            padding: 5px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-            display: flex; /* Flexbox für die Anordnung */
+            margin-bottom: 10px;
+            display: flex;
             align-items: flex-start; /* Oben bündig ausrichten */
+            box-sizing: border-box;
         }
         .event-image {
             width: 100px; /* Feste Breite des Bildes */
             height: auto; /* Höhe des Bildes automatisch anpassen */
-            max-height: 90px; /* Maximale Höhe des Bildes, um es an den Textblock anzupassen */
-            margin-right: 10px; /* Abstand zwischen Bild und Text */
+            margin-right: 10px;
         }
         .event-details {
-            flex: 1; /* Platz für die Textinhalte */
-            margin: 0; /* Minimierung der Abstände */
+            flex: 1;
+            margin: 0;
         }
         .event-remark {
             flex: 0 0 30%; /* Feste Breite für die Bemerkung */
-            padding-left: 10px; /* Abstand zur anderen Spalte */
-            margin-top: 0; /* Kein zusätzlicher Abstand */
+            padding-left: 10px;
+            margin-top: 0;
             display: flex;
-            align-items: flex-start; /* Oben bündig ausrichten */
+            align-items: flex-start;
         }
         .event-details strong {
-            font-size: 2em; /* Verdoppelte Schriftgröße für die Firma */
+            font-size: 2em;
         }
         .event-details p {
-            margin: 2px 0; /* Minimierung der Abstände zwischen den Absätzen */
+            margin: 2px 0;
         }
         .room-info {
-            color: darkgreen; /* Dunkelgrün für Raumangaben */
-            font-size: 2em; /* Gleiche Schriftgröße wie die Firma */
+            color: darkgreen;
+            font-size: 2em;
         }
         /* Fehleranzeige */
         .error-message {
@@ -103,6 +105,7 @@
         © 2024 Hotel Alea GmbH - Alle Rechte vorbehalten.
     </footer>
     <div class="error-message" id="error-message"></div>
+
     <script>
         fetch('https://stappaf1.github.io/Menu/KALENDERECO.json')
             .then(response => {
@@ -113,6 +116,7 @@
             })
             .then(data => {
                 const eventContainer = document.getElementById('event-container');
+                const containerHeight = eventContainer.clientHeight;
 
                 // Holen Sie sich das heutige Datum im Format DD.MM.YY
                 const today = new Date();
@@ -131,14 +135,22 @@
                     return;
                 }
 
+                // Anzahl der Events
+                const eventCount = todayEvents.length;
+
+                // Höhe für jede Event-Zeile berechnen
+                const rowHeight = containerHeight / eventCount - 10; // Abstände berücksichtigen
+
                 todayEvents.forEach(event => {
                     const row = document.createElement('div');
                     row.classList.add('event-row');
+                    row.style.height = `${rowHeight}px`; // Dynamische Höhe
 
                     const timeText = event.BIS ? `${event.VON} bis ${event.BIS}` : `ab ${event.VON}`;
-                    const roomInfo = event.RAUMHINWEIS ? `(${event.RAUMHINWEIS})` : '';  // Prüfen ob RAUMHINWEIS leer ist
+                    const roomInfo = event.RAUMHINWEIS ? `(${event.RAUMHINWEIS})` : '';
+
                     const eventHTML = `
-                        <img src="${event.BILD}" alt="${event.TAGUNGSRAUM}" class="event-image"/>
+                        <img src="${event.BILD}" alt="${event.TAGUNGSRAUM}" class="event-image" style="height:100%;"/>
                         <div class="event-details">
                             <strong>${event.KUNDE}</strong><span class="room-info"> - ${event.TAGUNGSRAUM} ${roomInfo}</span><br>
                             <p>${event.EVENT || ' '}</p> <!-- Leerzeichen, wenn kein Tagungsname -->
