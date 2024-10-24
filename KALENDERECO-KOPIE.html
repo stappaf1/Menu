@@ -10,10 +10,11 @@
             margin: 0;
             padding: 0;
             background-color: #f8f9fa;
+            height: 100vh; /* Gesamte Bildschirmhöhe */
             display: flex;
             flex-direction: column;
-            height: 100vh;
         }
+
         /* Kopfzeile */
         .header {
             background-color: #d3d3d3;
@@ -21,56 +22,63 @@
             display: flex;
             align-items: center;
         }
+
         .header img {
             max-height: 50px;
         }
+
         .header .title {
             flex-grow: 1;
             text-align: center;
-            font-size: 1.5em;
+            font-size: 1.5em; /* Schriftgröße für die Begrüßung und das Datum */
         }
+
         .header .clock-icon {
             width: 50px;
             height: 50px;
         }
+
         /* Fußzeile */
         footer {
             background-color: #d3d3d3;
             padding: 10px;
             text-align: center;
             position: relative;
-            bottom: 0;
             width: 100%;
+            font-size: 1em;
         }
+
         /* Event Anzeige */
         .event-container {
             flex-grow: 1;
+            padding: 20px;
             display: flex;
             flex-direction: column;
-            padding: 20px;
-            overflow-y: auto;
+            justify-content: space-around; /* Gleicher Abstand zwischen den Balken */
         }
+
         .event-row {
             background-color: white;
             padding: 5px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin-bottom: 10px;
             display: flex;
-            align-items: flex-start;
-            flex-grow: 1;
-            min-height: 100px;
+            align-items: flex-start; /* Bild und Text oben bündig */
+            height: calc(100% / 6 - 10px); /* Dynamische Höhe für 6 Balken, minus Abstände */
         }
+
         .event-image {
             width: 100px;
-            height: auto;
+            height: 100%; /* Fülle die Höhe des Balkens */
+            object-fit: cover; /* Bild proportional anpassen */
             margin-right: 10px;
-            object-fit: contain; /* Bildinhalt einpassen */
         }
+
         .event-details {
             flex: 1;
             margin: 0;
         }
+
         .event-remark {
             flex: 0 0 30%;
             padding-left: 10px;
@@ -78,16 +86,21 @@
             display: flex;
             align-items: flex-start;
         }
+
         .event-details strong {
-            font-size: 2em;
+            font-size: 2em; /* Verdoppelte Schriftgröße für die Firma */
         }
+
         .event-details p {
-            margin: 2px 0;
+            margin: 2px 0; /* Minimierung der Abstände */
         }
+
         .room-info {
             color: darkgreen;
             font-size: 2em;
         }
+
+        /* Fehleranzeige */
         .error-message {
             color: red;
             text-align: center;
@@ -110,7 +123,6 @@
         © 2024 Hotel Alea GmbH - Alle Rechte vorbehalten.
     </footer>
     <div class="error-message" id="error-message"></div>
-
     <script>
         fetch('https://stappaf1.github.io/Menu/KALENDERECO.json')
             .then(response => {
@@ -122,7 +134,7 @@
             .then(data => {
                 const eventContainer = document.getElementById('event-container');
 
-                // Holen Sie sich das heutige Datum im Format DD.MM.YY
+                // Heutiges Datum im Format DD.MM.YY
                 const today = new Date();
                 const options = { day: '2-digit', month: '2-digit', year: '2-digit' };
                 const formattedDate = today.toLocaleDateString('de-DE', options);
@@ -130,37 +142,31 @@
                 // Setzen des Datums in der Kopfzeile
                 document.getElementById('date-title').innerText += ` ${formattedDate}`;
 
-                // Filtere die Veranstaltungen nach dem heutigen Datum
+                // Filtern der Veranstaltungen nach heutigem Datum
                 const todayEvents = data.events.filter(event => event.DATUM === formattedDate);
 
-                // Prüfen, ob es Veranstaltungen gibt
                 if (todayEvents.length === 0) {
                     document.getElementById('error-message').textContent = 'Heute sind keine Veranstaltungen geplant.';
                     return;
                 }
 
-                const totalEvents = todayEvents.length;
-                let maxImageHeight;
+                const numRows = todayEvents.length;
 
-                // Bildhöhe abhängig von der Anzahl der Events
-                if (totalEvents <= 2) {
-                    maxImageHeight = (window.innerHeight - 150) / 3; // Feste Höhe für 1-2 Events
-                } else {
-                    maxImageHeight = (window.innerHeight - 150) / totalEvents; // Dynamische Höhe bei mehr Events
-                }
+                // Dynamische Höhe für die Bilder, abhängig von der Anzahl der Zeilen
+                const imageHeight = numRows > 2 ? `calc(100% - 10px)` : 'calc(100% / 3 - 10px)';
 
                 todayEvents.forEach(event => {
                     const row = document.createElement('div');
                     row.classList.add('event-row');
 
                     const timeText = event.BIS ? `${event.VON} bis ${event.BIS}` : `ab ${event.VON}`;
-                    const roomInfo = event.RAUMHINWEIS ? `(${event.RAUMHINWEIS})` : '';
+                    const roomInfo = event.RAUMHINWEIS ? `(${event.RAUMHINWEIS})` : ''; 
 
                     const eventHTML = `
-                        <img src="${event.BILD}" alt="${event.TAGUNGSRAUM}" class="event-image" style="max-height: ${maxImageHeight}px;"/>
+                        <img src="${event.BILD}" alt="${event.TAGUNGSRAUM}" class="event-image" style="height:${imageHeight}"/>
                         <div class="event-details">
                             <strong>${event.KUNDE}</strong><span class="room-info"> - ${event.TAGUNGSRAUM} ${roomInfo}</span><br>
-                            <p>${event.EVENT || ' '}</p> <!-- Leerzeichen, wenn kein Tagungsname -->
+                            <p>${event.EVENT || ' '}</p> <!-- Leerzeichen, wenn kein Eventname -->
                             <p>${timeText}</p>
                         </div>
                         <div class="event-remark">
