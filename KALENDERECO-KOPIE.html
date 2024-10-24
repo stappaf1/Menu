@@ -43,7 +43,6 @@
             background-color: #d3d3d3;
             padding: 10px;
             text-align: center;
-            position: relative;
             width: 100%;
             font-size: 1em;
         }
@@ -54,7 +53,7 @@
             padding: 20px;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            justify-content: flex-start;
         }
 
         .event-row {
@@ -64,8 +63,8 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             display: flex;
             align-items: flex-start;
-            height: calc(100% / 6 - 20px); /* Dynamische Höhe für 6 Balken, mit Abstand */
-            margin-bottom: 20px; /* Abstand zwischen den Balken */
+            height: calc((100% - 40px) / 6); /* Dynamische Höhe für 6 Balken */
+            margin-bottom: 10px; /* Konstanten Abstand zwischen den Balken */
         }
 
         .event-image {
@@ -149,7 +148,7 @@
                 }
 
                 const numRows = todayEvents.length;
-                const imageHeight = numRows > 2 ? `calc(100% - 20px)` : 'calc(100% / 3 - 10px)';
+                const barHeight = (100 - (numRows * 1.5)); // Maximale Balkenhöhe anpassen
 
                 todayEvents.forEach(event => {
                     const row = document.createElement('div');
@@ -159,7 +158,7 @@
                     const roomInfo = event.RAUMHINWEIS ? `(${event.RAUMHINWEIS})` : ''; 
 
                     const eventHTML = `
-                        <img src="${event.BILD}" alt="${event.TAGUNGSRAUM}" class="event-image" style="height:${imageHeight}"/>
+                        <img src="${event.BILD}" alt="${event.TAGUNGSRAUM}" class="event-image" style="height:${barHeight}%"/>
                         <div class="event-details">
                             <strong>${event.KUNDE}</strong><span class="room-info"> - ${event.TAGUNGSRAUM} ${roomInfo}</span><br>
                             <p>${event.EVENT || ' '}</p>
