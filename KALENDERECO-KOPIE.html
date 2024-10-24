@@ -18,7 +18,7 @@
         /* Kopfzeile */
         .header {
             background-color: #d3d3d3;
-            padding: 10px;
+            padding: 5px; /* Geringer Abstand */
             display: flex;
             align-items: center;
         }
@@ -41,7 +41,7 @@
         /* Fußzeile */
         footer {
             background-color: #d3d3d3;
-            padding: 10px;
+            padding: 5px; /* Geringer Abstand */
             text-align: center;
             width: 100%;
             font-size: 1em;
@@ -50,7 +50,7 @@
         /* Event Anzeige */
         .event-container {
             flex-grow: 1;
-            padding: 20px;
+            padding: 5px; /* Geringer Abstand */
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
@@ -63,8 +63,8 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             display: flex;
             align-items: flex-start;
-            height: calc((100% - 40px) / 6); /* Dynamische Höhe für 6 Balken */
-            margin-bottom: 10px; /* Konstanten Abstand zwischen den Balken */
+            height: calc((100% - 20px) / 6); /* Dynamische Höhe für 6 Balken */
+            margin-bottom: 5px; /* Geringer Abstand zwischen den Balken */
         }
 
         .event-image {
@@ -147,9 +147,6 @@
                     return;
                 }
 
-                const numRows = todayEvents.length;
-                const barHeight = (100 - (numRows * 1.5)); // Maximale Balkenhöhe anpassen
-
                 todayEvents.forEach(event => {
                     const row = document.createElement('div');
                     row.classList.add('event-row');
@@ -158,7 +155,7 @@
                     const roomInfo = event.RAUMHINWEIS ? `(${event.RAUMHINWEIS})` : ''; 
 
                     const eventHTML = `
-                        <img src="${event.BILD}" alt="${event.TAGUNGSRAUM}" class="event-image" style="height:${barHeight}%"/>
+                        <img src="${event.BILD}" alt="${event.TAGUNGSRAUM}" class="event-image"/>
                         <div class="event-details">
                             <strong>${event.KUNDE}</strong><span class="room-info"> - ${event.TAGUNGSRAUM} ${roomInfo}</span><br>
                             <p>${event.EVENT || ' '}</p>
