@@ -21,7 +21,7 @@
             padding: 5px;
             display: flex;
             align-items: center;
-            flex-shrink: 0; /* Fixiert die Kopfzeile */
+            flex-shrink: 0; /* Kopfzeile bleibt fest */
         }
 
         .header img {
@@ -46,7 +46,7 @@
             text-align: center;
             width: 100%;
             font-size: 1em;
-            flex-shrink: 0; /* Fixiert die Fußzeile */
+            flex-shrink: 0; /* Fußzeile bleibt fest */
         }
 
         /* Event Anzeige */
@@ -55,7 +55,8 @@
             padding: 0 5px;
             display: flex;
             flex-direction: column;
-            justify-content: space-between; /* Verhindert, dass die Balken überlaufen */
+            justify-content: space-between;
+            height: calc(100vh - 10%); /* Verfügbare Höhe abzüglich Kopf- und Fußzeile */
         }
 
         .event-row {
@@ -65,11 +66,12 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             display: flex;
             align-items: flex-start;
+            margin-bottom: 1%; /* Fester Abstand zwischen den Balken */
         }
 
         .event-image {
             width: 100px;
-            height: 100%; /* Bild füllt die Balkenhöhe */
+            height: 100%; /* Bild passt sich der Balkenhöhe an */
             object-fit: cover;
             margin-right: 10px;
         }
@@ -153,14 +155,14 @@
 
                 const n = todayEvents.length; // Anzahl der Events
                 const spacing = 1; // 1% Abstand oben, unten und zwischen den Balken
-                const availableHeight = 100 - (5 * 2); // 100% - Höhe der Kopf- und Fußzeile (jeweils 5%)
+                const availableHeight = 100 - 2 * spacing; // 98% Verfügbare Höhe abzüglich Abstände oben und unten
 
                 const rowHeight = (availableHeight - (n - 1) * spacing) / n; // Berechnung der Balkenhöhe
 
                 todayEvents.forEach(event => {
                     const row = document.createElement('div');
                     row.classList.add('event-row');
-                    row.style.height = `${rowHeight}vh`; // Balkenhöhe dynamisch
+                    row.style.height = `${rowHeight}vh`; // Dynamische Balkenhöhe
 
                     const timeText = event.BIS ? `${event.VON} bis ${event.BIS}` : `ab ${event.VON}`;
                     const roomInfo = event.RAUMHINWEIS ? `(${event.RAUMHINWEIS})` : '';
