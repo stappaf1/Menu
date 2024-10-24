@@ -10,6 +10,9 @@
             margin: 0;
             padding: 0;
             background-color: #f8f9fa;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
         }
         /* Kopfzeile */
         .header {
@@ -24,7 +27,7 @@
         .header .title {
             flex-grow: 1;
             text-align: center;
-            font-size: 1.5em; /* Schriftgröße für die Begrüßung und das Datum */
+            font-size: 1.5em;
         }
         .header .clock-icon {
             width: 50px;
@@ -35,17 +38,17 @@
             background-color: #d3d3d3;
             padding: 10px;
             text-align: center;
-            position: absolute;
+            position: relative;
             bottom: 0;
             width: 100%;
-            font-size: 1em;
         }
         /* Event Anzeige */
         .event-container {
+            flex-grow: 1; /* Nimmt den gesamten verfügbaren Platz ein */
+            display: flex;
+            flex-direction: column;
             padding: 20px;
-            height: calc(100vh - 120px); /* Höhe des sichtbaren Bereichs abzüglich Header/Footer */
-            box-sizing: border-box;
-            overflow-y: auto; /* Falls die Höhe überschritten wird, Scrollbar anzeigen */
+            overflow-y: auto;
         }
         .event-row {
             background-color: white;
@@ -54,12 +57,13 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             margin-bottom: 10px;
             display: flex;
-            align-items: flex-start; /* Oben bündig ausrichten */
-            box-sizing: border-box;
+            align-items: flex-start;
+            flex-grow: 1; /* Gleichmäßige Verteilung der Höhe */
+            min-height: 100px; /* Mindesthöhe der Balken */
         }
         .event-image {
-            width: 100px; /* Feste Breite des Bildes */
-            height: auto; /* Höhe des Bildes automatisch anpassen */
+            width: 100px;
+            height: auto;
             margin-right: 10px;
         }
         .event-details {
@@ -67,7 +71,7 @@
             margin: 0;
         }
         .event-remark {
-            flex: 0 0 30%; /* Feste Breite für die Bemerkung */
+            flex: 0 0 30%;
             padding-left: 10px;
             margin-top: 0;
             display: flex;
@@ -83,7 +87,6 @@
             color: darkgreen;
             font-size: 2em;
         }
-        /* Fehleranzeige */
         .error-message {
             color: red;
             text-align: center;
@@ -117,7 +120,6 @@
             })
             .then(data => {
                 const eventContainer = document.getElementById('event-container');
-                const containerHeight = eventContainer.clientHeight;
 
                 // Holen Sie sich das heutige Datum im Format DD.MM.YY
                 const today = new Date();
@@ -136,22 +138,15 @@
                     return;
                 }
 
-                // Anzahl der Events
-                const eventCount = todayEvents.length;
-
-                // Höhe für jede Event-Zeile berechnen (maximale Höhe festlegen)
-                const rowHeight = Math.min(containerHeight / eventCount - 10, 150); // Max 150px Höhe pro Event
-
                 todayEvents.forEach(event => {
                     const row = document.createElement('div');
                     row.classList.add('event-row');
-                    row.style.height = `${rowHeight}px`; // Dynamische Höhe
 
                     const timeText = event.BIS ? `${event.VON} bis ${event.BIS}` : `ab ${event.VON}`;
                     const roomInfo = event.RAUMHINWEIS ? `(${event.RAUMHINWEIS})` : '';
 
                     const eventHTML = `
-                        <img src="${event.BILD}" alt="${event.TAGUNGSRAUM}" class="event-image" style="height:100%;"/>
+                        <img src="${event.BILD}" alt="${event.TAGUNGSRAUM}" class="event-image"/>
                         <div class="event-details">
                             <strong>${event.KUNDE}</strong><span class="room-info"> - ${event.TAGUNGSRAUM} ${roomInfo}</span><br>
                             <p>${event.EVENT || ' '}</p> <!-- Leerzeichen, wenn kein Tagungsname -->
