@@ -62,7 +62,6 @@
         .event-image {
             width: 100px; 
             height: 100%; /* Bild passt sich der Balkenhöhe an */
-            max-height: 100%; /* Verhindert, dass das Bild größer als der Balken wird */
             margin-right: 10px; 
         }
         .event-details {
@@ -133,18 +132,17 @@
 
                 const n = todayEvents.length; // Anzahl der Events
                 const availableHeight = document.querySelector('.event-container').clientHeight;
-
-                // Berechnung der max. Höhe, wenn 1 oder 2 Events
-                const maxImageHeight = (n <= 2) ? availableHeight * 0.4 : availableHeight / n;
+                const barHeight = (100 - (n + 1)) / n;
 
                 todayEvents.forEach(event => {
                     const row = document.createElement('div');
                     row.classList.add('event-row');
+                    row.style.height = `${barHeight}%`; // Höhe des Balkens in %
 
                     const timeText = event.BIS ? `${event.VON} bis ${event.BIS}` : `ab ${event.VON}`;
                     const roomInfo = event.RAUMHINWEIS ? `(${event.RAUMHINWEIS})` : '';
                     const eventHTML = `
-                        <img src="${event.BILD}" alt="${event.TAGUNGSRAUM}" class="event-image" style="height:${maxImageHeight}px"/>
+                        <img src="${event.BILD}" alt="${event.TAGUNGSRAUM}" class="event-image" />
                         <div class="event-details">
                             <strong>${event.KUNDE}</strong><span class="room-info"> - ${event.TAGUNGSRAUM} ${roomInfo}</span><br>
                             <p>${event.EVENT || ' '}</p>
@@ -156,12 +154,6 @@
                     `;
                     row.innerHTML = eventHTML;
                     eventContainer.appendChild(row);
-                });
-
-                // Höhe der Balken anpassen
-                const eventRows = document.querySelectorAll('.event-row');
-                eventRows.forEach(row => {
-                    row.style.height = `${(100 - (n + 1)) / n}%`;
                 });
             })
             .catch(error => {
