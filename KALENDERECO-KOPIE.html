@@ -62,8 +62,8 @@
         }
         .event-image {
             width: 100px; 
-            height: auto; 
-            max-height: 90%; /* Maximale Höhe des Bildes */
+            height: auto;
+            max-height: 100%; /* Bild passt sich der Balkenhöhe an */
             margin-right: 10px; 
         }
         .event-details {
@@ -133,6 +133,10 @@
                 }
 
                 const n = todayEvents.length; // Anzahl der Events
+                const availableHeight = document.querySelector('.event-container').clientHeight;
+
+                const maxImageHeight = (n <= 2) ? availableHeight * 0.4 : availableHeight / n;
+
                 todayEvents.forEach(event => {
                     const row = document.createElement('div');
                     row.classList.add('event-row');
@@ -140,7 +144,7 @@
                     const timeText = event.BIS ? `${event.VON} bis ${event.BIS}` : `ab ${event.VON}`;
                     const roomInfo = event.RAUMHINWEIS ? `(${event.RAUMHINWEIS})` : '';
                     const eventHTML = `
-                        <img src="${event.BILD}" alt="${event.TAGUNGSRAUM}" class="event-image"/>
+                        <img src="${event.BILD}" alt="${event.TAGUNGSRAUM}" class="event-image" style="max-height:${maxImageHeight}px"/>
                         <div class="event-details">
                             <strong>${event.KUNDE}</strong><span class="room-info"> - ${event.TAGUNGSRAUM} ${roomInfo}</span><br>
                             <p>${event.EVENT || ' '}</p>
