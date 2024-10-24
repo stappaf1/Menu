@@ -44,7 +44,7 @@
         }
         /* Event Anzeige */
         .event-container {
-            flex-grow: 1; /* Nimmt den gesamten verfügbaren Platz ein */
+            flex-grow: 1;
             display: flex;
             flex-direction: column;
             padding: 20px;
@@ -58,13 +58,14 @@
             margin-bottom: 10px;
             display: flex;
             align-items: flex-start;
-            flex-grow: 1; /* Gleichmäßige Verteilung der Höhe */
-            min-height: 100px; /* Mindesthöhe der Balken */
+            flex-grow: 1;
+            min-height: 100px;
         }
         .event-image {
             width: 100px;
             height: auto;
             margin-right: 10px;
+            object-fit: contain; /* Bildinhalt einpassen */
         }
         .event-details {
             flex: 1;
@@ -138,6 +139,16 @@
                     return;
                 }
 
+                const totalEvents = todayEvents.length;
+                let maxImageHeight;
+
+                // Bildhöhe abhängig von der Anzahl der Events
+                if (totalEvents <= 2) {
+                    maxImageHeight = (window.innerHeight - 150) / 3; // Feste Höhe für 1-2 Events
+                } else {
+                    maxImageHeight = (window.innerHeight - 150) / totalEvents; // Dynamische Höhe bei mehr Events
+                }
+
                 todayEvents.forEach(event => {
                     const row = document.createElement('div');
                     row.classList.add('event-row');
@@ -146,7 +157,7 @@
                     const roomInfo = event.RAUMHINWEIS ? `(${event.RAUMHINWEIS})` : '';
 
                     const eventHTML = `
-                        <img src="${event.BILD}" alt="${event.TAGUNGSRAUM}" class="event-image"/>
+                        <img src="${event.BILD}" alt="${event.TAGUNGSRAUM}" class="event-image" style="max-height: ${maxImageHeight}px;"/>
                         <div class="event-details">
                             <strong>${event.KUNDE}</strong><span class="room-info"> - ${event.TAGUNGSRAUM} ${roomInfo}</span><br>
                             <p>${event.EVENT || ' '}</p> <!-- Leerzeichen, wenn kein Tagungsname -->
