@@ -10,99 +10,83 @@
             margin: 0;
             padding: 0;
             background-color: #f8f9fa;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
+            height: 100vh; /* Gesamthöhe des Viewports */
+            overflow: hidden; /* Verstecke Scrollen */
         }
-
         /* Kopfzeile */
         .header {
             background-color: #d3d3d3;
-            padding: 5px;
+            padding: 10px;
             display: flex;
             align-items: center;
-            flex-shrink: 0; /* Kopfzeile bleibt fest */
+            height: 10%; /* Festgelegte Höhe für Kopfzeile */
         }
-
         .header img {
             max-height: 50px;
         }
-
         .header .title {
             flex-grow: 1;
             text-align: center;
-            font-size: 1.5em;
+            font-size: 1.5em; 
         }
-
         .header .clock-icon {
             width: 50px;
             height: 50px;
         }
-
         /* Fußzeile */
         footer {
             background-color: #d3d3d3;
-            padding: 5px;
+            padding: 10px;
             text-align: center;
+            position: absolute;
+            bottom: 0;
             width: 100%;
-            font-size: 1em;
-            flex-shrink: 0; /* Fußzeile bleibt fest */
+            height: 10%; /* Festgelegte Höhe für Fußzeile */
         }
-
         /* Event Anzeige */
         .event-container {
-            flex-grow: 1;
-            padding: 0 5px;
+            padding: 0 20px; /* Weniger Padding für die Events */
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
-            height: calc(100vh - 10%); /* Verfügbare Höhe abzüglich Kopf- und Fußzeile */
+            justify-content: space-between; /* Verteilt den Raum gleichmäßig */
+            height: 80%; /* 80% für den Event-Bereich */
         }
-
         .event-row {
             background-color: white;
-            padding: 5px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 1%; /* Fester Abstand zwischen den Balken */
+            margin: 1% 0; /* Abstände zwischen den Balken */
+            display: flex; 
+            align-items: flex-start; 
+            height: calc((100% - (n + 1) * 1%)/ n); /* Dynamische Höhe der Balken */
         }
-
         .event-image {
-            width: 100px;
-            height: 100%; /* Bild passt sich der Balkenhöhe an */
-            object-fit: cover;
-            margin-right: 10px;
+            width: 100px; 
+            height: auto; 
+            max-height: 90%; /* Maximale Höhe des Bildes */
+            margin-right: 10px; 
         }
-
         .event-details {
-            flex: 1;
-            margin: 0;
+            flex: 1; 
+            margin: 0; 
         }
-
         .event-remark {
-            flex: 0 0 30%;
-            padding-left: 10px;
-            margin-top: 0;
+            flex: 0 0 30%; 
+            padding-left: 10px; 
+            margin-top: 0; 
             display: flex;
-            align-items: flex-start;
+            align-items: flex-start; 
         }
-
         .event-details strong {
-            font-size: 2em;
+            font-size: 2em; 
         }
-
         .event-details p {
-            margin: 2px 0;
+            margin: 2px 0; 
         }
-
         .room-info {
-            color: darkgreen;
-            font-size: 2em;
+            color: darkgreen; 
+            font-size: 2em; 
         }
-
-        /* Fehleranzeige */
         .error-message {
             color: red;
             text-align: center;
@@ -118,17 +102,13 @@
         </div>
         <img src="Uhrensymbol.png" alt="Uhrensymbol" class="clock-icon">
     </div>
-
     <div class="event-container" id="event-container">
         <!-- Event-Daten werden hier dynamisch hinzugefügt -->
     </div>
-
     <footer>
         © 2024 Hotel Alea GmbH - Alle Rechte vorbehalten.
     </footer>
-
     <div class="error-message" id="error-message"></div>
-
     <script>
         fetch('https://stappaf1.github.io/Menu/KALENDERECO.json')
             .then(response => {
@@ -143,7 +123,6 @@
                 const today = new Date();
                 const options = { day: '2-digit', month: '2-digit', year: '2-digit' };
                 const formattedDate = today.toLocaleDateString('de-DE', options);
-
                 document.getElementById('date-title').innerText += ` ${formattedDate}`;
 
                 const todayEvents = data.events.filter(event => event.DATUM === formattedDate);
@@ -154,19 +133,12 @@
                 }
 
                 const n = todayEvents.length; // Anzahl der Events
-                const spacing = 1; // 1% Abstand oben, unten und zwischen den Balken
-                const availableHeight = 100 - 2 * spacing; // 98% Verfügbare Höhe abzüglich Abstände oben und unten
-
-                const rowHeight = (availableHeight - (n - 1) * spacing) / n; // Berechnung der Balkenhöhe
-
                 todayEvents.forEach(event => {
                     const row = document.createElement('div');
                     row.classList.add('event-row');
-                    row.style.height = `${rowHeight}vh`; // Dynamische Balkenhöhe
 
                     const timeText = event.BIS ? `${event.VON} bis ${event.BIS}` : `ab ${event.VON}`;
                     const roomInfo = event.RAUMHINWEIS ? `(${event.RAUMHINWEIS})` : '';
-
                     const eventHTML = `
                         <img src="${event.BILD}" alt="${event.TAGUNGSRAUM}" class="event-image"/>
                         <div class="event-details">
@@ -175,11 +147,17 @@
                             <p>${timeText}</p>
                         </div>
                         <div class="event-remark">
-                            <p>${event.BEMERKUNG ? event.BEMERKUNG : ''}</p>
+                            <p>${event.BEMERKUNG ? event.BEMERKUNG : ''}</p> 
                         </div>
                     `;
                     row.innerHTML = eventHTML;
                     eventContainer.appendChild(row);
+                });
+
+                // Höhe der Balken anpassen
+                const eventRows = document.querySelectorAll('.event-row');
+                eventRows.forEach(row => {
+                    row.style.height = `${(100 - (n + 1)) / n}%`;
                 });
             })
             .catch(error => {
