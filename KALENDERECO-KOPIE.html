@@ -53,6 +53,7 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between; /* Gleiche Abstände verteilen */
+            padding: 5px; /* Geringer Padding für den Container */
         }
 
         .event-row {
@@ -62,7 +63,7 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             display: flex;
             align-items: flex-start;
-            height: calc((100% - (5 * 5)) / 6); /* Dynamische Höhe für Balken mit gleichmäßigem Abstand */
+            height: calc((100% - 20px) / 6); /* Höhe für Balken (20px für 4 Abstände) */
             margin-bottom: 5px; /* Geringer Abstand zwischen den Balken */
         }
 
