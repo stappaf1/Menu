@@ -18,7 +18,7 @@
         /* Kopfzeile */
         .header {
             background-color: #d3d3d3;
-            padding: 5px; /* Geringer Abstand */
+            padding: 5px;
             display: flex;
             align-items: center;
         }
@@ -41,7 +41,7 @@
         /* Fußzeile */
         footer {
             background-color: #d3d3d3;
-            padding: 5px; /* Geringer Abstand */
+            padding: 5px;
             text-align: center;
             width: 100%;
             font-size: 1em;
@@ -52,7 +52,6 @@
             flex-grow: 1;
             display: flex;
             flex-direction: column;
-            justify-content: space-between; /* Gleiche Abstände verteilen */
             padding: 0 5px; /* Geringer Padding für den Container */
         }
 
@@ -63,13 +62,13 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             display: flex;
             align-items: flex-start;
-            height: calc((100% - 2% - 1% * (0)) / n); /* Berechnung der Balkenhöhe */
             margin-bottom: 1%; /* Gleicher Abstand zwischen den Balken */
         }
 
         .event-image {
             width: 100px;
-            height: 100%; /* Fülle die Höhe des Balkens */
+            height: auto; /* Fülle die Höhe des Balkens */
+            max-height: 100%; /* Maximal 100% Höhe des Balkens */
             object-fit: cover; /* Bild proportional anpassen */
             margin-right: 10px;
         }
@@ -155,7 +154,8 @@
                     row.classList.add('event-row');
 
                     // Berechnung der Balkenhöhe
-                    const rowHeight = (100 - n + 1) / n; // Höhe in %
+                    const totalHeight = 100 - 2 * 1; // 100% Höhe - 2% für oben und unten
+                    const rowHeight = (totalHeight - (n - 1) * spacing) / n; // Höhe in %
 
                     row.style.height = `${rowHeight}vh`; // Dynamische Höhe der Balken
 
