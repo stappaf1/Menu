@@ -10,7 +10,7 @@
             margin: 0;
             padding: 0;
             background-color: #f8f9fa;
-            height: 100vh; /* Gesamte Bildschirmhöhe */
+            height: 100vh;
             display: flex;
             flex-direction: column;
         }
@@ -30,7 +30,7 @@
         .header .title {
             flex-grow: 1;
             text-align: center;
-            font-size: 1.5em; /* Schriftgröße für die Begrüßung und das Datum */
+            font-size: 1.5em;
         }
 
         .header .clock-icon {
@@ -54,7 +54,7 @@
             padding: 20px;
             display: flex;
             flex-direction: column;
-            justify-content: space-around; /* Gleicher Abstand zwischen den Balken */
+            justify-content: space-between;
         }
 
         .event-row {
@@ -63,8 +63,9 @@
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             display: flex;
-            align-items: flex-start; /* Bild und Text oben bündig */
-            height: calc(100% / 6 - 10px); /* Dynamische Höhe für 6 Balken, minus Abstände */
+            align-items: flex-start;
+            height: calc(100% / 6 - 20px); /* Dynamische Höhe für 6 Balken, mit Abstand */
+            margin-bottom: 20px; /* Abstand zwischen den Balken */
         }
 
         .event-image {
@@ -88,11 +89,11 @@
         }
 
         .event-details strong {
-            font-size: 2em; /* Verdoppelte Schriftgröße für die Firma */
+            font-size: 2em;
         }
 
         .event-details p {
-            margin: 2px 0; /* Minimierung der Abstände */
+            margin: 2px 0;
         }
 
         .room-info {
@@ -134,15 +135,12 @@
             .then(data => {
                 const eventContainer = document.getElementById('event-container');
 
-                // Heutiges Datum im Format DD.MM.YY
                 const today = new Date();
                 const options = { day: '2-digit', month: '2-digit', year: '2-digit' };
                 const formattedDate = today.toLocaleDateString('de-DE', options);
 
-                // Setzen des Datums in der Kopfzeile
                 document.getElementById('date-title').innerText += ` ${formattedDate}`;
 
-                // Filtern der Veranstaltungen nach heutigem Datum
                 const todayEvents = data.events.filter(event => event.DATUM === formattedDate);
 
                 if (todayEvents.length === 0) {
@@ -151,9 +149,7 @@
                 }
 
                 const numRows = todayEvents.length;
-
-                // Dynamische Höhe für die Bilder, abhängig von der Anzahl der Zeilen
-                const imageHeight = numRows > 2 ? `calc(100% - 10px)` : 'calc(100% / 3 - 10px)';
+                const imageHeight = numRows > 2 ? `calc(100% - 20px)` : 'calc(100% / 3 - 10px)';
 
                 todayEvents.forEach(event => {
                     const row = document.createElement('div');
@@ -166,11 +162,11 @@
                         <img src="${event.BILD}" alt="${event.TAGUNGSRAUM}" class="event-image" style="height:${imageHeight}"/>
                         <div class="event-details">
                             <strong>${event.KUNDE}</strong><span class="room-info"> - ${event.TAGUNGSRAUM} ${roomInfo}</span><br>
-                            <p>${event.EVENT || ' '}</p> <!-- Leerzeichen, wenn kein Eventname -->
+                            <p>${event.EVENT || ' '}</p>
                             <p>${timeText}</p>
                         </div>
                         <div class="event-remark">
-                            <p>${event.BEMERKUNG ? event.BEMERKUNG : ''}</p> <!-- Nur anzeigen, wenn Bemerkung vorhanden -->
+                            <p>${event.BEMERKUNG ? event.BEMERKUNG : ''}</p>
                         </div>
                     `;
                     row.innerHTML = eventHTML;
