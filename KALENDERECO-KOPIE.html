@@ -43,8 +43,9 @@
         /* Event Anzeige */
         .event-container {
             padding: 20px;
-            height: calc(100vh - 100px); /* Höhe des sichtbaren Bereichs abzüglich Header/Footer */
+            height: calc(100vh - 120px); /* Höhe des sichtbaren Bereichs abzüglich Header/Footer */
             box-sizing: border-box;
+            overflow-y: auto; /* Falls die Höhe überschritten wird, Scrollbar anzeigen */
         }
         .event-row {
             background-color: white;
@@ -138,8 +139,8 @@
                 // Anzahl der Events
                 const eventCount = todayEvents.length;
 
-                // Höhe für jede Event-Zeile berechnen
-                const rowHeight = containerHeight / eventCount - 10; // Abstände berücksichtigen
+                // Höhe für jede Event-Zeile berechnen (maximale Höhe festlegen)
+                const rowHeight = Math.min(containerHeight / eventCount - 10, 150); // Max 150px Höhe pro Event
 
                 todayEvents.forEach(event => {
                     const row = document.createElement('div');
