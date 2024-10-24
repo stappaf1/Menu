@@ -63,8 +63,8 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             display: flex;
             align-items: flex-start;
-            height: calc((94% / 6) - 5px); /* Höhe für Balken abzüglich Abstände */
-            margin-bottom: 3%; /* Gleicher Abstand zwischen den Balken */
+            height: calc((100% - 2% - 1% * (0)) / n); /* Berechnung der Balkenhöhe */
+            margin-bottom: 1%; /* Gleicher Abstand zwischen den Balken */
         }
 
         .event-image {
@@ -147,12 +147,20 @@
                     return;
                 }
 
+                const n = todayEvents.length; // Anzahl der Events
+                const spacing = 1; // Abstand in %
+
                 todayEvents.forEach(event => {
                     const row = document.createElement('div');
                     row.classList.add('event-row');
 
+                    // Berechnung der Balkenhöhe
+                    const rowHeight = (100 - n + 1) / n; // Höhe in %
+
+                    row.style.height = `${rowHeight}vh`; // Dynamische Höhe der Balken
+
                     const timeText = event.BIS ? `${event.VON} bis ${event.BIS}` : `ab ${event.VON}`;
-                    const roomInfo = event.RAUMHINWEIS ? `(${event.RAUMHINWEIS})` : ''; 
+                    const roomInfo = event.RAUMHINWEIS ? `(${event.RAUMHINWEIS})` : '';
 
                     const eventHTML = `
                         <img src="${event.BILD}" alt="${event.TAGUNGSRAUM}" class="event-image"/>
