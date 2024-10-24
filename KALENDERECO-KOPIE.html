@@ -52,7 +52,7 @@
             flex-grow: 1;
             display: flex;
             flex-direction: column;
-            padding: 0 5px; /* Geringer Padding für den Container */
+            padding: 0 5px;
         }
 
         .event-row {
@@ -66,9 +66,8 @@
         }
 
         .event-image {
-            width: 100px;
-            height: auto; /* Fülle die Höhe des Balkens */
-            max-height: 100%; /* Maximal 100% Höhe des Balkens */
+            width: 100px; /* Feste Breite des Bildes */
+            height: 100%; /* Füllt die Höhe des Balkens */
             object-fit: cover; /* Bild proportional anpassen */
             margin-right: 10px;
         }
@@ -149,12 +148,14 @@
                 const n = todayEvents.length; // Anzahl der Events
                 const spacing = 1; // Abstand in %
 
+                // Höhe zwischen Kopf- und Fußzeile berechnen
+                const totalHeight = 100 - (5); // 100% Höhe minus Kopf- und Fußzeile
+
                 todayEvents.forEach(event => {
                     const row = document.createElement('div');
                     row.classList.add('event-row');
 
                     // Berechnung der Balkenhöhe
-                    const totalHeight = 100 - 2 * 1; // 100% Höhe - 2% für oben und unten
                     const rowHeight = (totalHeight - (n - 1) * spacing) / n; // Höhe in %
 
                     row.style.height = `${rowHeight}vh`; // Dynamische Höhe der Balken
