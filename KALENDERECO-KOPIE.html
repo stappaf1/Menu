@@ -10,7 +10,6 @@
             margin: 0;
             padding: 0;
             background-color: #f8f9fa;
-            overflow: hidden; /* Verhindert Scrollen */
         }
 
         /* Kopfzeile */
@@ -37,8 +36,7 @@
             padding: 10px;
             text-align: center;
             font-size: 1em;
-            position: absolute;
-            bottom: 0;
+            position: relative;
             width: 100%;
         }
 
@@ -46,31 +44,22 @@
         .event-container {
             padding: 0 10px;
             box-sizing: border-box;
+            margin-top: 1%; /* Abstand nach der Kopfzeile */
             position: relative;
-            top: calc(50px + 1%); /* Höhe der Kopfzeile + 1% */
-            height: calc(100vh - 100px - 1%); /* Höhe des Bildschirms - Kopfzeile - Fußzeile */
             overflow-y: auto; /* Scrollen im Eventbereich ermöglichen */
         }
 
         .event-row {
             display: flex;
-            height: calc((100vh - 100px - 1%) * 0.8 / var(--num-events)); /* Dynamische Höhe */
-            margin-bottom: calc(1%); /* Abstand zwischen Balken */
-            border: 1px solid #ddd; /* Optional, für Sichtbarkeit */
+            margin-bottom: calc(var(--height-h) / 100); /* Abstand zwischen Balken */
         }
 
         .segment-1 {
             background-color: grey;
             width: 33.33%; /* 1/3 der Gesamtbreite */
             display: flex;
-            justify-content: center;
             align-items: center;
-            overflow: hidden;
-        }
-
-        .segment-1 img {
-            height: 100%;
-            object-fit: contain; /* Verhindert Verzerrung */
+            justify-content: center;
         }
 
         .segment-2 {
@@ -116,13 +105,15 @@
         </div>
         <img src="Uhrensymbol.png" alt="Uhrensymbol" class="clock-icon">
     </div>
+    
     <div class="event-container" id="event-container">
         <!-- Event-Daten werden hier dynamisch hinzugefügt -->
     </div>
+
     <footer>
         © 2024 Hotel Alea GmbH - Alle Rechte vorbehalten.
     </footer>
-    <div class="error-message" id="error-message"></div>
+    
     <script>
         fetch('https://stappaf1.github.io/Menu/KALENDERECO.json')
             .then(response => {
@@ -140,30 +131,23 @@
                 const todayEvents = data.events.filter(event => event.DATUM === formattedDate);
 
                 if (todayEvents.length === 0) {
-                    document.getElementById('error-message').textContent = 'Heute sind keine Veranstaltungen geplant.';
+                    document.getElementById('event-container').innerHTML = 'Heute sind keine Veranstaltungen geplant.';
                     return;
                 }
 
-                // Berechnungen
                 const n = todayEvents.length;
                 const H = window.innerHeight - document.querySelector('.header').offsetHeight - document.querySelector('footer').offsetHeight;
                 const B = window.innerWidth;
                 const BH = H * (100 - (n + 1)) / n / 100;
 
-                document.documentElement.style.setProperty('--num-events', n);
-
+                // Dynamische Berechnung der Höhe
                 todayEvents.forEach(event => {
                     const row = document.createElement('div');
                     row.classList.add('event-row');
+                    row.style.height = `${BH}px`;
 
-                    // Erstellen der Segmente
                     const segment1 = document.createElement('div');
                     segment1.classList.add('segment-1');
-
-                    const image = document.createElement('img');
-                    image.src = event.BILD;
-                    image.alt = event.TAGUNGSRAUM;
-                    segment1.appendChild(image);
 
                     const segment2 = document.createElement('div');
                     segment2.classList.add('segment-2');
@@ -208,7 +192,7 @@
                 });
             })
             .catch(error => {
-                document.getElementById('error-message').textContent = `Fehler beim Laden der JSON-Daten: ${error.message}`;
+                document.getElementById('event-container').textContent = `Fehler beim Laden der JSON-Daten: ${error.message}`;
             });
     </script>
 </body>
