@@ -37,12 +37,14 @@
 
         /* Fußzeile */
         footer {
+            height: 0; /* Setzt die Fußzeilenhöhe auf 0 */
+            overflow: hidden; /* Versteckt jeglichen Inhalt in der Fußzeile */
             background-color: #d3d3d3;
-            padding: 10px;
+            padding: 0;
             text-align: center;
             font-size: 1em;
             position: absolute;
-            bottom: 3%;
+            bottom: 0;
             width: 100%;
         }
 
@@ -115,7 +117,7 @@
         <!-- Event-Daten werden hier dynamisch hinzugefügt -->
     </div>
     <footer>
-        © 2024 Hotel Alea GmbH - Alle Rechte vorbehalten.
+        <!-- Inhalt der Fußzeile bleibt leer -->
     </footer>
     <div class="error-message" id="error-message"></div>
     <script>
@@ -140,8 +142,7 @@
                 }
 
                 const headerHeight = document.querySelector('.header').offsetHeight;
-                const footerHeight = document.querySelector('footer').offsetHeight;
-                const availableHeight = window.innerHeight - headerHeight - footerHeight - (0.03 * window.innerHeight);
+                const availableHeight = window.innerHeight - headerHeight - (0.03 * window.innerHeight); // 3% Abstand vor der Fußzeile
                 const numEvents = todayEvents.length;
                 const gap = 0.01 * availableHeight;
                 const barHeight = (availableHeight - gap * (numEvents - 1)) / numEvents;
