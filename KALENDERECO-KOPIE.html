@@ -60,9 +60,9 @@
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             margin-bottom: 1%;
-            width: 100%; /* Stretches row to full width */
+            width: 100%;
         }
 
         .event-image {
@@ -78,25 +78,23 @@
             flex: 1;
             margin: 0;
             font-size: inherit;
-            white-space: nowrap; /* Prevent line breaks */
-            overflow: hidden; /* Hide overflow */
-            text-overflow: ellipsis; /* Add ellipsis for overflow */
-        }
-
-        .event-remark {
-            flex: 0 0 30%;
-            padding-left: 10px;
             display: flex;
-            align-items: flex-start;
+            flex-direction: column; /* Vertikale Anordnung */
         }
 
         .event-details strong, .room-info {
             display: block;
-            white-space: nowrap; /* Prevent line breaks */
+            white-space: nowrap; /* Verhindert Zeilenumbrüche */
         }
 
         .event-details p {
             margin: 2px 0;
+        }
+
+        .event-remark {
+            margin-top: 5px; /* Abstand zur Bemerkung */
+            font-size: 0.9em; /* Kleinere Schriftgröße für Bemerkungen */
+            color: gray; /* Optional: Farbe für Bemerkungen */
         }
 
         .error-message {
@@ -161,9 +159,9 @@
                             <strong>${event.KUNDE}</strong><span class="room-info"> - ${event.TAGUNGSRAUM} ${roomInfo}</span>
                             <p>${event.EVENT || ' '}</p>
                             <p>${timeText}</p>
-                        </div>
-                        <div class="event-remark">
-                            <p>${event.BEMERKUNG ? event.BEMERKUNG : ''}</p>
+                            <div class="event-remark">
+                                <p>${event.BEMERKUNG ? event.BEMERKUNG : ''}</p>
+                            </div>
                         </div>
                     `;
                     row.innerHTML = eventHTML;
