@@ -10,81 +10,92 @@
             margin: 0;
             padding: 0;
             background-color: #f8f9fa;
-            height: 100vh; /* Gesamthöhe des Viewports */
-            overflow: hidden; /* Verstecke Scrollen */
         }
+
         /* Kopfzeile */
         .header {
             background-color: #d3d3d3;
             padding: 10px;
             display: flex;
             align-items: center;
-            height: 10%; /* Festgelegte Höhe für Kopfzeile */
         }
+
         .header img {
             max-height: 50px;
         }
+
         .header .title {
             flex-grow: 1;
             text-align: center;
-            font-size: 1.5em; 
+            font-size: 1.5em;
         }
+
         .header .clock-icon {
             width: 50px;
             height: 50px;
         }
+
         /* Fußzeile */
         footer {
             background-color: #d3d3d3;
             padding: 10px;
             text-align: center;
+            font-size: 1em;
             position: absolute;
             bottom: 0;
             width: 100%;
-            height: 10%; /* Festgelegte Höhe für Fußzeile */
         }
+
         /* Event Anzeige */
         .event-container {
-            padding: 0 20px; /* Weniger Padding für die Events */
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between; /* Verteilt den Raum gleichmäßig */
-            height: 80%; /* 80% für den Event-Bereich */
+            padding: 0 10px; /* Horizontaler Abstand für Übersicht */
+            box-sizing: border-box;
         }
+
         .event-row {
             background-color: white;
+            padding: 5px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin: 1% 0; /* Abstände zwischen den Balken */
-            display: flex; 
-            align-items: flex-start; 
-        }
-        .event-image {
-            width: 100px; 
-            height: 100%; /* Bild passt sich der Balkenhöhe an */
-            margin-right: 10px; 
-        }
-        .event-details {
-            flex: 1; 
-            margin: 0; 
-        }
-        .event-remark {
-            flex: 0 0 30%; 
-            padding-left: 10px; 
-            margin-top: 0; 
             display: flex;
-            align-items: flex-start; 
+            align-items: flex-start;
+            margin-bottom: 1%;
         }
+
+        .event-image {
+            width: auto;
+            height: 100%;
+            max-width: 100px;
+            object-fit: cover;
+            object-position: center;
+            margin-right: 10px;
+        }
+
+        .event-details {
+            flex: 1;
+            margin: 0;
+        }
+
+        .event-remark {
+            flex: 0 0 30%;
+            padding-left: 10px;
+            display: flex;
+            align-items: flex-start;
+        }
+
         .event-details strong {
-            font-size: 2em; 
+            font-size: 2em;
         }
+
         .event-details p {
-            margin: 2px 0; 
+            margin: 2px 0;
         }
+
         .room-info {
-            color: darkgreen; 
-            font-size: 2em; 
+            color: darkgreen;
+            font-size: 2em;
         }
+
         .error-message {
             color: red;
             text-align: center;
@@ -117,12 +128,10 @@
             })
             .then(data => {
                 const eventContainer = document.getElementById('event-container');
-
                 const today = new Date();
                 const options = { day: '2-digit', month: '2-digit', year: '2-digit' };
                 const formattedDate = today.toLocaleDateString('de-DE', options);
                 document.getElementById('date-title').innerText += ` ${formattedDate}`;
-
                 const todayEvents = data.events.filter(event => event.DATUM === formattedDate);
 
                 if (todayEvents.length === 0) {
@@ -130,26 +139,30 @@
                     return;
                 }
 
-                const n = todayEvents.length; // Anzahl der Events
-                const availableHeight = document.querySelector('.event-container').clientHeight;
-                const barHeight = (100 - (n + 1)) / n;
+                const headerHeight = document.querySelector('.header').offsetHeight;
+                const footerHeight = document.querySelector('footer').offsetHeight;
+                const availableHeight = window.innerHeight - headerHeight - footerHeight;
+                const numEvents = todayEvents.length;
+                const gap = 0.01 * availableHeight;
+                const barHeight = (availableHeight - gap * (numEvents - 1)) / numEvents;
 
                 todayEvents.forEach(event => {
                     const row = document.createElement('div');
                     row.classList.add('event-row');
-                    row.style.height = `${barHeight}%`; // Höhe des Balkens in %
+                    row.style.height = `${barHeight}px`;
+                    row.style.marginBottom = `${gap}px`;
 
                     const timeText = event.BIS ? `${event.VON} bis ${event.BIS}` : `ab ${event.VON}`;
                     const roomInfo = event.RAUMHINWEIS ? `(${event.RAUMHINWEIS})` : '';
                     const eventHTML = `
-                        <img src="${event.BILD}" alt="${event.TAGUNGSRAUM}" class="event-image" />
+                        <img src="${event.BILD}" alt="${event.TAGUNGSRAUM}" class="event-image"/>
                         <div class="event-details">
                             <strong>${event.KUNDE}</strong><span class="room-info"> - ${event.TAGUNGSRAUM} ${roomInfo}</span><br>
                             <p>${event.EVENT || ' '}</p>
                             <p>${timeText}</p>
                         </div>
                         <div class="event-remark">
-                            <p>${event.BEMERKUNG ? event.BEMERKUNG : ''}</p> 
+                            <p>${event.BEMERKUNG ? event.BEMERKUNG : ''}</p>
                         </div>
                     `;
                     row.innerHTML = eventHTML;
