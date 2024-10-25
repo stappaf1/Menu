@@ -51,14 +51,15 @@
         .event-row {
             display: flex;
             margin-bottom: calc(var(--height-h) / 100); /* Abstand zwischen Balken */
+            height: var(--balken-height); /* Höhe der Balken */
         }
 
         .segment-1 {
             background-color: grey;
             width: 33.33%; /* 1/3 der Gesamtbreite */
             display: flex;
-            align-items: center;
             justify-content: center;
+            align-items: center;
         }
 
         .segment-2 {
@@ -133,15 +134,24 @@
                 const H = window.innerHeight - document.querySelector('.header').offsetHeight - document.querySelector('footer').offsetHeight;
                 const B = window.innerWidth;
                 const BH = (H / 100) * (99 / n - 1);
+                
+                // Set the CSS variables for height
+                document.documentElement.style.setProperty('--height-h', H);
+                document.documentElement.style.setProperty('--balken-height', `${BH}px`);
 
-                // Dynamische Berechnung der Höhe
                 todayEvents.forEach(event => {
                     const row = document.createElement('div');
                     row.classList.add('event-row');
-                    row.style.height = `${BH}px`;
 
                     const segment1 = document.createElement('div');
                     segment1.classList.add('segment-1');
+
+                    // Hier könnte später das Bild eingefügt werden
+                    // const img = document.createElement('img');
+                    // img.src = event.BILD; // URL des Bildes
+                    // img.style.maxHeight = `${BH}px`;
+                    // img.style.objectFit = 'contain';
+                    // segment1.appendChild(img);
 
                     const segment2 = document.createElement('div');
                     segment2.classList.add('segment-2');
