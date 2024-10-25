@@ -60,7 +60,7 @@
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             display: flex;
-            align-items: flex-start;
+            align-items: center;
             margin-bottom: 1%;
             width: 100%; /* Stretches row to full width */
         }
@@ -78,6 +78,9 @@
             flex: 1;
             margin: 0;
             font-size: inherit;
+            white-space: nowrap; /* Prevent line breaks */
+            overflow: hidden; /* Hide overflow */
+            text-overflow: ellipsis; /* Add ellipsis for overflow */
         }
 
         .event-remark {
@@ -89,6 +92,7 @@
 
         .event-details strong, .room-info {
             display: block;
+            white-space: nowrap; /* Prevent line breaks */
         }
 
         .event-details p {
@@ -154,7 +158,7 @@
                     const eventHTML = `
                         <img src="${event.BILD}" alt="${event.TAGUNGSRAUM}" class="event-image"/>
                         <div class="event-details" style="font-size:${barHeight * 0.5}px;">
-                            <strong>${event.KUNDE}</strong><span class="room-info"> - ${event.TAGUNGSRAUM} ${roomInfo}</span><br>
+                            <strong>${event.KUNDE}</strong><span class="room-info"> - ${event.TAGUNGSRAUM} ${roomInfo}</span>
                             <p>${event.EVENT || ' '}</p>
                             <p>${timeText}</p>
                         </div>
