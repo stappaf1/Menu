@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signage - Alea Eco</title>
+    <title>Event Anzeige</title>
     <style>
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f8f9fa;
+            overflow: hidden; /* Verhindert Scrollen */
         }
 
         /* Kopfzeile */
@@ -18,6 +19,7 @@
             padding: 10px;
             display: flex;
             align-items: center;
+            justify-content: space-between;
         }
 
         .header img {
@@ -25,14 +27,8 @@
         }
 
         .header .title {
-            flex-grow: 1;
             text-align: center;
             font-size: 1.5em;
-        }
-
-        .header .clock-icon {
-            width: 50px;
-            height: 50px;
         }
 
         /* Fußzeile */
@@ -48,56 +44,67 @@
 
         /* Event Anzeige */
         .event-container {
-            padding: 0 10px; /* Horizontaler Abstand für Übersicht */
+            padding: 0 10px;
             box-sizing: border-box;
+            position: relative;
+            top: calc(50px + 1%); /* Höhe der Kopfzeile + 1% */
+            height: calc(100vh - 100px - 1%); /* Höhe des Bildschirms - Kopfzeile - Fußzeile */
+            overflow-y: auto; /* Scrollen im Eventbereich ermöglichen */
         }
 
         .event-row {
-            background-color: white;
-            padding: 5px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             display: flex;
+            height: calc((100vh - 100px - 1%) * 0.8 / var(--num-events)); /* Dynamische Höhe */
+            margin-bottom: calc(1%); /* Abstand zwischen Balken */
+            border: 1px solid #ddd; /* Optional, für Sichtbarkeit */
+        }
+
+        .segment-1 {
+            background-color: grey;
+            width: 33.33%; /* 1/3 der Gesamtbreite */
+            display: flex;
+            justify-content: center;
             align-items: center;
-            margin-bottom: 1%;
+            overflow: hidden;
         }
 
-        .event-image {
-            width: auto;
+        .segment-1 img {
             height: 100%;
-            max-width: 100px;
-            object-fit: contain; /* Beibehaltung des Seitenverhältnisses */
-            margin-right: 10px;
+            object-fit: contain; /* Verhindert Verzerrung */
         }
 
-        .event-details {
-            flex: 1;
+        .segment-2 {
+            background-color: white;
+            width: 66.67%; /* 2/3 der Gesamtbreite */
             display: flex;
             flex-direction: column;
-            background-color: rgba(255, 192, 203, 0.5); /* Rosa Hintergrundfarbe */
-            white-space: nowrap; /* Verhindert Zeilenumbruch innerhalb des Texts */
-            overflow: hidden; /* Versteckt überlaufenden Text */
-            text-overflow: ellipsis; /* Fügt "..." hinzu, wenn der Text zu lang ist */
+            justify-content: space-between;
+            padding: 10px; /* Padding für Abstand */
         }
 
-        .event-remark {
-            margin-top: 5px; /* Abstand zur Bemerkung */
+        .customer-info {
+            font-size: 50%; /* 50% der Balkenhöhe */
+            color: black;
         }
 
-        .event-details strong {
-            font-size: 2em; /* Größe für Firmenname */
-            line-height: 1.2; /* Zeilenhöhe für besseren Abstand */
+        .event-name {
+            font-size: 20%; /* 20% der Balkenhöhe */
+            color: darkgray;
         }
 
-        .room-info {
-            color: darkgreen;
-            font-size: 1.5em; /* Größe für Raumangabe */
-        }
-
-        .error-message {
+        .event-time {
+            font-size: 10%; /* 10% der Balkenhöhe */
             color: red;
-            text-align: center;
-            margin-top: 20px;
+        }
+
+        .remark {
+            font-size: 10%; /* 10% der Balkenhöhe */
+            color: darkgray;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2; /* Maximal 2 Zeilen */
         }
     </style>
 </head>
@@ -137,32 +144,66 @@
                     return;
                 }
 
-                const headerHeight = document.querySelector('.header').offsetHeight;
-                const footerHeight = document.querySelector('footer').offsetHeight;
-                const availableHeight = window.innerHeight - headerHeight - footerHeight - (0.03 * window.innerHeight); // 3% Platz
-                const numEvents = todayEvents.length;
-                const gap = 0.01 * availableHeight;
-                const barHeight = (availableHeight - gap * (numEvents - 1)) / numEvents;
+                // Berechnungen
+                const n = todayEvents.length;
+                const H = window.innerHeight - document.querySelector('.header').offsetHeight - document.querySelector('footer').offsetHeight;
+                const B = window.innerWidth;
+                const BH = H * (100 - (n + 1)) / n / 100;
+
+                document.documentElement.style.setProperty('--num-events', n);
 
                 todayEvents.forEach(event => {
                     const row = document.createElement('div');
                     row.classList.add('event-row');
-                    row.style.height = `${barHeight}px`;
-                    row.style.marginBottom = `${gap}px`;
 
-                    const timeText = event.BIS ? `${event.VON} bis ${event.BIS}` : `ab ${event.VON}`;
-                    const roomInfo = event.RAUMHINWEIS ? `(${event.RAUMHINWEIS})` : '';
-                    const eventHTML = `
-                        <img src="${event.BILD}" alt="${event.TAGUNGSRAUM}" class="event-image"/>
-                        <div class="event-details">
-                            <strong>${event.KUNDE}</strong><span class="room-info"> - ${event.TAGUNGSRAUM} ${roomInfo}</span><br>
-                            <p>${event.EVENT || ' '}</p>
-                        </div>
-                        <div class="event-remark">
-                            <p>${event.BEMERKUNG ? event.BEMERKUNG : ''}</p>
-                        </div>
-                    `;
-                    row.innerHTML = eventHTML;
+                    // Erstellen der Segmente
+                    const segment1 = document.createElement('div');
+                    segment1.classList.add('segment-1');
+
+                    const image = document.createElement('img');
+                    image.src = event.BILD;
+                    image.alt = event.TAGUNGSRAUM;
+                    segment1.appendChild(image);
+
+                    const segment2 = document.createElement('div');
+                    segment2.classList.add('segment-2');
+
+                    // Zeile 1: Kunde & Raum
+                    const customerInfo = document.createElement('div');
+                    customerInfo.classList.add('customer-info');
+                    customerInfo.textContent = `${event.KUNDE} in ${event.TAGUNGSRAUM} ${event.RAUMHINWEIS}`;
+                    segment2.appendChild(customerInfo);
+
+                    // Zeile 2: Eventname
+                    if (event.EVENT) {
+                        const eventName = document.createElement('div');
+                        eventName.classList.add('event-name');
+                        eventName.textContent = event.EVENT;
+                        segment2.appendChild(eventName);
+                    }
+
+                    // Zeile 3: Uhrzeit
+                    const eventTime = document.createElement('div');
+                    eventTime.classList.add('event-time');
+                    if (!event.VON && !event.BIS) {
+                        // kein Text
+                    } else if (!event.BIS) {
+                        eventTime.textContent = `ab ${event.VON}`;
+                    } else {
+                        eventTime.textContent = `von ${event.VON} bis ${event.BIS}`;
+                    }
+                    segment2.appendChild(eventTime);
+
+                    // Zeile 4: Bemerkung
+                    if (event.BEMERKUNG) {
+                        const remark = document.createElement('div');
+                        remark.classList.add('remark');
+                        remark.textContent = event.BEMERKUNG;
+                        segment2.appendChild(remark);
+                    }
+
+                    row.appendChild(segment1);
+                    row.appendChild(segment2);
                     eventContainer.appendChild(row);
                 });
             })
