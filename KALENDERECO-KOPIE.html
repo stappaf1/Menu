@@ -36,8 +36,6 @@
             padding: 10px;
             text-align: center;
             font-size: 1em;
-            position: relative;
-            width: 100%;
         }
 
         /* Event Anzeige */
@@ -95,6 +93,12 @@
             -webkit-box-orient: vertical;
             -webkit-line-clamp: 2; /* Maximal 2 Zeilen */
         }
+
+        img.event-image {
+            height: var(--balken-height);
+            object-fit: cover; /* Bildanpassung */
+            width: 100%; /* Bildbreite */
+        }
     </style>
 </head>
 <body>
@@ -135,7 +139,7 @@
                 const B = window.innerWidth;
                 const BH = (H / 100) * (99 / n - 1);
                 
-                // Set the CSS variables for height
+                // Setze die CSS Variablen für die Höhe
                 document.documentElement.style.setProperty('--height-h', H);
                 document.documentElement.style.setProperty('--balken-height', `${BH}px`);
 
@@ -146,12 +150,11 @@
                     const segment1 = document.createElement('div');
                     segment1.classList.add('segment-1');
 
-                    // Hier könnte später das Bild eingefügt werden
-                    // const img = document.createElement('img');
-                    // img.src = event.BILD; // URL des Bildes
-                    // img.style.maxHeight = `${BH}px`;
-                    // img.style.objectFit = 'contain';
-                    // segment1.appendChild(img);
+                    // Bild hinzufügen
+                    const img = document.createElement('img');
+                    img.src = event.BILD; // URL des Bildes
+                    img.classList.add('event-image');
+                    segment1.appendChild(img);
 
                     const segment2 = document.createElement('div');
                     segment2.classList.add('segment-2');
