@@ -75,9 +75,7 @@
         }
 
         .event-details {
-            flex: 1; /* Füllt den gesamten verfügbaren Platz */
-            margin: 0;
-            font-size: inherit;
+            flex-grow: 1; /* Füllt den gesamten verfügbaren Platz */
             display: flex;
             flex-direction: column; /* Vertikale Anordnung */
         }
@@ -85,6 +83,7 @@
         .event-details strong, .room-info {
             display: block;
             white-space: nowrap; /* Verhindert Zeilenumbrüche */
+            width: 100%; /* Nutzt die gesamte Breite */
         }
 
         .event-details p {
@@ -156,7 +155,8 @@
                     const eventHTML = `
                         <img src="${event.BILD}" alt="${event.TAGUNGSRAUM}" class="event-image"/>
                         <div class="event-details" style="font-size:${barHeight * 0.5}px;">
-                            <strong>${event.KUNDE}</strong><span class="room-info"> - ${event.TAGUNGSRAUM} ${roomInfo}</span>
+                            <strong>${event.KUNDE}</strong>
+                            <span class="room-info"> - ${event.TAGUNGSRAUM} ${roomInfo}</span>
                             <p>${event.EVENT || ' '}</p>
                             <p>${timeText}</p>
                             <div class="event-remark">
