@@ -79,6 +79,9 @@
             display: flex;
             flex-direction: column;
             background-color: rgba(255, 192, 203, 0.5); /* Rosa Hintergrundfarbe */
+            white-space: nowrap; /* Verhindert Zeilenumbruch innerhalb des Texts */
+            overflow: hidden; /* Versteckt Überlaufenden Text */
+            text-overflow: ellipsis; /* Fügt "..." hinzu, wenn der Text zu lang ist */
         }
 
         .event-details strong, .room-info {
