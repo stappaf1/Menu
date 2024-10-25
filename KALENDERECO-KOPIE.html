@@ -37,8 +37,8 @@
 
         /* Fußzeile */
         footer {
-            height: 0; /* Setzt die Fußzeilenhöhe auf 0 */
-            overflow: hidden; /* Versteckt jeglichen Inhalt in der Fußzeile */
+            height: 0;
+            overflow: hidden;
             background-color: #d3d3d3;
             padding: 0;
             text-align: center;
@@ -85,17 +85,12 @@
             align-items: flex-start;
         }
 
-        .event-details strong {
-            font-size: 2em;
+        .event-details strong, .room-info {
+            display: block;
         }
 
         .event-details p {
             margin: 2px 0;
-        }
-
-        .room-info {
-            color: darkgreen;
-            font-size: 2em;
         }
 
         .error-message {
@@ -116,9 +111,7 @@
     <div class="event-container" id="event-container">
         <!-- Event-Daten werden hier dynamisch hinzugefügt -->
     </div>
-    <footer>
-        <!-- Inhalt der Fußzeile bleibt leer -->
-    </footer>
+    <footer></footer>
     <div class="error-message" id="error-message"></div>
     <script>
         fetch('https://stappaf1.github.io/Menu/KALENDERECO.json')
@@ -142,7 +135,7 @@
                 }
 
                 const headerHeight = document.querySelector('.header').offsetHeight;
-                const availableHeight = window.innerHeight - headerHeight - (0.03 * window.innerHeight); // 3% Abstand vor der Fußzeile
+                const availableHeight = window.innerHeight - headerHeight - (0.03 * window.innerHeight);
                 const numEvents = todayEvents.length;
                 const gap = 0.01 * availableHeight;
                 const barHeight = (availableHeight - gap * (numEvents - 1)) / numEvents;
@@ -155,9 +148,10 @@
 
                     const timeText = event.BIS ? `${event.VON} bis ${event.BIS}` : `ab ${event.VON}`;
                     const roomInfo = event.RAUMHINWEIS ? `(${event.RAUMHINWEIS})` : '';
+
                     const eventHTML = `
                         <img src="${event.BILD}" alt="${event.TAGUNGSRAUM}" class="event-image"/>
-                        <div class="event-details">
+                        <div class="event-details" style="font-size:${barHeight * 0.5}px;">
                             <strong>${event.KUNDE}</strong><span class="room-info"> - ${event.TAGUNGSRAUM} ${roomInfo}</span><br>
                             <p>${event.EVENT || ' '}</p>
                             <p>${timeText}</p>
