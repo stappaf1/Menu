@@ -46,7 +46,6 @@
             box-sizing: border-box;
             margin-top: 1%; /* Abstand nach der Kopfzeile */
             position: relative;
-            overflow-y: auto; /* Scrollen im Eventbereich ermöglichen */
         }
 
         .event-row {
@@ -130,15 +129,10 @@
                 document.getElementById('date-title').innerText += ` ${formattedDate}`;
                 const todayEvents = data.events.filter(event => event.DATUM === formattedDate);
 
-                if (todayEvents.length === 0) {
-                    document.getElementById('event-container').innerHTML = 'Heute sind keine Veranstaltungen geplant.';
-                    return;
-                }
-
                 const n = todayEvents.length;
                 const H = window.innerHeight - document.querySelector('.header').offsetHeight - document.querySelector('footer').offsetHeight;
                 const B = window.innerWidth;
-                const BH = H * (100 - (n + 1)) / n / 100;
+                const BH = (H / 100) * (99 / n - 1);
 
                 // Dynamische Berechnung der Höhe
                 todayEvents.forEach(event => {
@@ -190,6 +184,9 @@
                     row.appendChild(segment2);
                     eventContainer.appendChild(row);
                 });
+
+                // Letzten Abstand vor der Fußzeile hinzufügen
+                eventContainer.style.marginBottom = `${H / 100}px`;
             })
             .catch(error => {
                 document.getElementById('event-container').textContent = `Fehler beim Laden der JSON-Daten: ${error.message}`;
