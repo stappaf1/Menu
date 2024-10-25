@@ -42,13 +42,13 @@
             text-align: center;
             font-size: 1em;
             position: absolute;
-            bottom: 0;
+            bottom: 3%;
             width: 100%;
         }
 
         /* Event Anzeige */
         .event-container {
-            padding: 0 10px; /* Horizontaler Abstand für Übersicht */
+            padding: 0 10px;
             box-sizing: border-box;
         }
 
@@ -141,7 +141,7 @@
 
                 const headerHeight = document.querySelector('.header').offsetHeight;
                 const footerHeight = document.querySelector('footer').offsetHeight;
-                const availableHeight = window.innerHeight - headerHeight - footerHeight;
+                const availableHeight = window.innerHeight - headerHeight - footerHeight - (0.03 * window.innerHeight);
                 const numEvents = todayEvents.length;
                 const gap = 0.01 * availableHeight;
                 const barHeight = (availableHeight - gap * (numEvents - 1)) / numEvents;
