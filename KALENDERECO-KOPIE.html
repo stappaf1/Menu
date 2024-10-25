@@ -72,16 +72,22 @@
         .customer-info {
             font-size: 50%; /* 50% der Balkenhöhe */
             color: black;
+            height: 50%; /* Höhe 50% */
+            overflow: hidden; /* Überschüssiger Text wird abgeschnitten */
+            text-overflow: ellipsis;
+            white-space: nowrap; /* Kein Zeilenumbruch */
         }
 
         .event-name {
             font-size: 20%; /* 20% der Balkenhöhe */
             color: darkgray;
+            height: 20%; /* Höhe 20% */
         }
 
         .event-time {
             font-size: 10%; /* 10% der Balkenhöhe */
             color: red;
+            height: 10%; /* Höhe 10% */
         }
 
         .remark {
