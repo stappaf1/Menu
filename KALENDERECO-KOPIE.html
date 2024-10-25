@@ -60,7 +60,7 @@
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             display: flex;
-            align-items: stretch; /* Erlaubt, dass das Bild und der Text die volle Höhe einnehmen */
+            align-items: stretch;
             margin-bottom: 1%;
             width: 100%;
         }
@@ -75,15 +75,16 @@
         }
 
         .event-details {
-            flex-grow: 1; /* Füllt den gesamten verfügbaren Platz */
+            flex-grow: 1;
             display: flex;
-            flex-direction: column; /* Vertikale Anordnung */
+            flex-direction: column;
+            background-color: rgba(255, 192, 203, 0.5); /* Rosa Hintergrundfarbe */
         }
 
         .event-details strong, .room-info {
             display: block;
-            white-space: nowrap; /* Verhindert Zeilenumbrüche */
-            width: 100%; /* Nutzt die gesamte Breite */
+            white-space: nowrap;
+            width: 100%;
         }
 
         .event-details p {
@@ -91,9 +92,9 @@
         }
 
         .event-remark {
-            margin-top: 5px; /* Abstand zur Bemerkung */
-            font-size: 0.9em; /* Kleinere Schriftgröße für Bemerkungen */
-            color: gray; /* Optional: Farbe für Bemerkungen */
+            margin-top: 5px;
+            font-size: 0.9em;
+            color: gray;
         }
 
         .error-message {
