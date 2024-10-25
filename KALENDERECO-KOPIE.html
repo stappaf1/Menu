@@ -37,10 +37,8 @@
 
         /* Fußzeile */
         footer {
-            height: 0;
-            overflow: hidden;
             background-color: #d3d3d3;
-            padding: 0;
+            padding: 10px;
             text-align: center;
             font-size: 1em;
             position: absolute;
@@ -50,7 +48,7 @@
 
         /* Event Anzeige */
         .event-container {
-            padding: 0 10px;
+            padding: 0 10px; /* Horizontaler Abstand für Übersicht */
             box-sizing: border-box;
         }
 
@@ -60,44 +58,40 @@
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             display: flex;
-            align-items: stretch;
+            align-items: center;
             margin-bottom: 1%;
-            width: 100%;
         }
 
         .event-image {
             width: auto;
             height: 100%;
             max-width: 100px;
-            object-fit: cover;
-            object-position: center;
+            object-fit: contain; /* Beibehaltung des Seitenverhältnisses */
             margin-right: 10px;
         }
 
         .event-details {
-            flex-grow: 1;
+            flex: 1;
             display: flex;
             flex-direction: column;
             background-color: rgba(255, 192, 203, 0.5); /* Rosa Hintergrundfarbe */
             white-space: nowrap; /* Verhindert Zeilenumbruch innerhalb des Texts */
-            overflow: hidden; /* Versteckt Überlaufenden Text */
+            overflow: hidden; /* Versteckt überlaufenden Text */
             text-overflow: ellipsis; /* Fügt "..." hinzu, wenn der Text zu lang ist */
         }
 
-        .event-details strong, .room-info {
-            display: block;
-            white-space: nowrap;
-            width: 100%;
-        }
-
-        .event-details p {
-            margin: 2px 0;
-        }
-
         .event-remark {
-            margin-top: 5px;
-            font-size: 0.9em;
-            color: gray;
+            margin-top: 5px; /* Abstand zur Bemerkung */
+        }
+
+        .event-details strong {
+            font-size: 2em; /* Größe für Firmenname */
+            line-height: 1.2; /* Zeilenhöhe für besseren Abstand */
+        }
+
+        .room-info {
+            color: darkgreen;
+            font-size: 1.5em; /* Größe für Raumangabe */
         }
 
         .error-message {
@@ -118,7 +112,9 @@
     <div class="event-container" id="event-container">
         <!-- Event-Daten werden hier dynamisch hinzugefügt -->
     </div>
-    <footer></footer>
+    <footer>
+        © 2024 Hotel Alea GmbH - Alle Rechte vorbehalten.
+    </footer>
     <div class="error-message" id="error-message"></div>
     <script>
         fetch('https://stappaf1.github.io/Menu/KALENDERECO.json')
@@ -142,7 +138,8 @@
                 }
 
                 const headerHeight = document.querySelector('.header').offsetHeight;
-                const availableHeight = window.innerHeight - headerHeight - (0.03 * window.innerHeight);
+                const footerHeight = document.querySelector('footer').offsetHeight;
+                const availableHeight = window.innerHeight - headerHeight - footerHeight - (0.03 * window.innerHeight); // 3% Platz
                 const numEvents = todayEvents.length;
                 const gap = 0.01 * availableHeight;
                 const barHeight = (availableHeight - gap * (numEvents - 1)) / numEvents;
@@ -155,17 +152,14 @@
 
                     const timeText = event.BIS ? `${event.VON} bis ${event.BIS}` : `ab ${event.VON}`;
                     const roomInfo = event.RAUMHINWEIS ? `(${event.RAUMHINWEIS})` : '';
-
                     const eventHTML = `
                         <img src="${event.BILD}" alt="${event.TAGUNGSRAUM}" class="event-image"/>
-                        <div class="event-details" style="font-size:${barHeight * 0.5}px;">
-                            <strong>${event.KUNDE}</strong>
-                            <span class="room-info"> - ${event.TAGUNGSRAUM} ${roomInfo}</span>
+                        <div class="event-details">
+                            <strong>${event.KUNDE}</strong><span class="room-info"> - ${event.TAGUNGSRAUM} ${roomInfo}</span><br>
                             <p>${event.EVENT || ' '}</p>
-                            <p>${timeText}</p>
-                            <div class="event-remark">
-                                <p>${event.BEMERKUNG ? event.BEMERKUNG : ''}</p>
-                            </div>
+                        </div>
+                        <div class="event-remark">
+                            <p>${event.BEMERKUNG ? event.BEMERKUNG : ''}</p>
                         </div>
                     `;
                     row.innerHTML = eventHTML;
