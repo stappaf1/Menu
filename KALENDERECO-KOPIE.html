@@ -69,7 +69,7 @@
             padding-left: 10px;
             display: flex;
             flex-direction: column;
-            justify-content: space-evenly;
+            justify-content: space-between; /* Gleichmäßige Verteilung */
             overflow: hidden;
         }
         /* Enger Abstand und dynamische Schriftgröße */
@@ -77,8 +77,9 @@
         .event-text,
         .time-text,
         .remark-text {
-            line-height: 1; /* Enge Zeilenhöhe */
+            line-height: 0.8; /* Sehr enge Zeilenhöhe */
             margin: 0; /* Keine zusätzlichen Abstände */
+            padding: 0; /* Keine Polsterung */
             overflow: hidden;
             white-space: nowrap;
             text-overflow: ellipsis;
