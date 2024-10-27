@@ -50,10 +50,10 @@
         }
         .event-bar {
             display: flex;
-            align-items: stretch; /* Dehnt alle Elemente vertikal */
+            align-items: stretch;
             margin: calc(var(--bar-height) / 100) 0;
             height: var(--bar-height);
-            overflow: hidden; /* Verhindert vertikales Überschreiben */
+            overflow: hidden;
         }
         .segment-1 {
             width: calc(var(--bar-height) * 1.35);
@@ -72,34 +72,33 @@
             justify-content: space-evenly;
             overflow: hidden;
         }
-        /* Anpassungen für die Schriftgrößen und Höhe */
-        .customer-text {
-            font-size: clamp(18px, 2vw, 28px);
-            color: black;
-            line-height: 1.3;
+        /* Enger Abstand und dynamische Schriftgröße */
+        .customer-text,
+        .event-text,
+        .time-text,
+        .remark-text {
+            line-height: 1; /* Enge Zeilenhöhe */
+            margin: 0; /* Keine zusätzlichen Abstände */
             overflow: hidden;
             white-space: nowrap;
             text-overflow: ellipsis;
+        }
+        /* Schriftgrößen für jeden Texttyp */
+        .customer-text {
+            font-size: clamp(18px, 2vw, 26px);
+            color: black;
         }
         .event-text {
             font-size: clamp(16px, 1.8vw, 24px);
             color: darkgray;
-            line-height: 1.3;
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
         }
         .time-text {
             font-size: clamp(16px, 1.8vw, 24px);
             color: red;
-            line-height: 1.3;
         }
         .remark-text {
             font-size: clamp(14px, 1.5vw, 20px);
             color: darkgray;
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
         }
         /* Fehleranzeige */
         .error-message {
