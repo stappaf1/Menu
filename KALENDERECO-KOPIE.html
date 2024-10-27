@@ -66,16 +66,20 @@
         .segment-2 {
             flex-grow: 1; /* Nimmt verbleibende Breite ein */
             padding-left: 10px; /* Abstand zwischen Segmenten */
+            display: flex; /* Flexbox für die Anordnung */
+            flex-direction: column; /* Vertikale Anordnung der Texte */
+            justify-content: space-between; /* Gleiche Verteilung des Platzes */
         }
         .segment-2 p {
             margin: 0; /* Kein Abstand für Absätze */
         }
         .customer-text {
-            font-size: calc(var(--bar-height) * 0.5); /* Dynamische Schriftgröße für Zeile 1 */
+            font-size: calc(var(--bar-height) * 0.4); /* Dynamische Schriftgröße für Zeile 1 */
             color: black;
             overflow: hidden; /* Überlauf verhindern */
             text-overflow: ellipsis; /* Text wird abgeschnitten */
             white-space: nowrap; /* Keine Zeilenumbrüche */
+            max-height: 50%; /* Maximal 50% der Segmenthöhe */
         }
         .event-text {
             font-size: 20%; /* 20% von BH */
