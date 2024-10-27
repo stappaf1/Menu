@@ -70,7 +70,7 @@
             justify-content: space-between; /* Gleiche Verteilung des Platzes */
         }
         .customer-text {
-            font-size: 30px; /* Feste Schriftgröße für Zeile 1 */
+            font-size: calc(var(--font-size) * 0.5); /* Dynamische Schriftgröße für Zeile 1 */
             color: black;
         }
         .event-text {
@@ -212,4 +212,8 @@
                 });
             })
             .catch(error => {
-                document.getElementById
+                document.getElementById('error-message').textContent = `Fehler beim Laden der JSON-Daten: ${error.message}`;
+            });
+    </script>
+</body>
+</html>
