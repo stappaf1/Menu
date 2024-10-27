@@ -71,8 +71,11 @@
             margin: 0; /* Kein Abstand für Absätze */
         }
         .customer-text {
-            font-size: 50%; /* 50% von BH */
+            font-size: calc(var(--bar-height) * 0.5); /* Dynamische Schriftgröße für Zeile 1 */
             color: black;
+            overflow: hidden; /* Überlauf verhindern */
+            text-overflow: ellipsis; /* Text wird abgeschnitten */
+            white-space: nowrap; /* Keine Zeilenumbrüche */
         }
         .event-text {
             font-size: 20%; /* 20% von BH */
