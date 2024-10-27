@@ -50,15 +50,15 @@
         }
         .event-bar {
             display: flex;
-            margin: 10px 0; /* Abstand zwischen Balken */
-            height: 100px; /* Höhe für jeden Balken */
+            margin: calc(var(--bar-height) / 100) 0; /* Abstand zwischen Balken */
+            height: var(--bar-height); /* Dynamische Höhe */
         }
         .segment-1 {
-            width: 135px; /* Breite für Segment 1 */
+            width: calc(var(--bar-height) * 1.35); /* Breite für Segment 1 */
             background-color: gray;
         }
         .segment-1 img {
-            width: 133px; /* Breite des Bildes */
+            width: calc(var(--bar-height) * 1.33); /* Breite des Bildes basierend auf der Höhe */
             height: 100%; /* Volle Höhe */
             object-fit: cover; /* Seitenverhältnis beibehalten */
         }
@@ -69,13 +69,29 @@
             flex-direction: column; /* Vertikale Anordnung der Texte */
             justify-content: space-between; /* Gleiche Verteilung des Platzes */
         }
-        .customer-text, .event-text, .time-text, .remark-text {
-            font-size: 30px; /* Feste Schriftgröße für alle Zeilen */
+        .customer-text {
+            font-size: 30px; /* Feste Schriftgröße für Zeile 1 */
             color: black;
+        }
+        .event-text {
+            font-size: calc(var(--font-size) * 0.3); /* Dynamische Schriftgröße für Zeile 2 */
+            color: darkgray;
             overflow: hidden;
             text-overflow: ellipsis; /* Text wird abgeschnitten */
             white-space: nowrap; /* Keine Zeilenumbrüche */
         }
+        .time-text {
+            font-size: calc(var(--font-size) * 0.35); /* Dynamische Schriftgröße für Zeile 3 */
+            color: red;
+        }
+        .remark-text {
+            font-size: calc(var(--font-size) * 0.2); /* Dynamische Schriftgröße für Zeile 4 */
+            color: darkgray;
+            overflow: hidden;
+            text-overflow: ellipsis; /* Text wird abgeschnitten */
+            white-space: nowrap; /* Keine Zeilenumbrüche */
+        }
+        /* Fehleranzeige */
         .error-message {
             color: red;
             text-align: center;
@@ -127,9 +143,19 @@
                     return;
                 }
 
+                // Berechnung der Höhe H und der Höhe der Balken
+                const footerHeight = document.querySelector('footer').offsetHeight;
+                const headerHeight = document.querySelector('.header').offsetHeight;
+                const totalHeight = window.innerHeight - footerHeight - headerHeight; // Höhe zwischen Kopf- und Fußzeile
+                const barHeight = totalHeight / 100 * (99 / n - 1); // Höhe BH für jeden Balken
+
+                // Setzen der CSS-Variablen für die Balkenhöhe und Schriftgröße
+                document.documentElement.style.setProperty('--bar-height', `${barHeight}px`);
+                document.documentElement.style.setProperty('--font-size', `${totalHeight / 100}px`); // Schriftgröße abhängig von H
+
                 // Füge Abstand nach der Kopfzeile hinzu
                 const spacer = document.createElement('div');
-                spacer.style.height = "20px"; // Fester Abstand
+                spacer.style.height = `${totalHeight / 100}px`; // Abstand von H/100
                 eventContainer.appendChild(spacer);
 
                 todayEvents.forEach(event => {
@@ -186,8 +212,4 @@
                 });
             })
             .catch(error => {
-                document.getElementById('error-message').textContent = `Fehler beim Laden der JSON-Daten: ${error.message}`;
-            });
-    </script>
-</body>
-</html>
+                document.getElementById
