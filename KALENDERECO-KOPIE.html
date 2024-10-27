@@ -10,8 +10,8 @@
             margin: 0;
             padding: 0;
             background-color: #f8f9fa;
-            position: relative; /* Ermöglicht absolute Positionierung für den Footer */
-            min-height: 100vh; /* Stellt sicher, dass der Body die volle Höhe einnimmt */
+            position: relative;
+            min-height: 100vh;
         }
         /* Kopfzeile */
         .header {
@@ -26,7 +26,7 @@
         .header .title {
             flex-grow: 1;
             text-align: center;
-            font-size: 1.5em; /* Schriftgröße für die Begrüßung und das Datum */
+            font-size: 1.5em;
         }
         .header .clock-icon {
             width: 50px;
@@ -50,50 +50,56 @@
         }
         .event-bar {
             display: flex;
-            margin: calc(var(--bar-height) / 100) 0; /* Abstand zwischen Balken */
-            height: var(--bar-height); /* Dynamische Höhe */
+            margin: calc(var(--bar-height) / 100) 0;
+            height: var(--bar-height);
         }
         .segment-1 {
-            width: calc(var(--bar-height) * 1.35); /* Breite für Segment 1 */
+            width: calc(var(--bar-height) * 1.35);
             background-color: gray;
         }
         .segment-1 img {
-            width: calc(var(--bar-height) * 1.33); /* Breite des Bildes basierend auf der Höhe */
-            height: 100%; /* Volle Höhe */
-            object-fit: cover; /* Seitenverhältnis beibehalten */
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
         .segment-2 {
-            flex-grow: 1; /* Nimmt verbleibende Breite ein */
-            padding-left: 10px; /* Abstand zwischen Segmenten */
-            display: flex; /* Flexbox für die Anordnung */
-            flex-direction: column; /* Vertikale Anordnung der Texte */
-            justify-content: space-between; /* Gleiche Verteilung des Platzes */
+            flex-grow: 1;
+            padding-left: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
         }
-        /* Anpassungen für die Schriftgrößen */
+        /* Anpassungen für die Schriftgrößen und Höhe */
         .customer-text {
-            font-size: clamp(20px, 2.5vw, 30px); /* Dynamische Schriftgröße zwischen 20px und 30px */
-            white-space: nowrap; /* Verhindert Zeilenumbrüche */
-            overflow: hidden;
-            text-overflow: ellipsis; /* Kürzt langen Text */
+            font-size: clamp(20px, 2.5vw, 30px);
             color: black;
+            line-height: 1.2;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            flex-basis: 25%;
         }
         .event-text {
-            font-size: 25px; /* Feste Schriftgröße für Zeile 2 */
+            font-size: 25px;
             color: darkgray;
+            line-height: 1.2;
             overflow: hidden;
-            text-overflow: ellipsis; /* Text wird abgeschnitten */
-            white-space: nowrap; /* Keine Zeilenumbrüche */
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            flex-basis: 20%;
         }
         .time-text {
-            font-size: 25px; /* Feste Schriftgröße für Zeile 3 */
+            font-size: 25px;
             color: red;
+            flex-basis: 20%;
         }
         .remark-text {
-            font-size: 20px; /* Feste Schriftgröße für Zeile 4 */
+            font-size: 20px;
             color: darkgray;
             overflow: hidden;
-            text-overflow: ellipsis; /* Text wird abgeschnitten */
-            white-space: nowrap; /* Keine Zeilenumbrüche */
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            flex-basis: 15%;
         }
         /* Fehleranzeige */
         .error-message {
@@ -129,38 +135,26 @@
             .then(data => {
                 const eventContainer = document.getElementById('event-container');
 
-                // Holen Sie sich das heutige Datum im Format DD.MM.YY
                 const today = new Date();
                 const options = { day: '2-digit', month: '2-digit', year: '2-digit' };
                 const formattedDate = today.toLocaleDateString('de-DE', options);
 
-                // Setzen des Datums in der Kopfzeile
                 document.getElementById('date-title').innerText += ` ${formattedDate}`;
 
-                // Filtere die Veranstaltungen nach dem heutigen Datum
                 const todayEvents = data.events.filter(event => event.DATUM === formattedDate);
-                const n = todayEvents.length; // Anzahl der Veranstaltungen
+                const n = todayEvents.length;
 
-                // Prüfen, ob es Veranstaltungen gibt
                 if (n === 0) {
                     document.getElementById('error-message').textContent = 'Heute sind keine Veranstaltungen geplant.';
                     return;
                 }
 
-                // Berechnung der Höhe H und der Höhe der Balken
                 const footerHeight = document.querySelector('footer').offsetHeight;
                 const headerHeight = document.querySelector('.header').offsetHeight;
-                const totalHeight = window.innerHeight - footerHeight - headerHeight; // Höhe zwischen Kopf- und Fußzeile
-                const barHeight = totalHeight / 100 * (99 / n - 1); // Höhe BH für jeden Balken
+                const totalHeight = window.innerHeight - footerHeight - headerHeight;
+                const barHeight = totalHeight / 100 * (99 / n - 1);
 
-                // Setzen der CSS-Variablen für die Balkenhöhe und Schriftgröße
                 document.documentElement.style.setProperty('--bar-height', `${barHeight}px`);
-                document.documentElement.style.setProperty('--font-size', `${totalHeight / 100}px`); // Schriftgröße abhängig von H
-
-                // Füge Abstand nach der Kopfzeile hinzu
-                const spacer = document.createElement('div');
-                spacer.style.height = `${totalHeight / 100}px`; // Abstand von H/100
-                eventContainer.appendChild(spacer);
 
                 todayEvents.forEach(event => {
                     const bar = document.createElement('div');
@@ -177,13 +171,11 @@
                     const segment2 = document.createElement('div');
                     segment2.classList.add('segment-2');
 
-                    // Zeile 1: Kunde und Raum
                     const customerText = document.createElement('p');
                     customerText.classList.add('customer-text');
                     customerText.textContent = `${event.KUNDE} in ${event.TAGUNGSRAUM} ${event.RAUMHINWEIS || ''}`;
                     segment2.appendChild(customerText);
 
-                    // Zeile 2: Event (wenn vorhanden)
                     if (event.EVENT) {
                         const eventText = document.createElement('p');
                         eventText.classList.add('event-text');
@@ -191,7 +183,6 @@
                         segment2.appendChild(eventText);
                     }
 
-                    // Zeile 3: Zeit
                     const timeText = document.createElement('p');
                     timeText.classList.add('time-text');
                     if (event.VON && event.BIS) {
@@ -201,7 +192,6 @@
                     }
                     segment2.appendChild(timeText);
 
-                    // Zeile 4: Bemerkung (maximal 2 Zeilen)
                     if (event.BEMERKUNG) {
                         const remarkText = document.createElement('p');
                         remarkText.classList.add('remark-text');
@@ -209,7 +199,6 @@
                         segment2.appendChild(remarkText);
                     }
 
-                    // Füge die Segmente zum Balken hinzu
                     bar.appendChild(segment1);
                     bar.appendChild(segment2);
                     eventContainer.appendChild(bar);
