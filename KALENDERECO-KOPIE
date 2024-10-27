@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signage - Alea Eco</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        /* Kopfzeile */
+        .header {
+            background-color: #d3d3d3;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .header img {
+            max-height: 50px;
+        }
+        .header .title {
+            flex-grow: 1;
+            text-align: center;
+            font-size: 1.5em; /* Schriftgröße für die Begrüßung und das Datum */
+        }
+        .header .clock-icon {
+            width: 50px;
+            height: 50px;
+        }
+        /* Fußzeile */
+        footer {
+            background-color: #d3d3d3;
+            padding: 10px;
+            text-align: center;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            font-size: 1em;
+        }
+        /* Event Anzeige */
+        .event-container {
+            padding: 20px;
+        }
+        .event-row {
+            background-color: white;
+            padding: 5px; /* Verringern des Abstands */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            display: flex; /* Flexbox für die Anordnung */
+            align-items: flex-start; /* Oben bündig ausrichten */
+        }
+        .event-image {
+            width: 100px; /* Feste Breite des Bildes */
+            height: auto; /* Höhe des Bildes automatisch anpassen */
+            max-height: 90px; /* Maximale Höhe des Bildes, um es an den Textblock anzupassen */
+            margin-right: 10px; /* Abstand zwischen Bild und Text */
+        }
+        .event-details {
+            flex: 1; /* Platz für die Textinhalte */
+            margin: 0; /* Minimierung der Abstände */
+        }
+        .event-remark {
+            flex: 0 0 30%; /* Feste Breite für die Bemerkung */
+            padding-left: 10px; /* Abstand zur anderen Spalte */
+            margin-top: 0; /* Kein zusätzlicher Abstand */
+            display: flex;
+            align-items: flex-start; /* Oben bündig ausrichten */
+        }
+        .event-details strong {
+            font-size: 2em; /* Verdoppelte Schriftgröße für die Firma */
+        }
+        .event-details p {
+            margin: 2px 0; /* Minimierung der Abstände zwischen den Absätzen */
+        }
+        .room-info {
+            color: darkgreen; /* Dunkelgrün für Raumangaben */
+            font-size: 2em; /* Gleiche Schriftgröße wie die Firma */
+        }
+        /* Fehleranzeige */
+        .error-message {
+            color: red;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="https://cdn.prod.website-files.com/60d2e4a3b351ee2c91f53a1e/60f9ca16c53dae6854816379_Logo%20Alea.svg" alt="Alea Logo">
+        <div class="title">
+            <h1 id="date-title">Willkommen bei Alea Eco</h1>
+        </div>
+        <img src="Uhrensymbol.png" alt="Uhrensymbol" class="clock-icon">
+    </div>
+    <div class="event-container" id="event-container">
+        <!-- Event-Daten werden hier dynamisch hinzugefügt -->
+    </div>
+    <footer>
+        © 2024 Hotel Alea GmbH - Alle Rechte vorbehalten.
+    </footer>
+    <div class="error-message" id="error-message"></div>
+    <script>
+        fetch('https://stappaf1.github.io/Menu/KALENDERECO.json')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Netzwerkantwort war nicht ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                const eventContainer = document.getElementById('event-container');
+
+                // Holen Sie sich das heutige Datum im Format DD.MM.YY
+                const today = new Date();
+                const options = { day: '2-digit', month: '2-digit', year: '2-digit' };
+                const formattedDate = today.toLocaleDateString('de-DE', options);
+
+                // Setzen des Datums in der Kopfzeile
+                document.getElementById('date-title').innerText += ` ${formattedDate}`;
+
+                // Filtere die Veranstaltungen nach dem heutigen Datum
+                const todayEvents = data.events.filter(event => event.DATUM === formattedDate);
+
+                // Prüfen, ob es Veranstaltungen gibt
+                if (todayEvents.length === 0) {
+                    document.getElementById('error-message').textContent = 'Heute sind keine Veranstaltungen geplant.';
+                    return;
+                }
+
+                todayEvents.forEach(event => {
+                    const row = document.createElement('div');
+                    row.classList.add('event-row');
+
+                    const timeText = event.BIS ? `${event.VON} bis ${event.BIS}` : `ab ${event.VON}`;
+                    const roomInfo = event.RAUMHINWEIS ? `(${event.RAUMHINWEIS})` : '';  // Prüfen ob RAUMHINWEIS leer ist
+                    const eventHTML = `
+                        <img src="${event.BILD}" alt="${event.TAGUNGSRAUM}" class="event-image"/>
+                        <div class="event-details">
+                            <strong>${event.KUNDE}</strong><span class="room-info"> - ${event.TAGUNGSRAUM} ${roomInfo}</span><br>
+                            <p>${event.EVENT || ' '}</p> <!-- Leerzeichen, wenn kein Tagungsname -->
+                            <p>${timeText}</p>
+                        </div>
+                        <div class="event-remark">
+                            <p>${event.BEMERKUNG ? event.BEMERKUNG : ''}</p> <!-- Nur anzeigen, wenn Bemerkung vorhanden -->
+                        </div>
+                    `;
+                    row.innerHTML = eventHTML;
+                    eventContainer.appendChild(row);
+                });
+            })
+            .catch(error => {
+                document.getElementById('error-message').textContent = `Fehler beim Laden der JSON-Daten: ${error.message}`;
+            });
+    </script>
+</body>
+</html>
