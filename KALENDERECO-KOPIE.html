@@ -45,59 +45,48 @@
         /* Event Anzeige */
         .event-container {
             padding: 20px;
-            margin-top: 20px; /* Abstand oben zum Container */
+            display: flex;
+            flex-direction: column;
         }
         .event-bar {
             display: flex;
-            margin: calc(var(--bar-height) / 100) 0; /* Abstand basierend auf der Höhe */
+            margin: calc(var(--bar-height) / 100) 0; /* Abstand zwischen Balken */
             height: var(--bar-height); /* Dynamische Höhe */
-            background-color: lightgray; /* Standard Hintergrund */
         }
         .segment-1 {
-            width: calc(1.35 * var(--segment-height)); /* Breite für Segment 1 */
+            width: calc(var(--bar-height) * 1.35); /* Breite für Segment 1 */
             background-color: gray;
-            position: relative;
         }
         .segment-1 img {
-            width: calc(var(--segment-height) * 1.33); /* Breite des Bildes basierend auf der Höhe */
+            width: calc(var(--bar-height) * 1.33); /* Breite des Bildes basierend auf der Höhe */
             height: 100%; /* Volle Höhe */
             object-fit: cover; /* Seitenverhältnis beibehalten */
         }
         .segment-2 {
             flex-grow: 1; /* Nimmt verbleibende Breite ein */
-            width: 85%; /* Breite auf 85% des Segments festlegen */
             padding-left: 10px; /* Abstand zwischen Segmenten */
             display: flex; /* Flexbox für die Anordnung */
             flex-direction: column; /* Vertikale Anordnung der Texte */
             justify-content: space-between; /* Gleiche Verteilung des Platzes */
         }
-        .segment-2 p {
-            margin: 0; /* Kein Abstand für Absätze */
-            overflow: hidden; /* Überlauf verhindern */
-            text-overflow: ellipsis; /* Text wird abgeschnitten */
-            white-space: nowrap; /* Keine Zeilenumbrüche */
-        }
         .customer-text {
-            font-size: calc(var(--bar-height) * 0.4); /* Dynamische Schriftgröße für Zeile 1 */
+            font-size: calc(var(--font-size) * 0.5); /* Dynamische Schriftgröße für Zeile 1 */
             color: black;
-            max-height: 50%; /* Maximal 50% der Segmenthöhe */
         }
         .event-text {
-            font-size: 20%; /* 20% von BH */
+            font-size: calc(var(--font-size) * 0.3); /* Dynamische Schriftgröße für Zeile 2 */
             color: darkgray;
-            max-height: 20%; /* Maximal 20% von BH */
             overflow: hidden;
             text-overflow: ellipsis; /* Text wird abgeschnitten */
             white-space: nowrap; /* Keine Zeilenumbrüche */
         }
         .time-text {
-            font-size: 10%; /* 10% von BH */
+            font-size: calc(var(--font-size) * 0.35); /* Dynamische Schriftgröße für Zeile 3 */
             color: red;
         }
         .remark-text {
-            font-size: 10%; /* 10% von BH */
+            font-size: calc(var(--font-size) * 0.2); /* Dynamische Schriftgröße für Zeile 4 */
             color: darkgray;
-            max-height: 10%; /* Maximal 10% von BH */
             overflow: hidden;
             text-overflow: ellipsis; /* Text wird abgeschnitten */
             white-space: nowrap; /* Keine Zeilenumbrüche */
@@ -146,7 +135,7 @@
 
                 // Filtere die Veranstaltungen nach dem heutigen Datum
                 const todayEvents = data.events.filter(event => event.DATUM === formattedDate);
-                const n = todayEvents.length;
+                const n = todayEvents.length; // Anzahl der Veranstaltungen
 
                 // Prüfen, ob es Veranstaltungen gibt
                 if (n === 0) {
@@ -160,9 +149,14 @@
                 const totalHeight = window.innerHeight - footerHeight - headerHeight; // Höhe zwischen Kopf- und Fußzeile
                 const barHeight = totalHeight / 100 * (99 / n - 1); // Höhe BH für jeden Balken
 
-                // Setzen der CSS-Variablen für die Balkenhöhe
+                // Setzen der CSS-Variablen für die Balkenhöhe und Schriftgröße
                 document.documentElement.style.setProperty('--bar-height', `${barHeight}px`);
-                document.documentElement.style.setProperty('--segment-height', `${barHeight}px`);
+                document.documentElement.style.setProperty('--font-size', `${totalHeight / 100}px`); // Schriftgröße abhängig von H
+
+                // Füge Abstand nach der Kopfzeile hinzu
+                const spacer = document.createElement('div');
+                spacer.style.height = `${totalHeight / 100}px`; // Abstand von H/100
+                eventContainer.appendChild(spacer);
 
                 todayEvents.forEach(event => {
                     const bar = document.createElement('div');
