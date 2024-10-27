@@ -69,23 +69,27 @@
             flex-direction: column; /* Vertikale Anordnung der Texte */
             justify-content: space-between; /* Gleiche Verteilung des Platzes */
         }
+        /* Anpassungen für die Schriftgrößen */
         .customer-text {
-            font-size: calc(var(--font-size) * 0.5); /* Dynamische Schriftgröße für Zeile 1 */
+            font-size: clamp(20px, 2.5vw, 30px); /* Dynamische Schriftgröße zwischen 20px und 30px */
+            white-space: nowrap; /* Verhindert Zeilenumbrüche */
+            overflow: hidden;
+            text-overflow: ellipsis; /* Kürzt langen Text */
             color: black;
         }
         .event-text {
-            font-size: calc(var(--font-size) * 0.3); /* Dynamische Schriftgröße für Zeile 2 */
+            font-size: 25px; /* Feste Schriftgröße für Zeile 2 */
             color: darkgray;
             overflow: hidden;
             text-overflow: ellipsis; /* Text wird abgeschnitten */
             white-space: nowrap; /* Keine Zeilenumbrüche */
         }
         .time-text {
-            font-size: calc(var(--font-size) * 0.35); /* Dynamische Schriftgröße für Zeile 3 */
+            font-size: 25px; /* Feste Schriftgröße für Zeile 3 */
             color: red;
         }
         .remark-text {
-            font-size: calc(var(--font-size) * 0.2); /* Dynamische Schriftgröße für Zeile 4 */
+            font-size: 20px; /* Feste Schriftgröße für Zeile 4 */
             color: darkgray;
             overflow: hidden;
             text-overflow: ellipsis; /* Text wird abgeschnitten */
