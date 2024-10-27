@@ -65,6 +65,7 @@
         }
         .segment-2 {
             flex-grow: 1; /* Nimmt verbleibende Breite ein */
+            width: 85%; /* Breite auf 85% des Segments festlegen */
             padding-left: 10px; /* Abstand zwischen Segmenten */
             display: flex; /* Flexbox für die Anordnung */
             flex-direction: column; /* Vertikale Anordnung der Texte */
@@ -72,18 +73,22 @@
         }
         .segment-2 p {
             margin: 0; /* Kein Abstand für Absätze */
+            overflow: hidden; /* Überlauf verhindern */
+            text-overflow: ellipsis; /* Text wird abgeschnitten */
+            white-space: nowrap; /* Keine Zeilenumbrüche */
         }
         .customer-text {
             font-size: calc(var(--bar-height) * 0.4); /* Dynamische Schriftgröße für Zeile 1 */
             color: black;
-            overflow: hidden; /* Überlauf verhindern */
-            text-overflow: ellipsis; /* Text wird abgeschnitten */
-            white-space: nowrap; /* Keine Zeilenumbrüche */
             max-height: 50%; /* Maximal 50% der Segmenthöhe */
         }
         .event-text {
             font-size: 20%; /* 20% von BH */
             color: darkgray;
+            max-height: 20%; /* Maximal 20% von BH */
+            overflow: hidden;
+            text-overflow: ellipsis; /* Text wird abgeschnitten */
+            white-space: nowrap; /* Keine Zeilenumbrüche */
         }
         .time-text {
             font-size: 10%; /* 10% von BH */
@@ -92,6 +97,7 @@
         .remark-text {
             font-size: 10%; /* 10% von BH */
             color: darkgray;
+            max-height: 10%; /* Maximal 10% von BH */
             overflow: hidden;
             text-overflow: ellipsis; /* Text wird abgeschnitten */
             white-space: nowrap; /* Keine Zeilenumbrüche */
@@ -205,7 +211,7 @@
                         segment2.appendChild(remarkText);
                     }
 
-                    // Füge Segmente zur Balken hinzu
+                    // Füge die Segmente zum Balken hinzu
                     bar.appendChild(segment1);
                     bar.appendChild(segment2);
                     eventContainer.appendChild(bar);
