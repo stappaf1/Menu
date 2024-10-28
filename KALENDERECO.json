@@ -38,8 +38,8 @@
     },
     {
       "DATUM": "28.10.24",
-      "VON": "15:01",
-      "BIS": "19:01",
+      "VON": "15:00",
+      "BIS": "20:00",
       "KUNDE": "Schicker",
       "EVENT": "Hochzeit",
       "TEILNEHMER": "60",
@@ -50,8 +50,8 @@
     },
     {
       "DATUM": "28.10.24",
-      "VON": "19:01",
-      "BIS": "02:01",
+      "VON": "20:00",
+      "BIS": "02:00",
       "KUNDE": "Schicker",
       "EVENT": "Hochzeit",
       "TEILNEHMER": "60",
