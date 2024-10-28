@@ -13,7 +13,6 @@
             position: relative;
             min-height: 100vh;
         }
-        /* Kopfzeile */
         .header {
             background-color: #d3d3d3;
             padding: 10px;
@@ -32,7 +31,6 @@
             width: 50px;
             height: 50px;
         }
-        /* Fußzeile */
         footer {
             background-color: #d3d3d3;
             padding: 10px;
@@ -42,7 +40,6 @@
             width: 100%;
             font-size: 1em;
         }
-        /* Event Anzeige */
         .event-container {
             padding: 20px;
             display: flex;
@@ -65,7 +62,6 @@
             height: 100%;
             object-fit: cover;
         }
-        /* Teilnehmer-Overlay */
         .participant-overlay {
             position: absolute;
             top: 0;
@@ -80,7 +76,7 @@
             justify-content: center;
             padding: 2px;
             box-sizing: border-box;
-            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Schatten für 3D-Effekt */
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
         }
         .segment-2 {
             flex-grow: 1;
@@ -90,14 +86,12 @@
             align-items: flex-start;
             gap: 2px;
         }
-        /* Hintergrundfarben für abwechselnde Grüntöne */
         .green-background-1 {
             background-color: #e6f2e6;
         }
         .green-background-2 {
             background-color: #ccf5cc;
         }
-        /* Enger Abstand und dynamische Schriftgröße */
         .customer-text,
         .event-text,
         .time-text,
@@ -109,7 +103,6 @@
             overflow: hidden;
             text-overflow: ellipsis;
         }
-        /* Schriftgrößen für jeden Texttyp */
         .customer-text {
             font-size: clamp(18px, 2vw, 26px);
             color: black;
@@ -126,7 +119,6 @@
             font-size: clamp(14px, 1.5vw, 20px);
             color: darkgray;
         }
-        /* Fehleranzeige */
         .error-message {
             color: red;
             text-align: center;
@@ -167,7 +159,7 @@
                 document.getElementById('date-title').innerText += ` ${formattedDate}`;
 
                 const todayEvents = data.events.filter(event => event.DATUM === formattedDate);
-                const n = todayEvents.length;
+                let n = todayEvents.length;
 
                 if (n === 0) {
                     document.getElementById('error-message').textContent = 'Heute sind keine Veranstaltungen geplant.';
@@ -177,6 +169,11 @@
                 const footerHeight = document.querySelector('footer').offsetHeight;
                 const headerHeight = document.querySelector('.header').offsetHeight;
                 const totalHeight = window.innerHeight - footerHeight - headerHeight;
+                
+                if (n === 1) {
+                    n = 2;  // Simuliert zwei Balken, wenn nur eine Veranstaltung
+                }
+                
                 const barHeight = totalHeight / 100 * (99 / n - 1);
 
                 document.documentElement.style.setProperty('--bar-height', `${barHeight}px`);
@@ -193,7 +190,6 @@
                     img.alt = event.TAGUNGSRAUM;
                     segment1.appendChild(img);
 
-                    // Teilnehmer-Overlay hinzufügen
                     if (event.TEILNEHMER) {
                         const overlay = document.createElement('div');
                         overlay.classList.add('participant-overlay');
