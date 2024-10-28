@@ -61,6 +61,18 @@
       "BEMERKUNG": "Testbemerkung"
     },
     {
+      "DATUM": "28.10.24",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Schicker",
+      "EVENT": "Hochzeit",
+      "TEILNEHMER": 50,
+      "TAGUNGSRAUM": "ecoPlenum T200",
+      "RAUMHINWEIS": "",
+      "BILD": "T200-1.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
       "DATUM": "25.10.24",
       "VON": "",
       "BIS": "",
@@ -74,18 +86,6 @@
     },
     {
       "DATUM": "28.10.24",
-      "VON": "",
-      "BIS": "",
-      "KUNDE": "Schicker",
-      "EVENT": "Hochzeit",
-      "TEILNEHMER": 50,
-      "TAGUNGSRAUM": "ecoPlenum T200",
-      "RAUMHINWEIS": "",
-      "BILD": "T200-1.jpeg",
-      "BEMERKUNG": ""
-    },
-    {
-      "DATUM": "28.10.24",
       "VON": "15:50",
       "BIS": "00:50",
       "KUNDE": "Schicker",
@@ -95,42 +95,6 @@
       "RAUMHINWEIS": "",
       "BILD": "T200-Business.jpeg",
       "BEMERKUNG": "Das ist eine Testbemerkung"
-    },
-    {
-      "DATUM": "28.10.24",
-      "VON": "15:50",
-      "BIS": "00:50",
-      "KUNDE": "Schicker",
-      "EVENT": "Hochzeit",
-      "TEILNEHMER": 50,
-      "TAGUNGSRAUM": "ecoPlenum T200",
-      "RAUMHINWEIS": "",
-      "BILD": "T200-Business.jpeg",
-      "BEMERKUNG": ""
-    },
-    {
-      "DATUM": "28.10.24",
-      "VON": "",
-      "BIS": "",
-      "KUNDE": "Schicker",
-      "EVENT": "Hochzeit",
-      "TEILNEHMER": 50,
-      "TAGUNGSRAUM": "ecoPlenum T200",
-      "RAUMHINWEIS": "",
-      "BILD": "T200-1.jpeg",
-      "BEMERKUNG": ""
-    },
-    {
-      "DATUM": "28.10.24",
-      "VON": "",
-      "BIS": "",
-      "KUNDE": "Schicker",
-      "EVENT": "Hochzeit",
-      "TEILNEHMER": 50,
-      "TAGUNGSRAUM": "ecoPlenum T200",
-      "RAUMHINWEIS": "",
-      "BILD": "T200-1.jpeg",
-      "BEMERKUNG": ""
     },
     {
       "DATUM": "28.10.24",
