@@ -69,19 +69,19 @@
             padding-left: 10px;
             display: flex;
             flex-direction: column;
-            justify-content: space-between; /* Gleichmäßige Verteilung */
-            overflow: hidden;
+            align-items: flex-start; /* Text linksbündig */
+            gap: 2px; /* Geringer Abstand zwischen den Zeilen */
         }
         /* Enger Abstand und dynamische Schriftgröße */
         .customer-text,
         .event-text,
         .time-text,
         .remark-text {
-            line-height: 0.8; /* Sehr enge Zeilenhöhe */
-            margin: 0; /* Keine zusätzlichen Abstände */
-            padding: 0; /* Keine Polsterung */
-            overflow: hidden;
+            line-height: 1.1; /* Enger Zeilenabstand */
+            margin: 0;
+            padding: 0;
             white-space: nowrap;
+            overflow: hidden;
             text-overflow: ellipsis;
         }
         /* Schriftgrößen für jeden Texttyp */
