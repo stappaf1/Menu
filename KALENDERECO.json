@@ -2,7 +2,7 @@
   "events": [
     {
       "DATUM": "23.10.24",
-      "VON": "08:50",
+      "VON": "17:-9",
       "BIS": "",
       "KUNDE": "Hecht",
       "EVENT": "",
@@ -14,7 +14,7 @@
     },
     {
       "DATUM": "23.10.24",
-      "VON": "08:50",
+      "VON": "17:-9",
       "BIS": "",
       "KUNDE": "Bayerisches Staatsministerium",
       "EVENT": "",
@@ -26,8 +26,8 @@
     },
     {
       "DATUM": "25.10.24",
-      "VON": "20:50",
-      "BIS": "00:50",
+      "VON": "-5:-9",
+      "BIS": "-1:-9",
       "KUNDE": "Wipfler",
       "EVENT": "Probeessen",
       "TEILNEHMER": 17,
@@ -38,8 +38,8 @@
     },
     {
       "DATUM": "28.10.24",
-      "VON": "15:51",
-      "BIS": "19:51",
+      "VON": "10:-8",
+      "BIS": "-6:-8",
       "KUNDE": "Schicker",
       "EVENT": "Hochzeit",
       "TEILNEHMER": 60,
@@ -50,8 +50,8 @@
     },
     {
       "DATUM": "28.10.24",
-      "VON": "19:51",
-      "BIS": "02:51",
+      "VON": "-6:-8",
+      "BIS": "23:-8",
       "KUNDE": "Schicker",
       "EVENT": "Hochzeit",
       "TEILNEHMER": 60,
