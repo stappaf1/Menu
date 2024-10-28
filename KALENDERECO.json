@@ -38,15 +38,27 @@
     },
     {
       "DATUM": "28.10.24",
-      "VON": "",
-      "BIS": "",
+      "VON": "15:50",
+      "BIS": "19:50",
       "KUNDE": "Schicker",
       "EVENT": "Hochzeit",
-      "TEILNEHMER": 50,
+      "TEILNEHMER": 60,
+      "TAGUNGSRAUM": "ecoBistro",
+      "RAUMHINWEIS": "",
+      "BILD": "E-Bistro.jpeg",
+      "BEMERKUNG": "Kaffee & Kuchen"
+    },
+    {
+      "DATUM": "28.10.24",
+      "VON": "19:50",
+      "BIS": "02:50",
+      "KUNDE": "Schicker",
+      "EVENT": "Hochzeit",
+      "TEILNEHMER": 60,
       "TAGUNGSRAUM": "ecoPlenum T200",
       "RAUMHINWEIS": "",
       "BILD": "T200-1.jpeg",
-      "BEMERKUNG": ""
+      "BEMERKUNG": "Feier & Tanz"
     },
     {
       "DATUM": "02.11.24",
