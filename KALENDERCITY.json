@@ -2,11 +2,11 @@
   "events": [
     {
       "DATUM": "28.10.24",
-      "VON": "09:50",
-      "BIS": "17:50",
+      "VON": "09:00",
+      "BIS": "17:00",
       "KUNDE": "Meier Anlagenbau GmbH",
       "EVENT": "Jahrestagung",
-      "TEILNEHMER": 6,
+      "TEILNEHMER": "6",
       "TAGUNGSRAUM": "kleinerFreiraum T10",
       "RAUMHINWEIS": "",
       "BILD": "T10.jpeg",
