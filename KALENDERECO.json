@@ -40,25 +40,25 @@
       "DATUM": "28.10.24",
       "VON": "15:00",
       "BIS": "20:00",
-      "KUNDE": "Schicker",
-      "EVENT": "Hochzeit",
-      "TEILNEHMER": "60",
-      "TAGUNGSRAUM": "ecoBistro",
+      "KUNDE": "Meier Datentechnik",
+      "EVENT": "Vertriebstagung",
+      "TEILNEHMER": "120",
+      "TAGUNGSRAUM": "ecoPlenum T200",
       "RAUMHINWEIS": "",
-      "BILD": "E-Bistro.jpeg",
-      "BEMERKUNG": "Kaffee & Kuchen"
+      "BILD": "T200-Business.jpeg",
+      "BEMERKUNG": "Kaffeepausen 10:00/14:30 Uhr Mittag 13:00"
     },
     {
       "DATUM": "28.10.24",
       "VON": "20:00",
       "BIS": "02:00",
-      "KUNDE": "Schicker",
-      "EVENT": "Hochzeit",
+      "KUNDE": "Müller Maschinenbau",
+      "EVENT": "Schulung 2024",
       "TEILNEHMER": "60",
-      "TAGUNGSRAUM": "ecoPlenum T200",
+      "TAGUNGSRAUM": "ecoForum T120",
       "RAUMHINWEIS": "",
-      "BILD": "T200-1.jpeg",
-      "BEMERKUNG": "Feier & Tanz"
+      "BILD": "T120.jpeg",
+      "BEMERKUNG": "Aufstellung im Block mit Stuhlkreis"
     },
     {
       "DATUM": "2.11.24",
