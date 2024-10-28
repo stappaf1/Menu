@@ -69,15 +69,22 @@
             padding-left: 10px;
             display: flex;
             flex-direction: column;
-            align-items: flex-start; /* Text linksbündig */
-            gap: 2px; /* Geringer Abstand zwischen den Zeilen */
+            align-items: flex-start;
+            gap: 2px;
+        }
+        /* Hintergrundfarben für abwechselnde Grüntöne */
+        .green-background-1 {
+            background-color: #e6f2e6; /* Zarter Grünton 1 */
+        }
+        .green-background-2 {
+            background-color: #ccf5cc; /* Zarter Grünton 2 */
         }
         /* Enger Abstand und dynamische Schriftgröße */
         .customer-text,
         .event-text,
         .time-text,
         .remark-text {
-            line-height: 1.1; /* Enger Zeilenabstand */
+            line-height: 1.1;
             margin: 0;
             padding: 0;
             white-space: nowrap;
@@ -156,7 +163,7 @@
 
                 document.documentElement.style.setProperty('--bar-height', `${barHeight}px`);
 
-                todayEvents.forEach(event => {
+                todayEvents.forEach((event, index) => {
                     const bar = document.createElement('div');
                     bar.classList.add('event-bar');
 
@@ -170,6 +177,13 @@
 
                     const segment2 = document.createElement('div');
                     segment2.classList.add('segment-2');
+
+                    // Weisen Sie den abwechselnden Hintergrund zu
+                    if (index % 2 === 0) {
+                        segment2.classList.add('green-background-1');
+                    } else {
+                        segment2.classList.add('green-background-2');
+                    }
 
                     const customerText = document.createElement('p');
                     customerText.classList.add('customer-text');
