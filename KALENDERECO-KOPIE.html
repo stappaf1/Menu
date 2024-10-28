@@ -58,11 +58,28 @@
         .segment-1 {
             width: calc(var(--bar-height) * 1.35);
             background-color: gray;
+            position: relative;
         }
         .segment-1 img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+        }
+        /* Teilnehmer-Overlay */
+        .participant-overlay {
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: 20%;
+            height: 20%;
+            background-color: black;
+            color: white;
+            font-size: 0.8em; /* Anpassbare Schriftgröße */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2px;
+            box-sizing: border-box;
         }
         .segment-2 {
             flex-grow: 1;
@@ -74,10 +91,10 @@
         }
         /* Hintergrundfarben für abwechselnde Grüntöne */
         .green-background-1 {
-            background-color: #e6f2e6; /* Zarter Grünton 1 */
+            background-color: #e6f2e6;
         }
         .green-background-2 {
-            background-color: #ccf5cc; /* Zarter Grünton 2 */
+            background-color: #ccf5cc;
         }
         /* Enger Abstand und dynamische Schriftgröße */
         .customer-text,
@@ -175,10 +192,17 @@
                     img.alt = event.TAGUNGSRAUM;
                     segment1.appendChild(img);
 
+                    // Teilnehmer-Overlay hinzufügen
+                    if (event.TEILNEHMER) {
+                        const overlay = document.createElement('div');
+                        overlay.classList.add('participant-overlay');
+                        overlay.textContent = event.TEILNEHMER;
+                        segment1.appendChild(overlay);
+                    }
+
                     const segment2 = document.createElement('div');
                     segment2.classList.add('segment-2');
 
-                    // Weisen Sie den abwechselnden Hintergrund zu
                     if (index % 2 === 0) {
                         segment2.classList.add('green-background-1');
                     } else {
