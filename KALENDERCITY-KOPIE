@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signage - Alea Eco</title>
+    <title>Signage - Alea City</title>
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -130,7 +130,7 @@
     <div class="header">
         <img src="https://cdn.prod.website-files.com/60d2e4a3b351ee2c91f53a1e/60f9ca16c53dae6854816379_Logo%20Alea.svg" alt="Alea Logo">
         <div class="title">
-            <h1 id="date-title">Willkommen bei Alea Eco</h1>
+            <h1 id="date-title">Willkommen bei Alea City</h1>
         </div>
         <img src="Uhrensymbol.png" alt="Uhrensymbol" class="clock-icon">
     </div>
@@ -142,7 +142,7 @@
     </footer>
     <div class="error-message" id="error-message"></div>
     <script>
-        fetch('https://stappaf1.github.io/Menu/KALENDERECO.json')
+        fetch('https://stappaf1.github.io/Menu/KALENDERCITY.json')
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Netzwerkantwort war nicht ok');
