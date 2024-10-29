@@ -37,10 +37,10 @@
       "BEMERKUNG": "Testbemerkung4"
     },
     {
-      "DATUM": "28.10.24",
+      "DATUM": "29.10.24",
       "VON": "15:00",
       "BIS": "20:00",
-      "KUNDE": "Meier Datentechnik",
+      "KUNDE": "Meier Demotechnik",
       "EVENT": "Vertriebstagung",
       "TEILNEHMER": "120",
       "TAGUNGSRAUM": "ecoPlenum T200",
@@ -49,10 +49,10 @@
       "BEMERKUNG": "Kaffeepausen 10:00/14:30 Uhr Mittag 13:00"
     },
     {
-      "DATUM": "28.10.24",
+      "DATUM": "29.10.24",
       "VON": "20:00",
       "BIS": "02:00",
-      "KUNDE": "Müller Maschinenbau",
+      "KUNDE": "Mustermann Maschinenbau",
       "EVENT": "Schulung 2024",
       "TEILNEHMER": "60",
       "TAGUNGSRAUM": "ecoForum T120",
