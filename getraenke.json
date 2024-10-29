@@ -307,6 +307,13 @@
       "Beschreibung": "Klassischer schwarzer Tee, kräftig im Geschmack und ideal",
       "Menge": "Tasse",
       "Preis": "2.90"
+    },
+    {
+      "Kategorie": "Heißgetränke",
+      "Name": "Schwarzer Tee",
+      "Beschreibung": "Assam",
+      "Menge": "Tasse",
+      "Preis": "2.90"
     }
   ]
 }
