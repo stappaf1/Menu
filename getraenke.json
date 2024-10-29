@@ -3,315 +3,196 @@
     {
       "Kategorie": "Biere",
       "Name": "Helles Bier",
-      "Beschreibung": "Ein erfrischendes, leicht malziges Helles, perfekt für gemütliche Stunden.",
+      "Beschreibung": "Ein Bier, das dir zuprostet, bevor du es trinkst – frisch, malzig und echt bayerisch!",
       "Menge": "0,5L",
       "Preis": "3.80"
     },
     {
       "Kategorie": "Biere",
       "Name": "Weißbier",
-      "Beschreibung": "Ein vollmundiges Weißbier mit feinen Bananen- und Nelkennoten.",
+      "Beschreibung": "Die geheime Banane im Glas! Vollmundig, würzig und ein Hauch von Urlaubsfeeling.",
       "Menge": "0,5L",
       "Preis": "3.80"
     },
     {
       "Kategorie": "Biere",
       "Name": "Pils",
-      "Beschreibung": "Spritziges, hopfenbetontes Pils für Liebhaber des herben Geschmacks.",
+      "Beschreibung": "Herber Wachmacher für den Gaumen – das Pils für echte Fans des Hopfens.",
       "Menge": "0,3L",
       "Preis": "2.90"
     },
     {
       "Kategorie": "Biere",
       "Name": "Superpils",
-      "Beschreibung": "Intensives Pils mit extra viel Hopfen, für den besonderen Genuss.",
+      "Beschreibung": "Noch mehr Hopfen, noch mehr Geschmack – für die, die es ernst meinen!",
       "Menge": "0,3L",
       "Preis": "2.90"
     },
     {
       "Kategorie": "Biere",
       "Name": "Dunkles Bier",
-      "Beschreibung": "Malziges, kräftiges Dunkelbier mit karamelligen Aromen.",
+      "Beschreibung": "Der Samtanzug unter den Bieren – kräftig, malzig, unwiderstehlich!",
       "Menge": "0,5L",
       "Preis": "3.80"
     },
     {
       "Kategorie": "Biere",
       "Name": "Dunkles Weißbier",
-      "Beschreibung": "Ein dunkles, vollmundiges Weißbier mit einer samtigen Textur und Noten von Kakao.",
+      "Beschreibung": "Ein Weißbier im schicken Smoking: samtig, kakaoig und bereit für den Genuss.",
       "Menge": "0,5L",
       "Preis": "3.80"
     },
     {
       "Kategorie": "Biere",
       "Name": "Alkoholfreies Weizen",
-      "Beschreibung": "Alkoholfreies Weißbier mit vollem Geschmack, erfrischend und leicht.",
+      "Beschreibung": "Volles Weizenaroma ohne den Extra-Schwung – fruchtig und erfrischend!",
       "Menge": "0,5L",
       "Preis": "3.80"
     },
     {
       "Kategorie": "Weißwein",
       "Name": "Lugana",
-      "Beschreibung": "Frischer Weißwein aus Norditalien mit Zitrus- und Mandelaromen.",
+      "Beschreibung": "Norditalien in einem Glas – frisch, zitronig, und perfekt für laue Sommernächte.",
       "Menge": "0,2L",
       "Preis": "5.50"
     },
     {
       "Kategorie": "Weißwein",
       "Name": "Riesling",
-      "Beschreibung": "Fruchtig-mineralischer Riesling, der mit Noten von Pfirsich und Apfel besticht.",
+      "Beschreibung": "Fruchtbombe für den Gaumen! Apfel trifft Pfirsich, und der Spaß beginnt.",
       "Menge": "0,2L",
       "Preis": "5.50"
     },
     {
       "Kategorie": "Weißwein",
       "Name": "Grauburgunder",
-      "Beschreibung": "Weicher Grauburgunder mit Aromen von Birne und Nüssen, perfekt zu leichten Speisen.",
+      "Beschreibung": "Ein weicher Genießer für Birnen- und Nussliebhaber – passt zu jeder Speise!",
       "Menge": "0,2L",
       "Preis": "5.50"
     },
     {
-      "Kategorie": "Weißwein",
+      "Kategorie": "Rotwein",
       "Name": "Cabernet Sauvignon",
-      "Beschreibung": "Kräftiger Rotwein mit intensiven Aromen von schwarzen Johannisbeeren.",
+      "Beschreibung": "Starker Typ mit Charakter – schwarze Johannisbeeren für die, die es kraftvoll lieben.",
       "Menge": "0,2L",
       "Preis": "6.00"
     },
     {
       "Kategorie": "Rotwein",
       "Name": "Primitivo",
-      "Beschreibung": "Samtiger Rotwein aus Italien mit Noten von reifen Beeren und Gewürzen.",
+      "Beschreibung": "Italien im Glas – samtig, beerig und würzig, wie eine mediterrane Sommernacht!",
       "Menge": "0,2L",
       "Preis": "6.50"
     },
     {
       "Kategorie": "Rosé",
       "Name": "Rosé",
-      "Beschreibung": "Leichter, fruchtiger Roséwein mit einer dezenten Himbeernote.",
+      "Beschreibung": "Zart und fruchtig, Himbeertraum für laue Abende – Sommer, bist du’s?",
       "Menge": "0,2L",
       "Preis": "4.50"
     },
     {
       "Kategorie": "Schaumwein",
       "Name": "Prosecco",
-      "Beschreibung": "Spritziger Prosecco, ideal für den Aperitif oder einen festlichen Anlass.",
+      "Beschreibung": "Spritziges Vergnügen für die Feierlaune – perfekt prickelnd!",
       "Menge": "Glas",
       "Preis": "3.50"
     },
     {
       "Kategorie": "Schaumwein",
-      "Name": "Cuvee Brut",
-      "Beschreibung": "Feinperliger Schaumwein mit eleganten Aromen von Zitrusfrüchten.",
+      "Name": "Cuvée Brut",
+      "Beschreibung": "Feines Prickeln mit einem Hauch Zitrus, wie ein elegantes Fest im Glas.",
       "Menge": "Glas",
       "Preis": "4.50"
     },
     {
       "Kategorie": "Alkoholfreies",
       "Name": "Mineralwasser Still",
-      "Beschreibung": "Sanftes, stilles Mineralwasser zur Erfrischung.",
+      "Beschreibung": "Sanfte Erfrischung für einen klaren Kopf – durstlöschend!",
       "Menge": "0,7L",
       "Preis": "6.00"
     },
     {
       "Kategorie": "Alkoholfreies",
       "Name": "Mineralwasser Spritzig",
-      "Beschreibung": "Sprudelndes Mineralwasser für eine prickelnde Erfrischung.",
+      "Beschreibung": "Prickelt wie das Leben – Mineralwasser mit dem gewissen Extra!",
       "Menge": "0,7L",
       "Preis": "6.00"
-    },
-    {
-      "Kategorie": "Alkoholfreies",
-      "Name": "Mineralwasser Still",
-      "Beschreibung": "Sanftes, stilles Mineralwasser zur Erfrischung.",
-      "Menge": "0,4L",
-      "Preis": "3.50"
-    },
-    {
-      "Kategorie": "Alkoholfreies",
-      "Name": "Mineralwasser Spritzig",
-      "Beschreibung": "Sprudelndes Mineralwasser für eine prickelnde Erfrischung.",
-      "Menge": "0,4L",
-      "Preis": "3.50"
     },
     {
       "Kategorie": "Alkoholfreies",
       "Name": "Sauerkirschsaft",
-      "Beschreibung": "Erfrischender Sauerkirschsaft, reich an Vitaminen und mit angenehmer Säure.",
+      "Beschreibung": "Sauer macht lustig, und dieser Kirschsaft sowieso – voll vitaminreicher Frische!",
       "Menge": "0,2L",
       "Preis": "2.90"
     },
     {
       "Kategorie": "Alkoholfreies",
       "Name": "Maracujasaft",
-      "Beschreibung": "Exotischer Maracujasaft, tropisch-fruchtig und belebend.",
+      "Beschreibung": "Tropischer Frischekick, so sonnig wie ein Tag am Strand!",
       "Menge": "0,2L",
       "Preis": "2.90"
     },
     {
       "Kategorie": "Alkoholfreies",
       "Name": "Ananassaft",
-      "Beschreibung": "Süßer, intensiver Ananassaft, perfekt als Erfrischung oder für Cocktails.",
+      "Beschreibung": "Das tropische Partygetränk für alle Ananas-Fans, süß und vollfruchtig.",
       "Menge": "0,2L",
       "Preis": "2.90"
-    },
-    {
-      "Kategorie": "Alkoholfreies",
-      "Name": "Johannisbeersaft",
-      "Beschreibung": "Fruchtig-säuerlicher Johannisbeersaft, ideal als Durstlöscher.",
-      "Menge": "0,2L",
-      "Preis": "2.90"
-    },
-    {
-      "Kategorie": "Alkoholfreies",
-      "Name": "Apfelsaft",
-      "Beschreibung": "Frischer Apfelsaft, pur oder als Schorle genießbar.",
-      "Menge": "0,2L",
-      "Preis": "2.90"
-    },
-    {
-      "Kategorie": "Alkoholfreies",
-      "Name": "Saftschorle",
-      "Beschreibung": "Fruchtig-erfrischende Saftschorle, perfekt für heiße Tage.",
-      "Menge": "0,4L",
-      "Preis": "3.50"
     },
     {
       "Kategorie": "Softgetränke",
       "Name": "Afri Cola",
-      "Beschreibung": "Klassische Cola mit intensiver Koffein-Note.",
-      "Menge": "0,4L",
-      "Preis": "3.50"
-    },
-    {
-      "Kategorie": "Softgetränke",
-      "Name": "Afri Cola Light",
-      "Beschreibung": "Die leichte Variante der Afri Cola mit weniger Zucker, aber vollem Geschmack.",
+      "Beschreibung": "Klassische Koffeinladung – für alle, die’s dunkel und süß mögen!",
       "Menge": "0,4L",
       "Preis": "3.50"
     },
     {
       "Kategorie": "Softgetränke",
       "Name": "Spezi",
-      "Beschreibung": "Erfrischendes Spezi, die perfekte Mischung aus Cola und Orangenlimo.",
+      "Beschreibung": "Die perfekte Mischung aus Cola und Orange – Kultgetränk mit Gute-Laune-Garantie!",
       "Menge": "0,4L",
       "Preis": "3.50"
-    },
-    {
-      "Kategorie": "Softgetränke",
-      "Name": "Zitronenlimonade",
-      "Beschreibung": "Spritzige Zitronenlimonade mit natürlichem Zitronengeschmack.",
-      "Menge": "0,4L",
-      "Preis": "3.50"
-    },
-    {
-      "Kategorie": "Softgetränke",
-      "Name": "Orangenlimonade",
-      "Beschreibung": "Fruchtige Orangenlimonade, ideal für eine sommerliche Erfrischung.",
-      "Menge": "0,4L",
-      "Preis": "3.50"
-    },
-    {
-      "Kategorie": "Softgetränke",
-      "Name": "Ginger Ale",
-      "Beschreibung": "Erfrischendes Ginger Ale mit würziger Ingwernote.",
-      "Menge": "0,2L",
-      "Preis": "2.90"
     },
     {
       "Kategorie": "Softgetränke",
       "Name": "Ginger Beer",
-      "Beschreibung": "Intensives Ginger Beer mit einer scharfen Ingwernote, perfekt für Cocktails.",
-      "Menge": "0,2L",
-      "Preis": "2.90"
-    },
-    {
-      "Kategorie": "Softgetränke",
-      "Name": "Bitter Lemon",
-      "Beschreibung": "Bittersüße Erfrischung mit kräftigem Zitronenaroma.",
+      "Beschreibung": "Für die scharfen Typen: Intensiver Ingwer-Kick, bestens für Cocktails geeignet!",
       "Menge": "0,2L",
       "Preis": "2.90"
     },
     {
       "Kategorie": "Softgetränke",
       "Name": "Tonic Water",
-      "Beschreibung": "Herb-spritziges Tonic Water, ideal für Longdrinks.",
+      "Beschreibung": "Für den bitteren Genuss – passt perfekt zu Gin und heißen Sommerabenden!",
       "Menge": "0,2L",
       "Preis": "2.90"
     },
     {
-      "Kategorie": "Softgetränke",
-      "Name": "Red Bull",
-      "Beschreibung": "Energydrink mit Koffein und Taurin, für den extra Kick.",
-      "Menge": "0,2L",
-      "Preis": "3.50"
-    },
-    {
       "Kategorie": "Heißgetränke",
       "Name": "Cappuccino",
-      "Beschreibung": "Aromatischer Espresso mit cremigem Milchschaum, leicht bestäubt mit Kakao.",
-      "Menge": "Tasse",
-      "Preis": "2.50"
-    },
-    {
-      "Kategorie": "Heißgetränke",
-      "Name": "Café Crema",
-      "Beschreibung": "Milder Kaffee mit einer dicken Crema, ideal für den Kaffeegenuss zwischendurch.",
+      "Beschreibung": "Der Klassiker mit Schaumhaube – Kaffee trifft auf cremige Perfektion!",
       "Menge": "Tasse",
       "Preis": "2.50"
     },
     {
       "Kategorie": "Heißgetränke",
       "Name": "Latte Macchiato",
-      "Beschreibung": "Geschichteter Kaffee mit heißer Milch und Schaum, mild und cremig.",
+      "Beschreibung": "Dreifach geschichtet, milder Kaffee-Genuss mit viel Schaum für einen langen Nachmittag!",
       "Menge": "Glas",
       "Preis": "2.50"
     },
     {
       "Kategorie": "Heißgetränke",
-      "Name": "Espresso",
-      "Beschreibung": "Intensiver, aromatischer Espresso für den perfekten Koffeinschub.",
-      "Menge": "Tasse",
-      "Preis": "1.90"
-    },
-    {
-      "Kategorie": "Heißgetränke",
-      "Name": "Doppio Espresso",
-      "Beschreibung": "Doppelte Portion Espresso für den extra starken Koffeinkick.",
-      "Menge": "Tasse",
-      "Preis": "2.50"
-    },
-    {
-      "Kategorie": "Heißgetränke",
       "Name": "Grüner Tee",
-      "Beschreibung": "Belebender grüner Tee, schonend verarbeitet für einen frischen Geschmack.",
-      "Menge": "Tasse",
-      "Preis": "2.90"
-    },
-    {
-      "Kategorie": "Heißgetränke",
-      "Name": "Kräutertee",
-      "Beschreibung": "Wohltuender Kräutertee mit einer beruhigenden Mischung aus ausgewählten Kräutern.",
+      "Beschreibung": "Frisch und belebend, wie ein Spaziergang im Morgentau.",
       "Menge": "Tasse",
       "Preis": "2.90"
     },
     {
       "Kategorie": "Heißgetränke",
       "Name": "Rooibos Tee",
-      "Beschreibung": "Aromatischer, koffeinfreier Rooibos Tee mit natürlicher Süße.",
-      "Menge": "Tasse",
-      "Preis": "2.90"
-    },
-    {
-      "Kategorie": "Heißgetränke",
-      "Name": "Schwarzer Tee",
-      "Beschreibung": "Klassischer schwarzer Tee, kräftig im Geschmack und ideal",
-      "Menge": "Tasse",
-      "Preis": "2.90"
-    },
-    {
-      "Kategorie": "Heißgetränke",
-      "Name": "Schwarzer Tee",
-      "Beschreibung": "Assam",
+      "Beschreibung": "Südafrikanisches Wunder ohne Koffein – süß und vollmundig!",
       "Menge": "Tasse",
       "Preis": "2.90"
     }
