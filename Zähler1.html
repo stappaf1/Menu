@@ -84,6 +84,8 @@
     <div id="getraenke-container"></div>
 
     <script>
+        let dataArray = []; // Array, um die geladenen Daten zu speichern
+
         async function loadData() {
             try {
                 const response = await fetch('getraenke.json'); // Lade die Daten von der JSON-Datei
@@ -93,15 +95,16 @@
 
                 // Überprüfen, ob die getraenke Daten vorhanden sind
                 if (getraenke && getraenke.length > 0) {
-                    const newData = getraenke.map(item => ({
+                    // Fülle das dataArray mit den geladenen Werten
+                    dataArray = getraenke.map(item => ({
                         name: item.Name,
                         preis: item.Preis,
                         zaehler: 0 // Initialisiere den Zähler
                     }));
 
                     // Rendern der neuen Daten
-                    renderData(newData);
-                    localStorage.setItem('dataLoaded', JSON.stringify(newData));
+                    renderData(dataArray);
+                    saveData(); // Speichere die Zählerstände in data.json
                 } else {
                     console.log("getraenke.json ist leer oder nicht verfügbar.");
                     alert("Die Datei getraenke.json ist leer oder nicht verfügbar.");
@@ -147,7 +150,7 @@
                 plusButton.onclick = () => {
                     item.zaehler += 1; // Update den Zähler
                     count.textContent = item.zaehler;
-                    saveData(data); // Speichere die Änderungen
+                    saveData(); // Speichere die Änderungen
                 };
 
                 const minusButton = document.createElement('button');
@@ -156,7 +159,7 @@
                 minusButton.onclick = () => {
                     item.zaehler = Math.max(0, item.zaehler - 1); // Update den Zähler
                     count.textContent = item.zaehler;
-                    saveData(data); // Speichere die Änderungen
+                    saveData(); // Speichere die Änderungen
                 };
 
                 counterDiv.appendChild(minusButton);
@@ -170,8 +173,21 @@
             });
         }
 
-        function saveData(data) {
-            localStorage.setItem('dataLoaded', JSON.stringify(data));
+        async function saveData() {
+            try {
+                const response = await fetch('data.json', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(dataArray) // Speichere die Daten im JSON-Format
+                });
+
+                if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`); // Fehlerüberprüfung
+                console.log("Daten erfolgreich gespeichert!");
+            } catch (error) {
+                console.error("Fehler beim Speichern der Daten:", error);
+            }
         }
 
         document.getElementById('loadBtn').addEventListener('click', loadData);
