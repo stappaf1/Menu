@@ -27,18 +27,18 @@
 <div id="getraenke-container"></div>
 
 <script>
-// Beispielhafte Getränke aus der getraenke.json
+// Beispielhafte Daten wie in getraenke.json simuliert
 const getraenkeData = [
     { Name: "Helles Bier", Preis: "3.80" },
     { Name: "Weißbier", Preis: "3.80" }
 ];
 
-// Initialisieren der Seite und Laden des Containers
-function renderGetraenke() {
+// Funktion zum Rendern der Getränkeliste
+function renderGetraenke(data) {
     const container = document.getElementById('getraenke-container');
     container.innerHTML = ''; // Clear previous content
 
-    getraenkeData.forEach((item, index) => {
+    data.forEach((item, index) => {
         const itemDiv = document.createElement('div');
         itemDiv.className = 'item';
 
@@ -83,31 +83,31 @@ function renderGetraenke() {
     });
 }
 
-// Speichert Zählerstände in localStorage
+// Funktion zum Speichern in localStorage
 function saveData() {
     const counters = Array.from(document.querySelectorAll('.count')).map(count => count.textContent);
     localStorage.setItem('data', JSON.stringify(counters));
     alert("Zwischenergebnis gespeichert!");
 }
 
-// Lädt Zählerstände aus localStorage
+// Funktion zum Laden aus localStorage
 function loadData() {
     const savedData = JSON.parse(localStorage.getItem('data'));
     if (savedData) {
         document.querySelectorAll('.count').forEach((count, index) => {
             count.textContent = savedData[index] || '0';
         });
-        document.getElementById('loadBtn').disabled = true;
         alert("Daten geladen!");
+    } else {
+        renderGetraenke(getraenkeData);  // Initiales Rendern falls nichts in localStorage
     }
 }
 
-// Setzt Zählerstände zurück und leert localStorage
+// Funktion zum Zurücksetzen der Daten
 function endProject() {
     if (confirm("Wollen Sie das Projekt beenden?")) {
-        localStorage.removeItem('data');
-        document.querySelectorAll('.count').forEach(count => count.textContent = '0');
-        document.getElementById('loadBtn').disabled = false;
+        localStorage.removeItem('data');  // Entfernt alle gespeicherten Daten
+        document.getElementById('getraenke-container').innerHTML = ''; // Leert die Anzeige
         alert("Das Projekt wurde beendet und die Zähler wurden zurückgesetzt.");
     }
 }
@@ -116,9 +116,6 @@ function endProject() {
 document.getElementById('loadBtn').addEventListener('click', loadData);
 document.getElementById('saveBtn').addEventListener('click', saveData);
 document.getElementById('endBtn').addEventListener('click', endProject);
-
-// Initiales Rendern der Getränke
-renderGetraenke();
 </script>
 
 </body>
