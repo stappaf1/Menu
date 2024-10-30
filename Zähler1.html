@@ -83,7 +83,8 @@
 
     <div class="header">
         <button id="loadBtn" class="load-button">Laden</button>
-        <button id="saveBtn" class="save-button">Speichern</button>
+        <button id="saveBtn" class="save-button">Zwischenergebnis senden</button>
+        <button id="endProjectBtn" class="save-button" style="background-color: #FF5722;">Projekt beenden</button>
     </div>
 
     <h1 style="text-align:center;">Getränke Zähler</h1>
@@ -166,6 +167,20 @@
             }
         }
 
+        function endProject() {
+            const confirmEnd = confirm("Wollen Sie das Projekt beenden?");
+            if (confirmEnd) {
+                document.getElementById('getraenke-container').innerHTML = '';
+                fetch('data.json', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify([])
+                });
+            }
+        }
+
         function sendEmail(subject, content) {
             const mailtoLink = `mailto:stefan@apfl.de?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(content)}`;
             window.location.href = mailtoLink;
@@ -173,6 +188,7 @@
 
         document.getElementById('loadBtn').addEventListener('click', loadGetraenke);
         document.getElementById('saveBtn').addEventListener('click', saveData);
+        document.getElementById('endProjectBtn').addEventListener('click', endProject);
     </script>
 </body>
 </html>
