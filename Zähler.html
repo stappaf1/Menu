@@ -8,12 +8,13 @@
         body { 
             font-family: Arial, sans-serif; 
             touch-action: manipulation; /* Verhindert das Zooming */
+            margin: 0; /* Entfernt den Standardabstand des Körpers */
         }
         .item { 
             display: flex; 
             align-items: center; 
             justify-content: space-between; 
-            margin-bottom: 20px; 
+            margin-bottom: 0; /* Kein Abstand zwischen den Balken */
             padding: 10px; 
             border: 1px solid #ddd; 
             border-radius: 5px; 
@@ -27,6 +28,7 @@
         .name { 
             font-size: 1.5em; 
             font-weight: bold; 
+            margin-right: 10px; /* Kleiner Abstand zwischen Name und Preis */
         }
         .preis { 
             font-size: 1.2em; 
