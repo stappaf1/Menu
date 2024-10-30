@@ -189,8 +189,12 @@
         document.getElementById('loadBtn').addEventListener('click', loadData);
         document.getElementById('sendBtn').addEventListener('click', () => {
             const data = JSON.parse(localStorage.getItem('dataLoaded'));
-            // Hier müsste der Code zum Senden der Daten an eine E-Mail implementiert werden.
-            alert('Daten als Zwischenergebnis gesendet!'); // Platzhalter
+            if (data) {
+                const dataToSend = data.map(item => `${item.name}; ${item.preis}; ${item.zaehler}`).join('\n');
+                alert(`Zwischenergebnis:\n${dataToSend}`); // Zeige die Zählerstände an
+            } else {
+                alert('Es gibt keine zwischengespeicherten Daten.');
+            }
         });
 
         document.getElementById('endBtn').addEventListener('click', () => {
@@ -198,9 +202,12 @@
             if (confirmation) {
                 localStorage.removeItem('dataLoaded'); // Leere die Daten im localStorage
                 document.getElementById('getraenke-container').innerHTML = ''; // Leere den Container
-                alert('Das Projekt wurde beendet und die Daten gelöscht! Sie können jetzt wieder laden.');
+                alert("Das Projekt wurde beendet und die Zähler wurden zurückgesetzt.");
             }
         });
+
+        // Lade die Daten beim Seitenladen
+        window.onload = loadData;
     </script>
 </body>
 </html>
