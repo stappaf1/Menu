@@ -5,209 +5,121 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Getränke Zähler</title>
     <style>
-        body { 
-            font-family: Arial, sans-serif; 
-            touch-action: manipulation; /* Verhindert das Zooming */
-            margin: 0; /* Entfernt den Standardabstand des Körpers */
-        }
-        .header {
-            display: flex; 
-            justify-content: center; 
-            margin: 10px 0; 
-        }
-        .load-button, .send-button, .end-button {
-            margin: 0 10px; 
-            padding: 10px 20px; 
-            font-size: 1em; 
-            cursor: pointer; 
-        }
-        .item { 
-            display: flex; 
-            align-items: center; 
-            justify-content: space-between; 
-            margin-bottom: 0; /* Kein Abstand zwischen den Balken */
-            padding: 10px; 
-            border: 1px solid #ddd; 
-            border-radius: 5px; 
-        }
-        .info { 
-            flex-grow: 1; 
-            display: flex; /* Fügt Flexbox hinzu */
-            justify-content: flex-start; /* Nur der Name und der Preis */
-            align-items: center; /* Zentriert die Elemente vertikal */
-        }
-        .name { 
-            font-size: 1.5em; 
-            font-weight: bold; 
-            margin-right: 10px; /* Kleiner Abstand zwischen Name und Preis */
-        }
-        .preis { 
-            font-size: 1.2em; 
-            color: #000; 
-        }
-        .counter { 
-            display: flex; 
-            align-items: center; 
-        }
-        .counter span { 
-            margin: 0 10px; 
-            font-size: 1.5em; 
-        }
-        .button { 
-            padding: 5px; 
-            border: none; 
-            color: white; 
-            cursor: pointer; 
-            font-size: 1em; 
-            border-radius: 5px; 
-            height: 40px; 
-        }
-        .button.plus { 
-            background-color: #4CAF50; 
-            width: 180px; /* Dreimal so breit wie vorher */
-        }
-        .button.minus { 
-            background-color: #f44336; 
-            width: 180px; /* Dreimal so breit wie vorher */
-        }
+        body { font-family: Arial, sans-serif; touch-action: manipulation; margin: 0; }
+        .item { display: flex; align-items: center; justify-content: space-between; padding: 10px; border: 1px solid #ddd; }
+        .info { flex-grow: 1; display: flex; align-items: center; }
+        .name { font-size: 1.5em; font-weight: bold; margin-right: 10px; }
+        .preis { font-size: 1.2em; }
+        .counter { display: flex; align-items: center; }
+        .counter span { margin: 0 10px; font-size: 1.5em; }
+        .button { padding: 5px; border: none; color: white; cursor: pointer; font-size: 1em; border-radius: 5px; height: 40px; }
+        .button.plus { background-color: #4CAF50; width: 180px; }
+        .button.minus { background-color: #f44336; width: 180px; }
     </style>
 </head>
 <body>
 
-    <div class="header">
-        <button id="loadBtn" class="load-button">Laden</button>
-        <button id="sendBtn" class="send-button">Zwischenergebnis senden</button>
-        <button id="endBtn" class="end-button">Projekt beenden</button>
-    </div>
+<h1>Getränke Zähler</h1>
+<button id="loadBtn">Laden</button>
+<button id="saveBtn">Zwischenergebnis senden</button>
+<button id="endBtn">Projekt beenden</button>
 
-    <h1 style="text-align:center;">Getränke Zähler</h1>
-    <div id="getraenke-container"></div>
+<div id="getraenke-container"></div>
 
-    <script>
-        let dataArray = []; // Array, um die geladenen Daten zu speichern
+<script>
+// Beispielhafte Getränke aus der getraenke.json
+const getraenkeData = [
+    { Name: "Helles Bier", Preis: "3.80" },
+    { Name: "Weißbier", Preis: "3.80" }
+];
 
-        async function loadData() {
-            try {
-                const response = await fetch('getraenke.json'); // Lade die Daten von der JSON-Datei
-                if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`); // Fehlerüberprüfung
-                const data = await response.json();
-                const getraenke = data.getraenke;
+// Initialisieren der Seite und Laden des Containers
+function renderGetraenke() {
+    const container = document.getElementById('getraenke-container');
+    container.innerHTML = ''; // Clear previous content
 
-                // Überprüfen, ob die getraenke Daten vorhanden sind
-                if (getraenke && getraenke.length > 0) {
-                    // Fülle das dataArray mit den geladenen Werten
-                    dataArray = getraenke.map(item => ({
-                        name: item.Name,
-                        preis: item.Preis,
-                        zaehler: 0 // Initialisiere den Zähler
-                    }));
+    getraenkeData.forEach((item, index) => {
+        const itemDiv = document.createElement('div');
+        itemDiv.className = 'item';
 
-                    // Überprüfen, ob Daten im localStorage vorhanden sind und setze die Zählerstände
-                    const storedData = JSON.parse(localStorage.getItem('dataLoaded'));
-                    if (storedData) {
-                        dataArray = dataArray.map((item, index) => ({
-                            ...item,
-                            zaehler: storedData[index] ? storedData[index].zaehler : 0
-                        }));
-                    }
+        const infoDiv = document.createElement('div');
+        infoDiv.className = 'info';
+        
+        const name = document.createElement('div');
+        name.className = 'name';
+        name.textContent = item.Name;
 
-                    // Rendern der neuen Daten
-                    renderData(dataArray);
-                } else {
-                    console.log("getraenke.json ist leer oder nicht verfügbar.");
-                    alert("Die Datei getraenke.json ist leer oder nicht verfügbar.");
-                }
-            } catch (error) {
-                console.error("Fehler beim Laden der Daten:", error);
-                alert("Fehler beim Laden der Getränkedaten: " + error.message); // Informiere den Benutzer über den Fehler
-            }
-        }
+        const preis = document.createElement('div');
+        preis.className = 'preis';
+        preis.textContent = `€${item.Preis}`;
+        
+        infoDiv.appendChild(name);
+        infoDiv.appendChild(preis);
 
-        function renderData(data) {
-            const container = document.getElementById('getraenke-container');
-            container.innerHTML = ''; // Leere den Container
+        const counterDiv = document.createElement('div');
+        counterDiv.className = 'counter';
+        
+        const count = document.createElement('span');
+        count.className = 'count';
+        count.textContent = '0';
 
-            data.forEach((item, index) => {
-                const itemDiv = document.createElement('div');
-                itemDiv.className = 'item';
+        const plusButton = document.createElement('button');
+        plusButton.className = 'button plus';
+        plusButton.textContent = '+1';
+        plusButton.onclick = () => count.textContent = parseInt(count.textContent) + 1;
 
-                const infoDiv = document.createElement('div');
-                infoDiv.className = 'info';
+        const minusButton = document.createElement('button');
+        minusButton.className = 'button minus';
+        minusButton.textContent = '-1';
+        minusButton.onclick = () => count.textContent = Math.max(0, parseInt(count.textContent) - 1);
 
-                const name = document.createElement('div');
-                name.className = 'name';
-                name.textContent = item.name;
+        counterDiv.appendChild(minusButton);
+        counterDiv.appendChild(count);
+        counterDiv.appendChild(plusButton);
 
-                const preis = document.createElement('div');
-                preis.className = 'preis';
-                preis.textContent = `€${item.preis}`;
+        itemDiv.appendChild(infoDiv);
+        itemDiv.appendChild(counterDiv);
+        container.appendChild(itemDiv);
+    });
+}
 
-                infoDiv.appendChild(name);
-                infoDiv.appendChild(preis);
+// Speichert Zählerstände in localStorage
+function saveData() {
+    const counters = Array.from(document.querySelectorAll('.count')).map(count => count.textContent);
+    localStorage.setItem('data', JSON.stringify(counters));
+    alert("Zwischenergebnis gespeichert!");
+}
 
-                const counterDiv = document.createElement('div');
-                counterDiv.className = 'counter';
-
-                const count = document.createElement('span');
-                count.textContent = item.zaehler; // Setze den Zählerstand
-                count.className = 'count';
-
-                const plusButton = document.createElement('button');
-                plusButton.textContent = '+1';
-                plusButton.className = 'button plus';
-                plusButton.onclick = () => {
-                    item.zaehler += 1; // Update den Zähler
-                    count.textContent = item.zaehler;
-                    saveData(); // Speichere die Änderungen
-                };
-
-                const minusButton = document.createElement('button');
-                minusButton.textContent = '-1';
-                minusButton.className = 'button minus';
-                minusButton.onclick = () => {
-                    item.zaehler = Math.max(0, item.zaehler - 1); // Update den Zähler
-                    count.textContent = item.zaehler;
-                    saveData(); // Speichere die Änderungen
-                };
-
-                counterDiv.appendChild(minusButton);
-                counterDiv.appendChild(count);
-                counterDiv.appendChild(plusButton);
-
-                itemDiv.appendChild(infoDiv);
-                itemDiv.appendChild(counterDiv);
-
-                container.appendChild(itemDiv);
-            });
-        }
-
-        function saveData() {
-            localStorage.setItem('dataLoaded', JSON.stringify(dataArray)); // Speichere die Daten im localStorage
-            console.log("Daten erfolgreich gespeichert!");
-        }
-
-        document.getElementById('loadBtn').addEventListener('click', loadData);
-        document.getElementById('sendBtn').addEventListener('click', () => {
-            const data = JSON.parse(localStorage.getItem('dataLoaded'));
-            if (data) {
-                const dataToSend = data.map(item => `${item.name}; ${item.preis}; ${item.zaehler}`).join('\n');
-                alert(`Zwischenergebnis:\n${dataToSend}`); // Zeige die Zählerstände an
-            } else {
-                alert('Es gibt keine zwischengespeicherten Daten.');
-            }
+// Lädt Zählerstände aus localStorage
+function loadData() {
+    const savedData = JSON.parse(localStorage.getItem('data'));
+    if (savedData) {
+        document.querySelectorAll('.count').forEach((count, index) => {
+            count.textContent = savedData[index] || '0';
         });
+        document.getElementById('loadBtn').disabled = true;
+        alert("Daten geladen!");
+    }
+}
 
-        document.getElementById('endBtn').addEventListener('click', () => {
-            const confirmation = confirm("Wollen Sie das Projekt beenden?");
-            if (confirmation) {
-                localStorage.removeItem('dataLoaded'); // Leere die Daten im localStorage
-                document.getElementById('getraenke-container').innerHTML = ''; // Leere den Container
-                alert("Das Projekt wurde beendet und die Zähler wurden zurückgesetzt.");
-            }
-        });
+// Setzt Zählerstände zurück und leert localStorage
+function endProject() {
+    if (confirm("Wollen Sie das Projekt beenden?")) {
+        localStorage.removeItem('data');
+        document.querySelectorAll('.count').forEach(count => count.textContent = '0');
+        document.getElementById('loadBtn').disabled = false;
+        alert("Das Projekt wurde beendet und die Zähler wurden zurückgesetzt.");
+    }
+}
 
-        // Lade die Daten beim Seitenladen
-        window.onload = loadData;
-    </script>
+// Event Listeners für Buttons
+document.getElementById('loadBtn').addEventListener('click', loadData);
+document.getElementById('saveBtn').addEventListener('click', saveData);
+document.getElementById('endBtn').addEventListener('click', endProject);
+
+// Initiales Rendern der Getränke
+renderGetraenke();
+</script>
+
 </body>
 </html>
