@@ -84,8 +84,6 @@
     <div id="getraenke-container"></div>
 
     <script>
-        const POLLING_INTERVAL = 2000; // Polling alle 2 Sekunden
-
         async function loadData() {
             try {
                 const response = await fetch('getraenke.json'); // Lade die Daten von der JSON-Datei
@@ -93,17 +91,25 @@
                 const data = await response.json();
                 const getraenke = data.getraenke;
 
-                if (getraenke.length > 0) {
+                // Überprüfen, ob die getraenke Daten vorhanden sind
+                if (getraenke && getraenke.length > 0) {
                     const newData = getraenke.map(item => ({
                         name: item.Name,
                         preis: item.Preis,
                         zaehler: 0 // Initialisiere den Zähler
                     }));
 
-                    renderData(newData);
+                    // Überprüfen, ob bereits Daten in localStorage vorhanden sind
+                    const existingData = JSON.parse(localStorage.getItem('dataLoaded')) || [];
+                    if (existingData.length > 0) {
+                        renderData(existingData); // Bestehende Daten anzeigen
+                    } else {
+                        renderData(newData); // Neue Daten anzeigen
+                    }
+
                     localStorage.setItem('dataLoaded', JSON.stringify(newData));
                 } else {
-                    console.log("getraenke.json ist leer.");
+                    console.log("getraenke.json ist leer oder nicht verfügbar.");
                 }
             } catch (error) {
                 console.error("Fehler beim Laden der Daten:", error);
@@ -175,18 +181,6 @@
             // In einer echten Anwendung würden wir die Daten an eine Server-API senden.
         }
 
-        function pollForUpdates() {
-            const localData = JSON.parse(localStorage.getItem('dataLoaded')) || [];
-            const container = document.getElementById('getraenke-container');
-
-            fetch('data.json').then(response => response.json()).then(data => {
-                if (JSON.stringify(data) !== JSON.stringify(localData)) {
-                    renderData(data);
-                    localStorage.setItem('dataLoaded', JSON.stringify(data));
-                }
-            }).catch(error => console.error("Fehler beim Polling der Daten:", error));
-        }
-
         document.getElementById('loadBtn').addEventListener('click', loadData);
         document.getElementById('sendBtn').addEventListener('click', () => {
             const data = JSON.parse(localStorage.getItem('dataLoaded'));
@@ -198,15 +192,17 @@
             const confirmation = confirm("Wollen Sie das Projekt beenden?");
             if (confirmation) {
                 // Setze die data.json auf leer und blende die Balken aus
-                fetch('data.json', { method: 'DELETE' }); // Dies ist ein Platzhalter. In einer echten Anwendung muss eine API existieren.
+                localStorage.removeItem('dataLoaded'); // Leere die Daten im localStorage
                 document.getElementById('getraenke-container').style.display = 'none'; // Blende die Balken aus
                 alert('Das Projekt wurde beendet und die Daten gelöscht!');
             }
         });
 
-        // Initialisiere die Daten beim Starten und starte das Polling
-        loadData();
-        setInterval(pollForUpdates, POLLING_INTERVAL);
+        // Überprüfe, ob Daten in localStorage vorhanden sind, um sie beim Start zu laden
+        const existingData = JSON.parse(localStorage.getItem('dataLoaded'));
+        if (existingData) {
+            renderData(existingData); // Bestehende Daten anzeigen
+        }
     </script>
 </body>
 </html>
