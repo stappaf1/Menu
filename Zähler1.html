@@ -152,14 +152,7 @@
         }
 
         function saveData() {
-            const data = Array.from(document.querySelectorAll('.item')).map(item => {
-                return {
-                    name: item.querySelector('.name').textContent,
-                    preis: item.querySelector('.preis').textContent,
-                    zaehler: item.querySelector('.count').textContent
-                };
-            });
-
+            const data = collectData();
             const emailContent = data.map(item => `${item.name}; ${item.preis}; ${item.zaehler}`).join('\n');
             const subject = prompt("Betreff der E-Mail eingeben (Projektname):");
             if (subject) {
@@ -168,17 +161,30 @@
         }
 
         function endProject() {
-            const confirmEnd = confirm("Wollen Sie das Projekt beenden?");
-            if (confirmEnd) {
-                document.getElementById('getraenke-container').innerHTML = '';
-                fetch('data.json', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify([])
-                });
+            const data = collectData();
+            const emailContent = data.map(item => `${item.name}; ${item.preis}; ${item.zaehler}`).join('\n');
+            const subject = prompt("Betreff der E-Mail für das Endergebnis eingeben:");
+            
+            if (subject) {
+                sendEmail(subject, emailContent); // Sendet die E-Mail
+                const confirmEnd = confirm("Wollen Sie das Projekt beenden?");
+                if (confirmEnd) {
+                    document.getElementById('getraenke-container').innerHTML = '';
+                    fetch('data.json', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify([])
+                    });
+                }
             }
+        }
+
+        function collectData() {
+            return Array.from(document.querySelectorAll('.item')).map(item => ({
+                name: item.querySelector('.name').textContent,
+                preis: item.querySelector('.preis').textContent,
+                zaehler: item.querySelector('.count').textContent
+            }));
         }
 
         function sendEmail(subject, content) {
