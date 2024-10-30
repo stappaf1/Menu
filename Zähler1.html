@@ -102,9 +102,17 @@
                         zaehler: 0 // Initialisiere den Zähler
                     }));
 
+                    // Überprüfen, ob Daten im localStorage vorhanden sind und setze die Zählerstände
+                    const storedData = JSON.parse(localStorage.getItem('dataLoaded'));
+                    if (storedData) {
+                        dataArray = dataArray.map((item, index) => ({
+                            ...item,
+                            zaehler: storedData[index] ? storedData[index].zaehler : 0
+                        }));
+                    }
+
                     // Rendern der neuen Daten
                     renderData(dataArray);
-                    saveData(); // Speichere die Zählerstände in data.json
                 } else {
                     console.log("getraenke.json ist leer oder nicht verfügbar.");
                     alert("Die Datei getraenke.json ist leer oder nicht verfügbar.");
@@ -119,7 +127,7 @@
             const container = document.getElementById('getraenke-container');
             container.innerHTML = ''; // Leere den Container
 
-            data.forEach(item => {
+            data.forEach((item, index) => {
                 const itemDiv = document.createElement('div');
                 itemDiv.className = 'item';
 
@@ -173,21 +181,9 @@
             });
         }
 
-        async function saveData() {
-            try {
-                const response = await fetch('data.json', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(dataArray) // Speichere die Daten im JSON-Format
-                });
-
-                if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`); // Fehlerüberprüfung
-                console.log("Daten erfolgreich gespeichert!");
-            } catch (error) {
-                console.error("Fehler beim Speichern der Daten:", error);
-            }
+        function saveData() {
+            localStorage.setItem('dataLoaded', JSON.stringify(dataArray)); // Speichere die Daten im localStorage
+            console.log("Daten erfolgreich gespeichert!");
         }
 
         document.getElementById('loadBtn').addEventListener('click', loadData);
@@ -200,7 +196,6 @@
         document.getElementById('endBtn').addEventListener('click', () => {
             const confirmation = confirm("Wollen Sie das Projekt beenden?");
             if (confirmation) {
-                // Setze die Daten in localStorage zurück und blende die Balken aus
                 localStorage.removeItem('dataLoaded'); // Leere die Daten im localStorage
                 document.getElementById('getraenke-container').innerHTML = ''; // Leere den Container
                 alert('Das Projekt wurde beendet und die Daten gelöscht! Sie können jetzt wieder laden.');
