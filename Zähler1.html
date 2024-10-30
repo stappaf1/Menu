@@ -7,8 +7,8 @@
     <style>
         body { 
             font-family: Arial, sans-serif; 
-            touch-action: manipulation;
-            margin: 0;
+            touch-action: manipulation; /* Verhindert das Zooming */
+            margin: 0; /* Entfernt den Standardabstand des Körpers */
         }
         .header {
             display: flex;
@@ -28,7 +28,6 @@
         }
         .load-button { background-color: #4CAF50; }
         .save-button { background-color: #007BFF; }
-
         .item { 
             display: flex; 
             align-items: center; 
@@ -39,14 +38,14 @@
         }
         .info { 
             flex-grow: 1; 
-            display: flex; 
-            justify-content: flex-start; 
-            align-items: center; 
+            display: flex; /* Fügt Flexbox hinzu */
+            justify-content: flex-start; /* Nur der Name und der Preis */
+            align-items: center; /* Zentriert die Elemente vertikal */
         }
         .name { 
             font-size: 1.5em; 
             font-weight: bold; 
-            margin-right: 10px;
+            margin-right: 10px; /* Kleiner Abstand zwischen Name und Preis */
         }
         .preis { 
             font-size: 1.2em; 
@@ -71,11 +70,11 @@
         }
         .button.plus { 
             background-color: #4CAF50; 
-            width: 180px; 
+            width: 180px; /* Dreimal so breit wie vorher */
         }
         .button.minus { 
             background-color: #f44336; 
-            width: 180px; 
+            width: 180px; /* Dreimal so breit wie vorher */
         }
     </style>
 </head>
@@ -84,7 +83,7 @@
     <div class="header">
         <button id="loadBtn" class="load-button">Laden</button>
         <button id="saveBtn" class="save-button">Zwischenergebnis senden</button>
-        <button id="endProjectBtn" class="save-button" style="background-color: #FF5722;">Projekt beenden</button>
+        <button id="endProjectBtn" class="end-button">Projekt beenden</button>
     </div>
 
     <h1 style="text-align:center;">Getränke Zähler</h1>
@@ -152,55 +151,52 @@
         }
 
         function saveData() {
-            const data = collectData();
+            const data = Array.from(document.querySelectorAll('.item')).map(item => {
+                return {
+                    name: item.querySelector('.name').textContent,
+                    preis: item.querySelector('.preis').textContent,
+                    zaehler: item.querySelector('.count').textContent
+                };
+            });
+
             const emailContent = data.map(item => `${item.name}; ${item.preis}; ${item.zaehler}`).join('\n');
-            const subject = prompt("Betreff der E-Mail eingeben (Projektname):");
+            const date = new Date();
+            const formattedDate = date.toLocaleDateString('de-DE') + ' um ' + date.toLocaleTimeString('de-DE', { hour: '2-digit', minute: '2-digit' });
+            const subject = prompt("Betreff der E-Mail eingeben (Projektname):") + ' - ' + formattedDate;
+
             if (subject) {
                 sendEmail(subject, emailContent);
             }
         }
 
-        function endProject() {
-            const data = collectData();
-            const emailContent = data.map(item => `${item.name}; ${item.preis}; ${item.zaehler}`).join('\n');
-            const subject = prompt("Betreff der E-Mail für das Endergebnis eingeben:");
-
-            if (subject) {
-                sendEmail(subject, emailContent); // Sendet die E-Mail
-                const confirmEnd = confirm("Wollen Sie das Projekt wirklich beenden?");
-                if (confirmEnd) {
-                    document.getElementById('getraenke-container').innerHTML = '';
-                    clearData();
-                    alert("Das Projekt wurde beendet und alle Daten wurden gelöscht.");
-                }
-            }
-        }
-
-        function collectData() {
-            return Array.from(document.querySelectorAll('.item')).map(item => ({
-                name: item.querySelector('.name').textContent,
-                preis: item.querySelector('.preis').textContent,
-                zaehler: item.querySelector('.count').textContent
-            }));
-        }
-
         function sendEmail(subject, content) {
-            const mailtoLink = `mailto:stefan@apfl.de?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(content)}`;
+            const mailtoLink = `mailto:event@hotel-alea.de?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(content)}`;
             window.location.href = mailtoLink;
-        }
-
-        async function clearData() {
-            // Leert die data.json Datei durch Senden eines leeren Arrays (sofern Serverseitiges Speichern erforderlich ist)
-            await fetch('data.json', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify([])
-            });
         }
 
         document.getElementById('loadBtn').addEventListener('click', loadGetraenke);
         document.getElementById('saveBtn').addEventListener('click', saveData);
-        document.getElementById('endProjectBtn').addEventListener('click', endProject);
+        
+        // Funktion für das Beenden des Projekts
+        document.getElementById('endProjectBtn').addEventListener('click', () => {
+            const date = new Date();
+            const formattedDate = date.toLocaleDateString('de-DE') + ' um ' + date.toLocaleTimeString('de-DE', { hour: '2-digit', minute: '2-digit' });
+            const emailContent = Array.from(document.querySelectorAll('.item')).map(item => {
+                return {
+                    name: item.querySelector('.name').textContent,
+                    preis: item.querySelector('.preis').textContent,
+                    zaehler: item.querySelector('.count').textContent
+                };
+            }).map(item => `${item.name}; ${item.preis}; ${item.zaehler}`).join('\n');
+            const subject = prompt("Betreff der E-Mail eingeben (Projektname):") + ' - ' + formattedDate;
+
+            if (subject) {
+                sendEmail(subject, emailContent);
+                // Leere die data.json hier und blende die Balken aus
+                document.getElementById('getraenke-container').innerHTML = ''; // Alle Balken ausblenden
+                document.getElementById('loadBtn').disabled = false; // Lade-Button wieder aktivieren
+            }
+        });
     </script>
 </body>
 </html>
