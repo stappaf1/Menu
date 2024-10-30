@@ -1,95 +1,151 @@
 {
   "speisen": [
     {
-      "Kategorie": "Vorspeise",
-      "Name": "Vitello Tonnato vom bayerischen Weidekalb",
-      "Beschreibung": "",
+      "Kategorie": "Hauptgerichte",
+      "Name": "Schnitzel Wiener Art",
+      "Beschreibung": "Knusprig gebratenes Kalbsschnitzel, serviert mit einem hausgemachten Kartoffelsalat und knusprigen Pommes.",
       "Menge": "Portion",
-      "Preis": ""
+      "Preis": "19.00"
     },
     {
-      "Kategorie": "Vorspeise",
-      "Name": "Gemischtes Antipasti Gemüse",
-      "Beschreibung": "",
+      "Kategorie": "Hauptgerichte",
+      "Name": "Fleischpflanzerl mit Kartoffelsalat",
+      "Beschreibung": "Würziges Rinderhacksteak, perfekt gebraten, dazu unser traditioneller, hausgemachter Kartoffelsalat.",
       "Menge": "Portion",
-      "Preis": ""
+      "Preis": "14.50"
     },
     {
-      "Kategorie": "Vorspeise",
-      "Name": "Sateespieß vom Maishendl auf Mango-Papayasalat",
-      "Beschreibung": "",
+      "Kategorie": "Hauptgerichte",
+      "Name": "Spinatknödel",
+      "Beschreibung": "Lockere Knödel aus frischem Spinat und Semmelbröseln, dazu eine cremige Käsesauce und frische Kräuter.",
       "Menge": "Portion",
-      "Preis": ""
+      "Preis": "14.50"
     },
     {
-      "Kategorie": "Hauptspeise",
-      "Name": "Tranche vom Irisches Roastbeef auf Kartoffel-Petersilienwurzel-Pürree und herbstlichem Röstgemüse",
-      "Beschreibung": "",
+      "Kategorie": "Hauptgerichte",
+      "Name": "Schweinsbraten mit Knödeln",
+      "Beschreibung": "Zarter Schweinsbraten in dunkler Biersauce, serviert mit bayerischen Kartoffelknödeln und Blaukraut.",
       "Menge": "Portion",
-      "Preis": ""
+      "Preis": "19.00"
     },
     {
-      "Kategorie": "",
-      "Name": "",
-      "Beschreibung": "",
-      "Menge": "",
-      "Preis": ""
-    },
-    {
-      "Kategorie": "Hauptspeise",
-      "Name": "Gegrilltes Lachsfilet mit Limencelloschaum auf Belugalinsenrisotto und Dijonsenf-Radieschen",
-      "Beschreibung": "",
+      "Kategorie": "Hauptgerichte",
+      "Name": "Leberkäse mit Spiegelei",
+      "Beschreibung": "Bayerischer Leberkäse, saftig und würzig, mit Spiegelei und Bratkartoffeln serviert.",
       "Menge": "Portion",
-      "Preis": ""
+      "Preis": "13.50"
     },
     {
-      "Kategorie": "",
-      "Name": "",
-      "Beschreibung": "",
-      "Menge": "",
-      "Preis": ""
-    },
-    {
-      "Kategorie": "Hauptspeise",
-      "Name": "Ravioli mit Limone & Basilikum in leichter Bärlauchsahne",
-      "Beschreibung": "",
+      "Kategorie": "Vorspeisen",
+      "Name": "Obatzda mit Brezn",
+      "Beschreibung": "Cremiger Obatzda, eine pikante Käsemischung, dazu ofenfrische Brezen und Radieserl.",
       "Menge": "Portion",
-      "Preis": ""
+      "Preis": "9.50"
     },
     {
-      "Kategorie": "Desert",
-      "Name": "Zweierlei Schokoladenmousse",
-      "Beschreibung": "",
+      "Kategorie": "Vorspeisen",
+      "Name": "Bayerische Brotzeitplatte",
+      "Beschreibung": "Eine herzhafte Auswahl an Schinken, Wurst, Käse, Radi und Obatzda, dazu frisches Bauernbrot und Brezen.",
       "Menge": "Portion",
-      "Preis": ""
+      "Preis": "18.00"
     },
     {
-      "Kategorie": "",
-      "Name": "",
-      "Beschreibung": "",
-      "Menge": "",
-      "Preis": ""
-    },
-    {
-      "Kategorie": "Desert",
-      "Name": "Passionsfrucht Pana Cotta",
-      "Beschreibung": "",
+      "Kategorie": "Vorspeisen",
+      "Name": "Brezn mit Butter",
+      "Beschreibung": "Frische bayerische Brezen, serviert mit hausgemachter Kräuterbutter.",
       "Menge": "Portion",
-      "Preis": ""
+      "Preis": "3.50"
     },
     {
-      "Kategorie": "",
-      "Name": "",
-      "Beschreibung": "",
-      "Menge": "",
-      "Preis": ""
-    },
-    {
-      "Kategorie": "Desert",
-      "Name": "Crème brûlée von der Tonkabohne",
-      "Beschreibung": "",
+      "Kategorie": "Vegetarische Gerichte",
+      "Name": "Käsespätzle",
+      "Beschreibung": "Hausgemachte Spätzle mit würzigem Bergkäse überbacken, garniert mit Röstzwiebeln und frischem Schnittlauch.",
       "Menge": "Portion",
-      "Preis": ""
+      "Preis": "13.00"
+    },
+    {
+      "Kategorie": "Vegetarische Gerichte",
+      "Name": "Kartoffelpuffer mit Apfelmus",
+      "Beschreibung": "Knusprige Kartoffelpuffer, goldbraun gebraten, serviert mit frischem Apfelmus.",
+      "Menge": "Portion",
+      "Preis": "12.00"
+    },
+    {
+      "Kategorie": "Vegetarische Gerichte",
+      "Name": "Bayerischer Rahmschwammerl",
+      "Beschreibung": "Frische Waldpilze in einer cremigen Rahmsauce, serviert mit Semmelknödeln.",
+      "Menge": "Portion",
+      "Preis": "15.00"
+    },
+    {
+      "Kategorie": "Desserts",
+      "Name": "Kaiserschmarrn mit Apfelkompott",
+      "Beschreibung": "Fluffiger Kaiserschmarrn, karamellisiert und mit Staubzucker bestäubt, serviert mit warmem Apfelkompott.",
+      "Menge": "Portion",
+      "Preis": "14.00"
+    },
+    {
+      "Kategorie": "Desserts",
+      "Name": "Apfelstrudel mit Vanillesauce",
+      "Beschreibung": "Warmer Apfelstrudel mit Zimt und Rosinen, dazu hausgemachte Vanillesauce.",
+      "Menge": "Portion",
+      "Preis": "9.00"
+    },
+    {
+      "Kategorie": "Desserts",
+      "Name": "Obstsalat",
+      "Beschreibung": "Frischer Obstsalat aus saisonalen Früchten, leicht und erfrischend.",
+      "Menge": "Portion",
+      "Preis": "8.00"
+    },
+    {
+      "Kategorie": "Beilagen",
+      "Name": "Kartoffelsalat",
+      "Beschreibung": "Hausgemachter Kartoffelsalat mit Essig und Öl, frischen Zwiebeln und Kräutern.",
+      "Menge": "Portion",
+      "Preis": "4.50"
+    },
+    {
+      "Kategorie": "Beilagen",
+      "Name": "Pommes Frites",
+      "Beschreibung": "Knusprige Pommes Frites, perfekt gesalzen und goldbraun gebacken.",
+      "Menge": "Portion",
+      "Preis": "4.00"
+    },
+    {
+      "Kategorie": "Beilagen",
+      "Name": "Blaukraut",
+      "Beschreibung": "Hausgemachtes, leicht süßliches Blaukraut, nach traditioneller Art zubereitet.",
+      "Menge": "Portion",
+      "Preis": "4.50"
+    },
+    {
+      "Kategorie": "Beilagen",
+      "Name": "Semmelknödel",
+      "Beschreibung": "Traditionelle bayerische Semmelknödel, locker und luftig, perfekt zu Saucen und Braten.",
+      "Menge": "Portion",
+      "Preis": "3.50"
+    },
+    {
+      "Kategorie": "Suppen",
+      "Name": "Leberknödelsuppe",
+      "Beschreibung": "Kräftige Rinderbrühe mit einem würzigen Leberknödel und Schnittlauch.",
+      "Menge": "Portion",
+      "Preis": "6.50"
+    },
+    {
+      "Kategorie": "Suppen",
+      "Name": "Gulaschsuppe",
+      "Beschreibung": "Deftige Gulaschsuppe mit zarten Fleischstücken und Paprika, serviert mit Bauernbrot.",
+      "Menge": "Portion",
+      "Preis": "7.50"
+    },
+    {
+      "Kategorie": "Suppen",
+      "Name": "Kartoffelsuppe",
+      "Beschreibung": "Cremige Kartoffelsuppe mit Speck und knusprigen Croûtons.",
+      "Menge": "Portion",
+      "Preis": "6.00"
     }
   ]
 }
