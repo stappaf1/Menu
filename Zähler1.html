@@ -164,17 +164,14 @@
             const data = collectData();
             const emailContent = data.map(item => `${item.name}; ${item.preis}; ${item.zaehler}`).join('\n');
             const subject = prompt("Betreff der E-Mail für das Endergebnis eingeben:");
-            
+
             if (subject) {
                 sendEmail(subject, emailContent); // Sendet die E-Mail
-                const confirmEnd = confirm("Wollen Sie das Projekt beenden?");
+                const confirmEnd = confirm("Wollen Sie das Projekt wirklich beenden?");
                 if (confirmEnd) {
                     document.getElementById('getraenke-container').innerHTML = '';
-                    fetch('data.json', {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify([])
-                    });
+                    clearData();
+                    alert("Das Projekt wurde beendet und alle Daten wurden gelöscht.");
                 }
             }
         }
@@ -190,6 +187,15 @@
         function sendEmail(subject, content) {
             const mailtoLink = `mailto:stefan@apfl.de?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(content)}`;
             window.location.href = mailtoLink;
+        }
+
+        async function clearData() {
+            // Leert die data.json Datei durch Senden eines leeren Arrays (sofern Serverseitiges Speichern erforderlich ist)
+            await fetch('data.json', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify([])
+            });
         }
 
         document.getElementById('loadBtn').addEventListener('click', loadGetraenke);
