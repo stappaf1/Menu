@@ -99,17 +99,12 @@
                         zaehler: 0 // Initialisiere den Zähler
                     }));
 
-                    // Überprüfen, ob bereits Daten in localStorage vorhanden sind
-                    const existingData = JSON.parse(localStorage.getItem('dataLoaded')) || [];
-                    if (existingData.length > 0) {
-                        renderData(existingData); // Bestehende Daten anzeigen
-                    } else {
-                        renderData(newData); // Neue Daten anzeigen
-                    }
-
+                    // Rendern der neuen Daten
+                    renderData(newData);
                     localStorage.setItem('dataLoaded', JSON.stringify(newData));
                 } else {
                     console.log("getraenke.json ist leer oder nicht verfügbar.");
+                    alert("Die Datei getraenke.json ist leer oder nicht verfügbar.");
                 }
             } catch (error) {
                 console.error("Fehler beim Laden der Daten:", error);
@@ -177,8 +172,6 @@
 
         function saveData(data) {
             localStorage.setItem('dataLoaded', JSON.stringify(data));
-            // Simuliere das Speichern von "data.json" hier.
-            // In einer echten Anwendung würden wir die Daten an eine Server-API senden.
         }
 
         document.getElementById('loadBtn').addEventListener('click', loadData);
@@ -191,18 +184,12 @@
         document.getElementById('endBtn').addEventListener('click', () => {
             const confirmation = confirm("Wollen Sie das Projekt beenden?");
             if (confirmation) {
-                // Setze die data.json auf leer und blende die Balken aus
+                // Setze die Daten in localStorage zurück und blende die Balken aus
                 localStorage.removeItem('dataLoaded'); // Leere die Daten im localStorage
-                document.getElementById('getraenke-container').style.display = 'none'; // Blende die Balken aus
-                alert('Das Projekt wurde beendet und die Daten gelöscht!');
+                document.getElementById('getraenke-container').innerHTML = ''; // Leere den Container
+                alert('Das Projekt wurde beendet und die Daten gelöscht! Sie können jetzt wieder laden.');
             }
         });
-
-        // Überprüfe, ob Daten in localStorage vorhanden sind, um sie beim Start zu laden
-        const existingData = JSON.parse(localStorage.getItem('dataLoaded'));
-        if (existingData) {
-            renderData(existingData); // Bestehende Daten anzeigen
-        }
     </script>
 </body>
 </html>
