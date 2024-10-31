@@ -179,7 +179,7 @@
             const data = Array.from(document.querySelectorAll('.item')).map(item => {
                 return {
                     name: item.querySelector('.name').textContent,
-                    preis: item.querySelector('.preis').textContent,
+                    preis: item.querySelector('.preis').textContent.replace('€', '').trim(), // Entferne das Euro-Symbol
                     zaehler: item.querySelector('.count').textContent
                 };
             });
