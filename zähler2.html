@@ -5,99 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Getränke Zähler</title>
     <style>
-        /* Original CSS-Formatierung */
-        body { 
-            font-family: Arial, sans-serif; 
-            touch-action: manipulation;
-            margin: 0;
-        }
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px;
-            background-color: #f8f8f8;
-            border-bottom: 2px solid #ddd;
-        }
-        .header button {
-            padding: 10px 20px;
-            font-size: 1em;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            color: white;
-        }
+        /* Layout und Formatierung */
+        body { font-family: Arial, sans-serif; }
+        .header { display: flex; justify-content: space-around; background-color: #f0f0f0; padding: 10px; }
+        .button { padding: 10px 20px; font-size: 1em; cursor: pointer; border-radius: 5px; color: white; }
         .load-button { background-color: #4CAF50; }
         .save-button { background-color: #007BFF; }
-        .end-button { background-color: #FF5722; }
-        .item { 
-            display: flex; 
-            align-items: center; 
-            justify-content: space-between; 
-            padding: 10px; 
-            border: 1px solid #ddd; 
-            border-radius: 5px; 
-            margin: 5px;
-        }
-        .info { 
-            flex-grow: 1; 
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-        }
-        .name { 
-            font-size: 1.5em; 
-            font-weight: bold; 
-            margin-right: 10px;
-        }
-        .preis { 
-            font-size: 1.2em; 
-            color: #000; 
-        }
-        .counter { 
-            display: flex; 
-            align-items: center; 
-        }
-        .counter span { 
-            margin: 0 10px; 
-            font-size: 1.5em; 
-        }
-        .button { 
-            padding: 5px; 
-            border: none; 
-            color: white; 
-            cursor: pointer; 
-            font-size: 1em; 
-            border-radius: 5px; 
-            height: 40px; 
-        }
-        .button.plus { 
-            background-color: #4CAF50; 
-            width: 180px;
-        }
-        .button.minus { 
-            background-color: #f44336; 
-            width: 180px;
-        }
+        .end-button { background-color: #FF5733; }
+        .item { padding: 10px; border: 1px solid #ddd; border-radius: 5px; display: flex; justify-content: space-between; align-items: center; }
+        .counter { display: flex; align-items: center; }
+        .count { font-size: 1.5em; padding: 0 20px; }
+        .button.plus { background-color: #4CAF50; }
+        .button.minus { background-color: #f44336; }
     </style>
-</head>
-<body>
+    <!-- Firebase SDKs -->
+    <script type="module">
+        // Importiere die Firebase-Funktionen
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+        import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-database.js";
 
-    <div class="header">
-        <button id="loadBtn" class="load-button">Laden</button>
-        <button id="saveBtn" class="save-button">Zwischenergebnis senden</button>
-        <button id="endProjectBtn" class="end-button">Projekt beenden</button>
-    </div>
-
-    <h1 style="text-align:center;">Getränke Zähler</h1>
-    <div id="getraenke-container"></div>
-
-    <!-- Firebase SDKs statisch eingebunden -->
-    <script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-database.js"></script>
-
-    <script>
-        // Firebase-Konfiguration und Initialisierung
+        // Firebase-Konfiguration
         const firebaseConfig = {
             apiKey: "AIzaSyBydAxxqNvFuj6DBY7iD5P8UpZpYSq0_BE",
             authDomain: "alea-hotels-pfaffenhofen.firebaseapp.com",
@@ -109,124 +36,93 @@
             measurementId: "G-M82VZW2CYK"
         };
 
-        // Initialisieren der Firebase-App und der Datenbank
-        const app = firebase.initializeApp(firebaseConfig);
-        const database = firebase.database(app);
+        // Initialisiere Firebase
+        const app = initializeApp(firebaseConfig);
+        const database = getDatabase(app);
 
-        // Hilfsfunktion zum Speichern der Daten in der Datenbank
-        function saveDataToFirebase(data) {
-            const updates = {};
-            data.forEach((item) => {
-                const key = item.name.replace(/[\.\#\$\[\]\/]/g, '');  // Entfernt ungültige Zeichen aus dem Getränkenamen
-                updates[key] = item;
-            });
+        // Funktion zum Speichern der Daten in Firebase
+        function saveDataToFirebase() {
+            const items = Array.from(document.querySelectorAll('.item')).map(item => ({
+                name: item.querySelector('.name').textContent,
+                preis: item.querySelector('.preis').textContent,
+                zaehler: item.querySelector('.count').textContent
+            }));
 
-            return database.ref('getraenke').set(updates)
+            // Datenpfad festlegen und Daten speichern
+            const dataRef = ref(database, 'getraenke');
+            set(dataRef, items)
                 .then(() => {
-                    console.log('Daten erfolgreich gespeichert!');
-                    alert('Daten erfolgreich gespeichert!');
+                    alert("Daten wurden erfolgreich gespeichert!");
+                    console.log("Daten erfolgreich gespeichert!");
                 })
-                .catch((error) => {
-                    console.error('Fehler beim Speichern der Daten:', error);
-                    alert('Fehler beim Speichern der Daten: ' + error.message);
+                .catch(error => {
+                    console.error("Fehler beim Speichern der Daten:", error);
+                    alert("Fehler beim Speichern der Daten. Siehe Konsole für Details.");
                 });
         }
 
-        // Funktion zum Speichern der Getränkedaten
-        function saveData() {
-            const data = Array.from(document.querySelectorAll('.item')).map(item => {
-                return {
-                    name: item.querySelector('.name').textContent,
-                    preis: item.querySelector('.preis').textContent.replace('€', '').trim(),
-                    zaehler: item.querySelector('.count').textContent
-                };
+        // Laden der Getränkedaten (Beispieldaten)
+        function loadGetraenke() {
+            const exampleData = [
+                { Name: "Wasser", Preis: "2.50" },
+                { Name: "Bier", Preis: "3.00" },
+                { Name: "Cola", Preis: "2.80" }
+            ];
+            const container = document.getElementById('getraenke-container');
+            container.innerHTML = ''; // Container zurücksetzen
+
+            exampleData.forEach(item => {
+                const itemDiv = document.createElement('div');
+                itemDiv.className = 'item';
+
+                const name = document.createElement('div');
+                name.className = 'name';
+                name.textContent = item.Name;
+
+                const preis = document.createElement('div');
+                preis.className = 'preis';
+                preis.textContent = `€${item.Preis}`;
+
+                const count = document.createElement('span');
+                count.className = 'count';
+                count.textContent = '0';
+
+                const plusButton = document.createElement('button');
+                plusButton.className = 'button plus';
+                plusButton.textContent = '+';
+                plusButton.onclick = () => count.textContent = parseInt(count.textContent) + 1;
+
+                const minusButton = document.createElement('button');
+                minusButton.className = 'button minus';
+                minusButton.textContent = '-';
+                minusButton.onclick = () => count.textContent = Math.max(0, parseInt(count.textContent) - 1);
+
+                const counterDiv = document.createElement('div');
+                counterDiv.className = 'counter';
+                counterDiv.appendChild(minusButton);
+                counterDiv.appendChild(count);
+                counterDiv.appendChild(plusButton);
+
+                itemDiv.appendChild(name);
+                itemDiv.appendChild(preis);
+                itemDiv.appendChild(counterDiv);
+                container.appendChild(itemDiv);
             });
-            saveDataToFirebase(data);
         }
 
-        // Funktion zum Laden der Getränkedaten
-        async function loadGetraenke() {
-            try {
-                const response = await fetch('getraenke.json');
-                if (!response.ok) throw new Error('Netzwerkantwort war nicht ok');
-                const data = await response.json();
-                const getraenke = data.getraenke;
-                const container = document.getElementById('getraenke-container');
-
-                container.innerHTML = '';
-                getraenke.forEach(item => {
-                    const itemDiv = document.createElement('div');
-                    itemDiv.className = 'item';
-
-                    const infoDiv = document.createElement('div');
-                    infoDiv.className = 'info';
-
-                    const name = document.createElement('div');
-                    name.className = 'name';
-                    name.textContent = item.Name;
-
-                    const preis = document.createElement('div');
-                    preis.className = 'preis';
-                    preis.textContent = `€${item.Preis}`;
-
-                    infoDiv.appendChild(name);
-                    infoDiv.appendChild(preis);
-
-                    const counterDiv = document.createElement('div');
-                    counterDiv.className = 'counter';
-
-                    const count = document.createElement('span');
-                    count.textContent = '0';
-                    count.className = 'count';
-
-                    const plusButton = document.createElement('button');
-                    plusButton.textContent = '+1';
-                    plusButton.className = 'button plus';
-                    plusButton.onclick = () => count.textContent = parseInt(count.textContent) + 1;
-
-                    const minusButton = document.createElement('button');
-                    minusButton.textContent = '-1';
-                    minusButton.className = 'button minus';
-                    minusButton.onclick = () => {
-                        count.textContent = Math.max(0, parseInt(count.textContent) - 1);
-                    };
-
-                    counterDiv.appendChild(minusButton);
-                    counterDiv.appendChild(count);
-                    counterDiv.appendChild(plusButton);
-
-                    itemDiv.appendChild(infoDiv);
-                    itemDiv.appendChild(counterDiv);
-                    container.appendChild(itemDiv);
-                });
-
-                document.getElementById('loadBtn').disabled = true;
-            } catch (error) {
-                console.error("Fehler beim Laden der Getränkedaten:", error);
-                alert("Fehler beim Laden der Getränkedaten: " + error.message);
-            }
-        }
-
-        // Hinzufügen der Event-Listener
-        document.addEventListener("DOMContentLoaded", () => {
+        window.addEventListener('DOMContentLoaded', () => {
             document.getElementById('loadBtn').addEventListener('click', loadGetraenke);
-            document.getElementById('saveBtn').addEventListener('click', saveData);
-            document.getElementById('endProjectBtn').addEventListener('click', () => {
-                const date = new Date();
-                const formattedDate = date.toLocaleDateString('de-DE') + ' um ' + date.toLocaleTimeString('de-DE', { hour: '2-digit', minute: '2-digit' });
-                const emailContent = Array.from(document.querySelectorAll('.item')).map(item => {
-                    return {
-                        name: item.querySelector('.name').textContent,
-                        preis: item.querySelector('.preis').textContent,
-                        zaehler: item.querySelector('.count').textContent
-                    };
-                }).map(item => `${item.name}; ${item.preis}; ${item.zaehler}`).join('\n');
-
-                const subject = `Projekt beendet - ${formattedDate}`;
-                const mailtoLink = `mailto:event@hotel-alea.de?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailContent)}`;
-                window.location.href = mailtoLink;
-            });
+            document.getElementById('saveBtn').addEventListener('click', saveDataToFirebase);
         });
     </script>
+</head>
+<body>
+    <div class="header">
+        <button id="loadBtn" class="button load-button">Laden</button>
+        <button id="saveBtn" class="button save-button">Zwischenergebnis senden</button>
+    </div>
+
+    <h1 style="text-align:center;">Getränke Zähler</h1>
+    <div id="getraenke-container"></div>
 </body>
 </html>
