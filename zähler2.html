@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Getränke Zähler</title>
     <style>
-        /* Deine Styles hier, wie vorher */
+        /* Deine Styles hier */
     </style>
 </head>
 <body>
@@ -19,11 +19,12 @@
     <h1 style="text-align:center;">Getränke Zähler</h1>
     <div id="getraenke-container"></div>
 
-    <!-- Firebase SDK -->
-    <script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
-        import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-database.js";
+    <!-- Firebase SDKs statisch eingebunden -->
+    <script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-database.js"></script>
 
+    <script>
+        // Firebase-Konfiguration und Initialisierung
         const firebaseConfig = {
             apiKey: "AIzaSyBydAxxqNvFuj6DBY7iD5P8UpZpYSq0_BE",
             authDomain: "alea-hotels-pfaffenhofen.firebaseapp.com",
@@ -35,9 +36,9 @@
             measurementId: "G-M82VZW2CYK"
         };
 
-        // Firebase initialisieren
-        const app = initializeApp(firebaseConfig);
-        const database = getDatabase(app); // Initialisiere die Datenbank
+        // Initialisieren der Firebase-App und der Datenbank
+        const app = firebase.initializeApp(firebaseConfig);
+        const database = firebase.database(app);
 
         // Hilfsfunktion zum Speichern der Daten in der Datenbank
         function saveDataToFirebase(data) {
@@ -46,7 +47,8 @@
                 updates[`/getraenke/${index}`] = item;
             });
 
-            return set(ref(database, 'getraenke'), updates)
+            // Speichern der Daten in Firebase
+            return database.ref('getraenke').set(updates)
                 .then(() => {
                     console.log('Daten erfolgreich gespeichert!');
                     alert('Daten erfolgreich gespeichert!');
@@ -57,7 +59,7 @@
                 });
         }
 
-        // Speichern der Getränkedaten
+        // Funktion zum Speichern der Getränkedaten
         function saveData() {
             const data = Array.from(document.querySelectorAll('.item')).map(item => {
                 return {
@@ -69,32 +71,23 @@
             saveDataToFirebase(data);
         }
 
-        // Event-Listener für den Speichern-Button
-        document.addEventListener("DOMContentLoaded", () => {
-            document.getElementById('saveBtn').addEventListener('click', saveData);
-        });
-
-    </script>
-
-    <script>
+        // Funktion zum Laden der Getränkedaten
         async function loadGetraenke() {
             try {
                 const response = await fetch('getraenke.json');
-                if (!response.ok) {
-                    throw new Error('Netzwerkantwort war nicht ok');
-                }
+                if (!response.ok) throw new Error('Netzwerkantwort war nicht ok');
                 const data = await response.json();
                 const getraenke = data.getraenke;
                 const container = document.getElementById('getraenke-container');
-                
-                container.innerHTML = ''; // Container zurücksetzen
+
+                container.innerHTML = '';
                 getraenke.forEach(item => {
                     const itemDiv = document.createElement('div');
                     itemDiv.className = 'item';
-                    
+
                     const infoDiv = document.createElement('div');
                     infoDiv.className = 'info';
-                    
+
                     const name = document.createElement('div');
                     name.className = 'name';
                     name.textContent = item.Name;
@@ -105,10 +98,10 @@
 
                     infoDiv.appendChild(name);
                     infoDiv.appendChild(preis);
-                    
+
                     const counterDiv = document.createElement('div');
                     counterDiv.className = 'counter';
-                    
+
                     const count = document.createElement('span');
                     count.textContent = '0';
                     count.className = 'count';
@@ -133,7 +126,7 @@
                     itemDiv.appendChild(counterDiv);
                     container.appendChild(itemDiv);
                 });
-                
+
                 document.getElementById('loadBtn').disabled = true;
             } catch (error) {
                 console.error("Fehler beim Laden der Getränkedaten:", error);
@@ -141,26 +134,25 @@
             }
         }
 
-        function sendEmail(subject, content) {
-            const mailtoLink = `mailto:event@hotel-alea.de?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(content)}`;
-            window.location.href = mailtoLink;
-        }
+        // Hinzufügen der Event-Listener
+        document.addEventListener("DOMContentLoaded", () => {
+            document.getElementById('loadBtn').addEventListener('click', loadGetraenke);
+            document.getElementById('saveBtn').addEventListener('click', saveData);
+            document.getElementById('endProjectBtn').addEventListener('click', () => {
+                const date = new Date();
+                const formattedDate = date.toLocaleDateString('de-DE') + ' um ' + date.toLocaleTimeString('de-DE', { hour: '2-digit', minute: '2-digit' });
+                const emailContent = Array.from(document.querySelectorAll('.item')).map(item => {
+                    return {
+                        name: item.querySelector('.name').textContent,
+                        preis: item.querySelector('.preis').textContent,
+                        zaehler: item.querySelector('.count').textContent
+                    };
+                }).map(item => `${item.name}; ${item.preis}; ${item.zaehler}`).join('\n');
 
-        document.getElementById('loadBtn').addEventListener('click', loadGetraenke);
-
-        document.getElementById('endProjectBtn').addEventListener('click', () => {
-            const date = new Date();
-            const formattedDate = date.toLocaleDateString('de-DE') + ' um ' + date.toLocaleTimeString('de-DE', { hour: '2-digit', minute: '2-digit' });
-            const emailContent = Array.from(document.querySelectorAll('.item')).map(item => {
-                return {
-                    name: item.querySelector('.name').textContent,
-                    preis: item.querySelector('.preis').textContent,
-                    zaehler: item.querySelector('.count').textContent
-                };
-            }).map(item => `${item.name}; ${item.preis}; ${item.zaehler}`).join('\n');
-
-            const subject = `Projekt beendet - ${formattedDate}`;
-            sendEmail(subject, emailContent);
+                const subject = `Projekt beendet - ${formattedDate}`;
+                const mailtoLink = `mailto:event@hotel-alea.de?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailContent)}`;
+                window.location.href = mailtoLink;
+            });
         });
     </script>
 </body>
