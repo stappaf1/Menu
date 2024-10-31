@@ -87,10 +87,11 @@
         }
     </style>
     <!-- Firebase SDK -->
-    <script src="https://www.gstatic.com/firebasejs/9.6.11/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.6.11/firebase-database.js"></script>
-    <script>
+    <script type="module">
         // Firebase Setup
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-app.js";
+        import { getDatabase, ref, set, get, update } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-database.js";
+
         const firebaseConfig = {
             apiKey: "AIzaSyBydAxxqNvFuj6DBY7iD5P8UpZpYSq0_BE",
             authDomain: "alea-hotels-pfaffenhofen.firebaseapp.com",
@@ -103,8 +104,8 @@
         };
 
         // Initialize Firebase
-        const app = firebase.initializeApp(firebaseConfig);
-        const database = firebase.database();
+        const app = initializeApp(firebaseConfig);
+        const database = getDatabase(app);
 
         // Initialize currentProject variable
         let currentProject = {
@@ -215,7 +216,7 @@
             });
 
             try {
-                await firebase.database().ref().update(updates);
+                await update(ref(database), updates);
                 alert("Daten erfolgreich gespeichert!");
             } catch (error) {
                 console.error("Fehler beim Speichern der Daten:", error);
@@ -257,9 +258,9 @@
         async function openProject() {
             const projektname = prompt("Bitte den Namen des Projekts eingeben, das Sie öffnen möchten:");
             if (projektname) {
-                const dbRef = firebase.database().ref();
+                const dbRef = ref(database);
                 try {
-                    const snapshot = await dbRef.child(`projekte/${projektname}`).get();
+                    const snapshot = await get(dbRef.child(`projekte/${projektname}`));
                     if (snapshot.exists()) {
                         currentProject = {
                             projektname: projektname,
