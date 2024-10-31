@@ -7,13 +7,11 @@
     <style>
         body { 
             font-family: Arial, sans-serif; 
-            touch-action: manipulation; /* Verhindert das Zooming */
-            margin: 0; /* Entfernt den Standardabstand des Körpers */
+            margin: 0; 
         }
         .header {
             display: flex;
             justify-content: space-between;
-            align-items: center;
             padding: 10px;
             background-color: #f8f8f8;
             border-bottom: 2px solid #ddd;
@@ -28,6 +26,8 @@
         }
         .load-button { background-color: #4CAF50; }
         .save-button { background-color: #007BFF; }
+        .new-button { background-color: #FF9800; }
+        .edit-button { background-color: #f44336; }
         .item { 
             display: flex; 
             align-items: center; 
@@ -35,7 +35,7 @@
             padding: 10px; 
             border: 1px solid #ddd; 
             border-radius: 5px; 
-            margin: 10px 0; /* Abstand zwischen den Elementen */
+            margin: 10px 0; 
         }
         .info { 
             flex-grow: 1; 
@@ -46,7 +46,7 @@
         .name { 
             font-size: 1.5em; 
             font-weight: bold; 
-            margin-right: 10px; /* Kleiner Abstand zwischen Name und Preis */
+            margin-right: 10px; 
         }
         .preis { 
             font-size: 1.2em; 
@@ -71,14 +71,13 @@
         }
         .button.plus { 
             background-color: #4CAF50; 
-            width: 60px; /* Breite für die Plus-Taste */
+            width: 60px; 
         }
         .button.minus { 
             background-color: #f44336; 
-            width: 60px; /* Breite für die Minus-Taste */
+            width: 60px; 
         }
     </style>
-    <!-- Firebase SDK -->
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
         import { getDatabase, ref, update } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-database.js";
@@ -102,7 +101,7 @@
             projektdatum: ''
         };
 
-        // Diese Funktionen werden jetzt global definiert
+        // Projekt neu erstellen
         window.createNewProject = function() {
             const projektname = prompt("Bitte Projektname eingeben:");
             const projektdatum = prompt("Bitte Projektdatum eingeben (z.B. 01.01.2024):");
@@ -114,6 +113,7 @@
             }
         }
 
+        // Getränke laden
         window.loadGetraenke = async function() {
             try {
                 const response = await fetch('getraenke.json');
@@ -173,6 +173,7 @@
             }
         }
 
+        // Daten speichern
         window.saveData = async function() {
             if (!currentProject.projektname) {
                 alert("Kein aktuelles Projekt zum Speichern!");
@@ -210,12 +211,23 @@
                 alert("Fehler beim Speichern der Daten: " + error.message);
             }
         }
+
+        // Daten aktualisieren
+        window.updateData = function() {
+            if (!currentProject.projektname) {
+                alert("Kein aktuelles Projekt zum Aktualisieren!");
+                return;
+            }
+            // Hier logik für die Aktualisierung implementieren
+        }
     </script>
 </head>
 <body>
     <div class="header">
-        <button class="load-button" onclick="createNewProject()">Öffnen</button>
+        <button class="load-button" onclick="createNewProject()">Neues Projekt</button>
         <button class="save-button" onclick="saveData()">Speichern</button>
+        <button class="new-button" onclick="loadGetraenke()">Lade Getränke</button>
+        <button class="edit-button" onclick="updateData()">Aktualisieren</button>
     </div>
     <div id="getraenke-container"></div>
 </body>
