@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
     <meta charset="UTF-8">
@@ -7,8 +7,8 @@
     <style>
         body { 
             font-family: Arial, sans-serif; 
-            touch-action: manipulation; /* Verhindert das Zooming */
-            margin: 0; /* Entfernt den Standardabstand des Körpers */
+            touch-action: manipulation;
+            margin: 0;
         }
         .header {
             display: flex;
@@ -35,7 +35,7 @@
             padding: 10px; 
             border: 1px solid #ddd; 
             border-radius: 5px; 
-            margin-bottom: 10px; /* Abstand zwischen den Elementen */
+            margin-bottom: 10px;
         }
         .info { 
             flex-grow: 1; 
@@ -71,11 +71,11 @@
         }
         .button.plus { 
             background-color: #4CAF50; 
-            width: 80px; /* Breite anpassen */
+            width: 80px;
         }
         .button.minus { 
             background-color: #f44336; 
-            width: 80px; /* Breite anpassen */
+            width: 80px;
         }
     </style>
     <!-- Firebase SDK -->
@@ -171,7 +171,7 @@
                 document.getElementById('loadBtn').disabled = true;
             } catch (error) {
                 console.error("Fehler beim Laden der Getränkedaten:", error);
-                alert("Fehler beim Laden der Getränkedaten: " + error.message); // Zeigt den Fehler an
+                alert("Fehler beim Laden der Getränkedaten: " + error.message);
             }
         }
 
@@ -179,25 +179,25 @@
             const data = Array.from(document.querySelectorAll('.item')).map(item => {
                 return {
                     name: item.querySelector('.name').textContent,
-                    preis: item.querySelector('.preis').textContent.replace('€', '').trim(), // Entferne das Euro-Symbol
+                    preis: item.querySelector('.preis').textContent.replace('€', '').trim(),
                     zaehler: item.querySelector('.count').textContent
                 };
             });
 
             const updates = {};
             data.forEach((item, index) => {
-                updates[`/${index}`] = item; // Hier wird der Pfad in der Datenbank definiert
+                updates[`/getraenke/${index}`] = item;
             });
 
             // Speichere die Daten in der Firebase-Datenbank
             set(ref(database, 'getraenke'), updates)
                 .then(() => {
                     console.log('Daten erfolgreich gespeichert!');
-                    alert('Daten erfolgreich gespeichert!'); // Benachrichtigung hinzufügen
+                    alert('Daten erfolgreich gespeichert!');
                 })
                 .catch((error) => {
                     console.error('Fehler beim Speichern der Daten:', error);
-                    alert('Fehler beim Speichern der Daten: ' + error.message); // Fehlerbenachrichtigung hinzufügen
+                    alert('Fehler beim Speichern der Daten: ' + error.message);
                 });
         }
 
@@ -209,7 +209,6 @@
         document.getElementById('loadBtn').addEventListener('click', loadGetraenke);
         document.getElementById('saveBtn').addEventListener('click', saveData);
         
-        // Funktion für das Beenden des Projekts
         document.getElementById('endProjectBtn').addEventListener('click', () => {
             const date = new Date();
             const formattedDate = date.toLocaleDateString('de-DE') + ' um ' + date.toLocaleTimeString('de-DE', { hour: '2-digit', minute: '2-digit' });
