@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getränke Zähler</title>
+
+    <!-- Firebase SDKs einfügen -->
+    <script type="module">
+        // Importiere die benötigten Firebase-Funktionen
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+        import { getDatabase, ref, set, get, child } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-database.js";
+
+        // Firebase-Konfiguration
+        const firebaseConfig = {
+            apiKey: "AIzaSyBydAxxqNvFuj6DBY7iD5P8UpZpYSq0_BE",
+            authDomain: "alea-hotels-pfaffenhofen.firebaseapp.com",
+            databaseURL: "https://alea-hotels-pfaffenhofen-default-rtdb.firebaseio.com",
+            projectId: "alea-hotels-pfaffenhofen",
+            storageBucket: "alea-hotels-pfaffenhofen.appspot.com",
+            messagingSenderId: "851814894064",
+            appId: "1:851814894064:web:bf95cfa03c52f957f93535",
+            measurementId: "G-M82VZW2CYK"
+        };
+
+        // Firebase initialisieren
+        const app = initializeApp(firebaseConfig);
+        const database = getDatabase(app);
+
+        async function loadGetraenke() {
+            const dbRef = ref(database, 'getraenke');
+            const snapshot = await get(dbRef);
+            const getraenkeData = snapshot.exists() ? snapshot.val() : [];
+
+            const container = document.getElementById('getraenke-container');
+            container.innerHTML = '';
+
+            getraenkeData.forEach(item => {
+                const itemDiv = document.createElement('div');
+                itemDiv.className = 'item';
+
+                const infoDiv = document.createElement('div');
+                infoDiv.className = 'info';
+
+                const name = document.createElement('div');
+                name.className = 'name';
+                name.textContent = item.name;
+
+                const preis = document.createElement('div');
+                preis.className = 'preis';
+                preis.textContent = `€${item.preis}`;
+
+                infoDiv.appendChild(name);
+                infoDiv.appendChild(preis);
+
+                const counterDiv = document.createElement('div');
+                counterDiv.className = 'counter';
+
+                const count = document.createElement('span');
+                count.textContent = item.count || 0;
+                count.className = 'count';
+
+                const plusButton = document.createElement('button');
+                plusButton.textContent = '+1';
+                plusButton.className = 'button plus';
+                plusButton.onclick = () => count.textContent = parseInt(count.textContent) + 1;
+
+                const minusButton = document.createElement('button');
+                minusButton.textContent = '-1';
+                minusButton.className = 'button minus';
+                minusButton.onclick = () => {
+                    count.textContent = Math.max(0, parseInt(count.textContent) - 1);
+                };
+
+                counterDiv.appendChild(minusButton);
+                counterDiv.appendChild(count);
+                counterDiv.appendChild(plusButton);
+
+                itemDiv.appendChild(infoDiv);
+                itemDiv.appendChild(counterDiv);
+                container.appendChild(itemDiv);
+            });
+        }
+
+        function saveDataToFirebase() {
+            const data = Array.from(document.querySelectorAll('.item')).map(item => {
+                return {
+                    name: item.querySelector('.name').textContent,
+                    preis: item.querySelector('.preis').textContent,
+                    count: parseInt(item.querySelector('.count').textContent)
+                };
+            });
+            set(ref(database, 'getraenke'), data);
+            alert("Daten wurden erfolgreich gespeichert!");
+        }
+
+        window.onload = function() {
+            document.getElementById('loadBtn').addEventListener('click', loadGetraenke);
+            document.getElementById('saveBtn').addEventListener('click', saveDataToFirebase);
+        };
+    </script>
+
+    <style>
+        /* Dein CSS */
+        body { font-family: Arial, sans-serif; margin: 0; }
+        .header { display: flex; justify-content: space-between; align-items: center; padding: 10px; }
+        .header button { padding: 10px; font-size: 1em; }
+        .item { display: flex; justify-content: space-between; padding: 10px; }
+        .button.plus { background-color: #4CAF50; width: 100px; }
+        .button.minus { background-color: #f44336; width: 100px; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <button id="loadBtn">Laden</button>
+        <button id="saveBtn">Speichern</button>
+    </div>
+    <h1>Getränke Zähler</h1>
+    <div id="getraenke-container"></div>
+</body>
+</html>
