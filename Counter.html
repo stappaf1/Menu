@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Getränke Zähler</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        body { 
+            font-family: Arial, sans-serif; 
             touch-action: manipulation; /* Verhindert das Zooming */
-            margin: 0;
+            margin: 0; 
         }
         .header {
             display: flex;
@@ -46,53 +46,53 @@
         }
         .item {
             display: flex;
-            align-items: center;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            margin: 10px;
-            padding: 10px;
+            align-items: center; 
+            border: 1px solid #ddd; 
+            border-radius: 5px; 
+            margin: 10px; 
+            padding: 10px; 
             flex: 1 1 calc(20% - 20px); /* Flexbox für responsive Darstellung */
         }
-        .info {
-            flex-grow: 1;
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
+        .info { 
+            flex-grow: 1; 
+            display: flex; 
+            justify-content: flex-start; 
+            align-items: center; 
         }
-        .name {
-            font-size: 1.2em;
-            font-weight: bold;
-            margin-right: 10px;
+        .name { 
+            font-size: 1.2em; 
+            font-weight: bold; 
+            margin-right: 10px; 
         }
-        .preis {
-            font-size: 1.1em;
-            color: #000;
-            margin-left: 10px;
+        .preis { 
+            font-size: 1.1em; 
+            color: #000; 
+            margin-left: 10px; 
         }
-        .counter {
-            display: flex;
-            align-items: center;
-            margin-left: 10px;
+        .counter { 
+            display: flex; 
+            align-items: center; 
+            margin-left: 10px; 
         }
-        .counter span {
-            margin: 0 10px;
-            font-size: 1.5em;
+        .counter span { 
+            margin: 0 10px; 
+            font-size: 1.5em; 
         }
-        .button {
-            padding: 10px;
-            border: none;
-            color: white;
-            cursor: pointer;
-            font-size: 1em;
-            border-radius: 5px;
-            height: 40px;
+        .button { 
+            padding: 10px; 
+            border: none; 
+            color: white; 
+            cursor: pointer; 
+            font-size: 1em; 
+            border-radius: 5px; 
+            height: 40px; 
         }
-        .button.plus {
-            background-color: #4CAF50;
+        .button.plus { 
+            background-color: #4CAF50; 
             width: 80px; /* Breite für die Plus-Taste */
         }
-        .button.minus {
-            background-color: #f44336;
+        .button.minus { 
+            background-color: #f44336; 
             width: 50px; /* Breite für die Minus-Taste */
         }
     </style>
@@ -130,11 +130,6 @@
                 saveGetraenkeToDatabase();
                 document.getElementById('project-name').textContent = projektname; // Projektnamen anzeigen
                 document.getElementById('project-date').textContent = projektdatum; // Projektdatum anzeigen
-
-                // Speichere das Projekt in der Datenbank
-                set(ref(database, `/projekte/${projektname}`), {
-                    datum: projektdatum
-                });
             }
         }
 
@@ -146,7 +141,9 @@
 
                 const updates = {};
                 getraenke.forEach(item => {
-                    const itemId = item.Name.replace(/\s+/g, '_'); // ID generieren
+                    const itemId = item.Name.replace(/\s+/g, '_') // Leerzeichen durch Unterstriche ersetzen
+                                              .replace(/[.#$\/\[\]#]/g, '-'); // Unerwünschte Zeichen ersetzen
+
                     updates[`/projekte/${currentProject.projektname}/getraenke/${itemId}`] = {
                         Kategorie: item.Kategorie,
                         Name: item.Name,
@@ -229,82 +226,62 @@
                         itemDiv.appendChild(counterDiv);
                         container.appendChild(itemDiv);
                     });
-                } else {
-                    alert("Keine Getränke gefunden. Bitte fügen Sie Getränke hinzu.");
                 }
+                updateTotalPrice(); // Gesamtpreis nach dem Laden aktualisieren
             });
         }
 
-        function updateTotalPrice() {
-            let total = 0;
-            const dbRef = ref(database, `/projekte/${currentProject.projektname}/getraenke`);
-            get(dbRef).then((snapshot) => {
-                if (snapshot.exists()) {
-                    const getraenke = snapshot.val();
-                    Object.values(getraenke).forEach(item => {
-                        total += item.Preis * item.Zaehler;
-                    });
-                    document.getElementById('total-price').textContent = `Gesamtpreis: €${total.toFixed(2)}`;
-                } else {
-                    console.error("Keine Getränke vorhanden.");
-                }
-            });
+        async function openProject() {
+            const projectsRef = ref(database, '/projekte');
+            const snapshot = await get(projectsRef);
+            const projectNames = Object.keys(snapshot.val() || {});
+
+            const projectName = prompt("Bitte Projektnamen eingeben:", projectNames.join(', '));
+            if (projectName && projectNames.includes(projectName)) {
+                currentProject.projektname = projectName;
+                loadGetraenke();
+                document.getElementById('project-name').textContent = projectName; // Projektnamen anzeigen
+            } else {
+                alert("Projekt nicht gefunden.");
+            }
         }
 
-        function openProject() {
-            const projektname = prompt("Bitte Projektname eingeben:");
-            const dbRef = ref(database, `/projekte/${projektname}`);
-            get(dbRef).then((snapshot) => {
-                if (snapshot.exists()) {
-                    currentProject.projektname = projektname;
-                    currentProject.projektdatum = snapshot.val().datum;
-
-                    document.getElementById('project-name').textContent = projektname;
-                    document.getElementById('project-date').textContent = currentProject.projektdatum;
-
-                    alert(`Projekt "${projektname}" geöffnet.`);
-                    loadGetraenke();
-                } else {
-                    alert("Projekt nicht gefunden. Bitte überprüfen Sie den Namen.");
-                }
-            }).catch((error) => {
-                console.error("Fehler beim Abrufen des Projekts:", error);
-                alert("Fehler beim Abrufen des Projekts: " + error.message);
-            });
-        }
-
-        function closeProject() {
+        async function closeProject() {
             currentProject = { projektname: '', projektdatum: '' };
-            document.getElementById('project-name').textContent = '';
-            document.getElementById('project-date').textContent = '';
-            document.getElementById('total-price').textContent = 'Gesamtpreis: €0.00';
+            document.getElementById('project-name').textContent = ''; // Projektnamen zurücksetzen
+            document.getElementById('project-date').textContent = ''; // Projektdatum zurücksetzen
             document.getElementById('item-container').innerHTML = ''; // Container zurücksetzen
             alert("Projekt geschlossen.");
         }
 
-        window.onload = function() {
-            document.getElementById('new-button').onclick = createNewProject;
-            document.getElementById('open-button').onclick = openProject;
-            document.getElementById('close-button').onclick = closeProject;
-            document.getElementById('save-button').onclick = saveGetraenkeToDatabase;
+        function updateTotalPrice() {
+            const container = document.getElementById('item-container');
+            const totalPriceElement = document.getElementById('total-price');
+            let totalPrice = 0;
+
+            const items = container.querySelectorAll('.item');
+            items.forEach(item => {
+                const count = parseInt(item.querySelector('.count').textContent);
+                const preis = parseFloat(item.querySelector('.preis').textContent.replace('€', ''));
+                totalPrice += count * preis;
+            });
+
+            totalPriceElement.textContent = `Gesamtpreis: €${totalPrice.toFixed(2)}`;
         }
     </script>
 </head>
 <body>
     <div class="header">
-        <h1>Getränke Zähler</h1>
-        <div>
-            <button id="new-button" class="new-button">Neues Projekt</button>
-            <button id="open-button" class="open-button">Projekt Öffnen</button>
-            <button id="save-button" class="save-button">Speichern</button>
-            <button id="close-button" class="close-button">Projekt Schließen</button>
-        </div>
+        <button class="new-button" onclick="createNewProject()">Neues Projekt</button>
+        <button class="open-button" onclick="openProject()">Projekt öffnen</button>
+        <button class="save-button" onclick="saveGetraenkeToDatabase()">Speichern</button>
+        <button class="close-button" onclick="closeProject()">Projekt schließen</button>
     </div>
     <div class="project-info">
-        <div id="project-name">Projekt: </div>
-        <div id="project-date">Datum: </div>
+        Projekt: <span id="project-name"></span><br>
+        Datum: <span id="project-date"></span>
     </div>
-    <div id="total-price" class="total-price">Gesamtpreis: €0.00</div>
+    <div class="total-price" id="total-price">Gesamtpreis: €0.00</div>
     <div class="item-container" id="item-container"></div>
 </body>
 </html>
