@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Getränke Zähler</title>
+    <link rel="icon" href="dein_favicon.ico" type="image/x-icon"> <!-- Favicon -->
     <style>
         body {
             font-family: Arial, sans-serif; 
@@ -120,6 +121,10 @@
             projektdatum: ''
         };
 
+        function cleanKey(key) {
+            return key.replace(/[.#$\/\[\]]/g, '_'); // Ersetze ungültige Zeichen mit _
+        }
+
         function createNewProject() {
             const projektname = prompt("Bitte Projektname eingeben:");
             const projektdatum = prompt("Bitte Projektdatum eingeben (z.B. 01.01.2024):");
@@ -141,8 +146,8 @@
 
                 const updates = {};
                 getraenke.forEach(item => {
-                    const itemId = item.Name.replace(/\s+/g, '_'); // ID generieren
-                    updates[`/projekte/${currentProject.projektname}/getraenke/${itemId}`] = {
+                    const cleanedItemId = cleanKey(item.Name); // Bereinige den Namen
+                    updates[`/projekte/${currentProject.projektname}/getraenke/${cleanedItemId}`] = {
                         Kategorie: item.Kategorie,
                         Name: item.Name,
                         Menge: item.Menge,
@@ -232,15 +237,13 @@
         async function openProject() {
             const projectsRef = ref(database, '/projekte');
             const snapshot = await get(projectsRef);
-            const projects = snapshot.val();
-
-            if (projects) {
-                const projectNames = Object.keys(projects);
-                const projektname = prompt("Bitte Projekt auswählen: " + projectNames.join(", "));
-                if (projectNames.includes(projektname)) {
-                    currentProject.projektname = projektname;
-                    alert(`Projekt "${projektname}" geöffnet.`);
-                    document.getElementById('project-name').textContent = projektname; // Projektnamen anzeigen
+            if (snapshot.exists()) {
+                const projectNames = Object.keys(snapshot.val());
+                const projectName = prompt("Bitte Projektname auswählen: \n" + projectNames.join('\n'));
+                if (projectName && projectNames.includes(projectName)) {
+                    currentProject.projektname = projectName;
+                    alert(`Projekt "${projectName}" geöffnet.`);
+                    document.getElementById('project-name').textContent = projectName; // Projektnamen anzeigen
                     loadGetraenke(); // Getränke laden
                 } else {
                     alert("Projekt nicht gefunden.");
@@ -250,51 +253,30 @@
             }
         }
 
-        function closeProject() {
-            currentProject = { projektname: '', projektdatum: '' };
-            alert("Projekt geschlossen.");
-            document.getElementById('project-name').textContent = ''; // Projektnamen zurücksetzen
-            document.getElementById('project-date').textContent = ''; // Projektdatum zurücksetzen
-            document.getElementById('item-container').innerHTML = ''; // Getränke zurücksetzen
-            document.getElementById('total-price').textContent = '€0.00'; // Gesamtpreis zurücksetzen
-        }
-
         function updateTotalPrice() {
-            const itemContainer = document.getElementById('item-container');
-            const items = itemContainer.getElementsByClassName('item');
+            const container = document.getElementById('item-container');
             let total = 0;
-
-            for (let item of items) {
-                const countSpan = item.querySelector('.count');
-                const priceSpan = item.querySelector('.preis');
-
-                const count = parseInt(countSpan.textContent);
-                const price = parseFloat(priceSpan.textContent.replace('€', ''));
-
-                total += count * price;
-            }
-
-            document.getElementById('total-price').textContent = `€${total.toFixed(2)}`;
-        }
-
-        window.onload = function() {
-            document.getElementById('new-button').onclick = createNewProject;
-            document.getElementById('open-button').onclick = openProject;
-            document.getElementById('close-button').onclick = closeProject;
+            container.querySelectorAll('.item').forEach(item => {
+                const count = parseInt(item.querySelector('.count').textContent);
+                const preisText = item.querySelector('.preis').textContent;
+                const preis = parseFloat(preisText.replace('€', '').replace(',', '.').trim());
+                total += count * preis;
+            });
+            document.getElementById('total-price').textContent = `Gesamtpreis: €${total.toFixed(2)}`;
         }
     </script>
 </head>
 <body>
     <div class="header">
-        <button id="new-button" class="new-button">Neues Projekt</button>
-        <button id="open-button" class="open-button">Projekt Öffnen</button>
-        <button id="save-button" class="save-button">Speichern</button>
-        <button id="close-button" class="close-button">Schließen</button>
+        <button class="new-button" onclick="createNewProject()">Neues Projekt</button>
+        <button class="open-button" onclick="openProject()">Projekt öffnen</button>
+        <button class="save-button" onclick="saveGetraenkeToDatabase()">Getränke speichern</button>
+        <button class="close-button" onclick="alert('Projekt geschlossen!')">Projekt schließen</button>
     </div>
     <div class="project-info">
-        Aktuelles Projekt: <span id="project-name"></span> am <span id="project-date"></span>
+        Aktuelles Projekt: <span id="project-name"></span> (Datum: <span id="project-date"></span>)
     </div>
-    <div class="total-price" id="total-price">€0.00</div>
+    <div class="total-price" id="total-price">Gesamtpreis: €0.00</div>
     <div class="item-container" id="item-container"></div>
 </body>
 </html>
