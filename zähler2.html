@@ -5,79 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Getränke Zähler</title>
     <style>
-        body { 
-            font-family: Arial, sans-serif; 
-            touch-action: manipulation;
-            margin: 0;
-        }
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px;
-            background-color: #f8f8f8;
-            border-bottom: 2px solid #ddd;
-        }
-        .header button {
-            padding: 10px 20px;
-            font-size: 1em;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            color: white;
-        }
-        .load-button { background-color: #4CAF50; }
-        .save-button { background-color: #007BFF; }
-        .item { 
-            display: flex; 
-            align-items: center; 
-            justify-content: space-between; 
-            padding: 10px; 
-            border: 1px solid #ddd; 
-            border-radius: 5px; 
-            margin-bottom: 10px;
-        }
-        .info { 
-            flex-grow: 1; 
-            display: flex; 
-            justify-content: flex-start; 
-            align-items: center; 
-        }
-        .name { 
-            font-size: 1.5em; 
-            font-weight: bold; 
-            margin-right: 10px; 
-        }
-        .preis { 
-            font-size: 1.2em; 
-            color: #000; 
-        }
-        .counter { 
-            display: flex; 
-            align-items: center; 
-        }
-        .counter span { 
-            margin: 0 10px; 
-            font-size: 1.5em; 
-        }
-        .button { 
-            padding: 5px; 
-            border: none; 
-            color: white; 
-            cursor: pointer; 
-            font-size: 1em; 
-            border-radius: 5px; 
-            height: 40px; 
-        }
-        .button.plus { 
-            background-color: #4CAF50; 
-            width: 80px;
-        }
-        .button.minus { 
-            background-color: #f44336; 
-            width: 80px;
-        }
+        /* Deine Styles hier, wie vorher */
     </style>
+</head>
+<body>
+
+    <div class="header">
+        <button id="loadBtn" class="load-button">Laden</button>
+        <button id="saveBtn" class="save-button">Zwischenergebnis senden</button>
+        <button id="endProjectBtn" class="end-button">Projekt beenden</button>
+    </div>
+
+    <h1 style="text-align:center;">Getränke Zähler</h1>
+    <div id="getraenke-container"></div>
+
     <!-- Firebase SDK -->
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
@@ -97,18 +38,43 @@
         // Firebase initialisieren
         const app = initializeApp(firebaseConfig);
         const database = getDatabase(app); // Initialisiere die Datenbank
+
+        // Hilfsfunktion zum Speichern der Daten in der Datenbank
+        function saveDataToFirebase(data) {
+            const updates = {};
+            data.forEach((item, index) => {
+                updates[`/getraenke/${index}`] = item;
+            });
+
+            return set(ref(database, 'getraenke'), updates)
+                .then(() => {
+                    console.log('Daten erfolgreich gespeichert!');
+                    alert('Daten erfolgreich gespeichert!');
+                })
+                .catch((error) => {
+                    console.error('Fehler beim Speichern der Daten:', error);
+                    alert('Fehler beim Speichern der Daten: ' + error.message);
+                });
+        }
+
+        // Speichern der Getränkedaten
+        function saveData() {
+            const data = Array.from(document.querySelectorAll('.item')).map(item => {
+                return {
+                    name: item.querySelector('.name').textContent,
+                    preis: item.querySelector('.preis').textContent.replace('€', '').trim(),
+                    zaehler: item.querySelector('.count').textContent
+                };
+            });
+            saveDataToFirebase(data);
+        }
+
+        // Event-Listener für den Speichern-Button
+        document.addEventListener("DOMContentLoaded", () => {
+            document.getElementById('saveBtn').addEventListener('click', saveData);
+        });
+
     </script>
-</head>
-<body>
-
-    <div class="header">
-        <button id="loadBtn" class="load-button">Laden</button>
-        <button id="saveBtn" class="save-button">Zwischenergebnis senden</button>
-        <button id="endProjectBtn" class="end-button">Projekt beenden</button>
-    </div>
-
-    <h1 style="text-align:center;">Getränke Zähler</h1>
-    <div id="getraenke-container"></div>
 
     <script>
         async function loadGetraenke() {
@@ -175,40 +141,13 @@
             }
         }
 
-        function saveData() {
-            const data = Array.from(document.querySelectorAll('.item')).map(item => {
-                return {
-                    name: item.querySelector('.name').textContent,
-                    preis: item.querySelector('.preis').textContent.replace('€', '').trim(),
-                    zaehler: item.querySelector('.count').textContent
-                };
-            });
-
-            const updates = {};
-            data.forEach((item, index) => {
-                updates[`/getraenke/${index}`] = item;
-            });
-
-            // Speichere die Daten in der Firebase-Datenbank
-            set(ref(database, 'getraenke'), updates)
-                .then(() => {
-                    console.log('Daten erfolgreich gespeichert!');
-                    alert('Daten erfolgreich gespeichert!');
-                })
-                .catch((error) => {
-                    console.error('Fehler beim Speichern der Daten:', error);
-                    alert('Fehler beim Speichern der Daten: ' + error.message);
-                });
-        }
-
         function sendEmail(subject, content) {
             const mailtoLink = `mailto:event@hotel-alea.de?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(content)}`;
             window.location.href = mailtoLink;
         }
 
         document.getElementById('loadBtn').addEventListener('click', loadGetraenke);
-        document.getElementById('saveBtn').addEventListener('click', saveData);
-        
+
         document.getElementById('endProjectBtn').addEventListener('click', () => {
             const date = new Date();
             const formattedDate = date.toLocaleDateString('de-DE') + ' um ' + date.toLocaleTimeString('de-DE', { hour: '2-digit', minute: '2-digit' });
