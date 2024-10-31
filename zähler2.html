@@ -82,7 +82,8 @@
         // Import the functions you need from the SDKs you need
         import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
         import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-analytics.js";
-        
+        import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-database.js";
+
         // Deine Firebase-Konfiguration
         const firebaseConfig = {
             apiKey: "AIzaSyBydAxxqNvFuj6DBY7iD5P8UpZpYSq0_BE",
@@ -98,6 +99,7 @@
         // Firebase initialisieren
         const app = initializeApp(firebaseConfig);
         const analytics = getAnalytics(app);
+        const database = getDatabase(app); // Initialisiere die Datenbank
     </script>
 </head>
 <body>
@@ -181,6 +183,20 @@
                 };
             });
 
+            const updates = {};
+            data.forEach((item, index) => {
+                updates[`/${index}`] = item; // Hier wird der Pfad in der Datenbank definiert
+            });
+
+            // Speichere die Daten in der Firebase-Datenbank
+            set(ref(database, 'getraenke'), updates)
+                .then(() => {
+                    console.log('Daten erfolgreich gespeichert!');
+                })
+                .catch((error) => {
+                    console.error('Fehler beim Speichern der Daten:', error);
+                });
+
             const emailContent = data.map(item => `${item.name}; ${item.preis}; ${item.zaehler}`).join('\n');
             const date = new Date();
             const formattedDate = date.toLocaleDateString('de-DE') + ' um ' + date.toLocaleTimeString('de-DE', { hour: '2-digit', minute: '2-digit' });
@@ -210,14 +226,9 @@
                     zaehler: item.querySelector('.count').textContent
                 };
             }).map(item => `${item.name}; ${item.preis}; ${item.zaehler}`).join('\n');
-            const subject = prompt("Betreff der E-Mail eingeben (Projektname):") + ' - ' + formattedDate;
 
-            if (subject) {
-                sendEmail(subject, emailContent);
-                // Leere die data.json hier und blende die Balken aus
-                document.getElementById('getraenke-container').innerHTML = ''; // Alle Balken ausblenden
-                document.getElementById('loadBtn').disabled = false; // Ladebutton aktivieren
-            }
+            const subject = `Projekt beendet - ${formattedDate}`;
+            sendEmail(subject, emailContent);
         });
     </script>
 </body>
