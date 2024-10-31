@@ -185,7 +185,7 @@
                 // ID generieren (kann angepasst werden)
                 const itemId = item.querySelector('.name').textContent.replace(/\s+/g, '_');
 
-                // Update nur für den Zähler
+                // Update nur für den Zähler im spezifischen Projektverzeichnis
                 updates[`/projekte/${currentProject.projektname}/zaehler/${itemId}/zaehler`] = parseInt(count); 
 
                 // Konsolenausgabe für Debugging
