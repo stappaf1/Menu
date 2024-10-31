@@ -5,7 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Getränke Zähler</title>
     <style>
-        /* Deine Styles hier */
+        /* Original CSS-Formatierung */
+        body { 
+            font-family: Arial, sans-serif; 
+            touch-action: manipulation;
+            margin: 0;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #f8f8f8;
+            border-bottom: 2px solid #ddd;
+        }
+        .header button {
+            padding: 10px 20px;
+            font-size: 1em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: white;
+        }
+        .load-button { background-color: #4CAF50; }
+        .save-button { background-color: #007BFF; }
+        .end-button { background-color: #FF5722; }
+        .item { 
+            display: flex; 
+            align-items: center; 
+            justify-content: space-between; 
+            padding: 10px; 
+            border: 1px solid #ddd; 
+            border-radius: 5px; 
+            margin: 5px;
+        }
+        .info { 
+            flex-grow: 1; 
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        .name { 
+            font-size: 1.5em; 
+            font-weight: bold; 
+            margin-right: 10px;
+        }
+        .preis { 
+            font-size: 1.2em; 
+            color: #000; 
+        }
+        .counter { 
+            display: flex; 
+            align-items: center; 
+        }
+        .counter span { 
+            margin: 0 10px; 
+            font-size: 1.5em; 
+        }
+        .button { 
+            padding: 5px; 
+            border: none; 
+            color: white; 
+            cursor: pointer; 
+            font-size: 1em; 
+            border-radius: 5px; 
+            height: 40px; 
+        }
+        .button.plus { 
+            background-color: #4CAF50; 
+            width: 180px;
+        }
+        .button.minus { 
+            background-color: #f44336; 
+            width: 180px;
+        }
     </style>
 </head>
 <body>
@@ -43,11 +116,11 @@
         // Hilfsfunktion zum Speichern der Daten in der Datenbank
         function saveDataToFirebase(data) {
             const updates = {};
-            data.forEach((item, index) => {
-                updates[`/getraenke/${index}`] = item;
+            data.forEach((item) => {
+                const key = item.name.replace(/[\.\#\$\[\]\/]/g, '');  // Entfernt ungültige Zeichen aus dem Getränkenamen
+                updates[key] = item;
             });
 
-            // Speichern der Daten in Firebase
             return database.ref('getraenke').set(updates)
                 .then(() => {
                     console.log('Daten erfolgreich gespeichert!');
