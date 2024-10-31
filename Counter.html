@@ -3,90 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Getränke Zähler</title>
+    <title>Getränkeverwaltung</title>
     <style>
-        body { 
-            font-family: Arial, sans-serif; 
-            touch-action: manipulation; 
-            margin: 0; 
+        /* Stil für das Layout */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
         }
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        #getraenke-container {
+            margin-top: 20px;
+        }
+        .item {
+            border: 1px solid #ccc;
+            margin: 10px 0;
             padding: 10px;
-            background-color: #f8f8f8;
-            border-bottom: 2px solid #ddd;
-        }
-        .header button {
-            padding: 10px 20px;
-            font-size: 1em;
-            border: none;
             border-radius: 5px;
-            cursor: pointer;
-            color: white;
         }
-        .load-button { background-color: #4CAF50; }
-        .open-button { background-color: #FFA500; }
-        .save-button { background-color: #007BFF; }
-        .close-button { background-color: #f44336; }
-        .item { 
-            display: flex; 
-            align-items: flex-start; 
-            justify-content: space-between; 
-            padding: 10px; 
-            border: 1px solid #ddd; 
-            border-radius: 5px; 
-            margin: 10px 0; 
+        .info {
+            margin-bottom: 10px;
         }
-        .info { 
-            flex-grow: 1; 
-            display: flex; 
-            flex-direction: column; 
+        .count {
+            margin: 0 10px;
         }
-        .name { 
-            font-size: 1.5em; 
-            font-weight: bold; 
-        }
-        .beschreibung { 
-            font-size: 0.9em; 
-            color: #555; 
-        }
-        .preis, .menge { 
-            font-size: 1.2em; 
-            color: #000; 
-        }
-        .counter { 
-            display: flex; 
-            align-items: center; 
-        }
-        .counter span { 
-            margin: 0 10px; 
-            font-size: 1.5em; 
-        }
-        .button { 
-            padding: 5px; 
-            border: none; 
-            color: white; 
-            cursor: pointer; 
-            font-size: 1em; 
-            border-radius: 5px; 
-            height: 40px; 
-        }
-        .button.plus { 
-            background-color: #4CAF50; 
-            width: 60px; 
-        }
-        .button.minus { 
-            background-color: #f44336; 
-            width: 60px; 
-        }
-        .project-info {
-            margin: 10px;
-            font-size: 1.2em;
+        .button {
+            margin: 0 5px;
         }
     </style>
-    <!-- Firebase SDK -->
+</head>
+<body>
+    <h1>Getränkeverwaltung</h1>
+    <div id="project-info"></div>
+    <div id="total-price">Gesamtpreis: €0.00</div>
+    <button onclick="createNewProject()">Neues Projekt erstellen</button>
+    <button onclick="openProject()">Projekt öffnen</button>
+    <button onclick="saveData()">Daten speichern</button>
+    <button onclick="closeProject()">Projekt schließen</button>
+    
+    <div id="getraenke-container"></div>
+
     <script type="module">
         // Firebase Setup
         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-app.js";
@@ -115,7 +69,7 @@
         };
 
         // Create New Project
-        function createNewProject() {
+        window.createNewProject = function() {
             const projektname = prompt("Bitte Projektname eingeben:");
             const projektdatum = prompt("Bitte Projektdatum eingeben (z.B. 01.01.2024):");
             if (projektname && projektdatum) {
@@ -125,10 +79,10 @@
                 loadGetraenke();
                 updateProjectInfo();
             }
-        }
+        };
 
         // Load Drinks Data
-        async function loadGetraenke() {
+        window.loadGetraenke = async function() {
             try {
                 const response = await fetch('getraenke.json');
                 const data = await response.json();
@@ -201,10 +155,10 @@
             } catch (error) {
                 console.error("Fehler beim Laden der Getränkedaten:", error);
             }
-        }
+        };
 
         // Save Data
-        async function saveData() {
+        window.saveData = async function() {
             if (!currentProject.projektname) {
                 alert("Kein aktuelles Projekt zum Speichern!");
                 return;
@@ -222,16 +176,16 @@
                 console.error("Fehler beim Speichern der Daten:", error);
                 alert("Fehler beim Speichern der Daten: " + error.message);
             }
-        }
+        };
 
         // Update Project Information
-        function updateProjectInfo() {
+        window.updateProjectInfo = function() {
             const projectInfo = document.getElementById('project-info');
             projectInfo.textContent = `${currentProject.projektname} / ${currentProject.projektdatum}`;
-        }
+        };
 
         // Update Total Price
-        function updateTotalPrice() {
+        window.updateTotalPrice = function() {
             const total = Object.keys(currentProject.zaehler).reduce((sum, itemName) => {
                 const itemCount = currentProject.zaehler[itemName] || 0;
                 const itemPrice = Array.from(document.querySelectorAll('.item')).find(item => 
@@ -239,10 +193,10 @@
                 return sum + (itemCount * parseFloat(itemPrice || 0));
             }, 0);
             document.getElementById('total-price').textContent = `Gesamtpreis: €${total.toFixed(2)}`;
-        }
+        };
 
         // Close Project
-        function closeProject() {
+        window.closeProject = function() {
             if (currentProject.projektname) {
                 alert(`Projekt "${currentProject.projektname}" geschlossen.`);
                 currentProject = { projektname: '', projektdatum: '', zaehler: {} };
@@ -252,10 +206,10 @@
             } else {
                 alert("Kein aktives Projekt zum Schließen.");
             }
-        }
+        };
 
         // Open Project
-        async function openProject() {
+        window.openProject = async function() {
             const projektname = prompt("Bitte den Namen des Projekts eingeben, das Sie öffnen möchten:");
             if (projektname) {
                 const dbRef = ref(database);
@@ -277,21 +231,7 @@
                     console.error("Fehler beim Öffnen des Projekts:", error);
                 }
             }
-        }
+        };
     </script>
-</head>
-<body>
-    <div class="header">
-        <h1>Getränke Zähler</h1>
-        <div>
-            <button class="load-button" onclick="createNewProject()">Neues Projekt</button>
-            <button class="open-button" onclick="openProject()">Projekt Öffnen</button>
-            <button class="save-button" onclick="saveData()">Projekt Speichern</button>
-            <button class="close-button" onclick="closeProject()">Projekt Schließen</button>
-        </div>
-    </div>
-    <div id="project-info" class="project-info"></div>
-    <div id="getraenke-container"></div>
-    <div id="total-price">Gesamtpreis: €0.00</div>
 </body>
 </html>
