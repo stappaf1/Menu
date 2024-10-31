@@ -80,9 +80,11 @@
     </style>
     <!-- Firebase SDK -->
     <script type="module">
+        // Import the functions you need from the SDKs you need
         import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
-        import { getDatabase, ref, update } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-database.js";
+        import { getDatabase, ref, set, update } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-database.js";
 
+        // Deine Firebase-Konfiguration
         const firebaseConfig = {
             apiKey: "AIzaSyBydAxxqNvFuj6DBY7iD5P8UpZpYSq0_BE",
             authDomain: "alea-hotels-pfaffenhofen.firebaseapp.com",
@@ -94,6 +96,7 @@
             measurementId: "G-M82VZW2CYK"
         };
 
+        // Firebase initialisieren
         const app = initializeApp(firebaseConfig);
         const database = getDatabase(app);
 
@@ -121,7 +124,7 @@
                 const container = document.getElementById('getraenke-container');
                 
                 container.innerHTML = ''; // Container zurücksetzen
-                getraenke.forEach((item) => {
+                getraenke.forEach((item, index) => {
                     const itemDiv = document.createElement('div');
                     itemDiv.className = 'item';
                     
@@ -186,11 +189,7 @@
                 const itemId = item.querySelector('.name').textContent.replace(/\s+/g, '_');
 
                 // Update nur für den Zähler
-                updates[`/projekte/${currentProject.projektname}/zaehler/${itemId}/zaehler`] = parseInt(count); 
-
-                // Konsolenausgabe für Debugging
-                console.log(`Update für ${itemId}: ${count}`);
-
+                updates[`/projekte/${currentProject.projektname}/zaehler/${itemId}/zaehler`] = count; 
                 return {
                     name: item.querySelector('.name').textContent,
                     preis: item.querySelector('.preis').textContent,
