@@ -127,7 +127,7 @@
                 currentProject.projektname = projektname;
                 currentProject.projektdatum = projektdatum;
                 alert(`Projekt "${projektname}" erstellt für den ${projektdatum}.`);
-                saveGetraenkeToDatabase();
+                saveGetraenkeToDatabase(); // Getränke sofort nach Erstellung des Projekts speichern
                 document.getElementById('project-name').textContent = projektname; // Projektnamen anzeigen
                 document.getElementById('project-date').textContent = projektdatum; // Projektdatum anzeigen
             }
@@ -155,7 +155,7 @@
 
                 await update(ref(database), updates);
                 alert("Getränke erfolgreich in die Datenbank gespeichert!");
-                loadGetraenke();
+                loadGetraenke(); // Getränke nach dem Speichern laden
             } catch (error) {
                 console.error("Fehler beim Speichern der Getränke:", error);
                 alert("Fehler beim Speichern der Getränke: " + error.message);
@@ -226,14 +226,14 @@
                         itemDiv.appendChild(counterDiv);
                         container.appendChild(itemDiv);
                     });
+                    updateTotalPrice(); // Gesamtpreis aktualisieren
                 }
-                updateTotalPrice(); // Gesamtpreis nach dem Laden aktualisieren
             });
         }
 
         async function openProject() {
-            const projectsRef = ref(database, '/projekte');
-            const snapshot = await get(projectsRef);
+            const dbRef = ref(database, '/projekte');
+            const snapshot = await get(child(dbRef, '/')));
             const projectNames = Object.keys(snapshot.val() || {});
 
             const projectName = prompt("Bitte Projektnamen eingeben:", projectNames.join(', '));
