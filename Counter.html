@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Getränke Zähler</title>
     <style>
-        body { 
+        body {
             font-family: Arial, sans-serif; 
             touch-action: manipulation; /* Verhindert das Zooming */
             margin: 0; 
@@ -51,7 +51,7 @@
             border-radius: 5px; 
             margin: 10px; 
             padding: 10px; 
-            flex: 1 1 calc(20% - 20px); /* Flexbox für responsive Darstellung */
+            flex: 1 1 calc(20% - 20px);
         }
         .info { 
             flex-grow: 1; 
@@ -127,7 +127,7 @@
                 currentProject.projektname = projektname;
                 currentProject.projektdatum = projektdatum;
                 alert(`Projekt "${projektname}" erstellt für den ${projektdatum}.`);
-                saveGetraenkeToDatabase(); // Getränke sofort nach Erstellung des Projekts speichern
+                saveGetraenkeToDatabase();
                 document.getElementById('project-name').textContent = projektname; // Projektnamen anzeigen
                 document.getElementById('project-date').textContent = projektdatum; // Projektdatum anzeigen
             }
@@ -141,9 +141,7 @@
 
                 const updates = {};
                 getraenke.forEach(item => {
-                    const itemId = item.Name.replace(/\s+/g, '_') // Leerzeichen durch Unterstriche ersetzen
-                                              .replace(/[.#$\/\[\]#]/g, '-'); // Unerwünschte Zeichen ersetzen
-
+                    const itemId = item.Name.replace(/\s+/g, '_'); // ID generieren
                     updates[`/projekte/${currentProject.projektname}/getraenke/${itemId}`] = {
                         Kategorie: item.Kategorie,
                         Name: item.Name,
@@ -155,7 +153,7 @@
 
                 await update(ref(database), updates);
                 alert("Getränke erfolgreich in die Datenbank gespeichert!");
-                loadGetraenke(); // Getränke nach dem Speichern laden
+                loadGetraenke();
             } catch (error) {
                 console.error("Fehler beim Speichern der Getränke:", error);
                 alert("Fehler beim Speichern der Getränke: " + error.message);
@@ -202,23 +200,18 @@
                         plusButton.className = 'button plus';
                         plusButton.onclick = async () => {
                             count.textContent = parseInt(count.textContent) + 1;
-                            await update(ref(database, `/projekte/${currentProject.projektname}/getraenke/${key}/Zaehler`), {
-                                Zaehler: parseInt(count.textContent)
-                            });
-                            updateTotalPrice(); // Gesamtpreis aktualisieren
+                            await update(ref(database, `/projekte/${currentProject.projektname}/getraenke/${key}/Zaehler`), parseInt(count.textContent));
+                            updateTotalPrice();
                         };
 
                         const minusButton = document.createElement('button');
                         minusButton.textContent = '-1';
                         minusButton.className = 'button minus';
                         minusButton.onclick = async () => {
-                            if (parseInt(count.textContent) > 0) {
-                                count.textContent = parseInt(count.textContent) - 1;
-                                await update(ref(database, `/projekte/${currentProject.projektname}/getraenke/${key}/Zaehler`), {
-                                    Zaehler: parseInt(count.textContent)
-                                });
-                                updateTotalPrice(); // Gesamtpreis aktualisieren
-                            }
+                            const newCount = Math.max(0, parseInt(count.textContent) - 1);
+                            count.textContent = newCount;
+                            await update(ref(database, `/projekte/${currentProject.projektname}/getraenke/${key}/Zaehler`), newCount);
+                            updateTotalPrice();
                         };
 
                         counterDiv.appendChild(minusButton);
@@ -231,62 +224,77 @@
                         itemDiv.appendChild(counterDiv);
                         container.appendChild(itemDiv);
                     });
-                    updateTotalPrice(); // Gesamtpreis aktualisieren
                 }
+                updateTotalPrice(); // Gesamtpreis nach dem Laden aktualisieren
             });
         }
 
         async function openProject() {
-            const dbRef = ref(database, '/projekte');
-            const snapshot = await get(child(dbRef, '/')));
-            const projectNames = Object.keys(snapshot.val() || {});
+            const projectsRef = ref(database, '/projekte');
+            const snapshot = await get(projectsRef);
+            const projects = snapshot.val();
 
-            const projectName = prompt("Bitte Projektnamen eingeben:", projectNames.join(', '));
-            if (projectName && projectNames.includes(projectName)) {
-                currentProject.projektname = projectName;
-                loadGetraenke();
-                document.getElementById('project-name').textContent = projectName; // Projektnamen anzeigen
+            if (projects) {
+                const projectNames = Object.keys(projects);
+                const projektname = prompt("Bitte Projekt auswählen: " + projectNames.join(", "));
+                if (projectNames.includes(projektname)) {
+                    currentProject.projektname = projektname;
+                    alert(`Projekt "${projektname}" geöffnet.`);
+                    document.getElementById('project-name').textContent = projektname; // Projektnamen anzeigen
+                    loadGetraenke(); // Getränke laden
+                } else {
+                    alert("Projekt nicht gefunden.");
+                }
             } else {
-                alert("Projekt nicht gefunden.");
+                alert("Keine Projekte gefunden.");
             }
         }
 
-        async function closeProject() {
+        function closeProject() {
             currentProject = { projektname: '', projektdatum: '' };
+            alert("Projekt geschlossen.");
             document.getElementById('project-name').textContent = ''; // Projektnamen zurücksetzen
             document.getElementById('project-date').textContent = ''; // Projektdatum zurücksetzen
-            document.getElementById('item-container').innerHTML = ''; // Container zurücksetzen
-            alert("Projekt geschlossen.");
+            document.getElementById('item-container').innerHTML = ''; // Getränke zurücksetzen
+            document.getElementById('total-price').textContent = '€0.00'; // Gesamtpreis zurücksetzen
         }
 
         function updateTotalPrice() {
-            const container = document.getElementById('item-container');
-            const totalPriceElement = document.getElementById('total-price');
-            let totalPrice = 0;
+            const itemContainer = document.getElementById('item-container');
+            const items = itemContainer.getElementsByClassName('item');
+            let total = 0;
 
-            const items = container.querySelectorAll('.item');
-            items.forEach(item => {
-                const count = parseInt(item.querySelector('.count').textContent);
-                const preis = parseFloat(item.querySelector('.preis').textContent.replace('€', ''));
-                totalPrice += count * preis;
-            });
+            for (let item of items) {
+                const countSpan = item.querySelector('.count');
+                const priceSpan = item.querySelector('.preis');
 
-            totalPriceElement.textContent = `Gesamtpreis: €${totalPrice.toFixed(2)}`;
+                const count = parseInt(countSpan.textContent);
+                const price = parseFloat(priceSpan.textContent.replace('€', ''));
+
+                total += count * price;
+            }
+
+            document.getElementById('total-price').textContent = `€${total.toFixed(2)}`;
+        }
+
+        window.onload = function() {
+            document.getElementById('new-button').onclick = createNewProject;
+            document.getElementById('open-button').onclick = openProject;
+            document.getElementById('close-button').onclick = closeProject;
         }
     </script>
 </head>
 <body>
     <div class="header">
-        <button class="new-button" onclick="createNewProject()">Neues Projekt</button>
-        <button class="open-button" onclick="openProject()">Projekt öffnen</button>
-        <button class="save-button" onclick="saveGetraenkeToDatabase()">Speichern</button>
-        <button class="close-button" onclick="closeProject()">Projekt schließen</button>
+        <button id="new-button" class="new-button">Neues Projekt</button>
+        <button id="open-button" class="open-button">Projekt Öffnen</button>
+        <button id="save-button" class="save-button">Speichern</button>
+        <button id="close-button" class="close-button">Schließen</button>
     </div>
     <div class="project-info">
-        Projekt: <span id="project-name"></span><br>
-        Datum: <span id="project-date"></span>
+        Aktuelles Projekt: <span id="project-name"></span> am <span id="project-date"></span>
     </div>
-    <div class="total-price" id="total-price">Gesamtpreis: €0.00</div>
+    <div class="total-price" id="total-price">€0.00</div>
     <div class="item-container" id="item-container"></div>
 </body>
 </html>
