@@ -87,10 +87,8 @@
         }
     </style>
     <!-- Firebase SDK -->
-    <script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
-        import { getDatabase, ref, set, update, get, child } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-database.js";
-
+    <script>
+        // Firebase Setup
         const firebaseConfig = {
             apiKey: "AIzaSyBydAxxqNvFuj6DBY7iD5P8UpZpYSq0_BE",
             authDomain: "alea-hotels-pfaffenhofen.firebaseapp.com",
@@ -102,16 +100,17 @@
             measurementId: "G-M82VZW2CYK"
         };
 
-        const app = initializeApp(firebaseConfig);
-        const database = getDatabase(app);
-        
+        // Initialize Firebase
+        const app = firebase.initializeApp(firebaseConfig);
+        const database = firebase.database();
+
         let currentProject = {
             projektname: '',
             projektdatum: '',
             zaehler: {}
         };
 
-        // Funktion zum Erstellen eines neuen Projekts
+        // Create New Project
         function createNewProject() {
             const projektname = prompt("Bitte Projektname eingeben:");
             const projektdatum = prompt("Bitte Projektdatum eingeben (z.B. 01.01.2024):");
@@ -124,7 +123,7 @@
             }
         }
 
-        // Funktion zum Laden der Getränkedaten
+        // Load Drinks Data
         async function loadGetraenke() {
             try {
                 const response = await fetch('getraenke.json');
@@ -132,7 +131,7 @@
                 const getraenke = data.getraenke;
                 const container = document.getElementById('getraenke-container');
                 
-                container.innerHTML = ''; // Container zurücksetzen
+                container.innerHTML = ''; // Reset container
                 getraenke.forEach(item => {
                     const itemDiv = document.createElement('div');
                     itemDiv.className = 'item';
@@ -200,7 +199,7 @@
             }
         }
 
-        // Funktion zum Speichern der Daten
+        // Save Data
         async function saveData() {
             if (!currentProject.projektname) {
                 alert("Kein aktuelles Projekt zum Speichern!");
@@ -213,7 +212,7 @@
             });
 
             try {
-                await update(ref(database), updates);
+                await firebase.database().ref().update(updates);
                 alert("Daten erfolgreich gespeichert!");
             } catch (error) {
                 console.error("Fehler beim Speichern der Daten:", error);
@@ -221,13 +220,13 @@
             }
         }
 
-        // Funktion zum Aktualisieren der Projektinformationen
+        // Update Project Information
         function updateProjectInfo() {
             const projectInfo = document.getElementById('project-info');
             projectInfo.textContent = `${currentProject.projektname} / ${currentProject.projektdatum}`;
         }
 
-        // Funktion zum Aktualisieren des Gesamtpreises
+        // Update Total Price
         function updateTotalPrice() {
             const total = Object.keys(currentProject.zaehler).reduce((sum, itemName) => {
                 const itemCount = currentProject.zaehler[itemName] || 0;
@@ -238,7 +237,7 @@
             document.getElementById('total-price').textContent = `Gesamtpreis: €${total.toFixed(2)}`;
         }
 
-        // Funktion zum Schließen des Projekts
+        // Close Project
         function closeProject() {
             if (currentProject.projektname) {
                 alert(`Projekt "${currentProject.projektname}" geschlossen.`);
@@ -251,13 +250,13 @@
             }
         }
 
-        // Funktion zum Öffnen eines Projekts
+        // Open Project
         async function openProject() {
             const projektname = prompt("Bitte den Namen des Projekts eingeben, das Sie öffnen möchten:");
             if (projektname) {
-                const dbRef = ref(database);
+                const dbRef = firebase.database().ref();
                 try {
-                    const snapshot = await get(child(dbRef, `projekte/${projektname}`));
+                    const snapshot = await dbRef.child(`projekte/${projektname}`).get();
                     if (snapshot.exists()) {
                         currentProject = {
                             projektname: projektname,
