@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Getränke Zähler</title>
     <style>
-        body { 
-            font-family: Arial, sans-serif; 
+        body {
+            font-family: Arial, sans-serif;
             touch-action: manipulation; /* Verhindert das Zooming */
-            margin: 0; 
+            margin: 0;
         }
         .header {
             display: flex;
@@ -46,53 +46,53 @@
         }
         .item {
             display: flex;
-            align-items: center; 
-            border: 1px solid #ddd; 
-            border-radius: 5px; 
-            margin: 10px; 
-            padding: 10px; 
+            align-items: center;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin: 10px;
+            padding: 10px;
             flex: 1 1 calc(20% - 20px); /* Flexbox für responsive Darstellung */
         }
-        .info { 
-            flex-grow: 1; 
-            display: flex; 
-            justify-content: flex-start; 
-            align-items: center; 
+        .info {
+            flex-grow: 1;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
         }
-        .name { 
-            font-size: 1.2em; 
-            font-weight: bold; 
-            margin-right: 10px; 
+        .name {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-right: 10px;
         }
-        .preis { 
-            font-size: 1.1em; 
-            color: #000; 
-            margin-left: 10px; 
+        .preis {
+            font-size: 1.1em;
+            color: #000;
+            margin-left: 10px;
         }
-        .counter { 
-            display: flex; 
-            align-items: center; 
-            margin-left: 10px; 
+        .counter {
+            display: flex;
+            align-items: center;
+            margin-left: 10px;
         }
-        .counter span { 
-            margin: 0 10px; 
-            font-size: 1.5em; 
+        .counter span {
+            margin: 0 10px;
+            font-size: 1.5em;
         }
-        .button { 
-            padding: 10px; 
-            border: none; 
-            color: white; 
-            cursor: pointer; 
-            font-size: 1em; 
-            border-radius: 5px; 
-            height: 40px; 
+        .button {
+            padding: 10px;
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-size: 1em;
+            border-radius: 5px;
+            height: 40px;
         }
-        .button.plus { 
-            background-color: #4CAF50; 
+        .button.plus {
+            background-color: #4CAF50;
             width: 80px; /* Breite für die Plus-Taste */
         }
-        .button.minus { 
-            background-color: #f44336; 
+        .button.minus {
+            background-color: #f44336;
             width: 50px; /* Breite für die Minus-Taste */
         }
     </style>
@@ -130,6 +130,11 @@
                 saveGetraenkeToDatabase();
                 document.getElementById('project-name').textContent = projektname; // Projektnamen anzeigen
                 document.getElementById('project-date').textContent = projektdatum; // Projektdatum anzeigen
+
+                // Speichere das Projekt in der Datenbank
+                set(ref(database, `/projekte/${projektname}`), {
+                    datum: projektdatum
+                });
             }
         }
 
@@ -224,76 +229,82 @@
                         itemDiv.appendChild(counterDiv);
                         container.appendChild(itemDiv);
                     });
-                }
-                updateTotalPrice(); // Gesamtpreis nach dem Laden aktualisieren
-            });
-        }
-
-        async function openProject() {
-            const projectsRef = ref(database, '/projekte');
-            const snapshot = await get(projectsRef);
-            const projects = snapshot.val();
-
-            if (projects) {
-                const projectNames = Object.keys(projects);
-                const projektname = prompt("Bitte Projekt auswählen: " + projectNames.join(", "));
-                if (projectNames.includes(projektname)) {
-                    currentProject.projektname = projektname;
-                    currentProject.projektdatum = projects[projektname].datum; // Datum aus den Projekten holen
-                    document.getElementById('project-name').textContent = projektname;
-                    document.getElementById('project-date').textContent = currentProject.projektdatum;
-                    loadGetraenke();
                 } else {
-                    alert("Projekt nicht gefunden!");
+                    alert("Keine Getränke gefunden. Bitte fügen Sie Getränke hinzu.");
                 }
-            } else {
-                alert("Es gibt keine Projekte in der Datenbank.");
-            }
-        }
-
-        async function saveData() {
-            if (!currentProject.projektname) {
-                alert("Kein aktuelles Projekt zum Speichern!");
-                return;
-            }
-            alert("Aktuelle Zählerstände wurden in die Datenbank aktualisiert.");
-            loadGetraenke(); // Optional, um die Zählerstände neu zu laden
-        }
-
-        async function closeProject() {
-            await saveData();
-            alert("Projekt wurde geschlossen.");
-            currentProject = { projektname: '', projektdatum: '' }; // Reset
-            document.getElementById('item-container').innerHTML = ''; // Container zurücksetzen
-            document.getElementById('project-name').textContent = '';
-            document.getElementById('project-date').textContent = '';
-            updateTotalPrice(); // Gesamtpreis zurücksetzen
+            });
         }
 
         function updateTotalPrice() {
-            const items = Array.from(document.querySelectorAll('.item'));
-            const totalPriceElement = document.getElementById('total-price');
             let total = 0;
-            items.forEach(item => {
-                const count = parseInt(item.querySelector('.count').textContent);
-                const preis = parseFloat(item.querySelector('.preis').textContent.replace('€', '').trim());
-                total += count * preis;
+            const dbRef = ref(database, `/projekte/${currentProject.projektname}/getraenke`);
+            get(dbRef).then((snapshot) => {
+                if (snapshot.exists()) {
+                    const getraenke = snapshot.val();
+                    Object.values(getraenke).forEach(item => {
+                        total += item.Preis * item.Zaehler;
+                    });
+                    document.getElementById('total-price').textContent = `Gesamtpreis: €${total.toFixed(2)}`;
+                } else {
+                    console.error("Keine Getränke vorhanden.");
+                }
             });
-            totalPriceElement.textContent = `Gesamtpreis: €${total.toFixed(2)}`;
+        }
+
+        function openProject() {
+            const projektname = prompt("Bitte Projektname eingeben:");
+            const dbRef = ref(database, `/projekte/${projektname}`);
+            get(dbRef).then((snapshot) => {
+                if (snapshot.exists()) {
+                    currentProject.projektname = projektname;
+                    currentProject.projektdatum = snapshot.val().datum;
+
+                    document.getElementById('project-name').textContent = projektname;
+                    document.getElementById('project-date').textContent = currentProject.projektdatum;
+
+                    alert(`Projekt "${projektname}" geöffnet.`);
+                    loadGetraenke();
+                } else {
+                    alert("Projekt nicht gefunden. Bitte überprüfen Sie den Namen.");
+                }
+            }).catch((error) => {
+                console.error("Fehler beim Abrufen des Projekts:", error);
+                alert("Fehler beim Abrufen des Projekts: " + error.message);
+            });
+        }
+
+        function closeProject() {
+            currentProject = { projektname: '', projektdatum: '' };
+            document.getElementById('project-name').textContent = '';
+            document.getElementById('project-date').textContent = '';
+            document.getElementById('total-price').textContent = 'Gesamtpreis: €0.00';
+            document.getElementById('item-container').innerHTML = ''; // Container zurücksetzen
+            alert("Projekt geschlossen.");
+        }
+
+        window.onload = function() {
+            document.getElementById('new-button').onclick = createNewProject;
+            document.getElementById('open-button').onclick = openProject;
+            document.getElementById('close-button').onclick = closeProject;
+            document.getElementById('save-button').onclick = saveGetraenkeToDatabase;
         }
     </script>
 </head>
 <body>
     <div class="header">
-        <button class="new-button" onclick="createNewProject()">NEU</button>
-        <button class="open-button" onclick="openProject()">ÖFFNEN</button>
-        <button class="save-button" onclick="saveData()">SPEICHERN</button>
-        <button class="close-button" onclick="closeProject()">SCHLIESSEN</button>
+        <h1>Getränke Zähler</h1>
+        <div>
+            <button id="new-button" class="new-button">Neues Projekt</button>
+            <button id="open-button" class="open-button">Projekt Öffnen</button>
+            <button id="save-button" class="save-button">Speichern</button>
+            <button id="close-button" class="close-button">Projekt Schließen</button>
+        </div>
     </div>
-    <div class="project-info" id="project-info">
-        Projekt: <span id="project-name"></span> | Datum: <span id="project-date"></span>
+    <div class="project-info">
+        <div id="project-name">Projekt: </div>
+        <div id="project-date">Datum: </div>
     </div>
-    <div class="total-price" id="total-price">Gesamtpreis: €0.00</div>
+    <div id="total-price" class="total-price">Gesamtpreis: €0.00</div>
     <div class="item-container" id="item-container"></div>
 </body>
 </html>
