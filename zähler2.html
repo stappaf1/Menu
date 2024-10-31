@@ -4,14 +4,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Getränke Zähler</title>
-
-    <!-- Firebase SDKs einfügen -->
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            touch-action: manipulation; /* Verhindert das Zooming */
+            margin: 0; /* Entfernt den Standardabstand des Körpers */
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #f8f8f8;
+            border-bottom: 2px solid #ddd;
+        }
+        .header button {
+            padding: 10px 20px;
+            font-size: 1em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: white;
+        }
+        .load-button { background-color: #4CAF50; }
+        .save-button { background-color: #007BFF; }
+        .item { 
+            display: flex; 
+            align-items: center; 
+            justify-content: space-between; 
+            padding: 10px; 
+            border: 1px solid #ddd; 
+            border-radius: 5px; 
+        }
+        .info { 
+            flex-grow: 1; 
+            display: flex; /* Fügt Flexbox hinzu */
+            justify-content: flex-start; /* Nur der Name und der Preis */
+            align-items: center; /* Zentriert die Elemente vertikal */
+        }
+        .name { 
+            font-size: 1.5em; 
+            font-weight: bold; 
+            margin-right: 10px; /* Kleiner Abstand zwischen Name und Preis */
+        }
+        .preis { 
+            font-size: 1.2em; 
+            color: #000; 
+        }
+        .counter { 
+            display: flex; 
+            align-items: center; 
+        }
+        .counter span { 
+            margin: 0 10px; 
+            font-size: 1.5em; 
+        }
+        .button { 
+            padding: 5px; 
+            border: none; 
+            color: white; 
+            cursor: pointer; 
+            font-size: 1em; 
+            border-radius: 5px; 
+            height: 40px; 
+        }
+        .button.plus { 
+            background-color: #4CAF50; 
+            width: 180px; /* Dreimal so breit wie vorher */
+        }
+        .button.minus { 
+            background-color: #f44336; 
+            width: 180px; /* Dreimal so breit wie vorher */
+        }
+    </style>
+    <!-- Firebase SDK -->
     <script type="module">
-        // Importiere die benötigten Firebase-Funktionen
+        // Import the functions you need from the SDKs you need
         import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
-        import { getDatabase, ref, set, get, child } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-database.js";
-
-        // Firebase-Konfiguration
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-analytics.js";
+        
+        // Deine Firebase-Konfiguration
         const firebaseConfig = {
             apiKey: "AIzaSyBydAxxqNvFuj6DBY7iD5P8UpZpYSq0_BE",
             authDomain: "alea-hotels-pfaffenhofen.firebaseapp.com",
@@ -25,97 +97,128 @@
 
         // Firebase initialisieren
         const app = initializeApp(firebaseConfig);
-        const database = getDatabase(app);
+        const analytics = getAnalytics(app);
+    </script>
+</head>
+<body>
 
+    <div class="header">
+        <button id="loadBtn" class="load-button">Laden</button>
+        <button id="saveBtn" class="save-button">Zwischenergebnis senden</button>
+        <button id="endProjectBtn" class="end-button">Projekt beenden</button>
+    </div>
+
+    <h1 style="text-align:center;">Getränke Zähler</h1>
+    <div id="getraenke-container"></div>
+
+    <script>
         async function loadGetraenke() {
-            const dbRef = ref(database, 'getraenke');
-            const snapshot = await get(dbRef);
-            const getraenkeData = snapshot.exists() ? snapshot.val() : [];
+            try {
+                const response = await fetch('getraenke.json');
+                const data = await response.json();
+                const getraenke = data.getraenke;
+                const container = document.getElementById('getraenke-container');
+                
+                container.innerHTML = ''; // Container zurücksetzen
+                getraenke.forEach(item => {
+                    const itemDiv = document.createElement('div');
+                    itemDiv.className = 'item';
+                    
+                    const infoDiv = document.createElement('div');
+                    infoDiv.className = 'info';
+                    
+                    const name = document.createElement('div');
+                    name.className = 'name';
+                    name.textContent = item.Name;
 
-            const container = document.getElementById('getraenke-container');
-            container.innerHTML = '';
+                    const preis = document.createElement('div');
+                    preis.className = 'preis';
+                    preis.textContent = `€${item.Preis}`;
 
-            getraenkeData.forEach(item => {
-                const itemDiv = document.createElement('div');
-                itemDiv.className = 'item';
+                    infoDiv.appendChild(name);
+                    infoDiv.appendChild(preis);
+                    
+                    const counterDiv = document.createElement('div');
+                    counterDiv.className = 'counter';
+                    
+                    const count = document.createElement('span');
+                    count.textContent = '0';
+                    count.className = 'count';
 
-                const infoDiv = document.createElement('div');
-                infoDiv.className = 'info';
+                    const plusButton = document.createElement('button');
+                    plusButton.textContent = '+1';
+                    plusButton.className = 'button plus';
+                    plusButton.onclick = () => count.textContent = parseInt(count.textContent) + 1;
 
-                const name = document.createElement('div');
-                name.className = 'name';
-                name.textContent = item.name;
+                    const minusButton = document.createElement('button');
+                    minusButton.textContent = '-1';
+                    minusButton.className = 'button minus';
+                    minusButton.onclick = () => {
+                        count.textContent = Math.max(0, parseInt(count.textContent) - 1);
+                    };
 
-                const preis = document.createElement('div');
-                preis.className = 'preis';
-                preis.textContent = `€${item.preis}`;
+                    counterDiv.appendChild(minusButton);
+                    counterDiv.appendChild(count);
+                    counterDiv.appendChild(plusButton);
 
-                infoDiv.appendChild(name);
-                infoDiv.appendChild(preis);
-
-                const counterDiv = document.createElement('div');
-                counterDiv.className = 'counter';
-
-                const count = document.createElement('span');
-                count.textContent = item.count || 0;
-                count.className = 'count';
-
-                const plusButton = document.createElement('button');
-                plusButton.textContent = '+1';
-                plusButton.className = 'button plus';
-                plusButton.onclick = () => count.textContent = parseInt(count.textContent) + 1;
-
-                const minusButton = document.createElement('button');
-                minusButton.textContent = '-1';
-                minusButton.className = 'button minus';
-                minusButton.onclick = () => {
-                    count.textContent = Math.max(0, parseInt(count.textContent) - 1);
-                };
-
-                counterDiv.appendChild(minusButton);
-                counterDiv.appendChild(count);
-                counterDiv.appendChild(plusButton);
-
-                itemDiv.appendChild(infoDiv);
-                itemDiv.appendChild(counterDiv);
-                container.appendChild(itemDiv);
-            });
+                    itemDiv.appendChild(infoDiv);
+                    itemDiv.appendChild(counterDiv);
+                    container.appendChild(itemDiv);
+                });
+                
+                document.getElementById('loadBtn').disabled = true;
+            } catch (error) {
+                console.error("Fehler beim Laden der Getränkedaten:", error);
+            }
         }
 
-        function saveDataToFirebase() {
+        function saveData() {
             const data = Array.from(document.querySelectorAll('.item')).map(item => {
                 return {
                     name: item.querySelector('.name').textContent,
                     preis: item.querySelector('.preis').textContent,
-                    count: parseInt(item.querySelector('.count').textContent)
+                    zaehler: item.querySelector('.count').textContent
                 };
             });
-            set(ref(database, 'getraenke'), data);
-            alert("Daten wurden erfolgreich gespeichert!");
+
+            const emailContent = data.map(item => `${item.name}; ${item.preis}; ${item.zaehler}`).join('\n');
+            const date = new Date();
+            const formattedDate = date.toLocaleDateString('de-DE') + ' um ' + date.toLocaleTimeString('de-DE', { hour: '2-digit', minute: '2-digit' });
+            const subject = prompt("Betreff der E-Mail eingeben (Projektname):") + ' - ' + formattedDate;
+
+            if (subject) {
+                sendEmail(subject, emailContent);
+            }
         }
 
-        window.onload = function() {
-            document.getElementById('loadBtn').addEventListener('click', loadGetraenke);
-            document.getElementById('saveBtn').addEventListener('click', saveDataToFirebase);
-        };
-    </script>
+        function sendEmail(subject, content) {
+            const mailtoLink = `mailto:event@hotel-alea.de?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(content)}`;
+            window.location.href = mailtoLink;
+        }
 
-    <style>
-        /* Dein CSS */
-        body { font-family: Arial, sans-serif; margin: 0; }
-        .header { display: flex; justify-content: space-between; align-items: center; padding: 10px; }
-        .header button { padding: 10px; font-size: 1em; }
-        .item { display: flex; justify-content: space-between; padding: 10px; }
-        .button.plus { background-color: #4CAF50; width: 100px; }
-        .button.minus { background-color: #f44336; width: 100px; }
-    </style>
-</head>
-<body>
-    <div class="header">
-        <button id="loadBtn">Laden</button>
-        <button id="saveBtn">Speichern</button>
-    </div>
-    <h1>Getränke Zähler</h1>
-    <div id="getraenke-container"></div>
+        document.getElementById('loadBtn').addEventListener('click', loadGetraenke);
+        document.getElementById('saveBtn').addEventListener('click', saveData);
+        
+        // Funktion für das Beenden des Projekts
+        document.getElementById('endProjectBtn').addEventListener('click', () => {
+            const date = new Date();
+            const formattedDate = date.toLocaleDateString('de-DE') + ' um ' + date.toLocaleTimeString('de-DE', { hour: '2-digit', minute: '2-digit' });
+            const emailContent = Array.from(document.querySelectorAll('.item')).map(item => {
+                return {
+                    name: item.querySelector('.name').textContent,
+                    preis: item.querySelector('.preis').textContent,
+                    zaehler: item.querySelector('.count').textContent
+                };
+            }).map(item => `${item.name}; ${item.preis}; ${item.zaehler}`).join('\n');
+            const subject = prompt("Betreff der E-Mail eingeben (Projektname):") + ' - ' + formattedDate;
+
+            if (subject) {
+                sendEmail(subject, emailContent);
+                // Leere die data.json hier und blende die Balken aus
+                document.getElementById('getraenke-container').innerHTML = ''; // Alle Balken ausblenden
+                document.getElementById('loadBtn').disabled = false; // Ladebutton aktivieren
+            }
+        });
+    </script>
 </body>
 </html>
