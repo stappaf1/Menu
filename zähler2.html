@@ -216,18 +216,4 @@
         // Funktion für das Beenden des Projekts
         document.getElementById('endProjectBtn').addEventListener('click', () => {
             const date = new Date();
-            const formattedDate = date.toLocaleDateString('de-DE') + ' um ' + date.toLocaleTimeString('de-DE', { hour: '2-digit', minute: '2-digit' });
-            const emailContent = Array.from(document.querySelectorAll('.item')).map(item => {
-                return {
-                    name: item.querySelector('.name').textContent,
-                    preis: item.querySelector('.preis').textContent,
-                    zaehler: item.querySelector('.count').textContent
-                };
-            }).map(item => `${item.name}; ${item.preis}; ${item.zaehler}`).join('\n');
-
-            const subject = `Projekt beendet - ${formattedDate}`;
-            sendEmail(subject, emailContent);
-        });
-    </script>
-</body>
-</html>
+            const formattedDate = date.toLocaleDateString('de
