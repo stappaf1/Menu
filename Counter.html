@@ -164,15 +164,14 @@
                     counterDiv.appendChild(minusButton);
                     counterDiv.appendChild(count);
                     counterDiv.appendChild(plusButton);
-
+                    
                     itemDiv.appendChild(infoDiv);
                     itemDiv.appendChild(counterDiv);
                     container.appendChild(itemDiv);
                 });
-                
-                document.getElementById('loadBtn').disabled = true;
             } catch (error) {
-                console.error("Fehler beim Laden der Getränkedaten:", error);
+                console.error("Fehler beim Laden der Getränke:", error);
+                alert("Fehler beim Laden der Getränke: " + error.message);
             }
         }
 
@@ -183,9 +182,14 @@
             }
 
             const updates = {};
-            const items = Array.from(document.querySelectorAll('.item')).map((item, index) => {
+            const items = Array.from(document.querySelectorAll('.item')).map((item) => {
                 const count = item.querySelector('.count').textContent;
-                updates[`/projekte/${currentProject.projektname}/zaehler/${index}/zaehler`] = count; // Update Zähler in der DB
+
+                // ID generieren (kann angepasst werden)
+                const itemId = item.querySelector('.name').textContent.replace(/\s+/g, '_');
+
+                // Update nur für den Zähler
+                updates[`/projekte/${currentProject.projektname}/zaehler/${itemId}/zaehler`] = count; 
                 return {
                     name: item.querySelector('.name').textContent,
                     preis: item.querySelector('.preis').textContent,
@@ -204,22 +208,13 @@
                     alert("Fehler beim Speichern der Daten: " + error.message);
                 });
         }
-
-        document.getElementById('loadBtn').addEventListener('click', loadGetraenke);
-        document.getElementById('saveBtn').addEventListener('click', saveData);
-        document.getElementById('newProjectBtn').addEventListener('click', createNewProject);
-        
     </script>
 </head>
 <body>
-
     <div class="header">
-        <button id="newProjectBtn" class="load-button">NEU</button>
-        <button id="loadBtn" class="load-button">ÖFFNEN</button>
-        <button id="saveBtn" class="save-button">SPEICHERN</button>
-        <button id="closeBtn" class="load-button">SCHLIESSEN</button>
+        <button class="load-button" onclick="createNewProject()">Öffnen</button>
+        <button class="save-button" onclick="saveData()">Speichern</button>
     </div>
-
     <div id="getraenke-container"></div>
 </body>
 </html>
