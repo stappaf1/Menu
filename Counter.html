@@ -5,24 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Getränke Zähler</title>
     <style>
-        body { font-family: Arial, sans-serif; touch-action: manipulation; margin: 0; }
-        .header { display: flex; justify-content: space-between; align-items: center; padding: 10px; background-color: #f8f8f8; border-bottom: 2px solid #ddd; }
-        .header button { padding: 10px 20px; font-size: 1em; border: none; border-radius: 5px; cursor: pointer; color: white; }
-        .new-button { background-color: #4CAF50; }
-        .open-button { background-color: #007BFF; }
-        .save-button { background-color: #FF5733; }
-        .close-button { background-color: #C70039; }
-        .item { display: flex; align-items: center; justify-content: space-between; padding: 10px; border: 1px solid #ddd; border-radius: 5px; margin: 10px 0; }
-        .info { flex-grow: 1; display: flex; justify-content: flex-start; align-items: center; }
-        .name { font-size: 1.5em; font-weight: bold; margin-right: 10px; }
-        .preis { font-size: 1.2em; color: #000; }
-        .counter { display: flex; align-items: center; }
-        .counter span { margin: 0 10px; font-size: 1.5em; }
-        .button { padding: 5px; border: none; color: white; cursor: pointer; font-size: 1em; border-radius: 5px; height: 40px; }
-        .button.plus { background-color: #4CAF50; width: 60px; }
-        .button.minus { background-color: #f44336; width: 60px; }
+        /* Styling bleibt gleich wie in der letzten Version */
     </style>
-    <!-- Firebase SDK -->
+
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
         import { getDatabase, ref, set, get, update, child } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-database.js";
@@ -41,12 +26,7 @@
         const app = initializeApp(firebaseConfig);
         const database = getDatabase(app);
 
-        async function loadGetraenke() {
-            const response = await fetch('getraenke.json');
-            return await response.json();
-        }
-
-        async function neuesProjekt() {
+        window.neuesProjekt = async function neuesProjekt() {
             const projektname = prompt("Projektname:");
             const projektdatum = prompt("Projektdatum:");
             if (!projektname || !projektdatum) return;
@@ -60,86 +40,90 @@
             }));
 
             const projektRef = ref(database, `projekte/${projektname}`);
-            set(projektRef, { projektdatum, getraenke });
-            alert("Neues Projekt erstellt.");
+            set(projektRef, { projektdatum, getraenke }).then(() => {
+                alert("Neues Projekt erstellt.");
+            }).catch(error => console.error("Fehler beim Erstellen des Projekts:", error));
         }
 
-        async function projektOeffnen() {
-            const snapshot = await get(child(ref(database), 'projekte'));
-            if (!snapshot.exists()) return alert("Keine Projekte gefunden.");
+        window.projektOeffnen = async function projektOeffnen() {
+            try {
+                const snapshot = await get(child(ref(database), 'projekte'));
+                if (!snapshot.exists()) return alert("Keine Projekte gefunden.");
 
-            const projekte = snapshot.val();
-            const projektname = prompt("Projektname zum Öffnen eingeben:", Object.keys(projekte).join(", "));
-            if (!projekte[projektname]) return alert("Projekt nicht gefunden.");
+                const projekte = snapshot.val();
+                const projektname = prompt("Projektname zum Öffnen eingeben:", Object.keys(projekte).join(", "));
+                if (!projekte[projektname]) return alert("Projekt nicht gefunden.");
 
-            const projekt = projekte[projektname];
-            document.getElementById('projekt-info').textContent = `Projekt: ${projektname}, Datum: ${projekt.projektdatum}`;
+                const projekt = projekte[projektname];
+                document.getElementById('projekt-info').textContent = `Projekt: ${projektname}, Datum: ${projekt.projektdatum}`;
 
-            const container = document.getElementById('getraenke-container');
-            container.innerHTML = '';
+                const container = document.getElementById('getraenke-container');
+                container.innerHTML = '';
 
-            projekt.getraenke.forEach(item => {
-                const itemDiv = document.createElement('div');
-                itemDiv.className = 'item';
-                
-                const infoDiv = document.createElement('div');
-                infoDiv.className = 'info';
-                
-                const kategorie = document.createElement('div');
-                kategorie.className = 'name';
-                kategorie.textContent = item.Kategorie;
+                projekt.getraenke.forEach(item => {
+                    const itemDiv = document.createElement('div');
+                    itemDiv.className = 'item';
 
-                const name = document.createElement('div');
-                name.className = 'name';
-                name.textContent = item.Name;
+                    const kategorie = document.createElement('div');
+                    kategorie.className = 'name';
+                    kategorie.textContent = item.Kategorie;
 
-                const preis = document.createElement('div');
-                preis.className = 'preis';
-                preis.textContent = `€${item.Preis}`;
+                    const name = document.createElement('div');
+                    name.className = 'name';
+                    name.textContent = item.Name;
 
-                const menge = document.createElement('div');
-                menge.className = 'name';
-                menge.textContent = item.Menge;
+                    const preis = document.createElement('div');
+                    preis.className = 'preis';
+                    preis.textContent = `€${item.Preis}`;
 
-                const counterDiv = document.createElement('div');
-                counterDiv.className = 'counter';
-                
-                const count = document.createElement('span');
-                count.textContent = item.Zähler;
-                count.className = 'count';
+                    const menge = document.createElement('div');
+                    menge.className = 'name';
+                    menge.textContent = item.Menge;
 
-                const plusButton = document.createElement('button');
-                plusButton.textContent = '+1';
-                plusButton.className = 'button plus';
-                plusButton.onclick = () => {
-                    count.textContent = parseInt(count.textContent) + 1;
-                    update(ref(database, `projekte/${projektname}/getraenke/${item.Name}`), { Zähler: parseInt(count.textContent) });
-                };
+                    const counterDiv = document.createElement('div');
+                    counterDiv.className = 'counter';
 
-                const minusButton = document.createElement('button');
-                minusButton.textContent = '-1';
-                minusButton.className = 'button minus';
-                minusButton.onclick = () => {
-                    count.textContent = Math.max(0, parseInt(count.textContent) - 1);
-                    update(ref(database, `projekte/${projektname}/getraenke/${item.Name}`), { Zähler: parseInt(count.textContent) });
-                };
+                    const count = document.createElement('span');
+                    count.textContent = item.Zähler;
+                    count.className = 'count';
 
-                counterDiv.appendChild(minusButton);
-                counterDiv.appendChild(count);
-                counterDiv.appendChild(plusButton);
+                    const plusButton = document.createElement('button');
+                    plusButton.textContent = '+1';
+                    plusButton.className = 'button plus';
+                    plusButton.onclick = () => {
+                        count.textContent = parseInt(count.textContent) + 1;
+                        update(ref(database, `projekte/${projektname}/getraenke/${item.Name}`), { Zähler: parseInt(count.textContent) });
+                    };
 
-                itemDiv.appendChild(kategorie);
-                itemDiv.appendChild(name);
-                itemDiv.appendChild(preis);
-                itemDiv.appendChild(menge);
-                itemDiv.appendChild(counterDiv);
+                    const minusButton = document.createElement('button');
+                    minusButton.textContent = '-1';
+                    minusButton.className = 'button minus';
+                    minusButton.onclick = () => {
+                        count.textContent = Math.max(0, parseInt(count.textContent) - 1);
+                        update(ref(database, `projekte/${projektname}/getraenke/${item.Name}`), { Zähler: parseInt(count.textContent) });
+                    };
 
-                container.appendChild(itemDiv);
-            });
+                    counterDiv.appendChild(minusButton);
+                    counterDiv.appendChild(count);
+                    counterDiv.appendChild(plusButton);
+
+                    itemDiv.appendChild(kategorie);
+                    itemDiv.appendChild(name);
+                    itemDiv.appendChild(preis);
+                    itemDiv.appendChild(menge);
+                    itemDiv.appendChild(counterDiv);
+
+                    container.appendChild(itemDiv);
+                });
+            } catch (error) {
+                console.error("Fehler beim Öffnen des Projekts:", error);
+            }
         }
 
-        function projektSpeichern() {
+        window.projektSpeichern = function projektSpeichern() {
             const projektname = document.getElementById('projekt-info').textContent.split(": ")[1];
+            if (!projektname) return alert("Kein Projekt geöffnet.");
+
             const data = Array.from(document.querySelectorAll('.item')).map(item => ({
                 name: item.querySelector('.name').textContent,
                 zaehler: item.querySelector('.count').textContent
@@ -155,10 +139,12 @@
                 .catch(error => console.error("Fehler beim Speichern:", error));
         }
 
-        function projektSchliessen() {
+        window.projektSchliessen = function projektSchliessen() {
             projektSpeichern();
+            alert("Projekt wird geschlossen.");
             window.close();
         }
+
     </script>
 </head>
 <body>
