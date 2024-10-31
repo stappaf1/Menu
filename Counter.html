@@ -81,7 +81,7 @@
     <!-- Firebase SDK -->
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
-        import { getDatabase, ref, update, get, child } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-database.js";
+        import { getDatabase, ref, update } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-database.js";
 
         const firebaseConfig = {
             apiKey: "AIzaSyBydAxxqNvFuj6DBY7iD5P8UpZpYSq0_BE",
@@ -200,14 +200,14 @@
 
             console.log("Daten, die gespeichert werden:", updates); // Debugging-Ausgabe
 
-            try {
-                // Hier sicherstellen, dass die Update-Anweisung korrekt ausgeführt wird
-                await update(ref(database), updates);
-                alert("Daten erfolgreich gespeichert!");
-            } catch (error) {
-                console.error("Fehler beim Speichern der Daten:", error);
-                alert("Fehler beim Speichern der Daten: " + error.message);
-            }
+            await update(ref(database), updates)
+                .then(() => {
+                    alert("Daten erfolgreich gespeichert!");
+                })
+                .catch((error) => {
+                    console.error("Fehler beim Speichern der Daten:", error);
+                    alert("Fehler beim Speichern der Daten: " + error.message);
+                });
         }
     </script>
 </head>
