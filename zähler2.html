@@ -5,7 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Getränke Zähler</title>
     <style>
-        /* Hier bleibt der CSS-Code unverändert */
+        body { 
+            font-family: Arial, sans-serif; 
+            touch-action: manipulation; /* Verhindert das Zooming */
+            margin: 0; /* Entfernt den Standardabstand des Körpers */
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #f8f8f8;
+            border-bottom: 2px solid #ddd;
+        }
+        .header button {
+            padding: 10px 20px;
+            font-size: 1em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: white;
+        }
+        .load-button { background-color: #4CAF50; }
+        .save-button { background-color: #007BFF; }
+        .item { 
+            display: flex; 
+            align-items: center; 
+            justify-content: space-between; 
+            padding: 10px; 
+            border: 1px solid #ddd; 
+            border-radius: 5px; 
+            margin-bottom: 10px; /* Abstand zwischen den Elementen */
+        }
+        .info { 
+            flex-grow: 1; 
+            display: flex; 
+            justify-content: flex-start; 
+            align-items: center; 
+        }
+        .name { 
+            font-size: 1.5em; 
+            font-weight: bold; 
+            margin-right: 10px; 
+        }
+        .preis { 
+            font-size: 1.2em; 
+            color: #000; 
+        }
+        .counter { 
+            display: flex; 
+            align-items: center; 
+        }
+        .counter span { 
+            margin: 0 10px; 
+            font-size: 1.5em; 
+        }
+        .button { 
+            padding: 5px; 
+            border: none; 
+            color: white; 
+            cursor: pointer; 
+            font-size: 1em; 
+            border-radius: 5px; 
+            height: 40px; 
+        }
+        .button.plus { 
+            background-color: #4CAF50; 
+            width: 80px; /* Breite anpassen */
+        }
+        .button.minus { 
+            background-color: #f44336; 
+            width: 80px; /* Breite anpassen */
+        }
     </style>
     <!-- Firebase SDK -->
     <script type="module">
@@ -100,6 +171,7 @@
                 document.getElementById('loadBtn').disabled = true;
             } catch (error) {
                 console.error("Fehler beim Laden der Getränkedaten:", error);
+                alert("Fehler beim Laden der Getränkedaten: " + error.message); // Zeigt den Fehler an
             }
         }
 
@@ -127,15 +199,6 @@
                     console.error('Fehler beim Speichern der Daten:', error);
                     alert('Fehler beim Speichern der Daten: ' + error.message); // Fehlerbenachrichtigung hinzufügen
                 });
-
-            const emailContent = data.map(item => `${item.name}; ${item.preis}; ${item.zaehler}`).join('\n');
-            const date = new Date();
-            const formattedDate = date.toLocaleDateString('de-DE') + ' um ' + date.toLocaleTimeString('de-DE', { hour: '2-digit', minute: '2-digit' });
-            const subject = prompt("Betreff der E-Mail eingeben (Projektname):") + ' - ' + formattedDate;
-
-            if (subject) {
-                sendEmail(subject, emailContent);
-            }
         }
 
         function sendEmail(subject, content) {
@@ -160,7 +223,6 @@
 
             const subject = `Projekt beendet - ${formattedDate}`;
             sendEmail(subject, emailContent);
-            alert("Projekt beendet am: " + formattedDate);
         });
     </script>
 </body>
