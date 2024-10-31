@@ -7,11 +7,13 @@
     <style>
         body { 
             font-family: Arial, sans-serif; 
-            margin: 0; 
+            touch-action: manipulation; /* Verhindert das Zooming */
+            margin: 0; /* Entfernt den Standardabstand des Körpers */
         }
         .header {
             display: flex;
             justify-content: space-between;
+            align-items: center;
             padding: 10px;
             background-color: #f8f8f8;
             border-bottom: 2px solid #ddd;
@@ -26,8 +28,6 @@
         }
         .load-button { background-color: #4CAF50; }
         .save-button { background-color: #007BFF; }
-        .new-button { background-color: #FF9800; }
-        .edit-button { background-color: #f44336; }
         .item { 
             display: flex; 
             align-items: center; 
@@ -35,7 +35,7 @@
             padding: 10px; 
             border: 1px solid #ddd; 
             border-radius: 5px; 
-            margin: 10px 0; 
+            margin: 10px 0; /* Abstand zwischen den Elementen */
         }
         .info { 
             flex-grow: 1; 
@@ -46,7 +46,7 @@
         .name { 
             font-size: 1.5em; 
             font-weight: bold; 
-            margin-right: 10px; 
+            margin-right: 10px; /* Kleiner Abstand zwischen Name und Preis */
         }
         .preis { 
             font-size: 1.2em; 
@@ -71,13 +71,14 @@
         }
         .button.plus { 
             background-color: #4CAF50; 
-            width: 60px; 
+            width: 60px; /* Breite für die Plus-Taste */
         }
         .button.minus { 
             background-color: #f44336; 
-            width: 60px; 
+            width: 60px; /* Breite für die Minus-Taste */
         }
     </style>
+    <!-- Firebase SDK -->
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
         import { getDatabase, ref, update } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-database.js";
@@ -101,8 +102,7 @@
             projektdatum: ''
         };
 
-        // Projekt neu erstellen
-        window.createNewProject = function() {
+        function createNewProject() {
             const projektname = prompt("Bitte Projektname eingeben:");
             const projektdatum = prompt("Bitte Projektdatum eingeben (z.B. 01.01.2024):");
             if (projektname && projektdatum) {
@@ -113,8 +113,7 @@
             }
         }
 
-        // Getränke laden
-        window.loadGetraenke = async function() {
+        async function loadGetraenke() {
             try {
                 const response = await fetch('getraenke.json');
                 const data = await response.json();
@@ -173,8 +172,7 @@
             }
         }
 
-        // Daten speichern
-        window.saveData = async function() {
+        async function saveData() {
             if (!currentProject.projektname) {
                 alert("Kein aktuelles Projekt zum Speichern!");
                 return;
@@ -202,32 +200,21 @@
 
             console.log("Daten, die gespeichert werden:", updates); // Debugging-Ausgabe
 
-            try {
-                // Hier sicherstellen, dass die Update-Anweisung korrekt ausgeführt wird
-                await update(ref(database), updates);
-                alert("Daten erfolgreich gespeichert!");
-            } catch (error) {
-                console.error("Fehler beim Speichern der Daten:", error);
-                alert("Fehler beim Speichern der Daten: " + error.message);
-            }
-        }
-
-        // Daten aktualisieren
-        window.updateData = function() {
-            if (!currentProject.projektname) {
-                alert("Kein aktuelles Projekt zum Aktualisieren!");
-                return;
-            }
-            // Hier logik für die Aktualisierung implementieren
+            await update(ref(database), updates)
+                .then(() => {
+                    alert("Daten erfolgreich gespeichert!");
+                })
+                .catch((error) => {
+                    console.error("Fehler beim Speichern der Daten:", error);
+                    alert("Fehler beim Speichern der Daten: " + error.message);
+                });
         }
     </script>
 </head>
 <body>
     <div class="header">
-        <button class="load-button" onclick="createNewProject()">Neues Projekt</button>
+        <button class="load-button" onclick="createNewProject()">Öffnen</button>
         <button class="save-button" onclick="saveData()">Speichern</button>
-        <button class="new-button" onclick="loadGetraenke()">Lade Getränke</button>
-        <button class="edit-button" onclick="updateData()">Aktualisieren</button>
     </div>
     <div id="getraenke-container"></div>
 </body>
