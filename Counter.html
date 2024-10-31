@@ -202,18 +202,23 @@
                         plusButton.className = 'button plus';
                         plusButton.onclick = async () => {
                             count.textContent = parseInt(count.textContent) + 1;
-                            await update(ref(database, `/projekte/${currentProject.projektname}/getraenke/${key}/Zaehler`), parseInt(count.textContent));
-                            updateTotalPrice();
+                            await update(ref(database, `/projekte/${currentProject.projektname}/getraenke/${key}/Zaehler`), {
+                                Zaehler: parseInt(count.textContent)
+                            });
+                            updateTotalPrice(); // Gesamtpreis aktualisieren
                         };
 
                         const minusButton = document.createElement('button');
                         minusButton.textContent = '-1';
                         minusButton.className = 'button minus';
                         minusButton.onclick = async () => {
-                            const newCount = Math.max(0, parseInt(count.textContent) - 1);
-                            count.textContent = newCount;
-                            await update(ref(database, `/projekte/${currentProject.projektname}/getraenke/${key}/Zaehler`), newCount);
-                            updateTotalPrice();
+                            if (parseInt(count.textContent) > 0) {
+                                count.textContent = parseInt(count.textContent) - 1;
+                                await update(ref(database, `/projekte/${currentProject.projektname}/getraenke/${key}/Zaehler`), {
+                                    Zaehler: parseInt(count.textContent)
+                                });
+                                updateTotalPrice(); // Gesamtpreis aktualisieren
+                            }
                         };
 
                         counterDiv.appendChild(minusButton);
