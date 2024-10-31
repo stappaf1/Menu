@@ -36,152 +36,158 @@
             return key.replace(/[.#$\/\[\]]/g, '_'); // Ersetze ungültige Zeichen mit _
         }
 
-        function createNewProject() {
-            const projektname = prompt("Bitte Projektname eingeben:");
-            const projektdatum = prompt("Bitte Projektdatum eingeben (z.B. 01.01.2024):");
-            if (projektname && projektdatum) {
-                currentProject.projektname = projektname;
-                currentProject.projektdatum = projektdatum;
-                alert(`Projekt "${projektname}" erstellt für den ${projektdatum}.`);
-                saveGetraenkeToDatabase();
-                document.getElementById('project-name').textContent = projektname; // Projektnamen anzeigen
-                document.getElementById('project-date').textContent = projektdatum; // Projektdatum anzeigen
-            }
-        }
+        // Globales App-Objekt
+        const App = {
+            createNewProject: function() {
+                const projektname = prompt("Bitte Projektname eingeben:");
+                const projektdatum = prompt("Bitte Projektdatum eingeben (z.B. 01.01.2024):");
+                if (projektname && projektdatum) {
+                    currentProject.projektname = projektname;
+                    currentProject.projektdatum = projektdatum;
+                    alert(`Projekt "${projektname}" erstellt für den ${projektdatum}.`);
+                    this.saveGetraenkeToDatabase();
+                    document.getElementById('project-name').textContent = projektname; // Projektnamen anzeigen
+                    document.getElementById('project-date').textContent = projektdatum; // Projektdatum anzeigen
+                }
+            },
 
-        async function saveGetraenkeToDatabase() {
-            try {
-                const response = await fetch('getraenke.json');
-                const data = await response.json();
-                const getraenke = data.getraenke;
+            saveGetraenkeToDatabase: async function() {
+                try {
+                    const response = await fetch('getraenke.json');
+                    const data = await response.json();
+                    const getraenke = data.getraenke;
 
-                const updates = {};
-                getraenke.forEach(item => {
-                    const cleanedItemId = cleanKey(item.Name); // Bereinige den Namen
-                    updates[`/projekte/${currentProject.projektname}/getraenke/${cleanedItemId}`] = {
-                        Kategorie: item.Kategorie,
-                        Name: item.Name,
-                        Menge: item.Menge,
-                        Preis: item.Preis,
-                        Zaehler: 0 // Initiale Zähler mit 0
-                    };
-                });
-
-                await update(ref(database), updates);
-                alert("Getränke erfolgreich in die Datenbank gespeichert!");
-                loadGetraenke();
-            } catch (error) {
-                console.error("Fehler beim Speichern der Getränke:", error);
-                alert("Fehler beim Speichern der Getränke: " + error.message);
-            }
-        }
-
-        async function loadGetraenke() {
-            const container = document.getElementById('item-container');
-            container.innerHTML = ''; // Container zurücksetzen
-
-            if (!currentProject.projektname) {
-                alert("Bitte zuerst ein Projekt erstellen oder öffnen.");
-                return;
-            }
-
-            const dbRef = ref(database, `/projekte/${currentProject.projektname}/getraenke`);
-            onValue(dbRef, (snapshot) => {
-                const getraenke = snapshot.val();
-                if (getraenke) {
-                    Object.entries(getraenke).forEach(([key, item]) => {
-                        const itemDiv = document.createElement('div');
-                        itemDiv.className = 'item';
-
-                        const infoDiv = document.createElement('div');
-                        infoDiv.className = 'info';
-
-                        const name = document.createElement('div');
-                        name.className = 'name';
-                        name.textContent = item.Name;
-
-                        const preis = document.createElement('div');
-                        preis.className = 'preis';
-                        preis.textContent = `€${item.Preis.toFixed(2)}`;
-
-                        const counterDiv = document.createElement('div');
-                        counterDiv.className = 'counter';
-
-                        const count = document.createElement('span');
-                        count.textContent = item.Zaehler;
-                        count.className = 'count';
-
-                        const plusButton = document.createElement('button');
-                        plusButton.textContent = '+1';
-                        plusButton.className = 'button plus';
-                        plusButton.onclick = async () => {
-                            count.textContent = parseInt(count.textContent) + 1;
-                            await update(ref(database, `/projekte/${currentProject.projektname}/getraenke/${key}/Zaehler`), parseInt(count.textContent));
-                            updateTotalPrice();
+                    const updates = {};
+                    getraenke.forEach(item => {
+                        const cleanedItemId = cleanKey(item.Name); // Bereinige den Namen
+                        updates[`/projekte/${currentProject.projektname}/getraenke/${cleanedItemId}`] = {
+                            Kategorie: item.Kategorie,
+                            Name: item.Name,
+                            Menge: item.Menge,
+                            Preis: item.Preis,
+                            Zaehler: 0 // Initiale Zähler mit 0
                         };
-
-                        const minusButton = document.createElement('button');
-                        minusButton.textContent = '-1';
-                        minusButton.className = 'button minus';
-                        minusButton.onclick = async () => {
-                            const newCount = Math.max(0, parseInt(count.textContent) - 1);
-                            count.textContent = newCount;
-                            await update(ref(database, `/projekte/${currentProject.projektname}/getraenke/${key}/Zaehler`), newCount);
-                            updateTotalPrice();
-                        };
-
-                        counterDiv.appendChild(minusButton);
-                        counterDiv.appendChild(count);
-                        counterDiv.appendChild(plusButton);
-
-                        infoDiv.appendChild(name);
-                        infoDiv.appendChild(preis);
-                        itemDiv.appendChild(infoDiv);
-                        itemDiv.appendChild(counterDiv);
-                        container.appendChild(itemDiv);
                     });
-                }
-                updateTotalPrice(); // Gesamtpreis nach dem Laden aktualisieren
-            });
-        }
 
-        async function openProject() {
-            const projectsRef = ref(database, '/projekte');
-            const snapshot = await get(projectsRef);
-            if (snapshot.exists()) {
-                const projectNames = Object.keys(snapshot.val());
-                const projectName = prompt("Bitte Projektname auswählen: \n" + projectNames.join('\n'));
-                if (projectName && projectNames.includes(projectName)) {
-                    currentProject.projektname = projectName;
-                    alert(`Projekt "${projectName}" geöffnet.`);
-                    document.getElementById('project-name').textContent = projectName; // Projektnamen anzeigen
-                    loadGetraenke(); // Getränke laden
+                    await update(ref(database), updates);
+                    alert("Getränke erfolgreich in die Datenbank gespeichert!");
+                    this.loadGetraenke();
+                } catch (error) {
+                    console.error("Fehler beim Speichern der Getränke:", error);
+                    alert("Fehler beim Speichern der Getränke: " + error.message);
+                }
+            },
+
+            loadGetraenke: async function() {
+                const container = document.getElementById('item-container');
+                container.innerHTML = ''; // Container zurücksetzen
+
+                if (!currentProject.projektname) {
+                    alert("Bitte zuerst ein Projekt erstellen oder öffnen.");
+                    return;
+                }
+
+                const dbRef = ref(database, `/projekte/${currentProject.projektname}/getraenke`);
+                onValue(dbRef, (snapshot) => {
+                    const getraenke = snapshot.val();
+                    if (getraenke) {
+                        Object.entries(getraenke).forEach(([key, item]) => {
+                            const itemDiv = document.createElement('div');
+                            itemDiv.className = 'item';
+
+                            const infoDiv = document.createElement('div');
+                            infoDiv.className = 'info';
+
+                            const name = document.createElement('div');
+                            name.className = 'name';
+                            name.textContent = item.Name;
+
+                            const preis = document.createElement('div');
+                            preis.className = 'preis';
+                            preis.textContent = `€${item.Preis.toFixed(2)}`;
+
+                            const counterDiv = document.createElement('div');
+                            counterDiv.className = 'counter';
+
+                            const count = document.createElement('span');
+                            count.textContent = item.Zaehler;
+                            count.className = 'count';
+
+                            const plusButton = document.createElement('button');
+                            plusButton.textContent = '+1';
+                            plusButton.className = 'button plus';
+                            plusButton.onclick = async () => {
+                                count.textContent = parseInt(count.textContent) + 1;
+                                await update(ref(database, `/projekte/${currentProject.projektname}/getraenke/${key}/Zaehler`), parseInt(count.textContent));
+                                this.updateTotalPrice();
+                            };
+
+                            const minusButton = document.createElement('button');
+                            minusButton.textContent = '-1';
+                            minusButton.className = 'button minus';
+                            minusButton.onclick = async () => {
+                                const newCount = Math.max(0, parseInt(count.textContent) - 1);
+                                count.textContent = newCount;
+                                await update(ref(database, `/projekte/${currentProject.projektname}/getraenke/${key}/Zaehler`), newCount);
+                                this.updateTotalPrice();
+                            };
+
+                            counterDiv.appendChild(minusButton);
+                            counterDiv.appendChild(count);
+                            counterDiv.appendChild(plusButton);
+
+                            infoDiv.appendChild(name);
+                            infoDiv.appendChild(preis);
+                            itemDiv.appendChild(infoDiv);
+                            itemDiv.appendChild(counterDiv);
+                            container.appendChild(itemDiv);
+                        });
+                    }
+                    this.updateTotalPrice(); // Gesamtpreis nach dem Laden aktualisieren
+                });
+            },
+
+            openProject: async function() {
+                const projectsRef = ref(database, '/projekte');
+                const snapshot = await get(projectsRef);
+                if (snapshot.exists()) {
+                    const projectNames = Object.keys(snapshot.val());
+                    const projectName = prompt("Bitte Projektname auswählen: \n" + projectNames.join('\n'));
+                    if (projectName && projectNames.includes(projectName)) {
+                        currentProject.projektname = projectName;
+                        alert(`Projekt "${projectName}" geöffnet.`);
+                        document.getElementById('project-name').textContent = projectName; // Projektnamen anzeigen
+                        this.loadGetraenke(); // Getränke laden
+                    } else {
+                        alert("Projekt nicht gefunden.");
+                    }
                 } else {
-                    alert("Projekt nicht gefunden.");
+                    alert("Keine Projekte gefunden.");
                 }
-            } else {
-                alert("Keine Projekte gefunden.");
-            }
-        }
+            },
 
-        function updateTotalPrice() {
-            const container = document.getElementById('item-container');
-            let total = 0;
-            container.querySelectorAll('.item').forEach(item => {
-                const count = parseInt(item.querySelector('.count').textContent);
-                const preisText = item.querySelector('.preis').textContent;
-                const preis = parseFloat(preisText.replace('€', '').replace(',', '.').trim());
-                total += count * preis;
-            });
-            document.getElementById('total-price').textContent = `Gesamtpreis: €${total.toFixed(2)}`;
-        }
+            updateTotalPrice: function() {
+                const container = document.getElementById('item-container');
+                let total = 0;
+                container.querySelectorAll('.item').forEach(item => {
+                    const count = parseInt(item.querySelector('.count').textContent);
+                    const preisText = item.querySelector('.preis').textContent;
+                    const preis = parseFloat(preisText.replace('€', '').replace(',', '.').trim());
+                    total += count * preis;
+                });
+                document.getElementById('total-price').textContent = `Gesamtpreis: €${total.toFixed(2)}`;
+            }
+        };
+
+        // Funktionen für den globalen Zugriff definieren
+        window.App = App;
     </script>
 </head>
 <body>
     <div class="header">
-        <button class="new-button" onclick="createNewProject()">Neues Projekt</button>
-        <button class="open-button" onclick="openProject()">Projekt öffnen</button>
-        <button class="save-button" onclick="saveGetraenkeToDatabase()">Getränke speichern</button>
+        <button class="new-button" onclick="App.createNewProject()">Neues Projekt</button>
+        <button class="open-button" onclick="App.openProject()">Projekt öffnen</button>
+        <button class="save-button" onclick="App.saveGetraenkeToDatabase()">Getränke speichern</button>
         <button class="close-button" onclick="alert('Projekt geschlossen!')">Projekt schließen</button>
     </div>
     <div class="project-info">
