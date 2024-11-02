@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getränkeverwaltung</title>
+    <link rel="stylesheet" href="count-styles.css">
+</head>
+<body>
+    <h1>Getränkeverwaltung</h1>
+    <div id="project-info"></div>
+    <div id="total-price">Gesamtpreis: €0.00</div>
+    <button onclick="createNewProject()">Neues Projekt erstellen</button>
+    <button onclick="openProject()">Projekt öffnen</button>
+    <button onclick="saveData()">Daten speichern</button>
+    <button onclick="closeProject()">Projekt schließen</button>
+    
+    <div id="getraenke-container"></div>
+
+    <!-- Module-Skripte importieren -->
+    <script type="module" src="count-firebaseConfig.js"></script>
+    <script type="module" src="count-app.js"></script>
+    <script type="module" src="count-projects.js"></script>
+    <script type="module" src="count-getraenke.js"></script>
+    <script type="module" src="count-pricing.js"></script>
+</body>
+</html>
