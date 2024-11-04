@@ -43,6 +43,30 @@
             margin: 0 auto;
         }
 
+        .menu-category {
+            margin-bottom: 30px;
+        }
+
+        .menu-category h2 {
+            color: rgb(137, 160, 44);
+            font-size: 1.6em;
+            margin-bottom: 10px;
+        }
+
+        .menu-item {
+            margin-bottom: 10px;
+        }
+
+        .menu-item h3 {
+            font-size: 1.2em;
+            color: #204e1a;
+            margin: 0;
+        }
+
+        .menu-item p {
+            margin: 5px 0;
+        }
+
         footer {
             background-color: rgb(16, 43, 0);
             color: white;
@@ -65,9 +89,8 @@
 
     <h1>Getränke</h1>
 
-    <div class="content">
+    <div class="content" id="getraenke-content">
         <p>Von erfrischenden Getränken bis hin zu edlen Weinen – hier finden Sie unser Angebot.</p>
-        <!-- Hier können weitere Inhalte über Getränke eingefügt werden -->
     </div>
 
     <footer>
@@ -75,5 +98,49 @@
         <p>Impressum: <a href="impressum.html" style="color: white;">Impressum</a></p>
     </footer>
 
+    <script>
+        // Funktion zum Laden und Anzeigen der Getränke aus der JSON-Datei
+        async function loadGetraenke() {
+            try {
+                const response = await fetch('getraenke.json');
+                const data = await response.json();
+                const contentDiv = document.getElementById('getraenke-content');
+
+                function createMenuCategory(categoryName, items) {
+                    const categoryDiv = document.createElement('div');
+                    categoryDiv.classList.add('menu-category');
+                    
+                    const categoryTitle = document.createElement('h2');
+                    categoryTitle.textContent = categoryName;
+                    categoryDiv.appendChild(categoryTitle);
+
+                    items.forEach(item => {
+                        const menuItem = document.createElement('div');
+                        menuItem.classList.add('menu-item');
+                        
+                        const itemTitle = document.createElement('h3');
+                        itemTitle.textContent = item.name;
+                        menuItem.appendChild(itemTitle);
+                        
+                        const itemDescription = document.createElement('p');
+                        itemDescription.textContent = item.beschreibung + " - " + item.preis;
+                        menuItem.appendChild(itemDescription);
+                        
+                        categoryDiv.appendChild(menuItem);
+                    });
+
+                    return categoryDiv;
+                }
+
+                // Kategorien einfügen
+                contentDiv.appendChild(createMenuCategory('Getränke', data.getraenke));
+            } catch (error) {
+                console.error('Fehler beim Laden der Getränke:', error);
+            }
+        }
+
+        // Laden der Getränke bei Seitenaufruf
+        loadGetraenke();
+    </script>
 </body>
 </html>
