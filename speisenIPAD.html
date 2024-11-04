@@ -43,6 +43,30 @@
             margin: 0 auto;
         }
 
+        .menu-category {
+            margin-bottom: 30px;
+        }
+
+        .menu-category h2 {
+            color: rgb(137, 160, 44);
+            font-size: 1.6em;
+            margin-bottom: 10px;
+        }
+
+        .menu-item {
+            margin-bottom: 10px;
+        }
+
+        .menu-item h3 {
+            font-size: 1.2em;
+            color: #204e1a;
+            margin: 0;
+        }
+
+        .menu-item p {
+            margin: 5px 0;
+        }
+
         footer {
             background-color: rgb(16, 43, 0);
             color: white;
@@ -65,9 +89,8 @@
 
     <h1>Speisen</h1>
 
-    <div class="content">
+    <div class="content" id="speisen-content">
         <p>Hier finden Sie unsere Auswahl an köstlichen Speisen: Vorspeisen, Hauptgerichte und Desserts.</p>
-        <!-- Hier können weitere Inhalte über Speisen eingefügt werden -->
     </div>
 
     <footer>
@@ -75,5 +98,52 @@
         <p>Impressum: <a href="impressum.html" style="color: white;">Impressum</a></p>
     </footer>
 
+    <script>
+        // Funktion zum Laden und Anzeigen der Speisen aus der JSON-Datei
+        async function loadSpeisen() {
+            try {
+                const response = await fetch('speisen.json');
+                const data = await response.json();
+                const contentDiv = document.getElementById('speisen-content');
+
+                // Funktion zum Erstellen eines Menüs
+                function createMenuCategory(categoryName, items) {
+                    const categoryDiv = document.createElement('div');
+                    categoryDiv.classList.add('menu-category');
+                    
+                    const categoryTitle = document.createElement('h2');
+                    categoryTitle.textContent = categoryName;
+                    categoryDiv.appendChild(categoryTitle);
+
+                    items.forEach(item => {
+                        const menuItem = document.createElement('div');
+                        menuItem.classList.add('menu-item');
+                        
+                        const itemTitle = document.createElement('h3');
+                        itemTitle.textContent = item.name;
+                        menuItem.appendChild(itemTitle);
+                        
+                        const itemDescription = document.createElement('p');
+                        itemDescription.textContent = item.beschreibung + " - " + item.preis;
+                        menuItem.appendChild(itemDescription);
+                        
+                        categoryDiv.appendChild(menuItem);
+                    });
+
+                    return categoryDiv;
+                }
+
+                // Kategorien einfügen
+                contentDiv.appendChild(createMenuCategory('Vorspeisen', data.vorspeisen));
+                contentDiv.appendChild(createMenuCategory('Hauptgerichte', data.hauptgerichte));
+                contentDiv.appendChild(createMenuCategory('Desserts', data.desserts));
+            } catch (error) {
+                console.error('Fehler beim Laden der Speisen:', error);
+            }
+        }
+
+        // Laden der Speisen bei Seitenaufruf
+        loadSpeisen();
+    </script>
 </body>
 </html>
