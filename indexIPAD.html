@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Alea - Menü</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            padding-top: 60px; /* Platz für Navbar */
+        }
+
+        /* Navbar - fixiert für moderne Browser, relativ für ältere */
+        nav {
+            background-color: rgb(16, 43, 0);
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+
+        /* H1 in Hellgrün */
+        h1 {
+            color: rgb(137, 160, 44);
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        /* Zentriertes Logo in weißer Banderole */
+        .logo-container {
+            background-color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .logo-container img {
+            max-width: 150px;
+            height: auto;
+        }
+
+        /* Hauptinhalt */
+        .content {
+            padding: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Layout auf Flexbox umstellen */
+        .grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        /* Kartenelemente */
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.2s;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            width: 300px; /* Feste Breite für ältere Geräte */
+            max-width: 100%;
+        }
+
+        /* Hover-Effekte anpassen */
+        .card:hover {
+            transform: scale(1.02);
+        }
+
+        .card h2 {
+            font-size: 1.8em;
+            margin: 20px 0;
+            color: rgb(137, 160, 44);
+        }
+
+        .card p {
+            font-size: 1.2em;
+            color: #204e1a;
+        }
+
+        /* Footer */
+        footer {
+            background-color: rgb(16, 43, 0);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Startseite</a>
+        <a href="speisen.html">Speisen</a>
+        <a href="getraenke.html">Getränke</a>
+    </nav>
+
+    <div class="logo-container">
+        <img src="https://cdn.prod.website-files.com/60d2e4a3b351ee2c91f53a1e/60f9ca16c53dae6854816379_Logo%20Alea.svg" alt="Hotel Alea Logo">
+    </div>
+
+    <h1>Hotel Alea - Menü</h1>
+
+    <div class="content" id="content">
+        <div class="grid">
+            <a href="speisen.html" class="card">
+                <h2>Speisen</h2>
+                <p>Entdecken Sie unsere Auswahl an köstlichen Vorspeisen, Hauptgerichten und Desserts.</p>
+            </a>
+            
+            <a href="getraenke.html" class="card">
+                <h2>Getränke</h2>
+                <p>Von erfrischenden Getränken bis hin zu edlen Weinen – hier finden Sie unser Angebot.</p>
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 Hotel Alea GmbH - Alle Rechte vorbehalten.</p>
+        <p>Impressum: <a href="impressum.html" style="color: white;">Impressum</a></p>
+    </footer>
+
+</body>
+</html>
