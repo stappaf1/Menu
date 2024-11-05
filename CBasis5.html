@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projektverwaltung</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #getraenke-container {
+            margin-top: 20px;
+        }
+        .item {
+            border: 1px solid #ccc;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center; /* Horizontale Ausrichtung */
+        }
+        .info {
+            display: flex;
+            align-items: center;
+            flex-grow: 1; /* Nimmt den verbleibenden Platz ein */
+        }
+        .count {
+            margin: 0 10px;
+        }
+        .button {
+            padding: 5px 10px;
+            cursor: pointer; /* Zeiger-Cursor */
+        }
+        .minus-button {
+            width: 50px; /* Breite für den -1 Button */
+        }
+        .plus-button {
+            width: 150px; /* Dreimal breiter als der -1 Button */
+        }
+        .button-container {
+            display: flex;
+            align-items: center; /* Vertikale Zentrierung */
+        }
+        .header-buttons {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header-buttons">
+        <button onclick="createNewProject()">NEU</button>
+        <button onclick="openProject()">ÖFFNEN</button>
+        <button onclick="saveData()">SPEICHERN</button>
+        <button onclick="sendData()">SENDEN</button>
+        <button onclick="closeProject()">SCHLIESSEN</button>
+    </div>
+
+    <div id="project-info"></div>
+    <div id="getraenke-container"></div>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-app.js";
+        import { getDatabase, ref, update, get } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-database.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyBydAxxqNvFuj6DBY7iD5P8UpZpYSq0_BE",
+            authDomain: "alea-hotels-pfaffenhofen.firebaseapp.com",
+            databaseURL: "https://alea-hotels-pfaffenhofen-default-rtdb.firebaseio.com",
+            projectId: "alea-hotels-pfaffenhofen",
+            storageBucket: "alea-hotels-pfaffenhofen.appspot.com",
+            messagingSenderId: "851814894064",
+            appId: "1:851814894064:web:bf95cfa03c52f957f93535",
+            measurementId: "G-M82VZW2CYK"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const database = getDatabase(app);
+
+        // Funktion zum Erstellen eines neuen Projekts und Import der Getränkedaten
+        window.createNewProject = async function() {
+            const projektname = prompt("Bitte Projektname eingeben:");
+            if (projektname) {
+                alert(`Projekt "${projektname}" erstellt.`);
+                await initializeDrinksInDatabase(projektname);
+                await loadDrinksFromDatabase(projektname); // Laden nach dem Erstellen
+            }
+        };
+
+        // Funktion zum Öffnen eines Projekts
+        window.openProject = async function() {
+            const projektname = prompt("Bitte Projektname zum Öffnen eingeben:");
+            if (projektname) {
+                alert(`Projekt "${projektname}" wird geöffnet.`);
+                await loadDrinksFromDatabase(projektname);
+            }
+        };
+
+        // Funktion zum Speichern der Getränkedaten in der Firebase-Datenbank
+        window.saveData = async function() {
+            const projektname = prompt("Bitte Projektname zum Speichern eingeben:");
+            if (projektname) {
+                await initializeDrinksInDatabase(projektname);
+            }
+        };
+
+        // Funktion zum Initialisieren der Getränkedaten in der Firebase-Datenbank
+        async function initializeDrinksInDatabase(projektname) {
+            try {
+                const response = await fetch('getraenke.json');
+                const data = await response.json();
+
+                if (!data || !data.getraenke) {
+                    console.error("Daten aus der getraenke.json konnten nicht geladen werden.");
+                    return;
+                }
+
+                const getraenke = data.getraenke;
+                const updates = {};
+
+                // Daten werden nach Artikelnummer (Position) sortiert
+                getraenke.forEach((item, index) => {
+                    updates[`/projekte/${projektname}/getraenke/${index}`] = {
+                        Artikelnummer: index + 1,
+                        Name: item.Name,
+                        Beschreibung: item.Beschreibung,
+                        Menge: item.Menge,
+                        Preis: item.Preis,
+                        Zaehler: 0,
+                        gesperrt: false,
+                        Kategorie: item.Kategorie || ""
+                    };
+                });
+
+                console.log("Firebase-Daten werden aktualisiert...");
+                await update(ref(database), updates);
+                console.log("Daten erfolgreich in Firebase gespeichert.");
+                alert("Getränke in der Datenbank initialisiert.");
+            } catch (error) {
+                console.error("Fehler beim Initialisieren der Getränkedaten:", error);
+                alert("Fehler beim Initialisieren der Getränkedaten.");
+            }
+        }
+
+        // Funktion zum Laden der Getränkedaten aus der Firebase-Datenbank
+        async function loadDrinksFromDatabase(projektname) {
+            try {
+                const snapshot = await get(ref(database, `/projekte/${projektname}/getraenke`));
+                const container = document.getElementById('getraenke-container');
+                container.innerHTML = ''; // Container zurücksetzen
+
+                if (snapshot.exists()) {
+                    const data = snapshot.val();
+                    // Zeige die Getränkedaten in der Benutzeroberfläche an
+                    Object.keys(data).forEach(key => {
+                        const item = data[key];
+
+                        const itemDiv = document.createElement('div');
+                        itemDiv.className = 'item';
+
+                        // Die Info-Div wird erstellt und formatiert
+                        const infoDiv = document.createElement('div');
+                        infoDiv.className = 'info';
+                        infoDiv.innerHTML = `
+                            ${item.Kategorie} | 
+                            ${item.Name} | 
+                            ${item.Menge} | 
+                            €${item.Preis} | 
+                            <span class="count" id="zaehler-${key}">${item.Zaehler}</span>
+                        `;
+
+                        const buttonContainer = document.createElement('div');
+                        buttonContainer.className = 'button-container';
+
+                        const minusButton = document.createElement('button');
+                        minusButton.textContent = '-1';
+                        minusButton.className = 'button minus-button';
+                        minusButton.onclick = () => adjustCounter(projektname, key, -1);
+
+                        const plusButton = document.createElement('button');
+                        plusButton.textContent = '+1';
+                        plusButton.className = 'button plus-button';
+                        plusButton.onclick = () => adjustCounter(projektname, key, 1);
+
+                        // Button-Container füllen
+                        buttonContainer.appendChild(minusButton);
+                        buttonContainer.appendChild(plusButton);
+
+                        itemDiv.appendChild(infoDiv);
+                        itemDiv.appendChild(buttonContainer);
+                        container.appendChild(itemDiv);
+                    });
+                    alert("Getränkedaten erfolgreich geladen.");
+                } else {
+                    console.log("Keine Getränkedaten gefunden.");
+                    alert("Keine Getränkedaten gefunden.");
+                }
+            } catch (error) {
+                console.error("Fehler beim Laden der Getränkedaten:", error);
+                alert("Fehler beim Laden der Getränkedaten.");
+            }
+        }
+
+        // Funktion zum Anpassen des Zählers
+        async function adjustCounter(projektname, key, change) {
+            const counterElement = document.getElementById(`zaehler-${key}`);
+            let currentCount = parseInt(counterElement.innerText, 10) || 0;
+            const newCount = currentCount + change;
+
+            if (newCount < 0) {
+                alert("Der Zähler kann nicht negativ sein.");
+                return;
+            }
+
+            // Update in Firebase
+            await update(ref(database, `/projekte/${projektname}/getraenke/${key}`), { Zaehler: newCount });
+            counterElement.innerText = newCount;
+        }
+
+        // Funktion zum Schließen des Projekts
+        window.closeProject = function() {
+            alert("Das Projekt wurde geschlossen.");
+        };
+
+        // Daten beim Laden der Seite
+        window.onload = function() {
+            // Hier könnte initial geladen werden
+        };
+    </script>
+</body>
+</html>
