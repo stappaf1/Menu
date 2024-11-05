@@ -184,16 +184,13 @@
         if (snapshot.exists()) {
             const currentCount = snapshot.val().Zaehler;
             const newCount = Math.max(0, currentCount + delta);
-
-            // Update the counter in the database
-            await update(itemRef, { Zaehler: newCount, gesperrt: false }); // Aktualisierung in der DB
-            
-            console.log(`Zähler für ${sanitizedKey} aktualisiert:`, newCount); // Protokollierung für Debugging
+            await update(itemRef, { Zaehler: newCount }); // Aktualisiert nur den Zähler in der DB
         }
     } catch (error) {
         console.error("Fehler beim Aktualisieren des Zählers:", error);
     }
 }
+
 
         // Projekt schließen
         window.closeProject = function() {
