@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getränkeverwaltung - Testmodus</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #getraenke-container {
+            margin-top: 20px;
+        }
+        .item {
+            border: 1px solid #ccc;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .info {
+            margin-bottom: 10px;
+        }
+        .count {
+            margin: 0 10px;
+        }
+        .button {
+            margin: 0 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Getränkeverwaltung - Testmodus</h1>
+    <div id="project-info"></div>
+    <div id="total-price">Gesamtpreis: €0.00</div>
+    <button onclick="createNewProject()">Neues Projekt erstellen</button>
+    <button onclick="openProject()">Projekt öffnen</button>
+    <button onclick="closeProject()">Projekt schließen</button>
+    
+    <div id="getraenke-container"></div>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-app.js";
+        import { getDatabase, ref, set, get, update } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-database.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyBydAxxqNvFuj6DBY7iD5P8UpZpYSq0_BE",
+            authDomain: "alea-hotels-pfaffenhofen.firebaseapp.com",
+            databaseURL: "https://alea-hotels-pfaffenhofen-default-rtdb.firebaseio.com",
+            projectId: "alea-hotels-pfaffenhofen",
+            storageBucket: "alea-hotels-pfaffenhofen.appspot.com",
+            messagingSenderId: "851814894064",
+            appId: "1:851814894064:web:bf95cfa03c52f957f93535",
+            measurementId: "G-M82VZW2CYK"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const database = getDatabase(app);
+
+        let currentProject = {
+            projektname: '',
+            projektdatum: '',
+            zaehler: {}
+        };
+
+        // Verbindungstest zur Datenbank
+        async function testDatabaseConnection() {
+            const testRef = ref(database, '/test');
+            try {
+                await set(testRef, { Zaehler: 10 });
+                console.log("Daten erfolgreich in Firebase geschrieben.");
+
+                const snapshot = await get(testRef);
+                if (snapshot.exists()) {
+                    console.log("Abgerufene Daten aus Firebase:", snapshot.val());
+                } else {
+                    console.log("Keine Daten gefunden.");
+                }
+            } catch (error) {
+                console.error("Fehler bei der Verbindung zur Datenbank:", error);
+            }
+        }
+
+        // Einfacher Zählertest
+        async function adjustCounterSimpleTest() {
+            const itemRef = ref(database, `/projekte/TestProjekt/getraenke/TestGetraenk`);
+            try {
+                // Setze Zähler fest auf 5
+                await set(itemRef, { Zaehler: 5 });
+                console.log("Zähler wurde fest auf 5 gesetzt.");
+
+                const snapshot = await get(itemRef);
+                if (snapshot.exists()) {
+                    console.log("Zähler erfolgreich gespeichert und abgerufen:", snapshot.val().Zaehler);
+                } else {
+                    console.log("Zähler nicht in der Datenbank gefunden.");
+                }
+            } catch (error) {
+                console.error("Fehler beim Speichern des Zählers:", error);
+            }
+        }
+
+        // Lade die Seite und führe die Tests durch
+        window.onload = function() {
+            testDatabaseConnection();
+            adjustCounterSimpleTest();
+        };
+
+        // Neues Projekt erstellen (ohne Polling)
+        window.createNewProject = async function() {
+            const projektname = prompt("Bitte Projektname eingeben:");
+            const projektdatum = prompt("Bitte Projektdatum eingeben (z.B. 01.01.2024):");
+            if (projektname && projektdatum) {
+                currentProject.projektname = projektname;
+                currentProject.projektdatum = projektdatum;
+                alert(`Projekt "${projektname}" erstellt für den ${projektdatum}.`);
+                await initializeDrinksInDatabase();
+                loadGetraenke();
+                updateProjectInfo();
+            }
+        };
+
+        // Initialisiere Getränke in der Datenbank
+        async function initializeDrinksInDatabase() {
+            try {
+                const response = await fetch('getraenke.json');
+                const data = await response.json();
+                const getraenke = data.getraenke;
+                const projektRef = ref(database, `/projekte/${currentProject.projektname}`);
+                
+                const projektData = {
+                    projektdatum: currentProject.projektdatum,
+                    getraenke: {}
+                };
+
+                getraenke.forEach(item => {
+                    const sanitizedKey = item.Name.replace(/[.#$]/g, "_");
+                    projektData.getraenke[sanitizedKey] = {
+                        Beschreibung: item.Beschreibung,
+                        Menge: item.Menge,
+                        Preis: item.Preis,
+                        Zaehler: 0,
+                        gesperrt: false
+                    };
+                });
+
+                await set(projektRef, projektData);
+                console.log("Getränke wurden in der Datenbank initialisiert:", projektData);
+            } catch (error) {
+                console.error("Fehler beim Initialisieren der Getränke:", error);
+            }
+        }
+
+        // Lade Getränke aus der Datenbank
+        window.loadGetraenke = async function() {
+            if (!currentProject.projektname) {
+                alert("Kein Projekt zum Laden vorhanden.");
+                return;
+            }
+
+            const getraenkeRef = ref(database, `/projekte/${currentProject.projektname}/getraenke`);
+            try {
+                const snapshot = await get(getraenkeRef);
+                if (snapshot.exists()) {
+                    const getraenke = snapshot.val();
+                    const container = document.getElementById('getraenke-container');
+                    container.innerHTML = '';
+
+                    Object.keys(getraenke).forEach(itemName => {
+                        const item = getraenke[itemName];
+                        const itemDiv = document.createElement('div');
+                        itemDiv.className = 'item';
+
+                        const infoDiv = document.createElement('div');
+                        infoDiv.className = 'info';
+                        infoDiv.innerHTML = `<strong>${itemName.replace(/_/g, " ")}</strong><br>${item.Beschreibung}<br>${item.Menge}<br>€${item.Preis}`;
+
+                        const counterDiv = document.createElement('div');
+                        counterDiv.className = 'counter';
+                        
+                        const count = document.createElement('span');
+                        count.textContent = item.Zaehler;
+                        count.className = 'count';
+
+                        const plusButton = document.createElement('button');
+                        plusButton.textContent = '+1';
+                        plusButton.onclick = async () => {
+                            await adjustCounter(itemName, 1);
+                            count.textContent = parseInt(count.textContent) + 1;
+                        };
+
+                        const minusButton = document.createElement('button');
+                        minusButton.textContent = '-1';
+                        minusButton.onclick = async () => {
+                            if (parseInt(count.textContent) > 0) {
+                                await adjustCounter(itemName, -1);
+                                count.textContent = parseInt(count.textContent) - 1;
+                            }
+                        };
+
+                        counterDiv.appendChild(minusButton);
+                        counterDiv.appendChild(count);
+                        counterDiv.appendChild(plusButton);
+
+                        itemDiv.appendChild(infoDiv);
+                        itemDiv.appendChild(counterDiv);
+                        container.appendChild(itemDiv);
+                    });
+                } else {
+                    alert("Projekt nicht gefunden oder es sind keine Getränke vorhanden.");
+                }
+            } catch (error) {
+                console.error("Fehler beim Laden der Getränkedaten:", error);
+            }
+        }
+
+        // Projekt schließen
+        window.closeProject = function() {
+            currentProject = { projektname: '', projektdatum: '', zaehler: {} };
+            document.getElementById('getraenke-container').innerHTML = '';
+            updateProjectInfo();
+            document.getElementById('total-price').textContent = 'Gesamtpreis: €0.00';
+        };
+
+        // Update Projektinfo
+        window.updateProjectInfo = function() {
+            const projectInfo = document.getElementById('project-info');
+            projectInfo.textContent = `${currentProject.projektname} / Datum: ${currentProject.projektdatum}`;
+        };
+    </script>
+</body>
+</html>
