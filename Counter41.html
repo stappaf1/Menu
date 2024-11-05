@@ -226,7 +226,10 @@
     try {
         const snapshot = await get(itemRef);
         if (snapshot.exists()) {
-            let currentCount = snapshot.val().Zaehler;
+            const drinkData = snapshot.val(); // Alle Daten des Getränks abrufen
+            console.log("Abgerufene Getränkedaten:", drinkData); // Debugging-Log
+
+            let currentCount = drinkData.Zaehler; // Zählerwert abrufen
 
             // Überprüfen, ob currentCount eine Zahl ist
             if (typeof currentCount !== 'number' || isNaN(currentCount)) {
@@ -246,7 +249,7 @@
             await update(itemRef, { Zaehler: newCount });
             console.log(`Zähler für ${itemName} aktualisiert: ${newCount}`);
         } else {
-            console.log("Getränk nicht gefunden.");
+            console.log("Getränk nicht gefunden. Überprüfe den Namen und die Datenbankstruktur.");
         }
     } catch (error) {
         console.error("Fehler beim Anpassen des Zählers:", error);
@@ -255,6 +258,7 @@
         await update(itemRef, { gesperrt: false });
     }
 }
+
 
         // Projekt schließen
         window.closeProject = function() {
