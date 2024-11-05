@@ -38,7 +38,7 @@
 
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-app.js";
-        import { getDatabase, ref, set, get, update } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-database.js";
+        import { getDatabase, ref, update } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-database.js";
 
         const firebaseConfig = {
             apiKey: "AIzaSyBydAxxqNvFuj6DBY7iD5P8UpZpYSq0_BE",
@@ -68,11 +68,11 @@
             try {
                 const response = await fetch('getraenke.json');
                 const data = await response.json();
-                const getraenke = data.getraenke;
+                const getraenke = data.getraenke; // Hier wird die Reihenfolge respektiert
                 const updates = {};
 
                 getraenke.forEach(item => {
-                    // Create a valid key by replacing invalid characters
+                    // Erstelle einen gültigen Schlüssel, indem ungültige Zeichen ersetzt werden
                     const validKey = item.Name.replace(/[.#$\/\[\]#]/g, "_");
                     updates[`/projekte/${projektname}/getraenke/${validKey}`] = {
                         Beschreibung: item.Beschreibung,
