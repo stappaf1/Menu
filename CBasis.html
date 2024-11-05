@@ -81,7 +81,7 @@
 
                 // Daten werden nach Artikelnummer (Position) sortiert
                 getraenke.forEach((item, index) => {
-                    // Erstelle Updates mit Artikelnummer, Rubrik und anderen Feldern
+                    // Erstelle Updates mit Artikelnummer, Kategorie und anderen Feldern
                     updates[`/projekte/${projektname}/getraenke/${index}`] = {
                         Artikelnummer: index + 1, // Artikelnummer = Position im Array + 1
                         Name: item.Name,
@@ -90,7 +90,7 @@
                         Preis: item.Preis,
                         Zaehler: 0, // Initialer Zähler
                         gesperrt: false, // Sperrstatus
-                        Rubrik: item.Rubrik || "" // Rubrik, falls vorhanden
+                        Kategorie: item.Kategorie || "" // Kategorie, falls vorhanden
                     };
                 });
 
