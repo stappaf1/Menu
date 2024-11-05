@@ -3,199 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Getränkeverwaltung</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        #getraenke-container {
-            margin-top: 20px;
-        }
-        .item {
-            border: 1px solid #ccc;
-            margin: 10px 0;
-            padding: 10px;
-            border-radius: 5px;
-        }
-        .info {
-            margin-bottom: 10px;
-        }
-        .count {
-            margin: 0 10px;
-        }
-        .button {
-            margin: 0 5px;
-        }
-    </style>
-</head>
-<body>
-    <h1>Getränkeverwaltung</h1>
-    <div id="project-info"></div>
-    <div id="total-price">Gesamtpreis: €0.00</div>
-    <button onclick="createNewProject()">Neues Projekt erstellen</button>
-    <button onclick="openProject()">Projekt öffnen</button>
-    <button onclick="closeProject()">Projekt schließen</button>
-    
-    <div id="getraenke-container"></div>
-
+    <title>Getränke Zähler</title>
     <script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-app.js";
-        import { getDatabase, ref, set, get, update } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-database.js";
+        // Firebase Konfiguration
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+        import { getDatabase, ref, set, get, update } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js";
 
+        // Firebase Konfiguration (bitte deine eigenen Einstellungen hier einfügen)
         const firebaseConfig = {
-            apiKey: "AIzaSyBydAxxqNvFuj6DBY7iD5P8UpZpYSq0_BE",
-            authDomain: "alea-hotels-pfaffenhofen.firebaseapp.com",
-            databaseURL: "https://alea-hotels-pfaffenhofen-default-rtdb.firebaseio.com",
-            projectId: "alea-hotels-pfaffenhofen",
-            storageBucket: "alea-hotels-pfaffenhofen.appspot.com",
-            messagingSenderId: "851814894064",
-            appId: "1:851814894064:web:bf95cfa03c52f957f93535",
-            measurementId: "G-M82VZW2CYK"
+            apiKey: "YOUR_API_KEY",
+            authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+            databaseURL: "https://YOUR_PROJECT_ID.firebaseio.com",
+            projectId: "YOUR_PROJECT_ID",
+            storageBucket: "YOUR_PROJECT_ID.appspot.com",
+            messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+            appId: "YOUR_APP_ID"
         };
 
+        // Initialisierung
         const app = initializeApp(firebaseConfig);
         const database = getDatabase(app);
+        
+        const currentProject = { projektname: 'dein_projektname' }; // Aktueller Projektnamen hier setzen
 
-        let currentProject = {
-            projektname: '',
-            projektdatum: '',
-            zaehler: {}
-        };
+        async function initializeDrinks() {
+            const drinks = {
+                "Helles Bier": { Beschreibung: "Ein erfrischendes, leicht malziges Helles.", Menge: "0,5L", Preis: "3.80", Zaehler: 0, gesperrt: false },
+                "Weißbier": { Beschreibung: "Ein vollmundiges Weißbier.", Menge: "0,5L", Preis: "3.80", Zaehler: 0, gesperrt: false },
+                // Weitere Getränke hier hinzufügen ...
+            };
 
-        // Neues Projekt erstellen
-        window.createNewProject = async function() {
-            const projektname = prompt("Bitte Projektname eingeben:");
-            const projektdatum = prompt("Bitte Projektdatum eingeben (z.B. 01.01.2024):");
-            if (projektname && projektdatum) {
-                currentProject.projektname = projektname;
-                currentProject.projektdatum = projektdatum;
-                alert(`Projekt "${projektname}" erstellt für den ${projektdatum}.`);
-                await initializeDrinksInDatabase(); // Initialisiere Getränke in der DB
-                loadGetraenke(); // Lade die Getränke
-                updateProjectInfo(); // Aktualisiere Projektinformationen
-                startPolling(); // Starte das Polling, um Zähler zu aktualisieren
-            }
-        };
-
-        // Initialisiere Getränke in der Datenbank
-        async function initializeDrinksInDatabase() {
-            try {
-                const response = await fetch('getraenke.json');
-                const data = await response.json();
-                const getraenke = data.getraenke;
-                const projektRef = ref(database, `/projekte/${currentProject.projektname}`);
-                
-                const projektData = {
-                    projektdatum: currentProject.projektdatum,
-                    getraenke: {}
-                };
-
-                getraenke.forEach(item => {
-                    const sanitizedKey = item.Name.replace(/[.#$]/g, "_");
-                    projektData.getraenke[sanitizedKey] = {
-                        Beschreibung: item.Beschreibung,
-                        Menge: item.Menge,
-                        Preis: item.Preis,
-                        Zaehler: 0, // Zähler startet bei 0
-                        gesperrt: false // Sperrflag für den Zähler
-                    };
-                });
-
-                await set(projektRef, projektData);
-                console.log("Getränke wurden in der Datenbank initialisiert:", JSON.stringify(projektData, null, 2)); // Verbessertes Logging
-            } catch (error) {
-                console.error("Fehler beim Initialisieren der Getränke:", error);
-            }
+            await set(ref(database, `/projekte/${currentProject.projektname}/getraenke`), drinks);
+            console.log("Getränke wurden in der Datenbank initialisiert:", drinks);
         }
 
-        // Lade Getränke aus der Datenbank
-        window.loadGetraenke = async function() {
-            if (!currentProject.projektname) {
-                alert("Kein Projekt zum Laden vorhanden.");
-                return;
-            }
-
-            const getraenkeRef = ref(database, `/projekte/${currentProject.projektname}/getraenke`);
-            try {
-                const snapshot = await get(getraenkeRef);
-                if (snapshot.exists()) {
-                    const getraenke = snapshot.val();
-                    const container = document.getElementById('getraenke-container');
-                    container.innerHTML = ''; // Container zurücksetzen
-
-                    Object.keys(getraenke).forEach(itemName => {
-                        const item = getraenke[itemName];
-
-                        const itemDiv = document.createElement('div');
-                        itemDiv.className = 'item';
-
-                        const infoDiv = document.createElement('div');
-                        infoDiv.className = 'info';
-                        infoDiv.innerHTML = `<strong>${itemName.replace(/_/g, " ")}</strong><br>${item.Beschreibung}<br>${item.Menge}<br>€${item.Preis}`;
-
-                        const counterDiv = document.createElement('div');
-                        counterDiv.className = 'counter';
-                        
-                        const count = document.createElement('span');
-                        count.textContent = item.Zaehler; // Zählerstand anzeigen
-                        count.className = 'count';
-
-                        const plusButton = document.createElement('button');
-                        plusButton.textContent = '+1';
-                        plusButton.onclick = async () => {
-                            await adjustCounter(itemName, 1); // Zähler erhöhen
-                            count.textContent = parseInt(count.textContent) + 1; // Lokale Aktualisierung des Zählers
-                        };
-
-                        const minusButton = document.createElement('button');
-                        minusButton.textContent = '-1';
-                        minusButton.onclick = async () => {
-                            if (parseInt(count.textContent) > 0) {
-                                await adjustCounter(itemName, -1); // Zähler verringern
-                                count.textContent = parseInt(count.textContent) - 1; // Lokale Aktualisierung des Zählers
-                            }
-                        };
-
-                        counterDiv.appendChild(minusButton);
-                        counterDiv.appendChild(count);
-                        counterDiv.appendChild(plusButton);
-
-                        itemDiv.appendChild(infoDiv);
-                        itemDiv.appendChild(counterDiv);
-                        container.appendChild(itemDiv);
-                    });
-                } else {
-                    console.log("Keine Getränkedaten in der Datenbank gefunden.");
-                    alert("Projekt nicht gefunden oder es sind keine Getränke vorhanden.");
-                }
-            } catch (error) {
-                console.error("Fehler beim Laden der Getränkedaten:", error);
-            }
-        }
-
-        // Zähler in der Datenbank anpassen
         async function adjustCounter(itemName, delta) {
             const sanitizedKey = itemName.replace(/ /g, "_");
             const itemRef = ref(database, `/projekte/${currentProject.projektname}/getraenke/${sanitizedKey}`);
             
-            // Sperre den Zähler, um Konflikte zu vermeiden
+            // Sperre den Zähler
             await update(itemRef, { gesperrt: true });
 
             try {
                 const snapshot = await get(itemRef);
-                console.log("Snapshot-Daten:", snapshot.val()); // Log der abgerufenen Daten
+                console.log("Snapshot-Daten:", snapshot.val());
 
                 if (snapshot.exists()) {
-                    const drinkData = snapshot.val(); // Alle Daten des Getränks abrufen
-                    console.log("Abgerufene Getränkedaten:", drinkData); // Debugging-Log
+                    const drinkData = snapshot.val();
+                    console.log("Abgerufene Getränkedaten:", drinkData);
 
-                    let currentCount = drinkData.Zaehler; // Zählerwert abrufen
+                    let currentCount = drinkData.Zaehler;
+                    console.log("Aktueller Zählerwert:", currentCount);
 
                     // Überprüfen, ob currentCount eine Zahl ist
                     if (typeof currentCount !== 'number' || isNaN(currentCount)) {
                         console.error("Der aktuelle Zählerwert ist ungültig:", currentCount);
-                        return; // Frühzeitiger Ausstieg bei ungültigem Wert
+                        return;
                     }
 
                     // Berechne den neuen Zählerwert
@@ -204,7 +67,7 @@
                     // Sicherstellen, dass newCount nicht negativ ist
                     if (newCount < 0) {
                         console.error("Der neue Zählerwert kann nicht negativ sein:", newCount);
-                        return; // Frühzeitiger Ausstieg, wenn der Wert negativ ist
+                        return;
                     }
 
                     await update(itemRef, { Zaehler: newCount });
@@ -220,33 +83,23 @@
             }
         }
 
-        // Projektinformationen aktualisieren
-        function updateProjectInfo() {
-            const projectInfoDiv = document.getElementById('project-info');
-            projectInfoDiv.innerHTML = `Aktuelles Projekt: ${currentProject.projektname} (${currentProject.projektdatum})`;
-        }
-
-        // Projekt öffnen
-        window.openProject = async function() {
-            const projektname = prompt("Bitte Projektname eingeben:");
-            currentProject.projektname = projektname;
-            await loadGetraenke();
-            updateProjectInfo();
+        // Event Listener für die Buttons
+        window.onload = function() {
+            document.getElementById("initializeButton").onclick = initializeDrinks;
+            document.getElementById("plusButton").onclick = function() {
+                adjustCounter("Helles Bier", 1); // Beispiel für Helles Bier erhöhen
+            };
+            document.getElementById("minusButton").onclick = function() {
+                adjustCounter("Helles Bier", -1); // Beispiel für Helles Bier verringern
+            };
         };
-
-        // Projekt schließen
-        window.closeProject = function() {
-            currentProject = { projektname: '', projektdatum: '', zaehler: {} };
-            document.getElementById('getraenke-container').innerHTML = '';
-            document.getElementById('project-info').innerHTML = '';
-            document.getElementById('total-price').innerHTML = 'Gesamtpreis: €0.00';
-        };
-
-        // Polling zum Aktualisieren der Zähler
-        function startPolling() {
-            setInterval(loadGetraenke, 5000); // Alle 5 Sekunden aktualisieren
-        }
     </script>
+</head>
+<body>
+    <h1>Getränke Zähler</h1>
+    <button id="initializeButton">Getränke initialisieren</button>
+    <button id="plusButton">Erhöhen</button>
+    <button id="minusButton">Verringern</button>
+    <div id="output"></div>
 </body>
 </html>
-
