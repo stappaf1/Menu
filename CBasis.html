@@ -34,10 +34,10 @@
 </head>
 <body>
     <div class="header-buttons">
-        <button onclick="createNewProject()">Neues Projekt erstellen</button>
-        <button onclick="saveData()">SPEICHERN</button>
+        <button onclick="createNewProject()">NEU</button>
+        <button onclick="openProject()">ÖFFNEN</button>
         <button onclick="sendData()">SENDEN</button>
-        <button onclick="closeProject()">SCHLIEßEN</button>
+        <button onclick="closeProject()">SCHLIESSEN</button>
     </div>
 
     <div id="project-info"></div>
@@ -45,7 +45,7 @@
 
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-app.js";
-        import { getDatabase, ref, update } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-database.js";
+        import { getDatabase, ref, update, get } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-database.js";
 
         const firebaseConfig = {
             apiKey: "AIzaSyBydAxxqNvFuj6DBY7iD5P8UpZpYSq0_BE",
@@ -67,6 +67,15 @@
             if (projektname) {
                 alert(`Projekt "${projektname}" erstellt.`);
                 await initializeDrinksInDatabase(projektname);
+            }
+        };
+
+        // Funktion zum Öffnen eines Projekts
+        window.openProject = async function() {
+            const projektname = prompt("Bitte Projektname zum Öffnen eingeben:");
+            if (projektname) {
+                alert(`Projekt "${projektname}" wird geöffnet.`);
+                await loadDrinksFromDatabase(projektname);
             }
         };
 
@@ -108,11 +117,24 @@
             }
         }
 
-        // Dummy-Funktion zum Speichern von Daten (kann angepasst werden)
-        window.saveData = function() {
-            alert("Daten gespeichert (Dummy-Funktion).");
-            // Hier könnte der Code zum Speichern von Daten hinzugefügt werden
-        };
+        // Funktion zum Laden der Getränkedaten aus der Firebase-Datenbank
+        async function loadDrinksFromDatabase(projektname) {
+            try {
+                const snapshot = await get(ref(database, `/projekte/${projektname}/getraenke`));
+                if (snapshot.exists()) {
+                    const data = snapshot.val();
+                    // Hier könnten die Daten angezeigt oder verarbeitet werden
+                    console.log("Getränkedaten geladen:", data);
+                    alert("Getränkedaten erfolgreich geladen.");
+                } else {
+                    console.log("Keine Getränkedaten gefunden.");
+                    alert("Keine Getränkedaten gefunden.");
+                }
+            } catch (error) {
+                console.error("Fehler beim Laden der Getränkedaten:", error);
+                alert("Fehler beim Laden der Getränkedaten.");
+            }
+        }
 
         // Dummy-Funktion zum Senden von Daten (kann angepasst werden)
         window.sendData = function() {
