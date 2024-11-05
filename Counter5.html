@@ -93,19 +93,19 @@
         }
 
         // Create New Project and Initialize Database Entries
-        window.createNewProject = async function() {
-            const projektname = prompt("Bitte Projektname eingeben:");
-            const projektdatum = prompt("Bitte Projektdatum eingeben (z.B. 01.01.2024):");
-            if (projektname && projektdatum) {
-                currentProject.projektname = projektname;
-                currentProject.projektdatum = projektdatum;
-                alert(`Projekt "${projektname}" erstellt für den ${projektdatum}.`);
+window.createNewProject = async function() {
+    const projektname = prompt("Bitte Projektname eingeben:");
+    const projektdatum = prompt("Bitte Projektdatum eingeben (z.B. 01.01.2024):");
+    if (projektname && projektdatum) {
+        currentProject.projektname = projektname;
+        currentProject.projektdatum = projektdatum;
+        alert(`Projekt "${projektname}" erstellt für den ${projektdatum}.`);
 
-                await initializeDrinksInDatabase(); // Initialize drinks in the database
-                loadGetraenke();
-                updateProjectInfo();
-            }
-        };
+        await initializeDrinksInDatabase(); // Initialize drinks in the database
+        loadGetraenke();
+        updateProjectInfo();
+    }
+};
 
         // Synchronize drink counters every 5 seconds
         setInterval(async function syncCounters() {
