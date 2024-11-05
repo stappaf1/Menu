@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getränkeverwaltung</title>
+    <style>
+        /* Stil für das Layout */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #getraenke-container {
+            margin-top: 20px;
+        }
+        .item {
+            border: 1px solid #ccc;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .info {
+            margin-bottom: 10px;
+        }
+        .count {
+            margin: 0 10px;
+        }
+        .button {
+            margin: 0 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Getränkeverwaltung</h1>
+    <div id="project-info"></div>
+    <div id="total-price">Gesamtpreis: €0.00</div>
+    <button onclick="createNewProject()">NEU</button>
+    <button onclick="openProject()">Projekt öffnen</button>
+    <button onclick="saveData()">Daten speichern</button>
+    <button onclick="closeProject()">Projekt schließen</button>
+    
+    <div id="getraenke-container"></div>
+
+    <script type="module">
+        // Firebase Setup
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-app.js";
+        import { getDatabase, ref, set, update } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-database.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyBydAxxqNvFuj6DBY7iD5P8UpZpYSq0_BE",
+            authDomain: "alea-hotels-pfaffenhofen.firebaseapp.com",
+            databaseURL: "https://alea-hotels-pfaffenhofen-default-rtdb.firebaseio.com",
+            projectId: "alea-hotels-pfaffenhofen",
+            storageBucket: "alea-hotels-pfaffenhofen.appspot.com",
+            messagingSenderId: "851814894064",
+            appId: "1:851814894064:web:bf95cfa03c52f957f93535",
+            measurementId: "G-M82VZW2CYK"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const database = getDatabase(app);
+
+        let currentProject = {
+            projektname: '',
+            projektdatum: ''
+        };
+
+        // Create New Project and Initialize Database Entries
+        window.createNewProject = async function() {
+            const projektname = prompt("Bitte Projektname eingeben:");
+            if (projektname) {
+                currentProject.projektname = projektname;
+                alert(`Projekt "${projektname}" erstellt.`);
+
+                await initializeDrinksInDatabase(); // Initialize drinks in the database
+                loadGetraenke();
+            }
+        };
+
+        // Helper to create or update drinks in the database
+        async function initializeDrinksInDatabase() {
+            try {
+                const response = await fetch('getraenke.json');
+                const data = await response.json();
+                const getraenke = data.getraenke;
+                const updates = {};
+
+                getraenke.forEach(item => {
+                    updates[`/projekte/${currentProject.projektname}/getraenke/${item.Name}`] = {
+                        Beschreibung: item.Beschreibung,
+                        Menge: item.Menge,
+                        Preis: item.Preis,
+                        Zaehler: 0 // Setze Zähler auf 0
+                    };
+                });
+
+                await update(ref(database), updates);
+                alert("Getränke in der Datenbank initialisiert.");
+            } catch (error) {
+                console.error("Fehler beim Initialisieren der Getränkedaten:", error);
+            }
+        }
+
+        // Load drinks and display them
+        async function loadGetraenke() {
+            // Hier kann die Logik zum Laden der Getränke implementiert werden
+            // Zum Beispiel: Den Container leeren und dann die Getränke anzeigen
+        }
+
+        // Platzhalter für andere Funktionen
+        function openProject() {
+            // Funktion zum Öffnen eines bestehenden Projekts
+        }
+
+        function saveData() {
+            // Funktion zum Speichern der Daten
+        }
+
+        function closeProject() {
+            // Funktion zum Schließen eines Projekts
+        }
+    </script>
+</body>
+</html>
