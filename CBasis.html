@@ -36,6 +36,7 @@
     <div class="header-buttons">
         <button onclick="createNewProject()">NEU</button>
         <button onclick="openProject()">ÖFFNEN</button>
+        <button onclick="saveData()">SPEICHERN</button>
         <button onclick="sendData()">SENDEN</button>
         <button onclick="closeProject()">SCHLIESSEN</button>
     </div>
@@ -76,6 +77,14 @@
             if (projektname) {
                 alert(`Projekt "${projektname}" wird geöffnet.`);
                 await loadDrinksFromDatabase(projektname);
+            }
+        };
+
+        // Funktion zum Speichern der Getränkedaten in der Firebase-Datenbank
+        window.saveData = async function() {
+            const projektname = prompt("Bitte Projektname zum Speichern eingeben:");
+            if (projektname) {
+                await initializeDrinksInDatabase(projektname);
             }
         };
 
