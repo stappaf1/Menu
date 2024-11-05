@@ -175,16 +175,17 @@
         }
 
         // Zähler in der Datenbank anpassen
-        async function adjustCounter(itemName, delta) {
+       async function adjustCounter(itemName, delta) {
     const sanitizedKey = itemName.replace(/ /g, "_");
     const itemRef = ref(database, `/projekte/${currentProject.projektname}/getraenke/${sanitizedKey}`);
 
     try {
         const snapshot = await get(itemRef);
         if (snapshot.exists()) {
-            const currentCount = snapshot.val().Zaehler;
+            const currentCount = snapshot.val().Zaehler || 0;
             const newCount = Math.max(0, currentCount + delta);
-            await update(itemRef, { Zaehler: newCount }); // Aktualisiert nur den Zähler in der DB
+            await update(itemRef, { Zaehler: newCount }); // Update nur für den Zählerstand
+            console.log(`Zähler für ${sanitizedKey} auf ${newCount} aktualisiert.`);
         }
     } catch (error) {
         console.error("Fehler beim Aktualisieren des Zählers:", error);
