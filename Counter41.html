@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Getränkeverwaltung - Testmodus</title>
+    <title>Getränkeverwaltung</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -30,7 +30,7 @@
     </style>
 </head>
 <body>
-    <h1>Getränkeverwaltung - Testmodus</h1>
+    <h1>Getränkeverwaltung</h1>
     <div id="project-info"></div>
     <div id="total-price">Gesamtpreis: €0.00</div>
     <button onclick="createNewProject()">Neues Projekt erstellen</button>
@@ -63,49 +63,6 @@
             zaehler: {}
         };
 
-        // Verbindungstest zur Datenbank
-        async function testDatabaseConnection() {
-            const testRef = ref(database, '/test');
-            try {
-                await set(testRef, { Zaehler: 10 });
-                console.log("Daten erfolgreich in Firebase geschrieben.");
-
-                const snapshot = await get(testRef);
-                if (snapshot.exists()) {
-                    console.log("Abgerufene Daten aus Firebase:", snapshot.val());
-                } else {
-                    console.log("Keine Daten gefunden.");
-                }
-            } catch (error) {
-                console.error("Fehler bei der Verbindung zur Datenbank:", error);
-            }
-        }
-
-        // Einfacher Zählertest
-        async function adjustCounterSimpleTest() {
-            const itemRef = ref(database, `/projekte/TestProjekt/getraenke/TestGetraenk`);
-            try {
-                // Setze Zähler fest auf 5
-                await set(itemRef, { Zaehler: 5 });
-                console.log("Zähler wurde fest auf 5 gesetzt.");
-
-                const snapshot = await get(itemRef);
-                if (snapshot.exists()) {
-                    console.log("Zähler erfolgreich gespeichert und abgerufen:", snapshot.val().Zaehler);
-                } else {
-                    console.log("Zähler nicht in der Datenbank gefunden.");
-                }
-            } catch (error) {
-                console.error("Fehler beim Speichern des Zählers:", error);
-            }
-        }
-
-        // Lade die Seite und führe die Tests durch
-        window.onload = function() {
-            testDatabaseConnection();
-            adjustCounterSimpleTest();
-        };
-
         // Neues Projekt erstellen
         window.createNewProject = async function() {
             const projektname = prompt("Bitte Projektname eingeben:");
@@ -114,9 +71,10 @@
                 currentProject.projektname = projektname;
                 currentProject.projektdatum = projektdatum;
                 alert(`Projekt "${projektname}" erstellt für den ${projektdatum}.`);
-                await initializeDrinksInDatabase();
-                loadGetraenke();
-                updateProjectInfo();
+                await initializeDrinksInDatabase(); // Initialisiere Getränke in der DB
+                loadGetraenke(); // Lade die Getränke
+                updateProjectInfo(); // Aktualisiere Projektinformationen
+                startPolling(); // Starte das Polling, um Zähler zu aktualisieren
             }
         };
 
@@ -139,13 +97,13 @@
                         Beschreibung: item.Beschreibung,
                         Menge: item.Menge,
                         Preis: item.Preis,
-                        Zaehler: 0,
-                        gesperrt: false
+                        Zaehler: 0, // Zähler startet bei 0
+                        gesperrt: false // Sperrflag für den Zähler
                     };
                 });
 
                 await set(projektRef, projektData);
-                console.log("Getränke wurden in der Datenbank initialisiert:", projektData);
+                console.log("Getränke wurden in der Datenbank initialisiert:", JSON.stringify(projektData, null, 2)); // Verbessertes Logging
             } catch (error) {
                 console.error("Fehler beim Initialisieren der Getränke:", error);
             }
@@ -164,10 +122,11 @@
                 if (snapshot.exists()) {
                     const getraenke = snapshot.val();
                     const container = document.getElementById('getraenke-container');
-                    container.innerHTML = '';
+                    container.innerHTML = ''; // Container zurücksetzen
 
                     Object.keys(getraenke).forEach(itemName => {
                         const item = getraenke[itemName];
+
                         const itemDiv = document.createElement('div');
                         itemDiv.className = 'item';
 
@@ -179,23 +138,22 @@
                         counterDiv.className = 'counter';
                         
                         const count = document.createElement('span');
-                        count.textContent = item.Zaehler;
+                        count.textContent = item.Zaehler; // Zählerstand anzeigen
                         count.className = 'count';
 
-                        // Die adjustCounter Funktion muss hier definiert sein, damit sie im Scope ist
                         const plusButton = document.createElement('button');
                         plusButton.textContent = '+1';
                         plusButton.onclick = async () => {
-                            await adjustCounter(itemName, 1);
-                            count.textContent = parseInt(count.textContent) + 1;
+                            await adjustCounter(itemName, 1); // Zähler erhöhen
+                            count.textContent = parseInt(count.textContent) + 1; // Lokale Aktualisierung des Zählers
                         };
 
                         const minusButton = document.createElement('button');
                         minusButton.textContent = '-1';
                         minusButton.onclick = async () => {
                             if (parseInt(count.textContent) > 0) {
-                                await adjustCounter(itemName, -1);
-                                count.textContent = parseInt(count.textContent) - 1;
+                                await adjustCounter(itemName, -1); // Zähler verringern
+                                count.textContent = parseInt(count.textContent) - 1; // Lokale Aktualisierung des Zählers
                             }
                         };
 
@@ -208,71 +166,87 @@
                         container.appendChild(itemDiv);
                     });
                 } else {
+                    console.log("Keine Getränkedaten in der Datenbank gefunden.");
                     alert("Projekt nicht gefunden oder es sind keine Getränke vorhanden.");
                 }
             } catch (error) {
                 console.error("Fehler beim Laden der Getränkedaten:", error);
             }
-        };
+        }
 
         // Zähler in der Datenbank anpassen
         async function adjustCounter(itemName, delta) {
-    const sanitizedKey = itemName.replace(/ /g, "_");
-    const itemRef = ref(database, `/projekte/${currentProject.projektname}/getraenke/${sanitizedKey}`);
-    
-    // Sperre den Zähler, um Konflikte zu vermeiden
-    await update(itemRef, { gesperrt: true });
+            const sanitizedKey = itemName.replace(/ /g, "_");
+            const itemRef = ref(database, `/projekte/${currentProject.projektname}/getraenke/${sanitizedKey}`);
+            
+            // Sperre den Zähler, um Konflikte zu vermeiden
+            await update(itemRef, { gesperrt: true });
 
-    try {
-        const snapshot = await get(itemRef);
-        if (snapshot.exists()) {
-            const drinkData = snapshot.val(); // Alle Daten des Getränks abrufen
-            console.log("Abgerufene Getränkedaten:", drinkData); // Debugging-Log
+            try {
+                const snapshot = await get(itemRef);
+                console.log("Snapshot-Daten:", snapshot.val()); // Log der abgerufenen Daten
 
-            let currentCount = drinkData.Zaehler; // Zählerwert abrufen
+                if (snapshot.exists()) {
+                    const drinkData = snapshot.val(); // Alle Daten des Getränks abrufen
+                    console.log("Abgerufene Getränkedaten:", drinkData); // Debugging-Log
 
-            // Überprüfen, ob currentCount eine Zahl ist
-            if (typeof currentCount !== 'number' || isNaN(currentCount)) {
-                console.error("Der aktuelle Zählerwert ist ungültig:", currentCount);
-                return; // Frühzeitiger Ausstieg bei ungültigem Wert
+                    let currentCount = drinkData.Zaehler; // Zählerwert abrufen
+
+                    // Überprüfen, ob currentCount eine Zahl ist
+                    if (typeof currentCount !== 'number' || isNaN(currentCount)) {
+                        console.error("Der aktuelle Zählerwert ist ungültig:", currentCount);
+                        return; // Frühzeitiger Ausstieg bei ungültigem Wert
+                    }
+
+                    // Berechne den neuen Zählerwert
+                    const newCount = currentCount + delta;
+
+                    // Sicherstellen, dass newCount nicht negativ ist
+                    if (newCount < 0) {
+                        console.error("Der neue Zählerwert kann nicht negativ sein:", newCount);
+                        return; // Frühzeitiger Ausstieg, wenn der Wert negativ ist
+                    }
+
+                    await update(itemRef, { Zaehler: newCount });
+                    console.log(`Zähler für ${itemName} aktualisiert: ${newCount}`);
+                } else {
+                    console.log("Getränk nicht gefunden. Überprüfe den Namen und die Datenbankstruktur.");
+                }
+            } catch (error) {
+                console.error("Fehler beim Anpassen des Zählers:", error);
+            } finally {
+                // Entsperre den Zähler nach dem Update
+                await update(itemRef, { gesperrt: false });
             }
-
-            // Berechne den neuen Zählerwert
-            const newCount = currentCount + delta;
-
-            // Sicherstellen, dass newCount nicht negativ ist
-            if (newCount < 0) {
-                console.error("Der neue Zählerwert kann nicht negativ sein:", newCount);
-                return; // Frühzeitiger Ausstieg, wenn der Wert negativ ist
-            }
-
-            await update(itemRef, { Zaehler: newCount });
-            console.log(`Zähler für ${itemName} aktualisiert: ${newCount}`);
-        } else {
-            console.log("Getränk nicht gefunden. Überprüfe den Namen und die Datenbankstruktur.");
         }
-    } catch (error) {
-        console.error("Fehler beim Anpassen des Zählers:", error);
-    } finally {
-        // Entsperre den Zähler nach dem Update
-        await update(itemRef, { gesperrt: false });
-    }
-}
 
+        // Projektinformationen aktualisieren
+        function updateProjectInfo() {
+            const projectInfoDiv = document.getElementById('project-info');
+            projectInfoDiv.innerHTML = `Aktuelles Projekt: ${currentProject.projektname} (${currentProject.projektdatum})`;
+        }
+
+        // Projekt öffnen
+        window.openProject = async function() {
+            const projektname = prompt("Bitte Projektname eingeben:");
+            currentProject.projektname = projektname;
+            await loadGetraenke();
+            updateProjectInfo();
+        };
 
         // Projekt schließen
         window.closeProject = function() {
             currentProject = { projektname: '', projektdatum: '', zaehler: {} };
             document.getElementById('getraenke-container').innerHTML = '';
-            updateProjectInfo();
-            document.getElementById('total-price').textContent = 'Gesamtpreis: €0.00';
+            document.getElementById('project-info').innerHTML = '';
+            document.getElementById('total-price').innerHTML = 'Gesamtpreis: €0.00';
         };
 
-        // Update Projektinfo
-        window.updateProjectInfo = function() {
-            const projectInfo = document.getElementById('project-info');
-            projectInfo.textContent = `${currentProject.projektname} / Datum: ${currentProject.projektdatum}`;
-        };
+        // Polling zum Aktualisieren der Zähler
+        function startPolling() {
+            setInterval(loadGetraenke, 5000); // Alle 5 Sekunden aktualisieren
+        }
     </script>
 </body>
 </html>
+
