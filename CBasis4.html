@@ -143,6 +143,66 @@
             }
         }
 
+        // Funktion zum Laden der Getränkedaten aus der Firebase-Datenbank
+        async function loadDrinksFromDatabase(projektname) {
+            try {
+                const snapshot = await get(ref(database, `/projekte/${projektname}/getraenke`));
+                const container = document.getElementById('getraenke-container');
+                container.innerHTML = ''; // Container zurücksetzen
+
+                if (snapshot.exists()) {
+                    const data = snapshot.val();
+                    // Zeige die Getränkedaten in der Benutzeroberfläche an
+                    Object.keys(data).forEach(key => {
+                        const item = data[key];
+
+                        const itemDiv = document.createElement('div');
+                        itemDiv.className = 'item';
+
+                        const infoDiv = document.createElement('div');
+                        infoDiv.className = 'info';
+
+                        // Hier wird die neue Struktur der Anzeige erstellt
+                        infoDiv.innerHTML = `
+                            <div><strong>Kategorie:</strong> ${item.Kategorie}</div>
+                            <div><strong>Name:</strong> ${item.Name}</div>
+                            <div><strong>Menge:</strong> ${item.Menge}</div>
+                            <div><strong>Preis:</strong> €${item.Preis}</div>
+                            <div><strong>Zaehler:</strong> <span class="count" id="zaehler-${key}">${item.Zaehler}</span></div>
+                        `;
+
+                        const buttonContainer = document.createElement('div');
+                        buttonContainer.className = 'button-container';
+
+                        const minusButton = document.createElement('button');
+                        minusButton.textContent = '-1';
+                        minusButton.className = 'button minus-button'; // Füge hier eine spezifische Klasse hinzu
+                        minusButton.onclick = () => adjustCounter(projektname, key, -1);
+
+                        const plusButton = document.createElement('button');
+                        plusButton.textContent = '+1';
+                        plusButton.className = 'button plus-button'; // Füge hier eine spezifische Klasse hinzu
+                        plusButton.onclick = () => adjustCounter(projektname, key, 1);
+
+                        // Button-Container füllen
+                        buttonContainer.appendChild(minusButton);
+                        buttonContainer.appendChild(plusButton);
+
+                        itemDiv.appendChild(infoDiv);
+                        itemDiv.appendChild(buttonContainer);
+                        container.appendChild(itemDiv);
+                    });
+                    alert("Getränkedaten erfolgreich geladen.");
+                } else {
+                    console.log("Keine Getränkedaten gefunden.");
+                    alert("Keine Getränkedaten gefunden.");
+                }
+            } catch (error) {
+                console.error("Fehler beim Laden der Getränkedaten:", error);
+                alert("Fehler beim Laden der Getränkedaten.");
+            }
+        }
+
         // Funktion zum Anpassen des Zählers
         async function adjustCounter(projektname, key, change) {
             const counterElement = document.getElementById(`zaehler-${key}`);
