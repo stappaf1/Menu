@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getränkeverwaltung</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #getraenke-container {
+            margin-top: 20px;
+        }
+        .item {
+            border: 1px solid #ccc;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .info {
+            margin-bottom: 10px;
+        }
+        .count {
+            margin: 0 10px;
+        }
+        .button {
+            margin: 0 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Getränkeverwaltung</h1>
+    <div id="project-info"></div>
+    <div id="total-price">Gesamtpreis: €0.00</div>
+    <button onclick="createNewProject()">Neues Projekt erstellen</button>
+    <button onclick="openProject()">Projekt öffnen</button>
+    <button onclick="closeProject()">Projekt schließen</button>
+    
+    <div id="getraenke-container"></div>
+
+    <script type="module">
+        // Firebase Setup
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-app.js";
+        import { getDatabase, ref, set, get, update } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-database.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyBydAxxqNvFuj6DBY7iD5P8UpZpYSq0_BE",
+            authDomain: "alea-hotels-pfaffenhofen.firebaseapp.com",
+            databaseURL: "https://alea-hotels-pfaffenhofen-default-rtdb.firebaseio.com",
+            projectId: "alea-hotels-pfaffenhofen",
+            storageBucket: "alea-hotels-pfaffenhofen.appspot.com",
+            messagingSenderId: "851814894064",
+            appId: "1:851814894064:web:bf95cfa03c52f957f93535",
+            measurementId: "G-M82VZW2CYK"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const database = getDatabase(app);
+
+        let currentProject = {
+            projektname: '',
+            projektdatum: ''
+        };
+
+        // Funktion zur Projekterstellung und Initialisierung der Artikel in der Datenbank
+        window.createNewProject = async function() {
+            const projektname = prompt("Bitte Projektname eingeben:");
+            const projektdatum = prompt("Bitte Projektdatum eingeben (z.B. 01.01.2024):");
+            if (projektname && projektdatum) {
+                currentProject.projektname = projektname;
+                currentProject.projektdatum = projektdatum;
+                alert(`Projekt "${projektname}" erstellt für den ${projektdatum}.`);
+                
+                await initializeDrinksInDatabase();
+                updateProjectInfo();
+                loadGetraenke();
+            }
+        };
+
+        // Funktion zur Initialisierung der Artikel in der Datenbank
+        async function initializeDrinksInDatabase() {
+            const getraenke = [
+                { Name: "Getränk 1", Beschreibung: "Beschreibung 1", Menge: "500ml", Preis: 1.50 },
+                { Name: "Getränk 2", Beschreibung: "Beschreibung 2", Menge: "250ml", Preis: 2.00 }
+            ];
+
+            const projektRef = ref(database, `/projekte/${currentProject.projektname}`);
+            const projektData = {
+                projektdatum: currentProject.projektdatum,
+                getraenke: {}
+            };
+
+            getraenke.forEach(item => {
+                const sanitizedKey = item.Name.replace(/[.#$]/g, "_");
+                projektData.getraenke[sanitizedKey] = {
+                    Beschreibung: item.Beschreibung,
+                    Menge: item.Menge,
+                    Preis: item.Preis,
+                    Zaehler: 0  // Zähler startet bei 0
+                };
+            });
+
+            await set(projektRef, projektData);
+            console.log("Getränke wurden in der Datenbank initialisiert:", projektData);
+        }
+
+        // Funktion zum Laden der Artikel aus der Datenbank
+        window.loadGetraenke = async function() {
+            if (!currentProject.projektname) {
+                alert("Kein Projekt zum Laden vorhanden.");
+                return;
+            }
+
+            const getraenkeRef = ref(database, `/projekte/${currentProject.projektname}/getraenke`);
+            try {
+                const snapshot = await get(getraenkeRef);
+                if (snapshot.exists()) {
+                    const getraenke = snapshot.val();
+                    const container = document.getElementById('getraenke-container');
+                    container.innerHTML = '';
+
+                    Object.keys(getraenke).forEach(itemName => {
+                        const item = getraenke[itemName];
+
+                        const itemDiv = document.createElement('div');
+                        itemDiv.className = 'item';
+
+                        const infoDiv = document.createElement('div');
+                        infoDiv.className = 'info';
+                        infoDiv.innerHTML = `<strong>${itemName.replace(/_/g, " ")}</strong><br>${item.Beschreibung}<br>${item.Menge}<br>€${item.Preis}`;
+
+                        const counterDiv = document.createElement('div');
+                        counterDiv.className = 'counter';
+                        
+                        const count = document.createElement('span');
+                        count.textContent = item.Zaehler;
+                        count.className = 'count';
+
+                        const plusButton = document.createElement('button');
+                        plusButton.textContent = '+1';
+                        plusButton.onclick = async () => {
+                            await adjustCounter(itemName, 1);
+                        };
+
+                        const minusButton = document.createElement('button');
+                        minusButton.textContent = '-1';
+                        minusButton.onclick = async () => {
+                            await adjustCounter(itemName, -1);
+                        };
+
+                        counterDiv.appendChild(minusButton);
+                        counterDiv.appendChild(count);
+                        counterDiv.appendChild(plusButton);
+
+                        itemDiv.appendChild(infoDiv);
+                        itemDiv.appendChild(counterDiv);
+                        container.appendChild(itemDiv);
+                    });
+                } else {
+                    console.log("Keine Getränkedaten in der Datenbank gefunden.");
+                    alert("Projekt nicht gefunden oder es sind keine Getränke vorhanden.");
+                }
+            } catch (error) {
+                console.error("Fehler beim Laden der Getränkedaten:", error);
+            }
+        }
+
+        // Zähler in der Datenbank anpassen
+        async function adjustCounter(itemName, delta) {
+            const sanitizedKey = itemName.replace(/ /g, "_");
+            const itemRef = ref(database, `/projekte/${currentProject.projektname}/getraenke/${sanitizedKey}`);
+
+            try {
+                const snapshot = await get(itemRef);
+                if (snapshot.exists()) {
+                    const currentCount = snapshot.val().Zaehler;
+                    const newCount = Math.max(0, currentCount + delta);
+                    await update(itemRef, { Zaehler: newCount });
+                    loadGetraenke(); // Die Getränke neu laden
+                }
+            } catch (error) {
+                console.error("Fehler beim Aktualisieren des Zählers:", error);
+            }
+        }
+
+        // Projekt schließen
+        window.closeProject = function() {
+            currentProject = { projektname: '', projektdatum: '' };
+            document.getElementById('getraenke-container').innerHTML = '';
+            updateProjectInfo();
+            document.getElementById('total-price').textContent = 'Gesamtpreis: €0.00';
+        };
+
+        // Projekt öffnen
+        window.openProject = async function() {
+            const projektname = prompt("Bitte den Namen des Projekts eingeben:");
+            const projectRef = ref(database, `projekte/${projektname}`);
+            try {
+                const snapshot = await get(projectRef);
+                if (snapshot.exists()) {
+                    currentProject.projektname = projektname;
+                    currentProject.projektdatum = snapshot.val().projektdatum;
+                    updateProjectInfo();
+                    loadGetraenke();
+                } else {
+                    alert("Projekt nicht gefunden.");
+                }
+            } catch (error) {
+                console.error("Fehler beim Öffnen des Projekts:", error);
+            }
+        };
+
+        // Projektinformationen aktualisieren
+        function updateProjectInfo() {
+            document.getElementById('project-info').textContent = `Projekt: ${currentProject.projektname} - Datum: ${currentProject.projektdatum}`;
+        }
+    </script>
+</body>
+</html>
