@@ -71,17 +71,16 @@
                 const getraenke = data.getraenke; // Hier wird die Reihenfolge respektiert
                 const updates = {};
 
-                getraenke.forEach(item => {
-                    // Erstelle einen gültigen Schlüssel, indem ungültige Zeichen ersetzt werden
-                    const validKey = item.Name.replace(/[.#$\/\[\]#]/g, "_");
-                    updates[`/projekte/${projektname}/getraenke/${validKey}`] = {
-                        Beschreibung: item.Beschreibung,
-                        Menge: item.Menge,
-                        Preis: item.Preis,
-                        Zaehler: 0,
-                        gesperrt: false // Sperrstatus zur Verhinderung gleichzeitiger Zugriffe
-                    };
-                });
+                // Erstelle ein Array für die Getränke, so dass die Reihenfolge beibehalten wird
+                const drinkArray = getraenke.map(item => ({
+                    Beschreibung: item.Beschreibung,
+                    Menge: item.Menge,
+                    Preis: item.Preis,
+                    Zaehler: 0,
+                    gesperrt: false // Sperrstatus zur Verhinderung gleichzeitiger Zugriffe
+                }));
+
+                updates[`/projekte/${projektname}/getraenke`] = drinkArray;
 
                 await update(ref(database), updates);
                 alert("Getränke in der Datenbank initialisiert.");
