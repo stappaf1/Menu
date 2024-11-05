@@ -7,52 +7,53 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 10px; /* Weniger Rand um die gesamte Seite */
+            margin: 10px;
         }
         #getraenke-container {
-            margin-top: 5px; /* Weniger Abstand oben */
+            margin-top: 10px;
         }
         .item {
             border: 1px solid #ccc;
-            margin: 2px 0; /* Minimale Abstände zwischen den Zeilen */
-            padding: 3px; /* Minimale Innenabstände */
+            margin: 5px 0; /* Abstände zwischen den Zeilen */
+            padding: 10px;
             border-radius: 5px;
             display: flex;
-            flex-direction: column; /* Vertikale Ausrichtung der Felder */
-            font-size: 12px; /* Noch kleinere Schriftgröße */
+            flex-direction: column; /* Vertikale Anordnung */
+            font-size: 12px;
+            background-color: #f9f9f9; /* Helle Hintergrundfarbe */
         }
         .info {
-            display: flex;
-            flex-direction: column; /* Alle Daten untereinander anordnen */
-            gap: 2px; /* Kleiner Abstand zwischen den Datenfeldern */
+            margin-bottom: 8px; /* Abstand zwischen den Informationen */
         }
         .count {
-            margin: 0 2px; /* Minimale Abstände um die Zähleranzeige */
+            margin-top: 5px; /* Abstand oberhalb des Zählers */
+            font-weight: bold;
         }
         .button {
-            padding: 2px 3px; /* Minimale Polsterung für die Schaltflächen */
-            cursor: pointer; /* Zeiger-Cursor */
-            font-size: 12px; /* Noch kleinere Schriftgröße für die Buttons */
+            padding: 5px 10px;
+            cursor: pointer;
+            font-size: 12px;
         }
         .minus-button {
-            width: 30px; /* Breite für den -1 Button */
+            width: 50px;
         }
         .plus-button {
-            width: 90px; /* Dreimal breiter als der -1 Button */
+            width: 150px;
         }
         .button-container {
             display: flex;
-            align-items: center; /* Vertikale Zentrierung */
+            justify-content: space-between;
+            width: 100%;
         }
         .header-buttons {
-            margin-bottom: 5px; /* Weniger Abstand zwischen Kopfzeile und Container */
+            margin-bottom: 10px;
             display: flex;
-            justify-content: space-between; /* Abstand zwischen den Schaltflächen und der Summe */
-            align-items: center; /* Vertikale Zentrierung */
+            justify-content: space-between;
+            align-items: center;
         }
         #total {
-            font-weight: bold; /* Fettschrift für die Summe */
-            font-size: 12px; /* Kleinere Schriftgröße */
+            font-weight: bold;
+            font-size: 14px;
         }
     </style>
 </head>
@@ -65,7 +66,7 @@
             <button onclick="sendData()">SENDEN</button>
             <button onclick="closeProject()">SCHLIESSEN</button>
         </div>
-        <div id="total">Gesamt: €0.00</div> <!-- Summe der Preise hier -->
+        <div id="total">Gesamt: €0.00</div>
     </div>
 
     <div id="project-info"></div>
@@ -89,17 +90,15 @@
         const app = initializeApp(firebaseConfig);
         const database = getDatabase(app);
 
-        // Funktion zum Erstellen eines neuen Projekts und Import der Getränkedaten
         window.createNewProject = async function() {
             const projektname = prompt("Bitte Projektname eingeben:");
             if (projektname) {
                 alert(`Projekt "${projektname}" erstellt.`);
                 await initializeDrinksInDatabase(projektname);
-                await loadDrinksFromDatabase(projektname); // Laden nach dem Erstellen
+                await loadDrinksFromDatabase(projektname);
             }
         };
 
-        // Funktion zum Öffnen eines Projekts
         window.openProject = async function() {
             const projektname = prompt("Bitte Projektname zum Öffnen eingeben:");
             if (projektname) {
@@ -108,7 +107,6 @@
             }
         };
 
-        // Funktion zum Speichern der Getränkedaten in der Firebase-Datenbank
         window.saveData = async function() {
             const projektname = prompt("Bitte Projektname zum Speichern eingeben:");
             if (projektname) {
@@ -116,7 +114,6 @@
             }
         };
 
-        // Funktion zum Initialisieren der Getränkedaten in der Firebase-Datenbank
         async function initializeDrinksInDatabase(projektname) {
             try {
                 const response = await fetch('getraenke.json');
@@ -130,7 +127,6 @@
                 const getraenke = data.getraenke;
                 const updates = {};
 
-                // Daten werden nach Artikelnummer (Position) sortiert
                 getraenke.forEach((item, index) => {
                     updates[`/projekte/${projektname}/getraenke/${index}`] = {
                         Artikelnummer: index + 1,
@@ -154,7 +150,6 @@
             }
         }
 
-        // Funktion zum Laden der Getränkedaten aus der Firebase-Datenbank
         async function loadDrinksFromDatabase(projektname) {
             try {
                 const snapshot = await get(ref(database, `/projekte/${projektname}/getraenke`));
@@ -163,24 +158,20 @@
 
                 if (snapshot.exists()) {
                     const data = snapshot.val();
-                    // Zeige die Getränkedaten in der Benutzeroberfläche an
                     Object.keys(data).forEach(key => {
                         const item = data[key];
 
                         const itemDiv = document.createElement('div');
                         itemDiv.className = 'item';
 
-                        // Die Info-Div wird erstellt und formatiert
                         const infoDiv = document.createElement('div');
                         infoDiv.className = 'info';
                         infoDiv.innerHTML = `
-                            <div>${item.Kategorie}</div>
-                            <div>${item.Name}</div>
-                            <div>${item.Menge}</div>
-                            <div>€${item.Preis}</div>
-                            <div>
-                                <span class="count" id="zaehler-${key}">${item.Zaehler}</span>
-                            </div>
+                            <div><strong>Kategorie:</strong> ${item.Kategorie}</div>
+                            <div><strong>Name:</strong> ${item.Name}</div>
+                            <div><strong>Menge:</strong> ${item.Menge}</div>
+                            <div><strong>Preis:</strong> €${item.Preis}</div>
+                            <div><strong>Zähler:</strong> <span class="count" id="zaehler-${key}">${item.Zaehler}</span></div>
                         `;
 
                         const buttonContainer = document.createElement('div');
@@ -196,7 +187,6 @@
                         plusButton.className = 'button plus-button';
                         plusButton.onclick = () => adjustCounter(projektname, key, 1);
 
-                        // Button-Container füllen
                         buttonContainer.appendChild(minusButton);
                         buttonContainer.appendChild(plusButton);
 
@@ -216,17 +206,24 @@
             }
         }
 
-        // Funktion zum Anpassen des Zählers
+        function updateTotal(data) {
+            let total = 0;
+            Object.keys(data).forEach(key => {
+                const item = data[key];
+                total += item.Preis * item.Zaehler; 
+            });
+            document.getElementById('total').innerText = `Gesamt: €${total.toFixed(2)}`;
+        }
+
         async function adjustCounter(projektname, key, delta) {
             const counterElement = document.getElementById(`zaehler-${key}`);
             let newCount = parseInt(counterElement.innerText) + delta;
-            if (newCount < 0) newCount = 0; // Zähler nicht negativ werden lassen
+            if (newCount < 0) newCount = 0;
 
             const itemRef = ref(database, `/projekte/${projektname}/getraenke/${key}`);
             try {
                 await update(itemRef, { Zaehler: newCount });
-                counterElement.innerText = newCount; // Zähler anzeigen aktualisieren
-                // Gesamtbetrag nach Anpassung des Zählers aktualisieren
+                counterElement.innerText = newCount;
                 const snapshot = await get(ref(database, `/projekte/${projektname}/getraenke`));
                 updateTotal(snapshot.val());
             } catch (error) {
@@ -234,22 +231,10 @@
             }
         }
 
-        // Gesamtbetrag aktualisieren
-        function updateTotal(data) {
-            let total = 0;
-            Object.keys(data).forEach(key => {
-                const item = data[key];
-                total += item.Zaehler * parseFloat(item.Preis);
-            });
-            document.getElementById('total').innerText = `Gesamt: €${total.toFixed(2)}`;
-        }
-
-        // Dummy-Funktion zum Senden von Daten (kann angepasst werden)
         window.sendData = function() {
             alert("Daten gesendet (Dummy-Funktion).");
         };
 
-        // Dummy-Funktion zum Schließen des Projekts (kann angepasst werden)
         window.closeProject = function() {
             alert("Projekt geschlossen (Dummy-Funktion).");
         };
