@@ -71,16 +71,16 @@
                 const getraenke = data.getraenke; // Hier wird die Reihenfolge respektiert
                 const updates = {};
 
-                // Erstelle ein Array für die Getränke, so dass die Reihenfolge beibehalten wird
-                const drinkArray = getraenke.map(item => ({
-                    Beschreibung: item.Beschreibung,
-                    Menge: item.Menge,
-                    Preis: item.Preis,
-                    Zaehler: 0,
-                    gesperrt: false // Sperrstatus zur Verhinderung gleichzeitiger Zugriffe
-                }));
-
-                updates[`/projekte/${projektname}/getraenke`] = drinkArray;
+                // Speichere die Getränke in Firebase mit numerischen Indizes
+                getraenke.forEach((item, index) => {
+                    updates[`/projekte/${projektname}/getraenke/${index}`] = {
+                        Beschreibung: item.Beschreibung,
+                        Menge: item.Menge,
+                        Preis: item.Preis,
+                        Zaehler: 0,
+                        gesperrt: false // Sperrstatus zur Verhinderung gleichzeitiger Zugriffe
+                    };
+                });
 
                 await update(ref(database), updates);
                 alert("Getränke in der Datenbank initialisiert.");
@@ -91,3 +91,4 @@
     </script>
 </body>
 </html>
+
