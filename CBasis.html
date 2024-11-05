@@ -68,12 +68,15 @@
             try {
                 const response = await fetch('getraenke.json');
                 const data = await response.json();
-                const getraenke = data.getraenke; // Hier wird die Reihenfolge respektiert
+                const getraenke = data.getraenke;
+
                 const updates = {};
 
-                // Speichere die Getränke in Firebase mit numerischen Indizes
+                // Iterate over the drinks and create updates with article number
                 getraenke.forEach((item, index) => {
                     updates[`/projekte/${projektname}/getraenke/${index}`] = {
+                        Artikelnummer: index + 1, // Artikelnummer als Position +1
+                        Name: item.Name,
                         Beschreibung: item.Beschreibung,
                         Menge: item.Menge,
                         Preis: item.Preis,
@@ -91,4 +94,3 @@
     </script>
 </body>
 </html>
-
