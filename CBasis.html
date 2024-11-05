@@ -81,10 +81,12 @@
                         Menge: item.Menge,
                         Preis: item.Preis,
                         Zaehler: 0,
-                        gesperrt: false // Sperrstatus zur Verhinderung gleichzeitiger Zugriffe
+                        gesperrt: false, // Sperrstatus zur Verhinderung gleichzeitiger Zugriffe
+                        Rubrik: item.Rubrik // Hier wird die Rubrik hinzugefügt
                     };
                 });
 
+                // Update Firebase with the new structure
                 await update(ref(database), updates);
                 alert("Getränke in der Datenbank initialisiert.");
             } catch (error) {
