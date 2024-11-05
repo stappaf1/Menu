@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Getränkeverwaltung</title>
+    <title>Projektverwaltung</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -27,13 +27,20 @@
         .button {
             margin: 0 5px;
         }
+        .header-buttons {
+            margin-bottom: 20px;
+        }
     </style>
 </head>
 <body>
-    <h1>Getränkeverwaltung</h1>
-    <div id="project-info"></div>
-    <button onclick="createNewProject()">Neues Projekt erstellen</button>
+    <div class="header-buttons">
+        <button onclick="createNewProject()">Neues Projekt erstellen</button>
+        <button onclick="saveData()">SPEICHERN</button>
+        <button onclick="sendData()">SENDEN</button>
+        <button onclick="closeProject()">SCHLIEßEN</button>
+    </div>
 
+    <div id="project-info"></div>
     <div id="getraenke-container"></div>
 
     <script type="module">
@@ -68,33 +75,29 @@
             try {
                 const response = await fetch('getraenke.json');
                 const data = await response.json();
-                
-                // Überprüfe, ob die Daten korrekt geladen wurden
+
                 if (!data || !data.getraenke) {
                     console.error("Daten aus der getraenke.json konnten nicht geladen werden.");
                     return;
                 }
 
                 const getraenke = data.getraenke;
-
                 const updates = {};
 
                 // Daten werden nach Artikelnummer (Position) sortiert
                 getraenke.forEach((item, index) => {
-                    // Erstelle Updates mit Artikelnummer, Kategorie und anderen Feldern
                     updates[`/projekte/${projektname}/getraenke/${index}`] = {
-                        Artikelnummer: index + 1, // Artikelnummer = Position im Array + 1
+                        Artikelnummer: index + 1,
                         Name: item.Name,
                         Beschreibung: item.Beschreibung,
                         Menge: item.Menge,
                         Preis: item.Preis,
-                        Zaehler: 0, // Initialer Zähler
-                        gesperrt: false, // Sperrstatus
-                        Kategorie: item.Kategorie || "" // Kategorie, falls vorhanden
+                        Zaehler: 0,
+                        gesperrt: false,
+                        Kategorie: item.Kategorie || ""
                     };
                 });
 
-                // Firebase-Datenbank-Update
                 console.log("Firebase-Daten werden aktualisiert...");
                 await update(ref(database), updates);
                 console.log("Daten erfolgreich in Firebase gespeichert.");
@@ -104,6 +107,24 @@
                 alert("Fehler beim Speichern der Getränkedaten.");
             }
         }
+
+        // Dummy-Funktion zum Speichern von Daten (kann angepasst werden)
+        window.saveData = function() {
+            alert("Daten gespeichert (Dummy-Funktion).");
+            // Hier könnte der Code zum Speichern von Daten hinzugefügt werden
+        };
+
+        // Dummy-Funktion zum Senden von Daten (kann angepasst werden)
+        window.sendData = function() {
+            alert("Daten gesendet (Dummy-Funktion).");
+            // Hier könnte der Code zum Senden von Daten hinzugefügt werden
+        };
+
+        // Dummy-Funktion zum Schließen des Projekts (kann angepasst werden)
+        window.closeProject = function() {
+            alert("Projekt geschlossen (Dummy-Funktion).");
+            // Hier könnte der Code zum Schließen des Projekts hinzugefügt werden
+        };
     </script>
 </body>
 </html>
