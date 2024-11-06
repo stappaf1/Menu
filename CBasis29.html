@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projektverwaltung</title>
     <style>
-        /* Allgemeine Stile */
         body {
             font-family: Arial, sans-serif;
             margin: 10px;
@@ -31,40 +30,16 @@
             align-items: center;
             font-size: 12px;
         }
-
-        /* Grid für die acht Spalten */
-        .info {
-            display: grid;
-            grid-template-columns: repeat(8, 1fr); /* Acht gleiche Spalten */
-            gap: 5px;
-            width: 100%;
-        }
-
-        /* Anpassung für mobile Geräte */
-        @media (max-width: 600px) {
-            .info {
-                grid-template-columns: 1fr 1fr; /* Zwei Spalten-Layout für schmale Bildschirme */
-                gap: 10px;
-            }
-        }
-
-        /* Anpassung der Button-Stile */
-        .minus-button {
-            background-color: #f44336;
-            color: white;
-            border: none;
+        /* Flexbox Layout für die 8 Spalten */
+        .item > div {
+            flex: 1; /* Jede Spalte bekommt den gleichen Anteil */
             padding: 5px;
-            cursor: pointer;
         }
-        .plus-button {
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            padding: 5px;
-            cursor: pointer;
+        /* Hintergrundfarbe der Kopfzeile */
+        .header-buttons {
+            background-color: LightSteelBlue;
         }
-
-        /* Modal-Dialog */
+        /* Modal Style */
         #project-modal {
             display: none;
             position: fixed;
@@ -76,6 +51,10 @@
             padding: 20px;
             border-radius: 8px;
             z-index: 10;
+        }
+        #project-modal select {
+            width: 200px;
+            padding: 5px;
         }
     </style>
 </head>
@@ -105,17 +84,70 @@
         import { getDatabase, ref, update, get } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-database.js";
 
         const firebaseConfig = {
-            apiKey: "DEIN_API_KEY",
-            authDomain: "DEINE_AUTH_DOMAIN",
-            databaseURL: "DEINE_DATABASE_URL",
-            projectId: "DEIN_PROJECT_ID",
-            storageBucket: "DEIN_STORAGE_BUCKET",
-            messagingSenderId: "DEINE_MESSAGING_SENDER_ID",
-            appId: "DEINE_APP_ID",
-            measurementId: "DEIN_MEASUREMENT_ID"
+            apiKey: "AIzaSyBydAxxqNvFuj6DBY7iD5P8UpZpYSq0_BE",
+            authDomain: "alea-hotels-pfaffenhofen.firebaseapp.com",
+            databaseURL: "https://alea-hotels-pfaffenhofen-default-rtdb.firebaseio.com",  // Hier ist der Firebase-Datenbank-URL
+            projectId: "alea-hotels-pfaffenhofen",
+            storageBucket: "alea-hotels-pfaffenhofen.appspot.com",
+            messagingSenderId: "851814894064",
+            appId: "1:851814894064:web:bf95cfa03c52f957f93535",
+            measurementId: "G-M82VZW2CYK"
         };
+
         const app = initializeApp(firebaseConfig);
         const database = getDatabase(app);
+
+        window.createNewProject = async function() {
+            const projektname = prompt("Bitte Projektname eingeben:");
+            if (projektname) {
+                await initializeDrinksInDatabase(projektname);
+                await loadDrinksFromDatabase(projektname);
+            }
+        };
+
+        window.openProject = async function() {
+            try {
+                const projects = await fetchProjects();
+                const dropdown = document.getElementById('project-dropdown');
+                dropdown.innerHTML = '<option value="">Bitte wählen...</option>';
+                
+                projects.forEach(project => {
+                    const option = document.createElement('option');
+                    option.value = project;
+                    option.textContent = project;
+                    dropdown.appendChild(option);
+                });
+
+                // Modal sichtbar machen
+                document.getElementById('project-modal').style.display = 'block';
+            } catch (error) {
+                console.error("Fehler beim Abrufen der Projekte:", error);
+                alert("Fehler beim Abrufen der Projekte.");
+            }
+        };
+
+        async function fetchProjects() {
+            const snapshot = await get(ref(database, '/projekte'));
+            if (snapshot.exists()) {
+                return Object.keys(snapshot.val());
+            } else {
+                return [];
+            }
+        }
+
+        function closeModal() {
+            document.getElementById('project-modal').style.display = 'none';
+        }
+
+        window.selectProject = async function() {
+            const projektname = document.getElementById('project-dropdown').value;
+            if (projektname) {
+                await loadDrinksFromDatabase(projektname);
+                closeModal();
+            } else {
+                alert("Bitte ein Projekt auswählen.");
+            }
+        };
 
         async function loadDrinksFromDatabase(projektname) {
             try {
@@ -131,21 +163,20 @@
                         const itemDiv = document.createElement('div');
                         itemDiv.className = 'item';
 
-                        // Struktur für die Datenzeilen in 8 Teilen
-                        const infoDiv = document.createElement('div');
-                        infoDiv.className = 'info';
-                        infoDiv.innerHTML = `
-                            <div>${item.Kategorie}</div>
+                        // Layout: 8 Spalten für die Darstellung der Daten
+                        itemDiv.innerHTML = `
                             <div>${item.Kategorie}</div>
                             <div>${item.Name}</div>
-                            <div>${item.Name}</div>
-                            <div id="zaehler-${key}" class="count">${item.Zaehler}</div>
-                            <button class="minus-button" onclick="adjustCounter('${projektname}', '${key}', -1)">-1</button>
+                            <div>${item.Zaehler}</div>
+                            <div>
+                                <button class="button minus-button" onclick="adjustCounter('${projektname}', ${key}, -1)">-1</button>
+                            </div>
                             <div>${item.Menge}</div>
-                            <button class="plus-button" onclick="adjustCounter('${projektname}', '${key}', 1)">+1</button>
+                            <div>
+                                <button class="button plus-button" onclick="adjustCounter('${projektname}', ${key}, 1)">+1</button>
+                            </div>
                         `;
 
-                        itemDiv.appendChild(infoDiv);
                         container.appendChild(itemDiv);
                     });
                     updateTotal(data);
@@ -158,93 +189,17 @@
             }
         }
 
-        async function fetchProjects() {
-            const snapshot = await get(ref(database, '/projekte'));
-            if (snapshot.exists()) {
-                return Object.keys(snapshot.val());
-            } else {
-                return [];
-            }
-        }
-
-        async function initializeDrinksInDatabase(projektname) {
-            try {
-                const response = await fetch('getraenke.json');
-                const data = await response.json();
-
-                if (!data || !data.getraenke) {
-                    console.error("Daten aus der getraenke.json konnten nicht geladen werden.");
-                    return;
-                }
-
-                const getraenke = data.getraenke;
-                const updates = {};
-
-                getraenke.forEach((item, index) => {
-                    updates[`/projekte/${projektname}/getraenke/${index}`] = {
-                        Artikelnummer: index + 1,
-                        Name: item.Name,
-                        Beschreibung: item.Beschreibung,
-                        Menge: item.Menge,
-                        Preis: item.Preis,
-                        Zaehler: 0,
-                        gesperrt: false,
-                        Kategorie: item.Kategorie || ""
-                    };
-                });
-
-                await update(ref(database), updates);
-                await loadDrinksFromDatabase(projektname);
-            } catch (error) {
-                console.error("Fehler beim Initialisieren der Getränkedaten:", error);
-                alert("Fehler beim Initialisieren der Getränkedaten.");
-            }
-        }
-
-        window.createNewProject = async function() {
-            const projektname = prompt("Bitte Projektname eingeben:");
-            if (projektname) {
-                await initializeDrinksInDatabase(projektname);
-                await loadDrinksFromDatabase(projektname);
-            }
-        };
-
-        window.openProject = async function() {
-            try {
-                const projects = await fetchProjects();
-                const dropdown = document.getElementById('project-dropdown');
-                dropdown.innerHTML = '<option value="">Bitte wählen...</option>';
-
-                projects.forEach(project => {
-                    const option = document.createElement('option');
-                    option.value = project;
-                    option.textContent = project;
-                    dropdown.appendChild(option);
-                });
-
-                document.getElementById('project-modal').style.display = 'block';
-            } catch (error) {
-                console.error("Fehler beim Abrufen der Projekte:", error);
-                alert("Fehler beim Abrufen der Projekte.");
-            }
-        };
-
-        window.selectProject = async function() {
-            const projektname = document.getElementById('project-dropdown').value;
-            if (projektname) {
-                await loadDrinksFromDatabase(projektname);
-                closeModal();
-            } else {
-                alert("Bitte ein Projekt auswählen.");
-            }
-        };
-
-        function closeModal() {
-            document.getElementById('project-modal').style.display = 'none';
+        function updateTotal(data) {
+            let total = 0;
+            Object.keys(data).forEach(key => {
+                const item = data[key];
+                total += item.Preis * item.Zaehler;
+            });
+            document.getElementById('total').innerText = `Gesamt: €${total.toFixed(2)}`;
         }
 
         async function adjustCounter(projektname, key, delta) {
-            const counterElement = document.getElementById(`zaehler-${key}`);
+            const counterElement = document.querySelector(`#zaehler-${key}`);
             let newCount = parseInt(counterElement.innerText) + delta;
             if (newCount < 0) newCount = 0;
 
@@ -257,16 +212,6 @@
                 updateTotal(snapshot.val());
             }
         }
-
-        function updateTotal(data) {
-            let total = 0;
-            Object.keys(data).forEach(key => {
-                const item = data[key];
-                total += item.Preis * item.Zaehler;
-            });
-            document.getElementById('total').innerText = `Gesamt: €${total.toFixed(2)}`;
-        }
-
     </script>
 </body>
 </html>
