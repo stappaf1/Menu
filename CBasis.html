@@ -7,52 +7,52 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 10px; /* Weniger Rand um die gesamte Seite */
+            margin: 10px;
         }
         #getraenke-container {
-            margin-top: 5px; /* Weniger Abstand oben */
+            margin-top: 5px;
         }
         .item {
             border: 1px solid #ccc;
-            margin: 2px 0; /* Minimale Abstände zwischen den Zeilen */
-            padding: 3px; /* Minimale Innenabstände */
+            margin: 2px 0;
+            padding: 3px;
             border-radius: 5px;
             display: flex;
-            align-items: center; /* Horizontale Ausrichtung */
-            font-size: 12px; /* Noch kleinere Schriftgröße */
+            align-items: center;
+            font-size: 12px;
         }
         .info {
             display: flex;
             align-items: center;
-            flex-grow: 1; /* Nimmt den verbleibenden Platz ein */
+            flex-grow: 1;
         }
         .count {
-            margin: 0 2px; /* Minimale Abstände um die Zähleranzeige */
+            margin: 0 2px;
         }
         .button {
-            padding: 2px 3px; /* Minimale Polsterung für die Schaltflächen */
-            cursor: pointer; /* Zeiger-Cursor */
-            font-size: 12px; /* Noch kleinere Schriftgröße für die Buttons */
+            padding: 2px 3px;
+            cursor: pointer;
+            font-size: 12px;
         }
         .minus-button {
-            width: 30px; /* Breite für den -1 Button */
+            width: 30px;
         }
         .plus-button {
-            width: 90px; /* Dreimal breiter als der -1 Button */
+            width: 90px;
         }
         .button-container {
             display: flex;
-            align-items: center; /* Vertikale Zentrierung */
+            align-items: center;
         }
         .header-buttons {
-            margin-bottom: 5px; /* Weniger Abstand zwischen Kopfzeile und Container */
+            margin-bottom: 5px;
             display: flex;
-            justify-content: space-between; /* Abstand zwischen den Schaltflächen und der Summe */
-            align-items: center; /* Vertikale Zentrierung */
+            justify-content: space-between;
+            align-items: center;
         }
         #total {
-            font-weight: bold; /* Fettschrift für die Summe */
-            font-size: 12px; /* Kleinere Schriftgröße */
+            font-weight: bold;
+            font-size: 12px;
         }
     </style>
 </head>
@@ -65,11 +65,20 @@
             <button onclick="sendData()">SENDEN</button>
             <button onclick="closeProject()">SCHLIESSEN</button>
         </div>
-        <div id="total">Gesamt: €0.00</div> <!-- Summe der Preise hier -->
+        <div id="total">Gesamt: €0.00</div>
     </div>
 
     <div id="project-info"></div>
     <div id="getraenke-container"></div>
+
+    <!-- Modal-Dialog für Projektauswahl -->
+    <div id="project-modal" style="display: none;">
+        <select id="project-dropdown">
+            <option value="">Bitte wählen...</option>
+        </select>
+        <button onclick="selectProject()">Projekt öffnen</button>
+        <button onclick="closeModal()">Abbrechen</button>
+    </div>
 
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-app.js";
@@ -89,26 +98,59 @@
         const app = initializeApp(firebaseConfig);
         const database = getDatabase(app);
 
-        // Funktion zum Erstellen eines neuen Projekts und Import der Getränkedaten
         window.createNewProject = async function() {
             const projektname = prompt("Bitte Projektname eingeben:");
             if (projektname) {
                 alert(`Projekt "${projektname}" erstellt.`);
                 await initializeDrinksInDatabase(projektname);
-                await loadDrinksFromDatabase(projektname); // Laden nach dem Erstellen
-            }
-        };
-
-        // Funktion zum Öffnen eines Projekts
-        window.openProject = async function() {
-            const projektname = prompt("Bitte Projektname zum Öffnen eingeben:");
-            if (projektname) {
-                alert(`Projekt "${projektname}" wird geöffnet.`);
                 await loadDrinksFromDatabase(projektname);
             }
         };
 
-        // Funktion zum Speichern der Getränkedaten in der Firebase-Datenbank
+        window.openProject = async function() {
+            try {
+                const projects = await fetchProjects();
+                const dropdown = document.getElementById('project-dropdown');
+                dropdown.innerHTML = '<option value="">Bitte wählen...</option>';
+                
+                projects.forEach(project => {
+                    const option = document.createElement('option');
+                    option.value = project;
+                    option.textContent = project;
+                    dropdown.appendChild(option);
+                });
+
+                document.getElementById('project-modal').style.display = 'block';
+            } catch (error) {
+                console.error("Fehler beim Abrufen der Projekte:", error);
+                alert("Fehler beim Abrufen der Projekte.");
+            }
+        };
+
+        async function fetchProjects() {
+            const snapshot = await get(ref(database, '/projekte'));
+            if (snapshot.exists()) {
+                return Object.keys(snapshot.val());
+            } else {
+                return [];
+            }
+        }
+
+        function closeModal() {
+            document.getElementById('project-modal').style.display = 'none';
+        }
+
+        window.selectProject = async function() {
+            const projektname = document.getElementById('project-dropdown').value;
+            if (projektname) {
+                await loadDrinksFromDatabase(projektname);
+                closeModal();
+                alert(`Projekt "${projektname}" wird geöffnet.`);
+            } else {
+                alert("Bitte ein Projekt auswählen.");
+            }
+        };
+
         window.saveData = async function() {
             const projektname = prompt("Bitte Projektname zum Speichern eingeben:");
             if (projektname) {
@@ -116,7 +158,6 @@
             }
         };
 
-        // Funktion zum Initialisieren der Getränkedaten in der Firebase-Datenbank
         async function initializeDrinksInDatabase(projektname) {
             try {
                 const response = await fetch('getraenke.json');
@@ -130,7 +171,6 @@
                 const getraenke = data.getraenke;
                 const updates = {};
 
-                // Daten werden nach Artikelnummer (Position) sortiert
                 getraenke.forEach((item, index) => {
                     updates[`/projekte/${projektname}/getraenke/${index}`] = {
                         Artikelnummer: index + 1,
@@ -144,9 +184,7 @@
                     };
                 });
 
-                console.log("Firebase-Daten werden aktualisiert...");
                 await update(ref(database), updates);
-                console.log("Daten erfolgreich in Firebase gespeichert.");
                 alert("Getränke in der Datenbank initialisiert.");
             } catch (error) {
                 console.error("Fehler beim Initialisieren der Getränkedaten:", error);
@@ -154,23 +192,20 @@
             }
         }
 
-        // Funktion zum Laden der Getränkedaten aus der Firebase-Datenbank
         async function loadDrinksFromDatabase(projektname) {
             try {
                 const snapshot = await get(ref(database, `/projekte/${projektname}/getraenke`));
                 const container = document.getElementById('getraenke-container');
-                container.innerHTML = ''; // Container zurücksetzen
+                container.innerHTML = '';
 
                 if (snapshot.exists()) {
                     const data = snapshot.val();
-                    // Zeige die Getränkedaten in der Benutzeroberfläche an
                     Object.keys(data).forEach(key => {
                         const item = data[key];
 
                         const itemDiv = document.createElement('div');
                         itemDiv.className = 'item';
 
-                        // Die Info-Div wird erstellt und formatiert
                         const infoDiv = document.createElement('div');
                         infoDiv.className = 'info';
                         infoDiv.innerHTML = `
@@ -194,7 +229,6 @@
                         plusButton.className = 'button plus-button';
                         plusButton.onclick = () => adjustCounter(projektname, key, 1);
 
-                        // Button-Container füllen
                         buttonContainer.appendChild(minusButton);
                         buttonContainer.appendChild(plusButton);
 
@@ -202,10 +236,9 @@
                         itemDiv.appendChild(buttonContainer);
                         container.appendChild(itemDiv);
                     });
-                    updateTotal(data); // Gesamtbetrag aktualisieren
+                    updateTotal(data);
                     alert("Getränkedaten erfolgreich geladen.");
                 } else {
-                    console.log("Keine Getränkedaten gefunden.");
                     alert("Keine Getränkedaten gefunden.");
                 }
             } catch (error) {
@@ -214,45 +247,29 @@
             }
         }
 
-        // Funktion zur Berechnung und Anzeige des Gesamtbetrags
         function updateTotal(data) {
             let total = 0;
             Object.keys(data).forEach(key => {
                 const item = data[key];
-                total += item.Preis * item.Zaehler; // Summenprodukt berechnen
+                total += item.Preis * item.Zaehler;
             });
-            document.getElementById('total').innerText = `Gesamt: €${total.toFixed(2)}`; // Gesamtbetrag aktualisieren
+            document.getElementById('total').innerText = `Gesamt: €${total.toFixed(2)}`;
         }
 
-        // Funktion zum Anpassen des Zählers
         async function adjustCounter(projektname, key, delta) {
             const counterElement = document.getElementById(`zaehler-${key}`);
             let newCount = parseInt(counterElement.innerText) + delta;
-            if (newCount < 0) newCount = 0; // Zähler nicht negativ werden lassen
+            if (newCount < 0) newCount = 0;
 
             const itemRef = ref(database, `/projekte/${projektname}/getraenke/${key}`);
-            try {
-                await update(itemRef, { Zaehler: newCount });
-                counterElement.innerText = newCount; // Zähler anzeigen aktualisieren
-                // Gesamtbetrag nach Anpassung des Zählers aktualisieren
-                const snapshot = await get(ref(database, `/projekte/${projektname}/getraenke`));
+            await update(itemRef, { Zaehler: newCount });
+            counterElement.innerText = newCount;
+
+            const snapshot = await get(ref(database, `/projekte/${projektname}/getraenke`));
+            if (snapshot.exists()) {
                 updateTotal(snapshot.val());
-            } catch (error) {
-                console.error("Fehler beim Anpassen des Zählers:", error);
             }
         }
-
-        // Dummy-Funktion zum Senden von Daten (kann angepasst werden)
-        window.sendData = function() {
-            alert("Daten gesendet (Dummy-Funktion).");
-            // Hier könnte der Code zum Senden von Daten hinzugefügt werden
-        };
-
-        // Dummy-Funktion zum Schließen des Projekts (kann angepasst werden)
-        window.closeProject = function() {
-            alert("Projekt geschlossen (Dummy-Funktion).");
-            // Hier könnte der Code zum Schließen des Projekts hinzugefügt werden
-        };
     </script>
 </body>
 </html>
