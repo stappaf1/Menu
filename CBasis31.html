@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projektverwaltung</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.4/xlsx.full.min.js"></script> <!-- Einbindung von xlsx.js -->
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -21,9 +20,8 @@
         }
         #total {
             font-weight: bold;
-            font-size: 14px; /* Größere Schrift für den Gesamtbetrag */
+            font-size: 14px;
         }
-        /* Weitere Styles bleiben unverändert */
     </style>
 </head>
 <body>
@@ -56,53 +54,6 @@
         const app = initializeApp(firebaseConfig);
         const database = getDatabase(app);
 
-        window.createNewProject = async function() {
-            const projektname = prompt("Bitte Projektname eingeben:");
-            if (projektname) {
-                await initializeDrinksInDatabase(projektname);
-                await loadDrinksFromDatabase(projektname);
-            }
-        };
-
-        window.openProject = async function() {
-            try {
-                const projects = await fetchProjects();
-                const dropdown = document.getElementById('project-dropdown');
-                dropdown.innerHTML = '<option value="">Bitte wählen...</option>';
-                
-                projects.forEach(project => {
-                    const option = document.createElement('option');
-                    option.value = project;
-                    option.textContent = project;
-                    dropdown.appendChild(option);
-                });
-
-                document.getElementById('project-modal').style.display = 'block';
-            } catch (error) {
-                console.error("Fehler beim Abrufen der Projekte:", error);
-                alert("Fehler beim Abrufen der Projekte.");
-            }
-        };
-
-        async function fetchProjects() {
-            const snapshot = await get(ref(database, '/projekte'));
-            if (snapshot.exists()) {
-                return Object.keys(snapshot.val());
-            } else {
-                return [];
-            }
-        }
-
-        window.selectProject = async function() {
-            const projektname = document.getElementById('project-dropdown').value;
-            if (projektname) {
-                await loadDrinksFromDatabase(projektname);
-                closeModal();
-            } else {
-                alert("Bitte ein Projekt auswählen.");
-            }
-        };
-
         async function loadDrinksFromDatabase(projektname) {
             const snapshot = await get(ref(database, `/projekte/${projektname}/getraenke`));
             const container = document.getElementById('getraenke-container');
@@ -116,7 +67,13 @@
                     itemDiv.className = 'item';
                     const infoDiv = document.createElement('div');
                     infoDiv.className = 'info';
-                    infoDiv.innerHTML = `${item.Kategorie} | ${item.Name} | ${item.Menge} | €${item.Preis} | <span class="count" id="zaehler-${key}">${item.Zaehler}</span>`;
+                    infoDiv.innerHTML = `
+                        ${item.Kategorie} | 
+                        ${item.Name} | 
+                        ${item.Menge} | 
+                        €${item.Preis} | 
+                        <span class="count" id="zaehler-${key}">${item.Zaehler}</span>
+                    `;
                     itemDiv.appendChild(infoDiv);
                     container.appendChild(itemDiv);
                 });
@@ -131,20 +88,6 @@
                 total += item.Preis * item.Zaehler;
             });
             document.getElementById('total').innerText = `Gesamt: €${total.toFixed(2)}`;
-        }
-
-        async function adjustCounter(projektname, key, delta) {
-            const counterElement = document.getElementById(`zaehler-${key}`);
-            let newCount = parseInt(counterElement.innerText) + delta;
-            if (newCount < 0) newCount = 0;
-            const itemRef = ref(database, `/projekte/${projektname}/getraenke/${key}`);
-            await update(itemRef, { Zaehler: newCount });
-            counterElement.innerText = newCount;
-
-            const snapshot = await get(ref(database, `/projekte/${projektname}/getraenke`));
-            if (snapshot.exists()) {
-                updateTotal(snapshot.val());
-            }
         }
 
         window.sendData = async function() {
@@ -177,30 +120,19 @@
                 return;
             }
 
-            // Excel-Datei erstellen
-            const ws = XLSX.utils.json_to_sheet(filteredData);
-            const wb = XLSX.utils.book_new();
-            XLSX.utils.book_append_sheet(wb, ws, "Bestellungen");
+            // CSV-Datei erstellen
+            let csvContent = "Kategorie,Name,Menge,Preis,Zaehler\n";
+            filteredData.forEach(item => {
+                csvContent += `${item.Kategorie},${item.Name},${item.Menge},${item.Preis},${item.Zaehler}\n`;
+            });
 
-            // Excel-Datei als Blob
-            const wbout = XLSX.write(wb, { bookType: "xlsx", type: "binary" });
-            const blob = new Blob([s2ab(wbout)], { type: "application/octet-stream" });
+            // CSV-Datei als Data-URI kodieren
+            const encodedUri = encodeURI("data:text/csv;charset=utf-8," + csvContent);
 
-            // Erstellen eines Download-Links für die Excel-Datei
-            const link = document.createElement("a");
-            link.href = URL.createObjectURL(blob);
-            link.download = `Bestellungen_${projektname}.xlsx`;
-            link.click();
+            // Mailto-Link zum Öffnen des Standard-Mailprogramms mit CSV-Datei im Textkörper
+            const mailtoLink = `mailto:?subject=Getränkebestellung&body=Bitte finden Sie anbei die Bestelldaten.%0A%0A${csvContent}`;
+            window.location.href = mailtoLink;
         };
-
-        function s2ab(s) {
-            const buf = new ArrayBuffer(s.length);
-            const view = new Uint8Array(buf);
-            for (let i = 0; i < s.length; i++) {
-                view[i] = s.charCodeAt(i) & 0xFF;
-            }
-            return buf;
-        }
     </script>
 </body>
 </html>
