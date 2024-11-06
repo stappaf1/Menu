@@ -22,48 +22,58 @@
             border-radius: 5px;
         }
         .item {
+            display: flex;
             border: 1px solid #ccc;
             margin: 2px 0;
-            padding: 3px;
+            padding: 5px;
             border-radius: 5px;
-            display: flex;
-            align-items: center;
             font-size: 12px;
+            align-items: center;
         }
-        .info {
+        /* Jede Spalte erhält eine Breite von 12.5% für insgesamt 8 Teile */
+        .part-1, .part-2, .part-3, .part-4, .part-5, .part-6, .part-7, .part-8 {
+            flex-basis: 12.5%;
             display: flex;
             align-items: center;
-            flex-grow: 1;
-        }
-        .count {
-            margin: 0 2px;
+            justify-content: center;
         }
         .button {
-            padding: 2px 3px;
+            padding: 5px 8px;
             cursor: pointer;
             font-size: 12px;
         }
         .minus-button {
-            width: 30px;
+            background-color: red;
+            color: white;
+            border: none;
+            cursor: pointer;
         }
         .plus-button {
-            width: 90px;
-        }
-        .button-container {
-            display: flex;
-            align-items: center;
+            background-color: green;
+            color: white;
+            border: none;
+            cursor: pointer;
         }
         #total {
             font-weight: bold;
             font-size: 12px;
         }
-        
-        /* Abwechselnde Farben für die Datenzeilen */
-        #getraenke-container .item:nth-child(odd) {
-            background-color: SkyBlue1;
+        /* Modal Style */
+        #project-modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 8px;
+            z-index: 10;
         }
-        #getraenke-container .item:nth-child(even) {
-            background-color: SkyBlue3;
+        #project-modal select {
+            width: 200px;
+            padding: 5px;
         }
     </style>
 </head>
@@ -93,14 +103,14 @@
         import { getDatabase, ref, update, get } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-database.js";
 
         const firebaseConfig = {
-            apiKey: "AIzaSyBydAxxqNvFuj6DBY7iD5P8UpZpYSq0_BE",
-            authDomain: "alea-hotels-pfaffenhofen.firebaseapp.com",
-            databaseURL: "https://alea-hotels-pfaffenhofen-default-rtdb.firebaseio.com",
-            projectId: "alea-hotels-pfaffenhofen",
-            storageBucket: "alea-hotels-pfaffenhofen.appspot.com",
-            messagingSenderId: "851814894064",
-            appId: "1:851814894064:web:bf95cfa03c52f957f93535",
-            measurementId: "G-M82VZW2CYK"
+            apiKey: "API_KEY",
+            authDomain: "PROJECT_ID.firebaseapp.com",
+            databaseURL: "https://PROJECT_ID.firebaseio.com",
+            projectId: "PROJECT_ID",
+            storageBucket: "PROJECT_ID.appspot.com",
+            messagingSenderId: "SENDER_ID",
+            appId: "APP_ID",
+            measurementId: "G-MEASUREMENT_ID"
         };
 
         const app = initializeApp(firebaseConfig);
@@ -127,6 +137,7 @@
                     dropdown.appendChild(option);
                 });
 
+                // Modal sichtbar machen
                 document.getElementById('project-modal').style.display = 'block';
             } catch (error) {
                 console.error("Fehler beim Abrufen der Projekte:", error);
@@ -205,34 +216,20 @@
                         const itemDiv = document.createElement('div');
                         itemDiv.className = 'item';
 
-                        const infoDiv = document.createElement('div');
-                        infoDiv.className = 'info';
-                        infoDiv.innerHTML = `
-                            ${item.Kategorie} | 
-                            ${item.Name} | 
-                            ${item.Menge} | 
-                            €${item.Preis} | 
-                            <span class="count" id="zaehler-${key}">${item.Zaehler}</span>
+                        // Kategorie und Name in 4 Teile
+                        itemDiv.innerHTML = `
+                            <div class="part-1">${item.Kategorie}</div>
+                            <div class="part-2">${item.Name}</div>
+                            <div class="part-3"><span id="zaehler-${key}">${item.Zaehler}</span></div>
+                            <div class="part-4">
+                                <button class="button minus-button" onclick="adjustCounter('${projektname}', '${key}', -1)">-1</button>
+                            </div>
+                            <div class="part-5">${item.Menge}</div>
+                            <div class="part-6">
+                                <button class="button plus-button" onclick="adjustCounter('${projektname}', '${key}', 1)">+1</button>
+                            </div>
                         `;
 
-                        const buttonContainer = document.createElement('div');
-                        buttonContainer.className = 'button-container';
-
-                        const minusButton = document.createElement('button');
-                        minusButton.textContent = '-1';
-                        minusButton.className = 'button minus-button';
-                        minusButton.onclick = () => adjustCounter(projektname, key, -1);
-
-                        const plusButton = document.createElement('button');
-                        plusButton.textContent = '+1';
-                        plusButton.className = 'button plus-button';
-                        plusButton.onclick = () => adjustCounter(projektname, key, 1);
-
-                        buttonContainer.appendChild(minusButton);
-                        buttonContainer.appendChild(plusButton);
-
-                        itemDiv.appendChild(infoDiv);
-                        itemDiv.appendChild(buttonContainer);
                         container.appendChild(itemDiv);
                     });
                     updateTotal(data);
