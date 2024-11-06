@@ -1,60 +1,109 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projektverwaltung</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 10px;
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-app.js";
+    import { getDatabase, ref, update, get } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-database.js";
+
+    const firebaseConfig = {
+        apiKey: "AIzaSyBydAxxqNvFuj6DBY7iD5P8UpZpYSq0_BE",
+        authDomain: "alea-hotels-pfaffenhofen.firebaseapp.com",
+        databaseURL: "https://alea-hotels-pfaffenhofen-default-rtdb.firebaseio.com",
+        projectId: "alea-hotels-pfaffenhofen",
+        storageBucket: "alea-hotels-pfaffenhofen.appspot.com",
+        messagingSenderId: "851814894064",
+        appId: "1:851814894064:web:bf95cfa03c52f957f93535",
+        measurementId: "G-M82VZW2CYK"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const database = getDatabase(app);
+
+    window.createNewProject = async function() {
+        const projektname = prompt("Bitte Projektname eingeben:");
+        if (projektname) {
+            await initializeDrinksInDatabase(projektname);
+            await loadDrinksFromDatabase(projektname);
         }
-        .header-buttons {
-            margin-bottom: 5px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: LightSteelBlue;
-            padding: 10px;
-            border-radius: 5px;
+    };
+
+    window.openProject = async function() {
+        try {
+            const projects = await fetchProjects();
+            const dropdown = document.getElementById('project-dropdown');
+            dropdown.innerHTML = '<option value="">Bitte wählen...</option>';
+            
+            projects.forEach(project => {
+                const option = document.createElement('option');
+                option.value = project;
+                option.textContent = project;
+                dropdown.appendChild(option);
+            });
+
+            // Modal sichtbar machen
+            document.getElementById('project-modal').style.display = 'block';
+        } catch (error) {
+            console.error("Fehler beim Abrufen der Projekte:", error);
+            alert("Fehler beim Abrufen der Projekte.");
         }
-        #total {
-            font-weight: bold;
-            font-size: 14px;
+    };
+
+    async function fetchProjects() {
+        const snapshot = await get(ref(database, '/projekte'));
+        if (snapshot.exists()) {
+            return Object.keys(snapshot.val());
+        } else {
+            return [];
         }
-    </style>
-</head>
-<body>
-    <div class="header-buttons">
-        <div>
-            <button onclick="createNewProject()">NEU</button>
-            <button onclick="openProject()">ÖFFNEN</button>
-            <button onclick="sendData()">SENDEN</button>
-        </div>
-        <div id="total">Gesamt: €0.00</div>
-    </div>
+    }
 
-    <div id="getraenke-container"></div>
+    function closeModal() {
+        document.getElementById('project-modal').style.display = 'none';
+    }
 
-    <script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-app.js";
-        import { getDatabase, ref, update, get } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-database.js";
+    window.selectProject = async function() {
+        const projektname = document.getElementById('project-dropdown').value;
+        if (projektname) {
+            await loadDrinksFromDatabase(projektname);
+            closeModal();
+        } else {
+            alert("Bitte ein Projekt auswählen.");
+        }
+    };
 
-        const firebaseConfig = {
-            apiKey: "AIzaSyBydAxxqNvFuj6DBY7iD5P8UpZpYSq0_BE",
-            authDomain: "alea-hotels-pfaffenhofen.firebaseapp.com",
-            databaseURL: "https://alea-hotels-pfaffenhofen-default-rtdb.firebaseio.com",
-            projectId: "alea-hotels-pfaffenhofen",
-            storageBucket: "alea-hotels-pfaffenhofen.appspot.com",
-            messagingSenderId: "851814894064",
-            appId: "1:851814894064:web:bf95cfa03c52f957f93535",
-            measurementId: "G-M82VZW2CYK"
-        };
+    async function initializeDrinksInDatabase(projektname) {
+        try {
+            const response = await fetch('getraenke.json');
+            const data = await response.json();
 
-        const app = initializeApp(firebaseConfig);
-        const database = getDatabase(app);
+            if (!data || !data.getraenke) {
+                console.error("Daten aus der getraenke.json konnten nicht geladen werden.");
+                return;
+            }
 
-        async function loadDrinksFromDatabase(projektname) {
+            const getraenke = data.getraenke;
+            const updates = {};
+
+            getraenke.forEach((item, index) => {
+                updates[`/projekte/${projektname}/getraenke/${index}`] = {
+                    Artikelnummer: index + 1,
+                    Name: item.Name,
+                    Beschreibung: item.Beschreibung,
+                    Menge: item.Menge,
+                    Preis: item.Preis,
+                    Zaehler: 0,
+                    gesperrt: false,
+                    Kategorie: item.Kategorie || ""
+                };
+            });
+
+            await update(ref(database), updates);
+            await loadDrinksFromDatabase(projektname);
+        } catch (error) {
+            console.error("Fehler beim Initialisieren der Getränkedaten:", error);
+            alert("Fehler beim Initialisieren der Getränkedaten.");
+        }
+    }
+
+    async function loadDrinksFromDatabase(projektname) {
+        try {
             const snapshot = await get(ref(database, `/projekte/${projektname}/getraenke`));
             const container = document.getElementById('getraenke-container');
             container.innerHTML = '';
@@ -63,8 +112,10 @@
                 const data = snapshot.val();
                 Object.keys(data).forEach(key => {
                     const item = data[key];
+
                     const itemDiv = document.createElement('div');
                     itemDiv.className = 'item';
+
                     const infoDiv = document.createElement('div');
                     infoDiv.className = 'info';
                     infoDiv.innerHTML = `
@@ -74,65 +125,93 @@
                         €${item.Preis} | 
                         <span class="count" id="zaehler-${key}">${item.Zaehler}</span>
                     `;
+
+                    const buttonContainer = document.createElement('div');
+                    buttonContainer.className = 'button-container';
+
+                    const minusButton = document.createElement('button');
+                    minusButton.textContent = '-1';
+                    minusButton.className = 'button minus-button';
+                    minusButton.onclick = () => adjustCounter(projektname, key, -1);
+
+                    const plusButton = document.createElement('button');
+                    plusButton.textContent = '+1';
+                    plusButton.className = 'button plus-button';
+                    plusButton.onclick = () => adjustCounter(projektname, key, 1);
+
+                    buttonContainer.appendChild(minusButton);
+                    buttonContainer.appendChild(plusButton);
+
                     itemDiv.appendChild(infoDiv);
+                    itemDiv.appendChild(buttonContainer);
                     container.appendChild(itemDiv);
                 });
                 updateTotal(data);
-            }
-        }
-
-        function updateTotal(data) {
-            let total = 0;
-            Object.keys(data).forEach(key => {
-                const item = data[key];
-                total += item.Preis * item.Zaehler;
-            });
-            document.getElementById('total').innerText = `Gesamt: €${total.toFixed(2)}`;
-        }
-
-        window.sendData = async function() {
-            const projektname = "deinProjektName"; // Der Name des aktuellen Projekts
-            const snapshot = await get(ref(database, `/projekte/${projektname}/getraenke`));
-            if (!snapshot.exists()) {
+            } else {
                 alert("Keine Getränkedaten gefunden.");
-                return;
             }
+        } catch (error) {
+            console.error("Fehler beim Laden der Getränkedaten:", error);
+            alert("Fehler beim Laden der Getränkedaten.");
+        }
+    }
 
-            const data = snapshot.val();
-            const filteredData = [];
+    function updateTotal(data) {
+        let total = 0;
+        Object.keys(data).forEach(key => {
+            const item = data[key];
+            total += item.Preis * item.Zaehler;
+        });
+        document.getElementById('total').innerText = `Gesamt: €${total.toFixed(2)}`;
+    }
 
-            // Filtern der Artikel mit Zaehler > 0
-            Object.keys(data).forEach(key => {
-                const item = data[key];
-                if (item.Zaehler > 0) {
-                    filteredData.push({
-                        Kategorie: item.Kategorie,
-                        Name: item.Name,
-                        Menge: item.Menge,
-                        Preis: item.Preis,
-                        Zaehler: item.Zaehler
-                    });
+    async function adjustCounter(projektname, key, delta) {
+        const counterElement = document.getElementById(`zaehler-${key}`);
+        let newCount = parseInt(counterElement.innerText) + delta;
+        if (newCount < 0) newCount = 0;
+
+        const itemRef = ref(database, `/projekte/${projektname}/getraenke/${key}`);
+        await update(itemRef, { Zaehler: newCount });
+        counterElement.innerText = newCount;
+
+        const snapshot = await get(ref(database, `/projekte/${projektname}/getraenke`));
+        if (snapshot.exists()) {
+            updateTotal(snapshot.val());
+        }
+    }
+
+    window.sendData = async function() {
+        const projektname = document.getElementById('project-dropdown').value;
+        if (!projektname) {
+            alert("Bitte ein Projekt auswählen.");
+            return;
+        }
+
+        try {
+            const snapshot = await get(ref(database, `/projekte/${projektname}/getraenke`));
+            if (snapshot.exists()) {
+                const data = snapshot.val();
+                const filteredData = Object.keys(data).filter(key => data[key].Zaehler > 0).map(key => {
+                    const item = data[key];
+                    return `${item.Kategorie},${item.Name},${item.Menge},${item.Preis},${item.Zaehler}`;
+                });
+
+                if (filteredData.length > 0) {
+                    // CSV-Inhalt erstellen
+                    const csvContent = "Kategorie,Name,Menge,Preis,Zaehler\n" + filteredData.join("\n");
+
+                    // Mailto-Link zum Versenden der CSV-Datei erstellen
+                    const mailtoLink = `mailto:?subject=Projekt ${projektname} - Getränkeübersicht&body=Anbei die CSV-Datei mit den Getränken.\n\n${csvContent}`;
+                    window.location.href = mailtoLink;
+                } else {
+                    alert("Keine Artikel mit Zaehler > 0 zum Senden.");
                 }
-            });
-
-            if (filteredData.length === 0) {
-                alert("Keine Artikel mit Zaehler > 0 zum Senden.");
-                return;
+            } else {
+                alert("Keine Getränkedaten gefunden.");
             }
-
-            // CSV-Datei erstellen
-            let csvContent = "Kategorie,Name,Menge,Preis,Zaehler\n";
-            filteredData.forEach(item => {
-                csvContent += `${item.Kategorie},${item.Name},${item.Menge},${item.Preis},${item.Zaehler}\n`;
-            });
-
-            // CSV-Datei als Data-URI kodieren
-            const encodedUri = encodeURI("data:text/csv;charset=utf-8," + csvContent);
-
-            // Mailto-Link zum Öffnen des Standard-Mailprogramms mit CSV-Datei im Textkörper
-            const mailtoLink = `mailto:?subject=Getränkebestellung&body=Bitte finden Sie anbei die Bestelldaten.%0A%0A${csvContent}`;
-            window.location.href = mailtoLink;
-        };
-    </script>
-</body>
-</html>
+        } catch (error) {
+            console.error("Fehler beim Senden der Daten:", error);
+            alert("Fehler beim Senden der Daten.");
+        }
+    }
+</script>
