@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projektverwaltung</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 10px;
+        }
+        #getraenke-container {
+            margin-top: 5px;
+        }
+        .item {
+            border: 1px solid #ccc;
+            margin: 2px 0;
+            padding: 3px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            font-size: 12px;
+        }
+        .info {
+            display: flex;
+            align-items: center;
+            flex-grow: 1;
+        }
+        .count {
+            margin: 0 2px;
+        }
+        .button {
+            padding: 2px 3px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+        .minus-button {
+            width: 30px;
+        }
+        .plus-button {
+            width: 90px;
+        }
+        .button-container {
+            display: flex;
+            align-items: center;
+        }
+        .header-buttons {
+            margin-bottom: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        #total {
+            font-weight: bold;
+            font-size: 12px;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.2/xlsx.full.min.js"></script>
+</head>
+<body>
+    <div class="header-buttons">
+        <div>
+            <button onclick="createNewProject()">NEU</button>
+            <button onclick="openProject()">ÖFFNEN</button>
+            <button onclick="sendData()">SENDEN</button>
+            <button onclick="closeProject()">SCHLIESSEN</button>
+        </div>
+        <div id="total">Gesamt: €0.00</div>
+    </div>
+
+    <div id="project-info"></div>
+    <div id="getraenke-container"></div>
+
+    <!-- Modal-Dialog für Projektauswahl -->
+    <div id="project-modal" style="display: none;">
+        <select id="project-dropdown">
+            <option value="">Bitte wählen...</option>
+        </select>
+        <button onclick="selectProject()">Projekt öffnen</button>
+        <button onclick="closeModal()">Abbrechen</button>
+    </div>
+
+    <!-- Modal-Dialog für E-Mail -->
+    <div id="email-modal" style="display: none;">
+        <input type="email" id="email-input" placeholder="E-Mail-Adresse eingeben">
+        <select id="email-dropdown">
+            <option value="">Bereits verwendete E-Mail auswählen...</option>
+        </select>
+        <button onclick="sendEmail()">E-Mail senden</button>
+        <button onclick="closeEmailModal()">Abbrechen</button>
+    </div>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-app.js";
+        import { getDatabase, ref, update, get, set } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-database.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyBydAxxqNvFuj6DBY7iD5P8UpZpYSq0_BE",
+            authDomain: "alea-hotels-pfaffenhofen.firebaseapp.com",
+            databaseURL: "https://alea-hotels-pfaffenhofen-default-rtdb.firebaseio.com",
+            projectId: "alea-hotels-pfaffenhofen",
+            storageBucket: "alea-hotels-pfaffenhofen.appspot.com",
+            messagingSenderId: "851814894064",
+            appId: "1:851814894064:web:bf95cfa03c52f957f93535",
+            measurementId: "G-M82VZW2CYK"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const database = getDatabase(app);
+
+        window.createNewProject = async function() {
+            const projektname = prompt("Bitte Projektname eingeben:");
+            if (projektname) {
+                alert(`Projekt "${projektname}" erstellt.`);
+                await initializeDrinksInDatabase(projektname);
+                await loadDrinksFromDatabase(projektname);
+            }
+        };
+
+        window.openProject = async function() {
+            try {
+                const projects = await fetchProjects();
+                const dropdown = document.getElementById('project-dropdown');
+                dropdown.innerHTML = '<option value="">Bitte wählen...</option>';
+                
+                projects.forEach(project => {
+                    const option = document.createElement('option');
+                    option.value = project;
+                    option.textContent = project;
+                    dropdown.appendChild(option);
+                });
+
+                document.getElementById('project-modal').style.display = 'block';
+            } catch (error) {
+                console.error("Fehler beim Abrufen der Projekte:", error);
+                alert("Fehler beim Abrufen der Projekte.");
+            }
+        };
+
+        async function fetchProjects() {
+            const snapshot = await get(ref(database, '/projekte'));
+            if (snapshot.exists()) {
+                return Object.keys(snapshot.val());
+            } else {
+                return [];
+            }
+        }
+
+        function closeModal() {
+            document.getElementById('project-modal').style.display = 'none';
+        }
+
+        window.selectProject = async function() {
+            const projektname = document.getElementById('project-dropdown').value;
+            if (projektname) {
+                await loadDrinksFromDatabase(projektname);
+                closeModal();
+                alert(`Projekt "${projektname}" wird geöffnet.`);
+            } else {
+                alert("Bitte ein Projekt auswählen.");
+            }
+        };
+
+        window.sendData = async function() {
+            const emailInput = document.getElementById('email-input');
+            const emailDropdown = document.getElementById('email-dropdown');
+            let email = emailInput.value || emailDropdown.value;
+
+            if (!email) {
+                alert("Bitte eine gültige E-Mail-Adresse eingeben.");
+                return;
+            }
+
+            // Speichern der E-Mail-Adresse in der Firebase-Datenbank
+            await saveEmail(email);
+
+            // Generieren der Excel-Datei
+            const data = await generateExcelData();
+            const wb = XLSX.utils.book_new();
+            const ws = XLSX.utils.json_to_sheet(data);
+            XLSX.utils.book_append_sheet(wb, ws, "Bestellung");
+
+            // Exportieren der Excel-Datei
+            XLSX.writeFile(wb, 'Bestellung.xlsx');
+
+            alert("Daten erfolgreich gesendet.");
+        };
+
+        async function saveEmail(email) {
+            const emailRef = ref(database, '/emails');
+            const snapshot = await get(emailRef);
+            const existingEmails = snapshot.exists() ? snapshot.val() : [];
+
+            if (!existingEmails.includes(email)) {
+                existingEmails.push(email);
+                await set(ref(database, '/emails'), existingEmails);
+            }
+
+            // Die E-Mail-Adressen im Dropdown anzeigen
+            const emailDropdown = document.getElementById('email-dropdown');
+            emailDropdown.innerHTML = '';
+            existingEmails.forEach(existingEmail => {
+                const option = document.createElement('option');
+                option.value = existingEmail;
+                option.textContent = existingEmail;
+                emailDropdown.appendChild(option);
+            });
+        }
+
+        async function generateExcelData() {
+            const data = [];
+            const snapshot = await get(ref(database, '/projekte'));
+            const projects = snapshot.exists() ? snapshot.val() : {};
+
+            Object.keys(projects).forEach(projectName => {
+                const project = projects[projectName];
+                Object.keys(project.getraenke).forEach(key => {
+                    const item = project.getraenke[key];
+                    data.push({
+                        Artikel: item.Name,
+                        Menge: item.Menge,
+                        Preis: item.Preis,
+                        Zähler: item.Zaehler
+                    });
+                });
+            });
+            return data;
+        }
+
+        window.closeProject = function() {
+            alert("Projekt geschlossen (Dummy-Funktion).");
+        };
+    </script>
+</body>
+</html>
