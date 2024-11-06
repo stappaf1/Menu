@@ -100,7 +100,7 @@
         window.createNewProject = async function() {
             const projektname = prompt("Bitte Projektname eingeben:");
             if (projektname) {
-                await initializeDrinksInDatabase(projektname);
+                // Nur loadDrinksFromDatabase aufrufen, ohne initializeDrinksInDatabase
                 await loadDrinksFromDatabase(projektname);
             }
         };
