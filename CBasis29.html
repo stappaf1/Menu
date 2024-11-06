@@ -29,32 +29,36 @@
             display: flex;
             align-items: center;
             font-size: 12px;
+            background-color: #f9f9f9;
         }
-        /* Flexbox Layout für die 8 Spalten */
+        /* 8-Spalten Layout */
         .item > div {
             flex: 1; /* Jede Spalte bekommt den gleichen Anteil */
             padding: 5px;
+            text-align: center;
         }
-        /* Hintergrundfarbe der Kopfzeile */
-        .header-buttons {
-            background-color: LightSteelBlue;
+        .item > div:first-child {
+            text-align: left;
         }
-        /* Modal Style */
-        #project-modal {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: #fff;
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 5px;
+        }
+        .button {
+            padding: 5px 10px;
+            font-size: 12px;
+            cursor: pointer;
+            background-color: lightgray;
             border: 1px solid #ccc;
-            padding: 20px;
-            border-radius: 8px;
-            z-index: 10;
+            border-radius: 3px;
         }
-        #project-modal select {
-            width: 200px;
-            padding: 5px;
+        .button:hover {
+            background-color: #ddd;
+        }
+        #total {
+            font-size: 14px;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -71,14 +75,6 @@
     <div id="project-info"></div>
     <div id="getraenke-container"></div>
 
-    <!-- Modal-Dialog für Projektauswahl -->
-    <div id="project-modal">
-        <select id="project-dropdown">
-            <option value="">Bitte wählen...</option>
-        </select>
-        <button onclick="selectProject()">Projekt öffnen</button>
-    </div>
-
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-app.js";
         import { getDatabase, ref, update, get } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-database.js";
@@ -86,7 +82,7 @@
         const firebaseConfig = {
             apiKey: "AIzaSyBydAxxqNvFuj6DBY7iD5P8UpZpYSq0_BE",
             authDomain: "alea-hotels-pfaffenhofen.firebaseapp.com",
-            databaseURL: "https://alea-hotels-pfaffenhofen-default-rtdb.firebaseio.com",  // Hier ist der Firebase-Datenbank-URL
+            databaseURL: "https://alea-hotels-pfaffenhofen-default-rtdb.firebaseio.com",
             projectId: "alea-hotels-pfaffenhofen",
             storageBucket: "alea-hotels-pfaffenhofen.appspot.com",
             messagingSenderId: "851814894064",
@@ -100,7 +96,7 @@
         window.createNewProject = async function() {
             const projektname = prompt("Bitte Projektname eingeben:");
             if (projektname) {
-                // Nur loadDrinksFromDatabase aufrufen, ohne initializeDrinksInDatabase
+                // Nur loadDrinksFromDatabase aufrufen
                 await loadDrinksFromDatabase(projektname);
             }
         };
@@ -168,13 +164,11 @@
                             <div>${item.Kategorie}</div>
                             <div>${item.Name}</div>
                             <div>${item.Zaehler}</div>
-                            <div>
-                                <button class="button minus-button" onclick="adjustCounter('${projektname}', ${key}, -1)">-1</button>
-                            </div>
                             <div>${item.Menge}</div>
-                            <div>
-                                <button class="button plus-button" onclick="adjustCounter('${projektname}', ${key}, 1)">+1</button>
-                            </div>
+                            <div>€${item.Preis}</div>
+                            <div><button class="button minus-button" onclick="adjustCounter('${projektname}', '${key}', -1)">-1</button></div>
+                            <div><span id="zaehler-${key}">${item.Zaehler}</span></div>
+                            <div><button class="button plus-button" onclick="adjustCounter('${projektname}', '${key}', 1)">+1</button></div>
                         `;
 
                         container.appendChild(itemDiv);
