@@ -2,141 +2,64 @@
   "getraenke": [
     {
       "Kategorie": "Biere",
-      "Name": "Helles Bier",
-      "Beschreibung": "Ein erfrischendes, leicht malziges Helles, perfekt für gemütliche Stunden.",
+      "Name": "Alkoholfreies Bier",
+      "Beschreibung": "Helles oder Weissbier",
       "Menge": "0,5L",
-      "Preis": "3.80"
-    },
-    {
-      "Kategorie": "Biere",
-      "Name": "Weißbier",
-      "Beschreibung": "Ein vollmundiges Weißbier mit feinen Bananen- und Nelkennoten.",
-      "Menge": "0,5L",
-      "Preis": "3.80"
-    },
-    {
-      "Kategorie": "Biere",
-      "Name": "Pils",
-      "Beschreibung": "Spritziges, hopfenbetontes Pils für Liebhaber des herben Geschmacks.",
-      "Menge": "0,3L",
-      "Preis": "2.90"
-    },
-    {
-      "Kategorie": "Biere",
-      "Name": "Superpils",
-      "Beschreibung": "Intensives Pils mit extra viel Hopfen, für den besonderen Genuss.",
-      "Menge": "0,3L",
-      "Preis": "2.90"
+      "Preis": "4.00"
     },
     {
       "Kategorie": "Biere",
       "Name": "Dunkles Bier",
       "Beschreibung": "Malziges, kräftiges Dunkelbier mit karamelligen Aromen.",
       "Menge": "0,5L",
-      "Preis": "3.80"
+      "Preis": "4.00"
     },
     {
       "Kategorie": "Biere",
       "Name": "Dunkles Weißbier",
       "Beschreibung": "Ein dunkles, vollmundiges Weißbier mit einer samtigen Textur und Noten von Kakao.",
       "Menge": "0,5L",
-      "Preis": "3.80"
+      "Preis": "4.00"
     },
     {
       "Kategorie": "Biere",
-      "Name": "Alkoholfreies Weizen",
-      "Beschreibung": "Alkoholfreies Weißbier mit vollem Geschmack, erfrischend und leicht.",
+      "Name": "Helles Bier",
+      "Beschreibung": "Ein erfrischendes, leicht malziges Helles, perfekt für gemütliche Stunden.",
       "Menge": "0,5L",
-      "Preis": "3.80"
+      "Preis": "4.00"
     },
     {
-      "Kategorie": "Weißwein",
-      "Name": "Lugana",
-      "Beschreibung": "Frischer Weißwein aus Norditalien mit Zitrus- und Mandelaromen.",
-      "Menge": "0,2L",
-      "Preis": "5.50"
+      "Kategorie": "Biere",
+      "Name": "Pils",
+      "Beschreibung": "Spritziges, hopfenbetontes Pils für Liebhaber des herben Geschmacks.",
+      "Menge": "0,3L",
+      "Preis": "3.60"
     },
     {
-      "Kategorie": "Weißwein",
-      "Name": "Riesling",
-      "Beschreibung": "Fruchtig-mineralischer Riesling, der mit Noten von Pfirsich und Apfel besticht.",
-      "Menge": "0,2L",
-      "Preis": "5.50"
-    },
-    {
-      "Kategorie": "Weißwein",
-      "Name": "Grauburgunder",
-      "Beschreibung": "Weicher Grauburgunder mit Aromen von Birne und Nüssen, perfekt zu leichten Speisen.",
-      "Menge": "0,2L",
-      "Preis": "5.50"
-    },
-    {
-      "Kategorie": "Weißwein",
-      "Name": "Cabernet Sauvignon",
-      "Beschreibung": "Kräftiger Rotwein mit intensiven Aromen von schwarzen Johannisbeeren.",
-      "Menge": "0,2L",
-      "Preis": "6.00"
-    },
-    {
-      "Kategorie": "Rotwein",
-      "Name": "Primitivo",
-      "Beschreibung": "Samtiger Rotwein aus Italien mit Noten von reifen Beeren und Gewürzen.",
-      "Menge": "0,2L",
-      "Preis": "6.50"
-    },
-    {
-      "Kategorie": "Rosé",
-      "Name": "Rosé",
-      "Beschreibung": "Leichter, fruchtiger Roséwein mit einer dezenten Himbeernote.",
-      "Menge": "0,2L",
-      "Preis": "4.50"
-    },
-    {
-      "Kategorie": "Schaumwein",
-      "Name": "Prosecco",
-      "Beschreibung": "Spritziger Prosecco, ideal für den Aperitif oder einen festlichen Anlass.",
-      "Menge": "Glas",
-      "Preis": "3.50"
-    },
-    {
-      "Kategorie": "Schaumwein",
-      "Name": "Cuvee Brut",
-      "Beschreibung": "Feinperliger Schaumwein mit eleganten Aromen von Zitrusfrüchten.",
-      "Menge": "Glas",
-      "Preis": "4.50"
+      "Kategorie": "Biere",
+      "Name": "Weißbier",
+      "Beschreibung": "Ein vollmundiges Weißbier mit feinen Bananen- und Nelkennoten.",
+      "Menge": "0,5L",
+      "Preis": "4.00"
     },
     {
       "Kategorie": "Alkoholfreies",
-      "Name": "Mineralwasser Still",
-      "Beschreibung": "Sanftes, stilles Mineralwasser zur Erfrischung.",
-      "Menge": "0,7L",
-      "Preis": "6.00"
+      "Name": "Ananassaft",
+      "Beschreibung": "Süßer, intensiver Ananassaft, perfekt als Erfrischung oder für Cocktails.",
+      "Menge": "0,2L",
+      "Preis": "2.90"
     },
     {
       "Kategorie": "Alkoholfreies",
-      "Name": "Mineralwasser Spritzig",
-      "Beschreibung": "Sprudelndes Mineralwasser für eine prickelnde Erfrischung.",
-      "Menge": "0,7L",
-      "Preis": "6.00"
+      "Name": "Apfelsaft",
+      "Beschreibung": "Frischer Apfelsaft, pur oder als Schorle genießbar.",
+      "Menge": "0,2L",
+      "Preis": "2.50"
     },
     {
       "Kategorie": "Alkoholfreies",
-      "Name": "Mineralwasser Still",
-      "Beschreibung": "Sanftes, stilles Mineralwasser zur Erfrischung.",
-      "Menge": "0,4L",
-      "Preis": "3.50"
-    },
-    {
-      "Kategorie": "Alkoholfreies",
-      "Name": "Mineralwasser Spritzig",
-      "Beschreibung": "Sprudelndes Mineralwasser für eine prickelnde Erfrischung.",
-      "Menge": "0,4L",
-      "Preis": "3.50"
-    },
-    {
-      "Kategorie": "Alkoholfreies",
-      "Name": "Sauerkirschsaft",
-      "Beschreibung": "Erfrischender Sauerkirschsaft, reich an Vitaminen und mit angenehmer Säure.",
+      "Name": "Johannisbeersaft",
+      "Beschreibung": "Fruchtig-säuerlicher Johannisbeersaft, ideal als Durstlöscher.",
       "Menge": "0,2L",
       "Preis": "2.90"
     },
@@ -149,100 +72,156 @@
     },
     {
       "Kategorie": "Alkoholfreies",
-      "Name": "Ananassaft",
-      "Beschreibung": "Süßer, intensiver Ananassaft, perfekt als Erfrischung oder für Cocktails.",
-      "Menge": "0,2L",
-      "Preis": "2.90"
+      "Name": "Mineralwasser Spritzig",
+      "Beschreibung": "Sprudelndes Mineralwasser für eine prickelnde Erfrischung.",
+      "Menge": "0,7L",
+      "Preis": "6.00"
     },
     {
       "Kategorie": "Alkoholfreies",
-      "Name": "Johannisbeersaft",
-      "Beschreibung": "Fruchtig-säuerlicher Johannisbeersaft, ideal als Durstlöscher.",
-      "Menge": "0,2L",
-      "Preis": "2.90"
+      "Name": "Mineralwasser Spritzig",
+      "Beschreibung": "Sprudelndes Mineralwasser für eine prickelnde Erfrischung.",
+      "Menge": "0,4L",
+      "Preis": "3.80"
     },
     {
       "Kategorie": "Alkoholfreies",
-      "Name": "Apfelsaft",
-      "Beschreibung": "Frischer Apfelsaft, pur oder als Schorle genießbar.",
-      "Menge": "0,2L",
-      "Preis": "2.90"
+      "Name": "Mineralwasser Still",
+      "Beschreibung": "Sanftes, stilles Mineralwasser zur Erfrischung.",
+      "Menge": "0,7L",
+      "Preis": "6.00"
+    },
+    {
+      "Kategorie": "Alkoholfreies",
+      "Name": "Mineralwasser Still",
+      "Beschreibung": "Sanftes, stilles Mineralwasser zur Erfrischung.",
+      "Menge": "0,4L",
+      "Preis": "3.80"
     },
     {
       "Kategorie": "Alkoholfreies",
       "Name": "Saftschorle",
       "Beschreibung": "Fruchtig-erfrischende Saftschorle, perfekt für heiße Tage.",
       "Menge": "0,4L",
-      "Preis": "3.50"
+      "Preis": "3.80"
+    },
+    {
+      "Kategorie": "Alkoholfreies",
+      "Name": "Sauerkirschsaft",
+      "Beschreibung": "Erfrischender Sauerkirschsaft, reich an Vitaminen und mit angenehmer Säure.",
+      "Menge": "0,2L",
+      "Preis": "2.90"
     },
     {
       "Kategorie": "Softgetränke",
       "Name": "Afri Cola",
       "Beschreibung": "Klassische Cola mit intensiver Koffein-Note.",
-      "Menge": "0,4L",
-      "Preis": "3.50"
+      "Menge": "0,2L",
+      "Preis": "3.80"
     },
     {
       "Kategorie": "Softgetränke",
       "Name": "Afri Cola Light",
       "Beschreibung": "Die leichte Variante der Afri Cola mit weniger Zucker, aber vollem Geschmack.",
-      "Menge": "0,4L",
-      "Preis": "3.50"
-    },
-    {
-      "Kategorie": "Softgetränke",
-      "Name": "Spezi",
-      "Beschreibung": "Erfrischendes Spezi, die perfekte Mischung aus Cola und Orangenlimo.",
-      "Menge": "0,4L",
-      "Preis": "3.50"
-    },
-    {
-      "Kategorie": "Softgetränke",
-      "Name": "Zitronenlimonade",
-      "Beschreibung": "Spritzige Zitronenlimonade mit natürlichem Zitronengeschmack.",
-      "Menge": "0,4L",
-      "Preis": "3.50"
+      "Menge": "0,2L",
+      "Preis": "3.80"
     },
     {
       "Kategorie": "Softgetränke",
       "Name": "Orangenlimonade",
       "Beschreibung": "Fruchtige Orangenlimonade, ideal für eine sommerliche Erfrischung.",
       "Menge": "0,4L",
-      "Preis": "3.50"
+      "Preis": "3.80"
     },
     {
       "Kategorie": "Softgetränke",
-      "Name": "Ginger Ale",
-      "Beschreibung": "Erfrischendes Ginger Ale mit würziger Ingwernote.",
-      "Menge": "0,2L",
-      "Preis": "2.90"
+      "Name": "Spezi",
+      "Beschreibung": "Erfrischendes Spezi, die perfekte Mischung aus Cola und Orangenlimo.",
+      "Menge": "0,4L",
+      "Preis": "3.80"
     },
     {
       "Kategorie": "Softgetränke",
-      "Name": "Ginger Beer",
-      "Beschreibung": "Intensives Ginger Beer mit einer scharfen Ingwernote, perfekt für Cocktails.",
-      "Menge": "0,2L",
-      "Preis": "2.90"
+      "Name": "Zitronenlimonade",
+      "Beschreibung": "Spritzige Zitronenlimonade mit natürlichem Zitronengeschmack.",
+      "Menge": "0,4L",
+      "Preis": "3.80"
     },
     {
-      "Kategorie": "Softgetränke",
-      "Name": "Bitter Lemon",
-      "Beschreibung": "Bittersüße Erfrischung mit kräftigem Zitronenaroma.",
+      "Kategorie": "Rosé",
+      "Name": "Rosé",
+      "Beschreibung": "Leichter, fruchtiger Roséwein mit einer dezenten Himbeernote.",
       "Menge": "0,2L",
-      "Preis": "2.90"
+      "Preis": "7.50"
     },
     {
-      "Kategorie": "Softgetränke",
-      "Name": "Tonic Water",
-      "Beschreibung": "Herb-spritziges Tonic Water, ideal für Longdrinks.",
+      "Kategorie": "Rotwein",
+      "Name": "Cabernet Sauvignon",
+      "Beschreibung": "Kräftiger Rotwein mit intensiven Aromen von schwarzen Johannisbeeren.",
       "Menge": "0,2L",
-      "Preis": "2.90"
+      "Preis": "7.00"
     },
     {
-      "Kategorie": "Softgetränke",
-      "Name": "Red Bull",
-      "Beschreibung": "Energydrink mit Koffein und Taurin, für den extra Kick.",
+      "Kategorie": "Rotwein",
+      "Name": "Primitivo",
+      "Beschreibung": "Samtiger Rotwein aus Italien mit Noten von reifen Beeren und Gewürzen.",
       "Menge": "0,2L",
+      "Preis": "8.00"
+    },
+    {
+      "Kategorie": "Schaumwein",
+      "Name": "Prosecco",
+      "Beschreibung": "Spritziger Prosecco, ideal für den Aperitif oder einen festlichen Anlass.",
+      "Menge": "Glas",
+      "Preis": "4.50"
+    },
+    {
+      "Kategorie": "Schaumwein",
+      "Name": "Winzersekt Riesling",
+      "Beschreibung": "Feinperliger Schaumwein mit eleganten Aromen von Zitrusfrüchten.",
+      "Menge": "Glas",
+      "Preis": "4.50"
+    },
+    {
+      "Kategorie": "Weißwein",
+      "Name": "Grauburgunder",
+      "Beschreibung": "Weicher Grauburgunder mit Aromen von Birne und Nüssen, perfekt zu leichten Speisen.",
+      "Menge": "0,2L",
+      "Preis": "6.50"
+    },
+    {
+      "Kategorie": "Weißwein",
+      "Name": "Lugana",
+      "Beschreibung": "Frischer Weißwein aus Norditalien mit Zitrus- und Mandelaromen.",
+      "Menge": "0,2L",
+      "Preis": "7.50"
+    },
+    {
+      "Kategorie": "Weißwein",
+      "Name": "Riesling",
+      "Beschreibung": "Fruchtig-mineralischer Riesling, der mit Noten von Pfirsich und Apfel besticht.",
+      "Menge": "0,2L",
+      "Preis": "6.50"
+    },
+    {
+      "Kategorie": "Aperitif",
+      "Name": "Aperol Spritz TOP10",
+      "Beschreibung": "4 cl Aperol, 6 cl Prosecco, mit Soda aufgefüllt, Orangenscheibe",
+      "Menge": "1 Glas",
+      "Preis": "6.50"
+    },
+    {
+      "Kategorie": "Aperitif",
+      "Name": "Lillet Wildberry",
+      "Beschreibung": "",
+      "Menge": "1 Glas",
+      "Preis": "6.50"
+    },
+    {
+      "Kategorie": "Heißgetränke",
+      "Name": "Café Crema",
+      "Beschreibung": "Milder Kaffee mit einer dicken Crema, ideal für den Kaffeegenuss zwischendurch.",
+      "Menge": "Tasse",
       "Preis": "3.50"
     },
     {
@@ -250,588 +229,63 @@
       "Name": "Cappuccino",
       "Beschreibung": "Aromatischer Espresso mit cremigem Milchschaum, leicht bestäubt mit Kakao.",
       "Menge": "Tasse",
-      "Preis": "2.50"
-    },
-    {
-      "Kategorie": "Heißgetränke",
-      "Name": "Café Crema",
-      "Beschreibung": "Milder Kaffee mit einer dicken Crema, ideal für den Kaffeegenuss zwischendurch.",
-      "Menge": "Tasse",
-      "Preis": "2.50"
-    },
-    {
-      "Kategorie": "Heißgetränke",
-      "Name": "Latte Macchiato",
-      "Beschreibung": "Geschichteter Kaffee mit heißer Milch und Schaum, mild und cremig.",
-      "Menge": "Glas",
-      "Preis": "2.50"
-    },
-    {
-      "Kategorie": "Heißgetränke",
-      "Name": "Espresso",
-      "Beschreibung": "Intensiver, aromatischer Espresso für den perfekten Koffeinschub.",
-      "Menge": "Tasse",
-      "Preis": "1.90"
+      "Preis": "3.50"
     },
     {
       "Kategorie": "Heißgetränke",
       "Name": "Doppio Espresso",
       "Beschreibung": "Doppelte Portion Espresso für den extra starken Koffeinkick.",
       "Menge": "Tasse",
-      "Preis": "2.50"
+      "Preis": "2024-05-02T22:00:00.000Z"
+    },
+    {
+      "Kategorie": "Heißgetränke",
+      "Name": "Espresso",
+      "Beschreibung": "Intensiver, aromatischer Espresso für den perfekten Koffeinschub.",
+      "Menge": "Tasse",
+      "Preis": "2024-04-01T22:00:00.000Z"
     },
     {
       "Kategorie": "Heißgetränke",
       "Name": "Grüner Tee",
       "Beschreibung": "Belebender grüner Tee, schonend verarbeitet für einen frischen Geschmack.",
       "Menge": "Tasse",
-      "Preis": "2.90"
+      "Preis": "3.50"
     },
     {
       "Kategorie": "Heißgetränke",
       "Name": "Kräutertee",
       "Beschreibung": "Wohltuender Kräutertee mit einer beruhigenden Mischung aus ausgewählten Kräutern.",
       "Menge": "Tasse",
-      "Preis": "2.90"
+      "Preis": "3.50"
+    },
+    {
+      "Kategorie": "Heißgetränke",
+      "Name": "Latte Macchiato",
+      "Beschreibung": "Geschichteter Kaffee mit heißer Milch und Schaum, mild und cremig.",
+      "Menge": "Glas",
+      "Preis": "3.50"
     },
     {
       "Kategorie": "Heißgetränke",
       "Name": "Rooibos Tee",
       "Beschreibung": "Aromatischer, koffeinfreier Rooibos Tee mit natürlicher Süße.",
       "Menge": "Tasse",
-      "Preis": "2.90"
+      "Preis": "3.50"
     },
     {
       "Kategorie": "Heißgetränke",
       "Name": "Schwarzer Tee",
       "Beschreibung": "Klassischer schwarzer Tee, kräftig im Geschmack und ideal",
       "Menge": "Tasse",
-      "Preis": "2.90"
+      "Preis": "3.50"
     },
     {
       "Kategorie": "Heißgetränke",
       "Name": "Schwarzer Tee",
       "Beschreibung": "Assam",
       "Menge": "Tasse",
-      "Preis": "2.90"
-    },
-    {
-      "Kategorie": "Aperitif",
-      "Name": "Aperol Spritz TOP10",
-      "Beschreibung": "4 cl Aperol, 6 cl Prosecco, mit Soda aufgefüllt, Orangenscheibe",
-      "Menge": "1 Glas",
-      "Preis": "9.50"
-    },
-    {
-      "Kategorie": "Aperitif",
-      "Name": "Campari Soda",
-      "Beschreibung": "4 cl Campari, mit Soda aufgefüllt, Zitronenzeste",
-      "Menge": "1 Glas",
-      "Preis": "9.00"
-    },
-    {
-      "Kategorie": "Aperitif",
-      "Name": "Negroni Sbagliato",
-      "Beschreibung": "3 cl Campari, 3 cl roter Wermut, 3 cl Prosecco, auf Eis gerührt",
-      "Menge": "1 Glas",
-      "Preis": "7.00"
-    },
-    {
-      "Kategorie": "Aperitif",
-      "Name": "Vermouth on the Rocks",
-      "Beschreibung": "6 cl trockener oder roter Wermut, auf Eis serviert, Zitronen- oder Orangenzeste",
-      "Menge": "1 Glas",
-      "Preis": "10.00"
-    },
-    {
-      "Kategorie": "Aperitif",
-      "Name": "Kir",
-      "Beschreibung": "9 cl trockener Weißwein, 1 cl Crème de Cassis",
-      "Menge": "1 Glas",
-      "Preis": "8.00"
-    },
-    {
-      "Kategorie": "Aperitif",
-      "Name": "Kir Royal",
-      "Beschreibung": "9 cl Champagner, 1 cl Crème de Cassis",
-      "Menge": "1 Glas",
-      "Preis": "7.00"
-    },
-    {
-      "Kategorie": "Aperitif",
-      "Name": "Cynar Spritz",
-      "Beschreibung": "4 cl Cynar (Artischockenlikör), 6 cl Prosecco, mit Soda aufgefüllt, Orangenscheibe",
-      "Menge": "1 Glas",
-      "Preis": "12.00"
-    },
-    {
-      "Kategorie": "Aperitif",
-      "Name": "Americano",
-      "Beschreibung": "3 cl Campari, 3 cl roter Wermut, mit Soda aufgefüllt, Orangenzeste",
-      "Menge": "1 Glas",
-      "Preis": "9.00"
-    },
-    {
-      "Kategorie": "Aperitif",
-      "Name": "Lillet Vive",
-      "Beschreibung": "5 cl Lillet Blanc, 10 cl Tonic Water, Gurkenscheibe, Erdbeere, Minze",
-      "Menge": "1 Glas",
-      "Preis": "8.00"
-    },
-    {
-      "Kategorie": "Aperitif",
-      "Name": "Sherry Fino",
-      "Beschreibung": "6 cl trockener Sherry, auf Eis serviert, mit einer grünen Olive oder Zitronenzeste",
-      "Menge": "1 Glas",
-      "Preis": "9.00"
-    },
-    {
-      "Kategorie": "Aperitif",
-      "Name": "Champagne Cocktail",
-      "Beschreibung": "9 cl Champagner, 1 Zuckerwürfel, ein paar Tropfen Angostura Bitter, Zitronenzeste",
-      "Menge": "1 Glas",
-      "Preis": "8.00"
-    },
-    {
-      "Kategorie": "Aperitif",
-      "Name": "Martini Bianco Tonic",
-      "Beschreibung": "5 cl Martini Bianco, 10 cl Tonic Water, Limettenscheibe",
-      "Menge": "1 Glas",
-      "Preis": "12.00"
-    },
-    {
-      "Kategorie": "Aperitif",
-      "Name": "Dubonnet",
-      "Beschreibung": "6 cl Dubonnet Rouge, auf Eis serviert, Zitronenzeste",
-      "Menge": "1 Glas",
-      "Preis": "8.00"
-    },
-    {
-      "Kategorie": "Aperitif",
-      "Name": "Ricard",
-      "Beschreibung": "3 cl Pastis, mit 6 cl Wasser verdünnt, auf Eis serviert",
-      "Menge": "1 Glas",
-      "Preis": "8.00"
-    },
-    {
-      "Kategorie": "Campari Longdrink",
-      "Name": "Americano",
-      "Beschreibung": "3 cl Campari, 3 cl roter Wermut, mit Soda aufgefüllt, Orangenzeste",
-      "Menge": "1 Glas",
-      "Preis": "6.00"
-    },
-    {
-      "Kategorie": "Campari Longdrink",
-      "Name": "Campari Orange",
-      "Beschreibung": "4 cl Campari, mit Orangensaft aufgefüllt",
-      "Menge": "1 Glas",
-      "Preis": "8.00"
-    },
-    {
-      "Kategorie": "Cognac Cocktail",
-      "Name": "Brandy Alexander",
-      "Beschreibung": "4 cl Cognac, 2 cl Crème de Cacao, 2 cl Sahne, mit Muskat bestäubt",
-      "Menge": "1 Glas",
-      "Preis": "8.00"
-    },
-    {
-      "Kategorie": "Cognac Cocktail",
-      "Name": "Sidecar",
-      "Beschreibung": "5 cl Cognac, 2 cl Triple Sec, 2 cl Zitronensaft, auf Eis geschüttelt",
-      "Menge": "1 Glas",
-      "Preis": "11.00"
-    },
-    {
-      "Kategorie": "Gin Cocktail",
-      "Name": "Aviation",
-      "Beschreibung": "5 cl Gin, 1 cl Maraschino, 1,5 cl Zitronensaft, ein paar Tropfen Crème de Violette",
-      "Menge": "1 Glas",
-      "Preis": "11.00"
-    },
-    {
-      "Kategorie": "Gin Cocktail",
-      "Name": "Martini TOP10",
-      "Beschreibung": "6 cl Gin, 1 cl trockener Wermut, mit einer Olive oder Zitronenzeste garniert",
-      "Menge": "1 Glas",
-      "Preis": "12.00"
-    },
-    {
-      "Kategorie": "Gin Cocktail",
-      "Name": "Singapore Sling",
-      "Beschreibung": "4 cl Gin, 1,5 cl Kirschlikör, 0,5 cl Cointreau, 0,5 cl Bénédictine, Ananassaft, Limettensaft",
-      "Menge": "1 Glas",
-      "Preis": "12.00"
-    },
-    {
-      "Kategorie": "Gin Cocktail",
-      "Name": "Vesper",
-      "Beschreibung": "6 cl Gin, 1,5 cl Wodka, 0,75 cl Lillet Blanc, auf Eis geschüttelt, Zitronenzeste",
-      "Menge": "1 Glas",
-      "Preis": "13.00"
-    },
-    {
-      "Kategorie": "Gin Cocktail",
-      "Name": "Corpse Reviver #2",
-      "Beschreibung": "2 cl Gin, 2 cl Cointreau, 2 cl Lillet Blanc, 2 cl Zitronensaft, ein Tropfen Absinth",
-      "Menge": "1 Glas",
-      "Preis": "12.00"
-    },
-    {
-      "Kategorie": "Gin Cocktail",
-      "Name": "Last Word",
-      "Beschreibung": "2 cl Gin, 2 cl grüner Chartreuse, 2 cl Maraschino, 2 cl Limettensaft",
-      "Menge": "1 Glas",
-      "Preis": "12.00"
-    },
-    {
-      "Kategorie": "Gin Cocktail",
-      "Name": "Clover Club",
-      "Beschreibung": "4 cl Gin, 2 cl Himbeersirup, 2 cl Zitronensaft, Eiweiß, auf Eis geschüttelt",
-      "Menge": "1 Glas",
-      "Preis": "13.00"
-    },
-    {
-      "Kategorie": "Gin Cocktail",
-      "Name": "Gin Rickey",
-      "Beschreibung": "4 cl Gin, 2 cl Limettensaft, mit Soda aufgefüllt",
-      "Menge": "1 Glas",
-      "Preis": "11.00"
-    },
-    {
-      "Kategorie": "Gin Cocktail",
-      "Name": "Bee’s Knees",
-      "Beschreibung": "5 cl Gin, 2 cl Zitronensaft, 1 cl Honigsirup",
-      "Menge": "1 Glas",
-      "Preis": "8.00"
-    },
-    {
-      "Kategorie": "Gin Cocktail",
-      "Name": "French 75",
-      "Beschreibung": "4 cl Gin, 2 cl Zitronensaft, 1 cl Zuckersirup, mit Champagner aufgefüllt",
-      "Menge": "1 Glas",
-      "Preis": "10.00"
-    },
-    {
-      "Kategorie": "Gin Cocktail",
-      "Name": "Tom Collins",
-      "Beschreibung": "5 cl Gin, 2 cl Zitronensaft, 1 cl Zuckersirup, mit Soda aufgefüllt",
-      "Menge": "1 Glas",
-      "Preis": "14.00"
-    },
-    {
-      "Kategorie": "Gin Cocktail",
-      "Name": "Negroni TOP10",
-      "Beschreibung": "3 cl Gin, 3 cl Campari, 3 cl roter Wermut, auf Eis gerührt",
-      "Menge": "1 Glas",
-      "Preis": "9.00"
-    },
-    {
-      "Kategorie": "Gin Cocktail",
-      "Name": "Tom Collins",
-      "Beschreibung": "5 cl Gin, 3 cl Zitronensaft, 1,5 cl Zuckersirup, mit Soda aufgefüllt",
-      "Menge": "1 Glas",
-      "Preis": "10.00"
-    },
-    {
-      "Kategorie": "Gin Cocktail",
-      "Name": "Gin Fizz",
-      "Beschreibung": "4 cl Gin, 3 cl Zitronensaft, 1,5 cl Zuckersirup, mit Soda aufgefüllt",
-      "Menge": "1 Glas",
-      "Preis": "10.00"
-    },
-    {
-      "Kategorie": "Gin Cocktail",
-      "Name": "Gin Buck",
-      "Beschreibung": "4 cl Gin, mit Ginger Ale aufgefüllt, Limettenscheibe",
-      "Menge": "1 Glas",
-      "Preis": "9.00"
-    },
-    {
-      "Kategorie": "Gin Cocktail",
-      "Name": "Gin Tonic",
-      "Beschreibung": "4 cl Gin, mit Tonic Water aufgefüllt, garniert mit einer Limettenscheibe",
-      "Menge": "1 Glas",
-      "Preis": "8.00"
-    },
-    {
-      "Kategorie": "Rum Cocktail",
-      "Name": "Caipirinha",
-      "Beschreibung": "5 cl Cachaça, frische Limettenstücke, 2 TL Zucker, zerstoßen, mit Crushed Ice aufgefüllt",
-      "Menge": "1 Glas",
-      "Preis": "8.00"
-    },
-    {
-      "Kategorie": "Rum Cocktail",
-      "Name": "Planter’s Punch",
-      "Beschreibung": "4 cl dunkler Rum, 2 cl Limettensaft, 1 cl Grenadine, Orangensaft, auf Eis geschüttelt",
-      "Menge": "1 Glas",
-      "Preis": "9.00"
-    },
-    {
-      "Kategorie": "Rum Cocktail",
-      "Name": "Dark 'n' Stormy",
-      "Beschreibung": "4 cl dunkler Rum, mit Ginger Beer aufgefüllt, Limettenscheibe",
-      "Menge": "1 Glas",
-      "Preis": "11.00"
-    },
-    {
-      "Kategorie": "Rum Cocktail",
-      "Name": "Pisco Sour",
-      "Beschreibung": "5 cl Pisco, 3 cl Limettensaft, 2 cl Zuckersirup, Eiweiß, auf Eis geschüttelt",
-      "Menge": "1 Glas",
-      "Preis": "9.00"
-    },
-    {
-      "Kategorie": "Rum Cocktail",
-      "Name": "Mai Tai",
-      "Beschreibung": "4 cl Rum (hell und dunkel gemischt), 2 cl Limettensaft, 1,5 cl Orange Curaçao, 1 cl Mandelsirup",
-      "Menge": "1 Glas",
-      "Preis": "12.00"
-    },
-    {
-      "Kategorie": "Rum Cocktail",
-      "Name": "Margarita TOP10",
-      "Beschreibung": "4 cl Tequila, 2 cl Triple Sec, 2 cl Limettensaft, am Rand gesalzen, auf Eis geschüttelt",
-      "Menge": "1 Glas",
-      "Preis": "12.00"
-    },
-    {
-      "Kategorie": "Rum Cocktail",
-      "Name": "Hemingway Daiquiri",
-      "Beschreibung": "6 cl weißer Rum, 2 cl Grapefruitsaft, 1 cl Maraschino, 1 cl Limettensaft",
-      "Menge": "1 Glas",
-      "Preis": "10.00"
-    },
-    {
-      "Kategorie": "Rum Cocktail",
-      "Name": "Daiquiri TOP10",
-      "Beschreibung": "5 cl weißer Rum, 2 cl Limettensaft, 1 cl Zuckersirup, auf Eis geschüttelt",
-      "Menge": "1 Glas",
-      "Preis": "12.00"
-    },
-    {
-      "Kategorie": "Rum Cocktail",
-      "Name": "Piña Colada",
-      "Beschreibung": "3 cl weißer Rum, 3 cl Kokosnusscreme, 9 cl Ananassaft, auf Eis geschüttelt",
-      "Menge": "1 Glas",
-      "Preis": "10.00"
-    },
-    {
-      "Kategorie": "Rum Cocktail",
-      "Name": "Zombie",
-      "Beschreibung": "4 cl weißer Rum, 4 cl brauner Rum, 2 cl overproof Rum, Ananassaft, Orangensaft, Limettensaft",
-      "Menge": "1 Glas",
-      "Preis": "11.00"
-    },
-    {
-      "Kategorie": "Rum Cocktail",
-      "Name": "Mojito TOP10",
-      "Beschreibung": "4 cl weißer Rum, frische Minze, 2 cl Limettensaft, 2 TL Zucker, mit Soda aufgefüllt",
-      "Menge": "1 Glas",
-      "Preis": "15.00"
-    },
-    {
-      "Kategorie": "Rum Longdrink",
-      "Name": "Cuba Libre",
-      "Beschreibung": "4 cl Rum, mit Cola aufgefüllt, 1 cl Limettensaft",
-      "Menge": "1 Glas",
-      "Preis": "10.00"
-    },
-    {
-      "Kategorie": "Rum Longdrink",
-      "Name": "Rum Punch",
-      "Beschreibung": "4 cl Rum, Orangensaft, Ananassaft, Spritzer Limettensaft, Schuss Grenadine",
-      "Menge": "1 Glas",
-      "Preis": "8.00"
-    },
-    {
-      "Kategorie": "Rum Longdrink",
-      "Name": "Tequila Sunrise",
-      "Beschreibung": "4 cl Tequila, mit Orangensaft aufgefüllt, ein Schuss Grenadine",
-      "Menge": "1 Glas",
-      "Preis": "9.00"
-    },
-    {
-      "Kategorie": "Tequila Longdrink",
-      "Name": "Tequila Paloma",
-      "Beschreibung": "4 cl Tequila, 1 cl Limettensaft, mit Grapefruitsaft und Soda aufgefüllt",
-      "Menge": "1 Glas",
-      "Preis": "9.00"
-    },
-    {
-      "Kategorie": "Tequila Longdrink",
-      "Name": "Paloma",
-      "Beschreibung": "4 cl Tequila, 2 cl Limettensaft, mit Grapefruitlimonade aufgefüllt",
-      "Menge": "1 Glas",
-      "Preis": "9.00"
-    },
-    {
-      "Kategorie": "Whiskey Cocktail",
-      "Name": "Old Fashioned TOP10",
-      "Beschreibung": "5 cl Bourbon oder Rye Whiskey, 1 Zuckerwürfel, einige Spritzer Angostura-Bitter, Eiswürfel",
-      "Menge": "1 Glas",
-      "Preis": "9.00"
-    },
-    {
-      "Kategorie": "Whiskey Cocktail",
-      "Name": "Boulevardier",
-      "Beschreibung": "4 cl Bourbon, 2 cl roter Wermut, 2 cl Campari, auf Eis gerührt",
-      "Menge": "1 Glas",
-      "Preis": "11.00"
-    },
-    {
-      "Kategorie": "Whiskey Cocktail",
-      "Name": "John Collins",
-      "Beschreibung": "5 cl Bourbon, 3 cl Zitronensaft, 1,5 cl Zuckersirup, mit Soda aufgefüllt",
-      "Menge": "1 Glas",
-      "Preis": "11.00"
-    },
-    {
-      "Kategorie": "Whiskey Cocktail",
-      "Name": "Whiskey Sour TOP10",
-      "Beschreibung": "5 cl Bourbon, 3 cl Zitronensaft, 1,5 cl Zuckersirup, optional Eiweiß, auf Eis geschüttelt",
-      "Menge": "1 Glas",
-      "Preis": "10.00"
-    },
-    {
-      "Kategorie": "Whiskey Cocktail",
-      "Name": "Mint Julep",
-      "Beschreibung": "5 cl Bourbon, frische Minze, 2 TL Zucker, Crushed Ice, in einem Silberbecher serviert",
-      "Menge": "1 Glas",
-      "Preis": "10.00"
-    },
-    {
-      "Kategorie": "Whiskey Cocktail",
-      "Name": "Sazerac",
-      "Beschreibung": "5 cl Rye Whiskey, 1 cl Absinth (zum Ausspülen des Glases), 1 Zuckerwürfel, Bitter",
-      "Menge": "1 Glas",
-      "Preis": "10.00"
-    },
-    {
-      "Kategorie": "Whiskey Cocktail",
-      "Name": "Manhattan",
-      "Beschreibung": "5 cl Rye Whiskey, 2 cl roter Wermut, ein Spritzer Angostura-Bitter, auf Eis gerührt",
-      "Menge": "1 Glas",
-      "Preis": "13.00"
-    },
-    {
-      "Kategorie": "Whiskey Cocktail",
-      "Name": "Penicillin",
-      "Beschreibung": "4 cl Scotch Whisky, 1 cl rauchiger Whisky, 2 cl Zitronensaft, 2 cl Honig-Ingwer-Sirup",
-      "Menge": "1 Glas",
-      "Preis": "11.00"
-    },
-    {
-      "Kategorie": "Whiskey Longdrink",
-      "Name": "Lynchburg Lemonade",
-      "Beschreibung": "4 cl Jack Daniel’s, 2 cl Triple Sec, 2 cl Zitronensaft, mit Zitronenlimonade aufgefüllt",
-      "Menge": "1 Glas",
-      "Preis": "13.00"
-    },
-    {
-      "Kategorie": "Whiskey Longdrink",
-      "Name": "Whiskey Cola",
-      "Beschreibung": "4 cl Whiskey, mit Cola aufgefüllt",
-      "Menge": "1 Glas",
-      "Preis": "9.00"
-    },
-    {
-      "Kategorie": "Whiskey Longdrink",
-      "Name": "Highball",
-      "Beschreibung": "4 cl Whiskey, mit Soda aufgefüllt",
-      "Menge": "1 Glas",
-      "Preis": "8.00"
-    },
-    {
-      "Kategorie": "Wodka Longdrink",
-      "Name": "Greyhound",
-      "Beschreibung": "4 cl Wodka oder Gin, mit Grapefruitsaft aufgefüllt",
-      "Menge": "1 Glas",
-      "Preis": "8.00"
-    },
-    {
-      "Kategorie": "Wodka Longdrink",
-      "Name": "Cosmopolitan",
-      "Beschreibung": "4 cl Wodka, 1,5 cl Cointreau, 1,5 cl Limettensaft, 3 cl Cranberrysaft, auf Eis geschüttelt",
-      "Menge": "1 Glas",
-      "Preis": "8.00"
-    },
-    {
-      "Kategorie": "Wodka Longdrink",
-      "Name": "Black Russian",
-      "Beschreibung": "4 cl Wodka, 2 cl Kaffeelikör",
-      "Menge": "1 Glas",
-      "Preis": "11.00"
-    },
-    {
-      "Kategorie": "Wodka Longdrink",
-      "Name": "White Russian",
-      "Beschreibung": "4 cl Wodka, 2 cl Kaffeelikör, 2 cl Sahne",
-      "Menge": "1 Glas",
-      "Preis": "10.00"
-    },
-    {
-      "Kategorie": "Wodka Longdrink",
-      "Name": "Espresso Martini TOP10",
-      "Beschreibung": "4 cl Wodka, 2 cl Kaffeelikör, frischer Espresso, auf Eis geschüttelt",
-      "Menge": "1 Glas",
-      "Preis": "11.00"
-    },
-    {
-      "Kategorie": "Wodka Longdrink",
-      "Name": "Wodka Lemon",
-      "Beschreibung": "4 cl Wodka, mit Bitter Lemon aufgefüllt",
-      "Menge": "1 Glas",
-      "Preis": "12.00"
-    },
-    {
-      "Kategorie": "Wodka Longdrink",
-      "Name": "Cape Codder",
-      "Beschreibung": "4 cl Wodka, mit Cranberrysaft aufgefüllt, Limettenscheibe",
-      "Menge": "1 Glas",
-      "Preis": "8.00"
-    },
-    {
-      "Kategorie": "Wodka Longdrink",
-      "Name": "Moscow Mule TOP10",
-      "Beschreibung": "4 cl Wodka, mit Ginger Beer aufgefüllt, Limettenscheibe",
-      "Menge": "1 Glas",
-      "Preis": "8.00"
-    },
-    {
-      "Kategorie": "Wodka Longdrink",
-      "Name": "Sea Breeze",
-      "Beschreibung": "4 cl Wodka, mit Grapefruit- und Cranberrysaft aufgefüllt",
-      "Menge": "1 Glas",
-      "Preis": "10.00"
-    },
-    {
-      "Kategorie": "Wodka Longdrink",
-      "Name": "Screwdriver",
-      "Beschreibung": "4 cl Wodka, mit Orangensaft aufgefüllt",
-      "Menge": "1 Glas",
-      "Preis": "8.00"
-    },
-    {
-      "Kategorie": "Wodka Longdrink",
-      "Name": "Harvey Wallbanger",
-      "Beschreibung": "4 cl Wodka, mit Orangensaft aufgefüllt, Schuss Galliano",
-      "Menge": "1 Glas",
-      "Preis": "8.00"
-    },
-    {
-      "Kategorie": "Wodka Longdrink",
-      "Name": "Wodka Tonic",
-      "Beschreibung": "4 cl Wodka, mit Tonic Water aufgefüllt, Limettenscheibe",
-      "Menge": "1 Glas",
-      "Preis": "10.00"
-    },
-    {
-      "Kategorie": "Wodka Longdrink",
-      "Name": "Bloody Mary",
-      "Beschreibung": "4 cl Wodka, Tomatensaft, Spritzer Zitronensaft, Worcestersoße, Tabasco, Selleriesalz",
-      "Menge": "1 Glas",
-      "Preis": "8.00"
+      "Preis": "3.50"
     }
   ]
 }
