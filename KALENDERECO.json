@@ -135,7 +135,7 @@
     {
       "DATUM": "8.11.24",
       "VON": "18:00",
-      "BIS": "",
+      "BIS": "23:00",
       "KUNDE": "Krimidinner",
       "EVENT": "",
       "TEILNEHMER": "",
@@ -170,7 +170,7 @@
     },
     {
       "DATUM": "9.11.24",
-      "VON": "",
+      "VON": "13:00",
       "BIS": "",
       "KUNDE": "BGN",
       "EVENT": "",
