@@ -342,8 +342,8 @@
                     const data = snapshot.val();
                     const filteredData = Object.keys(data).filter(key => data[key].Zaehler > 0).map(key => {
     const item = data[key];
-    // Die Daten im CSV-Format mit Tab-Zeichen als Trennzeichen
-    return `${item.Kategorie}\t${item.Name}\t${item.Menge}\t${item.Preis}\t${item.Zaehler}`;
+    // Die Daten im CSV-Format mit ; als Trennzeichen und Werten in Anführungszeichen
+    return `"${item.Kategorie}";"${item.Name}";"${item.Menge}";"${item.Preis}";"${item.Zaehler}"`;
 });
 
                     if (filteredData.length > 0) {
