@@ -152,23 +152,27 @@
             .then(data => {
                 const eventContainer = document.getElementById('event-container');
 
-                const today = new Date();
 const today = new Date();
+
+// Format für die Kopfzeile mit führenden Nullen
+const options = { day: '2-digit', month: '2-digit', year: '2-digit' };
+const displayDate = today.toLocaleDateString('de-DE', options);
+document.getElementById('date-title').innerText += ` ${displayDate}`;
+
+// Format für die JSON-Datenfilterung ohne führende Nullen
 const day = today.getDate(); // Tag ohne führende Null
 const month = today.getMonth() + 1; // Monat ohne führende Null
 const year = today.getFullYear().toString().slice(-2); // Letzte zwei Stellen des Jahres
 const formattedDate = `${day}.${month}.${year}`;
 
-// Filtert die Veranstaltungen basierend auf dem neuen Format
+// Filtert die Veranstaltungen basierend auf dem Format ohne führende Nullen
 const todayEvents = data.events.filter(event => event.DATUM === formattedDate);
-                const todayEvents = data.events.filter(event => event.DATUM === formattedDate);
-                let n = todayEvents.length;
+let n = todayEvents.length;
 
-                if (n === 0) {
-                    document.getElementById('error-message').textContent = 'Heute sind keine Veranstaltungen geplant.';
-                    return;
-                }
-
+if (n === 0) {
+    document.getElementById('error-message').textContent = 'Heute sind keine Veranstaltungen geplant.';
+    return;
+}
                 const footerHeight = document.querySelector('footer').offsetHeight;
                 const headerHeight = document.querySelector('.header').offsetHeight;
                 const totalHeight = window.innerHeight - footerHeight - headerHeight;
