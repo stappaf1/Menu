@@ -343,7 +343,8 @@
                     const filteredData = Object.keys(data).filter(key => data[key].Zaehler > 0).map(key => {
                         const item = data[key];
                         // Die Daten im CSV-Format mit ; als Trennzeichen
-                        return `${item.Kategorie};${item.Name};${item.Menge};${item.Preis.toFixed(2).replace('.', ',')};${item.Zaehler}`;
+                        return `${item.Kategorie};${item.Name};${item.Menge};${parseFloat(item.Preis).toFixed(2).replace('.', ',')};${item.Zaehler}`;
+
                     });
 
                     if (filteredData.length > 0) {
