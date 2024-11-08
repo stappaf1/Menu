@@ -3,72 +3,265 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Getränke Liste</title>
+    <title>Getränkekarte</title>
     <style>
-        /* Styles für die Filterbuttons */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            padding-top: 100px; /* Platz für fixierte Navbar und Filterzeile */
+        }
+
+        /* Fixierte Navbar in Dunkelgrün */
+        nav {
+            background-color: rgb(16, 43, 0); /* Dunkelgrün */
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+
+        /* Filter-Zeile */
         .filter-buttons {
             display: flex;
-            gap: 10px;
-            margin-bottom: 10px;
+            justify-content: center;
+            background-color: #d4e3b3; /* Hellgrün passend zur Karte */
+            padding: 10px;
+            position: fixed;
+            top: 50px;
+            width: 100%;
+            z-index: 999;
+            gap: 15px;
         }
+
         .filter-buttons button {
             padding: 8px 16px;
+            font-size: 1em;
             cursor: pointer;
+            border: none;
+            background-color: rgb(137, 160, 44); /* Hellgrün */
+            color: white;
+            border-radius: 5px;
         }
-        .hidden {
-            display: none;
+
+        .filter-buttons button.active {
+            background-color: rgb(16, 43, 0); /* Dunkelgrün */
         }
-        .drink-item {
-            margin: 10px 0;
+
+        h1, h2 {
+            color: rgb(137, 160, 44); /* Hellgrün */
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            gap: 20px;
+            padding: 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .category {
+            grid-column: 1 / 2;
+            text-align: left;
+            font-size: 1.5em;
+            color: rgb(137, 160, 44);
+            font-weight: bold;
+            margin-bottom: 0;
+        }
+
+        .card-container {
+            display: grid;
+            grid-column: 2 / -1;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            margin-top: 0;
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        .card p {
+            margin: 5px 0;
+            color: #666;
+        }
+
+        .preis-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        .preis {
+            font-weight: bold;
+            font-size: 1.2em;
+            color: rgb(137, 160, 44);
+            text-align: right;
+        }
+
+        .menge {
+            font-size: 1em;
+            color: #666;
+            text-align: left;
+        }
+
+        @media (max-width: 1024px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            .card-container {
+                grid-column: 1 / -1;
+            }
+        }
+
+        .print-btn {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: rgb(137, 160, 44);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+        }
+
+        .print-btn:hover {
+            background-color: #9ba831;
+        }
+
+        @media print {
+            nav, .filter-buttons, .print-btn {
+                display: none;
+            }
+        }
+
+        footer {
+            background-color: rgb(16, 43, 0);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
-    <h1>Getränke Liste</h1>
+    <nav>
+        <a href="index.html">Startseite</a>
+        <a href="speisen.html">Speisen</a>
+        <a href="getraenke.html">Getränke</a>
+    </nav>
 
-    <!-- Filterbuttons -->
     <div class="filter-buttons">
-        <button onclick="filterDrinks('komplett')" id="filter-komplett">KOMPLETT</button>
+        <button onclick="filterDrinks('komplett')" id="filter-komplett" class="active">KOMPLETT</button>
         <button onclick="filterDrinks('wein')" id="filter-wein">WEIN</button>
         <button onclick="filterDrinks('cocktail')" id="filter-cocktail">COCKTAIL</button>
     </div>
 
-    <!-- Getränkeliste -->
-    <div id="drink-list">
-        <div class="drink-item" data-category="Wein">Weißwein</div>
-        <div class="drink-item" data-category="Cocktail">Mojito Cocktail</div>
-        <div class="drink-item" data-category="Wein">Rotwein</div>
-        <div class="drink-item" data-category="Longdrink">Gin Tonic Longdrink</div>
-        <div class="drink-item" data-category="Bier">Bier</div>
-        <div class="drink-item" data-category="Cocktail">Margarita Cocktail</div>
-    </div>
+    <h1>Getränkekarte</h1>
+
+    <div class="container" id="getraenke-container"></div>
+
+    <button class="print-btn" onclick="window.print()">Drucken</button>
+
+    <footer>
+        <p>© 2024 Hotel Alea GmbH - Alle Rechte vorbehalten</p>
+    </footer>
 
     <script>
-        // Funktion zum Filtern der Getränke
+        let alleGetraenke = []; // Speicher für alle Getränke
+
+        // Getränke-Daten aus JSON-Datei laden
+        fetch('getraenke.json')
+            .then(response => response.json())
+            .then(data => {
+                alleGetraenke = data.getraenke;
+                filterDrinks('komplett'); // Standardfilter beim Laden aktivieren
+            })
+            .catch(error => console.error('Fehler beim Laden der Getränkekarte:', error));
+
         function filterDrinks(category) {
-            const items = document.querySelectorAll('.drink-item');
+            const getraenkeContainer = document.getElementById('getraenke-container');
+            getraenkeContainer.innerHTML = ''; // Vorherige Einträge löschen
 
-            items.forEach(item => {
-                const itemCategory = item.getAttribute('data-category').toLowerCase();
-
-                // Anzeigen oder Ausblenden basierend auf dem Filter
-                if (category === 'komplett') {
-                    item.classList.remove('hidden');
-                } else if (category === 'wein' && itemCategory.includes('wein')) {
-                    item.classList.remove('hidden');
-                } else if (category === 'cocktail' && (itemCategory.includes('cocktail') || itemCategory.includes('longdrink'))) {
-                    item.classList.remove('hidden');
-                } else {
-                    item.classList.add('hidden');
-                }
+            // Filterung basierend auf Kategorie
+            const gefilterteGetraenke = alleGetraenke.filter(getraenk => {
+                const lowerCategory = (getraenk.Kategorie || '').toLowerCase();
+                if (category === 'komplett') return true;
+                if (category === 'wein') return lowerCategory.includes('wein');
+                if (category === 'cocktail') return lowerCategory.includes('cocktail') || lowerCategory.includes('longdrink');
+                return false;
             });
-        }
 
-        // Initialer Filter - KOMPLETT aktivieren
-        document.addEventListener('DOMContentLoaded', () => {
-            filterDrinks('komplett');
-            document.getElementById('filter-komplett').classList.add('active');
-        });
+            // Getränkekategorien dynamisch anzeigen
+            const kategorien = {};
+            gefilterteGetraenke.forEach(getraenk => {
+                const kategorie = getraenk.Kategorie || 'Unbekannte Kategorie';
+                if (!kategorien[kategorie]) kategorien[kategorie] = [];
+                kategorien[kategorie].push(getraenk);
+            });
+
+            // Kategorieblöcke und Karten erstellen
+            for (const [kategorie, getraenke] of Object.entries(kategorien)) {
+                const kategorieTitel = document.createElement('h2');
+                kategorieTitel.classList.add('category');
+                kategorieTitel.textContent = kategorie;
+                getraenkeContainer.appendChild(kategorieTitel);
+
+                const cardContainer = document.createElement('div');
+                cardContainer.classList.add('card-container');
+
+                getraenke.forEach(getraenk => {
+                    const card = document.createElement('div');
+                    card.classList.add('card');
+
+                    const preis = typeof getraenk.Preis === 'number' ? getraenk.Preis.toFixed(2) : getraenk.Preis || 'Preis nicht verfügbar';
+                    const menge = getraenk.Menge || 'Menge nicht verfügbar';
+
+                    card.innerHTML = `
+                        <h3>${getraenk.Name}</h3>
+                        <p>${getraenk.Beschreibung}</p>
+                        <div class="preis-container">
+                            <span class="menge">${menge}</span>
+                            <span class="preis">${preis} €</span>
+                        </div>
+                    `;
+                    cardContainer.appendChild(card);
+                });
+
+                getraenkeContainer.appendChild(cardContainer);
+            }
+
+            // Aktiven Filterbutton hervorheben
+            document.querySelectorAll('.filter-buttons button').forEach(btn => btn.classList.remove('active'));
+            document.getElementById(`filter-${category}`).classList.add('active');
+        }
     </script>
-</body>
-</html>
+</body
