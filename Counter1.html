@@ -74,10 +74,12 @@
             font-size: 16px;
             color: #333;
         }
+        /* Neue CSS-Klasse für Name in Rot und Fett */
         .red-bold {
             color: red;
             font-weight: bold;
         }
+        /* Modal Style */
         #project-modal {
             display: none;
             position: fixed;
@@ -94,6 +96,7 @@
             width: 200px;
             padding: 5px;
         }
+        
         .item:nth-child(odd) {
             background-color: #e0f7fa;
         }
@@ -111,13 +114,14 @@
         </div>
         <div>
             <div id="total">Gesamt: €0.00</div>
-            <div id="project-name"></div>
+            <div id="project-name"></div> <!-- Hier wird der Projektname angezeigt -->
         </div>
     </div>
 
     <div id="project-info"></div>
     <div id="getraenke-container"></div>
 
+    <!-- Modal-Dialog für Projektauswahl -->
     <div id="project-modal">
         <select id="project-dropdown">
             <option value="">Bitte wählen...</option>
@@ -159,7 +163,7 @@
                 currentProject = sanitizedProjektname;
                 await initializeDrinksInDatabase(sanitizedProjektname);
                 await loadDrinksFromDatabase(sanitizedProjektname);
-                updateProjectNameDisplay(sanitizedProjektname);
+                updateProjectNameDisplay(sanitizedProjektname);  // Aktualisiert die Kopfzeile mit dem Projektnamen
             }
         };
 
@@ -202,7 +206,7 @@
                 const sanitizedProjektname = sanitizeProjectName(projektname);
                 currentProject = sanitizedProjektname;
                 await loadDrinksFromDatabase(sanitizedProjektname);
-                updateProjectNameDisplay(sanitizedProjektname);
+                updateProjectNameDisplay(sanitizedProjektname);  // Aktualisiert die Kopfzeile mit dem Projektnamen
                 closeModal();
             } else {
                 alert("Bitte ein Projekt auswählen.");
@@ -273,24 +277,21 @@
                         const minusButton = document.createElement('button');
                         minusButton.className = 'button minus-button';
                         minusButton.textContent = '-';
-                        minusButton.onclick = () => updateDrinkCount(projektname, key, -1);
+                        minusButton.onclick = () => updateDrinkCount(key, -1);
 
                         const plusButton = document.createElement('button');
                         plusButton.className = 'button plus-button';
                         plusButton.textContent = '+';
-                        plusButton.onclick = () => updateDrinkCount(projektname, key, 1);
+                        plusButton.onclick = () => updateDrinkCount(key, 1);
 
                         buttonContainer.appendChild(minusButton);
                         buttonContainer.appendChild(plusButton);
 
                         itemDiv.appendChild(infoDiv);
                         itemDiv.appendChild(buttonContainer);
+
                         container.appendChild(itemDiv);
                     });
-
-                    updateTotalDisplay(data);
-                } else {
-                    container.innerHTML = 'Keine Getränkedaten gefunden.';
                 }
             } catch (error) {
                 console.error("Fehler beim Laden der Getränkedaten:", error);
@@ -298,13 +299,30 @@
             }
         }
 
-        function updateTotalDisplay(data) {
-            let total = 0;
-            Object.keys(data).forEach(key => {
-                const item = data[key];
-                total += item.Zaehler * item.Preis;
+        function updateDrinkCount(key, change) {
+            const itemRef = ref(database, `/projekte/${currentProject}/getraenke/${key}`);
+            get(itemRef).then(snapshot => {
+                if (snapshot.exists()) {
+                    const item = snapshot.val();
+                    const newZaehler = item.Zaehler + change;
+                    if (newZaehler >= 0) {
+                        update(itemRef, { Zaehler: newZaehler });
+                        document.getElementById(`zaehler-${key}`).textContent = newZaehler;
+                        updateTotal();
+                    }
+                }
             });
+        }
 
+        function updateTotal() {
+            let total = 0;
+            const container = document.getElementById('getraenke-container');
+            const items = container.getElementsByClassName('item');
+            for (let item of items) {
+                const zaehler = item.querySelector('.count').textContent;
+                const preis = item.querySelector('.info').textContent.split('|')[3].trim().substring(1);
+                total += parseFloat(preis) * parseInt(zaehler);
+            }
             document.getElementById('total').textContent = `Gesamt: €${total.toFixed(2)}`;
         }
 
@@ -312,55 +330,42 @@
             document.getElementById('project-name').textContent = `Projekt: ${projektname}`;
         }
 
-        async function updateDrinkCount(projektname, key, increment) {
+        window.sendData = async function() {
+            if (!currentProject) {
+                alert("Kein Projekt geöffnet.");
+                return;
+            }
+
             try {
-                const snapshot = await get(ref(database, `/projekte/${projektname}/getraenke/${key}`));
+                const snapshot = await get(ref(database, `/projekte/${currentProject}/getraenke`));
                 if (snapshot.exists()) {
                     const data = snapshot.val();
-                    const newCount = data.Zaehler + increment;
-                    if (newCount >= 0) {
-                        await update(ref(database, `/projekte/${projektname}/getraenke/${key}`), { Zaehler: newCount });
-                        document.getElementById(`zaehler-${key}`).textContent = newCount;
-                        await loadDrinksFromDatabase(projektname);
+                    const filteredData = Object.keys(data).filter(key => data[key].Zaehler > 0).map(key => {
+                        const item = data[key];
+                        // Die Daten im CSV-Format mit ; als Trennzeichen
+                        return `${item.Kategorie};${item.Name};${item.Menge};${item.Preis};${item.Zaehler}`;
+                    });
+
+                    if (filteredData.length > 0) {
+                        // CSV-Inhalt erstellen: Projektnamen + zwei Leerzeilen + die Daten
+                        const csvContent = `Projektname: ${currentProject}\n\n` + 
+                                           "Kategorie;Name;Menge;Preis;Zaehler\n" + 
+                                           filteredData.join("\n");
+
+                        // Mailto-Link zum Versenden der CSV-Datei erstellen
+                        const mailtoLink = `mailto:event@hotel-alea.de?subject=Projekt ${currentProject} - Getränkeübersicht&body=${encodeURIComponent(csvContent)}`;
+                        window.location.href = mailtoLink;
+                    } else {
+                        alert("Keine Artikel mit Zaehler > 0 zum Senden.");
                     }
+                } else {
+                    alert("Keine Getränkedaten gefunden.");
                 }
             } catch (error) {
-                console.error("Fehler beim Aktualisieren des Getränkezählers:", error);
-                alert("Fehler beim Aktualisieren des Getränkezählers.");
+                console.error("Fehler beim Senden der Daten:", error);
+                alert("Fehler beim Senden der Daten.");
             }
         }
-
-        window.sendData = function() {
-            if (currentProject) {
-                const projectPath = `/projekte/${currentProject}/getraenke`;
-                get(ref(database, projectPath)).then(snapshot => {
-                    if (snapshot.exists()) {
-                        const data = snapshot.val();
-                        const filteredData = Object.keys(data).filter(key => data[key].Zaehler > 0).map(key => {
-                            const item = data[key];
-                            // Ausgabe im CSV-Format mit Tab-Trennzeichen
-                            return `${item.Kategorie}\t${item.Name}\t${item.Menge}\t${item.Preis}\t${item.Zaehler}`;
-                        });
-
-                        const csvContent = "data:text/csv;charset=utf-8," + filteredData.join("\n");
-                        const encodedUri = encodeURI(csvContent);
-                        const link = document.createElement("a");
-                        link.setAttribute("href", encodedUri);
-                        link.setAttribute("download", `projekt_${currentProject}.csv`);
-                        document.body.appendChild(link);
-                        link.click();
-                        document.body.removeChild(link);
-                    } else {
-                        alert("Keine Daten vorhanden.");
-                    }
-                }).catch(error => {
-                    console.error("Fehler beim Senden der Daten:", error);
-                    alert("Fehler beim Senden der Daten.");
-                });
-            } else {
-                alert("Kein Projekt ausgewählt.");
-            }
-        };
     </script>
 </body>
 </html>
