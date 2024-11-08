@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getränke Liste</title>
+    <style>
+        /* Styles für die Filterbuttons */
+        .filter-buttons {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        .filter-buttons button {
+            padding: 8px 16px;
+            cursor: pointer;
+        }
+        .hidden {
+            display: none;
+        }
+        .drink-item {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Getränke Liste</h1>
+
+    <!-- Filterbuttons -->
+    <div class="filter-buttons">
+        <button onclick="filterDrinks('komplett')" id="filter-komplett">KOMPLETT</button>
+        <button onclick="filterDrinks('wein')" id="filter-wein">WEIN</button>
+        <button onclick="filterDrinks('cocktail')" id="filter-cocktail">COCKTAIL</button>
+    </div>
+
+    <!-- Getränkeliste -->
+    <div id="drink-list">
+        <div class="drink-item" data-category="Wein">Weißwein</div>
+        <div class="drink-item" data-category="Cocktail">Mojito Cocktail</div>
+        <div class="drink-item" data-category="Wein">Rotwein</div>
+        <div class="drink-item" data-category="Longdrink">Gin Tonic Longdrink</div>
+        <div class="drink-item" data-category="Bier">Bier</div>
+        <div class="drink-item" data-category="Cocktail">Margarita Cocktail</div>
+    </div>
+
+    <script>
+        // Funktion zum Filtern der Getränke
+        function filterDrinks(category) {
+            const items = document.querySelectorAll('.drink-item');
+
+            items.forEach(item => {
+                const itemCategory = item.getAttribute('data-category').toLowerCase();
+
+                // Anzeigen oder Ausblenden basierend auf dem Filter
+                if (category === 'komplett') {
+                    item.classList.remove('hidden');
+                } else if (category === 'wein' && itemCategory.includes('wein')) {
+                    item.classList.remove('hidden');
+                } else if (category === 'cocktail' && (itemCategory.includes('cocktail') || itemCategory.includes('longdrink'))) {
+                    item.classList.remove('hidden');
+                } else {
+                    item.classList.add('hidden');
+                }
+            });
+        }
+
+        // Initialer Filter - KOMPLETT aktivieren
+        document.addEventListener('DOMContentLoaded', () => {
+            filterDrinks('komplett');
+            document.getElementById('filter-komplett').classList.add('active');
+        });
+    </script>
+</body>
+</html>
