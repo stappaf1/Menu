@@ -205,6 +205,18 @@
       "BEMERKUNG": ""
     },
     {
+      "DATUM": "12.11.24",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Allianz",
+      "EVENT": "",
+      "TEILNEHMER": "12",
+      "TAGUNGSRAUM": "ecoRefugium T30",
+      "RAUMHINWEIS": "",
+      "BILD": "T30.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
       "DATUM": "11.11.24",
       "VON": "09:00",
       "BIS": "",
@@ -232,30 +244,6 @@
       "DATUM": "13.11.24",
       "VON": "",
       "BIS": "",
-      "KUNDE": "MediaMarktSaturn Retail Group  ",
-      "EVENT": "",
-      "TEILNEHMER": "8",
-      "TAGUNGSRAUM": "ecoRefugium T30",
-      "RAUMHINWEIS": "",
-      "BILD": "T30.jpeg",
-      "BEMERKUNG": ""
-    },
-    {
-      "DATUM": "14.11.24",
-      "VON": "",
-      "BIS": "",
-      "KUNDE": "MediaMarktSaturn Retail Group  ",
-      "EVENT": "",
-      "TEILNEHMER": "8",
-      "TAGUNGSRAUM": "ecoRefugium T30",
-      "RAUMHINWEIS": "",
-      "BILD": "T30.jpeg",
-      "BEMERKUNG": ""
-    },
-    {
-      "DATUM": "13.11.24",
-      "VON": "",
-      "BIS": "",
       "KUNDE": "Audi Immobilien Solutions GmbH",
       "EVENT": "",
       "TEILNEHMER": "28",
@@ -274,6 +262,18 @@
       "TAGUNGSRAUM": "ecoForum T120",
       "RAUMHINWEIS": "",
       "BILD": "T120.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "14.11.24",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Hecht",
+      "EVENT": "",
+      "TEILNEHMER": "9",
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "",
+      "BILD": "T90.jpeg",
       "BEMERKUNG": ""
     },
     {
