@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel FAQ</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Seitenlayout */
+        .sidebar {
+            width: 20%;
+            background-color: #d4e3b3;
+            padding: 20px;
+            overflow-y: auto;
+            border-right: 2px solid #ccc;
+        }
+
+        .sidebar h2 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            color: #103B00;
+        }
+
+        .faq-link {
+            display: block;
+            padding: 10px;
+            margin-bottom: 5px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .faq-link:hover {
+            background-color: #9ba831;
+            color: white;
+        }
+
+        .content {
+            width: 80%;
+            padding: 20px;
+        }
+
+        .content h1 {
+            color: #103B00;
+        }
+
+        .content img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .content p {
+            font-size: 1.1em;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <!-- Seitenleiste für Links -->
+    <div class="sidebar" id="sidebar">
+        <h2>FAQs</h2>
+        <!-- Dynamische Links werden hier eingefügt -->
+    </div>
+
+    <!-- Hauptinhalt -->
+    <div class="content" id="content">
+        <h1>Wählen Sie eine Frage aus der Liste links</h1>
+        <!-- Dynamischer Inhalt wird hier angezeigt -->
+    </div>
+
+    <script>
+        // Beispiel-Datenbank für FAQs
+        const faqDaten = [
+            {
+                id: 1,
+                titel: 'Check-in-Zeit',
+                bild: 'checkin.jpg',
+                beschreibung: 'Der Check-in ist ab 15:00 Uhr möglich. Falls Sie früher anreisen, kontaktieren Sie bitte die Rezeption.'
+            },
+            {
+                id: 2,
+                titel: 'Frühstückszeiten',
+                bild: 'breakfast.jpg',
+                beschreibung: 'Das Frühstück wird täglich von 07:00 bis 10:00 Uhr serviert.'
+            },
+            {
+                id: 3,
+                titel: 'Parkmöglichkeiten',
+                bild: 'parking.jpg',
+                beschreibung: 'Wir bieten kostenlose Parkplätze für unsere Gäste. Bitte registrieren Sie Ihr Kennzeichen beim Check-in.'
+            }
+        ];
+
+        // Elemente aus der DOM holen
+        const sidebar = document.getElementById('sidebar');
+        const content = document.getElementById('content');
+
+        // Seitenleiste mit FAQ-Links erstellen
+        faqDaten.sort((a, b) => a.titel.localeCompare(b.titel)).forEach(faq => {
+            const link = document.createElement('a');
+            link.classList.add('faq-link');
+            link.textContent = faq.titel;
+            link.href = '#';
+            link.onclick = () => {
+                zeigeFAQ(faq);
+                return false;
+            };
+            sidebar.appendChild(link);
+        });
+
+        // Funktion zur Anzeige der FAQ-Inhalte
+        function zeigeFAQ(faq) {
+            content.innerHTML = `
+                <h1>${faq.titel}</h1>
+                <img src="${faq.bild}" alt="${faq.titel}">
+                <p>${faq.beschreibung}</p>
+            `;
+        }
+    </script>
+</body>
+</html>
