@@ -3,7 +3,14 @@
     {
       "Kategorie": "Vorspeise",
       "Name": "Gemischtes Salatbuffet",
-      "Beschreibung": "Eine frische Auswahl an knackigen Salaten, saisonalem Gemüse und feinen Dressings.",
+      "Beschreibung": "Eine frische Auswahl an knackigen Salaten, saisonalem Gemüse und Balsamicodressing",
+      "Menge": "Buffet",
+      "Preis": ""
+    },
+    {
+      "Kategorie": "Vorpseise",
+      "Name": "Rauchpaprikasuppe",
+      "Beschreibung": "Rauchige Paprikasuppe - vegetarisch",
       "Menge": "Buffet",
       "Preis": ""
     },
@@ -16,7 +23,7 @@
     },
     {
       "Kategorie": "Hauptspeise",
-      "Name": "Ravioli Pecorino & Feige",
+      "Name": "Spinatknödel in Tomatensugo",
       "Beschreibung": "Hausgemachte Ravioli, gefüllt mit feinem Pecorino-Käse und süßen Feigen, in einer leichten Kräuterbutter.",
       "Menge": "Buffet",
       "Preis": ""
