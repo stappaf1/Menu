@@ -54,7 +54,7 @@
       "Name": "Apfelsaft",
       "Beschreibung": "Frischer Apfelsaft, pur oder als Schorle genießbar.",
       "Menge": "0,2L",
-      "Preis": "2.50"
+      "Preis": "2.90"
     },
     {
       "Kategorie": "Alkoholfreies",
@@ -205,7 +205,7 @@
     },
     {
       "Kategorie": "Aperitif",
-      "Name": "Aperol Spritz TOP10",
+      "Name": "Aperol Spritz",
       "Beschreibung": "Aperol, Prosecco, mit Soda aufgefüllt",
       "Menge": "1 Glas",
       "Preis": "6.50"
