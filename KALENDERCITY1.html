@@ -44,7 +44,7 @@
             padding: 20px;
             display: flex;
             flex-direction: column;
-            font-size: 18px; /* Basis-Schriftgröße für den Detailbereich */
+            font-size: 22px; /* Vergrößerte Schriftgröße für den Detailbereich */
         }
         .event-bar {
             display: flex;
@@ -85,7 +85,7 @@
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            gap: 2px;
+            gap: 0; /* Abstand zwischen Zeilen entfernt */
         }
         .green-background-1 {
             background-color: #efebdc;
@@ -93,20 +93,28 @@
         .green-background-2 {
             background-color: #ffffe0;
         }
+        .customer-text,
+        .event-text,
+        .time-text,
+        .remark-text {
+            margin: 0; /* Entfernt Leerzeilen */
+            padding: 0;
+            line-height: 1.2; /* Kompaktere Zeilenhöhe */
+        }
         .customer-text {
-            font-size: clamp(20px, 2.5vw, 30px); /* Vergrößerte Schriftgröße */
+            font-size: 22px;
             color: black;
         }
         .event-text {
-            font-size: clamp(18px, 2.2vw, 28px); /* Vergrößerte Schriftgröße */
+            font-size: 22px;
             color: darkgray;
         }
         .time-text {
-            font-size: clamp(18px, 2.2vw, 28px); /* Vergrößerte Schriftgröße */
+            font-size: 22px;
             color: red;
         }
         .remark-text {
-            font-size: clamp(16px, 2vw, 26px); /* Vergrößerte Schriftgröße */
+            font-size: 22px;
             color: darkgray;
         }
         .error-message {
