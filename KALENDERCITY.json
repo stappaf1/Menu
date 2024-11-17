@@ -17,6 +17,18 @@
       "VON": "09:00",
       "BIS": "17:00",
       "KUNDE": "Meier Anlagenbau GmbH",
+      "EVENT": "sonsties Event",
+      "TEILNEHMER": "6",
+      "TAGUNGSRAUM": "Weitblick T100",
+      "RAUMHINWEIS": "",
+      "BILD": "T10.mp4",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "17.11.24",
+      "VON": "09:00",
+      "BIS": "17:00",
+      "KUNDE": "Meier Anlagenbau GmbH",
       "EVENT": "Schulung",
       "TEILNEHMER": "6",
       "TAGUNGSRAUM": "großerFreiraum T60",
@@ -34,18 +46,6 @@
       "TAGUNGSRAUM": "Weitblick T100",
       "RAUMHINWEIS": "",
       "BILD": "T100-2.jpeg",
-      "BEMERKUNG": ""
-    },
-    {
-      "DATUM": "17.11.24",
-      "VON": "09:00",
-      "BIS": "17:00",
-      "KUNDE": "Meier Anlagenbau GmbH",
-      "EVENT": "sonsties Event",
-      "TEILNEHMER": "6",
-      "TAGUNGSRAUM": "Weitblick T100",
-      "RAUMHINWEIS": "",
-      "BILD": "T10.mp4",
       "BEMERKUNG": ""
     }
   ]
