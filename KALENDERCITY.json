@@ -5,7 +5,7 @@
       "VON": "09:00",
       "BIS": "17:00",
       "KUNDE": "Meier Anlagenbau GmbH",
-      "EVENT": "",
+      "EVENT": "Vertriebstagung",
       "TEILNEHMER": "6",
       "TAGUNGSRAUM": "kleinerFreiraum T10",
       "RAUMHINWEIS": "",
@@ -13,11 +13,11 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "16.11.24",
+      "DATUM": "17.11.24",
       "VON": "09:00",
       "BIS": "17:00",
       "KUNDE": "Meier Anlagenbau GmbH",
-      "EVENT": "",
+      "EVENT": "Schulung",
       "TEILNEHMER": "6",
       "TAGUNGSRAUM": "großerFreiraum T60",
       "RAUMHINWEIS": "",
@@ -25,11 +25,11 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "16.11.24",
+      "DATUM": "17.11.24",
       "VON": "09:00",
       "BIS": "17:00",
       "KUNDE": "Meier Anlagenbau GmbH",
-      "EVENT": "",
+      "EVENT": "sonsties Event",
       "TEILNEHMER": "6",
       "TAGUNGSRAUM": "Weitblick T100",
       "RAUMHINWEIS": "",
