@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signage - Alea Eco</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            position: relative;
+            min-height: 100vh;
+        }
+        .header {
+            background-color: #d3d3d3;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .header img {
+            max-height: 50px;
+        }
+        .header .title {
+            flex-grow: 1;
+            text-align: center;
+            font-size: 1em;
+        }
+        .header .clock-icon {
+            width: 50px;
+            height: 50px;
+        }
+        footer {
+            background-color: #d3d3d3;
+            padding: 10px;
+            text-align: center;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            font-size: 1em;
+        }
+        .event-container {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            font-size: 1.5em;
+        }
+        .event-bar {
+            display: flex;
+            align-items: stretch;
+            margin: calc(var(--bar-height) / 100) 0;
+            height: var(--bar-height);
+            overflow: hidden;
+        }
+        .segment-1 {
+            width: calc(var(--bar-height) * 1.35);
+            background-color: gray;
+            position: relative;
+        }
+        .segment-1 video, .segment-1 img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .participant-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 20%;
+            height: 20%;
+            background-color: black;
+            color: white;
+            font-size: 0.8em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2px;
+            box-sizing: border-box;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+        .segment-2 {
+            flex-grow: 1;
+            padding-left: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0;
+        }
+        .green-background-1 {
+            background-color: #efebdc;
+        }
+        .green-background-2 {
+            background-color: #ffffe0;
+        }
+        .customer-text,
+        .event-text,
+        .time-text,
+        .remark-text,
+        .ort-text {
+            margin: 0;
+            padding: 0;
+            line-height: 1.2;
+        }
+        .customer-text {
+            font-size: 42px;
+            font-weight: bold;
+            color: black;
+        }
+        .ort-text {
+            font-size: 22px;
+            color: darkgreen;
+            margin-top: 5px;
+        }
+        .event-text {
+            font-size: 22px;
+            color: darkgray;
+        }
+        .time-text {
+            font-size: 22px;
+            color: red;
+        }
+        .remark-text {
+            font-size: 22px;
+            color: darkgray;
+        }
+        .error-message {
+            color: red;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="https://cdn.prod.website-files.com/60d2e4a3b351ee2c91f53a1e/60f9ca16c53dae6854816379_Logo%20Alea.svg" alt="Alea Logo">
+        <div class="title">
+            <h1 id="date-title">Willkommen bei Alea Eco</h1>
+        </div>
+        <img src="Uhrensymbol.png" alt="Uhrensymbol" class="clock-icon">
+    </div>
+    <div class="event-container" id="event-container">
+        <!-- Event-Daten werden hier dynamisch hinzugefügt -->
+    </div>
+    <footer>
+        © 2024 Hotel Alea GmbH - Alle Rechte vorbehalten.
+    </footer>
+    <div class="error-message" id="error-message"></div>
+    <script>
+        fetch('https://stappaf1.github.io/Menu/KALENDERECO.json')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Netzwerkantwort war nicht ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                const eventContainer = document.getElementById('event-container');
+
+                const today = new Date();
+                const options = { day: '2-digit', month: '2-digit', year: '2-digit' };
+                const formattedDate = today.toLocaleDateString('de-DE', options);
+
+                document.getElementById('date-title').innerText += ` ${formattedDate}`;
+
+                const todayEvents = data.events.filter(event => event.DATUM === formattedDate);
+                let n = todayEvents.length;
+
+                if (n === 0) {
+                    document.getElementById('error-message').textContent = 'Heute sind keine Veranstaltungen geplant.';
+                    return;
+                }
+
+                const footerHeight = document.querySelector('footer').offsetHeight;
+                const headerHeight = document.querySelector('.header').offsetHeight;
+                const totalHeight = window.innerHeight - footerHeight - headerHeight;
+
+                if (n === 1) {
+                    n = 2; // Simuliert zwei Balken, wenn nur eine Veranstaltung
+                }
+
+                const barHeight = totalHeight / 100 * (99 / n - 1);
+
+                document.documentElement.style.setProperty('--bar-height', `${barHeight}px`);
+
+                todayEvents.forEach((event, index) => {
+                    const bar = document.createElement('div');
+                    bar.classList.add('event-bar');
+
+                    const segment1 = document.createElement('div');
+                    segment1.classList.add('segment-1');
+
+                    // Überprüfen, ob BILD ein Video oder Bild ist
+                    const mediaElement = document.createElement(event.BILD.includes('.mp4') || event.BILD.includes('.webm') ? 'video' : 'img');
+                    if (event.BILD.includes('.mp4') || event.BILD.includes('.webm')) {
+                        // Video-Tag verwenden
+                        mediaElement.src = event.BILD;
+                        mediaElement.autoplay = true;
+                        mediaElement.loop = true;
+                        mediaElement.muted = true;
+                    } else {
+                        // Bild-Tag verwenden
+                        mediaElement.src = event.BILD;
+                    }
+                    mediaElement.classList.add('media-element');
+                    segment1.appendChild(mediaElement);
+
+                    if (event.TEILNEHMER) {
+                        const overlay = document.createElement('div');
+                        overlay.classList.add('participant-overlay');
+                        overlay.textContent = event.TEILNEHMER;
+                        segment1.appendChild(overlay);
+                    }
+
+                    const segment2 = document.createElement('div');
+                    segment2.classList.add('segment-2');
+
+                    if (index % 2 === 0) {
+                        segment2.classList.add('green-background-1');
+                    } else {
+                        segment2.classList.add('green-background-2');
+                    }
+
+                    const customerText = document.createElement('p');
+                    customerText.classList.add('customer-text');
+                    customerText.textContent = event.KUNDE;
+                    segment2.appendChild(customerText);
+
+                    // Ort (Raum)
+                    const ortText = document.createElement('p');
+                    ortText.classList.add('ort-text');
+                    ortText.textContent = `in ${event.TAGUNGSRAUM} ${event.RAUMHINWEIS || ''}`;
+                    segment2.appendChild(ortText);
+
+                    if (event.EVENT) {
+                        const eventText = document.createElement('p');
+                        eventText.classList.add('event-text');
+                        eventText.textContent = event.EVENT;
+                        segment2.appendChild(eventText);
+                    }
+
+                    const timeText = document.createElement('p');
+                    timeText.classList.add('time-text');
+                    if (event.VON && event.BIS) {
+                        timeText.textContent = `von ${event.VON} bis ${event.BIS}`;
+                    } else if (event.VON) {
+                        timeText.textContent = `ab ${event.VON}`;
+                    }
+                    segment2.appendChild(timeText);
+
+                    if (event.BEMERKUNG) {
+                        const remarkText = document.createElement('p');
+                        remarkText.classList.add('remark-text');
+                        remarkText.textContent = event.BEMERKUNG;
+                        segment2.appendChild(remarkText);
+                    }
+
+                    bar.appendChild(segment1);
+                    bar.appendChild(segment2);
+                    eventContainer.appendChild(bar);
+                });
+            })
+            .catch(error => {
+                document.getElementById('error-message').textContent = `Fehler beim Laden der JSON-Daten: ${error.message}`;
+            });
+    </script>
+</body>
+</html>
