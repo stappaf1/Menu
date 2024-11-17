@@ -58,7 +58,7 @@
             background-color: gray;
             position: relative;
         }
-        .segment-1 video {
+        .segment-1 video, .segment-1 img {
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -190,13 +190,20 @@
                     const segment1 = document.createElement('div');
                     segment1.classList.add('segment-1');
 
-                    // Video-Tag anstelle von Bild verwenden
-                    const video = document.createElement('video');
-                    video.src = event.VIDEO;  // Angenommen, event.VIDEO enthält die URL des Videos
-                    video.autoplay = true;
-                    video.loop = true;
-                    video.muted = true;
-                    segment1.appendChild(video);
+                    // Überprüfen, ob BILD ein Video oder Bild ist
+                    const mediaElement = document.createElement(event.BILD.includes('.mp4') || event.BILD.includes('.webm') ? 'video' : 'img');
+                    if (event.BILD.includes('.mp4') || event.BILD.includes('.webm')) {
+                        // Video-Tag verwenden
+                        mediaElement.src = event.BILD;
+                        mediaElement.autoplay = true;
+                        mediaElement.loop = true;
+                        mediaElement.muted = true;
+                    } else {
+                        // Bild-Tag verwenden
+                        mediaElement.src = event.BILD;
+                    }
+                    mediaElement.classList.add('media-element');
+                    segment1.appendChild(mediaElement);
 
                     if (event.TEILNEHMER) {
                         const overlay = document.createElement('div');
