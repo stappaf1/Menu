@@ -44,7 +44,7 @@
             padding: 20px;
             display: flex;
             flex-direction: column;
-            font-size: 1.5em; /* Vergrößerte Schriftgröße für den Detailbereich */
+            font-size: 1.5em;
         }
         .event-bar {
             display: flex;
@@ -85,7 +85,7 @@
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            gap: 0; /* Abstand zwischen Zeilen entfernt */
+            gap: 0;
         }
         .green-background-1 {
             background-color: #efebdc;
@@ -96,15 +96,21 @@
         .customer-text,
         .event-text,
         .time-text,
-        .remark-text {
-            margin: 0; /* Entfernt Leerzeilen */
+        .remark-text,
+        .ort-text {
+            margin: 0;
             padding: 0;
-            line-height: 1.2; /* Kompaktere Zeilenhöhe */
+            line-height: 1.2;
         }
         .customer-text {
             font-size: 42px;
             font-weight: bold;
             color: black;
+        }
+        .ort-text {
+            font-size: 32px;
+            color: darkgreen; /* Beispiel für eine andere Farbe */
+            margin-top: 5px;
         }
         .event-text {
             font-size: 22px;
@@ -207,8 +213,14 @@
 
                     const customerText = document.createElement('p');
                     customerText.classList.add('customer-text');
-                    customerText.textContent = `${event.KUNDE} in ${event.TAGUNGSRAUM} ${event.RAUMHINWEIS || ''}`;
+                    customerText.textContent = event.KUNDE;  // Nur der Kunde
                     segment2.appendChild(customerText);
+
+                    // Neues Element für den Ort (Raum) hinzufügen
+                    const ortText = document.createElement('p');
+                    ortText.classList.add('ort-text');
+                    ortText.textContent = `in ${event.TAGUNGSRAUM} ${event.RAUMHINWEIS || ''}`; // Ort
+                    segment2.appendChild(ortText);
 
                     if (event.EVENT) {
                         const eventText = document.createElement('p');
