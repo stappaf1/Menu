@@ -11,6 +11,30 @@
       "RAUMHINWEIS": "",
       "BILD": "T10.jpeg",
       "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "17.11.24",
+      "VON": "09:00",
+      "BIS": "17:00",
+      "KUNDE": "Meier Anlagenbau GmbH",
+      "EVENT": "Jahrestagung",
+      "TEILNEHMER": "6",
+      "TAGUNGSRAUM": "großerFreiraum T60",
+      "RAUMHINWEIS": "",
+      "BILD": "T60.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "17.11.24",
+      "VON": "09:00",
+      "BIS": "17:00",
+      "KUNDE": "Meier Anlagenbau GmbH",
+      "EVENT": "Jahrestagung",
+      "TEILNEHMER": "6",
+      "TAGUNGSRAUM": "Weitblick T100",
+      "RAUMHINWEIS": "",
+      "BILD": "T100.jpeg",
+      "BEMERKUNG": ""
     }
   ]
 }
