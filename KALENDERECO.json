@@ -311,6 +311,18 @@
       "RAUMHINWEIS": "",
       "BILD": "T200-Business.jpeg",
       "BEMERKUNG": "08:00 Begrüßung 10:30 (K) 12:30 (M) 14:45 (K)"
+    },
+    {
+      "DATUM": "17.11.24",
+      "VON": "09:00",
+      "BIS": "17:00",
+      "KUNDE": "Dipl. Ing. Müller GmbH",
+      "EVENT": "Jahresabschlusstagung",
+      "TEILNEHMER": "6",
+      "TAGUNGSRAUM": "Weitblick T100",
+      "RAUMHINWEIS": "",
+      "BILD": "T10.mp4",
+      "BEMERKUNG": ""
     }
   ]
 }
