@@ -383,6 +383,18 @@
       "RAUMHINWEIS": "",
       "BILD": "T200.mp4",
       "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "20.11.24",
+      "VON": "09:00",
+      "BIS": "17:00",
+      "KUNDE": "Baustoff Recycling Bayern e.V München",
+      "EVENT": "",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoForum T120",
+      "RAUMHINWEIS": "",
+      "BILD": "T120.jpeg",
+      "BEMERKUNG": ""
     }
   ]
 }
