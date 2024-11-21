@@ -1,1 +1,794 @@
-
+[
+  {
+    "Kategorie": "Material",
+    "Artikel": "Zubehör Türen",
+    "Beschreibung": "Türdichtungen",
+    "Lager": "1",
+    "Koordinate": "A",
+    "Lage": "links",
+    "Bemerkung": "Türdichtungen für Innenbereich, wetterfest, für Zimmer 101-110."
+  },
+  {
+    "Kategorie": "Gläser",
+    "Artikel": "Weingläser",
+    "Beschreibung": "Kristallgläser",
+    "Lager": "2",
+    "Koordinate": "B",
+    "Lage": "rechts",
+    "Bemerkung": "Hochwertige Kristallgläser, passend für Restaurantbereich."
+  },
+  {
+    "Kategorie": "Dekomaterial",
+    "Artikel": "Kerzenhalter",
+    "Beschreibung": "Metallkerzenhalter",
+    "Lager": "3",
+    "Koordinate": "C",
+    "Lage": "links",
+    "Bemerkung": "Dekorative Halter in Silberoptik für Abendveranstaltungen."
+  },
+  {
+    "Kategorie": "Geschirr",
+    "Artikel": "Suppenschalen",
+    "Beschreibung": "Porzellanschalen",
+    "Lager": "1",
+    "Koordinate": "A",
+    "Lage": "rechts",
+    "Bemerkung": "Stapelbare Schalen, passend für Buffets und große Events."
+  },
+  {
+    "Kategorie": "Ersatzteile",
+    "Artikel": "Badarmaturen",
+    "Beschreibung": "Ersatz für Dusche",
+    "Lager": "2",
+    "Koordinate": "B",
+    "Lage": "links",
+    "Bemerkung": "Hochwertige Duscharmaturen, passend zu Standardbadezimmern."
+  },
+  {
+    "Kategorie": "Dekomaterial",
+    "Artikel": "Vasen",
+    "Beschreibung": "Glasvasen",
+    "Lager": "3",
+    "Koordinate": "C",
+    "Lage": "rechts",
+    "Bemerkung": "Mittelhohe Glasvasen, ideal für Blumenarrangements."
+  },
+  {
+    "Kategorie": "Material",
+    "Artikel": "Bodenleisten",
+    "Beschreibung": "Holzleisten",
+    "Lager": "1",
+    "Koordinate": "A",
+    "Lage": "links",
+    "Bemerkung": "Eichenholzleisten für Zimmerrenovierungen."
+  },
+  {
+    "Kategorie": "Gläser",
+    "Artikel": "Wassergläser",
+    "Beschreibung": "Trinkgläser",
+    "Lager": "2",
+    "Koordinate": "B",
+    "Lage": "rechts",
+    "Bemerkung": "Robuste Gläser für den täglichen Gebrauch im Speisesaal."
+  },
+  {
+    "Kategorie": "Dekomaterial",
+    "Artikel": "Tischdecken",
+    "Beschreibung": "Stoffdecken",
+    "Lager": "3",
+    "Koordinate": "C",
+    "Lage": "links",
+    "Bemerkung": "Elegante Tischdecken in Weiß, passend für Bankettsäle."
+  },
+  {
+    "Kategorie": "Artikel",
+    "Artikel": "Möbelzubehör",
+    "Beschreibung": "Türbeschläge",
+    "Lager": "1",
+    "Koordinate": "A",
+    "Lage": "rechts",
+    "Bemerkung": "Ersatzbeschläge für Zimmertüren, inklusive Schrauben."
+  },
+  {
+    "Kategorie": "Material",
+    "Artikel": "Wandhalterungen",
+    "Beschreibung": "Halterungen",
+    "Lager": "2",
+    "Koordinate": "B",
+    "Lage": "links",
+    "Bemerkung": "Metallhalterungen für Wanddekorationen oder Fernseher."
+  },
+  {
+    "Kategorie": "Geschirr",
+    "Artikel": "Kaffeetassen",
+    "Beschreibung": "Porzellantassen",
+    "Lager": "3",
+    "Koordinate": "C",
+    "Lage": "rechts",
+    "Bemerkung": "Standardgröße für Frühstücks- und Kaffeebuffets."
+  },
+  {
+    "Kategorie": "Ersatzteile",
+    "Artikel": "Scharniere",
+    "Beschreibung": "Möbelscharniere",
+    "Lager": "1",
+    "Koordinate": "A",
+    "Lage": "links",
+    "Bemerkung": "Ersatzscharniere für Kleiderschränke, stabil und rostfrei."
+  },
+  {
+    "Kategorie": "Dekomaterial",
+    "Artikel": "Girlanden",
+    "Beschreibung": "Papierdekoration",
+    "Lager": "2",
+    "Koordinate": "B",
+    "Lage": "rechts",
+    "Bemerkung": "Bunte Papiergirlanden für saisonale Feiern und Dekoration."
+  },
+  {
+    "Kategorie": "Material",
+    "Artikel": "Beleuchtungskörper",
+    "Beschreibung": "LED-Leuchten",
+    "Lager": "3",
+    "Koordinate": "C",
+    "Lage": "links",
+    "Bemerkung": "Energiesparende LED-Lampen für Flure und Zimmer."
+  },
+  {
+    "Kategorie": "Gläser",
+    "Artikel": "Sektgläser",
+    "Beschreibung": "Flötenform",
+    "Lager": "1",
+    "Koordinate": "A",
+    "Lage": "rechts",
+    "Bemerkung": "Schicke Gläser für besondere Anlässe, dünnwandig und stabil."
+  },
+  {
+    "Kategorie": "Dekomaterial",
+    "Artikel": "Serviettenhalter",
+    "Beschreibung": "Metallhalter",
+    "Lager": "2",
+    "Koordinate": "B",
+    "Lage": "links",
+    "Bemerkung": "Schlichte Halter aus Edelstahl für Papierservietten."
+  },
+  {
+    "Kategorie": "Geschirr",
+    "Artikel": "Dessertteller",
+    "Beschreibung": "Kleine Teller",
+    "Lager": "3",
+    "Koordinate": "C",
+    "Lage": "rechts",
+    "Bemerkung": "Robuste Dessertteller, ideal für Buffets und Cafeterias."
+  },
+  {
+    "Kategorie": "Ersatzteile",
+    "Artikel": "Türgriffe",
+    "Beschreibung": "Edelstahlgriffe",
+    "Lager": "1",
+    "Koordinate": "A",
+    "Lage": "links",
+    "Bemerkung": "Hochwertige Griffe für Zimmertüren, rostfrei und langlebig."
+  },
+  {
+    "Kategorie": "Material",
+    "Artikel": "Regalsysteme",
+    "Beschreibung": "Modulregale",
+    "Lager": "2",
+    "Koordinate": "B",
+    "Lage": "rechts",
+    "Bemerkung": "Flexible Regale für Lagerräume und Vorratskammern."
+  },
+  {
+    "Kategorie": "Dekomaterial",
+    "Artikel": "Lampenschirme",
+    "Beschreibung": "Stofflampen",
+    "Lager": "3",
+    "Koordinate": "C",
+    "Lage": "links",
+    "Bemerkung": "Dezente Stofflampenschirme in neutralen Farben für Lobbys."
+  },
+  {
+    "Kategorie": "Gläser",
+    "Artikel": "Biergläser",
+    "Beschreibung": "Große Gläser",
+    "Lager": "1",
+    "Koordinate": "A",
+    "Lage": "rechts",
+    "Bemerkung": "Robuste Gläser für Bier, stapelbar und kratzfest."
+  },
+  {
+    "Kategorie": "Geschirr",
+    "Artikel": "Untertassen",
+    "Beschreibung": "Porzellanuntert.",
+    "Lager": "2",
+    "Koordinate": "B",
+    "Lage": "links",
+    "Bemerkung": "Standarduntertassen für Tassen, passend für Sets."
+  },
+  {
+    "Kategorie": "Material",
+    "Artikel": "Teppiche",
+    "Beschreibung": "Läufer",
+    "Lager": "3",
+    "Koordinate": "C",
+    "Lage": "rechts",
+    "Bemerkung": "Strapazierfähige Teppichläufer, ideal für Flure und Lobby."
+  },
+  {
+    "Kategorie": "Ersatzteile",
+    "Artikel": "Lampensockel",
+    "Beschreibung": "Keramiksockel",
+    "Lager": "1",
+    "Koordinate": "A",
+    "Lage": "links",
+    "Bemerkung": "Ersatzlampensockel für Zimmerleuchten, hitzebeständig."
+  },
+  {
+    "Kategorie": "Dekomaterial",
+    "Artikel": "Wandbilder",
+    "Beschreibung": "Kunstdrucke",
+    "Lager": "2",
+    "Koordinate": "B",
+    "Lage": "rechts",
+    "Bemerkung": "Schicke Kunstdrucke in Holzrahmen, passend für Zimmereinrichtung."
+  },
+  {
+    "Kategorie": "Material",
+    "Artikel": "Türen",
+    "Beschreibung": "Ersatz Holztüren",
+    "Lager": "3",
+    "Koordinate": "C",
+    "Lage": "links",
+    "Bemerkung": "Stabile Holztüren, Standardgröße für Hotelzimmer."
+  },
+  {
+    "Kategorie": "Gläser",
+    "Artikel": "Schnapsgläser",
+    "Beschreibung": "Kleine Gläser",
+    "Lager": "1",
+    "Koordinate": "A",
+    "Lage": "rechts",
+    "Bemerkung": "Set aus stabilen Gläsern, ideal für Barbereich."
+  },
+  {
+    "Kategorie": "Dekomaterial",
+    "Artikel": "Lichterketten",
+    "Beschreibung": "LED-Ketten",
+    "Lager": "2",
+    "Koordinate": "B",
+    "Lage": "links",
+    "Bemerkung": "Warmweiße Lichterketten für stimmungsvolle Beleuchtung."
+  },
+  {
+    "Kategorie": "Geschirr",
+    "Artikel": "Kuchenteller",
+    "Beschreibung": "Runde Teller",
+    "Lager": "3",
+    "Koordinate": "C",
+    "Lage": "rechts",
+    "Bemerkung": "Hochwertige Kuchenteller aus Porzellan, kratzfest."
+  },
+  {
+    "Kategorie": "Material",
+    "Artikel": "Arbeitsplatten",
+    "Beschreibung": "Holzplatten",
+    "Lager": "1",
+    "Koordinate": "A",
+    "Lage": "links",
+    "Bemerkung": "Eichenholzplatten für Bar- und Küchentresen."
+  },
+  {
+    "Kategorie": "Ersatzteile",
+    "Artikel": "Fenstergriffe",
+    "Beschreibung": "Ersatzgriffe",
+    "Lager": "2",
+    "Koordinate": "B",
+    "Lage": "rechts",
+    "Bemerkung": "Griffe für Fenster, robust und leicht zu montieren."
+  },
+  {
+    "Kategorie": "Dekomaterial",
+    "Artikel": "Blumenarrangement",
+    "Beschreibung": "Kunstblumen",
+    "Lager": "3",
+    "Koordinate": "C",
+    "Lage": "links",
+    "Bemerkung": "Realistisch aussehende Kunstblumen für dauerhafte Deko."
+  },
+  {
+    "Kategorie": "Gläser",
+    "Artikel": "Cocktailgläser",
+    "Beschreibung": "Martini-Gläser",
+    "Lager": "1",
+    "Koordinate": "A",
+    "Lage": "rechts",
+    "Bemerkung": "Edle Gläser für Cocktails, spülmaschinengeeignet."
+  },
+  {
+    "Kategorie": "Geschirr",
+    "Artikel": "Servierschalen",
+    "Beschreibung": "Große Schalen",
+    "Lager": "2",
+    "Koordinate": "B",
+    "Lage": "links",
+    "Bemerkung": "Robuste Schalen für Salate oder große Speisen."
+  },
+  {
+    "Kategorie": "Material",
+    "Artikel": "Vorhänge",
+    "Beschreibung": "Verdunklungstuch",
+    "Lager": "3",
+    "Koordinate": "C",
+    "Lage": "rechts",
+    "Bemerkung": "Schwere Stoffvorhänge für perfekte Verdunklung."
+  },
+  {
+    "Kategorie": "Ersatzteile",
+    "Artikel": "Möbelrollen",
+    "Beschreibung": "Ersatzrollen",
+    "Lager": "1",
+    "Koordinate": "A",
+    "Lage": "links",
+    "Bemerkung": "Gummierte Rollen für Möbel, leise und bodenschonend."
+  },
+  {
+    "Kategorie": "Dekomaterial",
+    "Artikel": "Tischläufer",
+    "Beschreibung": "Stoffläufer",
+    "Lager": "2",
+    "Koordinate": "B",
+    "Lage": "rechts",
+    "Bemerkung": "Elegante Stoffläufer in neutralen Farben für Deko."
+  },
+  {
+    "Kategorie": "Gläser",
+    "Artikel": "Whiskeygläser",
+    "Beschreibung": "Runde Gläser",
+    "Lager": "3",
+    "Koordinate": "C",
+    "Lage": "links",
+    "Bemerkung": "Robuste Gläser, ideal für Barbereich und Cocktails."
+  },
+  {
+    "Kategorie": "Geschirr",
+    "Artikel": "Schüsseln",
+    "Beschreibung": "Kleine Schüsseln",
+    "Lager": "1",
+    "Koordinate": "A",
+    "Lage": "rechts",
+    "Bemerkung": "Ideal für Snacks und kleine Portionen, stapelbar."
+  },
+  {
+    "Kategorie": "Material",
+    "Artikel": "Steckdosenleisten",
+    "Beschreibung": "Mehrfachleisten",
+    "Lager": "2",
+    "Koordinate": "B",
+    "Lage": "links",
+    "Bemerkung": "Praktische Steckdosenleisten für Konferenzräume."
+  },
+  {
+    "Kategorie": "Dekomaterial",
+    "Artikel": "Tischkerzen",
+    "Beschreibung": "Lange Kerzen",
+    "Lager": "3",
+    "Koordinate": "C",
+    "Lage": "rechts",
+    "Bemerkung": "Hochwertige Kerzen in Weiß, passend für elegante Anlässe."
+  },
+  {
+    "Kategorie": "Ersatzteile",
+    "Artikel": "Schrauben",
+    "Beschreibung": "Metallteile",
+    "Lager": "1",
+    "Koordinate": "A",
+    "Lage": "links",
+    "Bemerkung": "Universalschrauben für Reparaturen und Montagen."
+  },
+  {
+    "Kategorie": "Material",
+    "Artikel": "Fußmatten",
+    "Beschreibung": "Eingangsmatten",
+    "Lager": "2",
+    "Koordinate": "B",
+    "Lage": "rechts",
+    "Bemerkung": "Rutschfeste Matten für Eingangsbereiche und Flure."
+  },
+  {
+    "Kategorie": "Material",
+    "Artikel": "Zubehör Türen",
+    "Beschreibung": "Türdichtungen",
+    "Lager": "1",
+    "Koordinate": "A",
+    "Lage": "links",
+    "Bemerkung": "Türdichtungen für Innenbereich, wetterfest, für Zimmer 101-110."
+  },
+  {
+    "Kategorie": "Gläser",
+    "Artikel": "Weingläser",
+    "Beschreibung": "Kristallgläser",
+    "Lager": "2",
+    "Koordinate": "B",
+    "Lage": "rechts",
+    "Bemerkung": "Hochwertige Kristallgläser, passend für Restaurantbereich."
+  },
+  {
+    "Kategorie": "Dekomaterial",
+    "Artikel": "Kerzenhalter",
+    "Beschreibung": "Metallkerzenhalter",
+    "Lager": "3",
+    "Koordinate": "C",
+    "Lage": "links",
+    "Bemerkung": "Dekorative Halter in Silberoptik für Abendveranstaltungen."
+  },
+  {
+    "Kategorie": "Geschirr",
+    "Artikel": "Suppenschalen",
+    "Beschreibung": "Porzellanschalen",
+    "Lager": "1",
+    "Koordinate": "A",
+    "Lage": "rechts",
+    "Bemerkung": "Stapelbare Schalen, passend für Buffets und große Events."
+  },
+  {
+    "Kategorie": "Ersatzteile",
+    "Artikel": "Badarmaturen",
+    "Beschreibung": "Ersatz für Dusche",
+    "Lager": "2",
+    "Koordinate": "B",
+    "Lage": "links",
+    "Bemerkung": "Hochwertige Duscharmaturen, passend zu Standardbadezimmern."
+  },
+  {
+    "Kategorie": "Dekomaterial",
+    "Artikel": "Vasen",
+    "Beschreibung": "Glasvasen",
+    "Lager": "3",
+    "Koordinate": "C",
+    "Lage": "rechts",
+    "Bemerkung": "Mittelhohe Glasvasen, ideal für Blumenarrangements."
+  },
+  {
+    "Kategorie": "Material",
+    "Artikel": "Bodenleisten",
+    "Beschreibung": "Holzleisten",
+    "Lager": "1",
+    "Koordinate": "A",
+    "Lage": "links",
+    "Bemerkung": "Eichenholzleisten für Zimmerrenovierungen."
+  },
+  {
+    "Kategorie": "Gläser",
+    "Artikel": "Wassergläser",
+    "Beschreibung": "Trinkgläser",
+    "Lager": "2",
+    "Koordinate": "B",
+    "Lage": "rechts",
+    "Bemerkung": "Robuste Gläser für den täglichen Gebrauch im Speisesaal."
+  },
+  {
+    "Kategorie": "Dekomaterial",
+    "Artikel": "Tischdecken",
+    "Beschreibung": "Stoffdecken",
+    "Lager": "3",
+    "Koordinate": "C",
+    "Lage": "links",
+    "Bemerkung": "Elegante Tischdecken in Weiß, passend für Bankettsäle."
+  },
+  {
+    "Kategorie": "Artikel",
+    "Artikel": "Möbelzubehör",
+    "Beschreibung": "Türbeschläge",
+    "Lager": "1",
+    "Koordinate": "A",
+    "Lage": "rechts",
+    "Bemerkung": "Ersatzbeschläge für Zimmertüren, inklusive Schrauben."
+  },
+  {
+    "Kategorie": "Material",
+    "Artikel": "Wandhalterungen",
+    "Beschreibung": "Halterungen",
+    "Lager": "2",
+    "Koordinate": "B",
+    "Lage": "links",
+    "Bemerkung": "Metallhalterungen für Wanddekorationen oder Fernseher."
+  },
+  {
+    "Kategorie": "Geschirr",
+    "Artikel": "Kaffeetassen",
+    "Beschreibung": "Porzellantassen",
+    "Lager": "3",
+    "Koordinate": "C",
+    "Lage": "rechts",
+    "Bemerkung": "Standardgröße für Frühstücks- und Kaffeebuffets."
+  },
+  {
+    "Kategorie": "Ersatzteile",
+    "Artikel": "Scharniere",
+    "Beschreibung": "Möbelscharniere",
+    "Lager": "1",
+    "Koordinate": "A",
+    "Lage": "links",
+    "Bemerkung": "Ersatzscharniere für Kleiderschränke, stabil und rostfrei."
+  },
+  {
+    "Kategorie": "Dekomaterial",
+    "Artikel": "Girlanden",
+    "Beschreibung": "Papierdekoration",
+    "Lager": "2",
+    "Koordinate": "B",
+    "Lage": "rechts",
+    "Bemerkung": "Bunte Papiergirlanden für saisonale Feiern und Dekoration."
+  },
+  {
+    "Kategorie": "Material",
+    "Artikel": "Beleuchtungskörper",
+    "Beschreibung": "LED-Leuchten",
+    "Lager": "3",
+    "Koordinate": "C",
+    "Lage": "links",
+    "Bemerkung": "Energiesparende LED-Lampen für Flure und Zimmer."
+  },
+  {
+    "Kategorie": "Gläser",
+    "Artikel": "Sektgläser",
+    "Beschreibung": "Flötenform",
+    "Lager": "1",
+    "Koordinate": "A",
+    "Lage": "rechts",
+    "Bemerkung": "Schicke Gläser für besondere Anlässe, dünnwandig und stabil."
+  },
+  {
+    "Kategorie": "Dekomaterial",
+    "Artikel": "Serviettenhalter",
+    "Beschreibung": "Metallhalter",
+    "Lager": "2",
+    "Koordinate": "B",
+    "Lage": "links",
+    "Bemerkung": "Schlichte Halter aus Edelstahl für Papierservietten."
+  },
+  {
+    "Kategorie": "Geschirr",
+    "Artikel": "Dessertteller",
+    "Beschreibung": "Kleine Teller",
+    "Lager": "3",
+    "Koordinate": "C",
+    "Lage": "rechts",
+    "Bemerkung": "Robuste Dessertteller, ideal für Buffets und Cafeterias."
+  },
+  {
+    "Kategorie": "Ersatzteile",
+    "Artikel": "Türgriffe",
+    "Beschreibung": "Edelstahlgriffe",
+    "Lager": "1",
+    "Koordinate": "A",
+    "Lage": "links",
+    "Bemerkung": "Hochwertige Griffe für Zimmertüren, rostfrei und langlebig."
+  },
+  {
+    "Kategorie": "Material",
+    "Artikel": "Regalsysteme",
+    "Beschreibung": "Modulregale",
+    "Lager": "2",
+    "Koordinate": "B",
+    "Lage": "rechts",
+    "Bemerkung": "Flexible Regale für Lagerräume und Vorratskammern."
+  },
+  {
+    "Kategorie": "Dekomaterial",
+    "Artikel": "Lampenschirme",
+    "Beschreibung": "Stofflampen",
+    "Lager": "3",
+    "Koordinate": "C",
+    "Lage": "links",
+    "Bemerkung": "Dezente Stofflampenschirme in neutralen Farben für Lobbys."
+  },
+  {
+    "Kategorie": "Gläser",
+    "Artikel": "Biergläser",
+    "Beschreibung": "Große Gläser",
+    "Lager": "1",
+    "Koordinate": "A",
+    "Lage": "rechts",
+    "Bemerkung": "Robuste Gläser für Bier, stapelbar und kratzfest."
+  },
+  {
+    "Kategorie": "Geschirr",
+    "Artikel": "Untertassen",
+    "Beschreibung": "Porzellanuntert.",
+    "Lager": "2",
+    "Koordinate": "B",
+    "Lage": "links",
+    "Bemerkung": "Standarduntertassen für Tassen, passend für Sets."
+  },
+  {
+    "Kategorie": "Material",
+    "Artikel": "Teppiche",
+    "Beschreibung": "Läufer",
+    "Lager": "3",
+    "Koordinate": "C",
+    "Lage": "rechts",
+    "Bemerkung": "Strapazierfähige Teppichläufer, ideal für Flure und Lobby."
+  },
+  {
+    "Kategorie": "Ersatzteile",
+    "Artikel": "Lampensockel",
+    "Beschreibung": "Keramiksockel",
+    "Lager": "1",
+    "Koordinate": "A",
+    "Lage": "links",
+    "Bemerkung": "Ersatzlampensockel für Zimmerleuchten, hitzebeständig."
+  },
+  {
+    "Kategorie": "Dekomaterial",
+    "Artikel": "Wandbilder",
+    "Beschreibung": "Kunstdrucke",
+    "Lager": "2",
+    "Koordinate": "B",
+    "Lage": "rechts",
+    "Bemerkung": "Schicke Kunstdrucke in Holzrahmen, passend für Zimmereinrichtung."
+  },
+  {
+    "Kategorie": "Material",
+    "Artikel": "Türen",
+    "Beschreibung": "Ersatz Holztüren",
+    "Lager": "3",
+    "Koordinate": "C",
+    "Lage": "links",
+    "Bemerkung": "Stabile Holztüren, Standardgröße für Hotelzimmer."
+  },
+  {
+    "Kategorie": "Gläser",
+    "Artikel": "Schnapsgläser",
+    "Beschreibung": "Kleine Gläser",
+    "Lager": "1",
+    "Koordinate": "A",
+    "Lage": "rechts",
+    "Bemerkung": "Set aus stabilen Gläsern, ideal für Barbereich."
+  },
+  {
+    "Kategorie": "Dekomaterial",
+    "Artikel": "Lichterketten",
+    "Beschreibung": "LED-Ketten",
+    "Lager": "2",
+    "Koordinate": "B",
+    "Lage": "links",
+    "Bemerkung": "Warmweiße Lichterketten für stimmungsvolle Beleuchtung."
+  },
+  {
+    "Kategorie": "Geschirr",
+    "Artikel": "Kuchenteller",
+    "Beschreibung": "Runde Teller",
+    "Lager": "3",
+    "Koordinate": "C",
+    "Lage": "rechts",
+    "Bemerkung": "Hochwertige Kuchenteller aus Porzellan, kratzfest."
+  },
+  {
+    "Kategorie": "Material",
+    "Artikel": "Arbeitsplatten",
+    "Beschreibung": "Holzplatten",
+    "Lager": "1",
+    "Koordinate": "A",
+    "Lage": "links",
+    "Bemerkung": "Eichenholzplatten für Bar- und Küchentresen."
+  },
+  {
+    "Kategorie": "Ersatzteile",
+    "Artikel": "Fenstergriffe",
+    "Beschreibung": "Ersatzgriffe",
+    "Lager": "2",
+    "Koordinate": "B",
+    "Lage": "rechts",
+    "Bemerkung": "Griffe für Fenster, robust und leicht zu montieren."
+  },
+  {
+    "Kategorie": "Dekomaterial",
+    "Artikel": "Blumenarrangement",
+    "Beschreibung": "Kunstblumen",
+    "Lager": "3",
+    "Koordinate": "C",
+    "Lage": "links",
+    "Bemerkung": "Realistisch aussehende Kunstblumen für dauerhafte Deko."
+  },
+  {
+    "Kategorie": "Gläser",
+    "Artikel": "Cocktailgläser",
+    "Beschreibung": "Martini-Gläser",
+    "Lager": "1",
+    "Koordinate": "A",
+    "Lage": "rechts",
+    "Bemerkung": "Edle Gläser für Cocktails, spülmaschinengeeignet."
+  },
+  {
+    "Kategorie": "Geschirr",
+    "Artikel": "Servierschalen",
+    "Beschreibung": "Große Schalen",
+    "Lager": "2",
+    "Koordinate": "B",
+    "Lage": "links",
+    "Bemerkung": "Robuste Schalen für Salate oder große Speisen."
+  },
+  {
+    "Kategorie": "Material",
+    "Artikel": "Vorhänge",
+    "Beschreibung": "Verdunklungstuch",
+    "Lager": "3",
+    "Koordinate": "C",
+    "Lage": "rechts",
+    "Bemerkung": "Schwere Stoffvorhänge für perfekte Verdunklung."
+  },
+  {
+    "Kategorie": "Ersatzteile",
+    "Artikel": "Möbelrollen",
+    "Beschreibung": "Ersatzrollen",
+    "Lager": "1",
+    "Koordinate": "A",
+    "Lage": "links",
+    "Bemerkung": "Gummierte Rollen für Möbel, leise und bodenschonend."
+  },
+  {
+    "Kategorie": "Dekomaterial",
+    "Artikel": "Tischläufer",
+    "Beschreibung": "Stoffläufer",
+    "Lager": "2",
+    "Koordinate": "B",
+    "Lage": "rechts",
+    "Bemerkung": "Elegante Stoffläufer in neutralen Farben für Deko."
+  },
+  {
+    "Kategorie": "Gläser",
+    "Artikel": "Whiskeygläser",
+    "Beschreibung": "Runde Gläser",
+    "Lager": "3",
+    "Koordinate": "C",
+    "Lage": "links",
+    "Bemerkung": "Robuste Gläser, ideal für Barbereich und Cocktails."
+  },
+  {
+    "Kategorie": "Geschirr",
+    "Artikel": "Schüsseln",
+    "Beschreibung": "Kleine Schüsseln",
+    "Lager": "1",
+    "Koordinate": "A",
+    "Lage": "rechts",
+    "Bemerkung": "Ideal für Snacks und kleine Portionen, stapelbar."
+  },
+  {
+    "Kategorie": "Material",
+    "Artikel": "Steckdosenleisten",
+    "Beschreibung": "Mehrfachleisten",
+    "Lager": "2",
+    "Koordinate": "B",
+    "Lage": "links",
+    "Bemerkung": "Praktische Steckdosenleisten für Konferenzräume."
+  },
+  {
+    "Kategorie": "Dekomaterial",
+    "Artikel": "Tischkerzen",
+    "Beschreibung": "Lange Kerzen",
+    "Lager": "3",
+    "Koordinate": "C",
+    "Lage": "rechts",
+    "Bemerkung": "Hochwertige Kerzen in Weiß, passend für elegante Anlässe."
+  },
+  {
+    "Kategorie": "Ersatzteile",
+    "Artikel": "Schrauben",
+    "Beschreibung": "Metallteile",
+    "Lager": "1",
+    "Koordinate": "A",
+    "Lage": "links",
+    "Bemerkung": "Universalschrauben für Reparaturen und Montagen."
+  },
+  {
+    "Kategorie": "Material",
+    "Artikel": "Fußmatten",
+    "Beschreibung": "Eingangsmatten",
+    "Lager": "2",
+    "Koordinate": "B",
+    "Lage": "rechts",
+    "Bemerkung": "Rutschfeste Matten für Eingangsbereiche und Flure."
+  }
+]
