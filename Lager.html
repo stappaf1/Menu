@@ -24,13 +24,19 @@
     th {
       background-color: #f4f4f4;
     }
-    input[type="text"] {
-      width: calc(100% - 110px);
+    .search-container {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      gap: 10px;
+    }
+    .search-container input[type="text"] {
+      flex: 1;
+      max-width: 50%; /* Eingabefeld nimmt die halbe Breite des Containers ein */
       padding: 10px;
-      margin-right: 10px;
       box-sizing: border-box;
     }
-    button {
+    .search-container button {
       padding: 10px 15px;
       background-color: #007BFF;
       color: white;
@@ -38,17 +44,17 @@
       cursor: pointer;
       border-radius: 5px;
     }
-    button:hover {
+    .search-container button:hover {
       background-color: #0056b3;
     }
     @media (max-width: 768px) {
       table, th, td {
         font-size: 14px;
       }
-      input[type="text"] {
-        width: calc(100% - 130px);
+      .search-container input[type="text"] {
+        max-width: 100%;
       }
-      button {
+      .search-container button {
         font-size: 14px;
       }
     }
@@ -56,21 +62,21 @@
 </head>
 <body>
   <h1>Lagerdaten</h1>
-  <div>
+  <div class="search-container">
     <input type="text" id="searchInput" placeholder="Suche...">
-    <button onclick="searchData()">Suchen</button>
-    <button onclick="showAll()">Alle</button>
+    <button onclick="searchData()">SUCHE</button>
+    <button onclick="showAll()">ALLE</button>
   </div>
   <table id="dataTable">
     <thead>
       <tr>
-        <th>Kategorie</th>
+        <th>Kat.</th>
         <th>Artikel</th>
-        <th>Beschreibung</th>
+        <th>Detail</th>
         <th>Lager</th>
-        <th>Koordinate</th>
+        <th>A-Z</th>
         <th>Lage</th>
-        <th>Bemerkung</th>
+        <th>Bemrkung</th>
       </tr>
     </thead>
     <tbody></tbody>
@@ -101,7 +107,18 @@
         if (!response.ok) {
           throw new Error(`Fehler beim Laden der Daten: ${response.statusText}`);
         }
-        data = await response.json(); // JSON-Daten einlesen
+        const unsortedData = await response.json(); // JSON-Daten einlesen
+
+        // Daten sortieren
+        data = unsortedData.sort((a, b) => {
+          const sortFields = ['Lager', 'Koordinate', 'Lage', 'Kategorie', 'Artikel', 'Bemerkung'];
+          for (const field of sortFields) {
+            if (a[field] < b[field]) return -1;
+            if (a[field] > b[field]) return 1;
+          }
+          return 0;
+        });
+
         populateTable(data); // Tabelle initial füllen
       } catch (error) {
         console.error(error.message);
@@ -129,4 +146,3 @@
   </script>
 </body>
 </html>
-
