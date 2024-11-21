@@ -1,1 +1,132 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lagerdaten</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      padding: 0;
+      line-height: 1.6;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: left;
+    }
+    th {
+      background-color: #f4f4f4;
+    }
+    input[type="text"] {
+      width: calc(100% - 110px);
+      padding: 10px;
+      margin-right: 10px;
+      box-sizing: border-box;
+    }
+    button {
+      padding: 10px 15px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    @media (max-width: 768px) {
+      table, th, td {
+        font-size: 14px;
+      }
+      input[type="text"] {
+        width: calc(100% - 130px);
+      }
+      button {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Lagerdaten</h1>
+  <div>
+    <input type="text" id="searchInput" placeholder="Suche...">
+    <button onclick="searchData()">Suchen</button>
+    <button onclick="showAll()">Alle</button>
+  </div>
+  <table id="dataTable">
+    <thead>
+      <tr>
+        <th>Kategorie</th>
+        <th>Artikel</th>
+        <th>Beschreibung</th>
+        <th>Lager</th>
+        <th>Koordinate</th>
+        <th>Lage</th>
+        <th>Bemerkung</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script>
+    let data = []; // Variable für die Daten aus Lager.json
+    const tableBody = document.querySelector('#dataTable tbody');
+
+    // Funktion: Tabelle befüllen
+    function populateTable(dataSet) {
+      tableBody.innerHTML = ''; // Tabelle leeren
+      dataSet.forEach(item => {
+        const row = document.createElement('tr');
+        for (const key in item) {
+          const cell = document.createElement('td');
+          cell.textContent = item[key];
+          row.appendChild(cell);
+        }
+        tableBody.appendChild(row);
+      });
+    }
+
+    // Funktion: Daten laden
+    async function loadData() {
+      try {
+        const response = await fetch('Lager.json'); // Datei abrufen
+        if (!response.ok) {
+          throw new Error(`Fehler beim Laden der Daten: ${response.statusText}`);
+        }
+        data = await response.json(); // JSON-Daten einlesen
+        populateTable(data); // Tabelle initial füllen
+      } catch (error) {
+        console.error(error.message);
+        tableBody.innerHTML = `<tr><td colspan="7">Fehler beim Laden der Daten.</td></tr>`;
+      }
+    }
+
+    // Funktion: Suche durchführen
+    function searchData() {
+      const query = document.getElementById('searchInput').value.toLowerCase();
+      const filteredData = data.filter(item =>
+        Object.values(item).some(value => value.toLowerCase().includes(query))
+      );
+      populateTable(filteredData);
+    }
+
+    // Funktion: Zeige alle Daten
+    function showAll() {
+      document.getElementById('searchInput').value = '';
+      populateTable(data);
+    }
+
+    // Daten beim Laden der Seite abrufen
+    window.onload = loadData;
+  </script>
+</body>
+</html>
 
