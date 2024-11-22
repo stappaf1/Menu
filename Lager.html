@@ -17,16 +17,17 @@
       margin-top: 20px;
     }
     th, td {
-      padding: 5px; /* Reduziertes Padding */
+      padding: 5px; /* Sehr schmale Zellen */
       text-align: left;
-      border: none; /* Keine Rahmen */
     }
     th {
-      font-weight: bold;
       background-color: #f4f4f4;
     }
     tr {
-      height: 24px; /* Zeilenhöhe festlegen */
+      border: none; /* Keine Zwischenstriche */
+    }
+    td {
+      border: none;
     }
     .search-container {
       display: flex;
@@ -36,7 +37,7 @@
     }
     .search-container input[type="text"] {
       flex: 1;
-      max-width: 50%;
+      max-width: 50%; 
       padding: 10px;
       box-sizing: border-box;
     }
@@ -53,13 +54,13 @@
     }
     @media (max-width: 768px) {
       table, th, td {
-        font-size: 12px; /* Kleinere Schrift für kleine Bildschirme */
+        font-size: 14px;
       }
       .search-container input[type="text"] {
         max-width: 100%;
       }
       .search-container button {
-        font-size: 12px;
+        font-size: 14px;
       }
     }
   </style>
@@ -96,27 +97,27 @@
 
         // Artikel
         let articleCell = document.createElement('td');
-        articleCell.textContent = item.Artikel;
+        articleCell.textContent = item.Artikel || 'N/A';
         row.appendChild(articleCell);
 
         // Kategorie
         let categoryCell = document.createElement('td');
-        categoryCell.textContent = item.Kategorie;
+        categoryCell.textContent = item.Kategorie || 'N/A';
         row.appendChild(categoryCell);
 
         // Detail
         let detailCell = document.createElement('td');
-        detailCell.textContent = item.Detail || ''; // Detail-Inhalte korrekt anzeigen
+        detailCell.textContent = item.Detail || 'N/A';
         row.appendChild(detailCell);
 
-        // Ort
+        // Ort (Zusammenfassung von Lager, A-Z und Lage)
         let locationCell = document.createElement('td');
-        locationCell.textContent = `L${item.Lager} (${item['A-Z']}) ${item.Lage}`;
+        locationCell.textContent = `L${item.Lager || ''} (${item['A-Z'] || ''}) ${item.Lage || ''}`;
         row.appendChild(locationCell);
 
         // Bemerkung
         let remarkCell = document.createElement('td');
-        remarkCell.textContent = item.Bemerkung || ''; // Fallback für leere Bemerkungen
+        remarkCell.textContent = item.Bemerkung || 'Keine Bemerkung';
         row.appendChild(remarkCell);
 
         tableBody.appendChild(row);
@@ -134,7 +135,7 @@
 
         // Daten sortieren
         data = unsortedData.sort((a, b) => {
-          const sortFields = ['Artikel', 'Kategorie', 'Detail', 'Lager', 'A-Z', 'Lage', 'Bemerkung'];
+          const sortFields = ['Lager', 'Koordinate', 'Lage', 'Kategorie', 'Artikel', 'Bemerkung'];
           for (const field of sortFields) {
             if (a[field] < b[field]) return -1;
             if (a[field] > b[field]) return 1;
