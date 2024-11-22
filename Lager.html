@@ -49,6 +49,21 @@
     .search-container button:hover {
       background-color: #0056b3;
     }
+
+    /* Schriftgrößenanpassungen */
+    .location, .detail, .category {
+      font-size: 0.7em; /* 30% kleiner als Artikel */
+    }
+
+    .remark {
+      font-size: 0.5em; /* 50% kleiner als Artikel */
+    }
+
+    /* Anpassungen für die Artikelspalte */
+    .article {
+      font-weight: bold;
+    }
+
     @media (max-width: 768px) {
       table, th, td {
         font-size: 14px;
@@ -95,27 +110,31 @@
         // Ort (Zusammenfassung von Lager, Koordinate und Lage)
         let locationCell = document.createElement('td');
         locationCell.textContent = `L${item.Lager || 'N/A'} (${item.Koordinate || 'N/A'}) ${item.Lage || 'N/A'}`;
+        locationCell.classList.add('location'); // Anwendung der Schriftgrößenanpassung
         row.appendChild(locationCell);
 
         // Artikel (fett)
         let articleCell = document.createElement('td');
-        articleCell.style.fontWeight = 'bold';
         articleCell.textContent = item.Artikel || 'N/A';
+        articleCell.classList.add('article'); // Anwendung der fetten Schrift
         row.appendChild(articleCell);
 
         // Detail
         let detailCell = document.createElement('td');
         detailCell.textContent = item.Beschreibung || 'N/A';
+        detailCell.classList.add('detail'); // Anwendung der Schriftgrößenanpassung
         row.appendChild(detailCell);
 
         // Kategorie
         let categoryCell = document.createElement('td');
         categoryCell.textContent = item.Kategorie || 'N/A';
+        categoryCell.classList.add('category'); // Anwendung der Schriftgrößenanpassung
         row.appendChild(categoryCell);
 
         // Bemerkung
         let remarkCell = document.createElement('td');
         remarkCell.textContent = item.Bemerkung || 'Keine Bemerkung';
+        remarkCell.classList.add('remark'); // Anwendung der Schriftgrößenanpassung
         row.appendChild(remarkCell);
 
         tableBody.appendChild(row);
