@@ -16,13 +16,17 @@
       border-collapse: collapse;
       margin-top: 20px;
     }
-    th, td {
-      border: 1px solid #ddd;
+    td, th {
       padding: 10px;
       text-align: left;
+      border: none;
+    }
+    tr {
+      border-bottom: 1px solid #ddd;
     }
     th {
       background-color: #f4f4f4;
+      font-weight: bold;
     }
     .search-container {
       display: flex;
@@ -32,7 +36,7 @@
     }
     .search-container input[type="text"] {
       flex: 1;
-      max-width: 50%; /* Eingabefeld nimmt die halbe Breite des Containers ein */
+      max-width: 50%;
       padding: 10px;
       box-sizing: border-box;
     }
@@ -70,13 +74,11 @@
   <table id="dataTable">
     <thead>
       <tr>
-        <th>Kat.</th>
         <th>Artikel</th>
+        <th>Kat.</th>
         <th>Detail</th>
-        <th>Lager</th>
-        <th>A-Z</th>
-        <th>Lage</th>
-        <th>Bemrkung</th>
+        <th>Ort</th>
+        <th>Bemerkung</th>
       </tr>
     </thead>
     <tbody></tbody>
@@ -91,11 +93,32 @@
       tableBody.innerHTML = ''; // Tabelle leeren
       dataSet.forEach(item => {
         const row = document.createElement('tr');
-        for (const key in item) {
-          const cell = document.createElement('td');
-          cell.textContent = item[key];
-          row.appendChild(cell);
-        }
+
+        // Artikel
+        let articleCell = document.createElement('td');
+        articleCell.textContent = item.Artikel;
+        row.appendChild(articleCell);
+
+        // Kategorie
+        let categoryCell = document.createElement('td');
+        categoryCell.textContent = item.Kategorie;
+        row.appendChild(categoryCell);
+
+        // Detail
+        let detailCell = document.createElement('td');
+        detailCell.textContent = item.Detail;
+        row.appendChild(detailCell);
+
+        // Ort
+        let locationCell = document.createElement('td');
+        locationCell.textContent = `L${item.Lager} (${item['A-Z']}) ${item.Lage}`;
+        row.appendChild(locationCell);
+
+        // Bemerkung
+        let remarkCell = document.createElement('td');
+        remarkCell.textContent = item.Bemerkung;
+        row.appendChild(remarkCell);
+
         tableBody.appendChild(row);
       });
     }
@@ -111,7 +134,7 @@
 
         // Daten sortieren
         data = unsortedData.sort((a, b) => {
-          const sortFields = ['Lager', 'Koordinate', 'Lage', 'Kategorie', 'Artikel', 'Bemerkung'];
+          const sortFields = ['Artikel', 'Kategorie', 'Detail', 'Lager', 'A-Z', 'Lage', 'Bemerkung'];
           for (const field of sortFields) {
             if (a[field] < b[field]) return -1;
             if (a[field] > b[field]) return 1;
@@ -122,7 +145,7 @@
         populateTable(data); // Tabelle initial füllen
       } catch (error) {
         console.error(error.message);
-        tableBody.innerHTML = `<tr><td colspan="7">Fehler beim Laden der Daten.</td></tr>`;
+        tableBody.innerHTML = `<tr><td colspan="5">Fehler beim Laden der Daten.</td></tr>`;
       }
     }
 
