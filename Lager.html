@@ -72,10 +72,10 @@
   <table id="dataTable">
     <thead>
       <tr>
-        <th>Kat.</th>
+        <th>Ort</th>
         <th>Artikel</th>
         <th>Detail</th>
-        <th>Ort</th>
+        <th>Kat.</th>
         <th>Bemerkung</th>
       </tr>
     </thead>
@@ -92,10 +92,10 @@
       dataSet.forEach(item => {
         const row = document.createElement('tr');
 
-        // Kategorie
-        let categoryCell = document.createElement('td');
-        categoryCell.textContent = item.Kategorie || 'N/A';
-        row.appendChild(categoryCell);
+        // Ort (Zusammenfassung von Lager, Koordinate und Lage)
+        let locationCell = document.createElement('td');
+        locationCell.textContent = `L${item.Lager || 'N/A'} (${item.Koordinate || 'N/A'}) ${item.Lage || 'N/A'}`;
+        row.appendChild(locationCell);
 
         // Artikel (fett)
         let articleCell = document.createElement('td');
@@ -108,10 +108,10 @@
         detailCell.textContent = item.Beschreibung || 'N/A';
         row.appendChild(detailCell);
 
-        // Ort (Zusammenfassung von Lager, Koordinate und Lage)
-        let locationCell = document.createElement('td');
-        locationCell.textContent = `L${item.Lager || 'N/A'} (${item.Koordinate || 'N/A'}) ${item.Lage || 'N/A'}`;
-        row.appendChild(locationCell);
+        // Kategorie
+        let categoryCell = document.createElement('td');
+        categoryCell.textContent = item.Kategorie || 'N/A';
+        row.appendChild(categoryCell);
 
         // Bemerkung
         let remarkCell = document.createElement('td');
