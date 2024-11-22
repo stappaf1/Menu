@@ -9,7 +9,7 @@
       font-family: Arial, sans-serif;
       margin: 20px;
       padding: 0;
-      line-height: 1.4;
+      line-height: 1.6;
     }
     table {
       width: 100%;
@@ -17,31 +17,14 @@
       margin-top: 20px;
     }
     th, td {
-      padding: 5px; /* Sehr schmale Zellen */
+      padding: 10px;
       text-align: left;
     }
     th {
       background-color: #f4f4f4;
     }
-    tr {
-      border: none; /* Keine Zwischenstriche */
-    }
     td {
-      border: none;
-    }
-    /* Artikel in Fett und breitere Zellen */
-    td.article {
-      font-weight: bold;
-    }
-    /* Spaltenbreite anpassen */
-    td.category, td.description {
-      width: 30%;
-    }
-    td.location {
-      width: 20%;
-    }
-    td.remark {
-      width: 20%;
+      border: none; /* Keine Zwischenstriche */
     }
     .search-container {
       display: flex;
@@ -89,9 +72,9 @@
   <table id="dataTable">
     <thead>
       <tr>
-        <th>Artikel</th>
-        <th>Beschreibung</th>
         <th>Kat.</th>
+        <th>Artikel</th>
+        <th>Detail</th>
         <th>Ort</th>
         <th>Bemerkung</th>
       </tr>
@@ -109,33 +92,29 @@
       dataSet.forEach(item => {
         const row = document.createElement('tr');
 
-        // Artikel (fett)
-        let articleCell = document.createElement('td');
-        articleCell.classList.add('article');
-        articleCell.textContent = item.Artikel || 'N/A';
-        row.appendChild(articleCell);
-
-        // Beschreibung
-        let descriptionCell = document.createElement('td');
-        descriptionCell.classList.add('description');
-        descriptionCell.textContent = item.Beschreibung || 'N/A';
-        row.appendChild(descriptionCell);
-
         // Kategorie
         let categoryCell = document.createElement('td');
-        categoryCell.classList.add('category');
         categoryCell.textContent = item.Kategorie || 'N/A';
         row.appendChild(categoryCell);
 
+        // Artikel (fett)
+        let articleCell = document.createElement('td');
+        articleCell.style.fontWeight = 'bold';
+        articleCell.textContent = item.Artikel || 'N/A';
+        row.appendChild(articleCell);
+
+        // Detail
+        let detailCell = document.createElement('td');
+        detailCell.textContent = item.Beschreibung || 'N/A';
+        row.appendChild(detailCell);
+
         // Ort (Zusammenfassung von Lager, Koordinate und Lage)
         let locationCell = document.createElement('td');
-        locationCell.classList.add('location');
         locationCell.textContent = `L${item.Lager || 'N/A'} (${item.Koordinate || 'N/A'}) ${item.Lage || 'N/A'}`;
         row.appendChild(locationCell);
 
         // Bemerkung
         let remarkCell = document.createElement('td');
-        remarkCell.classList.add('remark');
         remarkCell.textContent = item.Bemerkung || 'Keine Bemerkung';
         row.appendChild(remarkCell);
 
