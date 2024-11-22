@@ -49,15 +49,35 @@
     .search-container button:hover {
       background-color: #0056b3;
     }
+
     @media (max-width: 768px) {
       table, th, td {
         font-size: 14px;
       }
+
+      /* Spalten als Block anzeigen, um sie untereinander darzustellen */
+      td {
+        display: block;
+        width: 100%;
+      }
+
+      /* Die Bemerkung in eine neue Zeile verschieben */
+      td:nth-child(5) {
+        margin-top: 10px;
+      }
+
+      /* Eingabefeld nimmt die volle Breite ein */
       .search-container input[type="text"] {
         max-width: 100%;
       }
+
       .search-container button {
         font-size: 14px;
+      }
+
+      /* Um die Reihenfolge der Spalten zu verändern und die Bemerkung an die letzte Stelle zu setzen */
+      td:nth-child(1), td:nth-child(2), td:nth-child(3), td:nth-child(4), td:nth-child(5) {
+        display: block;
       }
     }
   </style>
