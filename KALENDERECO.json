@@ -395,6 +395,30 @@
       "RAUMHINWEIS": "",
       "BILD": "Tagungsbereich.mp4",
       "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "27.11.24",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Syngenity",
+      "EVENT": "",
+      "TEILNEHMER": "20",
+      "TAGUNGSRAUM": "ecoForum T120",
+      "RAUMHINWEIS": "",
+      "BILD": "T120.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "27.11.24",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "MBDA",
+      "EVENT": "",
+      "TEILNEHMER": "14",
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "",
+      "BILD": "T90.jpeg",
+      "BEMERKUNG": ""
     }
   ]
 }
