@@ -313,30 +313,6 @@
       "BEMERKUNG": "08:00 Begrüßung 10:30 (K) 12:30 (M) 14:45 (K)"
     },
     {
-      "DATUM": "",
-      "VON": "",
-      "BIS": "",
-      "KUNDE": "",
-      "EVENT": "",
-      "TEILNEHMER": "",
-      "TAGUNGSRAUM": "",
-      "RAUMHINWEIS": "",
-      "BILD": "",
-      "BEMERKUNG": ""
-    },
-    {
-      "DATUM": "",
-      "VON": "",
-      "BIS": "",
-      "KUNDE": "",
-      "EVENT": "",
-      "TEILNEHMER": "",
-      "TAGUNGSRAUM": "",
-      "RAUMHINWEIS": "",
-      "BILD": "",
-      "BEMERKUNG": ""
-    },
-    {
       "DATUM": "18.11.24",
       "VON": "09:00",
       "BIS": "17:00",
@@ -418,6 +394,30 @@
       "TAGUNGSRAUM": "ecoCentrum T90",
       "RAUMHINWEIS": "",
       "BILD": "T90.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "28.11.24",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "MBDA",
+      "EVENT": "",
+      "TEILNEHMER": "14",
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "",
+      "BILD": "T90.mp4",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "28.11.24",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Syngenity",
+      "EVENT": "",
+      "TEILNEHMER": "20",
+      "TAGUNGSRAUM": "ecoForum T120",
+      "RAUMHINWEIS": "",
+      "BILD": "T120.jpeg",
       "BEMERKUNG": ""
     }
   ]
