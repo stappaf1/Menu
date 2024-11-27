@@ -59,6 +59,18 @@
       "RAUMHINWEIS": "",
       "BILD": "T100.jpeg",
       "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "13.12.24",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Schweitzer Chemie",
+      "EVENT": "",
+      "TEILNEHMER": "7",
+      "TAGUNGSRAUM": "großerFreiraum T60",
+      "RAUMHINWEIS": "",
+      "BILD": "T60.jpeg",
+      "BEMERKUNG": ""
     }
   ]
 }
