@@ -30,73 +30,73 @@
     },
     {
       "Kategorie": "Antialkoholisches",
-      "Name": "Ginger",
-      "Beschreibung": "Ginger Ale, Ginger Beer",
-      "Menge": "0,2L",
-      "Preis": "3.80"
+      "Name": "Wasser",
+      "Beschreibung": "Tafelspitz",
+      "Menge": "0,7l",
+      "Preis": "6.00"
     },
     {
-      "Kategorie": "Antialkoholisches",
-      "Name": "Red Bull",
+      "Kategorie": "",
+      "Name": "",
       "Beschreibung": "",
-      "Menge": "0,2L",
-      "Preis": "4.50"
+      "Menge": "",
+      "Preis": ""
     },
     {
-      "Kategorie": "Wein",
-      "Name": "Weißwein L",
-      "Beschreibung": "Grauburgunder, Riesling",
-      "Menge": "0,2L",
-      "Preis": "6.50"
+      "Kategorie": "",
+      "Name": "",
+      "Beschreibung": "",
+      "Menge": "",
+      "Preis": ""
     },
     {
-      "Kategorie": "Wein",
-      "Name": "Weißwein XL",
-      "Beschreibung": "Lugana, Rosé",
-      "Menge": "0.2L",
-      "Preis": "7.50"
+      "Kategorie": "",
+      "Name": "",
+      "Beschreibung": "",
+      "Menge": "",
+      "Preis": ""
     },
     {
-      "Kategorie": "Wein",
-      "Name": "Rotwein L",
-      "Beschreibung": "Cabernet Sauvignon",
-      "Menge": "0,2L",
-      "Preis": "7.00"
+      "Kategorie": "",
+      "Name": "",
+      "Beschreibung": "",
+      "Menge": "",
+      "Preis": ""
     },
     {
-      "Kategorie": "Wein",
-      "Name": "Rotwein XL",
-      "Beschreibung": "Primitivo",
-      "Menge": "0,2L",
-      "Preis": "8.00"
+      "Kategorie": "",
+      "Name": "",
+      "Beschreibung": "",
+      "Menge": "",
+      "Preis": ""
     },
     {
-      "Kategorie": "Wein",
-      "Name": "Schaumwein",
-      "Beschreibung": "Prosecco, Winzersekt Riesling",
-      "Menge": "0,2L",
-      "Preis": "4.50"
+      "Kategorie": "",
+      "Name": "",
+      "Beschreibung": "",
+      "Menge": "",
+      "Preis": ""
     },
     {
       "Kategorie": "Aperitiv",
-      "Name": "Aperitiv L",
+      "Name": "Aperitiv ",
       "Beschreibung": "Aperol, Campari Soda, Lillet, Martini mit/ohne, Sherry Fino, Vermouth on the Rocks",
       "Menge": "Glas",
       "Preis": "6.50"
     },
     {
-      "Kategorie": "Aperitiv",
-      "Name": "Aperitiv XL",
-      "Beschreibung": "Kir",
-      "Menge": "Glas",
-      "Preis": "9.50"
+      "Kategorie": "",
+      "Name": "",
+      "Beschreibung": "",
+      "Menge": "",
+      "Preis": ""
     },
     {
-      "Kategorie": "Aperitiv",
-      "Name": "Aperitiv XXL",
-      "Beschreibung": "Kir Royal",
-      "Menge": "Glas",
-      "Preis": "11.50"
+      "Kategorie": "",
+      "Name": "",
+      "Beschreibung": "",
+      "Menge": "",
+      "Preis": ""
     },
     {
       "Kategorie": "Cocktail",
@@ -146,20 +146,6 @@
       "Beschreibung": "Cuba Libre, Highball, Whiskey Cola",
       "Menge": "Glas",
       "Preis": "9.50"
-    },
-    {
-      "Kategorie": "Longdrink",
-      "Name": "Longdrink XL",
-      "Beschreibung": "Tequila Sunrise",
-      "Menge": "Glas\t",
-      "Preis": "12.00"
-    },
-    {
-      "Kategorie": "Cocktail",
-      "Name": "",
-      "Beschreibung": "Für Ihre Veranstaltung nicht vorgesehen",
-      "Menge": "",
-      "Preis": ""
     }
   ]
 }
