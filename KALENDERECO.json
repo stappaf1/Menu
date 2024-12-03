@@ -488,7 +488,7 @@
       "EVENT": "Workshop",
       "TEILNEHMER": "7",
       "TAGUNGSRAUM": "ecoCentrum T90",
-      "RAUMHINWEIS": "Teil 3",
+      "RAUMHINWEIS": "Teil 1-2",
       "BILD": "T90.jpeg",
       "BEMERKUNG": ""
     },
@@ -499,9 +499,9 @@
       "KUNDE": "Volksbank Raiffeisen",
       "EVENT": "Workshop",
       "TEILNEHMER": "7",
-      "TAGUNGSRAUM": "ecoRefugium T30",
-      "RAUMHINWEIS": "",
-      "BILD": "T30.jpeg",
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "Teil 3",
+      "BILD": "T90.jpeg",
       "BEMERKUNG": ""
     },
     {
