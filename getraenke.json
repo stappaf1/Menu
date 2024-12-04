@@ -1,95 +1,459 @@
 {
   "getraenke": [
     {
-      "Kategorie": "Bier",
-      "Name": "Biere",
-      "Beschreibung": "Müllerbräu Helles mit/ohne Alkohol, Weißbier mit/leicht/ohne Alkohol, Dunkles, Russ, Radler",
+      "Kategorie": "Biere",
+      "Name": "Alkoholfreies Bier",
+      "Beschreibung": "Helles oder Weissbier",
       "Menge": "0,5L",
       "Preis": "4.00"
     },
     {
-      "Kategorie": "Bier",
+      "Kategorie": "Biere",
+      "Name": "Dunkles Bier",
+      "Beschreibung": "Malziges, kräftiges Dunkelbier mit karamelligen Aromen.",
+      "Menge": "0,5L",
+      "Preis": "4.00"
+    },
+    {
+      "Kategorie": "Biere",
+      "Name": "Dunkles Weißbier",
+      "Beschreibung": "Ein dunkles, vollmundiges Weißbier mit einer samtigen Textur und Noten von Kakao.",
+      "Menge": "0,5L",
+      "Preis": "4.00"
+    },
+    {
+      "Kategorie": "Biere",
+      "Name": "Helles Bier",
+      "Beschreibung": "Ein erfrischendes, leicht malziges Helles, perfekt für gemütliche Stunden.",
+      "Menge": "0,5L",
+      "Preis": "4.00"
+    },
+    {
+      "Kategorie": "Biere",
       "Name": "Pils",
-      "Beschreibung": "Müllerbräu",
-      "Menge": "0,33L",
-      "Preis": "3.50"
+      "Beschreibung": "Spritziges, hopfenbetontes Pils für Liebhaber des herben Geschmacks.",
+      "Menge": "0,3L",
+      "Preis": "3.60"
     },
     {
-      "Kategorie": "Antialkoholisches",
-      "Name": "Softgetränke",
-      "Beschreibung": "Cola ohne/mit, Spezi, Limo, Saftschorlen",
-      "Menge": "0,4L",
-      "Preis": "3.80"
+      "Kategorie": "Biere",
+      "Name": "Superpils",
+      "Beschreibung": "Intensives Pils mit extra viel Hopfen, für den besonderen Genuss.",
+      "Menge": "0,3L",
+      "Preis": "4.00"
     },
     {
-      "Kategorie": "Antialkoholisches",
-      "Name": "Säfte",
-      "Beschreibung": "Orange, Apfel, Sauerkirsch, Ananas, Johannisbeer, Maracuja",
+      "Kategorie": "Biere",
+      "Name": "Weißbier",
+      "Beschreibung": "Ein vollmundiges Weißbier mit feinen Bananen- und Nelkennoten.",
+      "Menge": "0,5L",
+      "Preis": "4.00"
+    },
+    {
+      "Kategorie": "Alkoholfreies",
+      "Name": "Ananassaft",
+      "Beschreibung": "Süßer, intensiver Ananassaft, perfekt als Erfrischung oder für Cocktails.",
       "Menge": "0,2L",
       "Preis": "2.90"
     },
     {
-      "Kategorie": "Antialkoholisches",
-      "Name": "Wasser",
-      "Beschreibung": "alea aqua est still/spritzig",
-      "Menge": "0,7l",
+      "Kategorie": "Alkoholfreies",
+      "Name": "Apfelsaft",
+      "Beschreibung": "Frischer Apfelsaft, pur oder als Schorle genießbar.",
+      "Menge": "0,2L",
+      "Preis": "2.90"
+    },
+    {
+      "Kategorie": "Alkoholfreies",
+      "Name": "Johannisbeersaft",
+      "Beschreibung": "Fruchtig-säuerlicher Johannisbeersaft, ideal als Durstlöscher.",
+      "Menge": "0,2L",
+      "Preis": "2.90"
+    },
+    {
+      "Kategorie": "Alkoholfreies",
+      "Name": "Maracujasaft",
+      "Beschreibung": "Exotischer Maracujasaft, tropisch-fruchtig und belebend.",
+      "Menge": "0,2L",
+      "Preis": "2.90"
+    },
+    {
+      "Kategorie": "Alkoholfreies",
+      "Name": "Mineralwasser Spritzig",
+      "Beschreibung": "Sprudelndes Mineralwasser für eine prickelnde Erfrischung.",
+      "Menge": "0,7L",
       "Preis": "6.00"
     },
     {
-      "Kategorie": "Aperitiv",
-      "Name": "Aperitiv ",
-      "Beschreibung": "Aperol, Campari Soda, Lillet, Martini mit/ohne, Sherry Fino, Vermouth on the Rocks",
-      "Menge": "Glas",
+      "Kategorie": "Alkoholfreies",
+      "Name": "Mineralwasser Spritzig",
+      "Beschreibung": "Sprudelndes Mineralwasser für eine prickelnde Erfrischung.",
+      "Menge": "0,4L",
+      "Preis": "3.80"
+    },
+    {
+      "Kategorie": "Alkoholfreies",
+      "Name": "Mineralwasser Still",
+      "Beschreibung": "Sanftes, stilles Mineralwasser zur Erfrischung.",
+      "Menge": "0,7L",
+      "Preis": "6.00"
+    },
+    {
+      "Kategorie": "Alkoholfreies",
+      "Name": "Mineralwasser Still",
+      "Beschreibung": "Sanftes, stilles Mineralwasser zur Erfrischung.",
+      "Menge": "0,4L",
+      "Preis": "3.80"
+    },
+    {
+      "Kategorie": "Alkoholfreies",
+      "Name": "Saftschorle",
+      "Beschreibung": "Fruchtig-erfrischende Saftschorle, perfekt für heiße Tage.",
+      "Menge": "0,4L",
+      "Preis": "3.80"
+    },
+    {
+      "Kategorie": "Alkoholfreies",
+      "Name": "Sauerkirschsaft",
+      "Beschreibung": "Erfrischender Sauerkirschsaft, reich an Vitaminen und mit angenehmer Säure.",
+      "Menge": "0,2L",
+      "Preis": "2.90"
+    },
+    {
+      "Kategorie": "Softgetränke",
+      "Name": "Afri Cola",
+      "Beschreibung": "Klassische Cola mit intensiver Koffein-Note.",
+      "Menge": "0,2L",
+      "Preis": "3.80"
+    },
+    {
+      "Kategorie": "Softgetränke",
+      "Name": "Afri Cola Light",
+      "Beschreibung": "Die leichte Variante der Afri Cola mit weniger Zucker, aber vollem Geschmack.",
+      "Menge": "0,2L",
+      "Preis": "3.80"
+    },
+    {
+      "Kategorie": "Softgetränke",
+      "Name": "Ginger Ale",
+      "Beschreibung": "Erfrischendes Ginger Ale mit würziger Ingwernote.",
+      "Menge": "0,2L",
+      "Preis": "3.80"
+    },
+    {
+      "Kategorie": "Softgetränke",
+      "Name": "Ginger Beer",
+      "Beschreibung": "Intensives Ginger Beer mit einer scharfen Ingwernote, perfekt für Cocktails.",
+      "Menge": "0,2L",
+      "Preis": "3.80"
+    },
+    {
+      "Kategorie": "Softgetränke",
+      "Name": "Orangenlimonade",
+      "Beschreibung": "Fruchtige Orangenlimonade, ideal für eine sommerliche Erfrischung.",
+      "Menge": "0,4L",
+      "Preis": "3.80"
+    },
+    {
+      "Kategorie": "Softgetränke",
+      "Name": "Red Bull",
+      "Beschreibung": "Energydrink mit Koffein und Taurin, für den extra Kick.",
+      "Menge": "0,2L",
+      "Preis": "4.50"
+    },
+    {
+      "Kategorie": "Softgetränke",
+      "Name": "Spezi",
+      "Beschreibung": "Erfrischendes Spezi, die perfekte Mischung aus Cola und Orangenlimo.",
+      "Menge": "0,4L",
+      "Preis": "3.80"
+    },
+    {
+      "Kategorie": "Softgetränke",
+      "Name": "Tonic Water",
+      "Beschreibung": "Herb-spritziges Tonic Water, ideal für Longdrinks.",
+      "Menge": "0,2L",
+      "Preis": "3.80"
+    },
+    {
+      "Kategorie": "Softgetränke",
+      "Name": "Zitronenlimonade",
+      "Beschreibung": "Spritzige Zitronenlimonade mit natürlichem Zitronengeschmack.",
+      "Menge": "0,4L",
+      "Preis": "3.80"
+    },
+    {
+      "Kategorie": "Rosé",
+      "Name": "Rosé",
+      "Beschreibung": "Leichter, fruchtiger Roséwein mit einer dezenten Himbeernote.",
+      "Menge": "0,2L",
+      "Preis": "7.50"
+    },
+    {
+      "Kategorie": "Rotwein",
+      "Name": "Josef Pimpel zwigelt",
+      "Beschreibung": "Am Gaumen trocken, gut stützende Säure, kräftiger Körper, spürbares, weiches Tannin, gut integrierter Alkohol, fruchtig, elegant, deutliche Aromatik, rote Beeren, Kirsche, würzige Noten",
+      "Menge": "0,2L",
+      "Preis": "7.00"
+    },
+    {
+      "Kategorie": "Rotwein",
+      "Name": "Son Champaner",
+      "Beschreibung": "Rote Früchte, Zedernholz, Vanille, reifes Tannin, vielschichtiger Körper, viel Reifepotential.",
+      "Menge": "0,2L",
+      "Preis": "8.00"
+    },
+    {
+      "Kategorie": "Schaumwein",
+      "Name": "Prosecco",
+      "Beschreibung": "Spritziger Prosecco, ideal für den Aperitif oder einen festlichen Anlass.",
+      "Menge": "0,2L",
+      "Preis": "4.50"
+    },
+    {
+      "Kategorie": "Schaumwein",
+      "Name": "Winzersekt Riesling",
+      "Beschreibung": "Feinperliger Schaumwein mit eleganten Aromen von Zitrusfrüchten.",
+      "Menge": "0,2L",
+      "Preis": "4.50"
+    },
+    {
+      "Kategorie": "Weißwein",
+      "Name": "Grauburgunder",
+      "Beschreibung": "Weicher Grauburgunder mit Aromen von Birne und Nüssen, perfekt zu leichten Speisen.",
+      "Menge": "0,2L",
       "Preis": "6.50"
     },
     {
-      "Kategorie": "Cocktail",
-      "Name": "Cocktail 1",
-      "Beschreibung": "Gin Tonic, Moscow Mule",
-      "Menge": "Glas",
-      "Preis": "8.50"
+      "Kategorie": "Weißwein",
+      "Name": "Lugana",
+      "Beschreibung": "Frischer Weißwein aus Norditalien mit Zitrus- und Mandelaromen.",
+      "Menge": "0,2L",
+      "Preis": "7.50"
     },
     {
-      "Kategorie": "Cocktail",
-      "Name": "Cocktail 2",
-      "Beschreibung": "Negroni",
-      "Menge": "Glas",
+      "Kategorie": "Weißwein",
+      "Name": "Chardonnay",
+      "Beschreibung": " im Glas versprüht unser Chardonnay Aromen, die an Mango und Feigen erinnern, ergänzt durch süße Honignoten und einem Hauch von Minze",
+      "Menge": "0,2L",
+      "Preis": "6.50"
+    },
+    {
+      "Kategorie": "Aperitif",
+      "Name": "Aperol Spritz TOP10",
+      "Beschreibung": "4 cl Aperol, 6 cl Prosecco, mit Soda aufgefüllt, Orangenscheibe",
+      "Menge": "1 Glas",
+      "Preis": "6.50"
+    },
+    {
+      "Kategorie": "Aperitif",
+      "Name": "Campari Soda",
+      "Beschreibung": "4 cl Campari, mit Soda aufgefüllt, Zitronenzeste",
+      "Menge": "1 Glas",
+      "Preis": "6.50"
+    },
+    {
+      "Kategorie": "Aperitif",
+      "Name": "Lillet Wildberry",
+      "Beschreibung": "",
+      "Menge": "1 Glas",
+      "Preis": "6.50"
+    },
+    {
+      "Kategorie": "Aperitif",
+      "Name": "Martini Bianco Tonic",
+      "Beschreibung": "5 cl Martini Bianco, 10 cl Tonic Water, Limettenscheibe",
+      "Menge": "1 Glas",
+      "Preis": "6.50"
+    },
+    {
+      "Kategorie": "Aperitif",
+      "Name": "Martini Floreale Tonic",
+      "Beschreibung": "alkoholfrei",
+      "Menge": "1 Glas",
+      "Preis": "6.50"
+    },
+    {
+      "Kategorie": "Aperitif",
+      "Name": "Vermouth on the Rocks",
+      "Beschreibung": "6 cl trockener oder roter Wermut, auf Eis serviert, Zitronen- oder Orangenzeste",
+      "Menge": "1 Glas",
+      "Preis": "9.50"
+    },
+    {
+      "Kategorie": "Rum Longdrink",
+      "Name": "Cuba Libre",
+      "Beschreibung": "4 cl Rum, mit Cola aufgefüllt, 1 cl Limettensaft",
+      "Menge": "1 Glas",
+      "Preis": "9.50"
+    },
+    {
+      "Kategorie": "Whiskey Longdrink",
+      "Name": "Highball",
+      "Beschreibung": "4 cl Whiskey, mit Soda aufgefüllt",
+      "Menge": "1 Glas",
+      "Preis": "9.50"
+    },
+    {
+      "Kategorie": "Whiskey Longdrink",
+      "Name": "Whiskey Cola",
+      "Beschreibung": "4 cl Whiskey, mit Cola aufgefüllt",
+      "Menge": "1 Glas",
+      "Preis": "9.50"
+    },
+    {
+      "Kategorie": "Alkoholfrei Cocktail",
+      "Name": "NoNegroni ",
+      "Beschreibung": "",
+      "Menge": "1 Glas",
       "Preis": "9.00"
     },
     {
-      "Kategorie": "Cocktail",
-      "Name": "Cocktail 3",
-      "Beschreibung": "Highball, Whiskey Cola, French 75, Martini, Negroni, Tom Collins, Dark ´ n ´ Stormy",
-      "Menge": "Glas",
-      "Preis": "9.50"
-    },
-    {
-      "Kategorie": "Cocktail",
-      "Name": "Cocktail 4",
-      "Beschreibung": "Young Fashioned, Espresso Martini, White Russian",
-      "Menge": "Glas",
+      "Kategorie": "Alkoholfrei Cocktail",
+      "Name": "Young Fashioned ",
+      "Beschreibung": "",
+      "Menge": "1 Glas",
       "Preis": "10.00"
     },
     {
-      "Kategorie": "Cocktail",
-      "Name": "Cocktail 5",
-      "Beschreibung": "Mojito, Whiskey Sour",
-      "Menge": "Glas",
-      "Preis": "11.00"
+      "Kategorie": "Gin Cocktail",
+      "Name": "Gin Tonic",
+      "Beschreibung": "4 cl Gin, mit Tonic Water aufgefüllt, garniert mit einer Limettenscheibe",
+      "Menge": "1 Glas",
+      "Preis": "8.50"
     },
     {
-      "Kategorie": "Cocktail",
-      "Name": "Cocktail 6",
-      "Beschreibung": "Mai Tai, Piña Colada, Margarita, Old Fashioned",
-      "Menge": "Glas",
+      "Kategorie": "Gin Cocktail",
+      "Name": "Negroni TOP10",
+      "Beschreibung": "3 cl Gin, 3 cl Campari, 3 cl roter Wermut, auf Eis gerührt",
+      "Menge": "1 Glas",
+      "Preis": "9.50"
+    },
+    {
+      "Kategorie": "Gin Cocktail",
+      "Name": "Tom Collins",
+      "Beschreibung": "5 cl Gin, 2 cl Zitronensaft, 1 cl Zuckersirup, mit Soda aufgefüllt",
+      "Menge": "1 Glas",
+      "Preis": "9.50"
+    },
+    {
+      "Kategorie": "Whiskey Cocktail",
+      "Name": "Old Fashioned TOP10",
+      "Beschreibung": "5 cl Bourbon oder Rye Whiskey, 1 Zuckerwürfel, einige Spritzer Angostura-Bitter, Eiswürfel",
+      "Menge": "1 Glas",
       "Preis": "12.00"
     },
     {
-      "Kategorie": "Longdrink",
-      "Name": "Longdrink L",
-      "Beschreibung": "Cuba Libre, Highball, Whiskey Cola",
+      "Kategorie": "Wodka Cocktail",
+      "Name": "Espresso Martini TOP10",
+      "Beschreibung": "4 cl Wodka, 2 cl Kaffeelikör, frischer Espresso, auf Eis geschüttelt",
+      "Menge": "1 Glas",
+      "Preis": "10.00"
+    },
+    {
+      "Kategorie": "Wodka Cocktail",
+      "Name": "Moscow Mule TOP10",
+      "Beschreibung": "4 cl Wodka, mit Ginger Beer aufgefüllt, Limettenscheibe",
+      "Menge": "1 Glas",
+      "Preis": "8.50"
+    },
+    {
+      "Kategorie": "Heißgetränke Kaffee",
+      "Name": "Café Crema",
+      "Beschreibung": "Milder Kaffee mit einer dicken Crema, ideal für den Kaffeegenuss zwischendurch.",
+      "Menge": "Tasse",
+      "Preis": "3.50"
+    },
+    {
+      "Kategorie": "Heißgetränke Kaffee",
+      "Name": "Cappuccino",
+      "Beschreibung": "Aromatischer Espresso mit cremigem Milchschaum, leicht bestäubt mit Kakao.",
+      "Menge": "Tasse",
+      "Preis": "3.50"
+    },
+    {
+      "Kategorie": "Heißgetränke Kaffee",
+      "Name": "Doppio Espresso",
+      "Beschreibung": "Doppelte Portion Espresso für den extra starken Koffeinkick.",
+      "Menge": "Tasse",
+      "Preis": "3.50"
+    },
+    {
+      "Kategorie": "Heißgetränke Kaffee",
+      "Name": "Espresso",
+      "Beschreibung": "Intensiver, aromatischer Espresso für den perfekten Koffeinschub.",
+      "Menge": "Tasse",
+      "Preis": "2.40"
+    },
+    {
+      "Kategorie": "Heißgetränke Kaffee",
+      "Name": "Latte Macchiato",
+      "Beschreibung": "Geschichteter Kaffee mit heißer Milch und Schaum, mild und cremig.",
       "Menge": "Glas",
-      "Preis": "9.50"
+      "Preis": "3.50"
+    },
+    {
+      "Kategorie": "Heißgetränke Tee",
+      "Name": "Claire | Kräuter",
+      "Beschreibung": "Claire liebt den zarten, leicht zitronigen Geschmack der Verveine. Weil dieser Kräutertee einfach lecker ist und guttut. Vor allem aber, weil sie der liebliche Geruch der Blätter an die herrlich duftenden Verveinefelder ihrer Großeltern erinnert, in denen sie an warmen Sommertagen mit ihren Geschwistern spielte. Kindheitserinnerungen können so gut schmecken!",
+      "Menge": "Glas",
+      "Preis": "3.50"
+    },
+    {
+      "Kategorie": "Heißgetränke Tee",
+      "Name": "Hayato | Grüntee",
+      "Beschreibung": "Sencha gilt in Japan als das Getränk der Gastfreundschaft. Dem stimmt Hayato zu. Doch für ihn hat es eine besondere Bedeutung, wenn er die handverlesenen und frisch geernteten Blätter aus seinem Teegarten für uns zu einem frisch-duftigen Grüntee verarbeitet. Denn so kann er seine Gastfreundschaft an unsere Sencha-Genießer weitergeben. Recht hat er!Hayato-",
+      "Menge": "Glas",
+      "Preis": "3.50"
+    },
+    {
+      "Kategorie": "Heißgetränke Tee",
+      "Name": "Jinjin | Grüntee",
+      "Beschreibung": "Jinjin wuchs in einem kleinen chinesischen Dorf auf. Mit fünf Jahren aß sie das erste Mal eine saftige, reife Mango. Seitdem liebt sie diese aromatische Frucht. Die übrigen Dorfbewohner wissen um ihre Vorliebe und wann immer sie können, bringen sie Jinjin eine köstliche Mango. Jinjin hat darüber hinaus – wie übrigens auch die anderen Dorfbewohner – eine Vorliebe für Grüntee. Nun rate mal, welche Vorliebe wir von Pure Tea haben!",
+      "Menge": "Glas",
+      "Preis": "3.50"
+    },
+    {
+      "Kategorie": "Heißgetränke Tee",
+      "Name": "Nandil | Schwarzer Tee",
+      "Beschreibung": "Dass ein kleines Fleckchen im Norden Deutschlands weltweit den größten Teeverbrauch aufweisen soll, will Nandil gar nicht glauben. Schließlich hätten die Leute im indischen Assam eine ebenso große Vorliebe für den kräftigen Schwarztee. Aber eigentlich sei es ja egal, wo sein Assam mit der malzig-würzigen Note getrunken werde. Hauptsache, man finde Zeit, ihn zu genießen. Das tun wir – gerne zur „Teetide“, wie der Ostfriese sagt.",
+      "Menge": "Glas",
+      "Preis": "3.50"
+    },
+    {
+      "Kategorie": "Heißgetränke Tee",
+      "Name": "Annemarie | Früchtetee",
+      "Beschreibung": "Rote Grütze – ein leckerer, tiefroter Kompott aus saftigen Beeren. Das beliebteste Dessert Norddeutschlands. Jede Familie hat ihr ureigenes, gut behütetes Rezept. So auch Annemarie. Das Beste: Ihre Rote Grütze mit dem feinen, fruchtigen, süßsauren Geschmack kann man jederzeit genießen – in Form unseres aromatischen Früchtetees.",
+      "Menge": "Glas",
+      "Preis": "3.50"
+    },
+    {
+      "Kategorie": "Heißgetränke Tee",
+      "Name": "Namira | Pfefferminze",
+      "Beschreibung": "Namira hat in Europa studiert, doch am allerliebsten lebt sie in ihrer nordafrikanischen Heimat. Zwischen Palmen, Kamelen und duftenden Feldern mit aromatischer Pfefferminze. Denn Minze ist ein fester Bestandteil der kulinarischen Tradition ihres Landes. Sie freut sich, auch uns daran teilhaben zu lassen. Und wir von Pure Tea freuen uns, solch einen intensiven Pfefferminztee anbieten zu können.",
+      "Menge": "Glas",
+      "Preis": "3.50"
+    },
+    {
+      "Kategorie": "Heißgetränke Tee",
+      "Name": "Traudl | Almkräuter",
+      "Beschreibung": "Wenn Traudl sich von der Alm auf den Heimweg begibt, findet sie am Wegesrand eine unglaubliche Vielfalt an heimischen Kräutern: Spitzwegerich, Klettenwurzel, Kamillenblüten und Löwenzahn, unter anderem. Zuhause kocht sie sich daraus eine große Kanne heißen Tee. Dies ist unsere gemütliche Wohlfühlmischung, ganz nach Traudls Geschmack",
+      "Menge": "Glas",
+      "Preis": "3.50"
+    },
+    {
+      "Kategorie": "Heißgetränke Tee",
+      "Name": "Bongani | Rooibos Vanille",
+      "Beschreibung": "Bongani liebt die einzigartige Natur der südafrikanischen Zederberge. Seine Heimat ist bekannt für den Anbau des Rotbuschs – dem Rooibos. Mit viel Fingerspitzengefühl verarbeitet er die feinen Zweige der frischen Ernte zu einem karamellig-milden Rooibos-Tee. Alles, was wir noch hinzufügen, ist ein sanfter Hauch von Vanille. Lecker!",
+      "Menge": "Glas",
+      "Preis": "3.50"
+    },
+    {
+      "Kategorie": "Heißgetränke Tee",
+      "Name": "Sarala | Chai",
+      "Beschreibung": "Schon als Kind wollte Sarala so werden wie ihr Vater, ein Chaiwala mit eigenem Teestand. Eine Herausforderung, denn traditionell ist diese Arbeit Männern vorbehalten. Heute hat sie es geschafft. Die Leute lieben ihre ‚Chaiwali‘ – ihre Teefrau. Und ihren würzigen Chai, den sie mit viel Liebe nach ihrem eigenen Rezept zubereitet. Und wir lieben Sarala, weil sie uns die Rezeptur für die Gewürzmischung dieses Chaitees verraten hat.",
+      "Menge": "Glas",
+      "Preis": "3.50"
     }
   ]
 }
