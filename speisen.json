@@ -1,10 +1,38 @@
 {
   "speisen": [
     {
+      "Kategorie": "Hauptgang",
+      "Name": "Zweierlei von der Barbarie-Ente",
+      "Beschreibung": "Zartes Entenfilet und knusprige Keule, serviert mit cremigem Kartoffel-Sellerie-Püree und feinem Rosenkohl.",
+      "Menge": "Portion",
+      "Preis": ""
+    },
+    {
+      "Kategorie": "Hauptgang",
+      "Name": "Lachsfilet auf Beluga-Linsen-Risotto",
+      "Beschreibung": "Saftig gebratenes Lachsfilet, angerichtet auf einem aromatischen Risotto aus Beluga-Linsen, verfeinert mit einem Hauch von frischen Kräutern.",
+      "Menge": "Portion",
+      "Preis": ""
+    },
+    {
+      "Kategorie": "Hauptgang",
+      "Name": "Ofenkürbis auf schwarzen Gnocchi",
+      "Beschreibung": "Gerösteter Ofenkürbis, kombiniert mit schwarzen Gnocchi, garniert mit Granatapfelkernen, cremigem Feta und knackigen Walnüssen.",
+      "Menge": "Portion",
+      "Preis": ""
+    },
+    {
+      "Kategorie": "Nachspeise",
+      "Name": "Schoko-Duo mit Orangenpunsch",
+      "Beschreibung": "Dunkles Schokomousse aus Bitterschokolade, weißes Mousse aus weißer Schokolade, mit Orangen Zimt Punsch Topping",
+      "Menge": "Portion",
+      "Preis": ""
+    },
+    {
       "Kategorie": "Vorspeise",
-      "Name": "N/A",
-      "Beschreibung": "Derzeit keine Essensauswahl verfügbar",
-      "Menge": "Buffet",
+      "Name": "Paprika-Rauchsuppe mit frittierten Camembert-Bites",
+      "Beschreibung": "Aromatische Suppe aus gerösteten Paprika, verfeinert mit einem Hauch von Rauch, serviert mit knusprig frittierten Camembert-Bites für einen cremigen Kontrast.",
+      "Menge": "Portion",
       "Preis": ""
     }
   ]
