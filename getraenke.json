@@ -191,15 +191,15 @@
     },
     {
       "Kategorie": "Rotwein",
-      "Name": "Josef Pimpel zwigelt",
-      "Beschreibung": "Am Gaumen trocken, gut stützende Säure, kräftiger Körper, spürbares, weiches Tannin, gut integrierter Alkohol, fruchtig, elegant, deutliche Aromatik, rote Beeren, Kirsche, würzige Noten",
+      "Name": "Cabernet Sauvignon",
+      "Beschreibung": "Kräftiger Rotwein mit intensiven Aromen von schwarzen Johannisbeeren.",
       "Menge": "0,2L",
       "Preis": "7.00"
     },
     {
       "Kategorie": "Rotwein",
-      "Name": "Son Champaner",
-      "Beschreibung": "Rote Früchte, Zedernholz, Vanille, reifes Tannin, vielschichtiger Körper, viel Reifepotential.",
+      "Name": "Primitivo",
+      "Beschreibung": "Samtiger Rotwein aus Italien mit Noten von reifen Beeren und Gewürzen.",
       "Menge": "0,2L",
       "Preis": "8.00"
     },
@@ -233,8 +233,8 @@
     },
     {
       "Kategorie": "Weißwein",
-      "Name": "Chardonnay",
-      "Beschreibung": " im Glas versprüht unser Chardonnay Aromen, die an Mango und Feigen erinnern, ergänzt durch süße Honignoten und einem Hauch von Minze",
+      "Name": "Riesling",
+      "Beschreibung": "Fruchtig-mineralischer Riesling, der mit Noten von Pfirsich und Apfel besticht.",
       "Menge": "0,2L",
       "Preis": "6.50"
     },
