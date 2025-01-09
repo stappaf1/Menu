@@ -1,3 +1,100 @@
 {
-  "speisen": []
+  "speisen": [
+    {
+      "Kategorie": "Hauptgerichte",
+      "Name": "Zwiebelrostbraten mit Bratkartoffeln und Speckbohnen",
+      "Menge": "Portion",
+      "Preis": "18.00"
+    },
+    {
+      "Kategorie": "Hauptgerichte",
+      "Name": "Putenschnitzel in Kürbiskernpanade mit Kartoffel-Feldsalat",
+      "Menge": "Portion",
+      "Preis": "14.00"
+    },
+    {
+      "Kategorie": "Hauptgerichte",
+      "Name": "Geschmorte Ochsenbackerl auf Kartoffel-Selleriepürree mit glacierten Karotten",
+      "Menge": "Portion",
+      "Preis": "16.00"
+    },
+    {
+      "Kategorie": "Hauptgerichte",
+      "Name": "Gegrilltes Lachsfilet mit Rote-Beete-Sahne auf Belugalinsenrisotto und Blattspinat",
+      "Menge": "Portion",
+      "Preis": "16.00"
+    },
+    {
+      "Kategorie": "Hauptgerichte",
+      "Name": "Tagliatelle mit Ochsenschwanzragout ",
+      "Menge": "Portion",
+      "Preis": "12.00"
+    },
+    {
+      "Kategorie": "Vorspeisen",
+      "Name": "Kleiner gemischter Wintersalat",
+      "Menge": "Portion",
+      "Preis": "4.50"
+    },
+    {
+      "Kategorie": "Vorspeisen",
+      "Name": "Geräucherte Entenbrust auf Feldsalat",
+      "Menge": "Portion",
+      "Preis": "6.50"
+    },
+    {
+      "Kategorie": "Vorspeisen",
+      "Name": "Räucherlachs auf Kartoffel-Kürbisrösti",
+      "Menge": "Portion",
+      "Preis": "6.50"
+    },
+    {
+      "Kategorie": "Vegetarische Gerichte",
+      "Name": "Gerösteter Hokkaidokürbis auf Schwarzen Gnocchi",
+      "Menge": "Portion",
+      "Preis": "12.50"
+    },
+    {
+      "Kategorie": "Vegetarische Gerichte",
+      "Name": "Gebräunte Wirtshausmaultaschen mit Gemüsefüllung",
+      "Menge": "Portion",
+      "Preis": "10.50"
+    },
+    {
+      "Kategorie": "Vegetarische Gerichte",
+      "Name": "Ravioli gefüllt mit Pecorino und Feige in Salbeisahne",
+      "Menge": "Portion",
+      "Preis": "12.50"
+    },
+    {
+      "Kategorie": "Desserts",
+      "Name": "Crème Brûlée von der Tonkabohne",
+      "Menge": "Portion",
+      "Preis": "4.50"
+    },
+    {
+      "Kategorie": "Desserts",
+      "Name": "Schokocrepe gefüllt mit Haselnusscreme",
+      "Menge": "Portion",
+      "Preis": "4.50"
+    },
+    {
+      "Kategorie": "Desserts",
+      "Name": "Kaiserschmarrn mit Zwetschgenröster",
+      "Menge": "Portion",
+      "Preis": "5.50"
+    },
+    {
+      "Kategorie": "Suppen",
+      "Name": "Tafelspitzbrühe mit Grießnockerl und Wurzelgemüse",
+      "Menge": "Portion",
+      "Preis": "5.50"
+    },
+    {
+      "Kategorie": "Suppen",
+      "Name": "Rauchpaprikasuppe mit Chorizo und gebackenem Camembert",
+      "Menge": "Portion",
+      "Preis": "5.50"
+    }
+  ]
 }
