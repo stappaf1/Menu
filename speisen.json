@@ -3,96 +3,105 @@
     {
       "Kategorie": "Vorspeisen",
       "Name": "Kleiner gemischter Wintersalat",
+      "": "mit Balsamico-Honig Dressing",
       "Menge": "Portion",
       "Preis": "4.50"
     },
     {
       "Kategorie": "Vorspeisen",
-      "Name": "Räucherlachs auf Kartoffel-Kürbisrösti mit Meerrettichschmand",
+      "Name": "Räucherlachs auf Kartoffel-Kürbisrösti",
+      "": "mit Meerrettichschmand und eingelegten Zwiebeln",
       "Menge": "Portion",
       "Preis": "6.50"
     },
     {
       "Kategorie": "Vorspeisen",
       "Name": "Geräucherte Entenbrust auf Rotkohl-Fenchelsalat ",
+      "": "mit Orangen-Vinaigrette",
       "Menge": "Portion",
       "Preis": "6.50"
     },
     {
       "Kategorie": "Suppen",
       "Name": "Tafelspitzbrühe mit Pfannkuchenstreifen und Wurzelgemüse",
+      "": "mit kleinem Brotkorb",
       "Menge": "Portion",
       "Preis": "5.50"
     },
     {
       "Kategorie": "Suppen",
       "Name": "Rauchpaprikasuppe mit Chorizo und gebackenem Emmentaler",
+      "": "mit kleinem Brotkorb",
       "Menge": "Portion",
       "Preis": "5.50"
     },
     {
       "Kategorie": "Vegetarische Gerichte",
-      "Name": "Gerösteter Hokkaidokürbis auf schwarzen Gnocchi mit Granatapfel, Gorgonzola und Walnuss",
+      "Name": "Gerösteter Hokkaidokürbis auf schwarzen Gnocchi ",
+      "": "mit Granatapfel, Gorgonzola und Walnuss",
       "Menge": "Portion",
       "Preis": "12.50"
     },
     {
       "Kategorie": "Vegetarische Gerichte",
-      "Name": "Vegetarische Maultaschen mit buntem Gemüse und roter Zwiebelmarmelade",
+      "Name": "Wirtshausmaultaschen mit buntem Gemüse und roter Zwiebelmarmelade",
+      "": "vegetarisch",
       "Menge": "Portion",
       "Preis": "10.50"
     },
     {
       "Kategorie": "Vegetarische Gerichte",
-      "Name": "Arrancini di Risole gefüllt mit Büffelmozzarella auf pikantem Tomatensugo",
+      "Name": "Arrancini di Risole gefüllt mit Büffelmozzarella ",
+      "": "auf pikantem Tomatensugo",
       "Menge": "Portion",
       "Preis": "12.50"
     },
     {
       "Kategorie": "Hauptgerichte",
       "Name": "Zwiebelrostbraten mit Bratkartoffeln und Speckbohnen",
+      "": "mit dunkler Zwiebeljus",
       "Menge": "Portion",
       "Preis": "18.00"
     },
     {
       "Kategorie": "Hauptgerichte",
       "Name": "Putenschnitzel in Kürbiskernpanade mit Kartoffel-Feldsalat",
+      "": "mit Preiselbeeren",
       "Menge": "Portion",
       "Preis": "14.00"
     },
     {
       "Kategorie": "Hauptgerichte",
       "Name": "Geschmorte Ochsenbackerl auf Kartoffel-Selleriepürree mit glacierten Karotten",
+      "": "mit Gremolata",
       "Menge": "Portion",
       "Preis": "16.00"
     },
     {
       "Kategorie": "Hauptgerichte",
-      "Name": "Gegrilltes Lachsfilet mit Rote-Beete-Sahne auf Belugalinsenrisotto und Blattspinat",
+      "Name": "Gegrilltes Lachsfilet  auf Belugalinsenrisotto und Blattspinat",
+      "": "mit Rote-Beete-Schaum",
       "Menge": "Portion",
       "Preis": "16.00"
     },
     {
       "Kategorie": "Hauptgerichte",
       "Name": "Parpadelle mit Ochsenschwanzragout ",
+      "": "mit Gremolata",
       "Menge": "Portion",
       "Preis": "12.00"
     },
     {
       "Kategorie": "Desserts",
-      "Name": "Crème Brûlée von der Tonkabohne",
-      "Menge": "Portion",
-      "Preis": "4.50"
-    },
-    {
-      "Kategorie": "Desserts",
-      "Name": "Schokocrepe gefüllt mit Haselnusscreme",
+      "Name": "Crème Brûlée",
+      "": "mit Tonkabohne",
       "Menge": "Portion",
       "Preis": "4.50"
     },
     {
       "Kategorie": "Desserts",
       "Name": "Kaiserschmarrn mit Zwetschgenröster",
+      "": "Wahlweise mit Apfelmus",
       "Menge": "Portion",
       "Preis": "5.50"
     }
