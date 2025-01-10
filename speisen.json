@@ -1,6 +1,54 @@
 {
   "speisen": [
     {
+      "Kategorie": "Vorspeisen",
+      "Name": "Kleiner gemischter Wintersalat",
+      "Menge": "Portion",
+      "Preis": "4.50"
+    },
+    {
+      "Kategorie": "Vorspeisen",
+      "Name": "Räucherlachs auf Kartoffel-Kürbisrösti mit Meerrettichschmand",
+      "Menge": "Portion",
+      "Preis": "6.50"
+    },
+    {
+      "Kategorie": "Vorspeisen",
+      "Name": "Geräucherte Entenbrust auf Rotkohl-Fenchelsalat ",
+      "Menge": "Portion",
+      "Preis": "6.50"
+    },
+    {
+      "Kategorie": "Suppen",
+      "Name": "Tafelspitzbrühe mit Pfannkuchenstreifen und Wurzelgemüse",
+      "Menge": "Portion",
+      "Preis": "5.50"
+    },
+    {
+      "Kategorie": "Suppen",
+      "Name": "Rauchpaprikasuppe mit Chorizo und gebackenem Emmentaler",
+      "Menge": "Portion",
+      "Preis": "5.50"
+    },
+    {
+      "Kategorie": "Vegetarische Gerichte",
+      "Name": "Gerösteter Hokkaidokürbis auf schwarzen Gnocchi mit Granatapfel, Gorgonzola und Walnuss",
+      "Menge": "Portion",
+      "Preis": "12.50"
+    },
+    {
+      "Kategorie": "Vegetarische Gerichte",
+      "Name": "Vegetarische Maultaschen mit buntem Gemüse und roter Zwiebelmarmelade",
+      "Menge": "Portion",
+      "Preis": "10.50"
+    },
+    {
+      "Kategorie": "Vegetarische Gerichte",
+      "Name": "Arrancini di Risole gefüllt mit Büffelmozzarella auf pikantem Tomatensugo",
+      "Menge": "Portion",
+      "Preis": "12.50"
+    },
+    {
       "Kategorie": "Hauptgerichte",
       "Name": "Zwiebelrostbraten mit Bratkartoffeln und Speckbohnen",
       "Menge": "Portion",
@@ -26,45 +74,9 @@
     },
     {
       "Kategorie": "Hauptgerichte",
-      "Name": "Tagliatelle mit Ochsenschwanzragout ",
+      "Name": "Parpadelle mit Ochsenschwanzragout ",
       "Menge": "Portion",
       "Preis": "12.00"
-    },
-    {
-      "Kategorie": "Vorspeisen",
-      "Name": "Kleiner gemischter Wintersalat",
-      "Menge": "Portion",
-      "Preis": "4.50"
-    },
-    {
-      "Kategorie": "Vorspeisen",
-      "Name": "Geräucherte Entenbrust auf Feldsalat",
-      "Menge": "Portion",
-      "Preis": "6.50"
-    },
-    {
-      "Kategorie": "Vorspeisen",
-      "Name": "Räucherlachs auf Kartoffel-Kürbisrösti",
-      "Menge": "Portion",
-      "Preis": "6.50"
-    },
-    {
-      "Kategorie": "Vegetarische Gerichte",
-      "Name": "Gerösteter Hokkaidokürbis auf Schwarzen Gnocchi",
-      "Menge": "Portion",
-      "Preis": "12.50"
-    },
-    {
-      "Kategorie": "Vegetarische Gerichte",
-      "Name": "Gebräunte Wirtshausmaultaschen mit Gemüsefüllung",
-      "Menge": "Portion",
-      "Preis": "10.50"
-    },
-    {
-      "Kategorie": "Vegetarische Gerichte",
-      "Name": "Ravioli gefüllt mit Pecorino und Feige in Salbeisahne",
-      "Menge": "Portion",
-      "Preis": "12.50"
     },
     {
       "Kategorie": "Desserts",
@@ -81,18 +93,6 @@
     {
       "Kategorie": "Desserts",
       "Name": "Kaiserschmarrn mit Zwetschgenröster",
-      "Menge": "Portion",
-      "Preis": "5.50"
-    },
-    {
-      "Kategorie": "Suppen",
-      "Name": "Tafelspitzbrühe mit Grießnockerl und Wurzelgemüse",
-      "Menge": "Portion",
-      "Preis": "5.50"
-    },
-    {
-      "Kategorie": "Suppen",
-      "Name": "Rauchpaprikasuppe mit Chorizo und gebackenem Camembert",
       "Menge": "Portion",
       "Preis": "5.50"
     }
