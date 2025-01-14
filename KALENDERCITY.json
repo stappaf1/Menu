@@ -71,6 +71,18 @@
       "RAUMHINWEIS": "",
       "BILD": "T60.jpeg",
       "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "22.1.25",
+      "VON": "11:00",
+      "BIS": "18:00",
+      "KUNDE": "Wipfler Plan",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "6",
+      "TAGUNGSRAUM": "Weitblick T100",
+      "RAUMHINWEIS": "",
+      "BILD": "T100.jpeg",
+      "BEMERKUNG": ""
     }
   ]
 }
