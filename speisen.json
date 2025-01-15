@@ -40,14 +40,14 @@
       "Name": "Gerösteter Hokkaidokürbis auf schwarzen Gnocchi ",
       "Beschreibung": "mit Granatapfel, Gorgonzola und Walnuss",
       "Menge": "Portion",
-      "Preis": "12.50"
+      "Preis": "13.50"
     },
     {
       "Kategorie": "Vegetarische Gerichte",
       "Name": "Wirtshausmaultaschen mit buntem Gemüse und roter Zwiebelmarmelade",
       "Beschreibung": "vegetarisch",
       "Menge": "Portion",
-      "Preis": "10.50"
+      "Preis": "12.50"
     },
     {
       "Kategorie": "Vegetarische Gerichte",
@@ -55,13 +55,6 @@
       "Beschreibung": "auf pikantem Tomatensugo",
       "Menge": "Portion",
       "Preis": "12.50"
-    },
-    {
-      "Kategorie": "Hauptgerichte",
-      "Name": "Zwiebelrostbraten mit Bratkartoffeln und Speckbohnen",
-      "Beschreibung": "mit dunkler Zwiebeljus",
-      "Menge": "Portion",
-      "Preis": "18.00"
     },
     {
       "Kategorie": "Hauptgerichte",
@@ -75,7 +68,7 @@
       "Name": "Geschmorte Ochsenbackerl auf Kartoffel-Selleriepürree mit glacierten Karotten",
       "Beschreibung": "mit Gremolata",
       "Menge": "Portion",
-      "Preis": "16.00"
+      "Preis": "18.00"
     },
     {
       "Kategorie": "Hauptgerichte",
@@ -89,7 +82,7 @@
       "Name": "Parpadelle mit Ochsenschwanzragout ",
       "Beschreibung": "mit Gremolata",
       "Menge": "Portion",
-      "Preis": "12.00"
+      "Preis": "14.00"
     },
     {
       "Kategorie": "Desserts",
