@@ -44,6 +44,13 @@
     },
     {
       "Kategorie": "Hauptgerichte",
+      "Name": "Geschmorte Ochsenbackerl auf Kartoffel-Selleriepürree mit glacierten Karotten",
+      "Beschreibung": "mit Gremolata",
+      "Menge": "Portion",
+      "Preis": "18.00"
+    },
+    {
+      "Kategorie": "Hauptgerichte",
       "Name": "Schnitzel \"Wiener Art\" vom Schwein mit Pommes Frites oder Kartoffelsalat",
       "Beschreibung": "mit Preiselbeeren",
       "Menge": "Portion",
