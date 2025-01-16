@@ -307,6 +307,27 @@
       "Beschreibung": "Schon als Kind wollte Sarala so werden wie ihr Vater, ein Chaiwala mit eigenem Teestand. Eine Herausforderung, denn traditionell ist diese Arbeit Männern vorbehalten. Heute hat sie es geschafft. Die Leute lieben ihre ‚Chaiwali‘ – ihre Teefrau. Und ihren würzigen Chai, den sie mit viel Liebe nach ihrem eigenen Rezept zubereitet. Und wir lieben Sarala, weil sie uns die Rezeptur für die Gewürzmischung dieses Chaitees verraten hat.",
       "Menge": "Glas",
       "Preis": "3.50"
+    },
+    {
+      "Kategorie": "Cocktail",
+      "Name": "",
+      "Beschreibung": "Für heute nicht vorgesehen",
+      "Menge": "",
+      "Preis": ""
+    },
+    {
+      "Kategorie": "Aperitif",
+      "Name": "Lillet Wildberry",
+      "Beschreibung": "Fruchtig, frisch, unwiderstehlich – Lillet Wildberry, dein Moment der Leichtigkeit",
+      "Menge": "1 Glas",
+      "Preis": "6.80"
+    },
+    {
+      "Kategorie": "Aperitif",
+      "Name": "Aperol Spritz",
+      "Beschreibung": "Aperol Spritz – Der Geschmack von Sommer, auch im Winter",
+      "Menge": "1 Glas",
+      "Preis": "6.80"
     }
   ]
 }
