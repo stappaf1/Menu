@@ -38,7 +38,7 @@
     {
       "Kategorie": "Hauptgerichte",
       "Name": "Zwiebelrostbraten vom Almochsen mit Dunkelbierjus, Brakartoffeln und Speckbohnen",
-      "Beschreibung": "Medium Rare",
+      "Beschreibung": "medium rare",
       "Menge": "Portion",
       "Preis": "21.50"
     },
@@ -80,7 +80,7 @@
     {
       "Kategorie": "Desserts",
       "Name": "Kaiserschmarrn mit Zwetschgenröster",
-      "Beschreibung": "Wahlweise mit Apfelmus",
+      "Beschreibung": "wahlweise mit Apfelmus",
       "Menge": "Portion",
       "Preis": "5.50"
     }
