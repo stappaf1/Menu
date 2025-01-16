@@ -1,11 +1,18 @@
 {
   "speisen": [
     {
-      "Kategorie": "Vorspeisen",
+      "Kategorie": "Salat",
       "Name": "Kleiner gemischter Wintersalat",
       "Beschreibung": "mit Balsamico-Honig Dressing",
       "Menge": "Portion",
       "Preis": "4.50"
+    },
+    {
+      "Kategorie": "Salat",
+      "Name": "Großer gemischter Wintersalat mit Rinderlendenstreifen",
+      "Beschreibung": "mit Balsamico-Honig Dressing",
+      "Menge": "Portion",
+      "Preis": "12.50"
     },
     {
       "Kategorie": "Suppen",
@@ -22,6 +29,20 @@
       "Preis": "5.50"
     },
     {
+      "Kategorie": "Vorpseise",
+      "Name": "Räucherlachs auf Kartoffel-Kürbisrösti mit Meerrettichschmand",
+      "Beschreibung": "mit eingelegten Zwiebeln",
+      "Menge": "Portion",
+      "Preis": "6.50"
+    },
+    {
+      "Kategorie": "Vorspeise",
+      "Name": "Geräuchter Entenbrust auf gegrilltem Orangenfenchel ",
+      "Beschreibung": "mit Feldalatbuqet",
+      "Menge": "Portion",
+      "Preis": "6.50"
+    },
+    {
       "Kategorie": "Vegetarische Gerichte",
       "Name": "Wirtshausmaultaschen mit buntem Gemüse und roter Zwiebelmarmelade",
       "Beschreibung": "vegetarisch",
@@ -34,6 +55,13 @@
       "Beschreibung": "auf pikantem Tomatensugo",
       "Menge": "Portion",
       "Preis": "12.50"
+    },
+    {
+      "Kategorie": "Vegetarische Gerichte",
+      "Name": "Gerösteter Hokkaido-Kürbis auf schwarzen Gnochi ",
+      "Beschreibung": "mit Granatapfel, Feta und Walnuss",
+      "Menge": "",
+      "Preis": ""
     },
     {
       "Kategorie": "Hauptgerichte",
@@ -58,7 +86,7 @@
     },
     {
       "Kategorie": "Hauptgerichte",
-      "Name": "Putenschnitzel in Kürbiskernpanade mit Kartoffel-Feldsalat",
+      "Name": "Putenschnitzel in Kürbiskernpanade mit Kartoffel-Endiviensalat",
       "Beschreibung": "mit Preiselbeeren",
       "Menge": "Portion",
       "Preis": "14.00"
