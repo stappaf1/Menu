@@ -314,20 +314,6 @@
       "Beschreibung": "Für heute nicht vorgesehen",
       "Menge": "",
       "Preis": ""
-    },
-    {
-      "Kategorie": "Aperitif",
-      "Name": "Lillet Wildberry",
-      "Beschreibung": "Fruchtig, frisch, unwiderstehlich – Lillet Wildberry, dein Moment der Leichtigkeit",
-      "Menge": "1 Glas",
-      "Preis": "6.80"
-    },
-    {
-      "Kategorie": "Aperitif",
-      "Name": "Aperol Spritz",
-      "Beschreibung": "Aperol Spritz – Der Geschmack von Sommer, auch im Winter",
-      "Menge": "1 Glas",
-      "Preis": "6.80"
     }
   ]
 }
