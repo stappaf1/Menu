@@ -38,7 +38,7 @@
     {
       "Kategorie": "Vorspeise",
       "Name": "Geräuchter Entenbrust auf gegrilltem Orangenfenchel ",
-      "Beschreibung": "mit Feldalatbuqet",
+      "Beschreibung": "mit Feldsalat-Bouquet",
       "Menge": "Portion",
       "Preis": "6.50"
     },
@@ -58,14 +58,14 @@
     },
     {
       "Kategorie": "Vegetarische Gerichte",
-      "Name": "Gerösteter Hokkaido-Kürbis auf schwarzen Gnochi ",
+      "Name": "Gerösteter Hokkaido-Kürbis auf schwarzen Gnocchi",
       "Beschreibung": "mit Granatapfel, Feta und Walnuss",
       "Menge": "Portion",
       "Preis": "14.50"
     },
     {
       "Kategorie": "Hauptgerichte",
-      "Name": "Zwiebelrostbraten vom Almochsen mit Dunkelbierjus, Brakartoffeln und Speckbohnen",
+      "Name": "Zwiebelrostbraten vom Almochsen mit Dunkelbierjus, Bratkartoffeln und Speckbohnen",
       "Beschreibung": "medium rare",
       "Menge": "Portion",
       "Preis": "21.50"
@@ -100,7 +100,7 @@
     },
     {
       "Kategorie": "Hauptgerichte",
-      "Name": "Pappadelle mit Ochsenschwanzragout",
+      "Name": "Pappardelle mit Ochsenschwanzragout",
       "Beschreibung": "mit Gremolata",
       "Menge": "Portion",
       "Preis": "14.00"
