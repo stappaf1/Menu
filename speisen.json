@@ -8,13 +8,6 @@
       "Preis": "4.50"
     },
     {
-      "Kategorie": "Vorspeisen",
-      "Name": "Geräucherte Entenbrust auf Rotkohl-Fenchelsalat ",
-      "Beschreibung": "mit Orangen-Vinaigrette",
-      "Menge": "Portion",
-      "Preis": "6.50"
-    },
-    {
       "Kategorie": "Suppen",
       "Name": "Tafelspitzbrühe mit Pfannkuchenstreifen und Wurzelgemüse",
       "Beschreibung": "mit kleinem Brotkorb",
@@ -30,13 +23,6 @@
     },
     {
       "Kategorie": "Vegetarische Gerichte",
-      "Name": "Gerösteter Hokkaidokürbis auf schwarzen Gnocchi ",
-      "Beschreibung": "mit Granatapfel, Gorgonzola und Walnuss",
-      "Menge": "Portion",
-      "Preis": "13.50"
-    },
-    {
-      "Kategorie": "Vegetarische Gerichte",
       "Name": "Wirtshausmaultaschen mit buntem Gemüse und roter Zwiebelmarmelade",
       "Beschreibung": "vegetarisch",
       "Menge": "Portion",
@@ -44,10 +30,24 @@
     },
     {
       "Kategorie": "Vegetarische Gerichte",
-      "Name": "Arrancini di Risole gefüllt mit Büffelmozzarella ",
+      "Name": "Gebackene Risottobällchen gefüllt mit Büffelmozzarella",
       "Beschreibung": "auf pikantem Tomatensugo",
       "Menge": "Portion",
       "Preis": "12.50"
+    },
+    {
+      "Kategorie": "Hauptgerichte",
+      "Name": "Zwiebelrostbraten vom Almochsen mit Dunkelbierjus, Brakartoffeln und Speckbohnen",
+      "Beschreibung": "Medium Rare",
+      "Menge": "Portion",
+      "Preis": "21.50"
+    },
+    {
+      "Kategorie": "Hauptgerichte",
+      "Name": "Schnitzel \"Wiener Art\" vom Schwein mit Pommes Frites oder Kartoffelsalat",
+      "Beschreibung": "mit Preiselbeeren",
+      "Menge": "Portion",
+      "Preis": "16.00"
     },
     {
       "Kategorie": "Hauptgerichte",
@@ -58,15 +58,8 @@
     },
     {
       "Kategorie": "Hauptgerichte",
-      "Name": "Geschmorte Ochsenbackerl auf Kartoffel-Selleriepürree mit glacierten Karotten",
-      "Beschreibung": "mit Gremolata",
-      "Menge": "Portion",
-      "Preis": "18.00"
-    },
-    {
-      "Kategorie": "Hauptgerichte",
       "Name": "Gegrilltes Lachsfilet  auf Belugalinsenrisotto und Blattspinat",
-      "Beschreibung": "mit Rote-Beete-Schaum",
+      "Beschreibung": "mit Limoncelloschaum ",
       "Menge": "Portion",
       "Preis": "16.00"
     },
