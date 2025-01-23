@@ -839,6 +839,30 @@
       "RAUMHINWEIS": "",
       "BILD": "T200-1.jpeg",
       "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "22.01.25",
+      "VON": "08:00",
+      "BIS": "17:00",
+      "KUNDE": "Elero GmbH",
+      "EVENT": "Schulung",
+      "TEILNEHMER": "15",
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "",
+      "BILD": "T90.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "23.01.25",
+      "VON": "08:00",
+      "BIS": "17:00",
+      "KUNDE": "Elero GmbH",
+      "EVENT": "Schulung",
+      "TEILNEHMER": "15",
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "",
+      "BILD": "T90.jpeg",
+      "BEMERKUNG": ""
     }
   ]
 }
