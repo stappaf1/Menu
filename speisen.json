@@ -1,60 +1,10 @@
 {
   "speisen": [
     {
-      "Kategorie": "Vorspeise",
-      "Name": "Kräftige Tafelspitzbrühe ",
-      "Beschreibung": "mit Maultasche und Wurzelgemüse",
-      "Menge": "Portion",
-      "Preis": "6.50"
+      "": ""
     },
     {
-      "Kategorie": "Vorspeise",
-      "Name": "kleiner gemischter Wintersalat",
-      "Beschreibung": "mit Balsamico - Dressing",
-      "Menge": "Portion",
-      "Preis": "6.50"
-    },
-    {
-      "Kategorie": "Hauptgerichte",
-      "Name": "Wiener Backhendl Brust und Keule",
-      "Beschreibung": "mit Preiselbeeren, Kartoffelsalat oder knusprigen Pommes",
-      "Menge": "Portion",
-      "Preis": "17.00"
-    },
-    {
-      "Kategorie": "Hauptgerichte",
-      "Name": "Lachsfilet auf Belugalinsrisotto",
-      "Beschreibung": "mit Limoncellosahne",
-      "Menge": "Portion",
-      "Preis": "17.00"
-    },
-    {
-      "Kategorie": "Hauptgerichte",
-      "Name": "Gebräunte Wirtshausmaultaschen auf Gemüsebeet mit eingelegten Zwiebeln",
-      "Beschreibung": "Vegetarisch",
-      "Menge": "Portion",
-      "Preis": "13.50"
-    },
-    {
-      "Kategorie": "Hauptgerichte",
-      "Name": "Großer gemischter Wintersalat mit Falaffel, Walnuss und Granatapfel",
-      "Beschreibung": "Vegan",
-      "Menge": "Portion",
-      "Preis": "17.00"
-    },
-    {
-      "Kategorie": "Hauptgerichte",
-      "Name": "Parpadelle mit Salsiccia, roten Zwiebeln und pikantem Tomatensugo",
-      "Beschreibung": "mit marinierten Sprossen",
-      "Menge": "Portion",
-      "Preis": "13.50"
-    },
-    {
-      "Kategorie": "Hauptgerichte",
-      "Name": "Parpadelle mit Miesmuscheln und Seespargel ",
-      "Beschreibung": "in feinem Muschelsud",
-      "Menge": "Portion",
-      "Preis": "13.50"
+      "": "Momentan keine warme Küche"
     }
   ]
 }
