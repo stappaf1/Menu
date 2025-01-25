@@ -3,177 +3,184 @@
     {
       "Kategorie": "Bier",
       "Name": "Biere",
-      "Menge": "Müllerbräu Helles mit/ohne Alkohol, Weißbier mit/leicht/ohne Alkohol, Dunkles, Russ, Radler",
-      "Preis": "0,5L",
-      "": "4.00"
+      "Beschreibung": "Müllerbräu Helles mit/ohne Alkohol, Weißbier mit/leicht/ohne Alkohol, Dunkles, Russ, Radler",
+      "Menge": "0,5L",
+      "Preis": "4.00"
     },
     {
       "Kategorie": "Bier",
       "Name": "Pils",
-      "Menge": "Müllerbräu",
-      "Preis": "0,33L",
-      "": "3.50"
+      "Beschreibung": "Müllerbräu",
+      "Menge": "0,33L",
+      "Preis": "3.50"
     },
     {
       "Kategorie": "Antialkoholisches",
       "Name": "Softgetränke",
-      "Menge": "Cola ohne/mit, Spezi, Limo, Saftschorlen",
-      "Preis": "0,4L",
-      "": "3.80"
+      "Beschreibung": "Cola ohne/mit, Spezi, Limo, Saftschorlen",
+      "Menge": "0,4L",
+      "Preis": "3.80"
     },
     {
       "Kategorie": "Antialkoholisches",
       "Name": "Säfte",
-      "Menge": "Orange, Apfel, Sauerkirsch, Ananas, Johannisbeer, Maracuja",
-      "Preis": "0,2L",
-      "": "2.90"
+      "Beschreibung": "Orange, Apfel, Sauerkirsch, Ananas, Johannisbeer, Maracuja",
+      "Menge": "0,2L",
+      "Preis": "2.90"
     },
     {
       "Kategorie": "Antialkoholisches",
       "Name": "Ginger",
-      "Menge": "Ginger Ale, Ginger Beer",
-      "Preis": "0,2L",
-      "": "3.80"
+      "Beschreibung": "Ginger Ale, Ginger Beer",
+      "Menge": "0,2L",
+      "Preis": "3.80"
     },
     {
       "Kategorie": "Antialkoholisches",
       "Name": "Red Bull",
-      "Menge": "",
-      "Preis": "0,2L",
-      "": "4.50"
+      "Beschreibung": "",
+      "Menge": "0,2L",
+      "Preis": "4.50"
     },
     {
       "Kategorie": "Wein",
       "Name": "Weißwein L",
-      "Menge": "Grauburgunder, Riesling",
-      "Preis": "0,2L",
-      "": "6.50"
+      "Beschreibung": "Grauburgunder, Riesling",
+      "Menge": "0,2L",
+      "Preis": "6.50"
     },
     {
       "Kategorie": "Wein",
       "Name": "Weißwein XL",
-      "Menge": "Lugana, Rosé",
-      "Preis": "0.2L",
-      "": "7.50"
+      "Beschreibung": "Lugana, Rosé",
+      "Menge": "0.2L",
+      "Preis": "7.50"
     },
     {
       "Kategorie": "Wein",
       "Name": "Rotwein L",
-      "Menge": "Cabernet Sauvignon",
-      "Preis": "0,2L",
-      "": "7.00"
+      "Beschreibung": "Cabernet Sauvignon",
+      "Menge": "0,2L",
+      "Preis": "7.00"
     },
     {
       "Kategorie": "Wein",
       "Name": "Rotwein XL",
-      "Menge": "Primitivo",
-      "Preis": "0,2L",
-      "": "8.00"
+      "Beschreibung": "Primitivo",
+      "Menge": "0,2L",
+      "Preis": "8.00"
     },
     {
       "Kategorie": "Wein",
       "Name": "Schaumwein",
-      "Menge": "Prosecco, Winzersekt Riesling",
-      "Preis": "0,2L",
-      "": "4.50"
+      "Beschreibung": "Prosecco, Winzersekt Riesling",
+      "Menge": "0,2L",
+      "Preis": "4.50"
     },
     {
       "Kategorie": "Aperitiv",
       "Name": "Aperitiv L",
-      "Menge": "Aperol, Campari Soda, Lillet, Martini mit/ohne, Sherry Fino, Vermouth on the Rocks",
-      "Preis": "Glas",
-      "": "6.50"
+      "Beschreibung": "Aperol, Campari Soda, Lillet, Martini mit/ohne, Sherry Fino, Vermouth on the Rocks",
+      "Menge": "Glas",
+      "Preis": "6.50"
     },
     {
       "Kategorie": "Aperitiv",
       "Name": "Aperitiv XL",
-      "Menge": "Kir",
-      "Preis": "Glas",
-      "": "9.50"
+      "Beschreibung": "Kir",
+      "Menge": "Glas",
+      "Preis": "9.50"
     },
     {
       "Kategorie": "Aperitiv",
       "Name": "Aperitiv XXL",
-      "Menge": "Kir Royal",
-      "Preis": "Glas",
-      "": "11.50"
+      "Beschreibung": "Kir Royal",
+      "Menge": "Glas",
+      "Preis": "11.50"
     },
     {
       "Kategorie": "Cocktail",
       "Name": "Cocktail 1",
-      "Menge": "Gin Tonic, Moscow Mule",
-      "Preis": "Glas",
-      "": "8.50"
+      "Beschreibung": "Gin Tonic, Moscow Mule",
+      "Menge": "Glas",
+      "Preis": "8.50"
     },
     {
       "Kategorie": "Cocktail",
       "Name": "Cocktail 2",
-      "Menge": "Negroni",
-      "Preis": "Glas",
-      "": "9.00"
+      "Beschreibung": "Negroni",
+      "Menge": "Glas",
+      "Preis": "9.00"
     },
     {
       "Kategorie": "Cocktail",
       "Name": "Cocktail 3",
-      "Menge": "Highball, Whiskey Cola, French 75, Martini, Negroni, Tom Collins, Dark ´ n ´ Stormy",
-      "Preis": "Glas",
-      "": "9.50"
+      "Beschreibung": "Highball, Whiskey Cola, French 75, Martini, Negroni, Tom Collins, Dark ´ n ´ Stormy",
+      "Menge": "Glas",
+      "Preis": "9.50"
     },
     {
       "Kategorie": "Cocktail",
       "Name": "Cocktail 4",
-      "Menge": "Young Fashioned, Espresso Martini, White Russian",
-      "Preis": "Glas",
-      "": "10.00"
+      "Beschreibung": "Young Fashioned, Espresso Martini, White Russian",
+      "Menge": "Glas",
+      "Preis": "10.00"
     },
     {
       "Kategorie": "Cocktail",
       "Name": "Cocktail 5",
-      "Menge": "Mojito, Whiskey Sour",
-      "Preis": "Glas",
-      "": "11.00"
+      "Beschreibung": "Mojito, Whiskey Sour",
+      "Menge": "Glas",
+      "Preis": "11.00"
     },
     {
       "Kategorie": "Cocktail",
       "Name": "Cocktail 6",
-      "Menge": "Mai Tai, Piña Colada, Margarita, Old Fashioned",
-      "Preis": "Glas",
-      "": "12.00"
+      "Beschreibung": "Mai Tai, Piña Colada, Margarita, Old Fashioned",
+      "Menge": "Glas",
+      "Preis": "12.00"
     },
     {
       "Kategorie": "Longdrink",
       "Name": "Longdrink L",
-      "Menge": "Cuba Libre, Highball, Whiskey Cola",
-      "Preis": "Glas",
-      "": "9.50"
+      "Beschreibung": "Cuba Libre, Highball, Whiskey Cola",
+      "Menge": "Glas",
+      "Preis": "9.50"
     },
     {
       "Kategorie": "Longdrink",
       "Name": "Longdrink XL",
-      "Menge": "Tequila Sunrise",
-      "Preis": "Glas\t",
-      "": "12.00"
+      "Beschreibung": "Tequila Sunrise",
+      "Menge": "Glas\t",
+      "Preis": "12.00"
     },
     {
       "Kategorie": "Heißgetränke",
       "Name": "Espresso",
-      "Menge": "einfach ",
-      "Preis": "Tasse",
-      "": "2.40"
+      "Beschreibung": "einfach ",
+      "Menge": "Tasse",
+      "Preis": "2.40"
     },
     {
       "Kategorie": "Heißgetränke",
       "Name": "Kaffee",
-      "Menge": "Cappuccino, Latte Macciato, Kaffee Crema, Espresso dopio, Milchkaffee",
-      "Preis": "Tasse",
-      "": "3.50"
+      "Beschreibung": "Cappuccino, Latte Macciato, Kaffee Crema, Espresso dopio, Milchkaffee",
+      "Menge": "Tasse",
+      "Preis": "3.50"
     },
     {
       "Kategorie": "Heißgetränke",
       "Name": "Tee",
-      "Menge": "alle Sorten",
-      "Preis": "Tasse",
-      "": "3.50"
+      "Beschreibung": "alle Sorten",
+      "Menge": "Tasse",
+      "Preis": "3.50"
+    },
+    {
+      "Kategorie": "Heißgetränke",
+      "Name": "Tee",
+      "Beschreibung": "alle Sorten",
+      "Menge": "Tasse",
+      "Preis": "3.50"
     }
   ]
 }
