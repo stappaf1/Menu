@@ -1,394 +1,179 @@
 {
   "getraenke": [
     {
-      "Kategorie": "Biere",
-      "Name": "Alkoholfreies Bier",
-      "Menge": "0,5L",
-      "Preis": "4.00"
+      "Kategorie": "Bier",
+      "Name": "Biere",
+      "Menge": "Müllerbräu Helles mit/ohne Alkohol, Weißbier mit/leicht/ohne Alkohol, Dunkles, Russ, Radler",
+      "Preis": "0,5L",
+      "": "4.00"
     },
     {
-      "Kategorie": "Biere",
-      "Name": "Dunkles Bier",
-      "Menge": "0,5L",
-      "Preis": "4.00"
-    },
-    {
-      "Kategorie": "Biere",
-      "Name": "Dunkles Weißbier",
-      "Menge": "0,5L",
-      "Preis": "4.00"
-    },
-    {
-      "Kategorie": "Biere",
-      "Name": "Helles Bier",
-      "Menge": "0,5L",
-      "Preis": "4.00"
-    },
-    {
-      "Kategorie": "Biere",
+      "Kategorie": "Bier",
       "Name": "Pils",
-      "Menge": "0,3L",
-      "Preis": "3.60"
+      "Menge": "Müllerbräu",
+      "Preis": "0,33L",
+      "": "3.50"
     },
     {
-      "Kategorie": "Biere",
-      "Name": "Superpils",
-      "Menge": "0,3L",
-      "Preis": "4.00"
+      "Kategorie": "Antialkoholisches",
+      "Name": "Softgetränke",
+      "Menge": "Cola ohne/mit, Spezi, Limo, Saftschorlen",
+      "Preis": "0,4L",
+      "": "3.80"
     },
     {
-      "Kategorie": "Biere",
-      "Name": "Weißbier",
-      "Menge": "0,5L",
-      "Preis": "4.00"
+      "Kategorie": "Antialkoholisches",
+      "Name": "Säfte",
+      "Menge": "Orange, Apfel, Sauerkirsch, Ananas, Johannisbeer, Maracuja",
+      "Preis": "0,2L",
+      "": "2.90"
     },
     {
-      "Kategorie": "Alkoholfreies",
-      "Name": "Ananassaft",
-      "Menge": "0,2L",
-      "Preis": "2.90"
+      "Kategorie": "Antialkoholisches",
+      "Name": "Ginger",
+      "Menge": "Ginger Ale, Ginger Beer",
+      "Preis": "0,2L",
+      "": "3.80"
     },
     {
-      "Kategorie": "Alkoholfreies",
-      "Name": "Apfelsaft",
-      "Menge": "0,2L",
-      "Preis": "2.90"
-    },
-    {
-      "Kategorie": "Alkoholfreies",
-      "Name": "Johannisbeersaft",
-      "Menge": "0,2L",
-      "Preis": "2.90"
-    },
-    {
-      "Kategorie": "Alkoholfreies",
-      "Name": "Maracujasaft",
-      "Menge": "0,2L",
-      "Preis": "2.90"
-    },
-    {
-      "Kategorie": "Alkoholfreies",
-      "Name": "Mineralwasser Spritzig",
-      "Menge": "0,7L",
-      "Preis": "7.00"
-    },
-    {
-      "Kategorie": "Alkoholfreies",
-      "Name": "Mineralwasser Spritzig",
-      "Menge": "0,4L",
-      "Preis": "3.50"
-    },
-    {
-      "Kategorie": "Alkoholfreies",
-      "Name": "Mineralwasser Still",
-      "Menge": "0,7L",
-      "Preis": "7.00"
-    },
-    {
-      "Kategorie": "Alkoholfreies",
-      "Name": "Mineralwasser Still",
-      "Menge": "0,4L",
-      "Preis": "3.50"
-    },
-    {
-      "Kategorie": "Alkoholfreies",
-      "Name": "Saftschorle",
-      "Menge": "0,4L",
-      "Preis": "3.80"
-    },
-    {
-      "Kategorie": "Alkoholfreies",
-      "Name": "Sauerkirschsaft",
-      "Menge": "0,2L",
-      "Preis": "2.90"
-    },
-    {
-      "Kategorie": "Softgetränke",
-      "Name": "Afri Cola",
-      "Menge": "0,2L",
-      "Preis": "3.80"
-    },
-    {
-      "Kategorie": "Softgetränke",
-      "Name": "Afri Cola Light",
-      "Menge": "0,2L",
-      "Preis": "3.80"
-    },
-    {
-      "Kategorie": "Softgetränke",
-      "Name": "Ginger Ale",
-      "Menge": "0,2L",
-      "Preis": "3.80"
-    },
-    {
-      "Kategorie": "Softgetränke",
-      "Name": "Ginger Beer",
-      "Menge": "0,2L",
-      "Preis": "3.80"
-    },
-    {
-      "Kategorie": "Softgetränke",
-      "Name": "Orangenlimonade",
-      "Menge": "0,4L",
-      "Preis": "3.80"
-    },
-    {
-      "Kategorie": "Softgetränke",
+      "Kategorie": "Antialkoholisches",
       "Name": "Red Bull",
-      "Menge": "0,2L",
-      "Preis": "4.50"
+      "Menge": "",
+      "Preis": "0,2L",
+      "": "4.50"
     },
     {
-      "Kategorie": "Softgetränke",
-      "Name": "Spezi",
-      "Menge": "0,4L",
-      "Preis": "3.80"
+      "Kategorie": "Wein",
+      "Name": "Weißwein L",
+      "Menge": "Grauburgunder, Riesling",
+      "Preis": "0,2L",
+      "": "6.50"
     },
     {
-      "Kategorie": "Softgetränke",
-      "Name": "Tonic Water",
-      "Menge": "0,2L",
-      "Preis": "3.80"
+      "Kategorie": "Wein",
+      "Name": "Weißwein XL",
+      "Menge": "Lugana, Rosé",
+      "Preis": "0.2L",
+      "": "7.50"
     },
     {
-      "Kategorie": "Softgetränke",
-      "Name": "Zitronenlimonade",
-      "Menge": "0,4L",
-      "Preis": "3.80"
+      "Kategorie": "Wein",
+      "Name": "Rotwein L",
+      "Menge": "Cabernet Sauvignon",
+      "Preis": "0,2L",
+      "": "7.00"
     },
     {
-      "Kategorie": "Rosé",
-      "Name": "Rosé",
-      "Menge": "0,2L",
-      "Preis": "7.50"
+      "Kategorie": "Wein",
+      "Name": "Rotwein XL",
+      "Menge": "Primitivo",
+      "Preis": "0,2L",
+      "": "8.00"
     },
     {
-      "Kategorie": "Rotwein",
-      "Name": "Cabernet Sauvignon",
-      "Menge": "0,2L",
-      "Preis": "7.00"
+      "Kategorie": "Wein",
+      "Name": "Schaumwein",
+      "Menge": "Prosecco, Winzersekt Riesling",
+      "Preis": "0,2L",
+      "": "4.50"
     },
     {
-      "Kategorie": "Rotwein",
-      "Name": "Primitivo",
-      "Menge": "0,2L",
-      "Preis": "8.00"
+      "Kategorie": "Aperitiv",
+      "Name": "Aperitiv L",
+      "Menge": "Aperol, Campari Soda, Lillet, Martini mit/ohne, Sherry Fino, Vermouth on the Rocks",
+      "Preis": "Glas",
+      "": "6.50"
     },
     {
-      "Kategorie": "Schaumwein",
-      "Name": "Prosecco",
-      "Menge": "0,2L",
-      "Preis": "4.50"
+      "Kategorie": "Aperitiv",
+      "Name": "Aperitiv XL",
+      "Menge": "Kir",
+      "Preis": "Glas",
+      "": "9.50"
     },
     {
-      "Kategorie": "Schaumwein",
-      "Name": "Winzersekt Riesling",
-      "Menge": "0,2L",
-      "Preis": "4.50"
+      "Kategorie": "Aperitiv",
+      "Name": "Aperitiv XXL",
+      "Menge": "Kir Royal",
+      "Preis": "Glas",
+      "": "11.50"
     },
     {
-      "Kategorie": "Weißwein",
-      "Name": "Grauburgunder",
-      "Menge": "0,2L",
-      "Preis": "6.50"
+      "Kategorie": "Cocktail",
+      "Name": "Cocktail 1",
+      "Menge": "Gin Tonic, Moscow Mule",
+      "Preis": "Glas",
+      "": "8.50"
     },
     {
-      "Kategorie": "Weißwein",
-      "Name": "Lugana",
-      "Menge": "0,2L",
-      "Preis": "7.50"
+      "Kategorie": "Cocktail",
+      "Name": "Cocktail 2",
+      "Menge": "Negroni",
+      "Preis": "Glas",
+      "": "9.00"
     },
     {
-      "Kategorie": "Weißwein",
-      "Name": "Riesling",
-      "Menge": "0,2L",
-      "Preis": "6.50"
+      "Kategorie": "Cocktail",
+      "Name": "Cocktail 3",
+      "Menge": "Highball, Whiskey Cola, French 75, Martini, Negroni, Tom Collins, Dark ´ n ´ Stormy",
+      "Preis": "Glas",
+      "": "9.50"
     },
     {
-      "Kategorie": "Aperitif",
-      "Name": "Aperol Spritz TOP10",
-      "Menge": "1 Glas",
-      "Preis": "6.80"
+      "Kategorie": "Cocktail",
+      "Name": "Cocktail 4",
+      "Menge": "Young Fashioned, Espresso Martini, White Russian",
+      "Preis": "Glas",
+      "": "10.00"
     },
     {
-      "Kategorie": "Aperitif",
-      "Name": "Campari Soda",
-      "Menge": "1 Glas",
-      "Preis": "6.80"
+      "Kategorie": "Cocktail",
+      "Name": "Cocktail 5",
+      "Menge": "Mojito, Whiskey Sour",
+      "Preis": "Glas",
+      "": "11.00"
     },
     {
-      "Kategorie": "Aperitif",
-      "Name": "Lillet Wildberry",
-      "Menge": "1 Glas",
-      "Preis": "6.80"
+      "Kategorie": "Cocktail",
+      "Name": "Cocktail 6",
+      "Menge": "Mai Tai, Piña Colada, Margarita, Old Fashioned",
+      "Preis": "Glas",
+      "": "12.00"
     },
     {
-      "Kategorie": "Aperitif",
-      "Name": "Martini Bianco Tonic",
-      "Menge": "1 Glas",
-      "Preis": "6.80"
+      "Kategorie": "Longdrink",
+      "Name": "Longdrink L",
+      "Menge": "Cuba Libre, Highball, Whiskey Cola",
+      "Preis": "Glas",
+      "": "9.50"
     },
     {
-      "Kategorie": "Aperitif",
-      "Name": "Martini Floreale Tonic",
-      "Menge": "1 Glas",
-      "Preis": "6.80"
+      "Kategorie": "Longdrink",
+      "Name": "Longdrink XL",
+      "Menge": "Tequila Sunrise",
+      "Preis": "Glas\t",
+      "": "12.00"
     },
     {
-      "Kategorie": "Aperitif",
-      "Name": "Vermouth on the Rocks",
-      "Menge": "1 Glas",
-      "Preis": "6.80"
-    },
-    {
-      "Kategorie": "Rum Longdrink",
-      "Name": "Cuba Libre",
-      "Menge": "1 Glas",
-      "Preis": "9.50"
-    },
-    {
-      "Kategorie": "Whiskey Longdrink",
-      "Name": "Highball",
-      "Menge": "1 Glas",
-      "Preis": "9.50"
-    },
-    {
-      "Kategorie": "Whiskey Longdrink",
-      "Name": "Whiskey Cola",
-      "Menge": "1 Glas",
-      "Preis": "9.50"
-    },
-    {
-      "Kategorie": "Alkoholfrei Cocktail",
-      "Name": "NoNegroni ",
-      "Menge": "1 Glas",
-      "Preis": "9.00"
-    },
-    {
-      "Kategorie": "Alkoholfrei Cocktail",
-      "Name": "Young Fashioned ",
-      "Menge": "1 Glas",
-      "Preis": "10.00"
-    },
-    {
-      "Kategorie": "Gin Cocktail",
-      "Name": "Gin Tonic",
-      "Menge": "1 Glas",
-      "Preis": "8.50"
-    },
-    {
-      "Kategorie": "Gin Cocktail",
-      "Name": "Negroni TOP10",
-      "Menge": "1 Glas",
-      "Preis": "9.50"
-    },
-    {
-      "Kategorie": "Gin Cocktail",
-      "Name": "Tom Collins",
-      "Menge": "1 Glas",
-      "Preis": "9.50"
-    },
-    {
-      "Kategorie": "Whiskey Cocktail",
-      "Name": "Old Fashioned TOP10",
-      "Menge": "1 Glas",
-      "Preis": "12.00"
-    },
-    {
-      "Kategorie": "Wodka Cocktail",
-      "Name": "Espresso Martini TOP10",
-      "Menge": "1 Glas",
-      "Preis": "10.00"
-    },
-    {
-      "Kategorie": "Wodka Cocktail",
-      "Name": "Moscow Mule TOP10",
-      "Menge": "1 Glas",
-      "Preis": "8.50"
-    },
-    {
-      "Kategorie": "Heißgetränke Kaffee",
-      "Name": "Café Crema",
-      "Menge": "Tasse",
-      "Preis": "3.50"
-    },
-    {
-      "Kategorie": "Heißgetränke Kaffee",
-      "Name": "Cappuccino",
-      "Menge": "Tasse",
-      "Preis": "3.50"
-    },
-    {
-      "Kategorie": "Heißgetränke Kaffee",
-      "Name": "Doppio Espresso",
-      "Menge": "Tasse",
-      "Preis": "3.50"
-    },
-    {
-      "Kategorie": "Heißgetränke Kaffee",
+      "Kategorie": "Heißgetränke",
       "Name": "Espresso",
-      "Menge": "Tasse",
-      "Preis": "2.40"
+      "Menge": "einfach ",
+      "Preis": "Tasse",
+      "": "2.40"
     },
     {
-      "Kategorie": "Heißgetränke Kaffee",
-      "Name": "Latte Macchiato",
-      "Menge": "Glas",
-      "Preis": "3.50"
+      "Kategorie": "Heißgetränke",
+      "Name": "Kaffee",
+      "Menge": "Cappuccino, Latte Macciato, Kaffee Crema, Espresso dopio, Milchkaffee",
+      "Preis": "Tasse",
+      "": "3.50"
     },
     {
-      "Kategorie": "Heißgetränke Tee",
-      "Name": "Claire | Kräuter",
-      "Menge": "Glas",
-      "Preis": "3.50"
-    },
-    {
-      "Kategorie": "Heißgetränke Tee",
-      "Name": "Hayato | Grüntee",
-      "Menge": "Glas",
-      "Preis": "3.50"
-    },
-    {
-      "Kategorie": "Heißgetränke Tee",
-      "Name": "Jinjin | Grüntee",
-      "Menge": "Glas",
-      "Preis": "3.50"
-    },
-    {
-      "Kategorie": "Heißgetränke Tee",
-      "Name": "Nandil | Schwarzer Tee",
-      "Menge": "Glas",
-      "Preis": "3.50"
-    },
-    {
-      "Kategorie": "Heißgetränke Tee",
-      "Name": "Annemarie | Früchtetee",
-      "Menge": "Glas",
-      "Preis": "3.50"
-    },
-    {
-      "Kategorie": "Heißgetränke Tee",
-      "Name": "Namira | Pfefferminze",
-      "Menge": "Glas",
-      "Preis": "3.50"
-    },
-    {
-      "Kategorie": "Heißgetränke Tee",
-      "Name": "Traudl | Almkräuter",
-      "Menge": "Glas",
-      "Preis": "3.50"
-    },
-    {
-      "Kategorie": "Heißgetränke Tee",
-      "Name": "Bongani | Rooibos Vanille",
-      "Menge": "Glas",
-      "Preis": "3.50"
-    },
-    {
-      "Kategorie": "Heißgetränke Tee",
-      "Name": "Sarala | Chai",
-      "Menge": "Glas",
-      "Preis": "3.50"
+      "Kategorie": "Heißgetränke",
+      "Name": "Tee",
+      "Menge": "alle Sorten",
+      "Preis": "Tasse",
+      "": "3.50"
     }
   ]
 }
