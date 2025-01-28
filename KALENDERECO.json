@@ -863,6 +863,18 @@
       "RAUMHINWEIS": "",
       "BILD": "T90.jpeg",
       "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "28.1.25",
+      "VON": "11:00",
+      "BIS": "18:00",
+      "KUNDE": "Hydroisotop GmbH ",
+      "EVENT": "Schulung",
+      "TEILNEHMER": "6",
+      "TAGUNGSRAUM": "ecoRefugium T30",
+      "RAUMHINWEIS": "",
+      "BILD": "T30.jpeg",
+      "BEMERKUNG": ""
     }
   ]
 }
