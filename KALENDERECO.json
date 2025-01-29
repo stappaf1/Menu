@@ -959,6 +959,66 @@
       "RAUMHINWEIS": "",
       "BILD": "T90.jpeg",
       "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "03.2.25",
+      "VON": "11:00",
+      "BIS": "19:00",
+      "KUNDE": "BGN",
+      "EVENT": "Schulung",
+      "TEILNEHMER": "9",
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "",
+      "BILD": "T90.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "04.2.25",
+      "VON": "11:00",
+      "BIS": "19:00",
+      "KUNDE": "BGN",
+      "EVENT": "Schulung",
+      "TEILNEHMER": "9",
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "",
+      "BILD": "T90.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "04.2.25",
+      "VON": "08:00",
+      "BIS": "19:00",
+      "KUNDE": "Volksbank Raiffeisenbank",
+      "EVENT": "Schulung",
+      "TEILNEHMER": "15",
+      "TAGUNGSRAUM": "ecoForum T120",
+      "RAUMHINWEIS": "",
+      "BILD": "T120.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "05.2.25",
+      "VON": "08:00",
+      "BIS": "19:00",
+      "KUNDE": "Volksbank Raiffeisenbank",
+      "EVENT": "Schulung",
+      "TEILNEHMER": "15",
+      "TAGUNGSRAUM": "ecoForum T120",
+      "RAUMHINWEIS": "",
+      "BILD": "T120.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "06.2.25",
+      "VON": "18:00",
+      "BIS": "",
+      "KUNDE": "Pro Wirtschaft",
+      "EVENT": "",
+      "TEILNEHMER": "30-40",
+      "TAGUNGSRAUM": "ecoForum T120",
+      "RAUMHINWEIS": "",
+      "BILD": "T120.jpeg",
+      "BEMERKUNG": ""
     }
   ]
 }
