@@ -875,6 +875,30 @@
       "RAUMHINWEIS": "",
       "BILD": "T30.jpeg",
       "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "29.01.25",
+      "VON": "08:00",
+      "BIS": "",
+      "KUNDE": "Syngenity",
+      "EVENT": "Veranstaltung",
+      "TEILNEHMER": "20",
+      "TAGUNGSRAUM": "ecoForum T120",
+      "RAUMHINWEIS": "",
+      "BILD": "T120.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "29.01.25",
+      "VON": "17:30",
+      "BIS": "",
+      "KUNDE": "Praxis für Kardiologie und Innere Medizin   ",
+      "EVENT": "Veranstaltung",
+      "TEILNEHMER": "30",
+      "TAGUNGSRAUM": "ecoPlenum T200",
+      "RAUMHINWEIS": "",
+      "BILD": "T200-Business.jpeg",
+      "BEMERKUNG": ""
     }
   ]
 }
