@@ -881,7 +881,7 @@
       "VON": "08:00",
       "BIS": "18:00",
       "KUNDE": "Syngenity",
-      "EVENT": "Veranstaltung",
+      "EVENT": "Schulung",
       "TEILNEHMER": "20",
       "TAGUNGSRAUM": "ecoForum T120",
       "RAUMHINWEIS": "",
@@ -898,6 +898,66 @@
       "TAGUNGSRAUM": "ecoPlenum T200",
       "RAUMHINWEIS": "",
       "BILD": "T200-Business.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "30.01.25",
+      "VON": "08:00",
+      "BIS": "18:00",
+      "KUNDE": "Syngenity",
+      "EVENT": "Schulung",
+      "TEILNEHMER": "20",
+      "TAGUNGSRAUM": "ecoForum T120",
+      "RAUMHINWEIS": "",
+      "BILD": "T120.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "30.01.25",
+      "VON": "08:00",
+      "BIS": "18:00",
+      "KUNDE": "WTS",
+      "EVENT": "Schulung",
+      "TEILNEHMER": "12",
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "",
+      "BILD": "T90.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "31.01.25",
+      "VON": "08:00",
+      "BIS": "18:00",
+      "KUNDE": "Syngenity",
+      "EVENT": "Schulung",
+      "TEILNEHMER": "20",
+      "TAGUNGSRAUM": "ecoForum T120",
+      "RAUMHINWEIS": "",
+      "BILD": "T120.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "31.01.25",
+      "VON": "08:00",
+      "BIS": "18:00",
+      "KUNDE": "WTS",
+      "EVENT": "Schulung",
+      "TEILNEHMER": "12",
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "",
+      "BILD": "T90.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "01.02.25",
+      "VON": "08:00",
+      "BIS": "16:00",
+      "KUNDE": "Hipp",
+      "EVENT": "Schulung",
+      "TEILNEHMER": "14",
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "",
+      "BILD": "T90.jpeg",
       "BEMERKUNG": ""
     }
   ]
