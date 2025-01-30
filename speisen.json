@@ -1,10 +1,39 @@
 {
   "speisen": [
     {
-      "": ""
+      "Kategorie": "Vorpseise",
+      "Name": "Rauchparikasuppe mit Chorizo, Pimentos und gebackenem ",
+      "Beschreibung": " ",
+      "Menge": "Portion",
+      "Preis": "Pauschal"
     },
     {
-      "": "Momentan keine warme Küche"
+      "Kategorie": "Hauptgericht",
+      "Name": "Zart geschmorte Ochsenbackerl mit Kartoffelpürree und glacierten Karotten",
+      "Beschreibung": " ",
+      "Menge": "Portion",
+      "Preis": "Pauschal"
+    },
+    {
+      "Kategorie": "Hauptgericht",
+      "Name": "Gegrilltes Lachsfilet mit Safransahne auf Belugalinsenrisotto",
+      "Beschreibung": " ",
+      "Menge": "Portion",
+      "Preis": "Pauschal"
+    },
+    {
+      "Kategorie": "Hauptgericht",
+      "Name": "Vegetarische Maultaschen auf Gemüsebeet mit Kräuterschmand und marinierten Sprossen",
+      "Beschreibung": " ",
+      "Menge": "Portion",
+      "Preis": "Pauschal"
+    },
+    {
+      "Kategorie": "Dessert",
+      "Name": "Leberkäse mit Spiegelei",
+      "Beschreibung": " ",
+      "Menge": "Portion",
+      "Preis": "Pauschal"
     }
   ]
 }
