@@ -2,7 +2,7 @@
   "speisen": [
     {
       "Kategorie": "Vorpseise",
-      "Name": "Rauchparikasuppe mit Chorizo, Pimentos und gebackenem ",
+      "Name": "Rauchparikasuppe mit Chorizo, Pimentos und gebackenem Camembert",
       "Beschreibung": " ",
       "Menge": "Portion",
       "Preis": "Pauschal"
@@ -30,7 +30,7 @@
     },
     {
       "Kategorie": "Dessert",
-      "Name": "Leberkäse mit Spiegelei",
+      "Name": "Kaiserschmarrn mit Apfelmus",
       "Beschreibung": " ",
       "Menge": "Portion",
       "Preis": "Pauschal"
