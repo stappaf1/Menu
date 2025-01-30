@@ -8,11 +8,11 @@
       "Preis": "4.00"
     },
     {
-      "Kategorie": "Biere",
-      "Name": "Dunkles Bier",
+      "Kategorie": "",
+      "Name": "",
       "Beschreibung": "",
-      "Menge": "0,5L",
-      "Preis": "4.00"
+      "Menge": "",
+      "Preis": ""
     },
     {
       "Kategorie": "Biere",
@@ -314,13 +314,6 @@
       "Beschreibung": "",
       "Menge": "Glas",
       "Preis": "3.50"
-    },
-    {
-      "Kategorie": "Cocktail",
-      "Name": "",
-      "Beschreibung": "",
-      "Menge": "",
-      "Preis": ""
     }
   ]
 }
