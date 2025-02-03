@@ -2,10 +2,17 @@
   "speisen": [
     {
       "Kategorie": "Vorpseise",
-      "Name": "Rauchparikasuppe mit Chorizo, Pimentos und gebackenem Camembert",
+      "Name": "Lauwarmes Roastbeef mit Schnittlauch Dip und geröstetem Brot",
       "Beschreibung": " ",
       "Menge": "Portion",
       "Preis": "Pauschal"
+    },
+    {
+      "Kategorie": "Vorspeise",
+      "Name": "Kartoffel-Kürbisrösti mit Sour Creme",
+      "Beschreibung": "",
+      "Menge": "",
+      "Preis": ""
     },
     {
       "Kategorie": "Hauptgericht",
@@ -16,21 +23,7 @@
     },
     {
       "Kategorie": "Hauptgericht",
-      "Name": "Gegrilltes Lachsfilet mit Safransahne auf Belugalinsenrisotto",
-      "Beschreibung": " ",
-      "Menge": "Portion",
-      "Preis": "Pauschal"
-    },
-    {
-      "Kategorie": "Hauptgericht",
       "Name": "Vegetarische Maultaschen auf Gemüsebeet mit Kräuterschmand und marinierten Sprossen",
-      "Beschreibung": " ",
-      "Menge": "Portion",
-      "Preis": "Pauschal"
-    },
-    {
-      "Kategorie": "Dessert",
-      "Name": "Kaiserschmarrn mit Apfelmus",
       "Beschreibung": " ",
       "Menge": "Portion",
       "Preis": "Pauschal"
