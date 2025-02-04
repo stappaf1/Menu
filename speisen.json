@@ -2,21 +2,14 @@
   "speisen": [
     {
       "Kategorie": "Vorpseise",
-      "Name": "Lauwarmes Roastbeef mit Schnittlauch Dip und geröstetem Brot",
+      "Name": "Rauchpaprikasuppe mit geröstetem Lardo",
       "Beschreibung": " ",
       "Menge": "Portion",
       "Preis": "Pauschal"
     },
     {
-      "Kategorie": "Vorspeise",
-      "Name": "Kartoffel-Kürbisrösti mit Sour Creme",
-      "Beschreibung": "",
-      "Menge": "",
-      "Preis": ""
-    },
-    {
       "Kategorie": "Hauptgericht",
-      "Name": "Zart geschmorte Ochsenbackerl mit Kartoffelpürree und glacierten Karotten",
+      "Name": "Schweineschnitzel \"Wiener Art\" mit Röstkartoffeln und Preiselbeeren",
       "Beschreibung": " ",
       "Menge": "Portion",
       "Preis": "Pauschal"
