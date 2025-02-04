@@ -969,7 +969,7 @@
       "TEILNEHMER": "9",
       "TAGUNGSRAUM": "ecoCentrum T90",
       "RAUMHINWEIS": "",
-      "BILD": "T90.jpeg",
+      "BILD": "T90.mp4",
       "BEMERKUNG": ""
     },
     {
@@ -1027,6 +1027,18 @@
       "KUNDE": "Pro Wirtschaft",
       "EVENT": "",
       "TEILNEHMER": "30-40",
+      "TAGUNGSRAUM": "ecoForum T120",
+      "RAUMHINWEIS": "",
+      "BILD": "T120.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "04.2.25",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "VR-Bank",
+      "EVENT": "",
+      "TEILNEHMER": "",
       "TAGUNGSRAUM": "ecoForum T120",
       "RAUMHINWEIS": "",
       "BILD": "T120.jpeg",
