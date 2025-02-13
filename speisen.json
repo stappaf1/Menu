@@ -2,21 +2,21 @@
   "speisen": [
     {
       "Kategorie": "Vorpseise",
-      "Name": "Rauchpaprikasuppe mit geröstetem Lardo",
+      "Name": "Apfel-Selleriesuppe mit Zimtcrouton",
       "Beschreibung": " ",
       "Menge": "Portion",
       "Preis": "Pauschal"
     },
     {
       "Kategorie": "Hauptgericht",
-      "Name": "Schweineschnitzel \"Wiener Art\" mit Röstkartoffeln",
+      "Name": "Rindersteaks mit Kürbis-Kartoffelrösti und marinierten Sprossen",
       "Beschreibung": " ",
       "Menge": "Portion",
       "Preis": "Pauschal"
     },
     {
       "Kategorie": "Hauptgericht",
-      "Name": "Vegetarische Maultaschen auf Gemüsebeet mit Kräuterschmand und marinierten Sprossen",
+      "Name": "Gemüsemaultasche auf Spinat-Kürbisgemüse",
       "Beschreibung": " ",
       "Menge": "Portion",
       "Preis": "Pauschal"
