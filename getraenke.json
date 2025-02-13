@@ -100,16 +100,16 @@
     },
     {
       "Kategorie": "Softgetränke",
-      "Name": "Afri Cola",
+      "Name": "Cola",
       "Beschreibung": "",
-      "Menge": "0,2L",
+      "Menge": "0,4L",
       "Preis": "3.80"
     },
     {
       "Kategorie": "Softgetränke",
-      "Name": "Afri Cola Light",
+      "Name": "Cola Zero",
       "Beschreibung": "",
-      "Menge": "0,2L",
+      "Menge": "0,4L",
       "Preis": "3.80"
     },
     {
@@ -166,14 +166,14 @@
       "Name": "Aperol Spritz",
       "Beschreibung": "",
       "Menge": "1 Glas",
-      "Preis": "6.80"
+      "Preis": "6.90"
     },
     {
       "Kategorie": "Aperitif",
       "Name": "Lillet Wildberry",
       "Beschreibung": "",
       "Menge": "1 Glas",
-      "Preis": "6.80"
+      "Preis": "6.90"
     },
     {
       "Kategorie": "Heißgetränke Kaffee",
