@@ -9,20 +9,6 @@
     },
     {
       "Kategorie": "Biere",
-      "Name": "Dunkles Bier",
-      "Beschreibung": "",
-      "Menge": "0,5L",
-      "Preis": "4.00"
-    },
-    {
-      "Kategorie": "Biere",
-      "Name": "Dunkles Weißbier",
-      "Beschreibung": "",
-      "Menge": "0,5L",
-      "Preis": "4.00"
-    },
-    {
-      "Kategorie": "Biere",
       "Name": "Helles Bier",
       "Beschreibung": "",
       "Menge": "0,5L",
@@ -156,13 +142,6 @@
     },
     {
       "Kategorie": "Rotwein",
-      "Name": "Markus Schneider Ursprung",
-      "Beschreibung": "",
-      "Menge": "0,2L",
-      "Preis": "7.00"
-    },
-    {
-      "Kategorie": "Rotwein",
       "Name": "Primitivo di Manduria",
       "Beschreibung": "",
       "Menge": "0,2L",
@@ -174,13 +153,6 @@
       "Beschreibung": "",
       "Menge": "0,2L",
       "Preis": "4.50"
-    },
-    {
-      "Kategorie": "Weißwein",
-      "Name": "Blanc de Blanc",
-      "Beschreibung": "",
-      "Menge": "0,2L",
-      "Preis": "6.50"
     },
     {
       "Kategorie": "Weißwein",
