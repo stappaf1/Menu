@@ -1046,14 +1046,14 @@
     },
     {
       "DATUM": "14.02.25",
-      "VON": "08:00",
-      "BIS": "18:00",
-      "KUNDE": "Bauer AG ",
+      "VON": "17:00",
+      "BIS": "22:00",
+      "KUNDE": "Abendessen im Bistro ",
       "EVENT": "",
-      "TEILNEHMER": "16",
-      "TAGUNGSRAUM": "ecoCentrum T90",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoBistro",
       "RAUMHINWEIS": "",
-      "BILD": "T90.jpeg",
+      "BILD": "E-Bistro.jpeg",
       "BEMERKUNG": ""
     }
   ]
