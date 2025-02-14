@@ -1047,9 +1047,9 @@
     {
       "DATUM": "14.02.25",
       "VON": "17:00",
-      "BIS": "22:00",
+      "BIS": "22:30",
       "KUNDE": "Abendessen im Bistro ",
-      "EVENT": "",
+      "EVENT": "dinner",
       "TEILNEHMER": "",
       "TAGUNGSRAUM": "ecoBistro",
       "RAUMHINWEIS": "",
