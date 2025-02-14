@@ -1043,6 +1043,18 @@
       "RAUMHINWEIS": "",
       "BILD": "T90.jpeg",
       "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "14.02.25",
+      "VON": "08:00",
+      "BIS": "18:00",
+      "KUNDE": "Bauer AG ",
+      "EVENT": "",
+      "TEILNEHMER": "16",
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "Teil 1-3",
+      "BILD": "",
+      "BEMERKUNG": ""
     }
   ]
 }
