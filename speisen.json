@@ -1,7 +1,7 @@
 {
   "speisen": [
     {
-      "Kategorie": "Vorpseise",
+      "Kategorie": "Vorspeise",
       "Name": "Tomatencremesuppe mit geröstetem Knoblauchbrot",
       "Beschreibung": "Tomato cream soup with roasted garlic bread",
       "Menge": "Portion",
@@ -58,7 +58,7 @@
     },
     {
       "Kategorie": "Hauptgang",
-      "Name": "Schitzel \"Wiener Art\" aus der Schweinelende mit rustikalen Pommes und Preiselbeeren",
+      "Name": "Schnitzel \"Wiener Art\" aus der Schweinelende mit rustikalen Pommes und Preiselbeeren",
       "Beschreibung": "Schnitzel \"Wiener Art\" from pork loin with rustic fries and lingonberries",
       "Menge": "Portion",
       "Preis": 14.5
