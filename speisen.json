@@ -1,3 +1,11 @@
 {
-  "speisen": []
+  "speisen": [
+    {
+      "Kategorie": "",
+      "Name": "Gala Buffet",
+      "Beschreibung": "",
+      "Menge": "",
+      "Preis": ""
+    }
+  ]
 }
