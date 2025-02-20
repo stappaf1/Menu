@@ -1055,6 +1055,54 @@
       "RAUMHINWEIS": "",
       "BILD": "E-Bistro.jpeg",
       "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "20.2.25",
+      "VON": "18:00",
+      "BIS": "",
+      "KUNDE": "aciso",
+      "EVENT": "",
+      "TEILNEHMER": "150",
+      "TAGUNGSRAUM": "ecoPlenum T200",
+      "RAUMHINWEIS": "",
+      "BILD": "T200-1.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "21.2.25",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "aciso",
+      "EVENT": "",
+      "TEILNEHMER": "150",
+      "TAGUNGSRAUM": "ecoPlenum T200",
+      "RAUMHINWEIS": "",
+      "BILD": "T200-Business.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "21.2.25",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "aciso",
+      "EVENT": "",
+      "TEILNEHMER": "50",
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "",
+      "BILD": "T90.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "21.2.25",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "aciso",
+      "EVENT": "",
+      "TEILNEHMER": "50",
+      "TAGUNGSRAUM": "ecoForum T120",
+      "RAUMHINWEIS": "",
+      "BILD": "T120.jpeg",
+      "BEMERKUNG": ""
     }
   ]
 }
