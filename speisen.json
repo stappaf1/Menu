@@ -1,9 +1,51 @@
 {
   "speisen": [
     {
+      "Kategorie": "VORSPEISE",
+      "Name": "Suppe ",
+      "Beschreibung": "Apfel - Sellerie Suppe ",
+      "Menge": "",
+      "Preis": ""
+    },
+    {
       "Kategorie": "",
-      "Name": "Gala Buffet",
+      "Name": "",
       "Beschreibung": "",
+      "Menge": "",
+      "Preis": ""
+    },
+    {
+      "Kategorie": "HAUPTSPEISE",
+      "Name": "Fleischgericht ",
+      "Beschreibung": "Geschmorrte Ochsenbacken mit Kartoffel - Selleriestampf und glacierten Karotten ",
+      "Menge": "",
+      "Preis": ""
+    },
+    {
+      "Kategorie": "",
+      "Name": "Fischgericht ",
+      "Beschreibung": "Linguine in Miesmuschel - Zitronensud ",
+      "Menge": "",
+      "Preis": ""
+    },
+    {
+      "Kategorie": "",
+      "Name": "Vegetarisch ",
+      "Beschreibung": "Pappardelle  mit veganer Linsen - Bolognese ",
+      "Menge": "",
+      "Preis": ""
+    },
+    {
+      "Kategorie": "",
+      "Name": "",
+      "Beschreibung": "",
+      "Menge": "",
+      "Preis": ""
+    },
+    {
+      "Kategorie": "Nachspeise ",
+      "Name": "",
+      "Beschreibung": "Kaffeemousse im Baumkuchenmantel ",
       "Menge": "",
       "Preis": ""
     }
