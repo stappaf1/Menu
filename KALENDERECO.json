@@ -1115,6 +1115,30 @@
       "RAUMHINWEIS": "",
       "BILD": "T30.jpeg",
       "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "25.02.25",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Cronbank",
+      "EVENT": "",
+      "TEILNEHMER": "9",
+      "TAGUNGSRAUM": "ecoRefugium T30",
+      "RAUMHINWEIS": "",
+      "BILD": "T30.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "25.02.25",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Metafinanz",
+      "EVENT": "",
+      "TEILNEHMER": "12",
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "",
+      "BILD": "T90.jpeg",
+      "BEMERKUNG": ""
     }
   ]
 }
