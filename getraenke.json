@@ -3,273 +3,234 @@
     {
       "Kategorie": "Biere",
       "Name": "Alkoholfreies Bier",
-      "Beschreibung": " ",
       "Menge": "0,5L",
       "Preis": 4.5
     },
     {
       "Kategorie": "Biere",
       "Name": "Helles",
-      "Beschreibung": " ",
       "Menge": "0,5L",
       "Preis": 4.5
     },
     {
       "Kategorie": "Biere",
       "Name": "Pils",
-      "Beschreibung": " ",
       "Menge": "0,5L",
       "Preis": 4
     },
     {
       "Kategorie": "Alkoholfreies",
       "Name": "Mineralwasser Spritzig",
-      "Beschreibung": " ",
       "Menge": "0,7L",
       "Preis": 7
     },
     {
       "Kategorie": "Alkoholfreies",
       "Name": "Mineralwasser Spritzig",
-      "Beschreibung": " ",
       "Menge": "0,4L",
       "Preis": 3
     },
     {
       "Kategorie": "Alkoholfreies",
       "Name": "Mineralwasser Still",
-      "Beschreibung": " ",
       "Menge": "0,7L",
       "Preis": 7
     },
     {
       "Kategorie": "Alkoholfreies",
       "Name": "Mineralwasser Still",
-      "Beschreibung": " ",
       "Menge": "0,4L",
       "Preis": 3
     },
     {
       "Kategorie": "Alkoholfreies",
       "Name": "Saftschorle",
-      "Beschreibung": " ",
       "Menge": "0,4L",
       "Preis": 4
     },
     {
       "Kategorie": "Softgetränke",
       "Name": "Orangenlimonade",
-      "Beschreibung": " ",
       "Menge": "0,4L",
       "Preis": 4
     },
     {
       "Kategorie": "Softgetränke",
       "Name": "Zitronenlimonade",
-      "Beschreibung": " ",
       "Menge": "0,4L",
       "Preis": 4
     },
     {
       "Kategorie": "Softgetränke",
       "Name": "Spezi",
-      "Beschreibung": " ",
       "Menge": "0,4L",
       "Preis": 4
     },
     {
       "Kategorie": "Softgetränke",
       "Name": "Cola & Cola Zero",
-      "Beschreibung": " ",
       "Menge": "0,4L",
       "Preis": 4
     },
     {
       "Kategorie": "Weißwein",
       "Name": "Blanc de Blanc",
-      "Beschreibung": " ",
       "Menge": "0,2L",
       "Preis": 6.5
     },
     {
       "Kategorie": "Weißwein",
       "Name": "Riesling",
-      "Beschreibung": " ",
       "Menge": "0,2L",
       "Preis": 6.5
     },
     {
       "Kategorie": "Rosé",
       "Name": "Rosé",
-      "Beschreibung": " ",
       "Menge": "0,2L",
       "Preis": 6.5
     },
     {
       "Kategorie": "Rotwein",
       "Name": "Apassimento",
-      "Beschreibung": " ",
       "Menge": "0,2L",
       "Preis": 6.5
     },
     {
       "Kategorie": "Schaumwein",
       "Name": "Prosecco",
-      "Beschreibung": " ",
       "Menge": "0,2L",
       "Preis": 6.5
     },
     {
       "Kategorie": "Aperitif",
       "Name": "Aperol Spritz",
-      "Beschreibung": " ",
       "Menge": "1 Glas",
       "Preis": 8.5
     },
     {
       "Kategorie": "Aperitif",
       "Name": "Campari Soda",
-      "Beschreibung": " ",
       "Menge": "1 Glas",
       "Preis": 8.5
     },
     {
       "Kategorie": "Aperitif",
       "Name": "Lillet Wildberry",
-      "Beschreibung": " ",
       "Menge": "1 Glas",
       "Preis": 8.5
     },
     {
       "Kategorie": "Aperitif",
       "Name": "Martini Floreale Tonic",
-      "Beschreibung": " ",
       "Menge": "1 Glas",
       "Preis": 8.5
     },
     {
       "Kategorie": "Longdrink",
       "Name": "Cuba Libre",
-      "Beschreibung": " ",
       "Menge": "1 Glas",
       "Preis": 9.5
     },
     {
       "Kategorie": "Longdrink",
       "Name": "Gin Tonic",
-      "Beschreibung": " ",
       "Menge": "1 Glas",
       "Preis": 9.5
     },
     {
       "Kategorie": "Longdrink",
       "Name": "Wodka Redbull",
-      "Beschreibung": " ",
       "Menge": "1 Glas",
       "Preis": 9.5
     },
     {
       "Kategorie": "Longdrink",
       "Name": "Skinny Bitch",
-      "Beschreibung": " ",
       "Menge": "1 Glas",
       "Preis": 9.5
     },
     {
       "Kategorie": "Longdrink",
       "Name": "Whiskey Cola",
-      "Beschreibung": " ",
       "Menge": "1 Glas",
       "Preis": 9.5
     },
     {
       "Kategorie": "Cocktail",
       "Name": "NoNegroni",
-      "Beschreibung": " ",
       "Menge": "1 Glas",
       "Preis": 10.5
     },
     {
       "Kategorie": "Cocktail",
       "Name": "Young Fashioned ",
-      "Beschreibung": " ",
       "Menge": "1 Glas",
       "Preis": 10.5
     },
     {
       "Kategorie": "Longdrink",
       "Name": "Whiskey Cola",
-      "Beschreibung": " ",
       "Menge": "1 Glas",
       "Preis": 9.5
     },
     {
       "Kategorie": "Cocktail",
       "Name": "Negroni",
-      "Beschreibung": " ",
       "Menge": "1 Glas",
       "Preis": 10.5
     },
     {
       "Kategorie": "Cocktail",
       "Name": "Tom Collins",
-      "Beschreibung": " ",
       "Menge": "1 Glas",
       "Preis": 10.5
     },
     {
       "Kategorie": "Cocktail",
       "Name": "Dark 'n' Stormy",
-      "Beschreibung": " ",
       "Menge": "1 Glas",
       "Preis": 10.5
     },
     {
       "Kategorie": "Cocktail",
       "Name": "Mojito",
-      "Beschreibung": " ",
       "Menge": "1 Glas",
       "Preis": 10.5
     },
     {
       "Kategorie": "Cocktail",
       "Name": "Old Fashioned",
-      "Beschreibung": " ",
       "Menge": "1 Glas",
       "Preis": 10.5
     },
     {
       "Kategorie": "Cocktail",
       "Name": "Whiskey Sour",
-      "Beschreibung": " ",
       "Menge": "1 Glas",
       "Preis": 10.5
     },
     {
       "Kategorie": "Cocktail",
       "Name": "Espresso Martini",
-      "Beschreibung": " ",
       "Menge": "1 Glas",
       "Preis": 10.5
     },
     {
       "Kategorie": "Cocktail",
       "Name": "Moscow Mule",
-      "Beschreibung": " ",
       "Menge": "1 Glas",
       "Preis": 10.5
     },
     {
       "Kategorie": "Kaffee",
       "Name": "verschiedene Sorten",
-      "Beschreibung": " ",
       "Menge": "Tasse",
       "Preis": 3.5
     },
     {
       "Kategorie": "Tee",
       "Name": "verschiedene Sorten",
-      "Beschreibung": " ",
       "Menge": "Glas",
       "Preis": 3
     }
