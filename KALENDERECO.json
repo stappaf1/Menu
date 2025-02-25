@@ -1139,6 +1139,30 @@
       "RAUMHINWEIS": "",
       "BILD": "T90.jpeg",
       "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "26.02.25",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Metafinanz",
+      "EVENT": "",
+      "TEILNEHMER": "12",
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "",
+      "BILD": "T90.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "26.02.25",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "STIGA",
+      "EVENT": "",
+      "TEILNEHMER": "37",
+      "TAGUNGSRAUM": "ecoPlenum T200",
+      "RAUMHINWEIS": "",
+      "BILD": "T200-1.jpeg",
+      "BEMERKUNG": ""
     }
   ]
 }
