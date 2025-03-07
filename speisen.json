@@ -2,8 +2,8 @@
   "speisen": [
     {
       "Kategorie": "VORSPEISE",
-      "Name": "Suppe ",
-      "Beschreibung": "Apfel - Sellerie Suppe ",
+      "Name": "Mandelschaumsuppe | Chorizo | Dattel",
+      "Beschreibung": "",
       "Menge": "",
       "Preis": ""
     },
@@ -16,22 +16,22 @@
     },
     {
       "Kategorie": "HAUPTSPEISE",
-      "Name": "Fleischgericht ",
-      "Beschreibung": "Geschmorrte Ochsenbacken mit Kartoffel - Selleriestampf und glacierten Karotten ",
+      "Name": "Iberico-Lende | Rauch-Jus | Pommes Macaire | Spitzkohl",
+      "Beschreibung": "",
       "Menge": "",
       "Preis": ""
     },
     {
       "Kategorie": "HAUPTSPEISE",
-      "Name": "Fischgericht ",
-      "Beschreibung": "Linguine in Miesmuschel - Zitronensud ",
+      "Name": "Seeteufel | Safransud | Erbsenrisotto | Babyspinat ",
+      "Beschreibung": "",
       "Menge": "",
       "Preis": ""
     },
     {
       "Kategorie": "HAUPTSPEISE",
-      "Name": "Vegetarisch ",
-      "Beschreibung": "Pappardelle  mit veganer Linsen - Bolognese ",
+      "Name": "Duett von gefüllter Spitzpaprika | Aubergine | Risoni",
+      "Beschreibung": "",
       "Menge": "",
       "Preis": ""
     },
@@ -44,8 +44,8 @@
     },
     {
       "Kategorie": "NACHSPEISE",
-      "Name": "",
-      "Beschreibung": "Kaffeemousse im Baumkuchenmantel ",
+      "Name": "Grießflammerie | weiße Schokolade | Kirsche",
+      "Beschreibung": "",
       "Menge": "",
       "Preis": ""
     }
