@@ -76,25 +76,19 @@
       "Kategorie": "Weißwein",
       "Name": "Blanc de Blanc",
       "Menge": "0,2L",
-      "Preis": 6.5
-    },
-    {
-      "Kategorie": "Weißwein",
-      "Name": "Riesling",
-      "Menge": "0,2L",
-      "Preis": 6.5
+      "Preis": 6
     },
     {
       "Kategorie": "Rosé",
       "Name": "Rosé",
       "Menge": "0,2L",
-      "Preis": 6.5
+      "Preis": 6
     },
     {
       "Kategorie": "Rotwein",
       "Name": "Apassimento",
       "Menge": "0,2L",
-      "Preis": 6.5
+      "Preis": 7
     },
     {
       "Kategorie": "Schaumwein",
