@@ -22,7 +22,7 @@
       "Kategorie": "Alkoholfreies",
       "Name": "Mineralwasser Spritzig",
       "Menge": "0,7L",
-      "Preis": 7
+      "Preis": 6
     },
     {
       "Kategorie": "Alkoholfreies",
@@ -34,7 +34,7 @@
       "Kategorie": "Alkoholfreies",
       "Name": "Mineralwasser Still",
       "Menge": "0,7L",
-      "Preis": 7
+      "Preis": 6
     },
     {
       "Kategorie": "Alkoholfreies",
@@ -46,31 +46,31 @@
       "Kategorie": "Alkoholfreies",
       "Name": "Saftschorle",
       "Menge": "0,4L",
-      "Preis": 4
+      "Preis": 4.5
     },
     {
       "Kategorie": "Softgetränke",
       "Name": "Orangenlimonade",
       "Menge": "0,4L",
-      "Preis": 4
+      "Preis": 4.5
     },
     {
       "Kategorie": "Softgetränke",
       "Name": "Zitronenlimonade",
       "Menge": "0,4L",
-      "Preis": 4
+      "Preis": 4.5
     },
     {
       "Kategorie": "Softgetränke",
       "Name": "Spezi",
       "Menge": "0,4L",
-      "Preis": 4
+      "Preis": 4.5
     },
     {
       "Kategorie": "Softgetränke",
       "Name": "Cola & Cola Zero",
       "Menge": "0,4L",
-      "Preis": 4
+      "Preis": 4.5
     },
     {
       "Kategorie": "Weißwein",
