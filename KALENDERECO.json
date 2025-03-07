@@ -1175,6 +1175,18 @@
       "RAUMHINWEIS": "Teil 1-3",
       "BILD": "T90.jpeg",
       "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "08.03.25",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Mice Portal",
+      "EVENT": "",
+      "TEILNEHMER": "6",
+      "TAGUNGSRAUM": "ecoRefugium T30",
+      "RAUMHINWEIS": "",
+      "BILD": "T30.jpeg",
+      "BEMERKUNG": ""
     }
   ]
 }
