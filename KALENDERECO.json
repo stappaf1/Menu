@@ -1187,6 +1187,66 @@
       "RAUMHINWEIS": "",
       "BILD": "T30.jpeg",
       "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "13.03.25",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "BGN",
+      "EVENT": "",
+      "TEILNEHMER": "22",
+      "TAGUNGSRAUM": "ecoForum T120",
+      "RAUMHINWEIS": "",
+      "BILD": "T120.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "13.03.25",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Baustoff Recycling Bayern e.V München",
+      "EVENT": "",
+      "TEILNEHMER": "16",
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "",
+      "BILD": "T90.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "14.03.25",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "BRK",
+      "EVENT": "",
+      "TEILNEHMER": "39",
+      "TAGUNGSRAUM": "ecoForum T120",
+      "RAUMHINWEIS": "",
+      "BILD": "T120.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "15.03.25",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "BRK",
+      "EVENT": "",
+      "TEILNEHMER": "43",
+      "TAGUNGSRAUM": "ecoForum T120",
+      "RAUMHINWEIS": "",
+      "BILD": "T120.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "16.03.25",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "BRK",
+      "EVENT": "",
+      "TEILNEHMER": "37",
+      "TAGUNGSRAUM": "ecoForum T120",
+      "RAUMHINWEIS": "",
+      "BILD": "T120.jpeg",
+      "BEMERKUNG": ""
     }
   ]
 }
