@@ -1,51 +1,51 @@
 {
   "speisen": [
     {
-      "Kategorie": "VORSPEISE",
-      "Name": "Mandelschaumsuppe | Chorizo | Dattel",
-      "Beschreibung": "",
+      "Kategorie": "Abendbuffet",
+      "Name": "BBQ & Burger Buffet",
+      "Beschreibung": " ",
       "Menge": "",
       "Preis": ""
     },
     {
       "Kategorie": "",
       "Name": "",
-      "Beschreibung": "",
-      "Menge": "",
-      "Preis": ""
-    },
-    {
-      "Kategorie": "HAUPTSPEISE",
-      "Name": "Iberico-Lende | Rauch-Jus | Pommes Macaire | Spitzkohl",
-      "Beschreibung": "",
-      "Menge": "",
-      "Preis": ""
-    },
-    {
-      "Kategorie": "HAUPTSPEISE",
-      "Name": "Seeteufel | Safransud | Erbsenrisotto | Babyspinat ",
-      "Beschreibung": "",
-      "Menge": "",
-      "Preis": ""
-    },
-    {
-      "Kategorie": "HAUPTSPEISE",
-      "Name": "Duett von gefüllter Spitzpaprika | Aubergine | Risoni",
-      "Beschreibung": "",
+      "Beschreibung": " ",
       "Menge": "",
       "Preis": ""
     },
     {
       "Kategorie": "",
       "Name": "",
-      "Beschreibung": "",
+      "Beschreibung": " ",
       "Menge": "",
       "Preis": ""
     },
     {
-      "Kategorie": "NACHSPEISE",
-      "Name": "Grießflammerie | weiße Schokolade | Kirsche",
-      "Beschreibung": "",
+      "Kategorie": "",
+      "Name": "",
+      "Beschreibung": " ",
+      "Menge": "",
+      "Preis": ""
+    },
+    {
+      "Kategorie": "",
+      "Name": "",
+      "Beschreibung": " ",
+      "Menge": "",
+      "Preis": ""
+    },
+    {
+      "Kategorie": "",
+      "Name": "",
+      "Beschreibung": " ",
+      "Menge": "",
+      "Preis": ""
+    },
+    {
+      "Kategorie": "",
+      "Name": "",
+      "Beschreibung": " ",
       "Menge": "",
       "Preis": ""
     }
