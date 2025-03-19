@@ -1309,15 +1309,27 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "",
+      "DATUM": "29.03.25",
       "VON": "",
       "BIS": "",
-      "KUNDE": "",
+      "KUNDE": "Wasserwacht",
       "EVENT": "",
-      "TEILNEHMER": "",
-      "TAGUNGSRAUM": "",
+      "TEILNEHMER": "39",
+      "TAGUNGSRAUM": "ecoForum T120",
       "RAUMHINWEIS": "",
-      "BILD": "",
+      "BILD": "T120.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "29.03.25",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "BGN",
+      "EVENT": "",
+      "TEILNEHMER": "10",
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "",
+      "BILD": "T90.jpeg",
       "BEMERKUNG": ""
     },
     {
@@ -1375,19 +1387,7 @@
       "KUNDE": "",
       "EVENT": "",
       "TEILNEHMER": "",
-      "TAGUNGSRAUM": "",
-      "RAUMHINWEIS": "",
-      "BILD": "",
-      "BEMERKUNG": ""
-    },
-    {
-      "DATUM": "",
-      "VON": "",
-      "BIS": "",
-      "KUNDE": "",
-      "EVENT": "",
-      "TEILNEHMER": "",
-      "TAGUNGSRAUM": "",
+      "TAGUNGSRAUM": "ecoPlenum T200",
       "RAUMHINWEIS": "",
       "BILD": "",
       "BEMERKUNG": ""
