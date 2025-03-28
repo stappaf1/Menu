@@ -37,13 +37,6 @@
     },
     {
       "Kategorie": "Biere",
-      "Name": "Superpils",
-      "Beschreibung": " ",
-      "Menge": "0,3L",
-      "Preis": " "
-    },
-    {
-      "Kategorie": "Biere",
       "Name": "Weißbier",
       "Beschreibung": " ",
       "Menge": "0,5L",
@@ -82,21 +75,21 @@
       "Name": "Mineralwasser Spritzig",
       "Beschreibung": " ",
       "Menge": "0,7L",
-      "Preis": ""
+      "Preis": " "
     },
     {
       "Kategorie": "Alkoholfreies",
       "Name": "Mineralwasser Spritzig",
       "Beschreibung": " ",
       "Menge": "0,4L",
-      "Preis": "  "
+      "Preis": ""
     },
     {
       "Kategorie": "Alkoholfreies",
       "Name": "Mineralwasser Still",
       "Beschreibung": " ",
       "Menge": "0,7L",
-      "Preis": " "
+      "Preis": "  "
     },
     {
       "Kategorie": "Alkoholfreies",
@@ -166,14 +159,14 @@
       "Name": "Spezi",
       "Beschreibung": " ",
       "Menge": "0,4L",
-      "Preis": ""
+      "Preis": " "
     },
     {
       "Kategorie": "Softgetränke",
       "Name": "Tonic Water",
       "Beschreibung": " ",
       "Menge": "0,2L",
-      "Preis": " "
+      "Preis": ""
     },
     {
       "Kategorie": "Softgetränke",
@@ -285,7 +278,7 @@
       "Name": "Martini Floreale Tonic",
       "Beschreibung": " ",
       "Menge": "1 Glas",
-      "Preis": "  "
+      "Preis": " "
     },
     {
       "Kategorie": "Aperitif",
@@ -299,7 +292,7 @@
       "Name": "Vermouth on the Rocks",
       "Beschreibung": " ",
       "Menge": "1 Glas",
-      "Preis": " "
+      "Preis": "  "
     },
     {
       "Kategorie": "Rum Longdrink",
@@ -313,14 +306,14 @@
       "Name": "Tequila Sunrise",
       "Beschreibung": " ",
       "Menge": "1 Glas",
-      "Preis": "  "
+      "Preis": " "
     },
     {
       "Kategorie": "Whiskey Longdrink",
       "Name": "Highball",
       "Beschreibung": " ",
       "Menge": "1 Glas",
-      "Preis": " "
+      "Preis": "  "
     },
     {
       "Kategorie": "Whiskey Longdrink",
@@ -549,6 +542,13 @@
     {
       "Kategorie": "Heißgetränke Tee",
       "Name": "Bongani | Rooibos Vanille",
+      "Beschreibung": " ",
+      "Menge": "Glas",
+      "Preis": " "
+    },
+    {
+      "Kategorie": "Heißgetränke Tee",
+      "Name": "Sarala | Chai",
       "Beschreibung": " ",
       "Menge": "Glas",
       "Preis": " "
