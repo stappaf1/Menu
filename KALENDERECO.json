@@ -1538,10 +1538,10 @@
     },
     {
       "DATUM": "07.04.25",
-      "VON": "",
-      "BIS": "",
+      "VON": "18:00",
+      "BIS": "21:00",
       "KUNDE": "Abendessen á la carte",
-      "EVENT": "",
+      "EVENT": "Bitte reservieren!",
       "TEILNEHMER": "",
       "TAGUNGSRAUM": "ecoBistro",
       "RAUMHINWEIS": "",
