@@ -1,53 +1,140 @@
 {
   "speisen": [
     {
-      "Kategorie": "",
-      "Name": "",
-      "Beschreibung": "",
-      "Menge": "",
-      "Preis": ""
+      "Kategorie": "Vorspeisen",
+      "Name": "Bärlauchcremesuppe",
+      "Beschreibung": "mit geröstetem Weißbrot",
+      "Menge": "Portion",
+      "Preis": 6.5,
+      "": ""
+    },
+    {
+      "Kategorie": "Vorspeisen",
+      "Name": "Rinderkraftbrühe",
+      "Beschreibung": "mit Maultaschen und Wurzelgemüse",
+      "Menge": "Portion",
+      "Preis": 6.5,
+      "": ""
+    },
+    {
+      "Kategorie": "Vorspeisen",
+      "Name": "Spargelcocktail im Glas",
+      "Beschreibung": "mit frischen Erdbeeren",
+      "Menge": "Portion",
+      "Preis": 7.9,
+      "": ""
+    },
+    {
+      "Kategorie": "Vorspeisen",
+      "Name": "Knuspriger Rösti",
+      "Beschreibung": "mit Räucherlachs",
+      "Menge": "Portion",
+      "Preis": 8.9,
+      "": ""
+    },
+    {
+      "Kategorie": "Bistro",
+      "Name": "Croque Monsieur",
+      "Beschreibung": "französisches Schinkes-Käse Sandwich mit Sauce Mornay",
+      "Menge": "Portion",
+      "Preis": 8.9,
+      "": ""
+    },
+    {
+      "Kategorie": "Bistro",
+      "Name": "Club Sandwich",
+      "Beschreibung": "Mit Romanasalat, Hähnchenbrust und Knoblauch-Parmesan Creme",
+      "Menge": "Portion",
+      "Preis": 12.9,
+      "": ""
+    },
+    {
+      "Kategorie": "Bistro",
+      "Name": "Ceasar Salad",
+      "Beschreibung": "Romanasalat, Hähnchenbruststreifen, Parmesan-Joghurtdressing",
+      "Menge": "Portion",
+      "Preis": 12.9,
+      "": ""
+    },
+    {
+      "Kategorie": "Hauptgang",
+      "Name": "Linguine mit Bärlauchsahne",
+      "Beschreibung": "auf Wunsch mit Knoblauchgarnelen + 6,90€",
+      "Menge": "Portion",
+      "Preis": 12.9,
+      "": ""
+    },
+    {
+      "Kategorie": "Hauptgang",
+      "Name": "Linguine in Zitronensoße mit Kapern, Sardellen und getrockneten Tomaten",
+      "Beschreibung": "auf Wunsch mit Knoblauchgarnelen + 6,90€",
+      "Menge": "Portion",
+      "Preis": 12.9,
+      "": ""
+    },
+    {
+      "Kategorie": "Hauptgang",
+      "Name": "Münchner Schnitzel von der Schweinlende",
+      "Beschreibung": "mit Bratkartoffeln und Preiselbeeren - auf Wunsch mit Pommes",
+      "Menge": "Portion",
+      "Preis": 16.9,
+      "": ""
+    },
+    {
+      "Kategorie": "Hauptgang",
+      "Name": "Zwiebelrostbraten von der Rinderlende",
+      "Beschreibung": "mit Bratkartoffeln, geschmolzenen Zwiebeln und Bohnen",
+      "Menge": "Portion",
+      "Preis": 22.9,
+      "": ""
+    },
+    {
+      "Kategorie": "Hauptgang",
+      "Name": "Großer bunter Salatteller",
+      "Beschreibung": "mit Feigen, Ziegenkäse und Walnüssen",
+      "Menge": "Portion",
+      "Preis": 12.9,
+      "": ""
+    },
+    {
+      "Kategorie": "Dessert ",
+      "Name": "Crème brûlée ",
+      "Beschreibung": "mit Tonkabohne",
+      "Menge": "Portion",
+      "Preis": 6.9,
+      "": ""
+    },
+    {
+      "Kategorie": "Dessert ",
+      "Name": "Erdbeer - Tiramisu",
+      "Beschreibung": "klassisch mit Kakao",
+      "Menge": "Portion",
+      "Preis": 6.9,
+      "": ""
     },
     {
       "Kategorie": "",
       "Name": "",
       "Beschreibung": "",
       "Menge": "",
-      "Preis": ""
+      "Preis": "",
+      "": ""
     },
     {
       "Kategorie": "",
       "Name": "",
-      "Beschreibung": " ",
+      "Beschreibung": "",
       "Menge": "",
-      "Preis": ""
+      "Preis": "",
+      "": ""
     },
     {
       "Kategorie": "",
       "Name": "",
-      "Beschreibung": " ",
+      "Beschreibung": "",
       "Menge": "",
-      "Preis": ""
-    },
-    {
-      "Kategorie": "",
-      "Name": "",
-      "Beschreibung": " ",
-      "Menge": "",
-      "Preis": ""
-    },
-    {
-      "Kategorie": "",
-      "Name": "",
-      "Beschreibung": " ",
-      "Menge": "",
-      "Preis": ""
-    },
-    {
-      "Kategorie": "",
-      "Name": "",
-      "Beschreibung": " ",
-      "Menge": "",
-      "Preis": ""
+      "Preis": "",
+      "": " "
     }
   ]
 }
