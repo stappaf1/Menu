@@ -1477,18 +1477,6 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "07.04.25",
-      "VON": "16:00",
-      "BIS": "18:00",
-      "KUNDE": "Wipfler Plan",
-      "EVENT": "",
-      "TEILNEHMER": "30",
-      "TAGUNGSRAUM": "ecoForum T120",
-      "RAUMHINWEIS": "",
-      "BILD": "T120.jpeg",
-      "BEMERKUNG": ""
-    },
-    {
       "DATUM": "08.04.25",
       "VON": "",
       "BIS": "",
@@ -1541,48 +1529,12 @@
       "VON": "18:00",
       "BIS": "21:00",
       "KUNDE": "Abendessen á la carte",
-      "EVENT": "",
+      "EVENT": "BITTE RESERVIEREN!",
       "TEILNEHMER": "",
       "TAGUNGSRAUM": "ecoBistro",
       "RAUMHINWEIS": "",
       "BILD": "E-Bistro.jpeg",
       "BEMERKUNG": ""
-    },
-    {
-      "DATUM": "",
-      "VON": "",
-      "BIS": "",
-      "KUNDE": "",
-      "EVENT": "",
-      "TEILNEHMER": "",
-      "TAGUNGSRAUM": "",
-      "RAUMHINWEIS": "",
-      "BILD": "",
-      "BEMERKUNG": ""
-    },
-    {
-      "DATUM": "",
-      "VON": "",
-      "BIS": "",
-      "KUNDE": "",
-      "EVENT": "",
-      "TEILNEHMER": "",
-      "TAGUNGSRAUM": "",
-      "RAUMHINWEIS": "",
-      "BILD": "",
-      "BEMERKUNG": ""
-    },
-    {
-      "DATUM": "",
-      "VON": "",
-      "BIS": "",
-      "KUNDE": "",
-      "EVENT": "",
-      "TEILNEHMER": "",
-      "TAGUNGSRAUM": "",
-      "RAUMHINWEIS": "",
-      "BILD": "",
-      "BEMERKUNG": "Bitte reservieren Sie vorher!"
     }
   ]
 }
