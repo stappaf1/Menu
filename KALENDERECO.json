@@ -1541,12 +1541,48 @@
       "VON": "18:00",
       "BIS": "21:00",
       "KUNDE": "Abendessen á la carte",
-      "EVENT": "Bitte reservieren!",
+      "EVENT": "",
       "TEILNEHMER": "",
       "TAGUNGSRAUM": "ecoBistro",
       "RAUMHINWEIS": "",
       "BILD": "E-Bistro.jpeg",
       "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "",
+      "EVENT": "",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "",
+      "RAUMHINWEIS": "",
+      "BILD": "",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "",
+      "EVENT": "",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "",
+      "RAUMHINWEIS": "",
+      "BILD": "",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "",
+      "EVENT": "",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "",
+      "RAUMHINWEIS": "",
+      "BILD": "",
+      "BEMERKUNG": "Bitte reservieren Sie vorher!"
     }
   ]
 }
