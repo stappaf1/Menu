@@ -33,7 +33,7 @@
       "": ""
     },
     {
-      "Kategorie": "Bistro",
+      "Kategorie": "Hauptgang",
       "Name": "Croque Monsieur",
       "Beschreibung": "französisches Schinkes-Käse Sandwich mit Sauce Mornay",
       "Menge": "Portion",
@@ -41,7 +41,7 @@
       "": ""
     },
     {
-      "Kategorie": "Bistro",
+      "Kategorie": "Hauptgang",
       "Name": "Club Sandwich",
       "Beschreibung": "Mit Romanasalat, Hähnchenbrust und Knoblauch-Parmesan Creme",
       "Menge": "Portion",
@@ -49,7 +49,7 @@
       "": ""
     },
     {
-      "Kategorie": "Bistro",
+      "Kategorie": "Hauptgang",
       "Name": "Ceasar Salad",
       "Beschreibung": "Romanasalat, Hähnchenbruststreifen, Parmesan-Joghurtdressing",
       "Menge": "Portion",
