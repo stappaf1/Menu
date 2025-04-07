@@ -121,20 +121,116 @@
       "": ""
     },
     {
-      "Kategorie": "",
-      "Name": "",
-      "Beschreibung": "",
-      "Menge": "",
-      "Preis": "",
+      "Kategorie": "starter",
+      "Name": "Wild Garlic Cream Soup",
+      "Beschreibung": "with toasted white bread",
+      "Menge": "Portion",
+      "Preis": 6.5,
       "": ""
     },
     {
-      "Kategorie": "",
-      "Name": "",
-      "Beschreibung": "",
-      "Menge": "",
-      "Preis": "",
+      "Kategorie": "starter",
+      "Name": "Beef Consommé",
+      "Beschreibung": "with Swabian ravioli and root vegetables",
+      "Menge": "Portion",
+      "Preis": 6.5,
       "": " "
+    },
+    {
+      "Kategorie": "starter",
+      "Name": "Asparagus Cocktail in a Glass",
+      "Beschreibung": "with fresh strawberries",
+      "Menge": "Portion",
+      "Preis": 7.9,
+      "": ""
+    },
+    {
+      "Kategorie": "starter",
+      "Name": "Crispy Rösti",
+      "Beschreibung": "with smoked salmon",
+      "Menge": "Portion",
+      "Preis": 8.9,
+      "": ""
+    },
+    {
+      "Kategorie": "Main course",
+      "Name": "Croque Monsieur",
+      "Beschreibung": "French ham and cheese sandwich with Mornay sauce",
+      "Menge": "Portion",
+      "Preis": 8.9,
+      "": ""
+    },
+    {
+      "Kategorie": "Main course",
+      "Name": "Club Sandwich",
+      "Beschreibung": "with romaine lettuce, chicken breast, and garlic-parmesan cream",
+      "Menge": "Portion",
+      "Preis": 12.9,
+      "": ""
+    },
+    {
+      "Kategorie": "Main course",
+      "Name": "Caesar Salad",
+      "Beschreibung": "romaine lettuce, grilled chicken strips, and parmesan-yogurt dressing",
+      "Menge": "Portion",
+      "Preis": 12.9,
+      "": ""
+    },
+    {
+      "Kategorie": "Main course",
+      "Name": "Linguine with Wild Garlic Cream Sauce",
+      "Beschreibung": "optional with garlic shrimp + €6.90",
+      "Menge": "Portion",
+      "Preis": 12.9,
+      "": ""
+    },
+    {
+      "Kategorie": "Main course",
+      "Name": "Linguine in Lemon Sauce",
+      "Beschreibung": "with capers, anchovies, and sun-dried tomatoes optional with garlic shrimp + €6.90",
+      "Menge": "Portion",
+      "Preis": 12.9,
+      "": ""
+    },
+    {
+      "Kategorie": "Main course",
+      "Name": "Munich-Style Schnitzel (Pork Tenderloin)",
+      "Beschreibung": "with fried potatoes and lingonberries – fries upon request",
+      "Menge": "Portion",
+      "Preis": 16.9,
+      "": ""
+    },
+    {
+      "Kategorie": "Main course",
+      "Name": "Onion Roast (Beef Sirloin Steak)",
+      "Beschreibung": "with fried potatoes, caramelized onions, and green beans",
+      "Menge": "Portion",
+      "Preis": 22.9,
+      "": ""
+    },
+    {
+      "Kategorie": "Main course",
+      "Name": "Large Mixed Salad Plate",
+      "Beschreibung": "with figs, goat cheese, and walnuts",
+      "Menge": "Portion",
+      "Preis": 12.9,
+      "": ""
+    },
+    {
+      "Kategorie": "Dessert ",
+      "Name": "Crème Brûlée",
+      "Beschreibung": "with tonka bean",
+      "Menge": "Portion",
+      "Preis": 6.9,
+      "": ""
+    },
+    {
+      "Kategorie": "Dessert ",
+      "Name": "Strawberry Tiramisu",
+      "Beschreibung": "classic with cocoa",
+      "Menge": "Portion",
+      "Preis": 6.9,
+      "": ""
     }
   ]
 }
