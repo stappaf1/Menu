@@ -105,11 +105,11 @@
       "": ""
     },
     {
-      "Kategorie": "Dessert ",
-      "Name": "Erdbeer - Tiramisu",
-      "Beschreibung": "klassisch mit Kakao",
-      "Menge": "Portion",
-      "Preis": 6.9,
+      "Kategorie": "",
+      "Name": "",
+      "Beschreibung": "",
+      "Menge": "",
+      "Preis": "",
       "": ""
     },
     {
@@ -220,14 +220,6 @@
       "Kategorie": "Dessert ",
       "Name": "Crème Brûlée",
       "Beschreibung": "with tonka bean",
-      "Menge": "Portion",
-      "Preis": 6.9,
-      "": ""
-    },
-    {
-      "Kategorie": "Dessert ",
-      "Name": "Strawberry Tiramisu",
-      "Beschreibung": "classic with cocoa",
       "Menge": "Portion",
       "Preis": 6.9,
       "": ""
