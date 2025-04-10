@@ -155,13 +155,6 @@
       "Preis": "7.50"
     },
     {
-      "Kategorie": "",
-      "Name": "",
-      "Beschreibung": " ",
-      "Menge": "",
-      "Preis": ""
-    },
-    {
       "Kategorie": "Rotwein",
       "Name": "Primitivo di Manduria",
       "Beschreibung": " ",
@@ -176,15 +169,8 @@
       "Preis": "4.50"
     },
     {
-      "Kategorie": "",
-      "Name": "",
-      "Beschreibung": " ",
-      "Menge": "",
-      "Preis": ""
-    },
-    {
       "Kategorie": "Weißwein",
-      "Name": "Riesling",
+      "Name": "Lugana",
       "Beschreibung": " ",
       "Menge": "0,2L",
       "Preis": "6.50"
