@@ -4,14 +4,14 @@
       "Kategorie": "Biere",
       "Name": "Fassbier | Helles | Weißbier",
       "Beschreibung": "  ",
-      "Menge": "",
+      "Menge": 0.5,
       "Preis": 0
     },
     {
       "Kategorie": "Biere",
       "Name": "Flaschenbier | Bio-Helles | Dunkles",
       "Beschreibung": "",
-      "Menge": "",
+      "Menge": 0.5,
       "Preis": 0
     },
     {
