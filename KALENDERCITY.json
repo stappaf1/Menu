@@ -143,6 +143,18 @@
       "RAUMHINWEIS": "Bistro im Alea Eco -> Flachsbogen 1, Pfaffenhofen",
       "BILD": "E-Bistro.jpeg",
       "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "22.04.2025",
+      "VON": "13:00",
+      "BIS": "17:00",
+      "KUNDE": "Wipfler Plan",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "6",
+      "TAGUNGSRAUM": "Weitblick T100",
+      "RAUMHINWEIS": "",
+      "BILD": "T100.jpeg",
+      "BEMERKUNG": ""
     }
   ]
 }
