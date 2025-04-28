@@ -1,298 +1,172 @@
 {
   "getraenke": [
     {
-      "Kategorie": "Biere",
-      "Name": "Fassbier | Helles | Weißbier",
-      "Beschreibung": "  ",
-      "Menge": "   ",
-      "Preis": "x"
+      "Kategorie": "Bier",
+      "Name": "Biere",
+      "Beschreibung": "Müllerbräu Helles mit/ohne Alkohol, Weißbier mit/leicht/ohne Alkohol, Dunkles, Russ, Radler",
+      "Menge": "0,5L",
+      "Preis": "4.50"
     },
     {
-      "Kategorie": "Biere",
-      "Name": "Flaschenbier | Bio-Helles | Dunkles",
-      "Beschreibung": "",
-      "Menge": "   ",
-      "Preis": "x"
+      "Kategorie": "Bier",
+      "Name": "Pils",
+      "Beschreibung": "Müllerbräu",
+      "Menge": "0,33L",
+      "Preis": "3.90"
     },
     {
-      "Kategorie": "Biere",
-      "Name": "Flaschenbiere klein | Pils | Helles",
-      "Beschreibung": "",
-      "Menge": "    ",
-      "Preis": "x"
+      "Kategorie": "Antialkoholisches",
+      "Name": "Softgetränke",
+      "Beschreibung": "Cola ohne/mit, Spezi, Limo, Saftschorlen",
+      "Menge": "0,4L",
+      "Preis": "4.00"
     },
     {
-      "Kategorie": "Biere",
-      "Name": "Alkoholfreies Bier | Helles | Weißbier",
-      "Beschreibung": "",
-      "Menge": "     ",
-      "Preis": "x"
+      "Kategorie": "Antialkoholisches",
+      "Name": "Säfte",
+      "Beschreibung": "Orange, Apfel, Sauerkirsch, Ananas, Johannisbeer, Maracuja",
+      "Menge": "0,2L",
+      "Preis": "2.90"
     },
     {
-      "Kategorie": "Alkoholfreies",
-      "Name": "Alea – Tafelwasser | Still | Spritzig",
-      "Beschreibung": "",
-      "Menge": "    ",
-      "Preis": "x"
+      "Kategorie": "Antialkoholisches",
+      "Name": "Ginger",
+      "Beschreibung": "Ginger Ale, Ginger Beer",
+      "Menge": "0,2L",
+      "Preis": "3.80"
     },
     {
-      "Kategorie": "Alkoholfreies",
-      "Name": "Ließchen Müller Schorle | Apfel | Rhabarber",
-      "Beschreibung": "",
-      "Menge": "     ",
-      "Preis": "x"
+      "Kategorie": "Antialkoholisches",
+      "Name": "Red Bull",
+      "Beschreibung": " ",
+      "Menge": "0,2L",
+      "Preis": "4.50"
     },
     {
-      "Kategorie": "Alkoholfreies",
-      "Name": "Rauch Saftschorle | Johannisbeere | Maracuja",
-      "Beschreibung": "",
-      "Menge": "     ",
-      "Preis": "x"
+      "Kategorie": "Wein",
+      "Name": "Weißwein L",
+      "Beschreibung": "Grauburgunder, Riesling",
+      "Menge": "0,2L",
+      "Preis": "6.50"
     },
     {
-      "Kategorie": "Alkoholfreies",
-      "Name": "Coca Cola | Coca Cola Zero",
-      "Beschreibung": "",
-      "Menge": "     ",
-      "Preis": "x"
+      "Kategorie": "Wein",
+      "Name": "Weißwein XL",
+      "Beschreibung": "Lugana, Rosé",
+      "Menge": "0.2L",
+      "Preis": "7.50"
     },
     {
-      "Kategorie": "Alkoholfreies",
-      "Name": "Spezi | Gelbes Limo | Weißes Limo",
-      "Beschreibung": "",
-      "Menge": "      ",
-      "Preis": "x"
+      "Kategorie": "Wein",
+      "Name": "Rotwein XL",
+      "Beschreibung": "Primitivo",
+      "Menge": "0,2L",
+      "Preis": "8.00"
     },
     {
-      "Kategorie": "Rotwein",
-      "Name": "Primitivo I Trocken I Fantini",
-      "Beschreibung": "",
-      "Menge": "      ",
-      "Preis": "x"
+      "Kategorie": "Wein",
+      "Name": "Schaumwein",
+      "Beschreibung": "Prosecco, Winzersekt Riesling",
+      "Menge": "0,2L",
+      "Preis": "4.50"
     },
     {
-      "Kategorie": "Weißwein",
-      "Name": "Chardonnay I Trocken I Doppler Hertel",
-      "Beschreibung": "",
-      "Menge": "     ",
-      "Preis": "x"
+      "Kategorie": "Aperitiv",
+      "Name": "Aperitiv L",
+      "Beschreibung": "Aperol, Campari Soda, Lillet, Martini mit/ohne, Sherry Fino, Vermouth on the Rocks",
+      "Menge": "Glas",
+      "Preis": "7.90"
     },
     {
-      "Kategorie": "Weißwein",
-      "Name": "Riesling I Trocken I Doppler Hertel",
-      "Beschreibung": "",
-      "Menge": "     ",
-      "Preis": "x"
+      "Kategorie": "Aperitiv",
+      "Name": "Aperitiv XL",
+      "Beschreibung": "Kir",
+      "Menge": "Glas",
+      "Preis": "9.50"
     },
     {
-      "Kategorie": "Heißgetränke Kaffee",
-      "Name": "Cappuccino",
-      "Beschreibung": "",
-      "Menge": "     ",
-      "Preis": "x"
+      "Kategorie": "Aperitiv",
+      "Name": "Aperitiv XXL",
+      "Beschreibung": "Kir Royal",
+      "Menge": "Glas",
+      "Preis": "11.50"
     },
     {
-      "Kategorie": "Heißgetränke Kaffee",
-      "Name": "Doppio Espresso",
-      "Beschreibung": "",
-      "Menge": "     ",
-      "Preis": "x"
+      "Kategorie": "Cocktail",
+      "Name": "Cocktail 1",
+      "Beschreibung": "Gin Tonic, Moscow Mule",
+      "Menge": "Glas",
+      "Preis": "8.50"
     },
     {
-      "Kategorie": "Heißgetränke Kaffee",
+      "Kategorie": "Cocktail",
+      "Name": "Cocktail 2",
+      "Beschreibung": "Negroni",
+      "Menge": "Glas",
+      "Preis": "9.00"
+    },
+    {
+      "Kategorie": "Cocktail",
+      "Name": "Cocktail 3",
+      "Beschreibung": "Highball, Whiskey Cola, French 75, Martini, Negroni, Tom Collins, Dark ´ n ´ Stormy",
+      "Menge": "Glas",
+      "Preis": "9.50"
+    },
+    {
+      "Kategorie": "Cocktail",
+      "Name": "Cocktail 4",
+      "Beschreibung": "Young Fashioned, Espresso Martini, White Russian",
+      "Menge": "Glas",
+      "Preis": "10.00"
+    },
+    {
+      "Kategorie": "Cocktail",
+      "Name": "Cocktail 5",
+      "Beschreibung": "Mojito, Whiskey Sour",
+      "Menge": "Glas",
+      "Preis": "11.00"
+    },
+    {
+      "Kategorie": "Cocktail",
+      "Name": "Cocktail 6",
+      "Beschreibung": "Mai Tai, Piña Colada, Margarita, Old Fashioned",
+      "Menge": "Glas",
+      "Preis": "12.00"
+    },
+    {
+      "Kategorie": "Longdrink",
+      "Name": "Longdrink L",
+      "Beschreibung": "Cuba Libre, Highball, Whiskey Cola",
+      "Menge": "Glas",
+      "Preis": "9.50"
+    },
+    {
+      "Kategorie": "Longdrink",
+      "Name": "Longdrink XL",
+      "Beschreibung": "Tequila Sunrise",
+      "Menge": "Glas\t",
+      "Preis": "12.00"
+    },
+    {
+      "Kategorie": "Heißgetränke",
       "Name": "Espresso",
-      "Beschreibung": "",
-      "Menge": "     ",
-      "Preis": "x"
+      "Beschreibung": "einfach ",
+      "Menge": "Tasse",
+      "Preis": "2.40"
     },
     {
-      "Kategorie": "Heißgetränke Kaffee",
-      "Name": "Latte Macchiato",
-      "Beschreibung": "",
-      "Menge": "      ",
-      "Preis": "x"
+      "Kategorie": "Heißgetränke",
+      "Name": "Kaffee",
+      "Beschreibung": "Cappuccino, Latte Macciato, Kaffee Crema, Espresso dopio, Milchkaffee",
+      "Menge": "Tasse",
+      "Preis": "3.50"
     },
     {
-      "Kategorie": "Heißgetränke Kaffee",
-      "Name": "Café Crema",
-      "Beschreibung": "",
-      "Menge": "     ",
-      "Preis": "x"
-    },
-    {
-      "Kategorie": "Heißgetränke Tee",
-      "Name": "Hayato | Grüntee",
-      "Beschreibung": "",
-      "Menge": "      ",
-      "Preis": "x"
-    },
-    {
-      "Kategorie": "Heißgetränke Tee",
-      "Name": "Jinjin | Grüntee",
-      "Beschreibung": "",
-      "Menge": "      ",
-      "Preis": "x"
-    },
-    {
-      "Kategorie": "Heißgetränke Tee",
-      "Name": "Nandil | Schwarzer Tee",
-      "Beschreibung": "",
-      "Menge": "       ",
-      "Preis": "x"
-    },
-    {
-      "Kategorie": "Heißgetränke Tee",
-      "Name": "Annemarie | Früchtetee",
-      "Beschreibung": "",
-      "Menge": "       ",
-      "Preis": "x"
-    },
-    {
-      "Kategorie": "Heißgetränke Tee",
-      "Name": "Namira | Pfefferminze",
-      "Beschreibung": "",
-      "Menge": "      ",
-      "Preis": "x"
-    },
-    {
-      "Kategorie": "Heißgetränke Tee",
-      "Name": "Traudl | Almkräuter",
-      "Beschreibung": "",
-      "Menge": "       ",
-      "Preis": "x"
-    },
-    {
-      "Kategorie": "Heißgetränke Tee",
-      "Name": "Bongani | Rooibos Vanille",
-      "Beschreibung": "",
-      "Menge": "       ",
-      "Preis": "x"
-    },
-    {
-      "Kategorie": "Heißgetränke Tee",
-      "Name": "Sarala | Chai",
-      "Beschreibung": "",
-      "Menge": "        ",
-      "Preis": "x"
-    },
-    {
-      "Kategorie": "Longdrink",
-      "Name": "Gin & Goldberg Tonic I The Duke Bio Gin | Illusionist Dry Gin | Bombay Saphire",
-      "Beschreibung": "",
-      "Menge": "       ",
-      "Preis": "x"
-    },
-    {
-      "Kategorie": "Longdrink",
-      "Name": "Cuba Libre I Havana Club 3 | Cola | Limette",
-      "Beschreibung": "",
-      "Menge": "       ",
-      "Preis": "x"
-    },
-    {
-      "Kategorie": "Longdrink",
-      "Name": "Moscow Mule I Absolut Wodka | Goldberg Ginger Beer | Limette",
-      "Beschreibung": "",
-      "Menge": "        ",
-      "Preis": "x"
-    },
-    {
-      "Kategorie": "Longdrink",
-      "Name": "Bourbon & Cola I Woodford Reserve Straight Bourbon Whiskey & Cola",
-      "Beschreibung": "",
-      "Menge": "       ",
-      "Preis": "x"
-    },
-    {
-      "Kategorie": "Longdrink",
-      "Name": "Belzazar & Tonic I Belzazar Vermuth | Goldberg Tonic",
-      "Beschreibung": "",
-      "Menge": "       ",
-      "Preis": "x"
-    },
-    {
-      "Kategorie": "Aperitifs",
-      "Name": "Aperol Spritz | Aperol | Prosecco | Soda",
-      "Beschreibung": "",
-      "Menge": "        ",
-      "Preis": "x"
-    },
-    {
-      "Kategorie": "Aperitifs",
-      "Name": "Pampelle Spritz | Pampelle | Prosecco | Soda",
-      "Beschreibung": "",
-      "Menge": "              ",
-      "Preis": "x"
-    },
-    {
-      "Kategorie": "Aperitifs",
-      "Name": "Lillet Wildberry | Campari, roter Wermut, Soda",
-      "Beschreibung": "",
-      "Menge": "            ",
-      "Preis": "x"
-    },
-    {
-      "Kategorie": "Aperitifs",
-      "Name": "French 75 | The Duke Bio Gin | Zitrone | Crémant",
-      "Beschreibung": "",
-      "Menge": "             ",
-      "Preis": "x"
-    },
-    {
-      "Kategorie": "Aperitifs",
-      "Name": "Kir Royal | Crémant | Crème de Cassis",
-      "Beschreibung": "",
-      "Menge": "                ",
-      "Preis": "x"
-    },
-    {
-      "Kategorie": "Cocktails",
-      "Name": "Whiskey Sour I Woodford Reserve | Zitrone | Simple Sirup",
-      "Beschreibung": "",
-      "Menge": "             ",
-      "Preis": "x"
-    },
-    {
-      "Kategorie": "Cocktails",
-      "Name": "Espresso Martini I Absolut Wodka | Kahlúa | Espresso",
-      "Beschreibung": "",
-      "Menge": "             ",
-      "Preis": "x"
-    },
-    {
-      "Kategorie": "Cocktails",
-      "Name": "Zombie I Appelton Estate | Myers Rum | Limette |Falernum I Simple Sirup | Grenadine | Ananas",
-      "Beschreibung": "",
-      "Menge": "                ",
-      "Preis": "x"
-    },
-    {
-      "Kategorie": "Cocktails",
-      "Name": "Pina Colada I Plantation 3 Stars Rum",
-      "Beschreibung": "",
-      "Menge": "              ",
-      "Preis": "x"
-    },
-    {
-      "Kategorie": "Cocktails",
-      "Name": "Tom Collins I The Duke Bio Gin | Zitrone | Simple Sirup",
-      "Beschreibung": "",
-      "Menge": "              ",
-      "Preis": "x"
-    },
-    {
-      "Kategorie": "Cocktails",
-      "Name": "Negroni I Bombay Sapphire | Campari | Martini Rosso",
-      "Beschreibung": "",
-      "Menge": "                ",
-      "Preis": "x"
-    },
-    {
-      "Kategorie": "",
-      "Name": "",
-      "Beschreibung": "",
-      "Menge": "             ",
-      "Preis": "               "
+      "Kategorie": "Heißgetränke",
+      "Name": "Tee",
+      "Beschreibung": "alle Sorten",
+      "Menge": "Tasse",
+      "Preis": "3.50"
     }
   ]
 }
