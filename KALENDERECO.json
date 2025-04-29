@@ -1571,6 +1571,30 @@
       "RAUMHINWEIS": "",
       "BILD": "E-Bistro.jpeg",
       "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "29.04.25",
+      "VON": "09:00",
+      "BIS": "18:00",
+      "KUNDE": "AWO",
+      "EVENT": "",
+      "TEILNEHMER": "13",
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "",
+      "BILD": "T90.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "29.04.25",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Wüstenrot",
+      "EVENT": "",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoForum T120",
+      "RAUMHINWEIS": "",
+      "BILD": "T120.jpeg",
+      "BEMERKUNG": ""
     }
   ]
 }
