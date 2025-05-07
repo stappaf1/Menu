@@ -1,54 +1,139 @@
 {
   "speisen": [
     {
+      "Kategorie": "Vorspeisen",
+      "Name": "Spargelcremesuppe",
+      "Beschreibung": " ",
+      "Menge": " ",
+      "Preis": " ",
       "": ""
     },
     {
+      "Kategorie": "Hauptgerichte",
+      "Name": "Maishähnchen mit Rosmarinkartoffeln, Jus und mediterranem Gemüse",
+      "Beschreibung": " ",
+      "Menge": " ",
+      "Preis": " ",
       "": ""
     },
     {
+      "Kategorie": "Hauptgerichte",
+      "Name": "Linguine mit Knoblauchgarnelen",
+      "Beschreibung": " ",
+      "Menge": " ",
+      "Preis": " ",
       "": ""
     },
     {
+      "Kategorie": "Hauptgerichte",
+      "Name": "Linguine mit gegrilltem grünem Spargel",
+      "Beschreibung": " ",
+      "Menge": " ",
+      "Preis": " ",
       "": ""
     },
     {
+      "Kategorie": "",
+      "Name": "",
+      "Beschreibung": "",
+      "Menge": "",
+      "Preis": "",
       "": ""
     },
     {
+      "Kategorie": "",
+      "Name": "",
+      "Beschreibung": "",
+      "Menge": "",
+      "Preis": "",
       "": ""
     },
     {
+      "Kategorie": "",
+      "Name": "",
+      "Beschreibung": "",
+      "Menge": "",
+      "Preis": "",
       "": ""
     },
     {
+      "Kategorie": "",
+      "Name": "",
+      "Beschreibung": "",
+      "Menge": "",
+      "Preis": "",
       "": ""
     },
     {
+      "Kategorie": "",
+      "Name": "",
+      "Beschreibung": "",
+      "Menge": "",
+      "Preis": "",
       "": ""
     },
     {
+      "Kategorie": "",
+      "Name": "",
+      "Beschreibung": "",
+      "Menge": "",
+      "Preis": "",
       "": ""
     },
     {
+      "Kategorie": "",
+      "Name": "",
+      "Beschreibung": "",
+      "Menge": "",
+      "Preis": "",
       "": ""
     },
     {
+      "Kategorie": "",
+      "Name": "",
+      "Beschreibung": "",
+      "Menge": "",
+      "Preis": "",
       "": ""
     },
     {
+      "Kategorie": "",
+      "Name": "",
+      "Beschreibung": "",
+      "Menge": "",
+      "Preis": "",
       "": ""
     },
     {
+      "Kategorie": "",
+      "Name": "",
+      "Beschreibung": "",
+      "Menge": "",
+      "Preis": "",
       "": ""
     },
     {
+      "Kategorie": "",
+      "Name": "",
+      "Beschreibung": "",
+      "Menge": "",
+      "Preis": "",
       "": ""
     },
     {
+      "Kategorie": "",
+      "Name": "",
+      "Beschreibung": "",
+      "Menge": "",
+      "Preis": "",
       "": ""
     },
     {
+      "Kategorie": "",
+      "Name": "",
+      "Beschreibung": "",
+      "Menge": "",
+      "Preis": "",
       "": " "
     }
   ]
