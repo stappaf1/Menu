@@ -1595,6 +1595,30 @@
       "RAUMHINWEIS": "",
       "BILD": "T120.jpeg",
       "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "07.05.25",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Baustoffrecycling",
+      "EVENT": "",
+      "TEILNEHMER": "21",
+      "TAGUNGSRAUM": "ecoForum T120",
+      "RAUMHINWEIS": "",
+      "BILD": "T120.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "07.05.25",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "SAXSTank",
+      "EVENT": "",
+      "TEILNEHMER": "35",
+      "TAGUNGSRAUM": "ecoPlenum T200",
+      "RAUMHINWEIS": "",
+      "BILD": "T200-1.jpeg",
+      "BEMERKUNG": ""
     }
   ]
 }
