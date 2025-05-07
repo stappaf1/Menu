@@ -1614,10 +1614,22 @@
       "BIS": "",
       "KUNDE": "SAXSTank",
       "EVENT": "",
-      "TEILNEHMER": "35",
+      "TEILNEHMER": "40",
       "TAGUNGSRAUM": "ecoPlenum T200",
       "RAUMHINWEIS": "",
-      "BILD": "T200-1.jpeg",
+      "BILD": "T200-Business.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "07.05.25",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "VALANTIC",
+      "EVENT": "",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "",
+      "BILD": "T90.jpeg",
       "BEMERKUNG": ""
     }
   ]
