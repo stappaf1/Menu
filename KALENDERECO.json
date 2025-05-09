@@ -1634,8 +1634,8 @@
     },
     {
       "DATUM": "09.05.25",
-      "VON": "",
-      "BIS": "",
+      "VON": "11:00",
+      "BIS": "17:00",
       "KUNDE": "CONDAT Projekt GmbH",
       "EVENT": "",
       "TEILNEHMER": "",
