@@ -163,9 +163,21 @@
       "KUNDE": "Rolandberger",
       "EVENT": "",
       "TEILNEHMER": "20",
-      "TAGUNGSRAUM": "",
+      "TAGUNGSRAUM": "ecoCentrum T90",
       "RAUMHINWEIS": "",
-      "BILD": "",
+      "BILD": "T90.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "12.05.25",
+      "VON": "08:00",
+      "BIS": "17:00",
+      "KUNDE": "Rolandberger",
+      "EVENT": "",
+      "TEILNEHMER": "20",
+      "TAGUNGSRAUM": "ecoForum T120",
+      "RAUMHINWEIS": "",
+      "BILD": "T120.jpeg",
       "BEMERKUNG": ""
     }
   ]
