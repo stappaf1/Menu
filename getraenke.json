@@ -2,29 +2,29 @@
   "getraenke": [
     {
       "Kategorie": "Bier",
-      "Name": "Biere",
-      "Beschreibung": "Müllerbräu Helles mit/ohne Alkohol, Weißbier mit/leicht/ohne Alkohol, Dunkles, Russ, Radler",
+      "Name": "Beer",
+      "Beschreibung": "Müllerbräu Helles (with/without alcohol), wheat beer (with/light/without alcohol), dark beer, shandy (with wheat beer), shandy (with lager)",
       "Menge": "0,5L",
       "Preis": " "
     },
     {
       "Kategorie": "Bier",
-      "Name": "Pils",
-      "Beschreibung": "Müllerbräu",
+      "Name": "Pilsner",
+      "Beschreibung": "From the local brewery Müllerbräu",
       "Menge": "0,33L",
       "Preis": " "
     },
     {
       "Kategorie": "Antialkoholisches",
-      "Name": "Softgetränke",
-      "Beschreibung": "Cola ohne/mit, Spezi, Limo, Saftschorlen",
+      "Name": "Soft Drinks",
+      "Beschreibung": "Cola, Cola Zero, Fanta, Spezi, lemonade, juice spritzer",
       "Menge": "0,4L",
       "Preis": " "
     },
     {
       "Kategorie": "Antialkoholisches",
-      "Name": "Säfte",
-      "Beschreibung": "Orange, Apfel, Sauerkirsch, Ananas, Johannisbeer, Maracuja",
+      "Name": "Juice",
+      "Beschreibung": "Orange, apple, pineapple, blackcurrant, passion fruit",
       "Menge": "0,2L",
       "Preis": " "
     },
@@ -44,28 +44,35 @@
     },
     {
       "Kategorie": "Wein",
-      "Name": "Weißwein L",
-      "Beschreibung": "Grauburgunder, Riesling",
+      "Name": "Pinot Gris",
+      "Beschreibung": "(Grauburgunder)",
       "Menge": "0,2L",
       "Preis": "  "
     },
     {
       "Kategorie": "Wein",
-      "Name": "Weißwein XL",
-      "Beschreibung": "Lugana, Rosé",
+      "Name": "Lugana",
+      "Beschreibung": "white wine from Lake Garda, Italy",
       "Menge": "0.2L",
       "Preis": " "
     },
     {
       "Kategorie": "Wein",
-      "Name": "Rotwein XL",
-      "Beschreibung": "Primitivo",
+      "Name": "Rosé",
+      "Beschreibung": "rosé wine from Lake Garda, Italy",
+      "Menge": "",
+      "Preis": " "
+    },
+    {
+      "Kategorie": "Wein",
+      "Name": "Primitivo",
+      "Beschreibung": "Primitivo Italian red wine",
       "Menge": "0,2L",
       "Preis": " "
     },
     {
       "Kategorie": "Wein",
-      "Name": "Schaumwein",
+      "Name": "Sparkling Wine",
       "Beschreibung": "Prosecco, Winzersekt Riesling",
       "Menge": "0,2L",
       "Preis": " "
@@ -73,7 +80,7 @@
     {
       "Kategorie": "Aperitiv",
       "Name": "Aperitiv L",
-      "Beschreibung": "Aperol, Campari Soda, Lillet, Martini mit/ohne, Sherry Fino, Vermouth on the Rocks",
+      "Beschreibung": "Aperol, Campari Soda, Lillet, Martini with or without alcohol, Vermouth on the Rocks",
       "Menge": "Glas",
       "Preis": " "
     },
@@ -82,14 +89,14 @@
       "Name": "Aperitiv XL",
       "Beschreibung": "Kir",
       "Menge": "Glas",
-      "Preis": " "
+      "Preis": "  "
     },
     {
       "Kategorie": "Aperitiv",
       "Name": "Aperitiv XXL",
       "Beschreibung": "Kir Royal",
       "Menge": "Glas",
-      "Preis": "  "
+      "Preis": " "
     },
     {
       "Kategorie": "Cocktail",
@@ -150,23 +157,23 @@
     {
       "Kategorie": "Heißgetränke",
       "Name": "Espresso",
-      "Beschreibung": "einfach ",
-      "Menge": "Tasse",
-      "Preis": " "
-    },
-    {
-      "Kategorie": "Heißgetränke",
-      "Name": "Kaffee",
-      "Beschreibung": "Cappuccino, Latte Macciato, Kaffee Crema, Espresso dopio, Milchkaffee",
+      "Beschreibung": "Single or double",
       "Menge": "Tasse",
       "Preis": "  "
     },
     {
       "Kategorie": "Heißgetränke",
-      "Name": "Tee",
-      "Beschreibung": "alle Sorten",
+      "Name": "Kaffee",
+      "Beschreibung": "Cappuccino, Latte Macchiato, Café Crème, double espresso, coffee with milk",
       "Menge": "Tasse",
       "Preis": " "
+    },
+    {
+      "Kategorie": "Heißgetränke",
+      "Name": "Tee",
+      "Beschreibung": "",
+      "Menge": "Tasse",
+      "Preis": ""
     }
   ]
 }
