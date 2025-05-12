@@ -1,8 +1,8 @@
 {
   "events": [
     {
-      "DATUM": "23.10.24",
-      "VON": "08:00",
+      "DATUM": "23.10.2024",
+      "VON": "08:00:00",
       "BIS": "",
       "KUNDE": "Hecht",
       "EVENT": "",
@@ -13,8 +13,8 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "23.10.24",
-      "VON": "08:00",
+      "DATUM": "23.10.2024",
+      "VON": "08:00:00",
       "BIS": "",
       "KUNDE": "Bayerisches Staatsministerium",
       "EVENT": "",
@@ -25,9 +25,9 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "25.10.24",
-      "VON": "20:00",
-      "BIS": "00:00",
+      "DATUM": "25.10.2024",
+      "VON": "20:00:00",
+      "BIS": "00:00:00",
       "KUNDE": "Wipfler",
       "EVENT": "Probeessen",
       "TEILNEHMER": "17",
@@ -37,9 +37,9 @@
       "BEMERKUNG": "Testbemerkung4"
     },
     {
-      "DATUM": "29.10.24",
-      "VON": "15:00",
-      "BIS": "20:00",
+      "DATUM": "29.10.2024",
+      "VON": "15:00:00",
+      "BIS": "20:00:00",
       "KUNDE": "Meier Demotechnik",
       "EVENT": "Vertriebstagung",
       "TEILNEHMER": "120",
@@ -49,9 +49,9 @@
       "BEMERKUNG": "Kaffeepausen 10:00/14:30 Uhr Mittag 13:00"
     },
     {
-      "DATUM": "29.10.24",
-      "VON": "20:00",
-      "BIS": "02:00",
+      "DATUM": "29.10.2024",
+      "VON": "20:00:00",
+      "BIS": "02:00:00",
       "KUNDE": "Mustermann Maschinenbau",
       "EVENT": "Schulung 2024",
       "TEILNEHMER": "60",
@@ -61,7 +61,7 @@
       "BEMERKUNG": "Aufstellung im Block mit Stuhlkreis"
     },
     {
-      "DATUM": "02.11.24",
+      "DATUM": "02.11.2024",
       "VON": "",
       "BIS": "",
       "KUNDE": "Haring",
@@ -73,7 +73,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "05.11.24",
+      "DATUM": "05.11.2024",
       "VON": "",
       "BIS": "",
       "KUNDE": "ALLIANZ KUNDE & MARKT GMBH",
@@ -85,7 +85,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "06.11.24",
+      "DATUM": "06.11.2024",
       "VON": "",
       "BIS": "",
       "KUNDE": "ALLIANZ KUNDE & MARKT GMBH",
@@ -97,7 +97,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "06.11.24",
+      "DATUM": "06.11.2024",
       "VON": "",
       "BIS": "",
       "KUNDE": "BBW GGMBH OBERBAYERN   ",
@@ -109,7 +109,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "07.11.24",
+      "DATUM": "07.11.2024",
       "VON": "",
       "BIS": "",
       "KUNDE": "BBW GGMBH OBERBAYERN   ",
@@ -121,9 +121,9 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "08.11.24",
-      "VON": "18:00",
-      "BIS": "23:00",
+      "DATUM": "08.11.2024",
+      "VON": "18:00:00",
+      "BIS": "23:00:00",
       "KUNDE": "Krimidinner",
       "EVENT": "",
       "TEILNEHMER": "",
@@ -133,9 +133,9 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "08.11.24",
-      "VON": "14:00",
-      "BIS": "23:00",
+      "DATUM": "08.11.2024",
+      "VON": "14:00:00",
+      "BIS": "23:00:00",
       "KUNDE": "STADT SCHROBENHAUSEN ",
       "EVENT": "",
       "TEILNEHMER": "25",
@@ -145,8 +145,8 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "09.11.24",
-      "VON": "09:00",
+      "DATUM": "09.11.2024",
+      "VON": "09:00:00",
       "BIS": "",
       "KUNDE": "STADT SCHROBENHAUSEN ",
       "EVENT": "",
@@ -157,8 +157,8 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "09.11.24",
-      "VON": "13:00",
+      "DATUM": "09.11.2024",
+      "VON": "13:00:00",
       "BIS": "",
       "KUNDE": "BGN",
       "EVENT": "",
@@ -169,8 +169,8 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "11.11.24",
-      "VON": "12:00",
+      "DATUM": "11.11.2024",
+      "VON": "12:00:00",
       "BIS": "",
       "KUNDE": "MAWA",
       "EVENT": "",
@@ -181,8 +181,8 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "11.11.24",
-      "VON": "13:00",
+      "DATUM": "11.11.2024",
+      "VON": "13:00:00",
       "BIS": "",
       "KUNDE": "EK RETAIL       ",
       "EVENT": "",
@@ -193,7 +193,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "12.11.24",
+      "DATUM": "12.11.2024",
       "VON": "",
       "BIS": "",
       "KUNDE": "EK RETAIL       ",
@@ -205,7 +205,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "12.11.24",
+      "DATUM": "12.11.2024",
       "VON": "",
       "BIS": "",
       "KUNDE": "Allianz",
@@ -217,8 +217,8 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "11.11.24",
-      "VON": "09:00",
+      "DATUM": "11.11.2024",
+      "VON": "09:00:00",
       "BIS": "",
       "KUNDE": "PARITÄTISCHE FREIWILLIGENDIENST",
       "EVENT": "",
@@ -229,7 +229,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "12.11.24",
+      "DATUM": "12.11.2024",
       "VON": "",
       "BIS": "",
       "KUNDE": "PARITÄTISCHE FREIWILLIGENDIENST",
@@ -241,7 +241,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "13.11.24",
+      "DATUM": "13.11.2024",
       "VON": "",
       "BIS": "",
       "KUNDE": "Audi Immobilien Solutions GmbH",
@@ -253,7 +253,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "14.11.24",
+      "DATUM": "14.11.2024",
       "VON": "",
       "BIS": "",
       "KUNDE": "Audi Immobilien Solutions GmbH",
@@ -265,7 +265,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "14.11.24",
+      "DATUM": "14.11.2024",
       "VON": "",
       "BIS": "",
       "KUNDE": "Hecht",
@@ -277,7 +277,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "16.11.24",
+      "DATUM": "16.11.2024",
       "VON": "",
       "BIS": "",
       "KUNDE": "BGN Berufsgenossenschaft     ",
@@ -289,7 +289,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "17.11.24",
+      "DATUM": "17.11.2024",
       "VON": "",
       "BIS": "",
       "KUNDE": "BGN Berufsgenossenschaft     ",
@@ -301,9 +301,9 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "23.11.24",
-      "VON": "08:00",
-      "BIS": "16:30",
+      "DATUM": "23.11.2024",
+      "VON": "08:00:00",
+      "BIS": "16:30:00",
       "KUNDE": "CONTAG Dresden",
       "EVENT": "Uroonkologisches Symposium",
       "TEILNEHMER": "60",
@@ -313,9 +313,9 @@
       "BEMERKUNG": "08:00 Begrüßung 10:30 (K) 12:30 (M) 14:45 (K)"
     },
     {
-      "DATUM": "18.11.24",
-      "VON": "09:00",
-      "BIS": "17:00",
+      "DATUM": "18.11.2024",
+      "VON": "09:00:00",
+      "BIS": "17:00:00",
       "KUNDE": "Meier Anlagenbau GmbH",
       "EVENT": "Vertriebstagung",
       "TEILNEHMER": "6",
@@ -325,9 +325,9 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "18.11.24",
-      "VON": "09:00",
-      "BIS": "17:00",
+      "DATUM": "18.11.2024",
+      "VON": "09:00:00",
+      "BIS": "17:00:00",
       "KUNDE": "Dipl. Ing. Müller GmbH",
       "EVENT": "Jahresabschlusstagung",
       "TEILNEHMER": "6",
@@ -337,9 +337,9 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "18.11.24",
-      "VON": "09:00",
-      "BIS": "17:00",
+      "DATUM": "18.11.2024",
+      "VON": "09:00:00",
+      "BIS": "17:00:00",
       "KUNDE": "Hotel Alea GmbH",
       "EVENT": "Schulung",
       "TEILNEHMER": "6",
@@ -349,9 +349,9 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "18.11.24",
-      "VON": "09:00",
-      "BIS": "17:00",
+      "DATUM": "18.11.2024",
+      "VON": "09:00:00",
+      "BIS": "17:00:00",
       "KUNDE": "Sagbauer Inovation AG",
       "EVENT": "sonsties Event",
       "TEILNEHMER": "6",
@@ -361,9 +361,9 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "20.11.24",
-      "VON": "09:00",
-      "BIS": "17:00",
+      "DATUM": "20.11.2024",
+      "VON": "09:00:00",
+      "BIS": "17:00:00",
       "KUNDE": "Baustoff Recycling Bayern e.V München",
       "EVENT": "",
       "TEILNEHMER": "15",
@@ -373,7 +373,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "27.11.24",
+      "DATUM": "27.11.2024",
       "VON": "",
       "BIS": "",
       "KUNDE": "Syngenity",
@@ -385,7 +385,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "27.11.24",
+      "DATUM": "27.11.2024",
       "VON": "",
       "BIS": "",
       "KUNDE": "MBDA",
@@ -397,7 +397,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "28.11.24",
+      "DATUM": "28.11.2024",
       "VON": "",
       "BIS": "",
       "KUNDE": "MBDA",
@@ -409,7 +409,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "28.11.24",
+      "DATUM": "28.11.2024",
       "VON": "",
       "BIS": "",
       "KUNDE": "Syngenity",
@@ -421,7 +421,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "28.11.24",
+      "DATUM": "28.11.2024",
       "VON": "",
       "BIS": "",
       "KUNDE": "Syngenity",
@@ -433,9 +433,9 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "28.11.24",
-      "VON": "09:00",
-      "BIS": "17:00",
+      "DATUM": "28.11.2024",
+      "VON": "09:00:00",
+      "BIS": "17:00:00",
       "KUNDE": "Technical Software Engineering ",
       "EVENT": "",
       "TEILNEHMER": "3",
@@ -445,9 +445,9 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "02.12.24",
-      "VON": "08:00",
-      "BIS": "17:30",
+      "DATUM": "02.12.2024",
+      "VON": "08:00:00",
+      "BIS": "17:30:00",
       "KUNDE": "Daiichi Sankyo",
       "EVENT": "Workshop",
       "TEILNEHMER": "8",
@@ -457,9 +457,9 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "02.12.24",
-      "VON": "17:00",
-      "BIS": "00:00",
+      "DATUM": "02.12.2024",
+      "VON": "17:00:00",
+      "BIS": "00:00:00",
       "KUNDE": "Hölscher Wasserbau",
       "EVENT": "Weihnachtsfeier",
       "TEILNEHMER": "59",
@@ -469,9 +469,9 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "03.12.24",
-      "VON": "08:00",
-      "BIS": "17:00",
+      "DATUM": "03.12.2024",
+      "VON": "08:00:00",
+      "BIS": "17:00:00",
       "KUNDE": "Chemgineering",
       "EVENT": "",
       "TEILNEHMER": "18",
@@ -481,9 +481,9 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "04.12.24",
-      "VON": "08:00",
-      "BIS": "17:00",
+      "DATUM": "04.12.2024",
+      "VON": "08:00:00",
+      "BIS": "17:00:00",
       "KUNDE": "Volksbank Raiffeisen",
       "EVENT": "Workshop",
       "TEILNEHMER": "14",
@@ -493,9 +493,9 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "04.12.24",
-      "VON": "08:00",
-      "BIS": "17:00",
+      "DATUM": "04.12.2024",
+      "VON": "08:00:00",
+      "BIS": "17:00:00",
       "KUNDE": "Volksbank Raiffeisen",
       "EVENT": "Workshop",
       "TEILNEHMER": "14",
@@ -505,9 +505,9 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "04.12.24",
-      "VON": "12:00",
-      "BIS": "17:00",
+      "DATUM": "04.12.2024",
+      "VON": "12:00:00",
+      "BIS": "17:00:00",
       "KUNDE": "Preussen Elektra ",
       "EVENT": "",
       "TEILNEHMER": "20",
@@ -517,9 +517,9 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "05.12.24",
-      "VON": "08:00",
-      "BIS": "17:00",
+      "DATUM": "05.12.2024",
+      "VON": "08:00:00",
+      "BIS": "17:00:00",
       "KUNDE": "Bayernwerk Netz     ",
       "EVENT": "",
       "TEILNEHMER": "14",
@@ -529,9 +529,9 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "05.12.24",
-      "VON": "08:00",
-      "BIS": "17:00",
+      "DATUM": "05.12.2024",
+      "VON": "08:00:00",
+      "BIS": "17:00:00",
       "KUNDE": "Preussen Elektra ",
       "EVENT": "",
       "TEILNEHMER": "20",
@@ -541,9 +541,9 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "05.12.24",
-      "VON": "08:00",
-      "BIS": "17:00",
+      "DATUM": "05.12.2024",
+      "VON": "08:00:00",
+      "BIS": "17:00:00",
       "KUNDE": "Marketing Handel Kooperation",
       "EVENT": "",
       "TEILNEHMER": "8",
@@ -553,9 +553,9 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "05.12.24",
-      "VON": "08:00",
-      "BIS": "17:00",
+      "DATUM": "05.12.2024",
+      "VON": "08:00:00",
+      "BIS": "17:00:00",
       "KUNDE": "Marketing Handel Kooperation",
       "EVENT": "",
       "TEILNEHMER": "45",
@@ -565,9 +565,9 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "10.12.24",
-      "VON": "08:00",
-      "BIS": "17:00",
+      "DATUM": "10.12.2024",
+      "VON": "08:00:00",
+      "BIS": "17:00:00",
       "KUNDE": "WTS",
       "EVENT": "Überzeugen",
       "TEILNEHMER": "12",
@@ -577,9 +577,9 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "10.12.24",
-      "VON": "08:00",
-      "BIS": "17:00",
+      "DATUM": "10.12.2024",
+      "VON": "08:00:00",
+      "BIS": "17:00:00",
       "KUNDE": "WTS ",
       "EVENT": "Berater Pro",
       "TEILNEHMER": "12",
@@ -589,9 +589,9 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "10.12.24",
-      "VON": "08:00",
-      "BIS": "17:00",
+      "DATUM": "10.12.2024",
+      "VON": "08:00:00",
+      "BIS": "17:00:00",
       "KUNDE": "WTS",
       "EVENT": "Überzeugen ",
       "TEILNEHMER": "12",
@@ -601,9 +601,9 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "10.12.24",
-      "VON": "08:00",
-      "BIS": "17:00",
+      "DATUM": "10.12.2024",
+      "VON": "08:00:00",
+      "BIS": "17:00:00",
       "KUNDE": "Tyczka Air Gases",
       "EVENT": "",
       "TEILNEHMER": "20",
@@ -613,9 +613,9 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "11.12.24",
-      "VON": "08:00",
-      "BIS": "17:00",
+      "DATUM": "11.12.2024",
+      "VON": "08:00:00",
+      "BIS": "17:00:00",
       "KUNDE": "WTS",
       "EVENT": "Überzeugen",
       "TEILNEHMER": "12",
@@ -625,9 +625,9 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "11.12.24",
-      "VON": "08:00",
-      "BIS": "17:00",
+      "DATUM": "11.12.2024",
+      "VON": "08:00:00",
+      "BIS": "17:00:00",
       "KUNDE": "WTS ",
       "EVENT": "Berater Pro",
       "TEILNEHMER": "12",
@@ -637,9 +637,9 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "11.12.24",
-      "VON": "08:00",
-      "BIS": "17:00",
+      "DATUM": "11.12.2024",
+      "VON": "08:00:00",
+      "BIS": "17:00:00",
       "KUNDE": "WTS",
       "EVENT": "Überzeugen ",
       "TEILNEHMER": "12",
@@ -649,9 +649,9 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "11.12.24",
-      "VON": "08:00",
-      "BIS": "17:00",
+      "DATUM": "11.12.2024",
+      "VON": "08:00:00",
+      "BIS": "17:00:00",
       "KUNDE": "Tyczka Air Gases",
       "EVENT": "",
       "TEILNEHMER": "20",
@@ -661,7 +661,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "11.12.24",
+      "DATUM": "11.12.2024",
       "VON": "",
       "BIS": "",
       "KUNDE": "Eigentümerversammlung",
@@ -673,7 +673,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "12.12.24",
+      "DATUM": "12.12.2024",
       "VON": "",
       "BIS": "",
       "KUNDE": "Daiichi Sankyo",
@@ -685,9 +685,9 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "14.01.25",
-      "VON": "08:00",
-      "BIS": "16:00",
+      "DATUM": "14.01.2025",
+      "VON": "08:00:00",
+      "BIS": "16:00:00",
       "KUNDE": "ECOVIS",
       "EVENT": "Schulung",
       "TEILNEHMER": "9",
@@ -697,9 +697,9 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "15.01.25",
-      "VON": "08:00",
-      "BIS": "18:00",
+      "DATUM": "15.01.2025",
+      "VON": "08:00:00",
+      "BIS": "18:00:00",
       "KUNDE": "BVSE-Recyconsult GmbH    ",
       "EVENT": "Schulung",
       "TEILNEHMER": "24",
@@ -709,9 +709,9 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "17.01.25",
-      "VON": "08:00",
-      "BIS": "17:00",
+      "DATUM": "17.01.2025",
+      "VON": "08:00:00",
+      "BIS": "17:00:00",
       "KUNDE": "Nadler + Söffker GmbH   ",
       "EVENT": "Schulung",
       "TEILNEHMER": "10",
@@ -721,9 +721,9 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "16.01.25",
-      "VON": "08:00",
-      "BIS": "18:00",
+      "DATUM": "16.01.2025",
+      "VON": "08:00:00",
+      "BIS": "18:00:00",
       "KUNDE": "BVSE-Recyconsult GmbH    ",
       "EVENT": "Schulung",
       "TEILNEHMER": "31",
@@ -733,9 +733,9 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "16.01.25",
-      "VON": "08:00",
-      "BIS": "18:00",
+      "DATUM": "16.01.2025",
+      "VON": "08:00:00",
+      "BIS": "18:00:00",
       "KUNDE": "Hydroisotop GmbH ",
       "EVENT": "Schulung",
       "TEILNEHMER": "6",
@@ -745,9 +745,9 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "21.01.25",
-      "VON": "08:00",
-      "BIS": "17:00",
+      "DATUM": "21.01.2025",
+      "VON": "08:00:00",
+      "BIS": "17:00:00",
       "KUNDE": "dm-drogerie markt GmbH + Co. KG",
       "EVENT": "Schulung",
       "TEILNEHMER": "23",
@@ -757,9 +757,9 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "21.01.25",
-      "VON": "08:00",
-      "BIS": "17:00",
+      "DATUM": "21.01.2025",
+      "VON": "08:00:00",
+      "BIS": "17:00:00",
       "KUNDE": "dm-drogerie markt GmbH + Co. KG",
       "EVENT": "Schulung",
       "TEILNEHMER": "1",
@@ -769,9 +769,9 @@
       "BEMERKUNG": "Gruppenraum"
     },
     {
-      "DATUM": "21.01.25",
-      "VON": "08:00",
-      "BIS": "17:00",
+      "DATUM": "21.01.2025",
+      "VON": "08:00:00",
+      "BIS": "17:00:00",
       "KUNDE": "Elero GmbH",
       "EVENT": "Schulung",
       "TEILNEHMER": "15",
@@ -781,9 +781,9 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "22.01.25",
-      "VON": "08:00",
-      "BIS": "17:00",
+      "DATUM": "22.01.2025",
+      "VON": "08:00:00",
+      "BIS": "17:00:00",
       "KUNDE": "dm-drogerie markt GmbH + Co. KG",
       "EVENT": "Schulung",
       "TEILNEHMER": "23",
@@ -793,9 +793,9 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "22.01.25",
-      "VON": "08:00",
-      "BIS": "17:00",
+      "DATUM": "22.01.2025",
+      "VON": "08:00:00",
+      "BIS": "17:00:00",
       "KUNDE": "Elero GmbH",
       "EVENT": "Schulung",
       "TEILNEHMER": "15",
@@ -805,9 +805,9 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "22.01.25",
-      "VON": "08:00",
-      "BIS": "17:00",
+      "DATUM": "22.01.2025",
+      "VON": "08:00:00",
+      "BIS": "17:00:00",
       "KUNDE": "dm-drogerie markt GmbH + Co. KG",
       "EVENT": "Schulung",
       "TEILNEHMER": "1",
@@ -817,9 +817,9 @@
       "BEMERKUNG": "Gruppenraum"
     },
     {
-      "DATUM": "23.01.25",
-      "VON": "08:00",
-      "BIS": "17:00",
+      "DATUM": "23.01.2025",
+      "VON": "08:00:00",
+      "BIS": "17:00:00",
       "KUNDE": "Eigentümerversammlung",
       "EVENT": "Versammlung",
       "TEILNEHMER": "30",
@@ -829,9 +829,9 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "25.01.25",
-      "VON": "08:00",
-      "BIS": "17:00",
+      "DATUM": "25.01.2025",
+      "VON": "08:00:00",
+      "BIS": "17:00:00",
       "KUNDE": "Lika Schumann",
       "EVENT": "Hochzeit",
       "TEILNEHMER": "85",
@@ -841,9 +841,9 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "22.01.25",
-      "VON": "08:00",
-      "BIS": "17:00",
+      "DATUM": "22.01.2025",
+      "VON": "08:00:00",
+      "BIS": "17:00:00",
       "KUNDE": "Elero GmbH",
       "EVENT": "Schulung",
       "TEILNEHMER": "15",
@@ -853,9 +853,9 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "23.01.25",
-      "VON": "08:00",
-      "BIS": "17:00",
+      "DATUM": "23.01.2025",
+      "VON": "08:00:00",
+      "BIS": "17:00:00",
       "KUNDE": "Elero GmbH",
       "EVENT": "Schulung",
       "TEILNEHMER": "15",
@@ -865,9 +865,9 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "28.01.25",
-      "VON": "11:00",
-      "BIS": "18:00",
+      "DATUM": "28.01.2025",
+      "VON": "11:00:00",
+      "BIS": "18:00:00",
       "KUNDE": "Hydroisotop GmbH ",
       "EVENT": "Schulung",
       "TEILNEHMER": "6",
@@ -877,9 +877,9 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "29.01.25",
-      "VON": "08:00",
-      "BIS": "18:00",
+      "DATUM": "29.01.2025",
+      "VON": "08:00:00",
+      "BIS": "18:00:00",
       "KUNDE": "Syngenity",
       "EVENT": "Schulung",
       "TEILNEHMER": "20",
@@ -889,9 +889,9 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "29.01.25",
-      "VON": "17:30",
-      "BIS": "20:00",
+      "DATUM": "29.01.2025",
+      "VON": "17:30:00",
+      "BIS": "20:00:00",
       "KUNDE": "Praxis für Kardiologie und Innere Medizin   ",
       "EVENT": "Veranstaltung",
       "TEILNEHMER": "35",
@@ -901,9 +901,9 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "30.01.25",
-      "VON": "08:00",
-      "BIS": "18:00",
+      "DATUM": "30.01.2025",
+      "VON": "08:00:00",
+      "BIS": "18:00:00",
       "KUNDE": "Syngenity",
       "EVENT": "Schulung",
       "TEILNEHMER": "20",
@@ -913,9 +913,9 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "30.01.25",
-      "VON": "08:00",
-      "BIS": "18:00",
+      "DATUM": "30.01.2025",
+      "VON": "08:00:00",
+      "BIS": "18:00:00",
       "KUNDE": "WTS",
       "EVENT": "Schulung",
       "TEILNEHMER": "12",
@@ -925,9 +925,9 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "31.01.25",
-      "VON": "08:00",
-      "BIS": "18:00",
+      "DATUM": "31.01.2025",
+      "VON": "08:00:00",
+      "BIS": "18:00:00",
       "KUNDE": "VE Plan",
       "EVENT": "Schulung",
       "TEILNEHMER": "30",
@@ -937,9 +937,9 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "31.01.25",
-      "VON": "08:00",
-      "BIS": "18:00",
+      "DATUM": "31.01.2025",
+      "VON": "08:00:00",
+      "BIS": "18:00:00",
       "KUNDE": "WTS",
       "EVENT": "Schulung",
       "TEILNEHMER": "12",
@@ -949,9 +949,9 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "01.02.25",
-      "VON": "08:00",
-      "BIS": "16:00",
+      "DATUM": "01.02.2025",
+      "VON": "08:00:00",
+      "BIS": "16:00:00",
       "KUNDE": "Hipp",
       "EVENT": "Schulung",
       "TEILNEHMER": "14",
@@ -961,9 +961,9 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "03.02.25",
-      "VON": "11:00",
-      "BIS": "19:00",
+      "DATUM": "03.02.2025",
+      "VON": "11:00:00",
+      "BIS": "19:00:00",
       "KUNDE": "BGN",
       "EVENT": "Schulung",
       "TEILNEHMER": "9",
@@ -973,9 +973,9 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "04.02.25",
-      "VON": "11:00",
-      "BIS": "19:00",
+      "DATUM": "04.02.2025",
+      "VON": "11:00:00",
+      "BIS": "19:00:00",
       "KUNDE": "BGN",
       "EVENT": "Schulung",
       "TEILNEHMER": "9",
@@ -985,9 +985,9 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "04.02.25",
-      "VON": "08:00",
-      "BIS": "19:00",
+      "DATUM": "04.02.2025",
+      "VON": "08:00:00",
+      "BIS": "19:00:00",
       "KUNDE": "Volksbank Raiffeisenbank",
       "EVENT": "Schulung",
       "TEILNEHMER": "15",
@@ -997,9 +997,9 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "05.02.25",
-      "VON": "08:00",
-      "BIS": "19:00",
+      "DATUM": "05.02.2025",
+      "VON": "08:00:00",
+      "BIS": "19:00:00",
       "KUNDE": "Volksbank Raiffeisenbank",
       "EVENT": "Schulung",
       "TEILNEHMER": "15",
@@ -1009,8 +1009,8 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "05.02.25",
-      "VON": "18:00",
+      "DATUM": "05.02.2025",
+      "VON": "18:00:00",
       "BIS": "",
       "KUNDE": "Eigentümerversammlung",
       "EVENT": "",
@@ -1021,9 +1021,9 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "06.02.25",
-      "VON": "18:00",
-      "BIS": "21:00",
+      "DATUM": "06.02.2025",
+      "VON": "18:00:00",
+      "BIS": "21:00:00",
       "KUNDE": "Pro Wirtschaft",
       "EVENT": "",
       "TEILNEHMER": "30-40",
@@ -1033,9 +1033,9 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "13.02.25",
-      "VON": "08:00",
-      "BIS": "18:00",
+      "DATUM": "13.02.2025",
+      "VON": "08:00:00",
+      "BIS": "18:00:00",
       "KUNDE": "Bauer AG ",
       "EVENT": "",
       "TEILNEHMER": "16",
@@ -1045,9 +1045,9 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "14.02.25",
-      "VON": "17:00",
-      "BIS": "22:30",
+      "DATUM": "14.02.2025",
+      "VON": "17:00:00",
+      "BIS": "22:30:00",
       "KUNDE": "Abendessen  dinner",
       "EVENT": "",
       "TEILNEHMER": "",
@@ -1057,8 +1057,8 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "20.02.25",
-      "VON": "18:00",
+      "DATUM": "20.02.2025",
+      "VON": "18:00:00",
       "BIS": "",
       "KUNDE": "aciso dinner",
       "EVENT": "",
@@ -1069,7 +1069,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "21.02.25",
+      "DATUM": "21.02.2025",
       "VON": "",
       "BIS": "",
       "KUNDE": "aciso",
@@ -1081,7 +1081,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "21.02.25",
+      "DATUM": "21.02.2025",
       "VON": "",
       "BIS": "",
       "KUNDE": "aciso",
@@ -1093,7 +1093,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "21.02.25",
+      "DATUM": "21.02.2025",
       "VON": "",
       "BIS": "",
       "KUNDE": "aciso",
@@ -1105,7 +1105,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "24.02.25",
+      "DATUM": "24.02.2025",
       "VON": "",
       "BIS": "",
       "KUNDE": "MAWA",
@@ -1117,7 +1117,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "25.02.25",
+      "DATUM": "25.02.2025",
       "VON": "",
       "BIS": "",
       "KUNDE": "Cronbank",
@@ -1129,7 +1129,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "25.02.25",
+      "DATUM": "25.02.2025",
       "VON": "",
       "BIS": "",
       "KUNDE": "Metafinanz",
@@ -1141,7 +1141,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "26.02.25",
+      "DATUM": "26.02.2025",
       "VON": "",
       "BIS": "",
       "KUNDE": "Metafinanz",
@@ -1153,7 +1153,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "26.02.25",
+      "DATUM": "26.02.2025",
       "VON": "",
       "BIS": "",
       "KUNDE": "STIGA",
@@ -1165,7 +1165,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "08.03.25",
+      "DATUM": "08.03.2025",
       "VON": "",
       "BIS": "",
       "KUNDE": "Hipp",
@@ -1177,7 +1177,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "08.03.25",
+      "DATUM": "08.03.2025",
       "VON": "",
       "BIS": "",
       "KUNDE": "Mice Portal",
@@ -1189,7 +1189,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "13.03.25",
+      "DATUM": "13.03.2025",
       "VON": "",
       "BIS": "",
       "KUNDE": "BGN",
@@ -1201,7 +1201,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "13.03.25",
+      "DATUM": "13.03.2025",
       "VON": "",
       "BIS": "",
       "KUNDE": "Baustoff Recycling Bayern e.V München",
@@ -1213,7 +1213,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "14.03.25",
+      "DATUM": "14.03.2025",
       "VON": "",
       "BIS": "",
       "KUNDE": "BRK",
@@ -1225,7 +1225,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "15.03.25",
+      "DATUM": "15.03.2025",
       "VON": "",
       "BIS": "",
       "KUNDE": "BRK",
@@ -1237,7 +1237,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "16.03.25",
+      "DATUM": "16.03.2025",
       "VON": "",
       "BIS": "",
       "KUNDE": "BRK",
@@ -1249,7 +1249,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "19.03.25",
+      "DATUM": "19.03.2025",
       "VON": "",
       "BIS": "",
       "KUNDE": "Maier Spielplatzgeräte",
@@ -1261,7 +1261,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "21.03.25",
+      "DATUM": "21.03.2025",
       "VON": "",
       "BIS": "",
       "KUNDE": "Nadler Straßentechnik",
@@ -1273,7 +1273,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "24.03.25",
+      "DATUM": "24.03.2025",
       "VON": "",
       "BIS": "",
       "KUNDE": "AWO",
@@ -1285,7 +1285,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "24.03.25",
+      "DATUM": "24.03.2025",
       "VON": "",
       "BIS": "",
       "KUNDE": "Bauer AG ",
@@ -1297,7 +1297,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "27.03.25",
+      "DATUM": "27.03.2025",
       "VON": "",
       "BIS": "",
       "KUNDE": "Continentale",
@@ -1309,7 +1309,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "29.03.25",
+      "DATUM": "29.03.2025",
       "VON": "",
       "BIS": "",
       "KUNDE": "Wasserwacht",
@@ -1321,7 +1321,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "29.03.25",
+      "DATUM": "29.03.2025",
       "VON": "",
       "BIS": "",
       "KUNDE": "BGN",
@@ -1333,7 +1333,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "01.04.25",
+      "DATUM": "01.04.2025",
       "VON": "",
       "BIS": "",
       "KUNDE": "BGN",
@@ -1345,7 +1345,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "01.04.25",
+      "DATUM": "01.04.2025",
       "VON": "",
       "BIS": "",
       "KUNDE": "AWO BEZIRKSVERBAND OBERBAYERN ",
@@ -1357,7 +1357,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "01.04.25",
+      "DATUM": "01.04.2025",
       "VON": "",
       "BIS": "",
       "KUNDE": "BGN",
@@ -1369,7 +1369,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "02.04.25",
+      "DATUM": "02.04.2025",
       "VON": "",
       "BIS": "",
       "KUNDE": "BGN",
@@ -1381,7 +1381,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "02.04.25",
+      "DATUM": "02.04.2025",
       "VON": "",
       "BIS": "",
       "KUNDE": "WTS",
@@ -1393,7 +1393,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "02.04.25",
+      "DATUM": "02.04.2025",
       "VON": "",
       "BIS": "",
       "KUNDE": "AWO BEZIRKSVERBAND OBERBAYERN ",
@@ -1405,7 +1405,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "02.04.25",
+      "DATUM": "02.04.2025",
       "VON": "",
       "BIS": "",
       "KUNDE": "WTS",
@@ -1417,7 +1417,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "03.04.25",
+      "DATUM": "03.04.2025",
       "VON": "",
       "BIS": "",
       "KUNDE": "WTS",
@@ -1429,7 +1429,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "03.04.25",
+      "DATUM": "03.04.2025",
       "VON": "",
       "BIS": "",
       "KUNDE": "WTS",
@@ -1441,7 +1441,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "04.04.25",
+      "DATUM": "04.04.2025",
       "VON": "",
       "BIS": "",
       "KUNDE": "WTS",
@@ -1453,7 +1453,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "04.04.25",
+      "DATUM": "04.04.2025",
       "VON": "",
       "BIS": "",
       "KUNDE": "WTS",
@@ -1465,7 +1465,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "04.04.25",
+      "DATUM": "04.04.2025",
       "VON": "",
       "BIS": "",
       "KUNDE": "Bachner Elektro",
@@ -1477,7 +1477,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "08.04.25",
+      "DATUM": "08.04.2025",
       "VON": "",
       "BIS": "",
       "KUNDE": "Wüstenrot",
@@ -1489,7 +1489,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "08.04.25",
+      "DATUM": "08.04.2025",
       "VON": "",
       "BIS": "",
       "KUNDE": "Rohde & Schwarz",
@@ -1501,7 +1501,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "09.04.25",
+      "DATUM": "09.04.2025",
       "VON": "",
       "BIS": "",
       "KUNDE": "Rohde & Schwarz",
@@ -1513,7 +1513,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "10.04.25",
+      "DATUM": "10.04.2025",
       "VON": "",
       "BIS": "",
       "KUNDE": "Rohde & Schwarz",
@@ -1525,9 +1525,9 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "07.04.25",
-      "VON": "18:00",
-      "BIS": "21:00",
+      "DATUM": "07.04.2025",
+      "VON": "18:00:00",
+      "BIS": "21:00:00",
       "KUNDE": "Abendessen á la carte",
       "EVENT": "BITTE RESERVIEREN!",
       "TEILNEHMER": "",
@@ -1537,9 +1537,9 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "08.04.25",
-      "VON": "18:00",
-      "BIS": "21:00",
+      "DATUM": "08.04.2025",
+      "VON": "18:00:00",
+      "BIS": "21:00:00",
       "KUNDE": "Abendessen á la carte",
       "EVENT": "BITTE RESERVIEREN!",
       "TEILNEHMER": "",
@@ -1549,9 +1549,9 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "09.04.25",
-      "VON": "18:00",
-      "BIS": "21:00",
+      "DATUM": "09.04.2025",
+      "VON": "18:00:00",
+      "BIS": "21:00:00",
       "KUNDE": "Abendessen á la carte",
       "EVENT": "BITTE RESERVIEREN!",
       "TEILNEHMER": "",
@@ -1561,9 +1561,9 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "10.04.25",
-      "VON": "18:00",
-      "BIS": "21:00",
+      "DATUM": "10.04.2025",
+      "VON": "18:00:00",
+      "BIS": "21:00:00",
       "KUNDE": "Abendessen á la carte",
       "EVENT": "BITTE RESERVIEREN!",
       "TEILNEHMER": "",
@@ -1573,9 +1573,9 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "29.04.25",
-      "VON": "09:00",
-      "BIS": "18:00",
+      "DATUM": "29.04.2025",
+      "VON": "09:00:00",
+      "BIS": "18:00:00",
       "KUNDE": "AWO",
       "EVENT": "",
       "TEILNEHMER": "13",
@@ -1585,7 +1585,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "29.04.25",
+      "DATUM": "29.04.2025",
       "VON": "",
       "BIS": "",
       "KUNDE": "Wüstenrot",
@@ -1597,7 +1597,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "07.05.25",
+      "DATUM": "07.05.2025",
       "VON": "",
       "BIS": "",
       "KUNDE": "Baustoffrecycling",
@@ -1609,7 +1609,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "07.05.25",
+      "DATUM": "07.05.2025",
       "VON": "",
       "BIS": "",
       "KUNDE": "SAXSTank",
@@ -1621,7 +1621,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "07.05.25",
+      "DATUM": "07.05.2025",
       "VON": "",
       "BIS": "",
       "KUNDE": "VALANTIC",
@@ -1633,15 +1633,27 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "09.05.25",
-      "VON": "11:00",
-      "BIS": "17:00",
+      "DATUM": "09.05.2025",
+      "VON": "11:00:00",
+      "BIS": "17:00:00",
       "KUNDE": "CONDAT Projekt GmbH",
       "EVENT": "",
       "TEILNEHMER": "20",
       "TAGUNGSRAUM": "ecoCentrum T90",
       "RAUMHINWEIS": "",
       "BILD": "T90.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "12.05.2025",
+      "VON": "08:00:00",
+      "BIS": "17:00:00",
+      "KUNDE": "Rolandberger",
+      "EVENT": "",
+      "TEILNEHMER": "20",
+      "TAGUNGSRAUM": "ecoForum T120",
+      "RAUMHINWEIS": "",
+      "BILD": "T120.jpeg",
       "BEMERKUNG": ""
     }
   ]
