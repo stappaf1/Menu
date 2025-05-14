@@ -23,6 +23,18 @@
       "RAUMHINWEIS": "zuzätzlich im Freiraum",
       "BILD": "T100.jpeg",
       "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "14.05.25",
+      "VON": "09.00",
+      "BIS": "17.30",
+      "KUNDE": "Lidl ",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "Weitblick T100",
+      "RAUMHINWEIS": "zusätzlich Freiraum",
+      "BILD": "T100.jpeg",
+      "BEMERKUNG": ""
     }
   ]
 }
