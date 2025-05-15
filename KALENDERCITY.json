@@ -35,6 +35,30 @@
       "RAUMHINWEIS": "zusätzlich Freiraum",
       "BILD": "T100.jpeg",
       "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "15.05.25",
+      "VON": "09.00",
+      "BIS": "17.30",
+      "KUNDE": "Lidl ",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "großerFreiraum T60",
+      "RAUMHINWEIS": "",
+      "BILD": "T60.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "15.05.25",
+      "VON": "13.30",
+      "BIS": "18.00",
+      "KUNDE": "Wipler Plan",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "3",
+      "TAGUNGSRAUM": "Weitblick T100",
+      "RAUMHINWEIS": "",
+      "BILD": "T100.jpeg",
+      "BEMERKUNG": ""
     }
   ]
 }
