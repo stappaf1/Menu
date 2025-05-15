@@ -62,14 +62,38 @@
     },
     {
       "DATUM": "15.05.25",
-      "VON": "",
-      "BIS": "",
-      "KUNDE": "",
+      "VON": "08:00",
+      "BIS": "17:00",
+      "KUNDE": "RolandBerger",
       "EVENT": "",
-      "TEILNEHMER": "",
-      "TAGUNGSRAUM": "",
+      "TEILNEHMER": "20",
+      "TAGUNGSRAUM": "ecoCentrum T90",
       "RAUMHINWEIS": "",
-      "BILD": "",
+      "BILD": "T90.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "15.05.25",
+      "VON": "08:00",
+      "BIS": "17:00",
+      "KUNDE": "RolandBerger",
+      "EVENT": "",
+      "TEILNEHMER": "20",
+      "TAGUNGSRAUM": "ecoForum T120",
+      "RAUMHINWEIS": "",
+      "BILD": "T120.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "15.05.25",
+      "VON": "11:00",
+      "BIS": "18:00",
+      "KUNDE": "Check 24",
+      "EVENT": "",
+      "TEILNEHMER": "25",
+      "TAGUNGSRAUM": "ecoPlenum T200",
+      "RAUMHINWEIS": "",
+      "BILD": "T200-Business.jpeg",
       "BEMERKUNG": ""
     }
   ]
