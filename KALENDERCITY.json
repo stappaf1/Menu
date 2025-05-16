@@ -59,6 +59,18 @@
       "RAUMHINWEIS": "",
       "BILD": "T100.jpeg",
       "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "16.05.25",
+      "VON": "7.30",
+      "BIS": "17.00",
+      "KUNDE": "Bachner Elektro",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "17",
+      "TAGUNGSRAUM": "Weitblick T100",
+      "RAUMHINWEIS": "",
+      "BILD": "T100.jpeg",
+      "BEMERKUNG": ""
     }
   ]
 }
