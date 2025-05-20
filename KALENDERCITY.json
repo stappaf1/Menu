@@ -71,6 +71,30 @@
       "RAUMHINWEIS": "",
       "BILD": "T100.jpeg",
       "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "20.05.25",
+      "VON": "13:00",
+      "BIS": "18:00",
+      "KUNDE": "Syngenity",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "17",
+      "TAGUNGSRAUM": "Weitblick T100",
+      "RAUMHINWEIS": "",
+      "BILD": "T100.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "20.05.25",
+      "VON": "15:00",
+      "BIS": "16:00",
+      "KUNDE": "Santis",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "15",
+      "TAGUNGSRAUM": "großerFreiraum T60",
+      "RAUMHINWEIS": "",
+      "BILD": "T60.jpeg",
+      "BEMERKUNG": ""
     }
   ]
 }
