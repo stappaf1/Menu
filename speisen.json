@@ -2,31 +2,31 @@
   "speisen": [
     {
       "Kategorie": "Vorspeisen",
-      "Name": "Rauchpaprikasuppe mit Speckwürfel und Knoblauch-Crostini",
+      "Name": "Rauchpaprikasuppe",
       "Beschreibung": " ",
       "Menge": " ",
       "Preis": " ",
       "": ""
     },
     {
-      "Kategorie": "Vorspeisen",
-      "Name": "Rinderkraftbrühe mit Spätzlestreifen und Lauch",
+      "Kategorie": "",
+      "Name": "",
       "Beschreibung": " ",
       "Menge": " ",
       "Preis": " ",
       "": ""
     },
     {
-      "Kategorie": "Vorspeisen",
-      "Name": "Spinat-Erdnusssalat mit Sesamdressing und kleinem Tofu-Spieß",
+      "Kategorie": "",
+      "Name": "",
       "Beschreibung": " ",
       "Menge": " ",
       "Preis": " ",
       "": ""
     },
     {
-      "Kategorie": "Vorspeisen",
-      "Name": "Erdbeer - Spargel - Cocktail mit Himbeervinaigrette",
+      "Kategorie": "",
+      "Name": "",
       "Beschreibung": " ",
       "Menge": " ",
       "Preis": " ",
@@ -34,7 +34,7 @@
     },
     {
       "Kategorie": "Hauptspeise ",
-      "Name": "Großer gemischter Salat mit Backhendlstreifen",
+      "Name": "Zwiebelrostbraten von der Ochsenlende mit Bratkartoffeln und Speckbohnen",
       "Beschreibung": "",
       "Menge": "",
       "Preis": "",
@@ -42,7 +42,7 @@
     },
     {
       "Kategorie": "Hauptspeise ",
-      "Name": "Linguine mit Bärlauch, Spargel und Austernpilze",
+      "Name": "Gebtranenes Lachsfilet auf Erbsenrisotto und geschmorter Tomate",
       "Beschreibung": "",
       "Menge": "",
       "Preis": "",
@@ -50,15 +50,15 @@
     },
     {
       "Kategorie": "Hauptspeise ",
-      "Name": "Roastbeefsteak mit neuen Kartoffeln und gegrilltem grünen Spargel",
+      "Name": "Linguine mit gebratenen Waldpilzen in Pfifferlingssahne ",
       "Beschreibung": "",
       "Menge": "",
       "Preis": "",
       "": ""
     },
     {
-      "Kategorie": "Hauptspeise ",
-      "Name": "Lachsfilet auf grüner Risoni-Pasta",
+      "Kategorie": "",
+      "Name": "",
       "Beschreibung": "",
       "Menge": "",
       "Preis": "",
@@ -66,7 +66,7 @@
     },
     {
       "Kategorie": "Dessert",
-      "Name": "Kaiserschmarrn ",
+      "Name": "Hausgemachter Topfenstrudel",
       "Beschreibung": "",
       "Menge": "",
       "Preis": "",
