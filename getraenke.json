@@ -4,42 +4,42 @@
       "Kategorie": "Biere",
       "Name": "Fassbier | Helles | Weißbier",
       "Menge": "0.5",
-      "Preis": 4,
+      "Preis": "4.00",
       " ": " "
     },
     {
       "Kategorie": "Biere",
       "Name": "Flaschenbier | Bio-Helles | Dunkles",
       "Menge": "0.5",
-      "Preis": "4.50 €",
+      "Preis": "4.50",
       " ": " "
     },
     {
       "Kategorie": "Biere",
       "Name": "Flaschenbiere klein | Pils | Helles",
       "Menge": "0.33",
-      "Preis": "3.50€",
+      "Preis": "3.50",
       " ": " "
     },
     {
       "Kategorie": "Biere",
       "Name": "Alkoholfreies Bier | Helles | Weißbier",
       "Menge": "0.5",
-      "Preis": "4.00€",
+      "Preis": "4.00",
       " ": " "
     },
     {
       "Kategorie": "Alkoholfreies",
       "Name": "Alea – Tafelwasser | Still | Spritzig",
       "Menge": "0.7",
-      "Preis": "6.50€",
+      "Preis": "6.50",
       " ": " "
     },
     {
       "Kategorie": "Alkoholfreies",
       "Name": "Ließchen Müller Schorle | Apfel | Rhabarber",
       "Menge": "0.4",
-      "Preis": 4,
+      "Preis": "4.00",
       " ": "  "
     },
     {
