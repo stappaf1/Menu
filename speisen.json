@@ -1,14 +1,6 @@
 {
   "speisen": [
     {
-      "Kategorie": "Vorspeisen",
-      "Name": "Rauchpaprikasuppe",
-      "Beschreibung": " ",
-      "Menge": " ",
-      "Preis": " ",
-      "": ""
-    },
-    {
       "Kategorie": "",
       "Name": "",
       "Beschreibung": " ",
@@ -33,24 +25,16 @@
       "": ""
     },
     {
-      "Kategorie": "Hauptspeise ",
-      "Name": "Zwiebelrostbraten von der Ochsenlende mit Bratkartoffeln und Speckbohnen",
-      "Beschreibung": "",
-      "Menge": "",
-      "Preis": "",
+      "Kategorie": "",
+      "Name": "",
+      "Beschreibung": " ",
+      "Menge": " ",
+      "Preis": " ",
       "": ""
     },
     {
-      "Kategorie": "Hauptspeise ",
-      "Name": "Gebtranenes Lachsfilet auf Erbsenrisotto und geschmorter Tomate",
-      "Beschreibung": "",
-      "Menge": "",
-      "Preis": "",
-      "": ""
-    },
-    {
-      "Kategorie": "Hauptspeise ",
-      "Name": "Linguine mit gebratenen Waldpilzen in Pfifferlingssahne ",
+      "Kategorie": "",
+      "Name": "",
       "Beschreibung": "",
       "Menge": "",
       "Preis": "",
@@ -65,8 +49,24 @@
       "": ""
     },
     {
-      "Kategorie": "Dessert",
-      "Name": "Hausgemachter Topfenstrudel",
+      "Kategorie": "",
+      "Name": "",
+      "Beschreibung": "",
+      "Menge": "",
+      "Preis": "",
+      "": ""
+    },
+    {
+      "Kategorie": "",
+      "Name": "",
+      "Beschreibung": "",
+      "Menge": "",
+      "Preis": "",
+      "": ""
+    },
+    {
+      "Kategorie": "",
+      "Name": "",
       "Beschreibung": "",
       "Menge": "",
       "Preis": "",
