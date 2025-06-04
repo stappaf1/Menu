@@ -121,84 +121,6 @@
       "Preis": "12.50"
     },
     {
-      "Kategorie": "Heißgetränke Kaffee",
-      "Name": "Café Crema",
-      "Menge": "Tasse",
-      "Preis": "3.50"
-    },
-    {
-      "Kategorie": "Heißgetränke Kaffee",
-      "Name": "Cappuccino",
-      "Menge": "Tasse",
-      "Preis": "3.50"
-    },
-    {
-      "Kategorie": "Heißgetränke Kaffee",
-      "Name": "Doppio Espresso",
-      "Menge": "Tasse",
-      "Preis": "3.50"
-    },
-    {
-      "Kategorie": "Heißgetränke Kaffee",
-      "Name": "Espresso",
-      "Menge": "Tasse",
-      "Preis": "2.00"
-    },
-    {
-      "Kategorie": "Heißgetränke Kaffee",
-      "Name": "Latte Macchiato",
-      "Menge": "Tasse",
-      "Preis": "3.50"
-    },
-    {
-      "Kategorie": "Heißgetränke Tee",
-      "Name": "Annemarie - Früchtetee",
-      "Menge": "Tasse",
-      "Preis": "3.50"
-    },
-    {
-      "Kategorie": "Heißgetränke Tee",
-      "Name": "Bongani - Rooibos Vanille",
-      "Menge": "Tasse",
-      "Preis": "3.50"
-    },
-    {
-      "Kategorie": "Heißgetränke Tee",
-      "Name": "Hayato - Grüntee",
-      "Menge": "Tasse",
-      "Preis": "3.50"
-    },
-    {
-      "Kategorie": "Heißgetränke Tee",
-      "Name": "Jinjin - Grüntee",
-      "Menge": "Tasse",
-      "Preis": "3.50"
-    },
-    {
-      "Kategorie": "Heißgetränke Tee",
-      "Name": "Namira - Pfefferminze",
-      "Menge": "Tasse",
-      "Preis": "3.50"
-    },
-    {
-      "Kategorie": "Heißgetränke Tee",
-      "Name": "Nandil - Schwarzer Tee",
-      "Menge": "Tasse",
-      "Preis": "3.50"
-    },
-    {
-      "Kategorie": "Heißgetränke Tee",
-      "Name": "Sarala - Chai",
-      "Menge": "Tasse",
-      "Preis": "3.50"
-    },
-    {
-      "Kategorie": "Heißgetränke Tee",
-      "Name": "Traudl - Almkräuter",
-      "Menge": "Tasse",
-      "Preis": "3.50"
-    },
-    {
       "Kategorie": "Longdrink",
       "Name": "Belzazar & Tonic - Belzazar Vermuth - Goldberg Tonic",
       "Menge": "Glas",
@@ -335,6 +257,84 @@
       "Name": "Markus Molitor - Riesling - Mosel - trocken",
       "Menge": "0.7",
       "Preis": "33.00"
+    },
+    {
+      "Kategorie": "Heißgetränke Kaffee",
+      "Name": "Café Crema",
+      "Menge": "Tasse",
+      "Preis": "3.50"
+    },
+    {
+      "Kategorie": "Heißgetränke Kaffee",
+      "Name": "Cappuccino",
+      "Menge": "Tasse",
+      "Preis": "3.50"
+    },
+    {
+      "Kategorie": "Heißgetränke Kaffee",
+      "Name": "Doppio Espresso",
+      "Menge": "Tasse",
+      "Preis": "3.50"
+    },
+    {
+      "Kategorie": "Heißgetränke Kaffee",
+      "Name": "Espresso",
+      "Menge": "Tasse",
+      "Preis": "2.00"
+    },
+    {
+      "Kategorie": "Heißgetränke Kaffee",
+      "Name": "Latte Macchiato",
+      "Menge": "Tasse",
+      "Preis": "3.50"
+    },
+    {
+      "Kategorie": "Heißgetränke Tee",
+      "Name": "Annemarie - Früchtetee",
+      "Menge": "Tasse",
+      "Preis": "3.50"
+    },
+    {
+      "Kategorie": "Heißgetränke Tee",
+      "Name": "Bongani - Rooibos Vanille",
+      "Menge": "Tasse",
+      "Preis": "3.50"
+    },
+    {
+      "Kategorie": "Heißgetränke Tee",
+      "Name": "Hayato - Grüntee",
+      "Menge": "Tasse",
+      "Preis": "3.50"
+    },
+    {
+      "Kategorie": "Heißgetränke Tee",
+      "Name": "Jinjin - Grüntee",
+      "Menge": "Tasse",
+      "Preis": "3.50"
+    },
+    {
+      "Kategorie": "Heißgetränke Tee",
+      "Name": "Namira - Pfefferminze",
+      "Menge": "Tasse",
+      "Preis": "3.50"
+    },
+    {
+      "Kategorie": "Heißgetränke Tee",
+      "Name": "Nandil - Schwarzer Tee",
+      "Menge": "Tasse",
+      "Preis": "3.50"
+    },
+    {
+      "Kategorie": "Heißgetränke Tee",
+      "Name": "Sarala - Chai",
+      "Menge": "Tasse",
+      "Preis": "3.50"
+    },
+    {
+      "Kategorie": "Heißgetränke Tee",
+      "Name": "Traudl - Almkräuter",
+      "Menge": "Tasse",
+      "Preis": "3.50"
     }
   ]
 }
