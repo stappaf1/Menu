@@ -66,64 +66,64 @@
     {
       "Kategorie": "Rotwein",
       "Name": "Franz Waßmer I Spätburgunder I Baden I trocken",
-      "Menge": "0.2 I 0.7",
-      "Preis": "7.50 I 33.00",
+      "Menge": "0.7",
+      "Preis": "33.00",
       " ": " "
     },
     {
       "Kategorie": "Rotwein",
       "Name": "Fantini I Primitivo I Puglia I trocken ",
-      "Menge": "0.2 I 0.7",
-      "Preis": "8.50 I 36.00",
+      "Menge": "0.7",
+      "Preis": "36.00",
       " ": " "
     },
     {
       "Kategorie": "Rosé",
       "Name": "Ca dei Frati I Rosa i Frati I Gardasee",
-      "Menge": "0.2 I 0.7",
-      "Preis": "8.50 I 36.00",
+      "Menge": "0.7",
+      "Preis": "36.00",
       " ": "  "
     },
     {
       "Kategorie": "Rosé",
       "Name": "La Santonniére I Rosé I Provence",
-      "Menge": "0.2 I 0.7",
-      "Preis": "7.50 I 33.00",
+      "Menge": "0.7",
+      "Preis": "33.00",
       " ": " "
     },
     {
       "Kategorie": "Weißwein",
       "Name": "Cá Maiol I Lugana I Gardasee I trocken",
-      "Menge": "0.2 I 0.7",
-      "Preis": "7.50 I 33.00",
+      "Menge": "0.7",
+      "Preis": "33.00",
       " ": " "
     },
     {
       "Kategorie": "Weißwein",
       "Name": "Chardonnay I Bio I Frankreich I trocken",
-      "Menge": "0.2 I 0.7",
-      "Preis": "6.50 I 31.00",
+      "Menge": "0.7",
+      "Preis": "31.00",
       " ": " "
     },
     {
       "Kategorie": "Weißwein",
       "Name": "Markus Molitor I Riesling I Mosel I trocken",
-      "Menge": "0.2 I 0.7",
-      "Preis": "7.50 I 33.00",
+      "Menge": "0.7",
+      "Preis": "33.00",
       " ": " "
     },
     {
       "Kategorie": "Schaumwein",
       "Name": "Valdo I Biologico Brut I Prosecco D.O.C I Valdobbiadene I Italien",
-      "Menge": "0.1 I 0.7",
-      "Preis": "8.50 I 36.00",
+      "Menge": "0.7",
+      "Preis": "36.00",
       " ": " "
     },
     {
       "Kategorie": "Schaumwein",
       "Name": "Domaines Vinsmoselle I Crémant I Mosel I Luxemburg ",
-      "Menge": "0.1 I 0.7",
-      "Preis": "7.50 I 33.00",
+      "Menge": "0.7",
+      "Preis": "33.00",
       " ": " "
     },
     {
@@ -328,6 +328,69 @@
       "Menge": "Glas",
       "Preis": "10.50",
       " ": ""
+    },
+    {
+      "Kategorie": "Rotwein",
+      "Name": "Franz Waßmer I Spätburgunder I Baden I trocken",
+      "Menge": "0.2",
+      "Preis": "7.50",
+      " ": " "
+    },
+    {
+      "Kategorie": "Rotwein",
+      "Name": "Fantini I Primitivo I Puglia I trocken ",
+      "Menge": "0.2",
+      "Preis": "8.50",
+      " ": " "
+    },
+    {
+      "Kategorie": "Rosé",
+      "Name": "Ca dei Frati I Rosa i Frati I Gardasee",
+      "Menge": "0.2",
+      "Preis": "8.50",
+      " ": "  "
+    },
+    {
+      "Kategorie": "Rosé",
+      "Name": "La Santonniére I Rosé I Provence",
+      "Menge": "0.2",
+      "Preis": "7.50",
+      " ": " "
+    },
+    {
+      "Kategorie": "Weißwein",
+      "Name": "Cá Maiol I Lugana I Gardasee I trocken",
+      "Menge": "0.2",
+      "Preis": "7.50",
+      " ": " "
+    },
+    {
+      "Kategorie": "Weißwein",
+      "Name": "Chardonnay I Bio I Frankreich I trocken",
+      "Menge": "0.2",
+      "Preis": "6.50",
+      " ": " "
+    },
+    {
+      "Kategorie": "Weißwein",
+      "Name": "Markus Molitor I Riesling I Mosel I trocken",
+      "Menge": "0.2",
+      "Preis": "7.50",
+      " ": " "
+    },
+    {
+      "Kategorie": "Schaumwein",
+      "Name": "Valdo I Biologico Brut I Prosecco D.O.C I Valdobbiadene I Italien",
+      "Menge": "0.1",
+      "Preis": "8.50",
+      " ": " "
+    },
+    {
+      "Kategorie": "Schaumwein",
+      "Name": "Domaines Vinsmoselle I Crémant I Mosel I Luxemburg ",
+      "Menge": "0.1",
+      "Preis": "7.50",
+      " ": " "
     }
   ]
 }
