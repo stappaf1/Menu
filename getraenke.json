@@ -1,6 +1,72 @@
 {
   "getraenke": [
     {
+      "Kategorie": "Alkoholfreies",
+      "Name": "Alea – Tafelwasser - Still - Spritzig",
+      "Menge": "0.7",
+      "Preis": "6.50"
+    },
+    {
+      "Kategorie": "Alkoholfreies",
+      "Name": "Coca Cola - Coca Cola Zero",
+      "Menge": "0.4",
+      "Preis": "4.00"
+    },
+    {
+      "Kategorie": "Alkoholfreies",
+      "Name": "Ließchen Müller Schorle - Apfel - Rhabarber",
+      "Menge": "0.4",
+      "Preis": "4.00"
+    },
+    {
+      "Kategorie": "Alkoholfreies",
+      "Name": "Rauch Saftschorle - Johannisbeere - Maracuja",
+      "Menge": "0.4",
+      "Preis": "4.00"
+    },
+    {
+      "Kategorie": "Alkoholfreies",
+      "Name": "Spezi - Gelbes Limo - Weißes Limo",
+      "Menge": "0.4",
+      "Preis": "4.00"
+    },
+    {
+      "Kategorie": "Aperitifs",
+      "Name": "Aperol Spritz - Aperol - Prosecco - Soda",
+      "Menge": "Glas",
+      "Preis": "7.90"
+    },
+    {
+      "Kategorie": "Aperitifs",
+      "Name": "French 75 - The Duke Bio Gin - Zitrone - Crémant",
+      "Menge": "Glas",
+      "Preis": "9.90"
+    },
+    {
+      "Kategorie": "Aperitifs",
+      "Name": "Kir Royal - Crémant - Crème de Cassis",
+      "Menge": "Glas",
+      "Preis": "9.50"
+    },
+    {
+      "Kategorie": "Aperitifs",
+      "Name": "Lillet Wildberry - Campari, roter Wermut, Soda",
+      "Menge": "Glas",
+      "Preis": "7.90"
+    },
+    {
+      "Kategorie": "Aperitifs",
+      "Name": "Pampelle Spritz - Pampelle - Prosecco - Soda",
+      "Menge": "Glas",
+      "Preis": "7.90"
+    },
+    {
+      "Kategorie": "Biere",
+      "Name": "Alkoholfreies Bier - Helles - Weißbier",
+      "Menge": "0.5",
+      "Preis": "4.00"
+    },
+    {
       "Kategorie": "Biere",
       "Name": "Fassbier -- Helles - Weißbier",
       "Menge": "0.5",
@@ -19,94 +85,46 @@
       "Preis": "3.50"
     },
     {
-      "Kategorie": "Biere",
-      "Name": "Alkoholfreies Bier - Helles - Weißbier",
-      "Menge": "0.5",
-      "Preis": "4.00"
+      "Kategorie": "Cocktails",
+      "Name": "Espresso Martini - Absolut Wodka - Kahlúa - Espresso",
+      "Menge": "Glas",
+      "Preis": "10.50"
     },
     {
-      "Kategorie": "Alkoholfreies",
-      "Name": "Alea – Tafelwasser - Still - Spritzig",
-      "Menge": "0.7",
-      "Preis": "6.50"
+      "Kategorie": "Cocktails",
+      "Name": "Negroni - Bombay Sapphire - Campari - Martini Rosso",
+      "Menge": "Glas",
+      "Preis": "10.50"
     },
     {
-      "Kategorie": "Alkoholfreies",
-      "Name": "Ließchen Müller Schorle - Apfel - Rhabarber",
-      "Menge": "0.4",
-      "Preis": "4.00"
+      "Kategorie": "Cocktails",
+      "Name": "Pina Colada - Plantation 3 Stars Rum",
+      "Menge": "Glas",
+      "Preis": "12.50"
     },
     {
-      "Kategorie": "Alkoholfreies",
-      "Name": "Rauch Saftschorle - Johannisbeere - Maracuja",
-      "Menge": "0.4",
-      "Preis": "4.00"
+      "Kategorie": "Cocktails",
+      "Name": "Tom Collins - The Duke Bio Gin - Zitrone - Simple Sirup",
+      "Menge": "Glas",
+      "Preis": "10.50"
     },
     {
-      "Kategorie": "Alkoholfreies",
-      "Name": "Coca Cola - Coca Cola Zero",
-      "Menge": "0.4",
-      "Preis": "4.00"
+      "Kategorie": "Cocktails",
+      "Name": "Whiskey Sour - Woodford Reserve - Zitrone - Simple Sirup",
+      "Menge": "Glas",
+      "Preis": "10.50"
     },
     {
-      "Kategorie": "Alkoholfreies",
-      "Name": "Spezi - Gelbes Limo - Weißes Limo",
-      "Menge": "0.4",
-      "Preis": "4.00"
+      "Kategorie": "Cocktails",
+      "Name": "Zombie - Appelton Estate - Myers Rum - Limette -Falernum - Simple Sirup - Grenadine - Ananas",
+      "Menge": "Glas",
+      "Preis": "12.50"
     },
     {
-      "Kategorie": "Rotwein",
-      "Name": "Franz Waßmer - Spätburgunder - Baden - trocken",
-      "Menge": "0.7",
-      "Preis": "33.00"
-    },
-    {
-      "Kategorie": "Rotwein",
-      "Name": "Fantini - Primitivo - Puglia - trocken ",
-      "Menge": "0.7",
-      "Preis": "36.00"
-    },
-    {
-      "Kategorie": "Rosé",
-      "Name": "Ca dei Frati - Rosa - Frati - Gardasee",
-      "Menge": "0.7",
-      "Preis": "36.00"
-    },
-    {
-      "Kategorie": "Rosé",
-      "Name": "La Santonniére - Rosé - Provence",
-      "Menge": "0.7",
-      "Preis": "33.00"
-    },
-    {
-      "Kategorie": "Weißwein",
-      "Name": "Cá Maiol - Lugana - Gardasee - trocken",
-      "Menge": "0.7",
-      "Preis": "33.00"
-    },
-    {
-      "Kategorie": "Weißwein",
-      "Name": "Chardonnay - Bio - Frankreich - trocken",
-      "Menge": "0.7",
-      "Preis": "31.00"
-    },
-    {
-      "Kategorie": "Weißwein",
-      "Name": "Markus Molitor - Riesling - Mosel - trocken",
-      "Menge": "0.7",
-      "Preis": "33.00"
-    },
-    {
-      "Kategorie": "Schaumwein",
-      "Name": "Valdo - Biologico Brut - Prosecco D.O.C - Valdobbiadene - Italien",
-      "Menge": "0.7",
-      "Preis": "36.00"
-    },
-    {
-      "Kategorie": "Schaumwein",
-      "Name": "Domaines Vinsmoselle - Crémant - Mosel - Luxemburg ",
-      "Menge": "0.7",
-      "Preis": "33.00"
+      "Kategorie": "Heißgetränke Kaffee",
+      "Name": "Café Crema",
+      "Menge": "Tasse",
+      "Preis": "3.50"
     },
     {
       "Kategorie": "Heißgetränke Kaffee",
@@ -133,8 +151,14 @@
       "Preis": "3.50"
     },
     {
-      "Kategorie": "Heißgetränke Kaffee",
-      "Name": "Café Crema",
+      "Kategorie": "Heißgetränke Tee",
+      "Name": "Annemarie - Früchtetee",
+      "Menge": "Tasse",
+      "Preis": "3.50"
+    },
+    {
+      "Kategorie": "Heißgetränke Tee",
+      "Name": "Bongani - Rooibos Vanille",
       "Menge": "Tasse",
       "Preis": "3.50"
     },
@@ -152,31 +176,13 @@
     },
     {
       "Kategorie": "Heißgetränke Tee",
-      "Name": "Nandil - Schwarzer Tee",
-      "Menge": "Tasse",
-      "Preis": "3.50"
-    },
-    {
-      "Kategorie": "Heißgetränke Tee",
-      "Name": "Annemarie - Früchtetee",
-      "Menge": "Tasse",
-      "Preis": "3.50"
-    },
-    {
-      "Kategorie": "Heißgetränke Tee",
       "Name": "Namira - Pfefferminze",
       "Menge": "Tasse",
       "Preis": "3.50"
     },
     {
       "Kategorie": "Heißgetränke Tee",
-      "Name": "Traudl - Almkräuter",
-      "Menge": "Tasse",
-      "Preis": "3.50"
-    },
-    {
-      "Kategorie": "Heißgetränke Tee",
-      "Name": "Bongani - Rooibos Vanille",
+      "Name": "Nandil - Schwarzer Tee",
       "Menge": "Tasse",
       "Preis": "3.50"
     },
@@ -187,20 +193,14 @@
       "Preis": "3.50"
     },
     {
-      "Kategorie": "Longdrink",
-      "Name": "Gin & Goldberg Tonic - The Duke Bio Gin - Illusionist Dry Gin - Bombay Saphire",
-      "Menge": "Glas",
-      "Preis": "9.50"
+      "Kategorie": "Heißgetränke Tee",
+      "Name": "Traudl - Almkräuter",
+      "Menge": "Tasse",
+      "Preis": "3.50"
     },
     {
       "Kategorie": "Longdrink",
-      "Name": "Cuba Libre - Havana Club 3 - Cola - Limette",
-      "Menge": "Glas",
-      "Preis": "9.50"
-    },
-    {
-      "Kategorie": "Longdrink",
-      "Name": "Moscow Mule - Absolut Wodka - Goldberg Ginger Beer - Limette",
+      "Name": "Belzazar & Tonic - Belzazar Vermuth - Goldberg Tonic",
       "Menge": "Glas",
       "Preis": "9.50"
     },
@@ -212,87 +212,21 @@
     },
     {
       "Kategorie": "Longdrink",
-      "Name": "Belzazar & Tonic - Belzazar Vermuth - Goldberg Tonic",
+      "Name": "Cuba Libre - Havana Club 3 - Cola - Limette",
       "Menge": "Glas",
       "Preis": "9.50"
     },
     {
-      "Kategorie": "Aperitifs",
-      "Name": "Aperol Spritz - Aperol - Prosecco - Soda",
-      "Menge": "Glas",
-      "Preis": "7.90"
-    },
-    {
-      "Kategorie": "Aperitifs",
-      "Name": "Pampelle Spritz - Pampelle - Prosecco - Soda",
-      "Menge": "Glas",
-      "Preis": "7.90"
-    },
-    {
-      "Kategorie": "Aperitifs",
-      "Name": "Lillet Wildberry - Campari, roter Wermut, Soda",
-      "Menge": "Glas",
-      "Preis": "7.90"
-    },
-    {
-      "Kategorie": "Aperitifs",
-      "Name": "French 75 - The Duke Bio Gin - Zitrone - Crémant",
-      "Menge": "Glas",
-      "Preis": "9.90"
-    },
-    {
-      "Kategorie": "Aperitifs",
-      "Name": "Kir Royal - Crémant - Crème de Cassis",
+      "Kategorie": "Longdrink",
+      "Name": "Gin & Goldberg Tonic - The Duke Bio Gin - Illusionist Dry Gin - Bombay Saphire",
       "Menge": "Glas",
       "Preis": "9.50"
     },
     {
-      "Kategorie": "Cocktails",
-      "Name": "Whiskey Sour - Woodford Reserve - Zitrone - Simple Sirup",
+      "Kategorie": "Longdrink",
+      "Name": "Moscow Mule - Absolut Wodka - Goldberg Ginger Beer - Limette",
       "Menge": "Glas",
-      "Preis": "10.50"
-    },
-    {
-      "Kategorie": "Cocktails",
-      "Name": "Espresso Martini - Absolut Wodka - Kahlúa - Espresso",
-      "Menge": "Glas",
-      "Preis": "10.50"
-    },
-    {
-      "Kategorie": "Cocktails",
-      "Name": "Zombie - Appelton Estate - Myers Rum - Limette -Falernum - Simple Sirup - Grenadine - Ananas",
-      "Menge": "Glas",
-      "Preis": "12.50"
-    },
-    {
-      "Kategorie": "Cocktails",
-      "Name": "Pina Colada - Plantation 3 Stars Rum",
-      "Menge": "Glas",
-      "Preis": "12.50"
-    },
-    {
-      "Kategorie": "Cocktails",
-      "Name": "Tom Collins - The Duke Bio Gin - Zitrone - Simple Sirup",
-      "Menge": "Glas",
-      "Preis": "10.50"
-    },
-    {
-      "Kategorie": "Cocktails",
-      "Name": "Negroni - Bombay Sapphire - Campari - Martini Rosso",
-      "Menge": "Glas",
-      "Preis": "10.50"
-    },
-    {
-      "Kategorie": "Rotwein",
-      "Name": "Franz Waßmer - Spätburgunder - Baden - trocken",
-      "Menge": "0.2",
-      "Preis": "7.50"
-    },
-    {
-      "Kategorie": "Rotwein",
-      "Name": "Fantini - Primitivo - Puglia - trocken ",
-      "Menge": "0.2",
-      "Preis": "8.50"
+      "Preis": "9.50"
     },
     {
       "Kategorie": "Rosé",
@@ -302,27 +236,57 @@
     },
     {
       "Kategorie": "Rosé",
+      "Name": "Ca dei Frati - Rosa - Frati - Gardasee",
+      "Menge": "0.7",
+      "Preis": "36.00"
+    },
+    {
+      "Kategorie": "Rosé",
       "Name": "La Santonniére - Rosé - Provence",
       "Menge": "0.2",
       "Preis": "7.50"
     },
     {
-      "Kategorie": "Weißwein",
-      "Name": "Cá Maiol - Lugana - Gardasee - trocken",
+      "Kategorie": "Rosé",
+      "Name": "La Santonniére - Rosé - Provence",
+      "Menge": "0.7",
+      "Preis": "33.00"
+    },
+    {
+      "Kategorie": "Rotwein",
+      "Name": "Fantini - Primitivo - Puglia - trocken ",
+      "Menge": "0.2",
+      "Preis": "8.50"
+    },
+    {
+      "Kategorie": "Rotwein",
+      "Name": "Fantini - Primitivo - Puglia - trocken ",
+      "Menge": "0.7",
+      "Preis": "36.00"
+    },
+    {
+      "Kategorie": "Rotwein",
+      "Name": "Franz Waßmer - Spätburgunder - Baden - trocken",
       "Menge": "0.2",
       "Preis": "7.50"
     },
     {
-      "Kategorie": "Weißwein",
-      "Name": "Chardonnay - Bio - Frankreich - trocken",
-      "Menge": "0.2",
-      "Preis": "6.50"
+      "Kategorie": "Rotwein",
+      "Name": "Franz Waßmer - Spätburgunder - Baden - trocken",
+      "Menge": "0.7",
+      "Preis": "33.00"
     },
     {
-      "Kategorie": "Weißwein",
-      "Name": "Markus Molitor - Riesling - Mosel - trocken",
-      "Menge": "0.2",
+      "Kategorie": "Schaumwein",
+      "Name": "Domaines Vinsmoselle - Crémant - Mosel - Luxemburg ",
+      "Menge": "0.1",
       "Preis": "7.50"
+    },
+    {
+      "Kategorie": "Schaumwein",
+      "Name": "Domaines Vinsmoselle - Crémant - Mosel - Luxemburg ",
+      "Menge": "0.7",
+      "Preis": "33.00"
     },
     {
       "Kategorie": "Schaumwein",
@@ -332,9 +296,45 @@
     },
     {
       "Kategorie": "Schaumwein",
-      "Name": "Domaines Vinsmoselle - Crémant - Mosel - Luxemburg ",
-      "Menge": "0.1",
+      "Name": "Valdo - Biologico Brut - Prosecco D.O.C - Valdobbiadene - Italien",
+      "Menge": "0.7",
+      "Preis": "36.00"
+    },
+    {
+      "Kategorie": "Weißwein",
+      "Name": "Cá Maiol - Lugana - Gardasee - trocken",
+      "Menge": "0.2",
       "Preis": "7.50"
+    },
+    {
+      "Kategorie": "Weißwein",
+      "Name": "Cá Maiol - Lugana - Gardasee - trocken",
+      "Menge": "0.7",
+      "Preis": "33.00"
+    },
+    {
+      "Kategorie": "Weißwein",
+      "Name": "Chardonnay - Bio - Frankreich - trocken",
+      "Menge": "0.2",
+      "Preis": "6.50"
+    },
+    {
+      "Kategorie": "Weißwein",
+      "Name": "Chardonnay - Bio - Frankreich - trocken",
+      "Menge": "0.7",
+      "Preis": "31.00"
+    },
+    {
+      "Kategorie": "Weißwein",
+      "Name": "Markus Molitor - Riesling - Mosel - trocken",
+      "Menge": "0.2",
+      "Preis": "7.50"
+    },
+    {
+      "Kategorie": "Weißwein",
+      "Name": "Markus Molitor - Riesling - Mosel - trocken",
+      "Menge": "0.7",
+      "Preis": "33.00"
     }
   ]
 }
