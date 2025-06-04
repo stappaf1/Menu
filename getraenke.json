@@ -2,395 +2,311 @@
   "getraenke": [
     {
       "Kategorie": "Biere",
-      "Name": "Fassbier | Helles | Weißbier",
-      "Menge": "0.5",
-      "Preis": "4.00",
-      " ": " "
+      "Name": "Alkoholfreies Bier",
+      "Beschreibung": "Helles oder Weissbier",
+      "Menge": "0,5L",
+      "Preis": "4.00"
     },
     {
       "Kategorie": "Biere",
-      "Name": "Flaschenbier | Bio-Helles | Dunkles",
-      "Menge": "0.5",
-      "Preis": "4.50",
-      " ": " "
+      "Name": "Dunkles Bier",
+      "Beschreibung": "",
+      "Menge": "0,5L",
+      "Preis": "4.00"
     },
     {
       "Kategorie": "Biere",
-      "Name": "Flaschenbiere klein | Pils | Helles",
-      "Menge": "0.33",
-      "Preis": "3.50",
-      " ": " "
+      "Name": "Dunkles Weißbier",
+      "Beschreibung": "",
+      "Menge": "0,5L",
+      "Preis": "4.00"
     },
     {
       "Kategorie": "Biere",
-      "Name": "Alkoholfreies Bier | Helles | Weißbier",
-      "Menge": "0.5",
-      "Preis": "4.00",
-      " ": " "
+      "Name": "Helles Bier",
+      "Beschreibung": "",
+      "Menge": "0,5L",
+      "Preis": "4.00"
+    },
+    {
+      "Kategorie": "Biere",
+      "Name": "Pils",
+      "Beschreibung": "",
+      "Menge": "0,3L",
+      "Preis": "3.60"
+    },
+    {
+      "Kategorie": "Biere",
+      "Name": "Weißbier",
+      "Beschreibung": "",
+      "Menge": "0,5L",
+      "Preis": "4.00"
     },
     {
       "Kategorie": "Alkoholfreies",
-      "Name": "Alea – Tafelwasser | Still | Spritzig",
-      "Menge": "0.7",
-      "Preis": "6.50",
-      " ": " "
+      "Name": "Ananassaft",
+      "Beschreibung": "",
+      "Menge": "0,2L",
+      "Preis": "2.90"
     },
     {
       "Kategorie": "Alkoholfreies",
-      "Name": "Ließchen Müller Schorle | Apfel | Rhabarber",
-      "Menge": "0.4",
-      "Preis": "4.00",
-      " ": " "
+      "Name": "Apfelsaft",
+      "Beschreibung": "",
+      "Menge": "0,2L",
+      "Preis": "2.90"
     },
     {
       "Kategorie": "Alkoholfreies",
-      "Name": "Rauch Saftschorle | Johannisbeere | Maracuja",
-      "Menge": "0.4",
-      "Preis": "4.00",
-      " ": " "
+      "Name": "Johannisbeersaft",
+      "Beschreibung": "",
+      "Menge": "0,2L",
+      "Preis": "2.90"
     },
     {
       "Kategorie": "Alkoholfreies",
-      "Name": "Coca Cola | Coca Cola Zero",
-      "Menge": "0.4",
-      "Preis": "4.00",
-      " ": " "
+      "Name": "Maracujasaft",
+      "Beschreibung": "",
+      "Menge": "0,2L",
+      "Preis": "2.90"
     },
     {
       "Kategorie": "Alkoholfreies",
-      "Name": "Spezi | Gelbes Limo | Weißes Limo",
-      "Menge": "0.4",
-      "Preis": "4.00",
-      " ": " "
+      "Name": "Mineralwasser Spritzig",
+      "Beschreibung": "",
+      "Menge": "0,7L",
+      "Preis": "7.00"
     },
     {
-      "Kategorie": "Rotwein",
-      "Name": "Franz Waßmer I Spätburgunder I Baden I trocken",
-      "Menge": "0.7",
-      "Preis": "33.00",
-      " ": " "
+      "Kategorie": "Alkoholfreies",
+      "Name": "Mineralwasser Spritzig",
+      "Beschreibung": "",
+      "Menge": "0,4L",
+      "Preis": "3.50"
     },
     {
-      "Kategorie": "Rotwein",
-      "Name": "Fantini I Primitivo I Puglia I trocken ",
-      "Menge": "0.7",
-      "Preis": "36.00",
-      " ": " "
+      "Kategorie": "Alkoholfreies",
+      "Name": "Mineralwasser Still",
+      "Beschreibung": "",
+      "Menge": "0,7L",
+      "Preis": "7.00"
+    },
+    {
+      "Kategorie": "Alkoholfreies",
+      "Name": "Mineralwasser Still",
+      "Beschreibung": "",
+      "Menge": "0,4L",
+      "Preis": "3.50"
+    },
+    {
+      "Kategorie": "Alkoholfreies",
+      "Name": "Saftschorle",
+      "Beschreibung": "",
+      "Menge": "0,4L",
+      "Preis": "3.80"
+    },
+    {
+      "Kategorie": "Alkoholfreies",
+      "Name": "Sauerkirschsaft",
+      "Beschreibung": "",
+      "Menge": "0,2L",
+      "Preis": "2.90"
+    },
+    {
+      "Kategorie": "Softgetränke",
+      "Name": "Afri Cola",
+      "Beschreibung": "",
+      "Menge": "0,2L",
+      "Preis": "3.80"
+    },
+    {
+      "Kategorie": "Softgetränke",
+      "Name": "Afri Cola Light",
+      "Beschreibung": "",
+      "Menge": "0,2L",
+      "Preis": "3.80"
+    },
+    {
+      "Kategorie": "Softgetränke",
+      "Name": "Orangenlimonade",
+      "Beschreibung": "",
+      "Menge": "0,4L",
+      "Preis": "3.80"
+    },
+    {
+      "Kategorie": "Softgetränke",
+      "Name": "Spezi",
+      "Beschreibung": "",
+      "Menge": "0,4L",
+      "Preis": "3.80"
+    },
+    {
+      "Kategorie": "Softgetränke",
+      "Name": "Zitronenlimonade",
+      "Beschreibung": "",
+      "Menge": "0,4L",
+      "Preis": "3.80"
     },
     {
       "Kategorie": "Rosé",
-      "Name": "Ca dei Frati I Rosa i Frati I Gardasee",
-      "Menge": "0.7",
-      "Preis": "36.00",
-      " ": "  "
+      "Name": "Ca dei Frait Rosé",
+      "Beschreibung": "",
+      "Menge": "0,2L",
+      "Preis": "7.50"
     },
     {
-      "Kategorie": "Rosé",
-      "Name": "La Santonniére I Rosé I Provence",
-      "Menge": "0.7",
-      "Preis": "33.00",
-      " ": " "
+      "Kategorie": "",
+      "Name": "",
+      "Beschreibung": "",
+      "Menge": "",
+      "Preis": ""
     },
     {
-      "Kategorie": "Weißwein",
-      "Name": "Cá Maiol I Lugana I Gardasee I trocken",
-      "Menge": "0.7",
-      "Preis": "33.00",
-      " ": " "
-    },
-    {
-      "Kategorie": "Weißwein",
-      "Name": "Chardonnay I Bio I Frankreich I trocken",
-      "Menge": "0.7",
-      "Preis": "31.00",
-      " ": " "
-    },
-    {
-      "Kategorie": "Weißwein",
-      "Name": "Markus Molitor I Riesling I Mosel I trocken",
-      "Menge": "0.7",
-      "Preis": "33.00",
-      " ": " "
+      "Kategorie": "Rotwein",
+      "Name": "Primitivo di Manduria",
+      "Beschreibung": "",
+      "Menge": "0,2L",
+      "Preis": "8.00"
     },
     {
       "Kategorie": "Schaumwein",
-      "Name": "Valdo I Biologico Brut I Prosecco D.O.C I Valdobbiadene I Italien",
-      "Menge": "0.7",
-      "Preis": "36.00",
-      " ": " "
+      "Name": "Prosecco",
+      "Beschreibung": "",
+      "Menge": "0,2L",
+      "Preis": "4.50"
     },
     {
-      "Kategorie": "Schaumwein",
-      "Name": "Domaines Vinsmoselle I Crémant I Mosel I Luxemburg ",
-      "Menge": "0.7",
-      "Preis": "33.00",
-      " ": " "
+      "Kategorie": "",
+      "Name": "",
+      "Beschreibung": "",
+      "Menge": "",
+      "Preis": ""
     },
     {
-      "Kategorie": "Heißgetränke Kaffee",
-      "Name": "Cappuccino",
-      "Menge": "Tasse",
-      "Preis": "3.50",
-      " ": " "
+      "Kategorie": "Weißwein",
+      "Name": "Riesling",
+      "Beschreibung": "",
+      "Menge": "0,2L",
+      "Preis": "6.50"
     },
     {
-      "Kategorie": "Heißgetränke Kaffee",
-      "Name": "Doppio Espresso",
-      "Menge": "Tasse",
-      "Preis": "3.50",
-      " ": " "
+      "Kategorie": "Aperitif",
+      "Name": "Aperol Spritz",
+      "Beschreibung": "",
+      "Menge": "1 Glas",
+      "Preis": "7.90"
     },
     {
-      "Kategorie": "Heißgetränke Kaffee",
-      "Name": "Espresso",
-      "Menge": "Tasse",
-      "Preis": "2.00",
-      " ": " "
-    },
-    {
-      "Kategorie": "Heißgetränke Kaffee",
-      "Name": "Latte Macchiato",
-      "Menge": "Tasse",
-      "Preis": "3.50",
-      " ": "  "
+      "Kategorie": "Aperitif",
+      "Name": "Lillet Wildberry",
+      "Beschreibung": "",
+      "Menge": "1 Glas",
+      "Preis": "7.90"
     },
     {
       "Kategorie": "Heißgetränke Kaffee",
       "Name": "Café Crema",
+      "Beschreibung": "Milder Kaffee mit einer dicken Crema, ideal für den Kaffeegenuss zwischendurch.",
       "Menge": "Tasse",
-      "Preis": "3.50",
-      " ": " "
+      "Preis": "3.50"
+    },
+    {
+      "Kategorie": "Heißgetränke Kaffee",
+      "Name": "Cappuccino",
+      "Beschreibung": "Aromatischer Espresso mit cremigem Milchschaum, leicht bestäubt mit Kakao.",
+      "Menge": "Tasse",
+      "Preis": "3.50"
+    },
+    {
+      "Kategorie": "Heißgetränke Kaffee",
+      "Name": "Doppio Espresso",
+      "Beschreibung": "Doppelte Portion Espresso für den extra starken Koffeinkick.",
+      "Menge": "Tasse",
+      "Preis": "3.50"
+    },
+    {
+      "Kategorie": "Heißgetränke Kaffee",
+      "Name": "Espresso",
+      "Beschreibung": "Intensiver, aromatischer Espresso für den perfekten Koffeinschub.",
+      "Menge": "Tasse",
+      "Preis": "2.40"
+    },
+    {
+      "Kategorie": "Heißgetränke Kaffee",
+      "Name": "Latte Macchiato",
+      "Beschreibung": "Geschichteter Kaffee mit heißer Milch und Schaum, mild und cremig.",
+      "Menge": "Glas",
+      "Preis": "3.50"
+    },
+    {
+      "Kategorie": "Heißgetränke Tee",
+      "Name": "Claire | Kräuter",
+      "Beschreibung": "Claire liebt den zarten, leicht zitronigen Geschmack der Verveine. Weil dieser Kräutertee einfach lecker ist und guttut. Vor allem aber, weil sie der liebliche Geruch der Blätter an die herrlich duftenden Verveinefelder ihrer Großeltern erinnert, in denen sie an warmen Sommertagen mit ihren Geschwistern spielte. Kindheitserinnerungen können so gut schmecken!",
+      "Menge": "Glas",
+      "Preis": "3.50"
     },
     {
       "Kategorie": "Heißgetränke Tee",
       "Name": "Hayato | Grüntee",
-      "Menge": "Tasse",
-      "Preis": "3.50",
-      " ": " "
+      "Beschreibung": "Sencha gilt in Japan als das Getränk der Gastfreundschaft. Dem stimmt Hayato zu. Doch für ihn hat es eine besondere Bedeutung, wenn er die handverlesenen und frisch geernteten Blätter aus seinem Teegarten für uns zu einem frisch-duftigen Grüntee verarbeitet. Denn so kann er seine Gastfreundschaft an unsere Sencha-Genießer weitergeben. Recht hat er!Hayato-",
+      "Menge": "Glas",
+      "Preis": "3.50"
     },
     {
       "Kategorie": "Heißgetränke Tee",
       "Name": "Jinjin | Grüntee",
-      "Menge": "Tasse",
-      "Preis": "3.50",
-      " ": ""
+      "Beschreibung": "Jinjin wuchs in einem kleinen chinesischen Dorf auf. Mit fünf Jahren aß sie das erste Mal eine saftige, reife Mango. Seitdem liebt sie diese aromatische Frucht. Die übrigen Dorfbewohner wissen um ihre Vorliebe und wann immer sie können, bringen sie Jinjin eine köstliche Mango. Jinjin hat darüber hinaus – wie übrigens auch die anderen Dorfbewohner – eine Vorliebe für Grüntee. Nun rate mal, welche Vorliebe wir von Pure Tea haben!",
+      "Menge": "Glas",
+      "Preis": "3.50"
     },
     {
       "Kategorie": "Heißgetränke Tee",
       "Name": "Nandil | Schwarzer Tee",
-      "Menge": "Tasse",
-      "Preis": "3.50",
-      " ": ""
+      "Beschreibung": "Dass ein kleines Fleckchen im Norden Deutschlands weltweit den größten Teeverbrauch aufweisen soll, will Nandil gar nicht glauben. Schließlich hätten die Leute im indischen Assam eine ebenso große Vorliebe für den kräftigen Schwarztee. Aber eigentlich sei es ja egal, wo sein Assam mit der malzig-würzigen Note getrunken werde. Hauptsache, man finde Zeit, ihn zu genießen. Das tun wir – gerne zur „Teetide“, wie der Ostfriese sagt.",
+      "Menge": "Glas",
+      "Preis": "3.50"
     },
     {
       "Kategorie": "Heißgetränke Tee",
       "Name": "Annemarie | Früchtetee",
-      "Menge": "Tasse",
-      "Preis": "3.50",
-      " ": ""
+      "Beschreibung": "Rote Grütze – ein leckerer, tiefroter Kompott aus saftigen Beeren. Das beliebteste Dessert Norddeutschlands. Jede Familie hat ihr ureigenes, gut behütetes Rezept. So auch Annemarie. Das Beste: Ihre Rote Grütze mit dem feinen, fruchtigen, süßsauren Geschmack kann man jederzeit genießen – in Form unseres aromatischen Früchtetees.",
+      "Menge": "Glas",
+      "Preis": "3.50"
     },
     {
       "Kategorie": "Heißgetränke Tee",
       "Name": "Namira | Pfefferminze",
-      "Menge": "Tasse",
-      "Preis": "3.50",
-      " ": ""
+      "Beschreibung": "Namira hat in Europa studiert, doch am allerliebsten lebt sie in ihrer nordafrikanischen Heimat. Zwischen Palmen, Kamelen und duftenden Feldern mit aromatischer Pfefferminze. Denn Minze ist ein fester Bestandteil der kulinarischen Tradition ihres Landes. Sie freut sich, auch uns daran teilhaben zu lassen. Und wir von Pure Tea freuen uns, solch einen intensiven Pfefferminztee anbieten zu können.",
+      "Menge": "Glas",
+      "Preis": "3.50"
     },
     {
       "Kategorie": "Heißgetränke Tee",
       "Name": "Traudl | Almkräuter",
-      "Menge": "Tasse",
-      "Preis": "3.50",
-      " ": ""
+      "Beschreibung": "Wenn Traudl sich von der Alm auf den Heimweg begibt, findet sie am Wegesrand eine unglaubliche Vielfalt an heimischen Kräutern: Spitzwegerich, Klettenwurzel, Kamillenblüten und Löwenzahn, unter anderem. Zuhause kocht sie sich daraus eine große Kanne heißen Tee. Dies ist unsere gemütliche Wohlfühlmischung, ganz nach Traudls Geschmack",
+      "Menge": "Glas",
+      "Preis": "3.50"
     },
     {
       "Kategorie": "Heißgetränke Tee",
       "Name": "Bongani | Rooibos Vanille",
-      "Menge": "Tasse",
-      "Preis": "3.50",
-      " ": ""
+      "Beschreibung": "Bongani liebt die einzigartige Natur der südafrikanischen Zederberge. Seine Heimat ist bekannt für den Anbau des Rotbuschs – dem Rooibos. Mit viel Fingerspitzengefühl verarbeitet er die feinen Zweige der frischen Ernte zu einem karamellig-milden Rooibos-Tee. Alles, was wir noch hinzufügen, ist ein sanfter Hauch von Vanille. Lecker!",
+      "Menge": "Glas",
+      "Preis": "3.50"
     },
     {
       "Kategorie": "Heißgetränke Tee",
       "Name": "Sarala | Chai",
-      "Menge": "Tasse",
-      "Preis": "3.50",
-      " ": ""
-    },
-    {
-      "Kategorie": "Longdrink",
-      "Name": "Gin & Goldberg Tonic I The Duke Bio Gin | Illusionist Dry Gin | Bombay Saphire",
+      "Beschreibung": "Schon als Kind wollte Sarala so werden wie ihr Vater, ein Chaiwala mit eigenem Teestand. Eine Herausforderung, denn traditionell ist diese Arbeit Männern vorbehalten. Heute hat sie es geschafft. Die Leute lieben ihre ‚Chaiwali‘ – ihre Teefrau. Und ihren würzigen Chai, den sie mit viel Liebe nach ihrem eigenen Rezept zubereitet. Und wir lieben Sarala, weil sie uns die Rezeptur für die Gewürzmischung dieses Chaitees verraten hat.",
       "Menge": "Glas",
-      "Preis": "9.50",
-      " ": ""
+      "Preis": "3.50"
     },
     {
-      "Kategorie": "Longdrink",
-      "Name": "Cuba Libre I Havana Club 3 | Cola | Limette",
-      "Menge": "Glas",
-      "Preis": "9.50",
-      " ": ""
-    },
-    {
-      "Kategorie": "Longdrink",
-      "Name": "Moscow Mule I Absolut Wodka | Goldberg Ginger Beer | Limette",
-      "Menge": "Glas",
-      "Preis": "9.50",
-      " ": ""
-    },
-    {
-      "Kategorie": "Longdrink",
-      "Name": "Bourbon & Cola I Woodford Reserve Straight Bourbon Whiskey & Cola",
-      "Menge": "Glas",
-      "Preis": "9.50",
-      " ": ""
-    },
-    {
-      "Kategorie": "Longdrink",
-      "Name": "Belzazar & Tonic I Belzazar Vermuth | Goldberg Tonic",
-      "Menge": "Glas",
-      "Preis": "9.50",
-      " ": ""
-    },
-    {
-      "Kategorie": "Aperitifs",
-      "Name": "Aperol Spritz | Aperol | Prosecco | Soda",
-      "Menge": "Glas",
-      "Preis": "7.90",
-      " ": ""
-    },
-    {
-      "Kategorie": "Aperitifs",
-      "Name": "Pampelle Spritz | Pampelle | Prosecco | Soda",
-      "Menge": "Glas",
-      "Preis": "7.90",
-      " ": ""
-    },
-    {
-      "Kategorie": "Aperitifs",
-      "Name": "Lillet Wildberry | Campari, roter Wermut, Soda",
-      "Menge": "Glas",
-      "Preis": "7.90",
-      " ": ""
-    },
-    {
-      "Kategorie": "Aperitifs",
-      "Name": "French 75 | The Duke Bio Gin | Zitrone | Crémant",
-      "Menge": "Glas",
-      "Preis": "9.90",
-      " ": ""
-    },
-    {
-      "Kategorie": "Aperitifs",
-      "Name": "Kir Royal | Crémant | Crème de Cassis",
-      "Menge": "Glas",
-      "Preis": "9.50",
-      " ": ""
-    },
-    {
-      "Kategorie": "Cocktails",
-      "Name": "Whiskey Sour I Woodford Reserve | Zitrone | Simple Sirup",
-      "Menge": "Glas",
-      "Preis": "10.50",
-      " ": ""
-    },
-    {
-      "Kategorie": "Cocktails",
-      "Name": "Espresso Martini I Absolut Wodka | Kahlúa | Espresso",
-      "Menge": "Glas",
-      "Preis": "10.50",
-      " ": ""
-    },
-    {
-      "Kategorie": "Cocktails",
-      "Name": "Zombie I Appelton Estate | Myers Rum | Limette |Falernum I Simple Sirup | Grenadine | Ananas",
-      "Menge": "Glas",
-      "Preis": "12.50",
-      " ": ""
-    },
-    {
-      "Kategorie": "Cocktails",
-      "Name": "Pina Colada I Plantation 3 Stars Rum",
-      "Menge": "Glas",
-      "Preis": "12.50",
-      " ": ""
-    },
-    {
-      "Kategorie": "Cocktails",
-      "Name": "Tom Collins I The Duke Bio Gin | Zitrone | Simple Sirup",
-      "Menge": "Glas",
-      "Preis": "10.50",
-      " ": ""
-    },
-    {
-      "Kategorie": "Cocktails",
-      "Name": "Negroni I Bombay Sapphire | Campari | Martini Rosso",
-      "Menge": "Glas",
-      "Preis": "10.50",
-      " ": ""
-    },
-    {
-      "Kategorie": "Rotwein",
-      "Name": "Franz Waßmer I Spätburgunder I Baden I trocken",
-      "Menge": "0.2",
-      "Preis": "7.50",
-      " ": " "
-    },
-    {
-      "Kategorie": "Rotwein",
-      "Name": "Fantini I Primitivo I Puglia I trocken ",
-      "Menge": "0.2",
-      "Preis": "8.50",
-      " ": " "
-    },
-    {
-      "Kategorie": "Rosé",
-      "Name": "Ca dei Frati I Rosa i Frati I Gardasee",
-      "Menge": "0.2",
-      "Preis": "8.50",
-      " ": "  "
-    },
-    {
-      "Kategorie": "Rosé",
-      "Name": "La Santonniére I Rosé I Provence",
-      "Menge": "0.2",
-      "Preis": "7.50",
-      " ": " "
-    },
-    {
-      "Kategorie": "Weißwein",
-      "Name": "Cá Maiol I Lugana I Gardasee I trocken",
-      "Menge": "0.2",
-      "Preis": "7.50",
-      " ": " "
-    },
-    {
-      "Kategorie": "Weißwein",
-      "Name": "Chardonnay I Bio I Frankreich I trocken",
-      "Menge": "0.2",
-      "Preis": "6.50",
-      " ": " "
-    },
-    {
-      "Kategorie": "Weißwein",
-      "Name": "Markus Molitor I Riesling I Mosel I trocken",
-      "Menge": "0.2",
-      "Preis": "7.50",
-      " ": " "
-    },
-    {
-      "Kategorie": "Schaumwein",
-      "Name": "Valdo I Biologico Brut I Prosecco D.O.C I Valdobbiadene I Italien",
-      "Menge": "0.1",
-      "Preis": "8.50",
-      " ": " "
-    },
-    {
-      "Kategorie": "Schaumwein",
-      "Name": "Domaines Vinsmoselle I Crémant I Mosel I Luxemburg ",
-      "Menge": "0.1",
-      "Preis": "7.50",
-      " ": " "
+      "Kategorie": "Cocktail",
+      "Name": "",
+      "Beschreibung": "Für Ihre Veranstaltung nicht vorgesehen",
+      "Menge": "",
+      "Preis": ""
     }
   ]
 }
