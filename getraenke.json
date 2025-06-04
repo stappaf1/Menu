@@ -3,336 +3,392 @@
     {
       "Kategorie": "Alkoholfreies",
       "Name": "Alea – Tafelwasser - Still - Spritzig",
+      "Beschreibung": " ",
       "Menge": "0.7",
       "Preis": "6.50"
     },
     {
       "Kategorie": "Alkoholfreies",
       "Name": "Coca Cola - Coca Cola Zero",
+      "Beschreibung": " ",
       "Menge": "0.4",
       "Preis": "4.00"
     },
     {
       "Kategorie": "Alkoholfreies",
       "Name": "Ließchen Müller Schorle - Apfel - Rhabarber",
+      "Beschreibung": " ",
       "Menge": "0.4",
       "Preis": "4.00"
     },
     {
       "Kategorie": "Alkoholfreies",
       "Name": "Rauch Saftschorle - Johannisbeere - Maracuja",
+      "Beschreibung": " ",
       "Menge": "0.4",
       "Preis": "4.00"
     },
     {
       "Kategorie": "Alkoholfreies",
       "Name": "Spezi - Gelbes Limo - Weißes Limo",
+      "Beschreibung": " ",
       "Menge": "0.4",
       "Preis": "4.00"
     },
     {
       "Kategorie": "Aperitifs",
       "Name": "Aperol Spritz - Aperol - Prosecco - Soda",
+      "Beschreibung": " ",
       "Menge": "Glas",
       "Preis": "7.90"
     },
     {
       "Kategorie": "Aperitifs",
       "Name": "French 75 - The Duke Bio Gin - Zitrone - Crémant",
+      "Beschreibung": " ",
       "Menge": "Glas",
       "Preis": "9.90"
     },
     {
       "Kategorie": "Aperitifs",
       "Name": "Kir Royal - Crémant - Crème de Cassis",
+      "Beschreibung": " ",
       "Menge": "Glas",
       "Preis": "9.50"
     },
     {
       "Kategorie": "Aperitifs",
       "Name": "Lillet Wildberry - Campari, roter Wermut, Soda",
+      "Beschreibung": " ",
       "Menge": "Glas",
       "Preis": "7.90"
     },
     {
       "Kategorie": "Aperitifs",
       "Name": "Pampelle Spritz - Pampelle - Prosecco - Soda",
+      "Beschreibung": " ",
       "Menge": "Glas",
       "Preis": "7.90"
     },
     {
       "Kategorie": "Biere",
       "Name": "Alkoholfreies Bier - Helles - Weißbier",
+      "Beschreibung": " ",
       "Menge": "0.5",
       "Preis": "4.00"
     },
     {
       "Kategorie": "Biere",
       "Name": "Fassbier -- Helles - Weißbier",
+      "Beschreibung": " ",
       "Menge": "0.5",
       "Preis": "4.00"
     },
     {
       "Kategorie": "Biere",
       "Name": "Flaschenbier - Bio-Helles - Dunkles",
+      "Beschreibung": " ",
       "Menge": "0.5",
       "Preis": "4.50"
     },
     {
       "Kategorie": "Biere",
       "Name": "Flaschenbiere klein - Pils - Helles",
+      "Beschreibung": " ",
       "Menge": "0.33",
       "Preis": "3.50"
     },
     {
       "Kategorie": "Cocktails",
       "Name": "Espresso Martini - Absolut Wodka - Kahlúa - Espresso",
+      "Beschreibung": " ",
       "Menge": "Glas",
       "Preis": "10.50"
     },
     {
       "Kategorie": "Cocktails",
       "Name": "Negroni - Bombay Sapphire - Campari - Martini Rosso",
+      "Beschreibung": " ",
       "Menge": "Glas",
       "Preis": "10.50"
     },
     {
       "Kategorie": "Cocktails",
       "Name": "Pina Colada - Plantation 3 Stars Rum",
+      "Beschreibung": " ",
       "Menge": "Glas",
       "Preis": "12.50"
     },
     {
       "Kategorie": "Cocktails",
       "Name": "Tom Collins - The Duke Bio Gin - Zitrone - Simple Sirup",
+      "Beschreibung": " ",
       "Menge": "Glas",
       "Preis": "10.50"
     },
     {
       "Kategorie": "Cocktails",
       "Name": "Whiskey Sour - Woodford Reserve - Zitrone - Simple Sirup",
+      "Beschreibung": " ",
       "Menge": "Glas",
       "Preis": "10.50"
     },
     {
       "Kategorie": "Cocktails",
       "Name": "Zombie - Appelton Estate - Myers Rum - Limette -Falernum - Simple Sirup - Grenadine - Ananas",
+      "Beschreibung": " ",
       "Menge": "Glas",
       "Preis": "12.50"
     },
     {
       "Kategorie": "Longdrink",
       "Name": "Belzazar & Tonic - Belzazar Vermuth - Goldberg Tonic",
+      "Beschreibung": " ",
       "Menge": "Glas",
       "Preis": "9.50"
     },
     {
       "Kategorie": "Longdrink",
       "Name": "Bourbon & Cola - Woodford Reserve Straight Bourbon Whiskey & Cola",
+      "Beschreibung": " ",
       "Menge": "Glas",
       "Preis": "9.50"
     },
     {
       "Kategorie": "Longdrink",
       "Name": "Cuba Libre - Havana Club 3 - Cola - Limette",
+      "Beschreibung": " ",
       "Menge": "Glas",
       "Preis": "9.50"
     },
     {
       "Kategorie": "Longdrink",
       "Name": "Gin & Goldberg Tonic - The Duke Bio Gin - Illusionist Dry Gin - Bombay Saphire",
+      "Beschreibung": " ",
       "Menge": "Glas",
       "Preis": "9.50"
     },
     {
       "Kategorie": "Longdrink",
       "Name": "Moscow Mule - Absolut Wodka - Goldberg Ginger Beer - Limette",
+      "Beschreibung": " ",
       "Menge": "Glas",
       "Preis": "9.50"
     },
     {
       "Kategorie": "Rosé",
       "Name": "Ca dei Frati - Rosa - Frati - Gardasee",
+      "Beschreibung": " ",
       "Menge": "0.2",
       "Preis": "8.50"
     },
     {
       "Kategorie": "Rosé",
       "Name": "Ca dei Frati - Rosa - Frati - Gardasee",
+      "Beschreibung": " ",
       "Menge": "0.7",
       "Preis": "36.00"
     },
     {
       "Kategorie": "Rosé",
       "Name": "La Santonniére - Rosé - Provence",
+      "Beschreibung": " ",
       "Menge": "0.2",
       "Preis": "7.50"
     },
     {
       "Kategorie": "Rosé",
       "Name": "La Santonniére - Rosé - Provence",
+      "Beschreibung": " ",
       "Menge": "0.7",
       "Preis": "33.00"
     },
     {
       "Kategorie": "Rotwein",
       "Name": "Fantini - Primitivo - Puglia - trocken ",
+      "Beschreibung": " ",
       "Menge": "0.2",
       "Preis": "8.50"
     },
     {
       "Kategorie": "Rotwein",
       "Name": "Fantini - Primitivo - Puglia - trocken ",
+      "Beschreibung": " ",
       "Menge": "0.7",
       "Preis": "36.00"
     },
     {
       "Kategorie": "Rotwein",
       "Name": "Franz Waßmer - Spätburgunder - Baden - trocken",
+      "Beschreibung": " ",
       "Menge": "0.2",
       "Preis": "7.50"
     },
     {
       "Kategorie": "Rotwein",
       "Name": "Franz Waßmer - Spätburgunder - Baden - trocken",
+      "Beschreibung": " ",
       "Menge": "0.7",
       "Preis": "33.00"
     },
     {
       "Kategorie": "Schaumwein",
       "Name": "Domaines Vinsmoselle - Crémant - Mosel - Luxemburg ",
+      "Beschreibung": " ",
       "Menge": "0.1",
       "Preis": "7.50"
     },
     {
       "Kategorie": "Schaumwein",
       "Name": "Domaines Vinsmoselle - Crémant - Mosel - Luxemburg ",
+      "Beschreibung": " ",
       "Menge": "0.7",
       "Preis": "33.00"
     },
     {
       "Kategorie": "Schaumwein",
       "Name": "Valdo - Biologico Brut - Prosecco D.O.C - Valdobbiadene - Italien",
+      "Beschreibung": " ",
       "Menge": "0.1",
       "Preis": "8.50"
     },
     {
       "Kategorie": "Schaumwein",
       "Name": "Valdo - Biologico Brut - Prosecco D.O.C - Valdobbiadene - Italien",
+      "Beschreibung": " ",
       "Menge": "0.7",
       "Preis": "36.00"
     },
     {
       "Kategorie": "Weißwein",
       "Name": "Cá Maiol - Lugana - Gardasee - trocken",
+      "Beschreibung": " ",
       "Menge": "0.2",
       "Preis": "7.50"
     },
     {
       "Kategorie": "Weißwein",
       "Name": "Cá Maiol - Lugana - Gardasee - trocken",
+      "Beschreibung": " ",
       "Menge": "0.7",
       "Preis": "33.00"
     },
     {
       "Kategorie": "Weißwein",
       "Name": "Chardonnay - Bio - Frankreich - trocken",
+      "Beschreibung": " ",
       "Menge": "0.2",
       "Preis": "6.50"
     },
     {
       "Kategorie": "Weißwein",
       "Name": "Chardonnay - Bio - Frankreich - trocken",
+      "Beschreibung": " ",
       "Menge": "0.7",
       "Preis": "31.00"
     },
     {
       "Kategorie": "Weißwein",
       "Name": "Markus Molitor - Riesling - Mosel - trocken",
+      "Beschreibung": " ",
       "Menge": "0.2",
       "Preis": "7.50"
     },
     {
       "Kategorie": "Weißwein",
       "Name": "Markus Molitor - Riesling - Mosel - trocken",
+      "Beschreibung": " ",
       "Menge": "0.7",
       "Preis": "33.00"
     },
     {
       "Kategorie": "Heißgetränke Kaffee",
       "Name": "Café Crema",
+      "Beschreibung": " ",
       "Menge": "Tasse",
       "Preis": "3.50"
     },
     {
       "Kategorie": "Heißgetränke Kaffee",
       "Name": "Cappuccino",
+      "Beschreibung": " ",
       "Menge": "Tasse",
       "Preis": "3.50"
     },
     {
       "Kategorie": "Heißgetränke Kaffee",
       "Name": "Doppio Espresso",
+      "Beschreibung": " ",
       "Menge": "Tasse",
       "Preis": "3.50"
     },
     {
       "Kategorie": "Heißgetränke Kaffee",
       "Name": "Espresso",
+      "Beschreibung": " ",
       "Menge": "Tasse",
       "Preis": "2.00"
     },
     {
       "Kategorie": "Heißgetränke Kaffee",
       "Name": "Latte Macchiato",
+      "Beschreibung": " ",
       "Menge": "Tasse",
       "Preis": "3.50"
     },
     {
       "Kategorie": "Heißgetränke Tee",
       "Name": "Annemarie - Früchtetee",
+      "Beschreibung": " ",
       "Menge": "Tasse",
       "Preis": "3.50"
     },
     {
       "Kategorie": "Heißgetränke Tee",
       "Name": "Bongani - Rooibos Vanille",
+      "Beschreibung": " ",
       "Menge": "Tasse",
       "Preis": "3.50"
     },
     {
       "Kategorie": "Heißgetränke Tee",
       "Name": "Hayato - Grüntee",
+      "Beschreibung": " ",
       "Menge": "Tasse",
       "Preis": "3.50"
     },
     {
       "Kategorie": "Heißgetränke Tee",
       "Name": "Jinjin - Grüntee",
+      "Beschreibung": " ",
       "Menge": "Tasse",
       "Preis": "3.50"
     },
     {
       "Kategorie": "Heißgetränke Tee",
       "Name": "Namira - Pfefferminze",
+      "Beschreibung": " ",
       "Menge": "Tasse",
       "Preis": "3.50"
     },
     {
       "Kategorie": "Heißgetränke Tee",
       "Name": "Nandil - Schwarzer Tee",
+      "Beschreibung": " ",
       "Menge": "Tasse",
       "Preis": "3.50"
     },
     {
       "Kategorie": "Heißgetränke Tee",
       "Name": "Sarala - Chai",
+      "Beschreibung": " ",
       "Menge": "Tasse",
       "Preis": "3.50"
     },
     {
       "Kategorie": "Heißgetränke Tee",
       "Name": "Traudl - Almkräuter",
+      "Beschreibung": " ",
       "Menge": "Tasse",
       "Preis": "3.50"
     }
