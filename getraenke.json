@@ -1,312 +1,179 @@
 {
   "getraenke": [
     {
-      "Kategorie": "Biere",
-      "Name": "Alkoholfreies Bier",
-      "Beschreibung": "Helles oder Weissbier",
+      "Kategorie": "Bier",
+      "Name": "Biere",
+      "Beschreibung": "Müllerbräu Helles mit/ohne Alkohol, Weißbier mit/leicht/ohne Alkohol, Dunkles, Russ, Radler",
       "Menge": "0,5L",
-      "Preis": "4.00"
+      "Preis": "4.50"
     },
     {
-      "Kategorie": "Biere",
-      "Name": "Dunkles Bier",
-      "Beschreibung": "",
-      "Menge": "0,5L",
-      "Preis": "4.00"
-    },
-    {
-      "Kategorie": "Biere",
-      "Name": "Dunkles Weißbier",
-      "Beschreibung": "",
-      "Menge": "0,5L",
-      "Preis": "4.00"
-    },
-    {
-      "Kategorie": "Biere",
-      "Name": "Helles Bier",
-      "Beschreibung": "",
-      "Menge": "0,5L",
-      "Preis": "4.00"
-    },
-    {
-      "Kategorie": "Biere",
+      "Kategorie": "Bier",
       "Name": "Pils",
-      "Beschreibung": "",
-      "Menge": "0,3L",
-      "Preis": "3.60"
+      "Beschreibung": "Müllerbräu",
+      "Menge": "0,33L",
+      "Preis": "3.90"
     },
     {
-      "Kategorie": "Biere",
-      "Name": "Weißbier",
-      "Beschreibung": "",
-      "Menge": "0,5L",
+      "Kategorie": "Antialkoholisches",
+      "Name": "Softgetränke",
+      "Beschreibung": "Cola ohne/mit, Spezi, Limo, Saftschorlen",
+      "Menge": "0,4L",
       "Preis": "4.00"
     },
     {
-      "Kategorie": "Alkoholfreies",
-      "Name": "Ananassaft",
-      "Beschreibung": "",
+      "Kategorie": "Antialkoholisches",
+      "Name": "Säfte",
+      "Beschreibung": "Orange, Apfel, Sauerkirsch, Ananas, Johannisbeer, Maracuja",
       "Menge": "0,2L",
       "Preis": "2.90"
     },
     {
-      "Kategorie": "Alkoholfreies",
-      "Name": "Apfelsaft",
-      "Beschreibung": "",
-      "Menge": "0,2L",
-      "Preis": "2.90"
-    },
-    {
-      "Kategorie": "Alkoholfreies",
-      "Name": "Johannisbeersaft",
-      "Beschreibung": "",
-      "Menge": "0,2L",
-      "Preis": "2.90"
-    },
-    {
-      "Kategorie": "Alkoholfreies",
-      "Name": "Maracujasaft",
-      "Beschreibung": "",
-      "Menge": "0,2L",
-      "Preis": "2.90"
-    },
-    {
-      "Kategorie": "Alkoholfreies",
-      "Name": "Mineralwasser Spritzig",
-      "Beschreibung": "",
-      "Menge": "0,7L",
-      "Preis": "7.00"
-    },
-    {
-      "Kategorie": "Alkoholfreies",
-      "Name": "Mineralwasser Spritzig",
-      "Beschreibung": "",
-      "Menge": "0,4L",
-      "Preis": "3.50"
-    },
-    {
-      "Kategorie": "Alkoholfreies",
-      "Name": "Mineralwasser Still",
-      "Beschreibung": "",
-      "Menge": "0,7L",
-      "Preis": "7.00"
-    },
-    {
-      "Kategorie": "Alkoholfreies",
-      "Name": "Mineralwasser Still",
-      "Beschreibung": "",
-      "Menge": "0,4L",
-      "Preis": "3.50"
-    },
-    {
-      "Kategorie": "Alkoholfreies",
-      "Name": "Saftschorle",
-      "Beschreibung": "",
-      "Menge": "0,4L",
-      "Preis": "3.80"
-    },
-    {
-      "Kategorie": "Alkoholfreies",
-      "Name": "Sauerkirschsaft",
-      "Beschreibung": "",
-      "Menge": "0,2L",
-      "Preis": "2.90"
-    },
-    {
-      "Kategorie": "Softgetränke",
-      "Name": "Afri Cola",
-      "Beschreibung": "",
+      "Kategorie": "Antialkoholisches",
+      "Name": "Ginger",
+      "Beschreibung": "Ginger Ale, Ginger Beer",
       "Menge": "0,2L",
       "Preis": "3.80"
     },
     {
-      "Kategorie": "Softgetränke",
-      "Name": "Afri Cola Light",
-      "Beschreibung": "",
-      "Menge": "0,2L",
-      "Preis": "3.80"
-    },
-    {
-      "Kategorie": "Softgetränke",
-      "Name": "Orangenlimonade",
-      "Beschreibung": "",
-      "Menge": "0,4L",
-      "Preis": "3.80"
-    },
-    {
-      "Kategorie": "Softgetränke",
-      "Name": "Spezi",
-      "Beschreibung": "",
-      "Menge": "0,4L",
-      "Preis": "3.80"
-    },
-    {
-      "Kategorie": "Softgetränke",
-      "Name": "Zitronenlimonade",
-      "Beschreibung": "",
-      "Menge": "0,4L",
-      "Preis": "3.80"
-    },
-    {
-      "Kategorie": "Rosé",
-      "Name": "Ca dei Frait Rosé",
-      "Beschreibung": "",
-      "Menge": "0,2L",
-      "Preis": "7.50"
-    },
-    {
-      "Kategorie": "",
-      "Name": "",
-      "Beschreibung": "",
-      "Menge": "",
-      "Preis": ""
-    },
-    {
-      "Kategorie": "Rotwein",
-      "Name": "Primitivo di Manduria",
-      "Beschreibung": "",
-      "Menge": "0,2L",
-      "Preis": "8.00"
-    },
-    {
-      "Kategorie": "Schaumwein",
-      "Name": "Prosecco",
+      "Kategorie": "Antialkoholisches",
+      "Name": "Red Bull",
       "Beschreibung": "",
       "Menge": "0,2L",
       "Preis": "4.50"
     },
     {
-      "Kategorie": "",
-      "Name": "",
-      "Beschreibung": "",
-      "Menge": "",
-      "Preis": ""
-    },
-    {
-      "Kategorie": "Weißwein",
-      "Name": "Riesling",
-      "Beschreibung": "",
+      "Kategorie": "Wein",
+      "Name": "Weißwein L",
+      "Beschreibung": "Grauburgunder, Riesling",
       "Menge": "0,2L",
       "Preis": "6.50"
     },
     {
-      "Kategorie": "Aperitif",
-      "Name": "Aperol Spritz",
-      "Beschreibung": "",
-      "Menge": "1 Glas",
+      "Kategorie": "Wein",
+      "Name": "Weißwein XL",
+      "Beschreibung": "Lugana, Rosé",
+      "Menge": "0.2L",
+      "Preis": "7.50"
+    },
+    {
+      "Kategorie": "Wein",
+      "Name": "Rotwein L",
+      "Beschreibung": "Cabernet Sauvignon",
+      "Menge": "0,2L",
+      "Preis": "7.00"
+    },
+    {
+      "Kategorie": "Wein",
+      "Name": "Rotwein XL",
+      "Beschreibung": "Primitivo",
+      "Menge": "0,2L",
+      "Preis": "8.00"
+    },
+    {
+      "Kategorie": "Wein",
+      "Name": "Schaumwein",
+      "Beschreibung": "Prosecco, Winzersekt Riesling",
+      "Menge": "0,2L",
+      "Preis": "4.50"
+    },
+    {
+      "Kategorie": "Aperitiv",
+      "Name": "Aperitiv L",
+      "Beschreibung": "Aperol, Campari Soda, Lillet, Martini mit/ohne, Sherry Fino, Vermouth on the Rocks",
+      "Menge": "Glas",
       "Preis": "7.90"
     },
     {
-      "Kategorie": "Aperitif",
-      "Name": "Lillet Wildberry",
-      "Beschreibung": "",
-      "Menge": "1 Glas",
-      "Preis": "7.90"
+      "Kategorie": "Aperitiv",
+      "Name": "Aperitiv XL",
+      "Beschreibung": "Kir",
+      "Menge": "Glas",
+      "Preis": "9.50"
     },
     {
-      "Kategorie": "Heißgetränke Kaffee",
-      "Name": "Café Crema",
-      "Beschreibung": "Milder Kaffee mit einer dicken Crema, ideal für den Kaffeegenuss zwischendurch.",
-      "Menge": "Tasse",
-      "Preis": "3.50"
+      "Kategorie": "Aperitiv",
+      "Name": "Aperitiv XXL",
+      "Beschreibung": "Kir Royal",
+      "Menge": "Glas",
+      "Preis": "11.50"
     },
     {
-      "Kategorie": "Heißgetränke Kaffee",
-      "Name": "Cappuccino",
-      "Beschreibung": "Aromatischer Espresso mit cremigem Milchschaum, leicht bestäubt mit Kakao.",
-      "Menge": "Tasse",
-      "Preis": "3.50"
+      "Kategorie": "Cocktail",
+      "Name": "Cocktail 1",
+      "Beschreibung": "Gin Tonic, Moscow Mule",
+      "Menge": "Glas",
+      "Preis": "8.50"
     },
     {
-      "Kategorie": "Heißgetränke Kaffee",
-      "Name": "Doppio Espresso",
-      "Beschreibung": "Doppelte Portion Espresso für den extra starken Koffeinkick.",
-      "Menge": "Tasse",
-      "Preis": "3.50"
+      "Kategorie": "Cocktail",
+      "Name": "Cocktail 2",
+      "Beschreibung": "Negroni",
+      "Menge": "Glas",
+      "Preis": "9.00"
     },
     {
-      "Kategorie": "Heißgetränke Kaffee",
+      "Kategorie": "Cocktail",
+      "Name": "Cocktail 3",
+      "Beschreibung": "Highball, Whiskey Cola, French 75, Martini, Negroni, Tom Collins, Dark ´ n ´ Stormy",
+      "Menge": "Glas",
+      "Preis": "9.50"
+    },
+    {
+      "Kategorie": "Cocktail",
+      "Name": "Cocktail 4",
+      "Beschreibung": "Young Fashioned, Espresso Martini, White Russian",
+      "Menge": "Glas",
+      "Preis": "10.00"
+    },
+    {
+      "Kategorie": "Cocktail",
+      "Name": "Cocktail 5",
+      "Beschreibung": "Mojito, Whiskey Sour",
+      "Menge": "Glas",
+      "Preis": "11.00"
+    },
+    {
+      "Kategorie": "Cocktail",
+      "Name": "Cocktail 6",
+      "Beschreibung": "Mai Tai, Piña Colada, Margarita, Old Fashioned",
+      "Menge": "Glas",
+      "Preis": "12.00"
+    },
+    {
+      "Kategorie": "Longdrink",
+      "Name": "Longdrink L",
+      "Beschreibung": "Cuba Libre, Highball, Whiskey Cola",
+      "Menge": "Glas",
+      "Preis": "9.50"
+    },
+    {
+      "Kategorie": "Longdrink",
+      "Name": "Longdrink XL",
+      "Beschreibung": "Tequila Sunrise",
+      "Menge": "Glas\t",
+      "Preis": "12.00"
+    },
+    {
+      "Kategorie": "Heißgetränke",
       "Name": "Espresso",
-      "Beschreibung": "Intensiver, aromatischer Espresso für den perfekten Koffeinschub.",
+      "Beschreibung": "einfach ",
       "Menge": "Tasse",
       "Preis": "2.40"
     },
     {
-      "Kategorie": "Heißgetränke Kaffee",
-      "Name": "Latte Macchiato",
-      "Beschreibung": "Geschichteter Kaffee mit heißer Milch und Schaum, mild und cremig.",
-      "Menge": "Glas",
+      "Kategorie": "Heißgetränke",
+      "Name": "Kaffee",
+      "Beschreibung": "Cappuccino, Latte Macciato, Kaffee Crema, Espresso dopio, Milchkaffee",
+      "Menge": "Tasse",
       "Preis": "3.50"
     },
     {
-      "Kategorie": "Heißgetränke Tee",
-      "Name": "Claire | Kräuter",
-      "Beschreibung": "Claire liebt den zarten, leicht zitronigen Geschmack der Verveine. Weil dieser Kräutertee einfach lecker ist und guttut. Vor allem aber, weil sie der liebliche Geruch der Blätter an die herrlich duftenden Verveinefelder ihrer Großeltern erinnert, in denen sie an warmen Sommertagen mit ihren Geschwistern spielte. Kindheitserinnerungen können so gut schmecken!",
-      "Menge": "Glas",
+      "Kategorie": "Heißgetränke",
+      "Name": "Tee",
+      "Beschreibung": "alle Sorten",
+      "Menge": "Tasse",
       "Preis": "3.50"
-    },
-    {
-      "Kategorie": "Heißgetränke Tee",
-      "Name": "Hayato | Grüntee",
-      "Beschreibung": "Sencha gilt in Japan als das Getränk der Gastfreundschaft. Dem stimmt Hayato zu. Doch für ihn hat es eine besondere Bedeutung, wenn er die handverlesenen und frisch geernteten Blätter aus seinem Teegarten für uns zu einem frisch-duftigen Grüntee verarbeitet. Denn so kann er seine Gastfreundschaft an unsere Sencha-Genießer weitergeben. Recht hat er!Hayato-",
-      "Menge": "Glas",
-      "Preis": "3.50"
-    },
-    {
-      "Kategorie": "Heißgetränke Tee",
-      "Name": "Jinjin | Grüntee",
-      "Beschreibung": "Jinjin wuchs in einem kleinen chinesischen Dorf auf. Mit fünf Jahren aß sie das erste Mal eine saftige, reife Mango. Seitdem liebt sie diese aromatische Frucht. Die übrigen Dorfbewohner wissen um ihre Vorliebe und wann immer sie können, bringen sie Jinjin eine köstliche Mango. Jinjin hat darüber hinaus – wie übrigens auch die anderen Dorfbewohner – eine Vorliebe für Grüntee. Nun rate mal, welche Vorliebe wir von Pure Tea haben!",
-      "Menge": "Glas",
-      "Preis": "3.50"
-    },
-    {
-      "Kategorie": "Heißgetränke Tee",
-      "Name": "Nandil | Schwarzer Tee",
-      "Beschreibung": "Dass ein kleines Fleckchen im Norden Deutschlands weltweit den größten Teeverbrauch aufweisen soll, will Nandil gar nicht glauben. Schließlich hätten die Leute im indischen Assam eine ebenso große Vorliebe für den kräftigen Schwarztee. Aber eigentlich sei es ja egal, wo sein Assam mit der malzig-würzigen Note getrunken werde. Hauptsache, man finde Zeit, ihn zu genießen. Das tun wir – gerne zur „Teetide“, wie der Ostfriese sagt.",
-      "Menge": "Glas",
-      "Preis": "3.50"
-    },
-    {
-      "Kategorie": "Heißgetränke Tee",
-      "Name": "Annemarie | Früchtetee",
-      "Beschreibung": "Rote Grütze – ein leckerer, tiefroter Kompott aus saftigen Beeren. Das beliebteste Dessert Norddeutschlands. Jede Familie hat ihr ureigenes, gut behütetes Rezept. So auch Annemarie. Das Beste: Ihre Rote Grütze mit dem feinen, fruchtigen, süßsauren Geschmack kann man jederzeit genießen – in Form unseres aromatischen Früchtetees.",
-      "Menge": "Glas",
-      "Preis": "3.50"
-    },
-    {
-      "Kategorie": "Heißgetränke Tee",
-      "Name": "Namira | Pfefferminze",
-      "Beschreibung": "Namira hat in Europa studiert, doch am allerliebsten lebt sie in ihrer nordafrikanischen Heimat. Zwischen Palmen, Kamelen und duftenden Feldern mit aromatischer Pfefferminze. Denn Minze ist ein fester Bestandteil der kulinarischen Tradition ihres Landes. Sie freut sich, auch uns daran teilhaben zu lassen. Und wir von Pure Tea freuen uns, solch einen intensiven Pfefferminztee anbieten zu können.",
-      "Menge": "Glas",
-      "Preis": "3.50"
-    },
-    {
-      "Kategorie": "Heißgetränke Tee",
-      "Name": "Traudl | Almkräuter",
-      "Beschreibung": "Wenn Traudl sich von der Alm auf den Heimweg begibt, findet sie am Wegesrand eine unglaubliche Vielfalt an heimischen Kräutern: Spitzwegerich, Klettenwurzel, Kamillenblüten und Löwenzahn, unter anderem. Zuhause kocht sie sich daraus eine große Kanne heißen Tee. Dies ist unsere gemütliche Wohlfühlmischung, ganz nach Traudls Geschmack",
-      "Menge": "Glas",
-      "Preis": "3.50"
-    },
-    {
-      "Kategorie": "Heißgetränke Tee",
-      "Name": "Bongani | Rooibos Vanille",
-      "Beschreibung": "Bongani liebt die einzigartige Natur der südafrikanischen Zederberge. Seine Heimat ist bekannt für den Anbau des Rotbuschs – dem Rooibos. Mit viel Fingerspitzengefühl verarbeitet er die feinen Zweige der frischen Ernte zu einem karamellig-milden Rooibos-Tee. Alles, was wir noch hinzufügen, ist ein sanfter Hauch von Vanille. Lecker!",
-      "Menge": "Glas",
-      "Preis": "3.50"
-    },
-    {
-      "Kategorie": "Heißgetränke Tee",
-      "Name": "Sarala | Chai",
-      "Beschreibung": "Schon als Kind wollte Sarala so werden wie ihr Vater, ein Chaiwala mit eigenem Teestand. Eine Herausforderung, denn traditionell ist diese Arbeit Männern vorbehalten. Heute hat sie es geschafft. Die Leute lieben ihre ‚Chaiwali‘ – ihre Teefrau. Und ihren würzigen Chai, den sie mit viel Liebe nach ihrem eigenen Rezept zubereitet. Und wir lieben Sarala, weil sie uns die Rezeptur für die Gewürzmischung dieses Chaitees verraten hat.",
-      "Menge": "Glas",
-      "Preis": "3.50"
-    },
-    {
-      "Kategorie": "Cocktail",
-      "Name": "",
-      "Beschreibung": "Für Ihre Veranstaltung nicht vorgesehen",
-      "Menge": "",
-      "Preis": ""
     }
   ]
 }
