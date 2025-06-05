@@ -459,11 +459,11 @@ window.deleteProject = async function () {
                 const preis = item.querySelector('.info').textContent.split('|')[3].trim().substring(1);
                 total += parseFloat(preis) * parseInt(zaehler);
             }
-            document.getElementById('total').textContent = `Gesamt: €${total.toFixed(2)}`;
+            document.getElementById('total').textContent = `€${total.toFixed(2)}`;
         }
 
         function updateProjectNameDisplay(projektname) {
-            document.getElementById('project-name').textContent = `Projekt: ${projektname}`;
+            document.getElementById('project-name').textContent = projektname;
         }
 
         window.sendData = async function() {
