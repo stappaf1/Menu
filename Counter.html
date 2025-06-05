@@ -112,6 +112,7 @@
             <button onclick="openProject()">OPEN</button>
             <button onclick="sendData()">SEND</button>
             <button onclick="renameProject()">RENAME</button>
+            <button onclick="deleteProject()">DEL</button> <!-- 👈 NEU -->
         </div>
         <div>
             <div id="total">SUM: €0.00</div>
@@ -271,6 +272,52 @@
         alert("Fehler beim Umbenennen.");
     }
 };
+
+
+
+window.deleteProject = async function () {
+    if (!currentProject) {
+        alert("Kein Projekt geöffnet.");
+        return;
+    }
+
+    const projectRef = ref(database, `/projekte/${currentProject}/getraenke`);
+    try {
+        const snapshot = await get(projectRef);
+        if (!snapshot.exists()) {
+            alert("Projekt ist leer oder nicht vorhanden.");
+            return;
+        }
+
+        const data = snapshot.val();
+        const hatGezählteArtikel = Object.values(data).some(item => item.Zaehler > 0);
+
+        if (hatGezählteArtikel) {
+            alert("Es sind bereits Artikel gezählt.");
+            return;
+        }
+
+        const confirmed = confirm(`Projekt "${currentProject}" wirklich löschen?`);
+        if (!confirmed) return;
+
+        await update(ref(database), { [`/projekte/${currentProject}`]: null });
+        currentProject = '';
+        document.getElementById('getraenke-container').innerHTML = '';
+        document.getElementById('project-name').textContent = '';
+        document.getElementById('total').textContent = 'SUM: €0.00';
+
+        alert("Projekt wurde gelöscht.");
+    } catch (error) {
+        console.error("Fehler beim Löschen des Projekts:", error);
+        alert("Fehler beim Löschen.");
+    }
+};
+
+
+
+
+
+
         
         
         
