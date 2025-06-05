@@ -158,15 +158,59 @@
         }
 
         window.createNewProject = async function() {
-            const projektname = prompt("Bitte Projektname eingeben:");
-            if (projektname) {
-                const sanitizedProjektname = sanitizeProjectName(projektname);
-                currentProject = sanitizedProjektname;
-                await initializeDrinksInDatabase(sanitizedProjektname);
-                await loadDrinksFromDatabase(sanitizedProjektname);
-                updateProjectNameDisplay(sanitizedProjektname);  // Aktualisiert die Kopfzeile mit dem Projektnamen
-            }
-        };
+    // 1. Veranstaltungsdatum abfragen
+    const heute = new Date().toISOString().split("T")[0]; // Format: YYYY-MM-DD
+    const datumInput = document.createElement("input");
+    datumInput.type = "date";
+    datumInput.value = heute;
+
+    const datumDialog = document.createElement("div");
+    datumDialog.style.position = "fixed";
+    datumDialog.style.top = "50%";
+    datumDialog.style.left = "50%";
+    datumDialog.style.transform = "translate(-50%, -50%)";
+    datumDialog.style.background = "#fff";
+    datumDialog.style.padding = "20px";
+    datumDialog.style.border = "1px solid #ccc";
+    datumDialog.style.zIndex = 9999;
+
+    const submitBtn = document.createElement("button");
+    submitBtn.textContent = "Weiter";
+    submitBtn.style.marginLeft = "10px";
+
+    datumDialog.innerHTML = "<label>Veranstaltungsdatum: </label>";
+    datumDialog.appendChild(datumInput);
+    datumDialog.appendChild(submitBtn);
+    document.body.appendChild(datumDialog);
+
+    submitBtn.onclick = async () => {
+        const datum = datumInput.value; // Format: yyyy-mm-dd
+
+        if (!datum) {
+            alert("Bitte ein Datum wählen.");
+            return;
+        }
+
+        document.body.removeChild(datumDialog);
+
+        // 2. Projektname abfragen
+        const projektname = prompt("Bitte Projektname eingeben (z. B. Meier):");
+        if (!projektname) return;
+
+        // 3. Datum formatieren zu dd.mm.yy
+        const [yyyy, mm, dd] = datum.split("-");
+        const formatiertesDatum = `${dd}.${mm}.${yyyy.slice(2)}`;
+
+        // 4. Projektname zusammensetzen
+        const kombinierterName = `${formatiertesDatum} ${projektname}`;
+        const sanitizedProjektname = sanitizeProjectName(kombinierterName);
+        currentProject = sanitizedProjektname;
+
+        await initializeDrinksInDatabase(sanitizedProjektname);
+        await loadDrinksFromDatabase(sanitizedProjektname);
+        updateProjectNameDisplay(kombinierterName); // Anzeige NICHT sanitizen
+    };
+};
 
         window.openProject = async function() {
             try {
