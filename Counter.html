@@ -158,7 +158,7 @@
                 .toLowerCase();
         }
 
-        window.createNewProject = async function() {
+window.createNewProject = async function () {
     // 1. Veranstaltungsdatum abfragen
     const heute = new Date().toISOString().split("T")[0]; // Format: YYYY-MM-DD
     const datumInput = document.createElement("input");
@@ -185,8 +185,7 @@
     document.body.appendChild(datumDialog);
 
     submitBtn.onclick = async () => {
-        const datum = datumInput.value; // Format: yyyy-mm-dd
-
+        const datum = datumInput.value; // yyyy-mm-dd
         if (!datum) {
             alert("Bitte ein Datum wählen.");
             return;
@@ -198,18 +197,19 @@
         const projektname = prompt("Bitte Projektname eingeben (z. B. Meier):");
         if (!projektname) return;
 
-        // 3. Datum formatieren zu dd.mm.yy
+        // 3. Datum formatieren zu 25.05.30
         const [yyyy, mm, dd] = datum.split("-");
-        const formatiertesDatum = `${dd}.${mm}.${yyyy.slice(2)}`;
+        const datumUmgestellt = `${yyyy.slice(2)}.${mm}.${dd}`; // z. B. 25.05.30
 
-        // 4. Projektname zusammensetzen
-        const kombinierterName = `${formatiertesDatum} ${projektname}`;
-        const sanitizedProjektname = sanitizeProjectName(kombinierterName);
-        currentProject = sanitizedProjektname;
+        // 4. Lesbarer Projektname & Firebase-Key zusammensetzen
+        const lesbarerName = `${projektname} ${datumUmgestellt}`;
+        const firebaseKey = sanitizeProjectName(lesbarerName);
 
-        await initializeDrinksInDatabase(sanitizedProjektname);
-        await loadDrinksFromDatabase(sanitizedProjektname);
-        updateProjectNameDisplay(kombinierterName); // Anzeige NICHT sanitizen
+        currentProject = firebaseKey;
+
+        await initializeDrinksInDatabase(firebaseKey);
+        await loadDrinksFromDatabase(firebaseKey);
+        updateProjectNameDisplay(lesbarerName); // Anzeige (z. B. Meier 25.05.30)
     };
 };
 
