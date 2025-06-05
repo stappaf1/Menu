@@ -187,6 +187,50 @@
                 alert("Fehler beim Abrufen der Projekte.");
             }
         };
+        
+        
+        window.renameProject = async function () {
+    if (!currentProject) {
+        alert("Kein Projekt geöffnet.");
+        return;
+    }
+
+    const neuerName = prompt("Neuer Projektname:", currentProject);
+    if (!neuerName || neuerName === currentProject) return;
+
+    const sanitizedNewName = sanitizeProjectName(neuerName);
+    const oldRef = ref(database, `/projekte/${currentProject}`);
+    const newRef = ref(database, `/projekte/${sanitizedNewName}`);
+
+    try {
+        const snapshot = await get(oldRef);
+        if (!snapshot.exists()) {
+            alert("Aktuelles Projekt konnte nicht gefunden werden.");
+            return;
+        }
+
+        const exists = await get(newRef);
+        if (exists.exists()) {
+            alert("Ein Projekt mit diesem Namen existiert bereits.");
+            return;
+        }
+
+        // Kopieren und löschen
+        await update(ref(database), { [`/projekte/${sanitizedNewName}`]: snapshot.val() });
+        await update(ref(database), { [`/projekte/${currentProject}`]: null });
+
+        currentProject = sanitizedNewName;
+        updateProjectNameDisplay(sanitizedNewName);
+        alert("Projektname wurde erfolgreich geändert.");
+    } catch (error) {
+        console.error("Fehler beim Umbenennen:", error);
+        alert("Fehler beim Umbenennen.");
+    }
+};
+        
+        
+        
+        
 
         async function fetchProjects() {
             const snapshot = await get(ref(database, '/projekte'));
