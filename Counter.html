@@ -151,12 +151,17 @@
 
         let currentProject = '';  
 
-        function sanitizeProjectName(projektname) {
-            return projektname
-                .replace(/[.#$\[\]]/g, '-')
-                .replace(/\s+/g, '_')
-                .toLowerCase();
-        }
+       function sanitizeProjectName(projektname) {
+    return projektname
+        .replace(/\./g, '-')     // Punkt → Bindestrich
+        .replace(/#/g, '(at)')   // Hash → (at)
+        .replace(/\$/g, 'USD')   // Dollar → USD
+        .replace(/\[/g, '(')     // eckige Klammer auf → (
+        .replace(/\]/g, ')')     // eckige Klammer zu → )
+        .replace(/\//g, '-')     // Slash → Bindestrich
+        .replace(/\s+/g, '_')    // Leerzeichen → Unterstrich
+        .toLowerCase();          // alles kleinschreiben
+}
 
 window.createNewProject = async function () {
     // 1. Veranstaltungsdatum abfragen
