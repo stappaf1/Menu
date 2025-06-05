@@ -152,8 +152,8 @@
 
         function sanitizeProjectName(projektname) {
             return projektname
-                .replace(/[.#$\[\]]/g, '_')
-                .replace(/\s+/g, '-')
+                .replace(/[.#$\[\]]/g, '-')
+                .replace(/\s+/g, '_')
                 .toLowerCase();
         }
 
