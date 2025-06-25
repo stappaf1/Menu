@@ -75,18 +75,18 @@
       "Name": "Alkoholfreies Bier - Helles - Weißbier",
       "Beschreibung": " ",
       "Menge": "0.5",
-      "Preis": "4.00"
+      "Preis": "4.50"
     },
     {
       "Kategorie": "Biere",
       "Name": "Fassbier -- Helles - Weißbier",
       "Beschreibung": " ",
       "Menge": "0.5",
-      "Preis": "4.00"
+      "Preis": "4.50"
     },
     {
       "Kategorie": "Biere",
-      "Name": "Flaschenbier - Bio-Helles - Dunkles",
+      "Name": "Flaschenbier - Dunkles",
       "Beschreibung": " ",
       "Menge": "0.5",
       "Preis": "4.50"
