@@ -1,8 +1,24 @@
 {
   "speisen": [
     {
+      "Kategorie": "Vorspeisen Etajere",
+      "Name": "Vitello Tonnato vom Kalb in Thunfischsauce mit Kapern",
+      "Beschreibung": " ",
+      "Menge": " ",
+      "Preis": " ",
+      "": ""
+    },
+    {
       "Kategorie": "",
-      "Name": "",
+      "Name": "Saisonales Anti-Pasti-Gemüse mit Walnuss-Minz Pesto ",
+      "Beschreibung": " ",
+      "Menge": " ",
+      "Preis": " ",
+      "": ""
+    },
+    {
+      "Kategorie": "",
+      "Name": "Burata auf Tomatenbeet",
       "Beschreibung": " ",
       "Menge": " ",
       "Preis": " ",
@@ -17,24 +33,32 @@
       "": ""
     },
     {
-      "Kategorie": "",
-      "Name": "",
-      "Beschreibung": " ",
-      "Menge": " ",
-      "Preis": " ",
+      "Kategorie": "Hauptspeisen",
+      "Name": "Kalbtafelspitz an Portweinjus mit glacierten Karotten an Kartoffelgratin",
+      "Beschreibung": "",
+      "Menge": "",
+      "Preis": "",
       "": ""
     },
     {
       "Kategorie": "",
-      "Name": "",
-      "Beschreibung": " ",
-      "Menge": " ",
-      "Preis": " ",
+      "Name": "Saltimbocca vom Maishendl an Portweinjus mit glacierten Karotten an Kartoffelgratin",
+      "Beschreibung": "",
+      "Menge": "",
+      "Preis": "",
       "": ""
     },
     {
       "Kategorie": "",
-      "Name": "",
+      "Name": "Bömlo Lachs an einer Meerrettich-Sahne mit Belugalinsen & Radieschen",
+      "Beschreibung": "",
+      "Menge": "",
+      "Preis": "",
+      "": ""
+    },
+    {
+      "Kategorie": "",
+      "Name": "Raviolies vom schwarzen Trüffel an Permesanschaum & Trüffelöl",
       "Beschreibung": "",
       "Menge": "",
       "Preis": "",
@@ -49,8 +73,8 @@
       "": ""
     },
     {
-      "Kategorie": "",
-      "Name": "",
+      "Kategorie": "Dessert",
+      "Name": "Kaiserschmarrn mit Zwetschgenröster",
       "Beschreibung": "",
       "Menge": "",
       "Preis": "",
@@ -58,7 +82,7 @@
     },
     {
       "Kategorie": "",
-      "Name": "",
+      "Name": "Créme Brúlée von der Tonkabohne ",
       "Beschreibung": "",
       "Menge": "",
       "Preis": "",
@@ -66,31 +90,7 @@
     },
     {
       "Kategorie": "",
-      "Name": "",
-      "Beschreibung": "",
-      "Menge": "",
-      "Preis": "",
-      "": ""
-    },
-    {
-      "Kategorie": "",
-      "Name": "",
-      "Beschreibung": "",
-      "Menge": "",
-      "Preis": "",
-      "": ""
-    },
-    {
-      "Kategorie": "",
-      "Name": "",
-      "Beschreibung": "",
-      "Menge": "",
-      "Preis": "",
-      "": ""
-    },
-    {
-      "Kategorie": "",
-      "Name": "",
+      "Name": "Kleiner Schokoladenbrownie mit geschlagener Sahne",
       "Beschreibung": "",
       "Menge": "",
       "Preis": "",
