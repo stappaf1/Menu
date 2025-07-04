@@ -169,10 +169,10 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "27.06.25",
+      "DATUM": "04.07.25",
       "VON": "08:00",
       "BIS": "17:00",
-      "KUNDE": "Bachner Elektro",
+      "KUNDE": "Danpower",
       "EVENT": "Tagung",
       "TEILNEHMER": "",
       "TAGUNGSRAUM": "ecoCentrum T90",
@@ -181,11 +181,11 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "28.06.25",
-      "VON": "17:30",
+      "DATUM": "",
+      "VON": "",
       "BIS": "",
-      "KUNDE": "TIP TOP",
-      "EVENT": "Hochzeit",
+      "KUNDE": "",
+      "EVENT": "",
       "TEILNEHMER": "",
       "TAGUNGSRAUM": "ecoPlenum T200",
       "RAUMHINWEIS": "",
