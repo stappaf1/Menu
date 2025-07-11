@@ -301,11 +301,11 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "11.07.2025",
-      "VON": "08:00",
-      "BIS": "15:00",
-      "KUNDE": "Daiichi",
-      "EVENT": "Tagung",
+      "DATUM": "",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "",
+      "EVENT": "",
       "TEILNEHMER": "",
       "TAGUNGSRAUM": "ecoPlenum T200",
       "RAUMHINWEIS": "",
@@ -322,6 +322,18 @@
       "TAGUNGSRAUM": "ecoRefugium T30",
       "RAUMHINWEIS": "",
       "BILD": "T30.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "11.07.25",
+      "VON": "08:00",
+      "BIS": "15:00",
+      "KUNDE": "Daiichi",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoPlenum T200",
+      "RAUMHINWEIS": "",
+      "BILD": "T200-Business.jpeg",
       "BEMERKUNG": ""
     }
   ]
