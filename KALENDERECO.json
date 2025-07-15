@@ -335,6 +335,30 @@
       "RAUMHINWEIS": "",
       "BILD": "T200-Business.jpeg",
       "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "15.07.25",
+      "VON": "09:00",
+      "BIS": "16:00",
+      "KUNDE": "Bayernwerk",
+      "EVENT": "",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "",
+      "BILD": "T90.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "15.07.25",
+      "VON": "09:00",
+      "BIS": "16:00",
+      "KUNDE": "Bayernwerk",
+      "EVENT": "",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoForum T120",
+      "RAUMHINWEIS": "",
+      "BILD": "T120.jpeg",
+      "BEMERKUNG": ""
     }
   ]
 }
