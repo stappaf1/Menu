@@ -241,18 +241,6 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "09.07.25",
-      "VON": "08:00",
-      "BIS": "16:30",
-      "KUNDE": "VR-Bank",
-      "EVENT": "Tagung",
-      "TEILNEHMER": "",
-      "TAGUNGSRAUM": "ecoCentrum T90",
-      "RAUMHINWEIS": "",
-      "BILD": "T90.jpeg",
-      "BEMERKUNG": ""
-    },
-    {
       "DATUM": "10.07.25",
       "VON": "08:00",
       "BIS": "18:00",
@@ -389,6 +377,18 @@
       "VON": "09:00",
       "BIS": "16:00",
       "KUNDE": "Bachner Elektro ",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "",
+      "BILD": "T90.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "11.08.25",
+      "VON": "09:00",
+      "BIS": "19:00",
+      "KUNDE": "WTS Group AG",
       "EVENT": "Tagung",
       "TEILNEHMER": "",
       "TAGUNGSRAUM": "ecoCentrum T90",
