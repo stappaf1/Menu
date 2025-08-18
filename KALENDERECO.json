@@ -419,6 +419,18 @@
       "RAUMHINWEIS": "",
       "BILD": "T90.jpeg",
       "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "18.08.25",
+      "VON": "09:00",
+      "BIS": "",
+      "KUNDE": "MAWA",
+      "EVENT": "",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoRefugium T30",
+      "RAUMHINWEIS": "",
+      "BILD": "T30.jpeg",
+      "BEMERKUNG": ""
     }
   ]
 }
