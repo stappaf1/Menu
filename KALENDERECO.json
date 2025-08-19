@@ -431,6 +431,138 @@
       "RAUMHINWEIS": "",
       "BILD": "T30.jpeg",
       "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "20.08.25",
+      "VON": "09:00",
+      "BIS": "16:00",
+      "KUNDE": "MBDA",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoRefugium T30",
+      "RAUMHINWEIS": "",
+      "BILD": "T30.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "21.08.25",
+      "VON": "09:00",
+      "BIS": "16:00",
+      "KUNDE": "MBDA",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoRefugium T30",
+      "RAUMHINWEIS": "",
+      "BILD": "T30.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "25.08.25",
+      "VON": "08:00",
+      "BIS": "17:00",
+      "KUNDE": "Käfer Deutschland ",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "",
+      "BILD": "T90.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "26.08.25",
+      "VON": "08:00",
+      "BIS": "17:00",
+      "KUNDE": "Käfer Deutschland ",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "",
+      "BILD": "T90.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "30.08.25",
+      "VON": "08:00",
+      "BIS": "17:00",
+      "KUNDE": "Pallas Seminare",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "",
+      "BILD": "T90.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "04.09.25",
+      "VON": "09:00",
+      "BIS": "17:00",
+      "KUNDE": "Rossmann GmbH",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "",
+      "BILD": "T90.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "06.09.25",
+      "VON": "13:00",
+      "BIS": "24:00:00",
+      "KUNDE": "Fam. Kaltenbrunner",
+      "EVENT": "Hochzeit",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoPlenum T200",
+      "RAUMHINWEIS": "",
+      "BILD": "T200-1.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "09.09.25",
+      "VON": "08:00",
+      "BIS": "16:00",
+      "KUNDE": "Comlog",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoRefugium T30",
+      "RAUMHINWEIS": "",
+      "BILD": "T30.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "09.09.25",
+      "VON": "08:00",
+      "BIS": "16:00",
+      "KUNDE": "Comlog",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoRefugium T30",
+      "RAUMHINWEIS": "",
+      "BILD": "T30.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "09.09.25",
+      "VON": "08:00",
+      "BIS": "16:00",
+      "KUNDE": "Comlog",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "",
+      "BILD": "T90.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "09.09.25",
+      "VON": "08:00",
+      "BIS": "16:00",
+      "KUNDE": "MVTec",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoForum T120",
+      "RAUMHINWEIS": "",
+      "BILD": "T120.jpeg",
+      "BEMERKUNG": ""
     }
   ]
 }
