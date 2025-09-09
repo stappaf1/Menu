@@ -575,6 +575,30 @@
       "RAUMHINWEIS": "",
       "BILD": "T90.jpeg",
       "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "12.09.25",
+      "VON": "08:00",
+      "BIS": "16:00",
+      "KUNDE": "MVTec",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoForum T120",
+      "RAUMHINWEIS": "",
+      "BILD": "T120.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "13.09.25",
+      "VON": "08:00",
+      "BIS": "16:00",
+      "KUNDE": "MVTec",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoForum T120",
+      "RAUMHINWEIS": "",
+      "BILD": "T120.jpeg",
+      "BEMERKUNG": ""
     }
   ]
 }
