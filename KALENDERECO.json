@@ -1,7 +1,7 @@
 {
   "events": [
     {
-      "DATUM": "04.06.25",
+      "": "04.06.25",
       "VON": "08:00",
       "BIS": "18:00",
       "KUNDE": "ERGO Group AG",
@@ -13,7 +13,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "04.06.25",
+      "": "04.06.25",
       "VON": "08:00",
       "BIS": "18:00",
       "KUNDE": "ERGO Group AG",
@@ -25,7 +25,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "04.06.25",
+      "": "04.06.25",
       "VON": "08:00",
       "BIS": "18:00",
       "KUNDE": "ERGO Group AG",
@@ -37,7 +37,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "04.06.25",
+      "": "04.06.25",
       "VON": "16:30",
       "BIS": "18:00",
       "KUNDE": "ERGO Group AG",
@@ -49,7 +49,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "05.06.25",
+      "": "05.06.25",
       "VON": "08:00",
       "BIS": "15:30",
       "KUNDE": "ERGO Group AG",
@@ -61,7 +61,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "05.06.25",
+      "": "05.06.25",
       "VON": "08:00",
       "BIS": "15:30",
       "KUNDE": "ERGO Group AG",
@@ -73,7 +73,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "05.06.25",
+      "": "05.06.25",
       "VON": "08:00",
       "BIS": "15:30",
       "KUNDE": "ERGO Group AG",
@@ -85,7 +85,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "05.06.25",
+      "": "05.06.25",
       "VON": "08:00",
       "BIS": "15:30",
       "KUNDE": "ERGO Group AG",
@@ -97,7 +97,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "07.06.25",
+      "": "07.06.25",
       "VON": "14:00",
       "BIS": "00:00",
       "KUNDE": "Hochzeit Hoffmann",
@@ -109,7 +109,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "10.06.25",
+      "": "10.06.25",
       "VON": "08:00",
       "BIS": "17:00",
       "KUNDE": "Wipfler Plan ",
@@ -121,7 +121,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "21.06.25",
+      "": "21.06.25",
       "VON": "12:00",
       "BIS": "00:00",
       "KUNDE": "Hochzeit Fam. Grimm",
@@ -133,7 +133,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "25.06.25",
+      "": "25.06.25",
       "VON": "08:00",
       "BIS": "17:00",
       "KUNDE": "Allianz ",
@@ -145,7 +145,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "26.06.25",
+      "": "26.06.25",
       "VON": "08:00",
       "BIS": "17:00",
       "KUNDE": "Allianz ",
@@ -157,7 +157,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "03.07.25",
+      "": "03.07.25",
       "VON": "09:00",
       "BIS": "16:00",
       "KUNDE": "Wüstenrot",
@@ -169,7 +169,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "04.07.25",
+      "": "04.07.25",
       "VON": "08:00",
       "BIS": "17:00",
       "KUNDE": "Danpower",
@@ -181,7 +181,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "08.07.25",
+      "": "08.07.25",
       "VON": "",
       "BIS": "",
       "KUNDE": "VR-Bank",
@@ -193,7 +193,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "08.07.25",
+      "": "08.07.25",
       "VON": "",
       "BIS": "",
       "KUNDE": "Wüstenrot",
@@ -205,7 +205,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "09.07.25",
+      "": "09.07.25",
       "VON": "09:00",
       "BIS": "18:00",
       "KUNDE": "Daiichi",
@@ -217,7 +217,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "09.07.25",
+      "": "09.07.25",
       "VON": "09:00",
       "BIS": "18:00",
       "KUNDE": "Daiichi",
@@ -229,7 +229,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "09.07.25",
+      "": "09.07.25",
       "VON": "08:00",
       "BIS": "18:00",
       "KUNDE": "AWO",
@@ -241,7 +241,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "10.07.25",
+      "": "10.07.25",
       "VON": "08:00",
       "BIS": "18:00",
       "KUNDE": "Daiichi",
@@ -253,7 +253,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "10.07.25",
+      "": "10.07.25",
       "VON": "08:00",
       "BIS": "18:00",
       "KUNDE": "Daiichi",
@@ -265,7 +265,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "10.07.25",
+      "": "10.07.25",
       "VON": "08:00",
       "BIS": "16:30",
       "KUNDE": "AWO",
@@ -277,7 +277,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "10.07.25",
+      "": "10.07.25",
       "VON": "08:00",
       "BIS": "16:30",
       "KUNDE": "Allianz ",
@@ -289,7 +289,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "",
+      "": "",
       "VON": "",
       "BIS": "",
       "KUNDE": "",
@@ -301,7 +301,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "11.07.25",
+      "": "11.07.25",
       "VON": "08:00",
       "BIS": "15:00",
       "KUNDE": "Daiichi",
@@ -313,7 +313,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "11.07.25",
+      "": "11.07.25",
       "VON": "08:00",
       "BIS": "15:00",
       "KUNDE": "Daiichi",
@@ -325,7 +325,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "15.07.25",
+      "": "15.07.25",
       "VON": "09:00",
       "BIS": "16:00",
       "KUNDE": "Bayernwerk",
@@ -337,7 +337,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "15.07.25",
+      "": "15.07.25",
       "VON": "09:00",
       "BIS": "16:00",
       "KUNDE": "Bayernwerk",
@@ -349,7 +349,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "23.07.25",
+      "": "23.07.25",
       "VON": "09:00",
       "BIS": "16:00",
       "KUNDE": "Tyczka Air Gases",
@@ -361,7 +361,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "23.07.25",
+      "": "23.07.25",
       "VON": "09:00",
       "BIS": "16:00",
       "KUNDE": "Miele",
@@ -373,7 +373,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "28.07.25",
+      "": "28.07.25",
       "VON": "09:00",
       "BIS": "16:00",
       "KUNDE": "Bachner Elektro ",
@@ -385,7 +385,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "11.08.25",
+      "": "11.08.25",
       "VON": "09:00",
       "BIS": "19:00",
       "KUNDE": "WTS Group AG",
@@ -397,7 +397,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "12.08.25",
+      "": "12.08.25",
       "VON": "09:00",
       "BIS": "19:00",
       "KUNDE": "WTS Group AG",
@@ -409,7 +409,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "13.08.25",
+      "": "13.08.25",
       "VON": "09:00",
       "BIS": "19:00",
       "KUNDE": "WTS Group AG",
@@ -421,7 +421,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "18.08.25",
+      "": "18.08.25",
       "VON": "09:00",
       "BIS": "",
       "KUNDE": "MAWA",
@@ -433,7 +433,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "20.08.25",
+      "": "20.08.25",
       "VON": "09:00",
       "BIS": "16:00",
       "KUNDE": "MBDA",
@@ -445,7 +445,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "21.08.25",
+      "": "21.08.25",
       "VON": "09:00",
       "BIS": "16:00",
       "KUNDE": "MBDA",
@@ -457,7 +457,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "25.08.25",
+      "": "25.08.25",
       "VON": "08:00",
       "BIS": "17:00",
       "KUNDE": "Käfer Deutschland ",
@@ -469,7 +469,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "27.08.25",
+      "": "27.08.25",
       "VON": "08:00",
       "BIS": "12:00",
       "KUNDE": "Käfer Deutschland ",
@@ -481,7 +481,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "30.08.25",
+      "": "30.08.25",
       "VON": "08:00",
       "BIS": "17:00",
       "KUNDE": "Pallas Seminare",
@@ -493,7 +493,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "04.09.25",
+      "": "04.09.25",
       "VON": "09:00",
       "BIS": "17:00",
       "KUNDE": "Rossmann GmbH",
@@ -505,7 +505,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "06.09.25",
+      "": "06.09.25",
       "VON": "13:00",
       "BIS": "24:00:00",
       "KUNDE": "Fam. Kaltenbrunner",
@@ -517,7 +517,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "09.09.25",
+      "": "09.09.25",
       "VON": "08:00",
       "BIS": "16:00",
       "KUNDE": "Comlog",
@@ -529,7 +529,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "10.09.25",
+      "": "10.09.25",
       "VON": "08:00",
       "BIS": "16:00",
       "KUNDE": "Comlog",
@@ -541,7 +541,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "11.09.25",
+      "": "11.09.25",
       "VON": "08:00",
       "BIS": "16:00",
       "KUNDE": "Comlog",
@@ -553,7 +553,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "11.09.25",
+      "": "11.09.25",
       "VON": "08:00",
       "BIS": "16:00",
       "KUNDE": "MVTec",
@@ -565,19 +565,19 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "",
-      "VON": "",
-      "BIS": "",
-      "KUNDE": "",
-      "EVENT": "",
+      "": "12.09.25",
+      "VON": "08:00",
+      "BIS": "16:00",
+      "KUNDE": "Comlog",
+      "EVENT": "Tagung",
       "TEILNEHMER": "",
-      "TAGUNGSRAUM": "",
+      "TAGUNGSRAUM": "ecoCentrum T90",
       "RAUMHINWEIS": "",
-      "BILD": "",
+      "BILD": "T90.jpeg",
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "12.09.25",
+      "": "12.09.25",
       "VON": "08:00",
       "BIS": "16:00",
       "KUNDE": "MVTec",
@@ -589,7 +589,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "13.09.25",
+      "": "13.09.25",
       "VON": "08:00",
       "BIS": "16:00",
       "KUNDE": "MVTec",
@@ -601,7 +601,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "14.09.25",
+      "": "14.09.25",
       "VON": "",
       "BIS": "",
       "KUNDE": "Plansee",
@@ -613,7 +613,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "14.09.25",
+      "": "14.09.25",
       "VON": "",
       "BIS": "",
       "KUNDE": "Plansee",
@@ -625,7 +625,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "14.09.25",
+      "": "14.09.25",
       "VON": "",
       "BIS": "",
       "KUNDE": "Plansee",
@@ -637,7 +637,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "15.09.25",
+      "": "15.09.25",
       "VON": "",
       "BIS": "",
       "KUNDE": "Plansee",
@@ -649,7 +649,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "15.09.25",
+      "": "15.09.25",
       "VON": "",
       "BIS": "",
       "KUNDE": "Plansee",
@@ -661,7 +661,7 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "15.09.25",
+      "": "15.09.25",
       "VON": "",
       "BIS": "",
       "KUNDE": "Plansee",
