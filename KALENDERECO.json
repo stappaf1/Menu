@@ -601,15 +601,15 @@
       "BEMERKUNG": ""
     },
     {
-      "": "14.09.25",
-      "VON": "",
-      "BIS": "",
-      "KUNDE": "Plansee",
+      "": "13.09.25",
+      "VON": "09:00",
+      "BIS": "14:00",
+      "KUNDE": "Pallas Seminare",
       "EVENT": "Tagung",
       "TEILNEHMER": "",
-      "TAGUNGSRAUM": "ecoRefugium T30",
+      "TAGUNGSRAUM": "ecoCentrum T90",
       "RAUMHINWEIS": "",
-      "BILD": "T30.jpeg",
+      "BILD": "T90.jpeg",
       "BEMERKUNG": ""
     },
     {
@@ -637,7 +637,7 @@
       "BEMERKUNG": ""
     },
     {
-      "": "15.09.25",
+      "": "14.09.25",
       "VON": "",
       "BIS": "",
       "KUNDE": "Plansee",
@@ -670,6 +670,90 @@
       "TAGUNGSRAUM": "ecoForum T120",
       "RAUMHINWEIS": "",
       "BILD": "T120.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "": "15.09.25",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Plansee",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoRefugium T30",
+      "RAUMHINWEIS": "",
+      "BILD": "T30.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "": "16.09.25",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Plansee",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "",
+      "BILD": "T90.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "": "16.09.25",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Plansee",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoForum T120",
+      "RAUMHINWEIS": "",
+      "BILD": "T120.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "": "16.09.25",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Plansee",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoRefugium T30",
+      "RAUMHINWEIS": "",
+      "BILD": "T30.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "": "17.09.25",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Plansee",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoRefugium T30",
+      "RAUMHINWEIS": "",
+      "BILD": "T30.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "": "17.09.25",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Plansee",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoForum T120",
+      "RAUMHINWEIS": "",
+      "BILD": "T120.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "": "17.09.25",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Plansee",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "",
+      "BILD": "T90.jpeg",
       "BEMERKUNG": ""
     }
   ]
