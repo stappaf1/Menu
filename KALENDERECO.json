@@ -1,10 +1,10 @@
 {
   "events": [
     {
-      "DATUM": "04.06.25",
+      "DATUM": "16.09.25",
       "VON": "08:00",
-      "BIS": "18:00",
-      "KUNDE": "ERGO Group AG",
+      "BIS": "23:00",
+      "KUNDE": "Plansee",
       "EVENT": "Tagung",
       "TEILNEHMER": "",
       "TAGUNGSRAUM": "ecoRefugium T30",
@@ -13,10 +13,10 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "04.06.25",
+      "DATUM": "17.09.25",
       "VON": "08:00",
-      "BIS": "18:00",
-      "KUNDE": "ERGO Group AG",
+      "BIS": "23:00",
+      "KUNDE": "Plansee",
       "EVENT": "Tagung",
       "TEILNEHMER": "",
       "TAGUNGSRAUM": "ecoCentrum T90",
@@ -25,15 +25,63 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "16.09.25",
+      "DATUM": "17.09.25",
       "VON": "08:00",
-      "BIS": "18:00",
-      "KUNDE": "Test",
+      "BIS": "23:00",
+      "KUNDE": "Plansee",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoForum T120",
+      "RAUMHINWEIS": "",
+      "BILD": "T120.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "18.09.25",
+      "VON": "08:00",
+      "BIS": "23:00",
+      "KUNDE": "Plansee",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoRefugium T30",
+      "RAUMHINWEIS": "",
+      "BILD": "T30.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "18.09.25",
+      "VON": "08:00",
+      "BIS": "23:00",
+      "KUNDE": "Plansee",
       "EVENT": "Tagung",
       "TEILNEHMER": "",
       "TAGUNGSRAUM": "ecoCentrum T90",
       "RAUMHINWEIS": "",
       "BILD": "T90.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "18.09.25",
+      "VON": "08:00",
+      "BIS": "23:00",
+      "KUNDE": "Plansee",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoForum T120",
+      "RAUMHINWEIS": "",
+      "BILD": "T120.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "18.09.25",
+      "VON": "08:00",
+      "BIS": "18:00",
+      "KUNDE": "Rewe",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoPlenum T200",
+      "RAUMHINWEIS": "",
+      "BILD": "T200-1.jpeg",
       "BEMERKUNG": ""
     }
   ]
