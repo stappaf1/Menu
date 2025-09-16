@@ -1,15 +1,99 @@
 {
   "events": [
     {
-      "DATUM": "16.09.25",
-      "VON": "",
-      "BIS": "",
-      "KUNDE": "Test",
+      "": "04.06.25",
+      "VON": "08:00",
+      "BIS": "18:00",
+      "KUNDE": "ERGO Group AG",
       "EVENT": "Tagung",
       "TEILNEHMER": "",
-      "TAGUNGSRAUM": "",
+      "TAGUNGSRAUM": "ecoRefugium T30",
       "RAUMHINWEIS": "",
-      "BILD": "",
+      "BILD": "T30.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "": "04.06.25",
+      "VON": "08:00",
+      "BIS": "18:00",
+      "KUNDE": "ERGO Group AG",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "",
+      "BILD": "T90.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "": "16.09.25",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Plansee",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "",
+      "BILD": "T90.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "": "16.09.25",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Plansee",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoForum T120",
+      "RAUMHINWEIS": "",
+      "BILD": "T120.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "": "16.09.25",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Plansee",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoRefugium T30",
+      "RAUMHINWEIS": "",
+      "BILD": "T30.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "": "17.09.25",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Plansee",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoRefugium T30",
+      "RAUMHINWEIS": "",
+      "BILD": "T30.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "": "17.09.25",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Plansee",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoForum T120",
+      "RAUMHINWEIS": "",
+      "BILD": "T120.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "": "17.09.25",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Plansee",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "",
+      "BILD": "T90.jpeg",
       "BEMERKUNG": ""
     }
   ]
