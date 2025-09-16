@@ -26,8 +26,8 @@
     },
     {
       "DATUM": "14.05.25",
-      "VON": "09.00",
-      "BIS": "17.30",
+      "VON": "10:00",
+      "BIS": "18:30",
       "KUNDE": "Lidl ",
       "EVENT": "Tagung",
       "TEILNEHMER": "",
@@ -38,8 +38,8 @@
     },
     {
       "DATUM": "15.05.25",
-      "VON": "09.00",
-      "BIS": "17.30",
+      "VON": "11:00",
+      "BIS": "19:30",
       "KUNDE": "Lidl ",
       "EVENT": "Tagung",
       "TEILNEHMER": "",
@@ -50,8 +50,8 @@
     },
     {
       "DATUM": "15.05.25",
-      "VON": "13.30",
-      "BIS": "18.00",
+      "VON": "12:00",
+      "BIS": "20:30",
       "KUNDE": "Wipler Plan",
       "EVENT": "Tagung",
       "TEILNEHMER": "3",
@@ -62,8 +62,8 @@
     },
     {
       "DATUM": "16.05.25",
-      "VON": "07.30",
-      "BIS": "17.00",
+      "VON": "13:00",
+      "BIS": "21:30",
       "KUNDE": "Bachner Elektro",
       "EVENT": "Tagung",
       "TEILNEHMER": "17",
