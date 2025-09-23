@@ -127,9 +127,9 @@
       "KUNDE": "Danpower",
       "EVENT": "Tagung",
       "TEILNEHMER": "",
-      "TAGUNGSRAUM": "ecoRefugium T30",
+      "TAGUNGSRAUM": "ecoCentrum T90",
       "RAUMHINWEIS": "",
-      "BILD": "T30.jpeg",
+      "BILD": "T90.jpeg",
       "BEMERKUNG": ""
     },
     {
@@ -139,13 +139,13 @@
       "KUNDE": "Aciso ",
       "EVENT": "Tagung",
       "TEILNEHMER": "",
-      "TAGUNGSRAUM": "ecoCentrum T90",
+      "TAGUNGSRAUM": "ecoForum T120",
       "RAUMHINWEIS": "",
-      "BILD": "T90.jpeg",
+      "BILD": "T120.jpeg",
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "23.09.25",
+      "DATUM": "",
       "VON": "18:00",
       "BIS": "23:00",
       "KUNDE": "Aciso ",
