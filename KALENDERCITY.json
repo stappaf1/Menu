@@ -95,6 +95,18 @@
       "RAUMHINWEIS": "",
       "BILD": "T60.jpeg",
       "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "25.09.25",
+      "VON": "09:00",
+      "BIS": "18:00",
+      "KUNDE": "Techniker Krankenkassse",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "Weitblick T100",
+      "RAUMHINWEIS": "",
+      "BILD": "T100.jpeg",
+      "BEMERKUNG": ""
     }
   ]
 }
