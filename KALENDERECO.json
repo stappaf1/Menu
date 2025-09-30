@@ -242,14 +242,14 @@
     },
     {
       "DATUM": "30.09.25",
-      "VON": "",
-      "BIS": "",
+      "VON": "08:00",
+      "BIS": "16:30",
       "KUNDE": "Wüstenrot",
       "EVENT": "Tagung",
       "TEILNEHMER": "",
-      "TAGUNGSRAUM": "ecoForum T120",
+      "TAGUNGSRAUM": "ecoCentrum T90",
       "RAUMHINWEIS": "",
-      "BILD": "T120.jpeg",
+      "BILD": "T90.jpeg",
       "BEMERKUNG": ""
     },
     {
@@ -259,9 +259,81 @@
       "KUNDE": "BVSE",
       "EVENT": "Tagung",
       "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoForum T120",
+      "RAUMHINWEIS": "",
+      "BILD": "T120.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "06.10.25",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "WTS",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoForum T120",
+      "RAUMHINWEIS": "",
+      "BILD": "T120.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "07.10.25",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "WTS",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoForum T120",
+      "RAUMHINWEIS": "",
+      "BILD": "T120.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "07.10.25",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "BGN",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoPlenum T200",
+      "RAUMHINWEIS": "",
+      "BILD": "T200-1.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "07.10.25",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Bayrische Versorgungskammer",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "",
       "TAGUNGSRAUM": "ecoCentrum T90",
       "RAUMHINWEIS": "",
       "BILD": "T90.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "08.10.25",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Bayrische Versorgungskammer",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "",
+      "BILD": "T90.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "08.10.25",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Naturland",
+      "EVENT": "",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "",
+      "RAUMHINWEIS": "",
+      "BILD": "",
       "BEMERKUNG": ""
     }
   ]
