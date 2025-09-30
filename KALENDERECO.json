@@ -329,11 +329,47 @@
       "VON": "",
       "BIS": "",
       "KUNDE": "Naturland",
-      "EVENT": "",
+      "EVENT": "Tagung",
       "TEILNEHMER": "",
-      "TAGUNGSRAUM": "",
+      "TAGUNGSRAUM": "ecoRefugium T30",
       "RAUMHINWEIS": "",
-      "BILD": "",
+      "BILD": "T30.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "09.10.25",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Naturland",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoRefugium T30",
+      "RAUMHINWEIS": "",
+      "BILD": "T30.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "09.10.25",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Hecht Technologie",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "",
+      "BILD": "T90.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "09.10.25",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Daiichi Sankyo",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoForum T120",
+      "RAUMHINWEIS": "",
+      "BILD": "T120.jpeg",
       "BEMERKUNG": ""
     }
   ]
