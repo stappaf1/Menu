@@ -107,6 +107,18 @@
       "RAUMHINWEIS": "",
       "BILD": "T100.jpeg",
       "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "06.10.25",
+      "VON": "15:00",
+      "BIS": "18:00",
+      "KUNDE": "Ju:niz Energy GmbH",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "5",
+      "TAGUNGSRAUM": "Weitblick T100",
+      "RAUMHINWEIS": "",
+      "BILD": "T100.jpeg",
+      "BEMERKUNG": ""
     }
   ]
 }
