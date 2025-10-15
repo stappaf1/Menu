@@ -437,11 +437,23 @@
       "VON": "",
       "BIS": "",
       "KUNDE": "Wipfler",
-      "EVENT": "Veranstaltung",
+      "EVENT": "Tagung",
       "TEILNEHMER": "",
       "TAGUNGSRAUM": "ecoPlenum T200",
       "RAUMHINWEIS": "",
       "BILD": "T200-Business.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "15.10.25",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "DGB",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoForum T120",
+      "RAUMHINWEIS": "",
+      "BILD": "T120.jpeg",
       "BEMERKUNG": ""
     }
   ]
