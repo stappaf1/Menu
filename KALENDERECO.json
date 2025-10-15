@@ -407,6 +407,42 @@
       "RAUMHINWEIS": "",
       "BILD": "T200-Business.jpeg",
       "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "",
+      "EVENT": "",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "",
+      "RAUMHINWEIS": "",
+      "BILD": "",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "15.10.25",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Daichi Sankyo",
+      "EVENT": "Workshop",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "",
+      "BILD": "T90.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "15.10.25",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Wipfler",
+      "EVENT": "Veranstaltung",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoPlenum T200",
+      "RAUMHINWEIS": "",
+      "BILD": "T200-Business.jpeg",
+      "BEMERKUNG": ""
     }
   ]
 }
