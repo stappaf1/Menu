@@ -409,18 +409,6 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "",
-      "VON": "",
-      "BIS": "",
-      "KUNDE": "",
-      "EVENT": "",
-      "TEILNEHMER": "",
-      "TAGUNGSRAUM": "",
-      "RAUMHINWEIS": "",
-      "BILD": "",
-      "BEMERKUNG": ""
-    },
-    {
       "DATUM": "15.10.25",
       "VON": "",
       "BIS": "",
@@ -450,6 +438,30 @@
       "BIS": "",
       "KUNDE": "DGB",
       "EVENT": "Tagung",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoForum T120",
+      "RAUMHINWEIS": "",
+      "BILD": "T120.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "16.10.25",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Daiichi Sankyo",
+      "EVENT": "",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "",
+      "BILD": "T90.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "16.10.25",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "MBDA",
+      "EVENT": "",
       "TEILNEHMER": "",
       "TAGUNGSRAUM": "ecoForum T120",
       "RAUMHINWEIS": "",
