@@ -1,24 +1,8 @@
 {
   "speisen": [
     {
-      "Kategorie": "Vorspeisen Etajere",
-      "Name": "Vitello Tonnato vom Kalb in Thunfischsauce mit Kapern",
-      "Beschreibung": " ",
-      "Menge": " ",
-      "Preis": " ",
-      "": ""
-    },
-    {
-      "Kategorie": "Vorspeisen Etajere",
-      "Name": "Saisonales Anti-Pasti-Gemüse mit Walnuss-Minz Pesto... ",
-      "Beschreibung": " ",
-      "Menge": " ",
-      "Preis": " ",
-      "": ""
-    },
-    {
-      "Kategorie": "Vorspeisen Etajere",
-      "Name": "Burata auf Tomatenbeet",
+      "Kategorie": "",
+      "Name": "",
       "Beschreibung": " ",
       "Menge": " ",
       "Preis": " ",
@@ -33,32 +17,24 @@
       "": ""
     },
     {
-      "Kategorie": "Hauptspeisen",
-      "Name": "Kalbtafelspitz an Portweinjus mit glacierten Karotten an Kartoffelgratin",
-      "Beschreibung": "",
-      "Menge": "",
-      "Preis": "",
+      "Kategorie": "",
+      "Name": "",
+      "Beschreibung": " ",
+      "Menge": " ",
+      "Preis": " ",
       "": ""
     },
     {
-      "Kategorie": "Hauptspeisen",
-      "Name": "Saltimbocca vom Maishendl an Portweinjus mit glacierten Karotten an Kartoffelgratin",
-      "Beschreibung": "",
-      "Menge": "",
-      "Preis": "",
+      "Kategorie": "",
+      "Name": "",
+      "Beschreibung": " ",
+      "Menge": " ",
+      "Preis": " ",
       "": ""
     },
     {
-      "Kategorie": "Hauptspeisen",
-      "Name": "Bömlo Lachs an einer Meerrettich-Sahne mit Belugalinsen & Radieschen",
-      "Beschreibung": "",
-      "Menge": "",
-      "Preis": "",
-      "": ""
-    },
-    {
-      "Kategorie": "Hauptspeisen",
-      "Name": "Raviolies vom schwarzen Trüffel an Permesanschaum & Trüffelöl",
+      "Kategorie": "",
+      "Name": "",
       "Beschreibung": "",
       "Menge": "",
       "Preis": "",
@@ -73,24 +49,48 @@
       "": ""
     },
     {
-      "Kategorie": "Dessert",
-      "Name": "Kaiserschmarrn mit Zwetschgenröster",
+      "Kategorie": "",
+      "Name": "",
       "Beschreibung": "",
       "Menge": "",
       "Preis": "",
       "": ""
     },
     {
-      "Kategorie": "Dessert",
-      "Name": "Créme Brúlée von der Tonkabohne ",
+      "Kategorie": "",
+      "Name": "",
       "Beschreibung": "",
       "Menge": "",
       "Preis": "",
       "": ""
     },
     {
-      "Kategorie": "Dessert",
-      "Name": "Kleiner Schokoladenbrownie mit geschlagener Sahne",
+      "Kategorie": "",
+      "Name": "",
+      "Beschreibung": "",
+      "Menge": "",
+      "Preis": "",
+      "": ""
+    },
+    {
+      "Kategorie": "",
+      "Name": "",
+      "Beschreibung": "",
+      "Menge": "",
+      "Preis": "",
+      "": ""
+    },
+    {
+      "Kategorie": "",
+      "Name": "",
+      "Beschreibung": "",
+      "Menge": "",
+      "Preis": "",
+      "": ""
+    },
+    {
+      "Kategorie": "",
+      "Name": "",
       "Beschreibung": "",
       "Menge": "",
       "Preis": "",
