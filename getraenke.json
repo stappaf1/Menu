@@ -141,6 +141,27 @@
       "Preis": " "
     },
     {
+      "Kategorie": "Mocktails",
+      "Name": "Melon Mule - Wassermelone - Minze - Limettensaft - Ginger Beer",
+      "Beschreibung": "",
+      "Menge": "Glas",
+      "Preis": ""
+    },
+    {
+      "Kategorie": "Mocktails",
+      "Name": "Basil Refresher - Basilikum - Ingwer - Wassermelone - Minze - Wasser",
+      "Beschreibung": "",
+      "Menge": "",
+      "Preis": ""
+    },
+    {
+      "Kategorie": "Mocktails",
+      "Name": "Pfirsich Basil Smash - Wild Peach Grün Tee Flavour - Zitronensaft - Basilikumblätter ",
+      "Beschreibung": "",
+      "Menge": "",
+      "Preis": ""
+    },
+    {
       "Kategorie": "Longdrink",
       "Name": "Belzazar & Tonic - Belzazar Vermuth - Goldberg Tonic",
       "Beschreibung": " ",
