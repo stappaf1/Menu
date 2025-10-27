@@ -679,6 +679,30 @@
       "KUNDE": "Deusche Post",
       "EVENT": "Tagung",
       "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoPlenum T200",
+      "RAUMHINWEIS": "",
+      "BILD": "T200-Business.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "27.10.25",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Deusche Post",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoForum T120",
+      "RAUMHINWEIS": "",
+      "BILD": "T120.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "27.10.25",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Deusche Post",
+      "EVENT": "Tagung Gruppenraum 1-3",
+      "TEILNEHMER": "",
       "TAGUNGSRAUM": "ecoCentrum T90",
       "RAUMHINWEIS": "",
       "BILD": "T90.jpeg",
@@ -688,12 +712,12 @@
       "DATUM": "27.10.25",
       "VON": "",
       "BIS": "",
-      "KUNDE": "",
-      "EVENT": "",
+      "KUNDE": "Deusche Post",
+      "EVENT": "Tagung Gruppenraum 4",
       "TEILNEHMER": "",
-      "TAGUNGSRAUM": "",
+      "TAGUNGSRAUM": "ecoRefugium T30",
       "RAUMHINWEIS": "",
-      "BILD": "",
+      "BILD": "T30.jpeg",
       "BEMERKUNG": ""
     }
   ]
