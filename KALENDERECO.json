@@ -719,6 +719,54 @@
       "RAUMHINWEIS": "",
       "BILD": "T30.jpeg",
       "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "28.10.25",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Deutsche Post",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoPlenum T200",
+      "RAUMHINWEIS": "",
+      "BILD": "T200-Business.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "28.10.25",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Deutsche Post",
+      "EVENT": "Tagung Gruppenraum 1-3",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "",
+      "BILD": "T90.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "28.10.25",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Deutsche Post",
+      "EVENT": "Tagung Gruppenraum 4",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoRefugium T30",
+      "RAUMHINWEIS": "",
+      "BILD": "T30.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "28.10.25",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Bayernwerk",
+      "EVENT": "BR-Sitzung",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoForum T120",
+      "RAUMHINWEIS": "",
+      "BILD": "T120.jpeg",
+      "BEMERKUNG": ""
     }
   ]
 }
