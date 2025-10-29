@@ -767,6 +767,78 @@
       "RAUMHINWEIS": "",
       "BILD": "T120.jpeg",
       "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "30.10.25",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Continentale Krankenversicherung",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoPlenum T200",
+      "RAUMHINWEIS": "",
+      "BILD": "T200-Business.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "31.10.25",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Continentale Krankenversicherung",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoPlenum T200",
+      "RAUMHINWEIS": "",
+      "BILD": "T200-Business.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "31.10.25",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Miele",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoRefugium T30",
+      "RAUMHINWEIS": "",
+      "BILD": "T30.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "04.11.25",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "TOPTEQ",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoForum T120",
+      "RAUMHINWEIS": "",
+      "BILD": "T120.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "05.11.25",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "TOPTEQ",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoForum T120",
+      "RAUMHINWEIS": "",
+      "BILD": "T120.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "06.11.25",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "TOPTEQ",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoForum T120",
+      "RAUMHINWEIS": "",
+      "BILD": "T120.jpeg",
+      "BEMERKUNG": ""
     }
   ]
 }
