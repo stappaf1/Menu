@@ -875,6 +875,102 @@
       "RAUMHINWEIS": "",
       "BILD": "T30.jpeg",
       "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "11.11.25",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Paritätische Freiwilligendienste in München Tagung",
+      "EVENT": "",
+      "TEILNEHMER": "22",
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "",
+      "BILD": "T90.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "11.11.25",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Hipp Austria",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "57",
+      "TAGUNGSRAUM": "ecoPlenum T200",
+      "RAUMHINWEIS": "",
+      "BILD": "T200-Business.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "12.11.25",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Rossmann",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "8",
+      "TAGUNGSRAUM": "ecoRefugium T30",
+      "RAUMHINWEIS": "",
+      "BILD": "T30.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "12.11.25",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Hipp Austria",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "57",
+      "TAGUNGSRAUM": "ecoPlenum T200",
+      "RAUMHINWEIS": "",
+      "BILD": "T200-Business.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "12.11.25",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "DANPOWER",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "13",
+      "TAGUNGSRAUM": "ecoForum T120",
+      "RAUMHINWEIS": "",
+      "BILD": "T120.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "13.11.25",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Hipp Austria",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "57",
+      "TAGUNGSRAUM": "ecoPlenum T200",
+      "RAUMHINWEIS": "",
+      "BILD": "T200-Business.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "13.11.25",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "DANPOWER",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "13",
+      "TAGUNGSRAUM": "ecoForum T120",
+      "RAUMHINWEIS": "",
+      "BILD": "T120.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "14.11.25",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Strabag",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "130",
+      "TAGUNGSRAUM": "ecoPlenum T200",
+      "RAUMHINWEIS": "",
+      "BILD": "T200-Business.jpeg",
+      "BEMERKUNG": ""
     }
   ]
 }
