@@ -995,6 +995,78 @@
       "RAUMHINWEIS": "",
       "BILD": "T120.jpeg",
       "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "18.11.2025",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Bayernwerk Natur GmbH",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "10",
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "",
+      "BILD": "T90.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "18.11.25",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "RKW Bayern",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "36",
+      "TAGUNGSRAUM": "ecoPlenum T200",
+      "RAUMHINWEIS": "",
+      "BILD": "T200-Business.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "20.11.25",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Metafinanz",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "18",
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "",
+      "BILD": "T90.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "20.11.25",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "COMLOG",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "15",
+      "TAGUNGSRAUM": "ecoForum T120",
+      "RAUMHINWEIS": "",
+      "BILD": "T120.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "21.11.25",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Metafinanz",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "18",
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "",
+      "BILD": "T90.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "22.11.25",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Contag",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "70",
+      "TAGUNGSRAUM": "ecoPlenum T200",
+      "RAUMHINWEIS": "",
+      "BILD": "",
+      "BEMERKUNG": ""
     }
   ]
 }
