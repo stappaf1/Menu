@@ -971,6 +971,30 @@
       "RAUMHINWEIS": "",
       "BILD": "T200-Business.jpeg",
       "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "17.11.25",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Doktorbrix",
+      "EVENT": "",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "",
+      "BILD": "T90.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "17.11.25",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Stadt Pfaffenhofen",
+      "EVENT": "",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoForum T120",
+      "RAUMHINWEIS": "",
+      "BILD": "T120.jpeg",
+      "BEMERKUNG": ""
     }
   ]
 }
