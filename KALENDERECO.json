@@ -1144,6 +1144,18 @@
       "DATUM": "28.11.25",
       "VON": "",
       "BIS": "",
+      "KUNDE": "Syngenity",
+      "EVENT": "Frühstück",
+      "TEILNEHMER": "15",
+      "TAGUNGSRAUM": "ecoBistro",
+      "RAUMHINWEIS": "",
+      "BILD": "",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "29.11.25",
+      "VON": "",
+      "BIS": "",
       "KUNDE": "OV Grüne Pfaffenhofen",
       "EVENT": "Tagung",
       "TEILNEHMER": "10",
