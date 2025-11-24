@@ -1067,6 +1067,90 @@
       "RAUMHINWEIS": "",
       "BILD": "",
       "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "25.11.25",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "AWO ",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "10",
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "",
+      "BILD": "T90.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "26.11.25",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "AWO ",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "10",
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "",
+      "BILD": "T90.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "26.11.25",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Syngenity",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "23",
+      "TAGUNGSRAUM": "ecoForum T120",
+      "RAUMHINWEIS": "",
+      "BILD": "T120.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "26.11.25",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "WipflerPlan",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "31",
+      "TAGUNGSRAUM": "ecoPlenum T200",
+      "RAUMHINWEIS": "",
+      "BILD": "T200-1.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "27.11.25",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Syngenity",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "23",
+      "TAGUNGSRAUM": "ecoForum T120",
+      "RAUMHINWEIS": "",
+      "BILD": "T120.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "27.11.25",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Technical Software Engineering",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "3",
+      "TAGUNGSRAUM": "ecoRefugium T30",
+      "RAUMHINWEIS": "",
+      "BILD": "T30.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "28.11.25",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "OV Grüne Pfaffenhofen",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "10",
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "",
+      "BILD": "T90.jpeg",
+      "BEMERKUNG": ""
     }
   ]
 }
