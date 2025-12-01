@@ -412,6 +412,419 @@
       "Beschreibung": " ",
       "Menge": "Tasse",
       "Preis": "3.50"
+    },
+    {
+      "Kategorie": "Non-alcoholic",
+      "Name": "Alea – Table Water - Still - Sparkling",
+      "Beschreibung": "",
+      "Menge": "0.7",
+      "Preis": "6.00 "
+    },
+    {
+      "Kategorie": "Non-alcoholic",
+      "Name": "Coca Cola - Coca Cola Zero",
+      "Beschreibung": "",
+      "Menge": "0.4",
+      "Preis": "4.00 "
+    },
+    {
+      "Kategorie": "Non-alcoholic",
+      "Name": "Ließchen Müller Spritzer - Apple - Rhubarb",
+      "Beschreibung": "",
+      "Menge": "0.4",
+      "Preis": "4.00"
+    },
+    {
+      "Kategorie": "Non-alcoholic",
+      "Name": "Rauch Juice Spritzer - Blackcurrant - Passion Fruit",
+      "Beschreibung": "",
+      "Menge": "0.4",
+      "Preis": "4.00"
+    },
+    {
+      "Kategorie": "Non-alcoholic",
+      "Name": "Orange Soda - Lemon Soda",
+      "Beschreibung": "",
+      "Menge": "0.4",
+      "Preis": "4.00"
+    },
+    {
+      "Kategorie": "Aperitifs",
+      "Name": "Aperol Spritz - Aperol - Prosecco - Soda",
+      "Beschreibung": "",
+      "Menge": "Glass",
+      "Preis": "7.90"
+    },
+    {
+      "Kategorie": "Aperitifs",
+      "Name": "French 75 - The Duke Organic Gin - Lemon - Crémant",
+      "Beschreibung": "",
+      "Menge": "Glass",
+      "Preis": "9.90"
+    },
+    {
+      "Kategorie": "Aperitifs",
+      "Name": "Kir Royal - Crémant - Crème de Cassis",
+      "Beschreibung": "",
+      "Menge": "Glass",
+      "Preis": "9.50"
+    },
+    {
+      "Kategorie": "Aperitifs",
+      "Name": "Lillet Wildberry - Campari, Red Vermouth, Soda",
+      "Beschreibung": "",
+      "Menge": "Glass",
+      "Preis": "7.90"
+    },
+    {
+      "Kategorie": "Aperitifs",
+      "Name": "Pampelle Spritz - Pampelle - Prosecco - Soda",
+      "Beschreibung": "",
+      "Menge": "Glass",
+      "Preis": "7.90"
+    },
+    {
+      "Kategorie": "Beers",
+      "Name": "Non-alcoholic Beer - Lager - Wheat Beer",
+      "Beschreibung": "",
+      "Menge": "0.5",
+      "Preis": "4.50"
+    },
+    {
+      "Kategorie": "Beers",
+      "Name": "Draft Beer - Lager - Wheat Beer",
+      "Beschreibung": "",
+      "Menge": "0.5",
+      "Preis": "4.50"
+    },
+    {
+      "Kategorie": "Beers",
+      "Name": "Bottled Beer - Dark",
+      "Beschreibung": "",
+      "Menge": "0.5",
+      "Preis": "4.50"
+    },
+    {
+      "Kategorie": "Beers",
+      "Name": "Small Bottled Beer - Pils - Lager",
+      "Beschreibung": "",
+      "Menge": "0.33",
+      "Preis": "3.50"
+    },
+    {
+      "Kategorie": "Cocktails",
+      "Name": "Espresso Martini - Absolut Vodka - Kahlúa - Espresso",
+      "Beschreibung": "",
+      "Menge": "Glass",
+      "Preis": "10.50"
+    },
+    {
+      "Kategorie": "Cocktails",
+      "Name": "Negroni - Bombay Sapphire - Campari - Martini Rosso",
+      "Beschreibung": "",
+      "Menge": "Glass",
+      "Preis": "10.50"
+    },
+    {
+      "Kategorie": "Cocktails",
+      "Name": "Pina Colada - Plantation 3 Stars Rum",
+      "Beschreibung": "",
+      "Menge": "Glass",
+      "Preis": "12.50"
+    },
+    {
+      "Kategorie": "Cocktails",
+      "Name": "Tom Collins - The Duke Organic Gin - Lemon - Simple Syrup",
+      "Beschreibung": "",
+      "Menge": "Glass",
+      "Preis": "10.50"
+    },
+    {
+      "Kategorie": "Cocktails",
+      "Name": "Whiskey Sour - Woodford Reserve - Lemon - Simple Syrup",
+      "Beschreibung": "",
+      "Menge": "Glass",
+      "Preis": "10.50"
+    },
+    {
+      "Kategorie": "Cocktails",
+      "Name": "Zombie - Appleton Estate - Myers Rum - Lime - Falernum - Simple Syrup - Grenadine - Pineapple",
+      "Beschreibung": "",
+      "Menge": "Glass",
+      "Preis": "12.50"
+    },
+    {
+      "Kategorie": "Mocktails",
+      "Name": "Melon Mule - Watermelon - Mint - Lime Juice - Ginger Beer",
+      "Beschreibung": "",
+      "Menge": "Glass",
+      "Preis": "7.90"
+    },
+    {
+      "Kategorie": "Mocktails",
+      "Name": "Basil Refresher - Basil - Ginger - Watermelon - Mint - Water",
+      "Beschreibung": "",
+      "Menge": "Glass",
+      "Preis": "7.90"
+    },
+    {
+      "Kategorie": "Mocktails",
+      "Name": "Peach Basil Smash - Wild Peach Green Tea Flavour - Lemon Juice - Basil Leaves",
+      "Beschreibung": "",
+      "Menge": "Glass",
+      "Preis": "7.90"
+    },
+    {
+      "Kategorie": "Longdrinks",
+      "Name": "Belzazar & Tonic - Belzazar Vermouth - Goldberg Tonic",
+      "Beschreibung": "",
+      "Menge": "Glass",
+      "Preis": "9.50"
+    },
+    {
+      "Kategorie": "Longdrinks",
+      "Name": "Bourbon & Cola - Woodford Reserve Straight Bourbon Whiskey & Cola",
+      "Beschreibung": "",
+      "Menge": "Glass",
+      "Preis": "9.50"
+    },
+    {
+      "Kategorie": "Longdrinks",
+      "Name": "Cuba Libre - Havana Club 3 - Cola - Lime",
+      "Beschreibung": "",
+      "Menge": "Glass",
+      "Preis": "8.50"
+    },
+    {
+      "Kategorie": "Longdrinks",
+      "Name": "Gin & Goldberg Tonic - The Duke Organic Gin - Illusionist Dry Gin - Bombay Sapphire",
+      "Beschreibung": "",
+      "Menge": "Glass",
+      "Preis": "9.00"
+    },
+    {
+      "Kategorie": "Longdrinks",
+      "Name": "Moscow Mule - Absolut Vodka - Goldberg Ginger Beer - Lime",
+      "Beschreibung": "",
+      "Menge": "Glass",
+      "Preis": "8.00"
+    },
+    {
+      "Kategorie": "Rosé",
+      "Name": "Ca dei Frati - Rosa - Frati - Lake Garda",
+      "Beschreibung": "",
+      "Menge": "0.2",
+      "Preis": "8.50"
+    },
+    {
+      "Kategorie": "Rosé",
+      "Name": "Ca dei Frati - Rosa - Frati - Lake Garda",
+      "Beschreibung": "",
+      "Menge": "0.7",
+      "Preis": "33.00"
+    },
+    {
+      "Kategorie": "Rosé",
+      "Name": "La Santonniére - Rosé - Provence",
+      "Beschreibung": "",
+      "Menge": "0.2",
+      "Preis": "7.50"
+    },
+    {
+      "Kategorie": "Rosé",
+      "Name": "La Santonniére - Rosé - Provence",
+      "Beschreibung": "",
+      "Menge": "0.7",
+      "Preis": "33.00"
+    },
+    {
+      "Kategorie": "Red Wine",
+      "Name": "Fantini - Primitivo - Puglia - Dry",
+      "Beschreibung": "",
+      "Menge": "0.2",
+      "Preis": "7.50"
+    },
+    {
+      "Kategorie": "Red Wine",
+      "Name": "Fantini - Primitivo - Puglia - Dry",
+      "Beschreibung": "",
+      "Menge": "0.7",
+      "Preis": "33.00"
+    },
+    {
+      "Kategorie": "Red Wine",
+      "Name": "Franz Waßmer - Pinot Noir - Baden - Dry",
+      "Beschreibung": "",
+      "Menge": "0.2",
+      "Preis": "8.50"
+    },
+    {
+      "Kategorie": "Red Wine",
+      "Name": "Franz Waßmer - Pinot Noir - Baden - Dry",
+      "Beschreibung": "",
+      "Menge": "0.7",
+      "Preis": "36.00"
+    },
+    {
+      "Kategorie": "Sparkling Wine",
+      "Name": "Domaines Vinsmoselle - Crémant - Moselle - Luxembourg",
+      "Beschreibung": "",
+      "Menge": "0.1",
+      "Preis": "7.50"
+    },
+    {
+      "Kategorie": "Sparkling Wine",
+      "Name": "Domaines Vinsmoselle - Crémant - Moselle - Luxembourg",
+      "Beschreibung": "",
+      "Menge": "0.7",
+      "Preis": "33.00"
+    },
+    {
+      "Kategorie": "Sparkling Wine",
+      "Name": "Valdo - Biologico Brut - Prosecco D.O.C - Valdobbiadene - Italy",
+      "Beschreibung": "",
+      "Menge": "0.1",
+      "Preis": "6.50"
+    },
+    {
+      "Kategorie": "Sparkling Wine",
+      "Name": "Valdo - Biologico Brut - Prosecco D.O.C - Valdobbiadene - Italy",
+      "Beschreibung": "",
+      "Menge": "0.7",
+      "Preis": "38.00"
+    },
+    {
+      "Kategorie": "White Wine",
+      "Name": "Cá Maiol - Lugana - Lake Garda - Dry",
+      "Beschreibung": "",
+      "Menge": "0.2",
+      "Preis": "7.50"
+    },
+    {
+      "Kategorie": "White Wine",
+      "Name": "Cá Maiol - Lugana - Lake Garda - Dry",
+      "Beschreibung": "",
+      "Menge": "0.7",
+      "Preis": "32.00"
+    },
+    {
+      "Kategorie": "White Wine",
+      "Name": "Chardonnay - Organic - France - Dry",
+      "Beschreibung": "",
+      "Menge": "0.2",
+      "Preis": "8.50"
+    },
+    {
+      "Kategorie": "White Wine",
+      "Name": "Chardonnay - Organic - France - Dry",
+      "Beschreibung": "",
+      "Menge": "0.7",
+      "Preis": "36.00"
+    },
+    {
+      "Kategorie": "White Wine",
+      "Name": "Markus Molitor - Riesling - Moselle - Dry",
+      "Beschreibung": "",
+      "Menge": "0.2",
+      "Preis": "7.50"
+    },
+    {
+      "Kategorie": "White Wine",
+      "Name": "Markus Molitor - Riesling - Moselle - Dry",
+      "Beschreibung": "",
+      "Menge": "0.7",
+      "Preis": "34.00"
+    },
+    {
+      "Kategorie": "Hot Drinks",
+      "Name": "Coffee Caffè Crema",
+      "Beschreibung": "",
+      "Menge": "Cup",
+      "Preis": "3.50"
+    },
+    {
+      "Kategorie": "Hot Drinks",
+      "Name": "Coffee Cappuccino",
+      "Beschreibung": "",
+      "Menge": "Cup",
+      "Preis": "3.50"
+    },
+    {
+      "Kategorie": "Hot Drinks",
+      "Name": "Coffee Double Espresso",
+      "Beschreibung": "",
+      "Menge": "Cup",
+      "Preis": "3.50"
+    },
+    {
+      "Kategorie": "Hot Drinks",
+      "Name": "Coffee Espresso",
+      "Beschreibung": "",
+      "Menge": "Cup",
+      "Preis": "2.00"
+    },
+    {
+      "Kategorie": "Hot Drinks",
+      "Name": "Coffee Latte Macchiato",
+      "Beschreibung": "",
+      "Menge": "Cup",
+      "Preis": "3.50"
+    },
+    {
+      "Kategorie": "Hot Drinks",
+      "Name": "Tea Annemarie - Fruit Tea",
+      "Beschreibung": "",
+      "Menge": "Cup",
+      "Preis": "3.50"
+    },
+    {
+      "Kategorie": "Hot Drinks",
+      "Name": "Tea Bongani - Rooibos Vanilla",
+      "Beschreibung": "",
+      "Menge": "Cup",
+      "Preis": "3.50"
+    },
+    {
+      "Kategorie": "Hot Drinks",
+      "Name": "Tea Hayato - Green Tea",
+      "Beschreibung": "",
+      "Menge": "Cup",
+      "Preis": "3.50"
+    },
+    {
+      "Kategorie": "Hot Drinks",
+      "Name": "Tea Jinjin - Green Tea",
+      "Beschreibung": "",
+      "Menge": "Cup",
+      "Preis": "3.50"
+    },
+    {
+      "Kategorie": "Hot Drinks",
+      "Name": "Tea Namira - Peppermint",
+      "Beschreibung": "",
+      "Menge": "Cup",
+      "Preis": "3.50"
+    },
+    {
+      "Kategorie": "Hot Drinks",
+      "Name": "Tea Nandil - Black Tea",
+      "Beschreibung": "",
+      "Menge": "Cup",
+      "Preis": "3.50"
+    },
+    {
+      "Kategorie": "Hot Drinks",
+      "Name": "Tea Sarala - Chai Cup",
+      "Beschreibung": "",
+      "Menge": "Cup",
+      "Preis": "3.50"
+    },
+    {
+      "Kategorie": "Hot Drinks",
+      "Name": "Tea Traudl - Alpine Herbal Tea",
+      "Beschreibung": "",
+      "Menge": "Cup",
+      "Preis": "3.50"
     }
   ]
 }
