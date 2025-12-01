@@ -1,80 +1,80 @@
 {
   "speisen": [
     {
-      "Kategorie": "",
-      "Name": "",
+      "Kategorie": "Suppe ",
+      "Name": "Rauchpaprikasuppe I Chorizo I gebackener Emmentaler",
       "Beschreibung": " ",
       "Menge": " ",
       "Preis": " ",
       "": ""
     },
     {
-      "Kategorie": "",
-      "Name": "",
+      "Kategorie": "Soupe",
+      "Name": "Smoked Paprika Soup | Chorizo | Baked Emmental",
       "Beschreibung": " ",
       "Menge": " ",
       "Preis": " ",
       "": ""
     },
     {
-      "Kategorie": "",
-      "Name": "",
+      "Kategorie": "Hauptgang",
+      "Name": "Hirschgulasch mit Semmelknödel, Preiselbeer-Birne und Schmand",
       "Beschreibung": " ",
       "Menge": " ",
       "Preis": " ",
       "": ""
     },
     {
-      "Kategorie": "",
-      "Name": "",
+      "Kategorie": "Hauptgang",
+      "Name": "Zartrosa geratene Entenbrust mit Kartoffelknödel und Blaukraut",
       "Beschreibung": " ",
       "Menge": " ",
       "Preis": " ",
       "": ""
     },
     {
-      "Kategorie": "",
-      "Name": "",
+      "Kategorie": "Hauptgang",
+      "Name": "Gerösteter Kürbis auf schwarzen Gnocchi in Salbeibutter mit Feta & Granatapfel ",
       "Beschreibung": "",
       "Menge": "",
       "Preis": "",
       "": ""
     },
     {
-      "Kategorie": "",
-      "Name": "",
+      "Kategorie": "Main Dishes",
+      "Name": "Venison Stew with Bread Dumplings, Lingonberry Pear and Crème Fraîche",
       "Beschreibung": "",
       "Menge": "",
       "Preis": "",
       "": ""
     },
     {
-      "Kategorie": "",
-      "Name": "",
+      "Kategorie": "Main Dishes",
+      "Name": "Tender Duck Breast, Potato Dumpling and Red Cabbage",
       "Beschreibung": "",
       "Menge": "",
       "Preis": "",
       "": ""
     },
     {
-      "Kategorie": "",
-      "Name": "",
+      "Kategorie": "Main Dishes",
+      "Name": "Black Gnocchi with Roasted Pumpkin, Sage Butter, Feta and Pomegranate",
       "Beschreibung": "",
       "Menge": "",
       "Preis": "",
       "": ""
     },
     {
-      "Kategorie": "",
-      "Name": "",
+      "Kategorie": "Dessert",
+      "Name": "Kaiserschmarrn mit Zwetschgenröster und Apfel-Rhabarberkompott",
       "Beschreibung": "",
       "Menge": "",
       "Preis": "",
       "": ""
     },
     {
-      "Kategorie": "",
-      "Name": "",
+      "Kategorie": "Sweets",
+      "Name": "Austrian Kaiserschmarrn with Plum Roaster and Apple-Rhubarb Compote",
       "Beschreibung": "",
       "Menge": "",
       "Preis": "",
