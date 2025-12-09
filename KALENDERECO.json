@@ -1175,6 +1175,30 @@
       "RAUMHINWEIS": "",
       "BILD": "T200-Business.jpeg",
       "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "12.12.25",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Brückler Elektro",
+      "EVENT": "Arbeitssicherheitsunterweisung",
+      "TEILNEHMER": "30",
+      "TAGUNGSRAUM": "ecoForum T120",
+      "RAUMHINWEIS": "",
+      "BILD": "T120.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "13.12.25",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Pallas Seminare",
+      "EVENT": "",
+      "TEILNEHMER": "10",
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "",
+      "BILD": "T90.jpeg",
+      "BEMERKUNG": ""
     }
   ]
 }
