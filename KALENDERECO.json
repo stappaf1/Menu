@@ -1199,6 +1199,66 @@
       "RAUMHINWEIS": "",
       "BILD": "T90.jpeg",
       "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "07.01.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "SMS Medipool",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "14",
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "",
+      "BILD": "T90.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "08.01.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "SMS Medipool",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "14",
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "",
+      "BILD": "T90.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "20.01.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "European Hotel Reservation",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "28",
+      "TAGUNGSRAUM": "",
+      "RAUMHINWEIS": "",
+      "BILD": "",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "21.01.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "European Hotel Reservation",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "17",
+      "TAGUNGSRAUM": "",
+      "RAUMHINWEIS": "",
+      "BILD": "",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "22.01.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "European Hotel Reservation",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "15",
+      "TAGUNGSRAUM": "",
+      "RAUMHINWEIS": "",
+      "BILD": "",
+      "BEMERKUNG": ""
     }
   ]
 }
