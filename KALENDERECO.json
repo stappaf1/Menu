@@ -1249,6 +1249,18 @@
       "BEMERKUNG": ""
     },
     {
+      "DATUM": "21.01.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Bfz gGmbH",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "17",
+      "TAGUNGSRAUM": "",
+      "RAUMHINWEIS": "",
+      "BILD": "",
+      "BEMERKUNG": ""
+    },
+    {
       "DATUM": "22.01.26",
       "VON": "",
       "BIS": "",
@@ -1258,6 +1270,66 @@
       "TAGUNGSRAUM": "",
       "RAUMHINWEIS": "",
       "BILD": "",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "22.01.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Bfz gGmbH",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "17",
+      "TAGUNGSRAUM": "",
+      "RAUMHINWEIS": "",
+      "BILD": "",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "27.01.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Eisenmann",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "15",
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "",
+      "BILD": "T90.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "27.01.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "BVSE",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "25",
+      "TAGUNGSRAUM": "ecoForum T120",
+      "RAUMHINWEIS": "",
+      "BILD": "T120.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "28.01.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Hölscher Wasserbau",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "10",
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "",
+      "BILD": "T90.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "29.01.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Quba Qualitätssicherung Sekund",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "20",
+      "TAGUNGSRAUM": "ecoForum T120",
+      "RAUMHINWEIS": "",
+      "BILD": "T120.jpeg",
       "BEMERKUNG": ""
     }
   ]
