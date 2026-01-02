@@ -1331,6 +1331,114 @@
       "RAUMHINWEIS": "",
       "BILD": "T120.jpeg",
       "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "07.01.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "SMS Medipool",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "14",
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "",
+      "BILD": "T90.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "20.01.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "ELERO",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "28",
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "",
+      "BILD": "T90.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "21.01.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "ELERO",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "17",
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "",
+      "BILD": "T90.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "22.01.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "ELERO",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "15",
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "",
+      "BILD": "T90.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "21.01.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "BFZ gGmbH",
+      "EVENT": "Fortbildung",
+      "TEILNEHMER": "16",
+      "TAGUNGSRAUM": "ecoForum T120",
+      "RAUMHINWEIS": "",
+      "BILD": "T120.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "27.01.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "BVSE",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "25",
+      "TAGUNGSRAUM": "ecoForum T120",
+      "RAUMHINWEIS": "",
+      "BILD": "T120.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "27.01.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Hausverwaltung",
+      "EVENT": "",
+      "TEILNEHMER": "15",
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "",
+      "BILD": "T90.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "28.01.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Hölscher Wasserbau",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "10",
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "",
+      "BILD": "T90.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "29.01.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Quba Qualitätssicherung",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "20",
+      "TAGUNGSRAUM": "ecoForum T120",
+      "RAUMHINWEIS": "",
+      "BILD": "T120.jpeg",
+      "BEMERKUNG": ""
     }
   ]
 }
