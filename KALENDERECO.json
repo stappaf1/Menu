@@ -1357,6 +1357,18 @@
       "BEMERKUNG": ""
     },
     {
+      "DATUM": "26.01.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Isp Next 2",
+      "EVENT": "Besprechung",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoRefugium T30",
+      "RAUMHINWEIS": "",
+      "BILD": "T30.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
       "DATUM": "27.01.26",
       "VON": "",
       "BIS": "",
@@ -1390,6 +1402,90 @@
       "TAGUNGSRAUM": "ecoForum T120",
       "RAUMHINWEIS": "",
       "BILD": "T120.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "02.02.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "PAX AG",
+      "EVENT": "",
+      "TEILNEHMER": "6",
+      "TAGUNGSRAUM": "ecoRefugium T30",
+      "RAUMHINWEIS": "",
+      "BILD": "T30.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "03.02.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "BICO ZWEIRAD MARKETING GMBH ",
+      "EVENT": "",
+      "TEILNEHMER": "50",
+      "TAGUNGSRAUM": "ecoPlenum T200",
+      "RAUMHINWEIS": "",
+      "BILD": "T200-Business.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "04.02.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Autohaus Bauer",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "40",
+      "TAGUNGSRAUM": "ecoPlenum T200",
+      "RAUMHINWEIS": "",
+      "BILD": "T200-Business.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "04.02.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "BAUSTOFF RECYCLING BAYERN E.V.",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "15",
+      "TAGUNGSRAUM": "ecoForum T120",
+      "RAUMHINWEIS": "",
+      "BILD": "T120.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "04.02.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "HYDROISOTOP GMBH     ",
+      "EVENT": "Meeting",
+      "TEILNEHMER": "6",
+      "TAGUNGSRAUM": "ecoRefugium T30",
+      "RAUMHINWEIS": "",
+      "BILD": "T30.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "05.02.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "ALLIANZ AGRAR AG      ",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "60",
+      "TAGUNGSRAUM": "ecoPlenum T200",
+      "RAUMHINWEIS": "",
+      "BILD": "T200-Business.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "06.02.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "HOCHZEIT SERGEEV       ",
+      "EVENT": "Hochzeit",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoPlenum T200",
+      "RAUMHINWEIS": "",
+      "BILD": "Privatveranstaltung.JPEG",
       "BEMERKUNG": ""
     }
   ]
