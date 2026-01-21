@@ -1300,6 +1300,18 @@
       "DATUM": "22.01.26",
       "VON": "",
       "BIS": "",
+      "KUNDE": "BFZ GmbH",
+      "EVENT": "Fortbildung",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "",
+      "BILD": "T90.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "22.01.26",
+      "VON": "",
+      "BIS": "",
       "KUNDE": "ELERO",
       "EVENT": "Tagung",
       "TEILNEHMER": "15",
