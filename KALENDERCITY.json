@@ -215,6 +215,66 @@
       "RAUMHINWEIS": "",
       "BILD": "T60.jpeg",
       "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "02.02.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "MMS TECHNOLOGY GMBH   ",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "20",
+      "TAGUNGSRAUM": "großerFreiraum T60",
+      "RAUMHINWEIS": "",
+      "BILD": "T60.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "03.02.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "MMS TECHNOLOGY GMBH   ",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "20",
+      "TAGUNGSRAUM": "großerFreiraum T60",
+      "RAUMHINWEIS": "",
+      "BILD": "T60.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "03.02.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "LIDL VERTRIEBS GMBH & CO. KG",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "20",
+      "TAGUNGSRAUM": "Weitblick T100",
+      "RAUMHINWEIS": "",
+      "BILD": "T100.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "04.02.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "LIDL VERTRIEBS GMBH & CO. KG",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "20",
+      "TAGUNGSRAUM": "Weitblick T100",
+      "RAUMHINWEIS": "",
+      "BILD": "T100.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "05.02.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "LIDL VERTRIEBS GMBH & CO. KG",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "20",
+      "TAGUNGSRAUM": "Weitblick T100",
+      "RAUMHINWEIS": "",
+      "BILD": "T100.jpeg",
+      "BEMERKUNG": ""
     }
   ]
 }
