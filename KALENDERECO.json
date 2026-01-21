@@ -1351,9 +1351,9 @@
       "KUNDE": "ELERO",
       "EVENT": "Tagung",
       "TEILNEHMER": "17",
-      "TAGUNGSRAUM": "ecoCentrum T90",
+      "TAGUNGSRAUM": "ecoForum T120",
       "RAUMHINWEIS": "",
-      "BILD": "T90.jpeg",
+      "BILD": "T120.jpeg",
       "BEMERKUNG": ""
     },
     {
@@ -1363,21 +1363,21 @@
       "KUNDE": "ELERO",
       "EVENT": "Tagung",
       "TEILNEHMER": "15",
-      "TAGUNGSRAUM": "ecoCentrum T90",
+      "TAGUNGSRAUM": "ecoForum T120",
       "RAUMHINWEIS": "",
-      "BILD": "T90.jpeg",
+      "BILD": "T120.jpeg",
       "BEMERKUNG": ""
     },
     {
       "DATUM": "21.01.26",
       "VON": "",
       "BIS": "",
-      "KUNDE": "BFZ gGmbH",
+      "KUNDE": "BFZ GmbH",
       "EVENT": "Fortbildung",
       "TEILNEHMER": "16",
-      "TAGUNGSRAUM": "ecoForum T120",
+      "TAGUNGSRAUM": "ecoCentrum T90",
       "RAUMHINWEIS": "",
-      "BILD": "T120.jpeg",
+      "BILD": "T90.jpeg",
       "BEMERKUNG": ""
     },
     {
