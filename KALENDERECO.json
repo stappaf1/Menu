@@ -1499,6 +1499,30 @@
       "RAUMHINWEIS": "",
       "BILD": "Privatveranstaltung.JPEG",
       "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "10.02.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "AUTONEUM POLAND SP. Z O. O.",
+      "EVENT": "Tagung ",
+      "TEILNEHMER": "8",
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "",
+      "BILD": "T90.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "10.02.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "COMLOG GESELLSCHAFT",
+      "EVENT": "Tagung ",
+      "TEILNEHMER": "7",
+      "TAGUNGSRAUM": "ecoForum T120",
+      "RAUMHINWEIS": "",
+      "BILD": "T120.jpeg",
+      "BEMERKUNG": ""
     }
   ]
 }
