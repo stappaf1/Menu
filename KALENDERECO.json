@@ -1535,6 +1535,78 @@
       "RAUMHINWEIS": "",
       "BILD": "T200-Business.jpeg",
       "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "12.02.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Normec Valitech GmbH",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "2",
+      "TAGUNGSRAUM": "ecoRefugium T30",
+      "RAUMHINWEIS": "",
+      "BILD": "T30.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "21.02.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Pallas",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "18",
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "",
+      "BILD": "T90.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "21.02.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Wunderlich",
+      "EVENT": "Geburtstagsfeier",
+      "TEILNEHMER": "80",
+      "TAGUNGSRAUM": "ecoPlenum T200",
+      "RAUMHINWEIS": "",
+      "BILD": "T200-1.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "24.02.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Hitachi Energy Germany AG",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "4",
+      "TAGUNGSRAUM": "ecoRefugium T30",
+      "RAUMHINWEIS": "",
+      "BILD": "T30.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "25.02.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Metafinanz",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "14",
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "",
+      "BILD": "T90.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "26.02.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Metafinanz",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "14",
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "",
+      "BILD": "T90.jpeg",
+      "BEMERKUNG": ""
     }
   ]
 }
