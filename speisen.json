@@ -73,7 +73,7 @@
       "": ""
     },
     {
-      "Kategorie": "Kids Hauptspeise",
+      "Kategorie": "Kindergerichte",
       "Name": "Nudelzauber",
       "Beschreibung": "Fusilli-Nudeln mit fruchtiger Tomatensoße",
       "Menge": "Kl. Portion",
@@ -81,7 +81,7 @@
       "": ""
     },
     {
-      "Kategorie": "Kids Hauptspeise",
+      "Kategorie": "Kindergerichte",
       "Name": "Schnitzel Spaß",
       "Beschreibung": "Knusprig paniertes Putenschnitzel, serviert mit goldenen Pommes frites.",
       "Menge": "Kl. Portion",
@@ -89,7 +89,7 @@
       "": ""
     },
     {
-      "Kategorie": "Kids Hauptspeise",
+      "Kategorie": "Kindergerichte",
       "Name": "Dino Teller",
       "Beschreibung": "Knusprige Bio-Dino-Nuggets, dazu cremiges Kartoffelpüree und milde Soße",
       "Menge": "Kl. Portion",
@@ -97,7 +97,7 @@
       "": ""
     },
     {
-      "Kategorie": "Kids Hauptspeise",
+      "Kategorie": "Kindergerichte",
       "Name": "Pommes Extra",
       "Beschreibung": "Knusprige Pommes frites, goldgelb gebacken und leicht gesalzen.",
       "Menge": "Kl. Portion",
@@ -201,7 +201,7 @@
       "": ""
     },
     {
-      "Kategorie": "Kids’ Menu",
+      "Kategorie": "Junior Menu",
       "Name": "Pasta Magic",
       "Beschreibung": "Fun fusilli pasta with fruity tomato sauce",
       "Menge": "small portion",
@@ -209,7 +209,7 @@
       "": ""
     },
     {
-      "Kategorie": "Kids’ Menu",
+      "Kategorie": "Junior Menu",
       "Name": "Little Schnitzel Heroes",
       "Beschreibung": "Crispy breaded turkey schnitzel served with golden fries ",
       "Menge": "small portion",
@@ -217,7 +217,7 @@
       "": ""
     },
     {
-      "Kategorie": "Kids’ Menu",
+      "Kategorie": "Junior Menu",
       "Name": "Dino Power Plate",
       "Beschreibung": "Crispy organic dino-shaped nuggets with creamy mashed potatoes and mild sauce",
       "Menge": "small portion",
@@ -225,7 +225,7 @@
       "": ""
     },
     {
-      "Kategorie": "Kids’ Menu",
+      "Kategorie": "Junior Menu",
       "Name": "Extra Fries",
       "Beschreibung": "Golden, crispy fries",
       "Menge": "small portion",
