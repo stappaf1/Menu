@@ -13,7 +13,7 @@
       "Name": "Kleiner gemischter Wintersalat",
       "Beschreibung": "Frischer, gemischter Wintersalat mit knackigem Gemüse, serviert mit cremigem Joghurt-Dressing",
       "Menge": "Portion",
-      "Preis": 5.9,
+      "Preis": 4.9,
       "": ""
     },
     {
@@ -77,7 +77,7 @@
       "Name": "Nudelzauber",
       "Beschreibung": "Fusilli-Nudeln mit fruchtiger Tomatensoße",
       "Menge": "Kl. Portion",
-      "Preis": "",
+      "Preis": 7.9,
       "": ""
     },
     {
@@ -85,7 +85,7 @@
       "Name": "Schnitzel Spaß",
       "Beschreibung": "Knusprig paniertes Putenschnitzel, serviert mit goldenen Pommes frites.",
       "Menge": "Kl. Portion",
-      "Preis": "",
+      "Preis": 9.9,
       "": ""
     },
     {
@@ -93,7 +93,7 @@
       "Name": "Dino Teller",
       "Beschreibung": "Knusprige Bio-Dino-Nuggets, dazu cremiges Kartoffelpüree und milde Soße",
       "Menge": "Kl. Portion",
-      "Preis": "",
+      "Preis": 9.9,
       "": ""
     },
     {
@@ -101,7 +101,7 @@
       "Name": "Pommes Extra",
       "Beschreibung": "Knusprige Pommes frites, goldgelb gebacken und leicht gesalzen.",
       "Menge": "Kl. Portion",
-      "Preis": "",
+      "Preis": 4,
       "": ""
     },
     {
@@ -205,7 +205,7 @@
       "Name": "Pasta Magic",
       "Beschreibung": "Fun fusilli pasta with fruity tomato sauce",
       "Menge": "small portion",
-      "Preis": "",
+      "Preis": 7.9,
       "": ""
     },
     {
@@ -213,7 +213,7 @@
       "Name": "Little Schnitzel Heroes",
       "Beschreibung": "Crispy breaded turkey schnitzel served with golden fries ",
       "Menge": "small portion",
-      "Preis": "",
+      "Preis": 9.9,
       "": ""
     },
     {
@@ -221,7 +221,7 @@
       "Name": "Dino Power Plate",
       "Beschreibung": "Crispy organic dino-shaped nuggets with creamy mashed potatoes and mild sauce",
       "Menge": "small portion",
-      "Preis": "",
+      "Preis": 9.9,
       "": ""
     },
     {
@@ -229,7 +229,7 @@
       "Name": "Extra Fries",
       "Beschreibung": "Golden, crispy fries",
       "Menge": "small portion",
-      "Preis": "",
+      "Preis": 4,
       "": ""
     },
     {
