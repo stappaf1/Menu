@@ -1,11 +1,19 @@
 {
   "speisen": [
     {
-      "Kategorie": "",
-      "Name": "",
-      "Beschreibung": " ",
-      "Menge": " ",
-      "Preis": " ",
+      "Kategorie": "Vorspeise",
+      "Name": "Tomatensuppe mit geröstetem Knoblauchbrot ",
+      "Beschreibung": "ruchtige Tomatensuppe aus sonnengereiften Tomaten, fein abgeschmeckt, serviert mit knusprig geröstetem Knoblauchbrot",
+      "Menge": "Portion",
+      "Preis": "Kl. 4,50 € Gr. 6,50 €",
+      "": ""
+    },
+    {
+      "Kategorie": "Vorspeise",
+      "Name": "Kleiner gemischter Wintersalat",
+      "Beschreibung": "Frischer, gemischter Wintersalat mit knackigem Gemüse, serviert mit cremigem Joghurt-Dressing",
+      "Menge": "Portion",
+      "Preis": 5.9,
       "": ""
     },
     {
@@ -17,25 +25,81 @@
       "": ""
     },
     {
-      "Kategorie": "",
-      "Name": "",
-      "Beschreibung": " ",
-      "Menge": " ",
-      "Preis": " ",
+      "Kategorie": "Hauptspeise",
+      "Name": "Schnitzel ,,Wiener Art``",
+      "Beschreibung": "Knusprig gebratenes Schweineschnitzel, serviert mit Kartoffelsalat und knusprigen Pommes.",
+      "Menge": "Portion",
+      "Preis": 17.9,
       "": ""
     },
     {
-      "Kategorie": "",
-      "Name": "",
-      "Beschreibung": " ",
-      "Menge": " ",
-      "Preis": " ",
+      "Kategorie": "Hauptspeise",
+      "Name": "Goldenes Cordon Bleu",
+      "Beschreibung": "Knusprig paniertes Cordon Bleu vom Schwein, gefüllt mit würzigem Schinken und zart schmelzendem Käse, serviert mit hausgemachtem Kartoffel-Endiviensalat und Preiselbeeren.",
+      "Menge": "Portion",
+      "Preis": 19.9,
+      "": ""
+    },
+    {
+      "Kategorie": "Hauptspeise",
+      "Name": "Rustikale Rostbratwurst",
+      "Beschreibung": "Saftige Rostbratwurst, goldbraun gebraten, serviert mit cremigem Kartoffelpüree und herzhaftem Sauerkraut",
+      "Menge": "Portion",
+      "Preis": 15.9,
+      "": ""
+    },
+    {
+      "Kategorie": "Hauptspeise",
+      "Name": "Nordischer Backfisch",
+      "Beschreibung": "Saftig gebackener Kabeljau, begleitet an Kartoffel-Gurkensalat und klassischer Remoulade",
+      "Menge": "Portion",
+      "Preis": 17.9,
+      "": ""
+    },
+    {
+      "Kategorie": "Hauptspeise",
+      "Name": "Vegetarische Schupfnudelpfanne",
+      "Beschreibung": "Kross gebratene Schupfnudeln mit saisonalem Gemüse und mildem Sauerkraut.",
+      "Menge": "Portion",
+      "Preis": 12.9,
       "": ""
     },
     {
       "Kategorie": "",
       "Name": "",
       "Beschreibung": "",
+      "Menge": "",
+      "Preis": "",
+      "": ""
+    },
+    {
+      "Kategorie": "Kids Hauptspeise",
+      "Name": "Nudelzauber",
+      "Beschreibung": "Fusilli-Nudeln mit fruchtiger Tomatensoße",
+      "Menge": "",
+      "Preis": "",
+      "": ""
+    },
+    {
+      "Kategorie": "Kids Hauptspeise",
+      "Name": "Schnitzel Spaß",
+      "Beschreibung": "Knusprig paniertes Putenschnitzel, serviert mit goldenen Pommes frites.",
+      "Menge": "",
+      "Preis": "",
+      "": ""
+    },
+    {
+      "Kategorie": "Kids Hauptspeise",
+      "Name": "Dino Teller",
+      "Beschreibung": "Knusprige Bio-Dino-Nuggets, dazu cremiges Kartoffelpüree und milde Soße",
+      "Menge": "",
+      "Preis": "",
+      "": ""
+    },
+    {
+      "Kategorie": "Kids Hauptspeise",
+      "Name": "Pommes Extra",
+      "Beschreibung": "Knusprige Pommes frites, goldgelb gebacken und leicht gesalzen.",
       "Menge": "",
       "Preis": "",
       "": ""
@@ -49,75 +113,11 @@
       "": ""
     },
     {
-      "Kategorie": "",
-      "Name": "",
-      "Beschreibung": "",
-      "Menge": "",
-      "Preis": "",
-      "": ""
-    },
-    {
-      "Kategorie": "",
-      "Name": "",
-      "Beschreibung": "",
-      "Menge": "",
-      "Preis": "",
-      "": ""
-    },
-    {
-      "Kategorie": "",
-      "Name": "",
-      "Beschreibung": "",
-      "Menge": "",
-      "Preis": "",
-      "": ""
-    },
-    {
-      "Kategorie": "",
-      "Name": "",
-      "Beschreibung": "",
-      "Menge": "",
-      "Preis": "",
-      "": ""
-    },
-    {
-      "Kategorie": "",
-      "Name": "",
-      "Beschreibung": "",
-      "Menge": "",
-      "Preis": "",
-      "": ""
-    },
-    {
-      "Kategorie": "",
-      "Name": "",
-      "Beschreibung": "",
-      "Menge": "",
-      "Preis": "",
-      "": ""
-    },
-    {
-      "Kategorie": "",
-      "Name": "",
-      "Beschreibung": "",
-      "Menge": "",
-      "Preis": "",
-      "": ""
-    },
-    {
-      "Kategorie": "",
-      "Name": "",
-      "Beschreibung": "",
-      "Menge": "",
-      "Preis": "",
-      "": ""
-    },
-    {
-      "Kategorie": "",
-      "Name": "",
-      "Beschreibung": "",
-      "Menge": "",
-      "Preis": "",
+      "Kategorie": "Dessert",
+      "Name": "Kaiserschmarrn mit Apfelkompott",
+      "Beschreibung": "Fluffiger, zerrissener Pfannkuchen mit Puderzucker bestäubt, serviert mit süßem Apfelkompott.",
+      "Menge": "Portion",
+      "Preis": 6.5,
       "": ""
     },
     {
