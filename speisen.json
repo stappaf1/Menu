@@ -76,7 +76,7 @@
       "Kategorie": "Kids Hauptspeise",
       "Name": "Nudelzauber",
       "Beschreibung": "Fusilli-Nudeln mit fruchtiger Tomatensoße",
-      "Menge": "",
+      "Menge": "Kl. Portion",
       "Preis": "",
       "": ""
     },
@@ -84,7 +84,7 @@
       "Kategorie": "Kids Hauptspeise",
       "Name": "Schnitzel Spaß",
       "Beschreibung": "Knusprig paniertes Putenschnitzel, serviert mit goldenen Pommes frites.",
-      "Menge": "",
+      "Menge": "Kl. Portion",
       "Preis": "",
       "": ""
     },
@@ -92,7 +92,7 @@
       "Kategorie": "Kids Hauptspeise",
       "Name": "Dino Teller",
       "Beschreibung": "Knusprige Bio-Dino-Nuggets, dazu cremiges Kartoffelpüree und milde Soße",
-      "Menge": "",
+      "Menge": "Kl. Portion",
       "Preis": "",
       "": ""
     },
@@ -100,7 +100,7 @@
       "Kategorie": "Kids Hauptspeise",
       "Name": "Pommes Extra",
       "Beschreibung": "Knusprige Pommes frites, goldgelb gebacken und leicht gesalzen.",
-      "Menge": "",
+      "Menge": "Kl. Portion",
       "Preis": "",
       "": ""
     },
@@ -129,12 +129,124 @@
       "": ""
     },
     {
+      "Kategorie": "Starters",
+      "Name": "Tomato Soup with Toasted Garlic Bread",
+      "Beschreibung": "Rich and fruity tomato soup, served with crispy toasted garlic bread",
+      "Menge": "portion",
+      "Preis": "Kl. 4,50 € Gr. 6,50 €",
+      "": " "
+    },
+    {
+      "Kategorie": "Starters",
+      "Name": "Small Mixed Winter Salad with Yogurt Dressing",
+      "Beschreibung": "Fresh seasonal winter salad with crunchy vegetables, served with creamy yogurt dressing",
+      "Menge": "portion",
+      "Preis": 5.9,
+      "": ""
+    },
+    {
       "Kategorie": "",
       "Name": "",
       "Beschreibung": "",
       "Menge": "",
       "Preis": "",
-      "": " "
+      "": ""
+    },
+    {
+      "Kategorie": "Main Dishes",
+      "Name": "",
+      "Beschreibung": "",
+      "Menge": "",
+      "Preis": 17.9,
+      "": ""
+    },
+    {
+      "Kategorie": "Main Dishes",
+      "Name": "Golden Alpine Cordon Bleu",
+      "Beschreibung": "Crispy pork cordon bleu, filled with savory ham and melting cheese, served with potato-endive salad and lingonberries.",
+      "Menge": "portion",
+      "Preis": 19.9,
+      "": ""
+    },
+    {
+      "Kategorie": "Main Dishes",
+      "Name": "Rustic Rostbratwurst",
+      "Beschreibung": "Juicy German sausage, golden fried, served with creamy mashed potatoes and hearty sauerkraut.",
+      "Menge": "portion",
+      "Preis": 15.9,
+      "": ""
+    },
+    {
+      "Kategorie": "Main Dishes",
+      "Name": "Crispy Cod ",
+      "Beschreibung": "Golden-baked cod in a light breading, served with fresh potato-cucumber salad and creamy remoulade.",
+      "Menge": "portion",
+      "Preis": 17.9,
+      "": ""
+    },
+    {
+      "Kategorie": "Main Dishes",
+      "Name": "Schupfnudel Pan with Market Vegetables",
+      "Beschreibung": "Golden-fried Schupfnudeln with fresh seasonal vegetables and mild sauerkraut.",
+      "Menge": "portion",
+      "Preis": 12.9,
+      "": ""
+    },
+    {
+      "Kategorie": "",
+      "Name": "",
+      "Beschreibung": "",
+      "Menge": "",
+      "Preis": "",
+      "": ""
+    },
+    {
+      "Kategorie": "Kids’ Menu",
+      "Name": "Pasta Magic",
+      "Beschreibung": "Fun fusilli pasta with fruity tomato sauce",
+      "Menge": "small portion",
+      "Preis": "",
+      "": ""
+    },
+    {
+      "Kategorie": "Kids’ Menu",
+      "Name": "Little Schnitzel Heroes",
+      "Beschreibung": "Crispy breaded turkey schnitzel served with golden fries ",
+      "Menge": "small portion",
+      "Preis": "",
+      "": ""
+    },
+    {
+      "Kategorie": "Kids’ Menu",
+      "Name": "Dino Power Plate",
+      "Beschreibung": "Crispy organic dino-shaped nuggets with creamy mashed potatoes and mild sauce",
+      "Menge": "small portion",
+      "Preis": "",
+      "": ""
+    },
+    {
+      "Kategorie": "Kids’ Menu",
+      "Name": "Extra Fries",
+      "Beschreibung": "Golden, crispy fries",
+      "Menge": "small portion",
+      "Preis": "",
+      "": ""
+    },
+    {
+      "Kategorie": "",
+      "Name": "",
+      "Beschreibung": "",
+      "Menge": "",
+      "Preis": "",
+      "": ""
+    },
+    {
+      "Kategorie": "Desserts",
+      "Name": "Kaiserschmarrn",
+      "Beschreibung": "Fluffy shredded pancake, dusted with powdered sugar, served with sweet apple compote.",
+      "Menge": "portion",
+      "Preis": 6.5,
+      "": ""
     }
   ]
 }
