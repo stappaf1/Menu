@@ -27,7 +27,7 @@
     {
       "Kategorie": "Hauptspeise",
       "Name": "Schnitzel ,,Wiener Art''",
-      "Beschreibung": "Knusprig gebratenes Schweineschnitzel, serviert mit Kartoffelsalat und knusprigen Pommes.",
+      "Beschreibung": "Knusprig gebratenes Schweineschnitzel, serviert mit knusprigen Pommes.",
       "Menge": "Portion",
       "Preis": 17.9,
       "": ""
@@ -155,7 +155,7 @@
     {
       "Kategorie": "Main Dishes",
       "Name": "“Viennese-style'' schnitzel",
-      "Beschreibung": "Crispy pan-fried pork schnitzel, served with potato salad and crispy French fries.",
+      "Beschreibung": "Crispy pan-fried pork schnitzel, served with crispy French fries.",
       "Menge": "portion",
       "Preis": 17.9,
       "": ""
