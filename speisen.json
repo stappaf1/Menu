@@ -34,7 +34,7 @@
     },
     {
       "Kategorie": "Hauptspeise",
-      "Name": "Goldenes Cordon Bleu",
+      "Name": "Cordon Bleu",
       "Beschreibung": "Knusprig paniertes Cordon Bleu vom Schwein, serviert mit hausgemachtem Kartoffel-Endiviensalat und Preiselbeeren.",
       "Menge": "Portion",
       "Preis": 19.9,
@@ -42,7 +42,7 @@
     },
     {
       "Kategorie": "Hauptspeise",
-      "Name": "Rustikale Rostbratwurst",
+      "Name": "Rostbratwurst",
       "Beschreibung": "Gebratene Rostbratwurst mit Kartoffelpüree und Sauerkraut",
       "Menge": "Portion",
       "Preis": 15.9,
@@ -50,7 +50,7 @@
     },
     {
       "Kategorie": "Hauptspeise",
-      "Name": "Nordischer Backfisch",
+      "Name": "Backfisch",
       "Beschreibung": "Gebackener Kabeljau, begleitet an Kartoffel-Gurkensalat und klassischer Remoulade",
       "Menge": "Portion",
       "Preis": 17.9,
