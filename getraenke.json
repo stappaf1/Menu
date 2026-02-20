@@ -2,6 +2,20 @@
   "getraenke": [
     {
       "Kategorie": "Alkoholfreies",
+      "Name": "Almdudler ",
+      "Beschreibung": "",
+      "Menge": "0.4",
+      "Preis": "4.00 "
+    },
+    {
+      "Kategorie": "Alkoholfreies",
+      "Name": "Skiwasser",
+      "Beschreibung": "",
+      "Menge": "0.4",
+      "Preis": "4.00 "
+    },
+    {
+      "Kategorie": "Alkoholfreies",
       "Name": "Alea – Tafelwasser - Still - Spritzig",
       "Beschreibung": " ",
       "Menge": "0.7",
@@ -412,6 +426,20 @@
       "Beschreibung": " ",
       "Menge": "Tasse",
       "Preis": "3.50"
+    },
+    {
+      "Kategorie": "Non-alcoholic",
+      "Name": "Almdudler soft drink with Alpine mountain herbs",
+      "Beschreibung": "",
+      "Menge": "0.4",
+      "Preis": "4.00"
+    },
+    {
+      "Kategorie": "Non-alcoholic",
+      "Name": "Skiwasser - water with rasperry syrup",
+      "Beschreibung": "",
+      "Menge": "0.4",
+      "Preis": "4.00"
     },
     {
       "Kategorie": "Non-alcoholic",
