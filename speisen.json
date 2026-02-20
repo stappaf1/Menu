@@ -3,7 +3,7 @@
     {
       "Kategorie": "Vorspeise",
       "Name": "Tomatensuppe mit geröstetem Knoblauchbrot ",
-      "Beschreibung": "Fruchtige Tomatensuppe aus sonnengereiften Tomaten, fein abgeschmeckt, serviert mit knusprig geröstetem Knoblauchbrot",
+      "Beschreibung": "Fruchtige Tomatensuppe, serviert mit geröstetem Knoblauchbrot",
       "Menge": "Portion",
       "Preis": "Kl. 4,50 € Gr. 6,50 €",
       "": ""
@@ -11,7 +11,7 @@
     {
       "Kategorie": "Vorspeise",
       "Name": "Kleiner gemischter Wintersalat",
-      "Beschreibung": "Frischer, gemischter Wintersalat mit knackigem Gemüse, serviert mit cremigem Joghurt-Dressing",
+      "Beschreibung": "Frischer, gemischter Wintersalat mit knackigem Gemüse, serviert mit Joghurt-Dressing",
       "Menge": "Portion",
       "Preis": 4.9,
       "": ""
@@ -27,7 +27,7 @@
     {
       "Kategorie": "Hauptspeise",
       "Name": "Schnitzel ,,Wiener Art''",
-      "Beschreibung": "Knusprig gebratenes Schweineschnitzel, serviert mit knusprigen Pommes.",
+      "Beschreibung": "Knusprig gebratenes Schweineschnitzel mit Pommes",
       "Menge": "Portion",
       "Preis": 17.9,
       "": ""
@@ -35,7 +35,7 @@
     {
       "Kategorie": "Hauptspeise",
       "Name": "Goldenes Cordon Bleu",
-      "Beschreibung": "Knusprig paniertes Cordon Bleu vom Schwein, gefüllt mit würzigem Schinken und zart schmelzendem Käse, serviert mit hausgemachtem Kartoffel-Endiviensalat und Preiselbeeren.",
+      "Beschreibung": "Knusprig paniertes Cordon Bleu vom Schwein, serviert mit hausgemachtem Kartoffel-Endiviensalat und Preiselbeeren.",
       "Menge": "Portion",
       "Preis": 19.9,
       "": ""
@@ -43,7 +43,7 @@
     {
       "Kategorie": "Hauptspeise",
       "Name": "Rustikale Rostbratwurst",
-      "Beschreibung": "Saftige Rostbratwurst, goldbraun gebraten, serviert mit cremigem Kartoffelpüree und herzhaftem Sauerkraut",
+      "Beschreibung": "Gebratene Rostbratwurst mit Kartoffelpüree und Sauerkraut",
       "Menge": "Portion",
       "Preis": 15.9,
       "": ""
@@ -51,7 +51,7 @@
     {
       "Kategorie": "Hauptspeise",
       "Name": "Nordischer Backfisch",
-      "Beschreibung": "Saftig gebackener Kabeljau, begleitet an Kartoffel-Gurkensalat und klassischer Remoulade",
+      "Beschreibung": "Gebackener Kabeljau, begleitet an Kartoffel-Gurkensalat und klassischer Remoulade",
       "Menge": "Portion",
       "Preis": 17.9,
       "": ""
@@ -59,7 +59,7 @@
     {
       "Kategorie": "Hauptspeise",
       "Name": "Vegetarische Schupfnudelpfanne",
-      "Beschreibung": "Kross gebratene Schupfnudeln mit saisonalem Gemüse und mildem Sauerkraut.",
+      "Beschreibung": "Gebratene Schupfnudeln mit saisonalem Gemüse und mildem Sauerkraut.",
       "Menge": "Portion",
       "Preis": 12.9,
       "": ""
@@ -83,7 +83,7 @@
     {
       "Kategorie": "Kindergerichte",
       "Name": "Schnitzel Spaß",
-      "Beschreibung": "Knusprig paniertes Putenschnitzel, serviert mit goldenen Pommes frites.",
+      "Beschreibung": "Knusprig paniertes Putenschnitzel, serviert mit Pommes frites.",
       "Menge": "Kl. Portion",
       "Preis": 9.9,
       "": ""
@@ -115,7 +115,7 @@
     {
       "Kategorie": "Dessert",
       "Name": "Kaiserschmarrn mit Apfelkompott",
-      "Beschreibung": "Fluffiger, zerrissener Pfannkuchen mit Puderzucker bestäubt, serviert mit süßem Apfelkompott.",
+      "Beschreibung": "Fluffiger Pfannkuchen mit süßem Apfelkompott.",
       "Menge": "Portion",
       "Preis": 6.5,
       "": ""
@@ -131,7 +131,7 @@
     {
       "Kategorie": "Starters",
       "Name": "Tomato Soup with Toasted Garlic Bread",
-      "Beschreibung": "Rich and fruity tomato soup, served with crispy toasted garlic bread",
+      "Beschreibung": "fruity tomato soup, served with crispy toasted garlic bread",
       "Menge": "portion",
       "Preis": "Kl. 4,50 € Gr. 6,50 €",
       "": " "
@@ -139,7 +139,7 @@
     {
       "Kategorie": "Starters",
       "Name": "Small Mixed Winter Salad with Yogurt Dressing",
-      "Beschreibung": "Fresh seasonal winter salad with crunchy vegetables, served with creamy yogurt dressing",
+      "Beschreibung": "Fresh seasonal winter salad with crunchy vegetables, served with yogurt dressing",
       "Menge": "portion",
       "Preis": 5.9,
       "": ""
@@ -162,7 +162,7 @@
     },
     {
       "Kategorie": "Main Dishes",
-      "Name": "Golden Alpine Cordon Bleu",
+      "Name": "Cordon Bleu",
       "Beschreibung": "Crispy pork cordon bleu, filled with savory ham and melting cheese, served with potato-endive salad and lingonberries.",
       "Menge": "portion",
       "Preis": 19.9,
@@ -171,7 +171,7 @@
     {
       "Kategorie": "Main Dishes",
       "Name": "Rustic Rostbratwurst",
-      "Beschreibung": "Juicy German sausage, golden fried, served with creamy mashed potatoes and hearty sauerkraut.",
+      "Beschreibung": "Juicy sausage, golden fried, served with creamy mashed potatoes and sauerkraut.",
       "Menge": "portion",
       "Preis": 15.9,
       "": ""
@@ -179,7 +179,7 @@
     {
       "Kategorie": "Main Dishes",
       "Name": "Crispy Cod ",
-      "Beschreibung": "Golden-baked cod in a light breading, served with fresh potato-cucumber salad and creamy remoulade.",
+      "Beschreibung": "baked cod in a light breading, served with fresh potato-cucumber salad and creamy remoulade.",
       "Menge": "portion",
       "Preis": 17.9,
       "": ""
@@ -187,7 +187,7 @@
     {
       "Kategorie": "Main Dishes",
       "Name": "Schupfnudel Pan with Market Vegetables",
-      "Beschreibung": "Golden-fried Schupfnudeln with fresh seasonal vegetables and mild sauerkraut.",
+      "Beschreibung": "fried Schupfnudeln with fresh seasonal vegetables and sauerkraut.",
       "Menge": "portion",
       "Preis": 12.9,
       "": ""
@@ -203,7 +203,7 @@
     {
       "Kategorie": "Junior Menu",
       "Name": "Pasta Magic",
-      "Beschreibung": "Fun fusilli pasta with fruity tomato sauce",
+      "Beschreibung": "fusilli pasta with fruity tomato sauce",
       "Menge": "small portion",
       "Preis": 7.9,
       "": ""
@@ -227,7 +227,7 @@
     {
       "Kategorie": "Junior Menu",
       "Name": "Extra Fries",
-      "Beschreibung": "Golden, crispy fries",
+      "Beschreibung": "crispy fries",
       "Menge": "small portion",
       "Preis": 4,
       "": ""
@@ -243,7 +243,7 @@
     {
       "Kategorie": "Desserts",
       "Name": "Kaiserschmarrn",
-      "Beschreibung": "Fluffy shredded pancake, dusted with powdered sugar, served with sweet apple compote.",
+      "Beschreibung": "Fluffy shredded pancake with sweet apple compote.",
       "Menge": "portion",
       "Preis": 6.5,
       "": ""
