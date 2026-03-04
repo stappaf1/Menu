@@ -1727,6 +1727,102 @@
       "RAUMHINWEIS": "",
       "BILD": "T90.jpeg",
       "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "10.03.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "SAXS Tank GmbH ",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "35",
+      "TAGUNGSRAUM": "ecoForum T120",
+      "RAUMHINWEIS": "",
+      "BILD": "T120.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "12.03.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Brenntag GmbH ",
+      "EVENT": "Tagung ",
+      "TEILNEHMER": "40",
+      "TAGUNGSRAUM": "ecoForum T120",
+      "RAUMHINWEIS": "",
+      "BILD": "T120.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "12.03.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Brenntag GmbH ",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "",
+      "BILD": "T90.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "12.03.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "kbo-Führungskräfte-Curriculum Modul 5",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "9",
+      "TAGUNGSRAUM": "großerFreiraum T60",
+      "RAUMHINWEIS": "",
+      "BILD": "T60.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "12.03.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "kbo-Führungskräfte-Curriculum Modul 5",
+      "EVENT": "Tagung ",
+      "TEILNEHMER": "9",
+      "TAGUNGSRAUM": "kleinerFreiraum T10",
+      "RAUMHINWEIS": "",
+      "BILD": "T10.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "12.03.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "kbo-Führungskräfte-Curriculum Modul 5",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "9",
+      "TAGUNGSRAUM": "Weitblick T100",
+      "RAUMHINWEIS": "",
+      "BILD": "T100.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "13.03.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "autohaus an der B13 GmbH & Co. KG",
+      "EVENT": "Tagung ",
+      "TEILNEHMER": "14",
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "",
+      "BILD": "T90.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "14.03.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "autohaus an der B13 GmbH & Co. KG",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "14",
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "",
+      "BILD": "T90.jpeg",
+      "BEMERKUNG": ""
     }
   ]
 }
