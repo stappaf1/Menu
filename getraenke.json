@@ -155,6 +155,13 @@
       "Preis": "12.50"
     },
     {
+      "Kategorie": "Cocktails",
+      "Name": "The Spy - Sprudel Tee - Grün Tee/ Wild Peach Flavour - Ramazotti Rosato ",
+      "Beschreibung": "",
+      "Menge": "Glas",
+      "Preis": "10.50"
+    },
+    {
       "Kategorie": "Mocktails",
       "Name": "Melon Mule - Wassermelone - Minze - Limettensaft - Ginger Beer",
       "Beschreibung": "",
@@ -580,6 +587,13 @@
       "Beschreibung": "",
       "Menge": "Glass",
       "Preis": "12.50"
+    },
+    {
+      "Kategorie": "Cocktails",
+      "Name": "The Spy - Sparkling Tea - Green Tea/ Wild Peach Flavour - Ramazotti Rosato ",
+      "Beschreibung": "",
+      "Menge": "Glass ",
+      "Preis": "10.50"
     },
     {
       "Kategorie": "Mocktails",
