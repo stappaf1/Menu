@@ -275,6 +275,42 @@
       "RAUMHINWEIS": "",
       "BILD": "T100.jpeg",
       "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "12.03.26",
+      "VON": "09:00",
+      "BIS": "",
+      "KUNDE": "KBO",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "9",
+      "TAGUNGSRAUM": "Weitblick T100",
+      "RAUMHINWEIS": "",
+      "BILD": "T100.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "12.03.26",
+      "VON": "09:00",
+      "BIS": "",
+      "KUNDE": "KBO",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "9",
+      "TAGUNGSRAUM": "großerFreiraum T60",
+      "RAUMHINWEIS": "",
+      "BILD": "T60.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "12.03.26",
+      "VON": "09:00",
+      "BIS": "",
+      "KUNDE": "KBO",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "9",
+      "TAGUNGSRAUM": "kleinerFreiraum T10",
+      "RAUMHINWEIS": "",
+      "BILD": "T10.jpeg",
+      "BEMERKUNG": ""
     }
   ]
 }
