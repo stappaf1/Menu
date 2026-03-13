@@ -311,6 +311,42 @@
       "RAUMHINWEIS": "",
       "BILD": "T10.jpeg",
       "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "18.03.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Berufsgenossenschaft Nahrungsmittel \nund Gastgewerbe ",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "9",
+      "TAGUNGSRAUM": "kleinerFreiraum T10",
+      "RAUMHINWEIS": "",
+      "BILD": "T10.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "18.03.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Berufsgenossenschaft Nahrungsmittel \nund Gastgewerbe ",
+      "EVENT": "Tagung ",
+      "TEILNEHMER": "9",
+      "TAGUNGSRAUM": "Weitblick T100",
+      "RAUMHINWEIS": "",
+      "BILD": "T100.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "19.03.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Berufsgenossenschaft Nahrungsmittel \nund Gastgewerbe ",
+      "EVENT": "Tagung ",
+      "TEILNEHMER": "8",
+      "TAGUNGSRAUM": "Weitblick T100",
+      "RAUMHINWEIS": "",
+      "BILD": "T100.jpeg",
+      "BEMERKUNG": ""
     }
   ]
 }
