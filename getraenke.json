@@ -369,7 +369,7 @@
       "Name": "Espresso",
       "Beschreibung": " ",
       "Menge": "Tasse",
-      "Preis": "2.00"
+      "Preis": "2.50"
     },
     {
       "Kategorie": "Heißgetränke Kaffee",
@@ -803,7 +803,7 @@
       "Name": "Coffee Espresso",
       "Beschreibung": "",
       "Menge": "Cup",
-      "Preis": "2.00"
+      "Preis": "2.50"
     },
     {
       "Kategorie": "Hot Drinks",
