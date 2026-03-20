@@ -58,10 +58,10 @@
     },
     {
       "Kategorie": "Aperitifs",
-      "Name": "French 75 - The Duke Bio Gin - Zitrone - Crémant",
+      "Name": "Martini Floreale Alkoholfrei - Martini Floreale - Tonic - Thymian ",
       "Beschreibung": " ",
       "Menge": "Glas",
-      "Preis": "9.90"
+      "Preis": "7.90"
     },
     {
       "Kategorie": "Aperitifs",
@@ -79,7 +79,7 @@
     },
     {
       "Kategorie": "Aperitifs",
-      "Name": "Pampelle Spritz - Pampelle - Prosecco - Soda",
+      "Name": "Martini Vibrante - Wildberry ",
       "Beschreibung": " ",
       "Menge": "Glas",
       "Preis": "7.90"
@@ -492,10 +492,10 @@
     },
     {
       "Kategorie": "Aperitifs",
-      "Name": "French 75 - The Duke Organic Gin - Lemon - Crémant",
+      "Name": "Martini Vibrante - Wildberry ",
       "Beschreibung": "",
-      "Menge": "Glass",
-      "Preis": "9.90"
+      "Menge": "Glass ",
+      "Preis": "7.90"
     },
     {
       "Kategorie": "Aperitifs",
@@ -513,7 +513,7 @@
     },
     {
       "Kategorie": "Aperitifs",
-      "Name": "Pampelle Spritz - Pampelle - Prosecco - Soda",
+      "Name": "Martini Floreale Alkoholfrei - Martini Floreale - Tonic - Thymian ",
       "Beschreibung": "",
       "Menge": "Glass",
       "Preis": "7.90"
