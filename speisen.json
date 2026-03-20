@@ -1,67 +1,11 @@
 {
   "speisen": [
     {
-      "Kategorie": "Vorspeise",
-      "Name": "Tomatensuppe mit geröstetem Knoblauchbrot ",
-      "Beschreibung": "Fruchtige Tomatensuppe, serviert mit geröstetem Knoblauchbrot",
-      "Menge": "Portion",
-      "Preis": "Kl. 4,50 € Gr. 6,50 €",
-      "": ""
-    },
-    {
-      "Kategorie": "Vorspeise",
-      "Name": "Kleiner gemischter Wintersalat",
-      "Beschreibung": "Frischer, gemischter Wintersalat mit knackigem Gemüse, serviert mit Joghurt-Dressing",
-      "Menge": "Portion",
-      "Preis": 4.9,
-      "": ""
-    },
-    {
       "Kategorie": "",
       "Name": "",
-      "Beschreibung": " ",
-      "Menge": " ",
-      "Preis": " ",
-      "": ""
-    },
-    {
-      "Kategorie": "Hauptspeise",
-      "Name": "Schnitzel ,,Wiener Art''",
-      "Beschreibung": "Knusprig gebratenes Schweineschnitzel mit Pommes",
-      "Menge": "Portion",
-      "Preis": 17.9,
-      "": ""
-    },
-    {
-      "Kategorie": "Hauptspeise",
-      "Name": "Cordon Bleu",
-      "Beschreibung": "Knusprig paniertes Cordon Bleu vom Schwein, serviert mit hausgemachtem Kartoffel-Endiviensalat und Preiselbeeren.",
-      "Menge": "Portion",
-      "Preis": 19.9,
-      "": ""
-    },
-    {
-      "Kategorie": "Hauptspeise",
-      "Name": "Rostbratwurst",
-      "Beschreibung": "Gebratene Rostbratwurst mit Kartoffelpüree und Sauerkraut",
-      "Menge": "Portion",
-      "Preis": 15.9,
-      "": ""
-    },
-    {
-      "Kategorie": "Hauptspeise",
-      "Name": "Backfisch",
-      "Beschreibung": "Gebackener Kabeljau, begleitet an Kartoffel-Gurkensalat und klassischer Remoulade",
-      "Menge": "Portion",
-      "Preis": 17.9,
-      "": ""
-    },
-    {
-      "Kategorie": "Hauptspeise",
-      "Name": "Vegetarische Schupfnudelpfanne",
-      "Beschreibung": "Gebratene Schupfnudeln mit saisonalem Gemüse und mildem Sauerkraut.",
-      "Menge": "Portion",
-      "Preis": 12.9,
+      "Beschreibung": "",
+      "Menge": "",
+      "Preis": "",
       "": ""
     },
     {
@@ -73,35 +17,11 @@
       "": ""
     },
     {
-      "Kategorie": "Kindergerichte",
-      "Name": "Nudelzauber",
-      "Beschreibung": "Fusilli-Nudeln mit fruchtiger Tomatensoße",
-      "Menge": "Kl. Portion",
-      "Preis": 7.9,
-      "": ""
-    },
-    {
-      "Kategorie": "Kindergerichte",
-      "Name": "Schnitzel Spaß",
-      "Beschreibung": "Knusprig paniertes Putenschnitzel, serviert mit Pommes frites.",
-      "Menge": "Kl. Portion",
-      "Preis": 9.9,
-      "": ""
-    },
-    {
-      "Kategorie": "Kindergerichte",
-      "Name": "Dino Teller",
-      "Beschreibung": "Knusprige Bio-Dino-Nuggets, dazu cremiges Kartoffelpüree und milde Soße",
-      "Menge": "Kl. Portion",
-      "Preis": 9.9,
-      "": ""
-    },
-    {
-      "Kategorie": "Kindergerichte",
-      "Name": "Pommes Extra",
-      "Beschreibung": "Knusprige Pommes frites, goldgelb gebacken und leicht gesalzen.",
-      "Menge": "Kl. Portion",
-      "Preis": 4,
+      "Kategorie": "",
+      "Name": "",
+      "Beschreibung": "",
+      "Menge": "",
+      "Preis": "",
       "": ""
     },
     {
@@ -113,11 +33,11 @@
       "": ""
     },
     {
-      "Kategorie": "Dessert",
-      "Name": "Kaiserschmarrn mit Apfelkompott",
-      "Beschreibung": "Fluffiger Pfannkuchen mit süßem Apfelkompott.",
-      "Menge": "Portion",
-      "Preis": 6.5,
+      "Kategorie": "",
+      "Name": "",
+      "Beschreibung": "",
+      "Menge": "",
+      "Preis": "",
       "": ""
     },
     {
@@ -129,124 +49,92 @@
       "": ""
     },
     {
-      "Kategorie": "Starters",
-      "Name": "Tomato Soup with Toasted Garlic Bread",
-      "Beschreibung": "fruity tomato soup, served with crispy toasted garlic bread",
-      "Menge": "portion",
-      "Preis": "Kl. 4,50 € Gr. 6,50 €",
+      "Kategorie": "",
+      "Name": "",
+      "Beschreibung": "",
+      "Menge": "",
+      "Preis": "",
+      "": ""
+    },
+    {
+      "Kategorie": "",
+      "Name": "",
+      "Beschreibung": "",
+      "Menge": "",
+      "Preis": "",
+      "": ""
+    },
+    {
+      "Kategorie": "",
+      "Name": "",
+      "Beschreibung": "",
+      "Menge": "",
+      "Preis": "",
+      "": ""
+    },
+    {
+      "Kategorie": "",
+      "Name": "",
+      "Beschreibung": "",
+      "Menge": "",
+      "Preis": "",
+      "": ""
+    },
+    {
+      "Kategorie": "",
+      "Name": "",
+      "Beschreibung": "",
+      "Menge": "",
+      "Preis": "",
+      "": ""
+    },
+    {
+      "Kategorie": "",
+      "Name": "",
+      "Beschreibung": "",
+      "Menge": "",
+      "Preis": "",
+      "": ""
+    },
+    {
+      "Kategorie": "",
+      "Name": "",
+      "Beschreibung": "",
+      "Menge": "",
+      "Preis": "",
+      "": ""
+    },
+    {
+      "Kategorie": "",
+      "Name": "",
+      "Beschreibung": "",
+      "Menge": "",
+      "Preis": "",
+      "": ""
+    },
+    {
+      "Kategorie": "",
+      "Name": "",
+      "Beschreibung": "",
+      "Menge": "",
+      "Preis": "",
+      "": ""
+    },
+    {
+      "Kategorie": "",
+      "Name": "",
+      "Beschreibung": "",
+      "Menge": "",
+      "Preis": "",
+      "": ""
+    },
+    {
+      "Kategorie": "",
+      "Name": "",
+      "Beschreibung": "",
+      "Menge": "",
+      "Preis": "",
       "": " "
-    },
-    {
-      "Kategorie": "Starters",
-      "Name": "Small Mixed Winter Salad with Yogurt Dressing",
-      "Beschreibung": "Fresh seasonal winter salad with crunchy vegetables, served with yogurt dressing",
-      "Menge": "portion",
-      "Preis": 5.9,
-      "": ""
-    },
-    {
-      "Kategorie": "",
-      "Name": "",
-      "Beschreibung": "",
-      "Menge": "",
-      "Preis": "",
-      "": ""
-    },
-    {
-      "Kategorie": "Main Dishes",
-      "Name": "“Viennese-style'' schnitzel",
-      "Beschreibung": "Crispy pan-fried pork schnitzel, served with crispy French fries.",
-      "Menge": "portion",
-      "Preis": 17.9,
-      "": ""
-    },
-    {
-      "Kategorie": "Main Dishes",
-      "Name": "Cordon Bleu",
-      "Beschreibung": "Crispy pork cordon bleu, filled with savory ham and melting cheese, served with potato-endive salad and lingonberries.",
-      "Menge": "portion",
-      "Preis": 19.9,
-      "": ""
-    },
-    {
-      "Kategorie": "Main Dishes",
-      "Name": "Rustic Rostbratwurst",
-      "Beschreibung": "Juicy sausage, golden fried, served with creamy mashed potatoes and sauerkraut.",
-      "Menge": "portion",
-      "Preis": 15.9,
-      "": ""
-    },
-    {
-      "Kategorie": "Main Dishes",
-      "Name": "Crispy Cod ",
-      "Beschreibung": "baked cod in a light breading, served with fresh potato-cucumber salad and creamy remoulade.",
-      "Menge": "portion",
-      "Preis": 17.9,
-      "": ""
-    },
-    {
-      "Kategorie": "Main Dishes",
-      "Name": "Schupfnudel Pan with Market Vegetables",
-      "Beschreibung": "fried Schupfnudeln with fresh seasonal vegetables and sauerkraut.",
-      "Menge": "portion",
-      "Preis": 12.9,
-      "": ""
-    },
-    {
-      "Kategorie": "",
-      "Name": "",
-      "Beschreibung": "",
-      "Menge": "",
-      "Preis": "",
-      "": ""
-    },
-    {
-      "Kategorie": "Junior Menu",
-      "Name": "Pasta Magic",
-      "Beschreibung": "fusilli pasta with fruity tomato sauce",
-      "Menge": "small portion",
-      "Preis": 7.9,
-      "": ""
-    },
-    {
-      "Kategorie": "Junior Menu",
-      "Name": "Little Schnitzel Heroes",
-      "Beschreibung": "Crispy breaded turkey schnitzel served with golden fries ",
-      "Menge": "small portion",
-      "Preis": 9.9,
-      "": ""
-    },
-    {
-      "Kategorie": "Junior Menu",
-      "Name": "Dino Power Plate",
-      "Beschreibung": "Crispy organic dino-shaped nuggets with creamy mashed potatoes and mild sauce",
-      "Menge": "small portion",
-      "Preis": 9.9,
-      "": ""
-    },
-    {
-      "Kategorie": "Junior Menu",
-      "Name": "Extra Fries",
-      "Beschreibung": "crispy fries",
-      "Menge": "small portion",
-      "Preis": 4,
-      "": ""
-    },
-    {
-      "Kategorie": "",
-      "Name": "",
-      "Beschreibung": "",
-      "Menge": "",
-      "Preis": "",
-      "": ""
-    },
-    {
-      "Kategorie": "Desserts",
-      "Name": "Kaiserschmarrn",
-      "Beschreibung": "Fluffy shredded pancake with sweet apple compote.",
-      "Menge": "portion",
-      "Preis": 6.5,
-      "": ""
     }
   ]
 }
