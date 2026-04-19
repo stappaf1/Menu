@@ -1,40 +1,40 @@
 {
   "speisen": [
     {
-      "Kategorie": "",
-      "Name": "",
+      "Kategorie": "Vorspeise",
+      "Name": "Kleiner gemischter Salat mit saisonalen Blattsalaten & Hausdressing",
       "Beschreibung": "",
       "Menge": "",
       "Preis": "",
       "": ""
     },
     {
-      "Kategorie": "",
-      "Name": "",
+      "Kategorie": "Hauptspeise",
+      "Name": "Zwiebelrostbraten vom Rind mit knusprigen Kartoffelecken & kräftiger Jus",
       "Beschreibung": "",
       "Menge": "",
       "Preis": "",
       "": ""
     },
     {
-      "Kategorie": "",
-      "Name": "",
+      "Kategorie": "Hauptspeise",
+      "Name": "Beef Burger im Brioche Bun mit Pommes frites",
       "Beschreibung": "",
       "Menge": "",
       "Preis": "",
       "": ""
     },
     {
-      "Kategorie": "",
-      "Name": "",
+      "Kategorie": "Hauptspeise",
+      "Name": "Cordon Bleu vom Schwein mit klassischem Kartoffelsalat",
       "Beschreibung": "",
       "Menge": "",
       "Preis": "",
       "": ""
     },
     {
-      "Kategorie": "",
-      "Name": "",
+      "Kategorie": "Hauptspeise",
+      "Name": "Bärlauch-Linguine mit feiner Kräuternote",
       "Beschreibung": "",
       "Menge": "",
       "Preis": "",
