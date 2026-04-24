@@ -51,6 +51,13 @@
     },
     {
       "Kategorie": "Aperitifs",
+      "Name": "Chef´s Choice - Sag uns, was du magst und wir mixen dir einen individuellen Drink",
+      "Beschreibung": "",
+      "Menge": "Glas ",
+      "Preis": "8.90"
+    },
+    {
+      "Kategorie": "Aperitifs",
       "Name": "Aperol Spritz - Aperol - Prosecco - Soda",
       "Beschreibung": " ",
       "Menge": "Glas",
@@ -111,6 +118,13 @@
       "Beschreibung": " ",
       "Menge": "0.33",
       "Preis": "3.50"
+    },
+    {
+      "Kategorie": "Cocktails",
+      "Name": "Chef´s Choice - Sag uns, was du magst und wir mixen dir einen individuellen Drink",
+      "Beschreibung": "",
+      "Menge": "Glas",
+      "Preis": "11.50"
     },
     {
       "Kategorie": "Cocktails",
