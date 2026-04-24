@@ -1,19 +1,27 @@
 {
   "speisen": [
     {
-      "Kategorie": "",
-      "Name": "",
-      "Beschreibung": "",
+      "Kategorie": "Vorspeise",
+      "Name": "Ofenkürbis mit Feta & Granatapfelkernen",
+      "Beschreibung": "Ofengerösteter Kürbis, verfeinert mit cremigem Feta und fruchtigen Granatapfelkernen",
       "Menge": "",
-      "Preis": "",
+      "Preis": 8.9,
       "": ""
     },
     {
-      "Kategorie": "",
-      "Name": "",
-      "Beschreibung": "",
+      "Kategorie": "Vorspeise",
+      "Name": "Ochsenbrust mit Kürbis-Vinaigrette",
+      "Beschreibung": "Zarte Ochsenbrust, fein aufgeschnitten, serviert mit aromatischer Kürbis-Vinaigrette",
       "Menge": "",
-      "Preis": "",
+      "Preis": 10.9,
+      "": ""
+    },
+    {
+      "Kategorie": "Vorspeise",
+      "Name": "Kleiner Blattsalat",
+      "Beschreibung": "Frische Blattsalate der Saison mit hausgemachtem Dressing",
+      "Menge": "",
+      "Preis": 4.9,
       "": ""
     },
     {
@@ -27,7 +35,7 @@
     {
       "Kategorie": "Hauptspeise",
       "Name": "Hähnchenroulade mit Wildreis",
-      "Beschreibung": "Saftige Hähnchenroulade, gefüllt nach Art des Hauses, dazu aromatischer Wildreis und feine Joghurtsauce",
+      "Beschreibung": "Saftige Hähnchenroulade, gefüllt mit Spinat-Feta, dazu aromatischer Wildreis und feine Joghurtsauce",
       "Menge": "",
       "Preis": 17.9,
       "": ""
@@ -35,9 +43,9 @@
     {
       "Kategorie": "Hauptspeise",
       "Name": "Fish & Chips",
-      "Beschreibung": "Knusprig gebackenes Fischfilet im Bierteig, dazu Pommeschips und Remoulade",
+      "Beschreibung": "Knusprig gebackenes Kabeljaufilet im Bierteig, dazu Pommeschips und Remoulade",
       "Menge": "",
-      "Preis": 14.9,
+      "Preis": 16.9,
       "": ""
     },
     {
