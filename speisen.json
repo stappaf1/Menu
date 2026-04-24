@@ -1,46 +1,6 @@
 {
   "speisen": [
     {
-      "Kategorie": "Vorspeise",
-      "Name": "Kleiner gemischter Salat mit saisonalen Blattsalaten & Hausdressing",
-      "Beschreibung": "",
-      "Menge": "",
-      "Preis": "",
-      "": ""
-    },
-    {
-      "Kategorie": "Hauptspeise",
-      "Name": "Zwiebelrostbraten vom Rind mit knusprigen Kartoffelecken & kräftiger Jus",
-      "Beschreibung": "",
-      "Menge": "",
-      "Preis": "",
-      "": ""
-    },
-    {
-      "Kategorie": "Hauptspeise",
-      "Name": "Beef Burger im Brioche Bun mit Pommes frites",
-      "Beschreibung": "",
-      "Menge": "",
-      "Preis": "",
-      "": ""
-    },
-    {
-      "Kategorie": "Hauptspeise",
-      "Name": "Cordon Bleu vom Schwein mit klassischem Kartoffelsalat",
-      "Beschreibung": "",
-      "Menge": "",
-      "Preis": "",
-      "": ""
-    },
-    {
-      "Kategorie": "Hauptspeise",
-      "Name": "Bärlauch-Linguine mit feiner Kräuternote",
-      "Beschreibung": "",
-      "Menge": "",
-      "Preis": "",
-      "": ""
-    },
-    {
       "Kategorie": "",
       "Name": "",
       "Beschreibung": "",
@@ -54,6 +14,46 @@
       "Beschreibung": "",
       "Menge": "",
       "Preis": "",
+      "": ""
+    },
+    {
+      "Kategorie": "Hauptspeise",
+      "Name": "Sepia-Tagliatelle mit Miesmuscheln",
+      "Beschreibung": "Tagliatelle serviert mit frischen Miesmuscheln in einer leichten Weißwein-Knoblauch-Sauce",
+      "Menge": "",
+      "Preis": 18.9,
+      "": ""
+    },
+    {
+      "Kategorie": "Hauptspeise",
+      "Name": "Hähnchenroulade mit Wildreis",
+      "Beschreibung": "Saftige Hähnchenroulade, gefüllt nach Art des Hauses, dazu aromatischer Wildreis und feine Joghurtsauce",
+      "Menge": "",
+      "Preis": 17.9,
+      "": ""
+    },
+    {
+      "Kategorie": "Hauptspeise",
+      "Name": "Fish & Chips",
+      "Beschreibung": "Knusprig gebackenes Fischfilet im Bierteig, dazu Pommeschips und Remoulade",
+      "Menge": "",
+      "Preis": 14.9,
+      "": ""
+    },
+    {
+      "Kategorie": "Hauptspeise",
+      "Name": "Cordon Bleu vom Schwein",
+      "Beschreibung": "Goldbraun paniert, gefüllt mit Schinken und Käse, serviert mit Kartoffelsalat",
+      "Menge": "",
+      "Preis": 15.9,
+      "": ""
+    },
+    {
+      "Kategorie": "Hauptspeise",
+      "Name": "Steinpilzravioli",
+      "Beschreibung": "Gefüllte Ravioli mit aromatischen Steinpilzen, serviert in Butter-Salbei oder leichter Rahmsauce",
+      "Menge": "",
+      "Preis": 12.9,
       "": ""
     },
     {
