@@ -2416,18 +2416,6 @@
       "DATUM": "28.04.26",
       "VON": "",
       "BIS": "",
-      "KUNDE": "MBDA Deutschland GmbH",
-      "EVENT": "Tagung ",
-      "TEILNEHMER": "",
-      "TAGUNGSRAUM": "ecoRefugium T30",
-      "RAUMHINWEIS": "",
-      "BILD": "T30.jpeg",
-      "BEMERKUNG": ""
-    },
-    {
-      "DATUM": "28.04.26",
-      "VON": "",
-      "BIS": "",
       "KUNDE": "Allianz SE",
       "EVENT": "Tagung ",
       "TEILNEHMER": "",
@@ -2461,12 +2449,12 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "29.04.26",
+      "DATUM": "28.04.26",
       "VON": "",
       "BIS": "",
       "KUNDE": "ProWirtschaft Pfaffenhofen e. V. ",
       "EVENT": "Tagung ",
-      "TEILNEHMER": "",
+      "TEILNEHMER": "100",
       "TAGUNGSRAUM": "ecoPlenum T200",
       "RAUMHINWEIS": "",
       "BILD": "T200-Business.jpeg",
