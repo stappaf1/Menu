@@ -2567,6 +2567,66 @@
       "RAUMHINWEIS": "",
       "BILD": "T200-1.jpeg",
       "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "",
+      "EVENT": "",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "",
+      "RAUMHINWEIS": "",
+      "BILD": "",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "11.05.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Eiffage Infra-Bau SE",
+      "EVENT": "Abendessen",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoBistro",
+      "RAUMHINWEIS": "",
+      "BILD": "E-Bistro.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "12.05.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Wella Germany GmbH ",
+      "EVENT": "Tagung ",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoForum T120",
+      "RAUMHINWEIS": "",
+      "BILD": "T120.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "12.05.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Eiffage Infra-Bau SE",
+      "EVENT": "Abendessen",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoBistro",
+      "RAUMHINWEIS": "",
+      "BILD": "E-Bistro.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "16.05.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Pallas-Seminare",
+      "EVENT": "Tagung ",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "",
+      "BILD": "T90.jpeg",
+      "BEMERKUNG": ""
     }
   ]
 }
