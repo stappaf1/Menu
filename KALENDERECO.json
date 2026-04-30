@@ -2627,6 +2627,126 @@
       "RAUMHINWEIS": "",
       "BILD": "T90.jpeg",
       "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "",
+      "EVENT": "",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "",
+      "RAUMHINWEIS": "",
+      "BILD": "",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "18.05.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "MBDA Deutschland GmbH ",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "",
+      "RAUMHINWEIS": "",
+      "BILD": "",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "20.05.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Daiichi - Firmierung? ",
+      "EVENT": "Tagung ",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoPlenum T200",
+      "RAUMHINWEIS": "",
+      "BILD": "T200-Business.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "20.05.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Daiichi - Firmierung? ",
+      "EVENT": "Tagung ",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "",
+      "BILD": "T90.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "20.05.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Daiichi - Firmierung? ",
+      "EVENT": "Tagung ",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoRefugium T30",
+      "RAUMHINWEIS": "",
+      "BILD": "T30.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "20.05.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "WipflerPLAN Planungsgesellschaft mbH",
+      "EVENT": "Tagung ",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoForum T120",
+      "RAUMHINWEIS": "",
+      "BILD": "T120.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "21.05.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Daiichi - Firmierung? ",
+      "EVENT": "Tagung ",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoPlenum T200",
+      "RAUMHINWEIS": "",
+      "BILD": "T200-Business.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "21.05.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Daiichi - Firmierung? ",
+      "EVENT": "Tagung ",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "",
+      "BILD": "T90.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "21.05.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Daiichi - Firmierung? ",
+      "EVENT": "Tagung ",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoRefugium T30",
+      "RAUMHINWEIS": "",
+      "BILD": "T30.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "22.05.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "CONDAT Projekt GmbH ",
+      "EVENT": "Tagung ",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "",
+      "BILD": "T90.jpeg",
+      "BEMERKUNG": ""
     }
   ]
 }
