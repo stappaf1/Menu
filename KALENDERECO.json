@@ -2551,9 +2551,21 @@
       "KUNDE": "Bayern-Chemie GmbH ",
       "EVENT": "Tagung",
       "TEILNEHMER": "",
-      "TAGUNGSRAUM": "",
+      "TAGUNGSRAUM": "ecoCentrum T90",
       "RAUMHINWEIS": "",
-      "BILD": "",
+      "BILD": "T90.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "07.05.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Esri Deutschland GmbH ",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoForum T120",
+      "RAUMHINWEIS": "",
+      "BILD": "T120.jpeg",
       "BEMERKUNG": ""
     },
     {
@@ -2563,9 +2575,9 @@
       "KUNDE": "Bayern-Chemie GmbH ",
       "EVENT": "Tagung ",
       "TEILNEHMER": "",
-      "TAGUNGSRAUM": "",
+      "TAGUNGSRAUM": "ecoCentrum T90",
       "RAUMHINWEIS": "",
-      "BILD": "",
+      "BILD": "T90.jpeg",
       "BEMERKUNG": ""
     },
     {
