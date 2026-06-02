@@ -443,6 +443,42 @@
       "RAUMHINWEIS": "",
       "BILD": "T100.jpeg",
       "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "08.06.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "bfz gGmbH \nFIF - Fit in Führung - Gruppe 12",
+      "EVENT": "Tagung ",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "großerFreiraum T60",
+      "RAUMHINWEIS": "",
+      "BILD": "T60.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "09.06.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "bfz gGmbH \nFIF - Fit in Führung - Gruppe 12",
+      "EVENT": "Tagung ",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "großerFreiraum T60",
+      "RAUMHINWEIS": "",
+      "BILD": "T60.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "09.06.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "WipflerPLAN Planungsgesellschaft mbH",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "Weitblick T100",
+      "RAUMHINWEIS": "",
+      "BILD": "T100.jpeg",
+      "BEMERKUNG": ""
     }
   ]
 }
