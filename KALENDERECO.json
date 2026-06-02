@@ -2831,6 +2831,42 @@
       "RAUMHINWEIS": "",
       "BILD": "T120.jpeg",
       "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "",
+      "EVENT": "",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "",
+      "RAUMHINWEIS": "",
+      "BILD": "",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "08.06.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Siemens AG ",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoForum T120",
+      "RAUMHINWEIS": "",
+      "BILD": "T120.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "09.06.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Siemens AG ",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoForum T120",
+      "RAUMHINWEIS": "",
+      "BILD": "T120.jpeg",
+      "BEMERKUNG": ""
     }
   ]
 }
