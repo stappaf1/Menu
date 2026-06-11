@@ -527,6 +527,42 @@
       "RAUMHINWEIS": "",
       "BILD": "T100.jpeg",
       "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "25.06.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "kbo-Führungskräfte-Curriculum Modul 5",
+      "EVENT": "Tagung ",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "Weitblick T100",
+      "RAUMHINWEIS": "",
+      "BILD": "T100.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "25.06.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "kbo-Führungskräfte-Curriculum Modul 5",
+      "EVENT": "Tagung ",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "großerFreiraum T60",
+      "RAUMHINWEIS": "",
+      "BILD": "T60.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "25.06.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "kbo-Führungskräfte-Curriculum Modul 5",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "kleinerFreiraum T10",
+      "RAUMHINWEIS": "",
+      "BILD": "T10.jpeg",
+      "BEMERKUNG": ""
     }
   ]
 }
