@@ -2829,7 +2829,7 @@
       "TEILNEHMER": "",
       "TAGUNGSRAUM": "ecoPlenum T200",
       "RAUMHINWEIS": "",
-      "BILD": "T120.jpeg",
+      "BILD": "T200-1.jpeg",
       "BEMERKUNG": ""
     },
     {
@@ -3106,6 +3106,126 @@
       "TAGUNGSRAUM": "ecoPlenum T200",
       "RAUMHINWEIS": "",
       "BILD": "T200-Business.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "",
+      "EVENT": "",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "",
+      "RAUMHINWEIS": "",
+      "BILD": "",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "23.06.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Bayerisches Rotes Kreuz KdöR ",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoForum T120",
+      "RAUMHINWEIS": "",
+      "BILD": "T120.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "24.06.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Bayerisches Rotes Kreuz KdöR ",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoForum T120",
+      "RAUMHINWEIS": "",
+      "BILD": "T120.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "24.06.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "REWE Markt GmbH",
+      "EVENT": "Tagung ",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoPlenum T200",
+      "RAUMHINWEIS": "",
+      "BILD": "T200-Business.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "25.06.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Bayerisches Rotes Kreuz KdöR ",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoForum T120",
+      "RAUMHINWEIS": "",
+      "BILD": "T120.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "25.06.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "MBDA Deutschland GmbH",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "",
+      "BILD": "T90.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "25.06.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Bayerischer Apothekerverband e. V. ",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoPlenum T200",
+      "RAUMHINWEIS": "",
+      "BILD": "T200-Business.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "26.06.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "MBDA Deutschland GmbH",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "",
+      "BILD": "T90.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "26.06.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Lyreco Deutschland GmbH ",
+      "EVENT": "Tagung ",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoRefugium T30",
+      "RAUMHINWEIS": "",
+      "BILD": "T30.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "27.06.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Philip & Sarah",
+      "EVENT": "Hochzeit ",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoPlenum T200",
+      "RAUMHINWEIS": "",
+      "BILD": "T200-1.jpeg",
       "BEMERKUNG": ""
     }
   ]
