@@ -479,6 +479,54 @@
       "RAUMHINWEIS": "",
       "BILD": "T100.jpeg",
       "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "16.06.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "LIDL VERTRIEBS GMBH & CO. KG",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "Weitblick T100",
+      "RAUMHINWEIS": "",
+      "BILD": "T100.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "17.06.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "LIDL VERTRIEBS GMBH & CO. KG",
+      "EVENT": "Tagung ",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "Weitblick T100",
+      "RAUMHINWEIS": "",
+      "BILD": "T100.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "17.06.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "SYNGENITY GmbH",
+      "EVENT": "Taggung ",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "kleinerFreiraum T10",
+      "RAUMHINWEIS": "",
+      "BILD": "T10.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "18.06.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "LIDL VERTRIEBS GMBH & CO. KG",
+      "EVENT": "Tagung ",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "Weitblick T100",
+      "RAUMHINWEIS": "",
+      "BILD": "T100.jpeg",
+      "BEMERKUNG": ""
     }
   ]
 }
