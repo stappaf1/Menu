@@ -3251,6 +3251,102 @@
       "RAUMHINWEIS": "",
       "BILD": "T200-1.jpeg",
       "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "",
+      "EVENT": "",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "",
+      "RAUMHINWEIS": "",
+      "BILD": "",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "30.06.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Ministerialbeauftragte für die \nGymnasien in Oberbayern/West",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoRefugium T30",
+      "RAUMHINWEIS": "",
+      "BILD": "T30.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "01.07.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Ministerialbeauftragte für die \nGymnasien in OberbayernWest",
+      "EVENT": "Tagung ",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoRefugium T30",
+      "RAUMHINWEIS": "",
+      "BILD": "T30.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "01.07.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Gemeinde Neufahrn",
+      "EVENT": "Frühstück ",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoPlenum T200",
+      "RAUMHINWEIS": "",
+      "BILD": "T200-1.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "01.07.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "SYNGENITY GmbH ",
+      "EVENT": "Tagung ",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "",
+      "BILD": "T90.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "02.07.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "SYNGENITY GmbH ",
+      "EVENT": "Abendessen",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "",
+      "BILD": "T90.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "03.07.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "WARGITSCH & COMP. AG",
+      "EVENT": "Tagung ",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "",
+      "BILD": "T90.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "04.07.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Sarah & Nunzio ",
+      "EVENT": "Hochzeit ",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoPlenum T200",
+      "RAUMHINWEIS": "",
+      "BILD": "T200-1.jpeg",
+      "BEMERKUNG": ""
     }
   ]
 }
