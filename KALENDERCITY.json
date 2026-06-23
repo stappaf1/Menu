@@ -529,10 +529,10 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "25.06.26",
+      "DATUM": "01.07.26",
       "VON": "",
       "BIS": "",
-      "KUNDE": "kbo-Führungskräfte-Curriculum Modul 5",
+      "KUNDE": "COMLOG Gesellschaft für Logistik mbH",
       "EVENT": "Tagung ",
       "TEILNEHMER": "",
       "TAGUNGSRAUM": "Weitblick T100",
@@ -541,27 +541,15 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "25.06.26",
+      "DATUM": "02.07.26",
       "VON": "",
       "BIS": "",
-      "KUNDE": "kbo-Führungskräfte-Curriculum Modul 5",
+      "KUNDE": "COMLOG Gesellschaft für Logistik mbH",
       "EVENT": "Tagung ",
       "TEILNEHMER": "",
-      "TAGUNGSRAUM": "großerFreiraum T60",
+      "TAGUNGSRAUM": "Weitblick T100",
       "RAUMHINWEIS": "",
-      "BILD": "T60.jpeg",
-      "BEMERKUNG": ""
-    },
-    {
-      "DATUM": "25.06.26",
-      "VON": "",
-      "BIS": "",
-      "KUNDE": "kbo-Führungskräfte-Curriculum Modul 5",
-      "EVENT": "Tagung",
-      "TEILNEHMER": "",
-      "TAGUNGSRAUM": "kleinerFreiraum T10",
-      "RAUMHINWEIS": "",
-      "BILD": "T10.jpeg",
+      "BILD": "T100.jpeg",
       "BEMERKUNG": ""
     }
   ]
