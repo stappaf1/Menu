@@ -49,6 +49,14 @@
       "": ""
     },
     {
+      "Kategorie": "Hauptgang-Veggi ",
+      "Name": "Ravioli Bufala",
+      "Beschreibung": "Hausgemachte Ravioli mit cremiger Büffelmozzarella-Füllung",
+      "Menge": "",
+      "Preis": 16.9,
+      "": ""
+    },
+    {
       "Kategorie": "Dessert",
       "Name": "Kaiserschmarrn",
       "Beschreibung": "Frischer Kaiserschmarrn ohne Rosinen",
@@ -110,6 +118,14 @@
       "Beschreibung": "Golden-fried schnitzel Viennese style - served with your choice of potato salad or French fries",
       "Menge": "",
       "Preis": 18.9,
+      "": ""
+    },
+    {
+      "Kategorie": "Ravioli Bufala",
+      "Name": "",
+      "Beschreibung": "Homemade ravioli filled with creamy buffalo mozzarella",
+      "Menge": "",
+      "Preis": 16.9,
       "": ""
     },
     {
