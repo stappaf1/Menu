@@ -34,10 +34,10 @@
     },
     {
       "Kategorie": "Hauptgang - Halal",
-      "Name": "Halal Beef Burger",
-      "Beschreibung": "Halal - Saftiger Burger mit Rindfleisch, frischem Salat und Pommes frites",
+      "Name": "Pfeffersteak",
+      "Beschreibung": "Halal - Zartes Pfeffersteak mit Rosmarinkartoffeln und gegrillten Bohnen",
       "Menge": "",
-      "Preis": 15.9,
+      "Preis": 24.9,
       "": ""
     },
     {
@@ -69,7 +69,7 @@
       "Name": "Small Side Salad",
       "Beschreibung": "Finely marinated mixed leaf salad with balsamic dressing",
       "Menge": "",
-      "Preis": "€5.90",
+      "Preis": 5.9,
       "": ""
     },
     {
@@ -77,7 +77,7 @@
       "Name": "Large Falafel Salad",
       "Beschreibung": "Halal - Large mixed salad with crispy falafel balls and fine dressing",
       "Menge": "",
-      "Preis": "€14.90",
+      "Preis": 14.9,
       "": ""
     },
     {
@@ -85,7 +85,7 @@
       "Name": "Large Salad with Corn-Fed Chicken",
       "Beschreibung": "Halal - Large mixed salad with tender corn-fed chicken and fine dressing",
       "Menge": "",
-      "Preis": "€17.90",
+      "Preis": 17.9,
       "": ""
     },
     {
@@ -93,15 +93,15 @@
       "Name": "Grilled Corn-Fed Chicken Leg",
       "Beschreibung": "Halal - Juicy grilled corn-fed chicken leg with homemade potato and cucumber salad",
       "Menge": "",
-      "Preis": "€18.90",
+      "Preis": 18.9,
       "": ""
     },
     {
       "Kategorie": "Main Course - Halal ",
-      "Name": "Halal Beef Burger",
-      "Beschreibung": "Halal - Juicy beef burger with fresh salad and French fries",
+      "Name": "Pepper Steak",
+      "Beschreibung": "Halal - Tender pepper steak with rosemary potatoes and grilled beans",
       "Menge": "",
-      "Preis": "€15.90",
+      "Preis": 24.9,
       "": ""
     },
     {
@@ -109,7 +109,7 @@
       "Name": "Schnitzel “Viennese Style”",
       "Beschreibung": "Golden-fried schnitzel Viennese style - served with your choice of potato salad or French fries",
       "Menge": "",
-      "Preis": "€18.90",
+      "Preis": 18.9,
       "": ""
     },
     {
@@ -117,7 +117,7 @@
       "Name": "Kaiserschmarrn",
       "Beschreibung": "Fresh Kaiserschmarrn without raisins",
       "Menge": "",
-      "Preis": "€7.90",
+      "Preis": 7.9,
       "": ""
     },
     {
