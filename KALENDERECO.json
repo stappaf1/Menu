@@ -3460,8 +3460,20 @@
       "DATUM": "13.07.26",
       "VON": "",
       "BIS": "",
+      "KUNDE": "BAUER Spezialtiefbau GmbH",
+      "EVENT": "Abendessen",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoBistro",
+      "RAUMHINWEIS": "",
+      "BILD": "E-Bistro.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "13.07.26",
+      "VON": "",
+      "BIS": "",
       "KUNDE": "Miele Academy ",
-      "EVENT": "Tagung",
+      "EVENT": "Aufbau ",
       "TEILNEHMER": "",
       "TAGUNGSRAUM": "ecoCentrum T90",
       "RAUMHINWEIS": "",
@@ -3473,11 +3485,23 @@
       "VON": "",
       "BIS": "",
       "KUNDE": "Miele Academy ",
-      "EVENT": "Tagung",
+      "EVENT": "Tagung ",
       "TEILNEHMER": "",
       "TAGUNGSRAUM": "ecoCentrum T90",
       "RAUMHINWEIS": "",
       "BILD": "T90.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "14.07.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "BAUER Spezialtiefbau GmbH",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoForum T120",
+      "RAUMHINWEIS": "",
+      "BILD": "T120.jpeg",
       "BEMERKUNG": ""
     },
     {
@@ -3490,6 +3514,30 @@
       "TAGUNGSRAUM": "ecoCentrum T90",
       "RAUMHINWEIS": "",
       "BILD": "T90.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "16.07.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "VR Bank Bayern Mitte eG ",
+      "EVENT": "Tagung",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoForum T120",
+      "RAUMHINWEIS": "",
+      "BILD": "T120.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "16.07.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Bayerisches Rotes Kreuz KdöR\nKreisverband Pfaffenhofen ",
+      "EVENT": "Abendessen",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoPlenum T200",
+      "RAUMHINWEIS": "",
+      "BILD": "T200-1.jpeg",
       "BEMERKUNG": ""
     }
   ]
