@@ -2,82 +2,82 @@
   "speisen": [
     {
       "Kategorie": "Vorspeise",
-      "Name": "Ofenkürbis mit Feta & Granatapfelkernen",
-      "Beschreibung": "Ofengerösteter Kürbis, verfeinert mit cremigem Feta und fruchtigen Granatapfelkernen",
+      "Name": "Kleiner Beilagensalat",
+      "Beschreibung": "Fein marinierte Blattsalate mit Balsamico-Dressing",
       "Menge": "",
-      "Preis": 8.9,
+      "Preis": 5.9,
       "": ""
     },
     {
-      "Kategorie": "Vorspeise",
-      "Name": "Ochsenbrust mit Kürbis-Vinaigrette",
-      "Beschreibung": "Zarte Ochsenbrust, fein aufgeschnitten, serviert mit aromatischer Kürbis-Vinaigrette",
+      "Kategorie": "Hauptgang",
+      "Name": "Großer Falafel-Salat mit Falafel",
+      "Beschreibung": "Halal - Großer gemischter Salat mit knusprigen Falafelbällchen und feinem Dressing",
       "Menge": "",
-      "Preis": 10.9,
+      "Preis": 14.9,
       "": ""
     },
     {
-      "Kategorie": "Vorspeise",
-      "Name": "Kleiner Blattsalat",
-      "Beschreibung": "Frische Blattsalate der Saison mit hausgemachtem Dressing",
-      "Menge": "",
-      "Preis": 4.9,
-      "": ""
-    },
-    {
-      "Kategorie": "Hauptspeise",
-      "Name": "Sepia-Tagliatelle mit Miesmuscheln",
-      "Beschreibung": "Tagliatelle serviert mit frischen Miesmuscheln in einer leichten Weißwein-Knoblauch-Sauce",
-      "Menge": "",
-      "Preis": 18.9,
-      "": ""
-    },
-    {
-      "Kategorie": "Hauptspeise",
-      "Name": "Hähnchenroulade mit Wildreis",
-      "Beschreibung": "Saftige Hähnchenroulade, gefüllt mit Spinat-Feta, dazu aromatischer Wildreis und feine Joghurtsauce",
+      "Kategorie": "Hauptgang",
+      "Name": "Großer Salat mit Maishendl",
+      "Beschreibung": "Halal - Großer gemischter Salat mit zartem Maishendl und feinem Dressing",
       "Menge": "",
       "Preis": 17.9,
       "": ""
     },
     {
-      "Kategorie": "Hauptspeise",
-      "Name": "Fish & Chips",
-      "Beschreibung": "Knusprig gebackenes Kabeljaufilet im Bierteig, dazu Pommeschips und Remoulade",
+      "Kategorie": "Hauptgang",
+      "Name": "Gegrillte Maishendlkeule",
+      "Beschreibung": "Halal - Saftig gegrillte Maishendlkeule mit hausgemachtem Kartoffel-Gurken-Salat",
       "Menge": "",
-      "Preis": 16.9,
+      "Preis": 18.9,
       "": ""
     },
     {
-      "Kategorie": "Hauptspeise",
-      "Name": "Cordon Bleu vom Schwein",
-      "Beschreibung": "Goldbraun paniert, gefüllt mit Schinken und Käse, serviert mit Kartoffelsalat",
+      "Kategorie": "Hauptgang",
+      "Name": "Halal Beef Burger",
+      "Beschreibung": "Halal - Saftiger Burger mit Rindfleisch, frischem Salat und Pommes frites",
       "Menge": "",
       "Preis": 15.9,
       "": ""
     },
     {
-      "Kategorie": "Hauptspeise",
-      "Name": "Steinpilzravioli",
-      "Beschreibung": "Gefüllte Ravioli mit aromatischen Steinpilzen",
+      "Kategorie": "Hauptgang",
+      "Name": "Schnitzel Wiener Art",
+      "Beschreibung": "Goldbraun gebackenes Schnitzel, wahlweise mit Kartoffelsalat oder Pommes frites",
       "Menge": "",
-      "Preis": 12.9,
-      "": ""
-    },
-    {
-      "Kategorie": "Hauptspeise",
-      "Name": "Schweinefilet im Bärlauchmantel",
-      "Beschreibung": "Zartrosa Schweinefilet im Bärlauchmantel, dazu knusprige Bratkartoffeln und saisonales Marktgemüse",
-      "Menge": "",
-      "Preis": 22.9,
+      "Preis": 18.9,
       "": ""
     },
     {
       "Kategorie": "Dessert",
-      "Name": "Weißes Cappuccino-Mousse",
-      "Beschreibung": "Luftiges weißes Cappuccino-Mousse mit marinierten Erdbeeren",
+      "Name": "Kaiserschmarrn",
+      "Beschreibung": "Frischer Kaiserschmarrn ohne Rosinen",
       "Menge": "",
       "Preis": 7.9,
+      "": ""
+    },
+    {
+      "Kategorie": "",
+      "Name": "",
+      "Beschreibung": "",
+      "Menge": "",
+      "Preis": "",
+      "": ""
+    },
+    {
+      "Kategorie": "",
+      "Name": "",
+      "Beschreibung": "",
+      "Menge": "",
+      "Preis": "",
+      "": ""
+    },
+    {
+      "Kategorie": "",
+      "Name": "",
+      "Beschreibung": "",
+      "Menge": "",
+      "Preis": "",
       "": ""
     },
     {
