@@ -9,7 +9,7 @@
       "": ""
     },
     {
-      "Kategorie": "Hauptgang",
+      "Kategorie": "Hauptgang - Halal",
       "Name": "Großer Falafel-Salat mit Falafel",
       "Beschreibung": "Halal - Großer gemischter Salat mit knusprigen Falafelbällchen und feinem Dressing",
       "Menge": "",
@@ -17,7 +17,7 @@
       "": ""
     },
     {
-      "Kategorie": "Hauptgang",
+      "Kategorie": "Hauptgang - Halal",
       "Name": "Großer Salat mit Maishendl",
       "Beschreibung": "Halal - Großer gemischter Salat mit zartem Maishendl und feinem Dressing",
       "Menge": "",
@@ -25,7 +25,7 @@
       "": ""
     },
     {
-      "Kategorie": "Hauptgang",
+      "Kategorie": "Hauptgang - Halal",
       "Name": "Gegrillte Maishendlkeule",
       "Beschreibung": "Halal - Saftig gegrillte Maishendlkeule mit hausgemachtem Kartoffel-Gurken-Salat",
       "Menge": "",
@@ -33,7 +33,7 @@
       "": ""
     },
     {
-      "Kategorie": "Hauptgang",
+      "Kategorie": "Hauptgang - Halal",
       "Name": "Halal Beef Burger",
       "Beschreibung": "Halal - Saftiger Burger mit Rindfleisch, frischem Salat und Pommes frites",
       "Menge": "",
@@ -65,59 +65,59 @@
       "": ""
     },
     {
-      "Kategorie": "",
-      "Name": "",
-      "Beschreibung": "",
+      "Kategorie": "Starter",
+      "Name": "Small Side Salad",
+      "Beschreibung": "Finely marinated mixed leaf salad with balsamic dressing",
       "Menge": "",
-      "Preis": "",
+      "Preis": "€5.90",
       "": ""
     },
     {
-      "Kategorie": "",
-      "Name": "",
-      "Beschreibung": "",
+      "Kategorie": "Main Course - Halal ",
+      "Name": "Large Falafel Salad",
+      "Beschreibung": "Halal - Large mixed salad with crispy falafel balls and fine dressing",
       "Menge": "",
-      "Preis": "",
+      "Preis": "€14.90",
       "": ""
     },
     {
-      "Kategorie": "",
-      "Name": "",
-      "Beschreibung": "",
+      "Kategorie": "Main Course - Halal ",
+      "Name": "Large Salad with Corn-Fed Chicken",
+      "Beschreibung": "Halal - Large mixed salad with tender corn-fed chicken and fine dressing",
       "Menge": "",
-      "Preis": "",
+      "Preis": "€17.90",
       "": ""
     },
     {
-      "Kategorie": "",
-      "Name": "",
-      "Beschreibung": "",
+      "Kategorie": "Main Course - Halal ",
+      "Name": "Grilled Corn-Fed Chicken Leg",
+      "Beschreibung": "Halal - Juicy grilled corn-fed chicken leg with homemade potato and cucumber salad",
       "Menge": "",
-      "Preis": "",
+      "Preis": "€18.90",
       "": ""
     },
     {
-      "Kategorie": "",
-      "Name": "",
-      "Beschreibung": "",
+      "Kategorie": "Main Course - Halal ",
+      "Name": "Halal Beef Burger",
+      "Beschreibung": "Halal - Juicy beef burger with fresh salad and French fries",
       "Menge": "",
-      "Preis": "",
+      "Preis": "€15.90",
       "": ""
     },
     {
-      "Kategorie": "",
-      "Name": "",
-      "Beschreibung": "",
+      "Kategorie": "Main Course",
+      "Name": "Schnitzel “Viennese Style”",
+      "Beschreibung": "Golden-fried schnitzel Viennese style - served with your choice of potato salad or French fries",
       "Menge": "",
-      "Preis": "",
+      "Preis": "€18.90",
       "": ""
     },
     {
-      "Kategorie": "",
-      "Name": "",
-      "Beschreibung": "",
+      "Kategorie": "Dessert",
+      "Name": "Kaiserschmarrn",
+      "Beschreibung": "Fresh Kaiserschmarrn without raisins",
       "Menge": "",
-      "Preis": "",
+      "Preis": "€7.90",
       "": ""
     },
     {
