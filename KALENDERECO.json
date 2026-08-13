@@ -3625,15 +3625,15 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "",
+      "DATUM": "22.08.26",
       "VON": "",
       "BIS": "",
-      "KUNDE": "",
-      "EVENT": "",
+      "KUNDE": "Christina & Benjamin ",
+      "EVENT": "Hochzeit ",
       "TEILNEHMER": "",
-      "TAGUNGSRAUM": "",
+      "TAGUNGSRAUM": "ecoPlenum T200",
       "RAUMHINWEIS": "",
-      "BILD": "",
+      "BILD": "T200-1.jpeg",
       "BEMERKUNG": ""
     },
     {
@@ -3646,6 +3646,42 @@
       "TAGUNGSRAUM": "",
       "RAUMHINWEIS": "",
       "BILD": "",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "25.08.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "bvse-recyconsult GmbH ",
+      "EVENT": "Tagung ",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "",
+      "RAUMHINWEIS": "",
+      "BILD": "",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "28.08.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "AWO Bezirksverband Oberbayern e.V. ",
+      "EVENT": "Tagung ",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "",
+      "BILD": "T90.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "29.08.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "AWO Bezirksverband Oberbayern e.V. ",
+      "EVENT": "Tagung ",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "",
+      "BILD": "T90.jpeg",
       "BEMERKUNG": ""
     },
     {
@@ -3712,12 +3748,12 @@
       "DATUM": "06.09.26",
       "VON": "",
       "BIS": "",
-      "KUNDE": "",
-      "EVENT": "",
+      "KUNDE": "Jeannine & Dusan",
+      "EVENT": "Hochzeit",
       "TEILNEHMER": "",
-      "TAGUNGSRAUM": "",
+      "TAGUNGSRAUM": "ecoPlenum T200",
       "RAUMHINWEIS": "",
-      "BILD": "",
+      "BILD": "T200-1.jpeg",
       "BEMERKUNG": ""
     }
   ]
