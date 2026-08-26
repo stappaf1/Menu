@@ -3703,9 +3703,9 @@
       "KUNDE": "Miele Vertriebsgesellschaft \nDeutschland GmbH ",
       "EVENT": "Tagung ",
       "TEILNEHMER": "",
-      "TAGUNGSRAUM": "ecoForum T120",
+      "TAGUNGSRAUM": "ecoCentrum T90",
       "RAUMHINWEIS": "",
-      "BILD": "T120.jpeg",
+      "BILD": "T90.jpeg",
       "BEMERKUNG": ""
     },
     {
@@ -3718,6 +3718,18 @@
       "TAGUNGSRAUM": "ecoPlenum T200",
       "RAUMHINWEIS": "",
       "BILD": "T200-Business.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "01.09.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "SAXS Tank GmbH & \nTOPTEQ Tankstellentechnik GmbH",
+      "EVENT": "Arztraum",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoRefugium T30",
+      "RAUMHINWEIS": "",
+      "BILD": "T30.jpeg",
       "BEMERKUNG": ""
     },
     {
