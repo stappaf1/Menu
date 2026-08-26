@@ -551,6 +551,30 @@
       "RAUMHINWEIS": "",
       "BILD": "T100.jpeg",
       "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "23.09.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "WipflerPLAN Planungsgesellschaft mbH",
+      "EVENT": "Tagung ",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "Weitblick T100",
+      "RAUMHINWEIS": "",
+      "BILD": "T100.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "24.09.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Danpower Biomasse GmbH ",
+      "EVENT": "Tagung ",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "Weitblick T100",
+      "RAUMHINWEIS": "",
+      "BILD": "T100.jpeg",
+      "BEMERKUNG": ""
     }
   ]
 }
