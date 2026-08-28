@@ -1,171 +1,31 @@
 {
   "getraenke": [
     {
-      "Kategorie": "Getränke",
-      "Name": "Johannisbeere",
-      "Beschreibung": "Saft oder Schorle",
-      "Menge": "0,4 l",
-      "Preis": 4.9
-    },
-    {
-      "Kategorie": "Getränke",
-      "Name": "Maracuja",
-      "Beschreibung": "Saft oder Schorle",
-      "Menge": "0,4 l",
-      "Preis": 4.9
-    },
-    {
-      "Kategorie": "Getränke",
-      "Name": "Ananas",
-      "Beschreibung": "Saft oder Schorle",
-      "Menge": "0,4 l",
-      "Preis": 4.9
-    },
-    {
-      "Kategorie": "Getränke",
-      "Name": "Orange",
-      "Beschreibung": "Saft oder Schorle",
-      "Menge": "0,4 l",
-      "Preis": 4.9
-    },
-    {
-      "Kategorie": "Getränke",
-      "Name": "Sauerkirsche",
-      "Beschreibung": "Saft oder Schorle",
-      "Menge": "0,4 l",
-      "Preis": 4.9
-    },
-    {
-      "Kategorie": "Getränke",
-      "Name": "Rhabarber",
-      "Beschreibung": "Saft oder Schorle",
-      "Menge": "0,4 l",
-      "Preis": 4.9
-    },
-    {
-      "Kategorie": "Getränke",
-      "Name": "Apfel naturtrüb",
-      "Beschreibung": "Saft oder Schorle",
-      "Menge": "0,4 l",
-      "Preis": 4.9
-    },
-    {
-      "Kategorie": "Getränke",
-      "Name": "Coca-Cola",
-      "Beschreibung": "Softgetränk",
-      "Menge": "0,4 l",
-      "Preis": 4.5
-    },
-    {
-      "Kategorie": "Getränke",
-      "Name": "Coca-Cola Zero",
-      "Beschreibung": "Softgetränk",
-      "Menge": "0,4 l",
-      "Preis": 4.5
-    },
-    {
-      "Kategorie": "",
-      "Name": "",
+      "Kategorie": "Biere",
+      "Name": "Fassbier | Helles | Weißbier",
       "Beschreibung": "",
-      "Menge": "",
-      "Preis": ""
-    },
-    {
-      "Kategorie": "Getränke",
-      "Name": "Fanta",
-      "Beschreibung": "Softgetränk",
-      "Menge": "0,4 l",
-      "Preis": 4.5
-    },
-    {
-      "Kategorie": "Getränke",
-      "Name": "Sprite",
-      "Beschreibung": "Softgetränk",
-      "Menge": "0,4 l",
-      "Preis": 4.5
-    },
-    {
-      "Kategorie": "Getränke",
-      "Name": "Ginger Ale",
-      "Beschreibung": "Softgetränk",
-      "Menge": "0,4 l",
-      "Preis": 4.7
-    },
-    {
-      "Kategorie": "Getränke",
-      "Name": "Tonic Water",
-      "Beschreibung": "Softgetränk",
-      "Menge": "0,4 l",
-      "Preis": 4.7
-    },
-    {
-      "Kategorie": "",
-      "Name": "",
-      "Beschreibung": "",
-      "Menge": "",
-      "Preis": ""
-    },
-    {
-      "Kategorie": "Beverages",
-      "Name": "Blackcurrant",
-      "Beschreibung": "Juice or spritzer",
-      "Menge": "0.4 l",
-      "Preis": "4.90"
-    },
-    {
-      "Kategorie": "Beverages",
-      "Name": "Passion Fruit",
-      "Beschreibung": "Juice or spritzer",
-      "Menge": "0.4 l",
-      "Preis": "4.90"
-    },
-    {
-      "Kategorie": "Beverages",
-      "Name": "Pineapple",
-      "Beschreibung": "Juice or spritzer",
-      "Menge": "0.4 l",
-      "Preis": "4.90"
-    },
-    {
-      "Kategorie": "Beverages",
-      "Name": "Orange",
-      "Beschreibung": "Juice or spritzer",
-      "Menge": "0.4 l",
-      "Preis": "4.90"
-    },
-    {
-      "Kategorie": "Beverages",
-      "Name": "Sour Cherry",
-      "Beschreibung": "Juice or spritzer",
-      "Menge": "0.4 l",
-      "Preis": "4.90"
-    },
-    {
-      "Kategorie": "Beverages",
-      "Name": "Rhubarb",
-      "Beschreibung": "Juice or spritzer",
-      "Menge": "0.4 l",
-      "Preis": "4.90"
-    },
-    {
-      "Kategorie": "Beverages",
-      "Name": "Cloudy Apple",
-      "Beschreibung": "Juice or spritzer",
-      "Menge": "0.4 l",
-      "Preis": "4.90"
-    },
-    {
-      "Kategorie": "Beverages",
-      "Name": "Coca-Cola",
-      "Beschreibung": "Soft drink",
-      "Menge": "0.4 l",
+      "Menge": "0.5",
       "Preis": "4.50"
     },
     {
-      "Kategorie": "Beverages",
-      "Name": "Coca-Cola Zero",
-      "Beschreibung": "Soft drink",
-      "Menge": "0.4 l",
+      "Kategorie": "Biere",
+      "Name": "Flaschenbier | Dunkles",
+      "Beschreibung": "",
+      "Menge": "0.5",
+      "Preis": "4.50"
+    },
+    {
+      "Kategorie": "Biere",
+      "Name": "Flaschenbiere klein| Pils | Helles",
+      "Beschreibung": "",
+      "Menge": "0.33",
+      "Preis": "3.50"
+    },
+    {
+      "Kategorie": "Biere",
+      "Name": "Alkoholfreies Bier | Helles | Weißbier",
+      "Beschreibung": "",
+      "Menge": "0.5",
       "Preis": "4.50"
     },
     {
@@ -176,32 +36,389 @@
       "Preis": ""
     },
     {
-      "Kategorie": "Beverages",
-      "Name": "Fanta",
-      "Beschreibung": "Soft drink",
-      "Menge": "0.4 l",
-      "Preis": "4.50"
+      "Kategorie": "Softgetränke",
+      "Name": "Alea – Tafelwasser | Still | Spritzig",
+      "Beschreibung": "",
+      "Menge": "0.7",
+      "Preis": "6.50"
     },
     {
-      "Kategorie": "Beverages",
-      "Name": "Sprite",
-      "Beschreibung": "Soft drink",
-      "Menge": "0.4 l",
-      "Preis": "4.50"
+      "Kategorie": "Softgetränke",
+      "Name": "Ließchen Müller Schorle | Apfel | Rhabarber",
+      "Beschreibung": "",
+      "Menge": "0.4",
+      "Preis": "4.00"
     },
     {
-      "Kategorie": "Beverages",
-      "Name": "Ginger Ale",
-      "Beschreibung": "Soft drink",
-      "Menge": "0.4 l",
-      "Preis": "4.70"
+      "Kategorie": "Softgetränke",
+      "Name": "Rauch Saftschorle | Johannisbeere | Maracuja",
+      "Beschreibung": "",
+      "Menge": "0.4",
+      "Preis": "4.00"
     },
     {
-      "Kategorie": "Beverages",
-      "Name": "Tonic Water",
-      "Beschreibung": "Soft drink",
-      "Menge": "0.4 l",
-      "Preis": "4.70"
+      "Kategorie": "Softgetränke",
+      "Name": "Coca Cola | Coca Cola Zero",
+      "Beschreibung": "",
+      "Menge": "0.4",
+      "Preis": "4.00"
+    },
+    {
+      "Kategorie": "Softgetränke",
+      "Name": "Spezi | Gelbes Limo | Weißes Limo",
+      "Beschreibung": "",
+      "Menge": "0.4",
+      "Preis": "4.00"
+    },
+    {
+      "Kategorie": "",
+      "Name": "",
+      "Beschreibung": "",
+      "Menge": "",
+      "Preis": ""
+    },
+    {
+      "Kategorie": "Kaffeespezialitäten",
+      "Name": "Kaffee Crema",
+      "Beschreibung": "",
+      "Menge": "Tasse",
+      "Preis": "3.50"
+    },
+    {
+      "Kategorie": "Kaffeespezialitäten",
+      "Name": "Cappuccino",
+      "Beschreibung": "",
+      "Menge": "Tasse",
+      "Preis": "3.50"
+    },
+    {
+      "Kategorie": "Kaffeespezialitäten",
+      "Name": "Latte macchiato",
+      "Beschreibung": "",
+      "Menge": "Tasse",
+      "Preis": "3.50"
+    },
+    {
+      "Kategorie": "Kaffeespezialitäten",
+      "Name": "Espresso",
+      "Beschreibung": "",
+      "Menge": "Tasse",
+      "Preis": "2.00"
+    },
+    {
+      "Kategorie": "",
+      "Name": "",
+      "Beschreibung": "",
+      "Menge": "",
+      "Preis": ""
+    },
+    {
+      "Kategorie": "Teespezialitäten",
+      "Name": "Hayato | Grüntee",
+      "Beschreibung": "",
+      "Menge": "Tasse",
+      "Preis": "3.50"
+    },
+    {
+      "Kategorie": "Teespezialitäten",
+      "Name": "Nandil | Schwarzer Tee",
+      "Beschreibung": "",
+      "Menge": "Tasse",
+      "Preis": "3.50"
+    },
+    {
+      "Kategorie": "Teespezialitäten",
+      "Name": "Traudl | Almkräuter",
+      "Beschreibung": "",
+      "Menge": "Tasse",
+      "Preis": "3.50"
+    },
+    {
+      "Kategorie": "Teespezialitäten",
+      "Name": "Annemarie | Früchtetee",
+      "Beschreibung": "",
+      "Menge": "Tasse",
+      "Preis": "3.50"
+    },
+    {
+      "Kategorie": "Teespezialitäten",
+      "Name": "Namira | Pfefferminze",
+      "Beschreibung": "",
+      "Menge": "Tasse",
+      "Preis": "3.50"
+    },
+    {
+      "Kategorie": "",
+      "Name": "",
+      "Beschreibung": "",
+      "Menge": "",
+      "Preis": ""
+    },
+    {
+      "Kategorie": "Weißwein",
+      "Name": "Cà Maiol | Lugana | Gardasee | trocken",
+      "Beschreibung": "",
+      "Menge": "0.2|0.7",
+      "Preis": "7.50 | 33.00"
+    },
+    {
+      "Kategorie": "Weißwein",
+      "Name": "Markus Molitor | Riesling | Mosel | trocken",
+      "Beschreibung": "",
+      "Menge": "0.2|0.7",
+      "Preis": "7.50 | 33.00"
+    },
+    {
+      "Kategorie": "Weißwein",
+      "Name": "Chardonnay | Bio | Frankreich | trocken",
+      "Beschreibung": "",
+      "Menge": "0.2|0.7",
+      "Preis": "6.50 | 31.00"
+    },
+    {
+      "Kategorie": "",
+      "Name": "",
+      "Beschreibung": "",
+      "Menge": "",
+      "Preis": ""
+    },
+    {
+      "Kategorie": "Rosé",
+      "Name": "Ca dei Frati | Rosa i Frati | Gardasee",
+      "Beschreibung": "",
+      "Menge": "0.2|0.7",
+      "Preis": "8.50 | 36.00"
+    },
+    {
+      "Kategorie": "Rosé",
+      "Name": "La Santonnière | Bio | Rosé | Provence",
+      "Beschreibung": "",
+      "Menge": "0.2|0.7",
+      "Preis": "7.50 | 33.00"
+    },
+    {
+      "Kategorie": "",
+      "Name": "",
+      "Beschreibung": "",
+      "Menge": "",
+      "Preis": ""
+    },
+    {
+      "Kategorie": "Rotwein",
+      "Name": "Fantini | Primitivo | Puglia | trocken",
+      "Beschreibung": "",
+      "Menge": "0.2|0.7",
+      "Preis": "8.50 | 36.00"
+    },
+    {
+      "Kategorie": "Rotwein",
+      "Name": "Franz Waßmer Spätburgunder | Baden | trocken",
+      "Beschreibung": "",
+      "Menge": "0.2|0.7",
+      "Preis": "7.50 | 33.00"
+    },
+    {
+      "Kategorie": "Rotwein",
+      "Name": "Markus Schneider | Ursprung | Pfalz | Trocken",
+      "Beschreibung": "",
+      "Menge": "0.2|0.7",
+      "Preis": "8.50 | 36.00"
+    },
+    {
+      "Kategorie": "",
+      "Name": "",
+      "Beschreibung": "",
+      "Menge": "",
+      "Preis": ""
+    },
+    {
+      "Kategorie": "Schaumwein",
+      "Name": "Valdo | Biologico Brut",
+      "Beschreibung": "Prosecco D.O.C| Valdobbiadene | Italien",
+      "Menge": "0.1|0.7",
+      "Preis": "8.50 | 36.00"
+    },
+    {
+      "Kategorie": "Schaumwein",
+      "Name": "Domaines Vinsmoselle",
+      "Beschreibung": "Crémant | Mosel | Luxemburg",
+      "Menge": "0.1|0.7",
+      "Preis": "7.50 | 33.00"
+    },
+    {
+      "Kategorie": "",
+      "Name": "",
+      "Beschreibung": "",
+      "Menge": "",
+      "Preis": ""
+    },
+    {
+      "Kategorie": "Longdrinks",
+      "Name": "Gin & Goldberg Tonic",
+      "Beschreibung": "The Duke Bio Gin | Illusionist Dry Gin | Bombay Saphire",
+      "Menge": "",
+      "Preis": "9.50"
+    },
+    {
+      "Kategorie": "Longdrinks",
+      "Name": "Cuba Libre",
+      "Beschreibung": "Havana Club 3 | Cola - Limette",
+      "Menge": "",
+      "Preis": "9.50"
+    },
+    {
+      "Kategorie": "Longdrinks",
+      "Name": "Moscow Mule",
+      "Beschreibung": "Absolut Wodka | Goldberg Ginger Beer | Limette",
+      "Menge": "",
+      "Preis": "9.50"
+    },
+    {
+      "Kategorie": "Longdrinks",
+      "Name": "Bourbon & Cola",
+      "Beschreibung": "Woodford Reserve Straight Bourbon Whiskey & Cola",
+      "Menge": "",
+      "Preis": "9.50"
+    },
+    {
+      "Kategorie": "Longdrinks",
+      "Name": "Belzazar & Tonic",
+      "Beschreibung": "Belzazar Vermuth | Goldberg Tonic",
+      "Menge": "",
+      "Preis": "9.50"
+    },
+    {
+      "Kategorie": "",
+      "Name": "",
+      "Beschreibung": "",
+      "Menge": "",
+      "Preis": ""
+    },
+    {
+      "Kategorie": "Aperitifs",
+      "Name": "Aperol Spritz",
+      "Beschreibung": "Aperol | Prosecco | Soda",
+      "Menge": "",
+      "Preis": "7.90"
+    },
+    {
+      "Kategorie": "Aperitifs",
+      "Name": "Lillet Wildberry",
+      "Beschreibung": "Lillet Blanc | Schweppes Wildberry",
+      "Menge": "",
+      "Preis": "7.90"
+    },
+    {
+      "Kategorie": "Aperitifs",
+      "Name": "French 75",
+      "Beschreibung": "The Duke Bio Gin | Zitrone | Crémant",
+      "Menge": "",
+      "Preis": "9.90"
+    },
+    {
+      "Kategorie": "Aperitifs",
+      "Name": "Kir Royal",
+      "Beschreibung": "Crémant | Crème de Cassis",
+      "Menge": "",
+      "Preis": "9.50"
+    },
+    {
+      "Kategorie": "",
+      "Name": "",
+      "Beschreibung": "",
+      "Menge": "",
+      "Preis": ""
+    },
+    {
+      "Kategorie": "Cocktails",
+      "Name": "Whiskey Sour",
+      "Beschreibung": "Woodford Reserve | Zitrone | Simple Sirup",
+      "Menge": "",
+      "Preis": "10.50"
+    },
+    {
+      "Kategorie": "Cocktails",
+      "Name": "Espresso Martini",
+      "Beschreibung": "Absolut Wodka | Khalua | Espresso",
+      "Menge": "",
+      "Preis": "10.50"
+    },
+    {
+      "Kategorie": "Cocktails",
+      "Name": "Zombie",
+      "Beschreibung": "Appelton Estate | Myers Rum | Limette |Falernum | Simple Sirup | Grenadine | Ananas |",
+      "Menge": "",
+      "Preis": "10.50"
+    },
+    {
+      "Kategorie": "Cocktails",
+      "Name": "Pina Colada",
+      "Beschreibung": "Plantation 3 Rum | Batida de Coco | Kokossirup | Ananas",
+      "Menge": "",
+      "Preis": "10.50"
+    },
+    {
+      "Kategorie": "Cocktails",
+      "Name": "Tom Collins",
+      "Beschreibung": "The Duke Bio Gin | Zitrone | Simple Sirup",
+      "Menge": "",
+      "Preis": "10.50"
+    },
+    {
+      "Kategorie": "Cocktails",
+      "Name": "Negroni",
+      "Beschreibung": "Bombay Saphire | Campari | Martini Rosso",
+      "Menge": "",
+      "Preis": "10.50"
+    },
+    {
+      "Kategorie": "",
+      "Name": "",
+      "Beschreibung": "",
+      "Menge": "",
+      "Preis": ""
+    },
+    {
+      "Kategorie": "Digestif",
+      "Name": "Ramazotti",
+      "Beschreibung": "",
+      "Menge": "",
+      "Preis": "2.90"
+    },
+    {
+      "Kategorie": "Digestif",
+      "Name": "Lantenhammer",
+      "Beschreibung": "verschiedene Sorten",
+      "Menge": "",
+      "Preis": "3.50"
+    },
+    {
+      "Kategorie": "Digestif",
+      "Name": "Grappa",
+      "Beschreibung": "",
+      "Menge": "",
+      "Preis": "2.90"
+    },
+    {
+      "Kategorie": "Digestif",
+      "Name": "Jägermeister",
+      "Beschreibung": "",
+      "Menge": "",
+      "Preis": "2.90"
+    },
+    {
+      "Kategorie": "Digestif",
+      "Name": "Ouzo",
+      "Beschreibung": "",
+      "Menge": "",
+      "Preis": "2.90"
+    },
+    {
+      "Kategorie": "Digestif",
+      "Name": "Berliner Luft",
+      "Beschreibung": "",
+      "Menge": "",
+      "Preis": "2.90"
     }
   ]
 }
