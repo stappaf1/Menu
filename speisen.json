@@ -1,67 +1,11 @@
 {
   "speisen": [
     {
-      "Kategorie": "Vorspeise",
-      "Name": "Kleiner Beilagensalat",
-      "Beschreibung": "Fein marinierte Blattsalate mit Balsamico-Dressing",
+      "Kategorie": "",
+      "Name": "",
+      "Beschreibung": "",
       "Menge": "",
-      "Preis": 5.9,
-      "": ""
-    },
-    {
-      "Kategorie": "Hauptgang - Halal",
-      "Name": "Großer Falafel-Salat mit Falafel",
-      "Beschreibung": "Halal - Großer gemischter Salat mit knusprigen Falafelbällchen und feinem Dressing",
-      "Menge": "",
-      "Preis": 14.9,
-      "": ""
-    },
-    {
-      "Kategorie": "Hauptgang - Halal",
-      "Name": "Großer Salat mit Maishendl",
-      "Beschreibung": "Halal - Großer gemischter Salat mit zartem Maishendl und feinem Dressing",
-      "Menge": "",
-      "Preis": 17.9,
-      "": ""
-    },
-    {
-      "Kategorie": "Hauptgang - Halal",
-      "Name": "Gegrillte Maishendlkeule",
-      "Beschreibung": "Halal - Saftig gegrillte Maishendlkeule mit hausgemachtem Kartoffel-Gurken-Salat",
-      "Menge": "",
-      "Preis": 18.9,
-      "": ""
-    },
-    {
-      "Kategorie": "Hauptgang - Halal",
-      "Name": "Pfeffersteak",
-      "Beschreibung": "Halal - Zartes Pfeffersteak mit Rosmarinkartoffeln und gegrillten Bohnen",
-      "Menge": "",
-      "Preis": 24.9,
-      "": ""
-    },
-    {
-      "Kategorie": "Hauptgang",
-      "Name": "Schnitzel Wiener Art",
-      "Beschreibung": "Goldbraun gebackenes Schnitzel Wiener Art - wahlweise mit Kartoffelsalat oder Pommes frites",
-      "Menge": "",
-      "Preis": 18.9,
-      "": ""
-    },
-    {
-      "Kategorie": "Hauptgang-Veggi ",
-      "Name": "Ravioli Bufala",
-      "Beschreibung": "Hausgemachte Ravioli mit cremiger Büffelmozzarella-Füllung",
-      "Menge": "",
-      "Preis": 16.9,
-      "": ""
-    },
-    {
-      "Kategorie": "Dessert",
-      "Name": "Kaiserschmarrn",
-      "Beschreibung": "Frischer Kaiserschmarrn ohne Rosinen",
-      "Menge": "",
-      "Preis": 7.9,
+      "Preis": "",
       "": ""
     },
     {
@@ -73,67 +17,123 @@
       "": ""
     },
     {
-      "Kategorie": "Starter",
-      "Name": "Small Side Salad",
-      "Beschreibung": "Finely marinated mixed leaf salad with balsamic dressing",
+      "Kategorie": "",
+      "Name": "",
+      "Beschreibung": "",
       "Menge": "",
-      "Preis": 5.9,
+      "Preis": "",
       "": ""
     },
     {
-      "Kategorie": "Main Course - Halal ",
-      "Name": "Large Falafel Salad",
-      "Beschreibung": "Halal - Large mixed salad with crispy falafel balls and fine dressing",
+      "Kategorie": "",
+      "Name": "",
+      "Beschreibung": "",
       "Menge": "",
-      "Preis": 14.9,
+      "Preis": "",
       "": ""
     },
     {
-      "Kategorie": "Main Course - Halal ",
-      "Name": "Large Salad with Corn-Fed Chicken",
-      "Beschreibung": "Halal - Large mixed salad with tender corn-fed chicken and fine dressing",
+      "Kategorie": "",
+      "Name": "",
+      "Beschreibung": "",
       "Menge": "",
-      "Preis": 17.9,
+      "Preis": "",
       "": ""
     },
     {
-      "Kategorie": "Main Course - Halal ",
-      "Name": "Grilled Corn-Fed Chicken Leg",
-      "Beschreibung": "Halal - Juicy grilled corn-fed chicken leg with homemade potato and cucumber salad",
+      "Kategorie": "",
+      "Name": "",
+      "Beschreibung": "",
       "Menge": "",
-      "Preis": 18.9,
+      "Preis": "",
       "": ""
     },
     {
-      "Kategorie": "Main Course - Halal ",
-      "Name": "Pepper Steak",
-      "Beschreibung": "Halal - Tender pepper steak with rosemary potatoes and grilled beans",
+      "Kategorie": "",
+      "Name": "",
+      "Beschreibung": "",
       "Menge": "",
-      "Preis": 24.9,
+      "Preis": "",
       "": ""
     },
     {
-      "Kategorie": "Main Course",
-      "Name": "Schnitzel “Viennese Style”",
-      "Beschreibung": "Golden-fried schnitzel Viennese style - served with your choice of potato salad or French fries",
+      "Kategorie": "",
+      "Name": "",
+      "Beschreibung": "",
       "Menge": "",
-      "Preis": 18.9,
+      "Preis": "",
       "": ""
     },
     {
-      "Kategorie": "Ravioli Bufala",
-      "Name": "Ravioli Bufala",
-      "Beschreibung": "Homemade ravioli filled with creamy buffalo mozzarella",
+      "Kategorie": "",
+      "Name": "",
+      "Beschreibung": "",
       "Menge": "",
-      "Preis": 16.9,
+      "Preis": "",
       "": ""
     },
     {
-      "Kategorie": "Dessert - ",
-      "Name": "Kaiserschmarrn",
-      "Beschreibung": "Fresh Kaiserschmarrn without raisins",
+      "Kategorie": "",
+      "Name": "",
+      "Beschreibung": "",
       "Menge": "",
-      "Preis": 7.9,
+      "Preis": "",
+      "": ""
+    },
+    {
+      "Kategorie": "",
+      "Name": "",
+      "Beschreibung": "",
+      "Menge": "",
+      "Preis": "",
+      "": ""
+    },
+    {
+      "Kategorie": "",
+      "Name": "",
+      "Beschreibung": "",
+      "Menge": "",
+      "Preis": "",
+      "": ""
+    },
+    {
+      "Kategorie": "",
+      "Name": "",
+      "Beschreibung": "",
+      "Menge": "",
+      "Preis": "",
+      "": ""
+    },
+    {
+      "Kategorie": "",
+      "Name": "",
+      "Beschreibung": "",
+      "Menge": "",
+      "Preis": "",
+      "": ""
+    },
+    {
+      "Kategorie": "",
+      "Name": "",
+      "Beschreibung": "",
+      "Menge": "",
+      "Preis": "",
+      "": ""
+    },
+    {
+      "Kategorie": "",
+      "Name": "",
+      "Beschreibung": "",
+      "Menge": "",
+      "Preis": "",
+      "": ""
+    },
+    {
+      "Kategorie": "",
+      "Name": "",
+      "Beschreibung": "",
+      "Menge": "",
+      "Preis": "",
       "": ""
     },
     {
