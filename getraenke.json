@@ -29,13 +29,6 @@
       "Preis": "4.50"
     },
     {
-      "Kategorie": "",
-      "Name": "",
-      "Beschreibung": "",
-      "Menge": "",
-      "Preis": ""
-    },
-    {
       "Kategorie": "Softgetränke",
       "Name": "Alea – Tafelwasser | Still | Spritzig",
       "Beschreibung": "",
@@ -71,13 +64,6 @@
       "Preis": "4.00"
     },
     {
-      "Kategorie": "",
-      "Name": "",
-      "Beschreibung": "",
-      "Menge": "",
-      "Preis": ""
-    },
-    {
       "Kategorie": "Kaffeespezialitäten",
       "Name": "Kaffee Crema",
       "Beschreibung": "",
@@ -104,13 +90,6 @@
       "Beschreibung": "",
       "Menge": "Tasse",
       "Preis": "2.00"
-    },
-    {
-      "Kategorie": "",
-      "Name": "",
-      "Beschreibung": "",
-      "Menge": "",
-      "Preis": ""
     },
     {
       "Kategorie": "Teespezialitäten",
@@ -148,13 +127,6 @@
       "Preis": "3.50"
     },
     {
-      "Kategorie": "",
-      "Name": "",
-      "Beschreibung": "",
-      "Menge": "",
-      "Preis": ""
-    },
-    {
       "Kategorie": "Weißwein",
       "Name": "Cà Maiol | Lugana | Gardasee | trocken",
       "Beschreibung": "",
@@ -176,13 +148,6 @@
       "Preis": "6.50 | 31.00"
     },
     {
-      "Kategorie": "",
-      "Name": "",
-      "Beschreibung": "",
-      "Menge": "",
-      "Preis": ""
-    },
-    {
       "Kategorie": "Rosé",
       "Name": "Ca dei Frati | Rosa i Frati | Gardasee",
       "Beschreibung": "",
@@ -195,13 +160,6 @@
       "Beschreibung": "",
       "Menge": "0.2|0.7",
       "Preis": "7.50 | 33.00"
-    },
-    {
-      "Kategorie": "",
-      "Name": "",
-      "Beschreibung": "",
-      "Menge": "",
-      "Preis": ""
     },
     {
       "Kategorie": "Rotwein",
@@ -225,13 +183,6 @@
       "Preis": "8.50 | 36.00"
     },
     {
-      "Kategorie": "",
-      "Name": "",
-      "Beschreibung": "",
-      "Menge": "",
-      "Preis": ""
-    },
-    {
       "Kategorie": "Schaumwein",
       "Name": "Valdo | Biologico Brut",
       "Beschreibung": "Prosecco D.O.C| Valdobbiadene | Italien",
@@ -244,13 +195,6 @@
       "Beschreibung": "Crémant | Mosel | Luxemburg",
       "Menge": "0.1|0.7",
       "Preis": "7.50 | 33.00"
-    },
-    {
-      "Kategorie": "",
-      "Name": "",
-      "Beschreibung": "",
-      "Menge": "",
-      "Preis": ""
     },
     {
       "Kategorie": "Longdrinks",
@@ -288,13 +232,6 @@
       "Preis": "9.50"
     },
     {
-      "Kategorie": "",
-      "Name": "",
-      "Beschreibung": "",
-      "Menge": "",
-      "Preis": ""
-    },
-    {
       "Kategorie": "Aperitifs",
       "Name": "Aperol Spritz",
       "Beschreibung": "Aperol | Prosecco | Soda",
@@ -321,13 +258,6 @@
       "Beschreibung": "Crémant | Crème de Cassis",
       "Menge": "",
       "Preis": "9.50"
-    },
-    {
-      "Kategorie": "",
-      "Name": "",
-      "Beschreibung": "",
-      "Menge": "",
-      "Preis": ""
     },
     {
       "Kategorie": "Cocktails",
@@ -370,13 +300,6 @@
       "Beschreibung": "Bombay Saphire | Campari | Martini Rosso",
       "Menge": "",
       "Preis": "10.50"
-    },
-    {
-      "Kategorie": "",
-      "Name": "",
-      "Beschreibung": "",
-      "Menge": "",
-      "Preis": ""
     },
     {
       "Kategorie": "Digestif",
