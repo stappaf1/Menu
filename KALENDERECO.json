@@ -3769,15 +3769,51 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "",
+      "DATUM": "07.09.26",
       "VON": "",
       "BIS": "",
-      "KUNDE": "",
-      "EVENT": "",
+      "KUNDE": "HEINZ-GLAS GmbH & Co. KGaA ",
+      "EVENT": "Tagung ",
       "TEILNEHMER": "",
-      "TAGUNGSRAUM": "",
+      "TAGUNGSRAUM": "ecoRefugium T30",
       "RAUMHINWEIS": "",
-      "BILD": "",
+      "BILD": "T30.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "08.09.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "MBDA Deutschland GmbH ",
+      "EVENT": "Tagung ",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "",
+      "BILD": "T90.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "09.09.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "MBDA Deutschland GmbH ",
+      "EVENT": "Tagung ",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "",
+      "BILD": "T90.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "09.09.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Passionals GmbH ",
+      "EVENT": "Tagung ",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoRefugium T30",
+      "RAUMHINWEIS": "",
+      "BILD": "T30.jpeg",
       "BEMERKUNG": ""
     },
     {
