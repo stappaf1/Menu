@@ -1,67 +1,67 @@
 {
   "speisen": [
     {
-      "Kategorie": "",
-      "Name": "",
+      "Kategorie": "Vorspeisen",
+      "Name": "Asiatisches Pilzragout im Salatblatt",
       "Beschreibung": "",
       "Menge": "",
-      "Preis": "",
+      "Preis": "6.90",
       "": ""
     },
     {
-      "Kategorie": "",
-      "Name": "",
+      "Kategorie": "Vorspeisen",
+      "Name": "Herbstlicher Beilagensalat mit Kürbiskerndressing",
       "Beschreibung": "",
       "Menge": "",
-      "Preis": "",
+      "Preis": "5.90",
       "": ""
     },
     {
-      "Kategorie": "",
-      "Name": "",
+      "Kategorie": "Suppen",
+      "Name": "Kokos - Limetten - Suppe mit Gemüse und Tofu",
       "Beschreibung": "",
       "Menge": "",
-      "Preis": "",
+      "Preis": "6.90",
       "": ""
     },
     {
-      "Kategorie": "",
-      "Name": "",
+      "Kategorie": "Hauptspeisen",
+      "Name": "Rotes Thai Curry mit Rauch-Tofu und Jasminreis",
       "Beschreibung": "",
       "Menge": "",
-      "Preis": "",
+      "Preis": "14.90",
       "": ""
     },
     {
-      "Kategorie": "",
-      "Name": "",
+      "Kategorie": "Hauptspeisen",
+      "Name": "Usbekische Reispfanne \"Plov\" mit Röstgemüse",
       "Beschreibung": "",
       "Menge": "",
-      "Preis": "",
+      "Preis": "14.90",
       "": ""
     },
     {
-      "Kategorie": "",
-      "Name": "",
+      "Kategorie": "Hauptspeisen",
+      "Name": "Japanisches \"Katsu\" Curry mit knusprigem Blumenkohl",
       "Beschreibung": "",
       "Menge": "",
-      "Preis": "",
+      "Preis": "14.90",
       "": ""
     },
     {
-      "Kategorie": "",
-      "Name": "",
+      "Kategorie": "Hauptspeisen",
+      "Name": "Gebratene Udon mit Miso und Sesam",
       "Beschreibung": "",
       "Menge": "",
-      "Preis": "",
+      "Preis": "14.90",
       "": ""
     },
     {
-      "Kategorie": "",
-      "Name": "",
+      "Kategorie": "Tagesdessert",
+      "Name": "Kokos & Mango Mochi mit Kokossahne und Limette",
       "Beschreibung": "",
       "Menge": "",
-      "Preis": "",
+      "Preis": "7.90",
       "": ""
     },
     {
