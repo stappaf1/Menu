@@ -575,6 +575,30 @@
       "RAUMHINWEIS": "",
       "BILD": "T100.jpeg",
       "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "09.10.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Zimmer MedizinSysteme GmbH",
+      "EVENT": "Tagung ",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "Weitblick T100",
+      "RAUMHINWEIS": "",
+      "BILD": "T100.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "10.10.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Zimmer MedizinSysteme GmbH",
+      "EVENT": "Tagung ",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "Weitblick T100",
+      "RAUMHINWEIS": "",
+      "BILD": "T100.jpeg",
+      "BEMERKUNG": ""
     }
   ]
 }
