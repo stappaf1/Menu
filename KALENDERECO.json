@@ -4507,9 +4507,9 @@
       "KUNDE": "CAM GmbH & Co. KG ",
       "EVENT": "Tagung ",
       "TEILNEHMER": "",
-      "TAGUNGSRAUM": "",
+      "TAGUNGSRAUM": "ecoPlenum T200",
       "RAUMHINWEIS": "",
-      "BILD": "",
+      "BILD": "T200-Business.jpeg",
       "BEMERKUNG": ""
     },
     {
@@ -4519,9 +4519,9 @@
       "KUNDE": "CAM GmbH & Co. KG ",
       "EVENT": "Tagung ",
       "TEILNEHMER": "",
-      "TAGUNGSRAUM": "",
+      "TAGUNGSRAUM": "ecoForum T120",
       "RAUMHINWEIS": "",
-      "BILD": "",
+      "BILD": "T120.jpeg",
       "BEMERKUNG": ""
     },
     {
@@ -4531,9 +4531,9 @@
       "KUNDE": "CAM GmbH & Co. KG ",
       "EVENT": "Tagung ",
       "TEILNEHMER": "",
-      "TAGUNGSRAUM": "",
+      "TAGUNGSRAUM": "ecoCentrum T90",
       "RAUMHINWEIS": "",
-      "BILD": "",
+      "BILD": "T90.jpeg",
       "BEMERKUNG": ""
     },
     {
@@ -4543,9 +4543,9 @@
       "KUNDE": "CAM GmbH & Co. KG ",
       "EVENT": "Tagung ",
       "TEILNEHMER": "",
-      "TAGUNGSRAUM": "",
+      "TAGUNGSRAUM": "ecoPlenum T200",
       "RAUMHINWEIS": "",
-      "BILD": "",
+      "BILD": "T200-Business.jpeg",
       "BEMERKUNG": ""
     },
     {
@@ -4555,9 +4555,9 @@
       "KUNDE": "CAM GmbH & Co. KG ",
       "EVENT": "Tagung ",
       "TEILNEHMER": "",
-      "TAGUNGSRAUM": "",
+      "TAGUNGSRAUM": "ecoForum T120",
       "RAUMHINWEIS": "",
-      "BILD": "",
+      "BILD": "T120.jpeg",
       "BEMERKUNG": ""
     },
     {
@@ -4567,9 +4567,9 @@
       "KUNDE": "CAM GmbH & Co. KG ",
       "EVENT": "Tagung ",
       "TEILNEHMER": "",
-      "TAGUNGSRAUM": "",
+      "TAGUNGSRAUM": "ecoCentrum T90",
       "RAUMHINWEIS": "",
-      "BILD": "",
+      "BILD": "T90.jpeg",
       "BEMERKUNG": ""
     },
     {
@@ -4579,9 +4579,9 @@
       "KUNDE": "CAM GmbH & Co. KG ",
       "EVENT": "Tagung ",
       "TEILNEHMER": "",
-      "TAGUNGSRAUM": "",
+      "TAGUNGSRAUM": "ecoPlenum T200",
       "RAUMHINWEIS": "",
-      "BILD": "",
+      "BILD": "T200-Business.jpeg",
       "BEMERKUNG": ""
     },
     {
@@ -4591,21 +4591,33 @@
       "KUNDE": "CAM GmbH & Co. KG ",
       "EVENT": "Tagung ",
       "TEILNEHMER": "",
-      "TAGUNGSRAUM": "",
+      "TAGUNGSRAUM": "ecoForum T120",
       "RAUMHINWEIS": "",
-      "BILD": "",
+      "BILD": "T120.jpeg",
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "22.10.10",
+      "DATUM": "22.10.26",
       "VON": "",
       "BIS": "",
       "KUNDE": "CAM GmbH & Co. KG ",
       "EVENT": "Tagung ",
       "TEILNEHMER": "",
-      "TAGUNGSRAUM": "",
+      "TAGUNGSRAUM": "ecoCentrum T90",
       "RAUMHINWEIS": "",
-      "BILD": "",
+      "BILD": "T90.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "23.10.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Lyreco",
+      "EVENT": "Tagung ",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoRefugium T30",
+      "RAUMHINWEIS": "",
+      "BILD": "T30.jpeg",
       "BEMERKUNG": ""
     }
   ]
