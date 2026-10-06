@@ -2,7 +2,7 @@
   "speisen": [
     {
       "Kategorie": "Vorspeisen",
-      "Name": "Asiatisches Pilzragout im Salatblatt",
+      "Name": "Gemischter Salat",
       "Beschreibung": "",
       "Menge": "",
       "Preis": "6.90",
@@ -10,15 +10,7 @@
     },
     {
       "Kategorie": "Vorspeisen",
-      "Name": "Herbstlicher Beilagensalat mit Kürbiskerndressing",
-      "Beschreibung": "",
-      "Menge": "",
-      "Preis": "5.90",
-      "": ""
-    },
-    {
-      "Kategorie": "Suppen",
-      "Name": "Kokos - Limetten - Suppe mit Gemüse und Tofu",
+      "Name": "Kürbissuppe",
       "Beschreibung": "",
       "Menge": "",
       "Preis": "6.90",
@@ -26,31 +18,31 @@
     },
     {
       "Kategorie": "Hauptspeisen",
-      "Name": "Gelbes Thai Mango Curry mit Rauch-Tofu und Jasminreis",
+      "Name": "Cordon bleu mit Bratkartoffeln oder Kartoffelsalat",
       "Beschreibung": "",
       "Menge": "",
-      "Preis": "14.90",
+      "Preis": "19.90",
       "": ""
     },
     {
       "Kategorie": "Hauptspeisen",
-      "Name": "Usbekische Reispfanne \"Plov\" mit Röstgemüse",
+      "Name": "Bratwurst mit Sauerkraut und Kartoffelpüree",
       "Beschreibung": "",
       "Menge": "",
-      "Preis": "14.90",
+      "Preis": "16.90",
       "": ""
     },
     {
       "Kategorie": "Hauptspeisen",
-      "Name": "Japanisches \"Katsu\" Curry mit knusprigem Blumenkohl",
+      "Name": "Zwiebelrostbraten mit Spätzle",
       "Beschreibung": "",
       "Menge": "",
-      "Preis": "14.90",
+      "Preis": "28.90",
       "": ""
     },
     {
       "Kategorie": "Hauptspeisen",
-      "Name": "Gebratene Udon mit Miso und Sesam",
+      "Name": "Käsespätzle",
       "Beschreibung": "",
       "Menge": "",
       "Preis": "14.90",
@@ -58,10 +50,18 @@
     },
     {
       "Kategorie": "Tagesdessert",
-      "Name": "Kokos & Mango Mochi mit Kokossahne und Limette",
+      "Name": "Kaiserschmarrn",
       "Beschreibung": "",
       "Menge": "",
-      "Preis": "7.90",
+      "Preis": "8.90",
+      "": ""
+    },
+    {
+      "Kategorie": "",
+      "Name": "",
+      "Beschreibung": "",
+      "Menge": "",
+      "Preis": "",
       "": ""
     },
     {
