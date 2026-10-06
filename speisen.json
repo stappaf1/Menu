@@ -34,14 +34,6 @@
     },
     {
       "Kategorie": "Hauptspeisen",
-      "Name": "Zwiebelrostbraten mit Spätzle",
-      "Beschreibung": "",
-      "Menge": "",
-      "Preis": "28.90",
-      "": ""
-    },
-    {
-      "Kategorie": "Hauptspeisen",
       "Name": "Käsespätzle",
       "Beschreibung": "",
       "Menge": "",
@@ -54,6 +46,14 @@
       "Beschreibung": "",
       "Menge": "",
       "Preis": "8.90",
+      "": ""
+    },
+    {
+      "Kategorie": "",
+      "Name": "",
+      "Beschreibung": "",
+      "Menge": "",
+      "Preis": "",
       "": ""
     },
     {
