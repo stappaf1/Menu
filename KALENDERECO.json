@@ -4708,7 +4708,7 @@
       "DATUM": "26.10.26",
       "VON": "",
       "BIS": "",
-      "KUNDE": "FBD2",
+      "KUNDE": "FDB2",
       "EVENT": "Tagung ",
       "TEILNEHMER": "",
       "TAGUNGSRAUM": "ecoRefugium T30",
@@ -4717,15 +4717,27 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "26.10.26",
+      "DATUM": "27.10.26",
       "VON": "",
       "BIS": "",
-      "KUNDE": "FBD2",
+      "KUNDE": "FDB2",
       "EVENT": "Tagung ",
       "TEILNEHMER": "",
       "TAGUNGSRAUM": "ecoRefugium T30",
       "RAUMHINWEIS": "",
       "BILD": "T30.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "27.10.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Naturland Verband für ökologischen \nLandbau e.V.",
+      "EVENT": "Tagung ",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoForum T120",
+      "RAUMHINWEIS": "",
+      "BILD": "T120.jpeg",
       "BEMERKUNG": ""
     },
     {
@@ -4762,6 +4774,18 @@
       "TAGUNGSRAUM": "ecoCentrum T90",
       "RAUMHINWEIS": "",
       "BILD": "T90.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "29.10.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "MTU Aero Engines AG ",
+      "EVENT": "Tagung ",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoRefugium T30",
+      "RAUMHINWEIS": "",
+      "BILD": "T30.jpeg",
       "BEMERKUNG": ""
     },
     {
