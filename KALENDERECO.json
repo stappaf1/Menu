@@ -4711,33 +4711,33 @@
       "KUNDE": "Passionals Werner Lessmann ",
       "EVENT": "",
       "TEILNEHMER": "",
-      "TAGUNGSRAUM": "ecoRefugium T30",
+      "TAGUNGSRAUM": "ecoCentrum T90",
       "RAUMHINWEIS": "",
-      "BILD": "T30.jpeg",
+      "BILD": "T90.jpeg",
       "BEMERKUNG": ""
     },
     {
       "DATUM": "26.10.26",
       "VON": "",
       "BIS": "",
-      "KUNDE": "FDB2",
+      "KUNDE": "FBD2",
       "EVENT": "Tagung ",
       "TEILNEHMER": "",
-      "TAGUNGSRAUM": "ecoCentrum T90",
+      "TAGUNGSRAUM": "ecoRefugium T30",
       "RAUMHINWEIS": "",
-      "BILD": "T90.jpeg",
+      "BILD": "T30.jpeg",
       "BEMERKUNG": ""
     },
     {
       "DATUM": "27.10.26",
       "VON": "",
       "BIS": "",
-      "KUNDE": "FDB2",
+      "KUNDE": "FBD2",
       "EVENT": "Tagung ",
       "TEILNEHMER": "",
-      "TAGUNGSRAUM": "ecoCentrum T90",
+      "TAGUNGSRAUM": "ecoRefugium T30",
       "RAUMHINWEIS": "",
-      "BILD": "T90.jpeg",
+      "BILD": "T30.jpeg",
       "BEMERKUNG": ""
     },
     {
@@ -4777,18 +4777,6 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "28.10.26",
-      "VON": "",
-      "BIS": "",
-      "KUNDE": "MBDA Abteilungsbezeichnung!!!",
-      "EVENT": "Tagung ",
-      "TEILNEHMER": "",
-      "TAGUNGSRAUM": "ecoCentrum T90",
-      "RAUMHINWEIS": "",
-      "BILD": "T90.jpeg",
-      "BEMERKUNG": ""
-    },
-    {
       "DATUM": "29.10.26",
       "VON": "",
       "BIS": "",
@@ -4810,18 +4798,6 @@
       "TAGUNGSRAUM": "ecoForum T120",
       "RAUMHINWEIS": "",
       "BILD": "T120.jpeg",
-      "BEMERKUNG": ""
-    },
-    {
-      "DATUM": "29.10.26",
-      "VON": "",
-      "BIS": "",
-      "KUNDE": "MBDA Abteilungsbezeichnung!!!",
-      "EVENT": "Tagung ",
-      "TEILNEHMER": "",
-      "TAGUNGSRAUM": "ecoCentrum T90",
-      "RAUMHINWEIS": "",
-      "BILD": "T90.jpeg",
       "BEMERKUNG": ""
     },
     {
