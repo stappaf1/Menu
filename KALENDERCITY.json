@@ -671,6 +671,42 @@
       "RAUMHINWEIS": "",
       "BILD": "T60.jpeg",
       "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "",
+      "EVENT": "",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "",
+      "RAUMHINWEIS": "",
+      "BILD": "",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "09.11.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Siemens AG ",
+      "EVENT": "Tagung ",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "",
+      "RAUMHINWEIS": "",
+      "BILD": "",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "10.11.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "WipflerPLAN Planungsgesellschaft mbH",
+      "EVENT": "Tagung ",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "Weitblick T100",
+      "RAUMHINWEIS": "",
+      "BILD": "T100.jpeg",
+      "BEMERKUNG": ""
     }
   ]
 }
