@@ -691,9 +691,9 @@
       "KUNDE": "Siemens AG ",
       "EVENT": "Tagung ",
       "TEILNEHMER": "",
-      "TAGUNGSRAUM": "",
+      "TAGUNGSRAUM": "großerFreiraum T60",
       "RAUMHINWEIS": "",
-      "BILD": "",
+      "BILD": "T60.jpeg",
       "BEMERKUNG": ""
     },
     {
@@ -706,6 +706,18 @@
       "TAGUNGSRAUM": "Weitblick T100",
       "RAUMHINWEIS": "",
       "BILD": "T100.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "11.11.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "TSGF",
+      "EVENT": "Tagung ",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "großerFreiraum T60",
+      "RAUMHINWEIS": "",
+      "BILD": "T60.jpeg",
       "BEMERKUNG": ""
     }
   ]
