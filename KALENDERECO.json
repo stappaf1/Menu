@@ -5423,6 +5423,54 @@
       "RAUMHINWEIS": "",
       "BILD": "T200-1.jpeg",
       "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "",
+      "EVENT": "",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "",
+      "RAUMHINWEIS": "",
+      "BILD": "",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "01.12.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "MAPEI GmbH",
+      "EVENT": "Tagung ",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoForum T120",
+      "RAUMHINWEIS": "",
+      "BILD": "T120.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "01.12.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "MHK Marketing Handel Kooperation \nGmbH & Co. Verbundgruppen Holding KG",
+      "EVENT": "b",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "",
+      "RAUMHINWEIS": "",
+      "BILD": "",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "02.12.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "MAPEI GmbH",
+      "EVENT": "Tagung ",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoForum T120",
+      "RAUMHINWEIS": "",
+      "BILD": "T120.jpeg",
+      "BEMERKUNG": ""
     }
   ]
 }
