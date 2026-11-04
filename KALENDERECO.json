@@ -5236,7 +5236,7 @@
       "DATUM": "20.11.26",
       "VON": "",
       "BIS": "",
-      "KUNDE": "Daiichi Sankyo EUROPE GmbH",
+      "KUNDE": "Daiichi Sankyo Deutschland GmbH",
       "EVENT": "Abendessen",
       "TEILNEHMER": "",
       "TAGUNGSRAUM": "ecoBistro",
@@ -5248,7 +5248,7 @@
       "DATUM": "21.11.26",
       "VON": "",
       "BIS": "",
-      "KUNDE": "Daiichi Sankyo DGmbH",
+      "KUNDE": "Daiichi Sankyo Deutschland GmbH",
       "EVENT": "Tagung ",
       "TEILNEHMER": "",
       "TAGUNGSRAUM": "ecoPlenum T200",
@@ -5530,6 +5530,42 @@
       "TAGUNGSRAUM": "ecoPlenum T200",
       "RAUMHINWEIS": "",
       "BILD": "T200-1.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "03.12.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Daiichi Sankyo EUROPE GmbH",
+      "EVENT": "Tagung ",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "",
+      "BILD": "T90.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "03.12.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Zusatzversorgungskasse der Steine- und \nErden-Industrie und des\nBetonsteinhandwerks VVaG",
+      "EVENT": "Abendessen",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoBistro",
+      "RAUMHINWEIS": "",
+      "BILD": "E-Bistro.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "04.12.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Zusatzversorgungskasse der Steine- und \nErden-Industrie und des\nBetonsteinhandwerks VVaG",
+      "EVENT": "Tagung ",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoForum T120",
+      "RAUMHINWEIS": "",
+      "BILD": "T120.jpeg",
       "BEMERKUNG": ""
     }
   ]
