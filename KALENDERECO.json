@@ -5125,6 +5125,18 @@
       "BEMERKUNG": ""
     },
     {
+      "DATUM": "16.11.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "OPmobility Exterior Germany GmbH",
+      "EVENT": "Abendessen",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoBistro",
+      "RAUMHINWEIS": "",
+      "BILD": "E-Bistro.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
       "DATUM": "17.11.26",
       "VON": "",
       "BIS": "",
@@ -5197,6 +5209,18 @@
       "BEMERKUNG": ""
     },
     {
+      "DATUM": "19.11.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Strabag BMTI GmbH & Co. KG",
+      "EVENT": "Abendessen",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoBistro",
+      "RAUMHINWEIS": "",
+      "BILD": "E-Bistro.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
       "DATUM": "20.11.26",
       "VON": "",
       "BIS": "",
@@ -5209,10 +5233,22 @@
       "BEMERKUNG": ""
     },
     {
-      "DATUM": "21.11.26",
+      "DATUM": "20.11.26",
       "VON": "",
       "BIS": "",
       "KUNDE": "Daiichi Sankyo EUROPE GmbH",
+      "EVENT": "Abendessen",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoBistro",
+      "RAUMHINWEIS": "",
+      "BILD": "E-Bistro.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "21.11.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Daiichi Sankyo DGmbH",
       "EVENT": "Tagung ",
       "TEILNEHMER": "",
       "TAGUNGSRAUM": "ecoPlenum T200",
@@ -5453,11 +5489,11 @@
       "VON": "",
       "BIS": "",
       "KUNDE": "MHK Marketing Handel Kooperation \nGmbH & Co. Verbundgruppen Holding KG",
-      "EVENT": "b",
+      "EVENT": "Abendessen",
       "TEILNEHMER": "",
-      "TAGUNGSRAUM": "",
+      "TAGUNGSRAUM": "ecoBistro",
       "RAUMHINWEIS": "",
-      "BILD": "",
+      "BILD": "E-Bistro.jpeg",
       "BEMERKUNG": ""
     },
     {
@@ -5470,6 +5506,30 @@
       "TAGUNGSRAUM": "ecoForum T120",
       "RAUMHINWEIS": "",
       "BILD": "T120.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "02.12.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "MHK Marketing Handel Kooperation \nGmbH & Co. Verbundgruppen Holding KG",
+      "EVENT": "Tagung ",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoPlenum T200",
+      "RAUMHINWEIS": "",
+      "BILD": "T200-Business.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "02.12.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Daiichi Sankyo EUROPE GmbH",
+      "EVENT": "Weihnachtsessen",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoPlenum T200",
+      "RAUMHINWEIS": "",
+      "BILD": "T200-1.jpeg",
       "BEMERKUNG": ""
     }
   ]
