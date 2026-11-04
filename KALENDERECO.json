@@ -5375,6 +5375,54 @@
       "RAUMHINWEIS": "",
       "BILD": "T120.jpeg",
       "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "28.11.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "CONTAG DRESDEN",
+      "EVENT": "Tagung ",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoCentrum T90",
+      "RAUMHINWEIS": "",
+      "BILD": "T90.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "28.11.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "CONTAG DRESDEN",
+      "EVENT": "Tagung ",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoForum T120",
+      "RAUMHINWEIS": "",
+      "BILD": "T120.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "28.11.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "CONTAG DRESDEN",
+      "EVENT": "Tagung ",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoPlenum T200",
+      "RAUMHINWEIS": "",
+      "BILD": "T200-Business.jpeg",
+      "BEMERKUNG": ""
+    },
+    {
+      "DATUM": "29.11.26",
+      "VON": "",
+      "BIS": "",
+      "KUNDE": "Adventsbrunch",
+      "EVENT": "Brunch",
+      "TEILNEHMER": "",
+      "TAGUNGSRAUM": "ecoPlenum T200",
+      "RAUMHINWEIS": "",
+      "BILD": "T200-1.jpeg",
+      "BEMERKUNG": ""
     }
   ]
 }
