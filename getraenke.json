@@ -33,7 +33,7 @@
       "Name": "Alea – Tafelwasser | Still | Spritzig",
       "Beschreibung": "",
       "Menge": "0.7",
-      "Preis": "6.50"
+      "Preis": "6.00"
     },
     {
       "Kategorie": "Softgetränke",
@@ -138,7 +138,7 @@
       "Name": "Chardonnay | Bio | Frankreich | trocken",
       "Beschreibung": "",
       "Menge": "0.2|0.7",
-      "Preis": "6.50 | 31.00"
+      "Preis": "7.50 | 33.00"
     },
     {
       "Kategorie": "Rosé",
@@ -146,13 +146,6 @@
       "Beschreibung": "",
       "Menge": "0.2|0.7",
       "Preis": "8.50 | 36.00"
-    },
-    {
-      "Kategorie": "Rosé",
-      "Name": "La Santonnière | Bio | Rosé | Provence",
-      "Beschreibung": "",
-      "Menge": "0.2|0.7",
-      "Preis": "7.50 | 33.00"
     },
     {
       "Kategorie": "Rotwein",
@@ -166,7 +159,7 @@
       "Name": "Franz Waßmer Spätburgunder | Baden | trocken",
       "Beschreibung": "",
       "Menge": "0.2|0.7",
-      "Preis": "7.50 | 33.00"
+      "Preis": "8.50 | 36.00"
     },
     {
       "Kategorie": "Rotwein",
