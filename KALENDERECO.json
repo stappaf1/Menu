@@ -5117,11 +5117,11 @@
       "VON": "",
       "BIS": "",
       "KUNDE": "OPmobility Exterior Germany GmbH",
-      "EVENT": "Abendessen",
+      "EVENT": "Tagung ",
       "TEILNEHMER": "",
-      "TAGUNGSRAUM": "ecoBistro",
+      "TAGUNGSRAUM": "ecoForum T120",
       "RAUMHINWEIS": "",
-      "BILD": "E-Bistro.jpeg",
+      "BILD": "T120.jpeg",
       "BEMERKUNG": ""
     },
     {
@@ -5131,9 +5131,9 @@
       "KUNDE": "OPmobility Exterior Germany GmbH",
       "EVENT": "Tagung ",
       "TEILNEHMER": "",
-      "TAGUNGSRAUM": "ecoCentrum T90",
+      "TAGUNGSRAUM": "ecoForum T120",
       "RAUMHINWEIS": "",
-      "BILD": "T90.jpeg",
+      "BILD": "T120.jpeg",
       "BEMERKUNG": ""
     },
     {
@@ -5143,9 +5143,9 @@
       "KUNDE": "RKW Bayern e.V.",
       "EVENT": "Tagung ",
       "TEILNEHMER": "",
-      "TAGUNGSRAUM": "ecoForum T120",
+      "TAGUNGSRAUM": "ecoCentrum T90",
       "RAUMHINWEIS": "",
-      "BILD": "T120.jpeg",
+      "BILD": "T90.jpeg",
       "BEMERKUNG": ""
     },
     {
